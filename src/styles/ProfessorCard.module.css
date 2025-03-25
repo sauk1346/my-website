@@ -1,0 +1,46 @@
+.professorCard {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .infoItem {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .label {
+    font-weight: 600;
+  }
+  
+  .emailLink {
+    color: #3182ce;
+    text-decoration: none;
+  }
+  
+  .emailLink:hover {
+    text-decoration: underline;
+  }
+  
+  @media (max-width: 768px) {
+    .professor-card {
+      padding: 1rem;
+    }
+  }
+  

@@ -1,0 +1,6 @@
+_id,nombre,apellido,edad,carrera,correo,notas
+1,Juan,Pérez,21,Ingeniería Informática,juan.perez@ejemplo.com,"[{""asignatura"": ""Bases de Datos"", ""nota"": 5.5}, {""asignatura"": ""Programación"", ""nota"": 6.0}]"
+2,María,González,22,Redes y Telecomunicaciones,maria.gonzalez@ejemplo.com,"[{""asignatura"": ""Redes Avanzadas"", ""nota"": 6.2}, {""asignatura"": ""Ciberseguridad"", ""nota"": 5.8}]"
+3,Carlos,Rojas,20,Desarrollo de Software,carlos.rojas@ejemplo.com,"[{""asignatura"": ""Arquitectura de Software"", ""nota"": 5.7}, {""asignatura"": ""Bases de Datos"", ""nota"": 5.3}]"
+4,Sofía,López,23,Administración de Empresas,sofia.lopez@ejemplo.com,"[{""asignatura"": ""Gestión Empresarial"", ""nota"": 6.1}, {""asignatura"": ""Finanzas"", ""nota"": 5.9}]"
+5,Diego,Fernández,21,Ingeniería Informática,diego.fernandez@ejemplo.com,"[{""asignatura"": ""Bases de Datos"", ""nota"": 5.4}, {""asignatura"": ""Desarrollo Web"", ""nota"": 6.0}]"

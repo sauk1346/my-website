@@ -34,7 +34,9 @@ export default function Ti3V32() {
         { week: '02', class: '04', date: 'Lun 17, Mar 2025', description: <Link href="ti3v32/clase04" className={styles.link}>Ejercicios CRUD 02</Link> },
         { week: '', class: '05', date: 'Mar 18, Mar 2025', description: "Ejercicios CRUD 03" },
         { week: '', class: '06', date: 'Mié 19, Mar 2025', description: "Ejercicios CRUD 04" },
-        { week: '03', class: '07', date: 'Lun 24, Mar 2025', description: "" },
+        { week: '03', class: '07', date: 'Lun 24, Mar 2025', description: "MongoDB Shell" },
+        { week: '', class: '08', date: 'Mar 25, Mar 2025', description: "" },
+
     ];
     const lectureData = [
         { week: '01', lecture: '01', date: 'Sáb 22, Mar 2025', description: 'Introducción a las BD no estructuradas' }

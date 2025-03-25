@@ -8,6 +8,10 @@ import styles from'../../../styles/Ti3v32.module.css';
 import Link from 'next/link';
 
 export default function Ti3V34() {
+
+    const BoldText = ( {children} ) =>
+        <span style={{fontWeight:'bold', color:'red'}}>{children}</span>
+
     const professorData = {
         name: "Sergio Andrés Muñoz Sasso",
         email: "sergio.munoz03@inacapmail.cl"
@@ -18,11 +22,11 @@ export default function Ti3V34() {
         { unit: '3', description: 'Evaluación de Vulnerabilidades y Matriz de Riesgo' },
     ];
     const evaluationsData = [
-        { evaluationNumber: 1, date: 'Lun 24, Mar \'25', weighting: '15%', description: 'prueba mixta', quickGuide: '' },
-        { evaluationNumber: 2, date: 'Mié 09, Abr \'25', weighting: '22.5%', description: 'informe 01', quickGuide: '' },
-        { evaluationNumber: 3, date: 'Lun 07, May \'25', weighting: '26.25%', description: 'informe 02', quickGuide: '' },
+        { evaluationNumber: 1, date: 'Lun 24, Mar 2025', weighting: '15%', description: 'prueba mixta', quickGuide: '' },
+        { evaluationNumber: <BoldText>2</BoldText>, date: <BoldText>Mié 09, Abr 2025</BoldText>, weighting: <BoldText>22.5%</BoldText>, description: <BoldText>informe 01</BoldText>, quickGuide: '' },
+        { evaluationNumber: 3, date: 'Lun 07, May 2025', weighting: '26.25%', description: 'informe 02', quickGuide: '' },
         { evaluationNumber: 4, date: 'Cada Semana', weighting: '11.25%', description: 'promedio controles', quickGuide: '' },
-        { evaluationNumber: 5, date: 'Lun 12, May \'25', weighting: '25%', description: 'examen', quickGuide: '' }
+        { evaluationNumber: 5, date: 'Lun 12, May 2025', weighting: '25%', description: 'examen', quickGuide: '' }
     ];
     const classData = [
         { week: '01', class: '01', date: 'Lun 10, Mar \'25', description: "Introducción Seguridad" },

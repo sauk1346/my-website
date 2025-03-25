@@ -17,10 +17,10 @@ export default function Tilv21() {
         { unit: '3', description: 'Gestión de Defectos, Combinación de Valores de Prueba y Exploración' },
     ];
     const evaluationsData = [
-        { evaluationNumber: 1, date: 'Mié 02, Abr \'25', weighting: '20%', description: 'prueba mixta', quickGuide: '' },
-        { evaluationNumber: 2, date: 'Lun 21, Abr \'25', weighting: '30%', description: 'informe 01', quickGuide: '' },
-        { evaluationNumber: 3, date: 'Jue 07, May \'25', weighting: '35%', description: 'informe 02', quickGuide: '' },
-        { evaluationNumber: 4, date: 'Cada Semana', weighting: '15%', description: 'promedio controles', quickGuide: '' },
+        { evaluationNumber: 1, date: 'Mié 02, Abr 2025', weighting: '20%', description: 'Prueba', quickGuide: '' },
+        { evaluationNumber: 2, date: 'Lun 21, Abr 2025', weighting: '30%', description: 'informe 01', quickGuide: '' },
+        { evaluationNumber: 3, date: 'Lun 05, May 2025', weighting: '35%', description: 'informe 02', quickGuide: '' },
+        { evaluationNumber: 4, date: 'Mié 07, May 2025', weighting: '15%', description: 'promedio controles', quickGuide: '' },
 
     ];
     const lectureData = [

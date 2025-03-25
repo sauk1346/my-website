@@ -6,11 +6,10 @@ import ProfessorCard from '../../../components/ProfessorCard';
 import UnitCard from '../../../components/UnitCard';
 import styles from'../../../styles/Ti3v32.module.css';
 import Link from 'next/link';
+import EmphText from '../../../components/EmphText';
 
 export default function Ti3V34() {
 
-    const BoldText = ( {children} ) =>
-        <span style={{fontWeight:'bold', color:'red'}}>{children}</span>
 
     const professorData = {
         name: "Sergio Andrés Muñoz Sasso",
@@ -23,7 +22,7 @@ export default function Ti3V34() {
     ];
     const evaluationsData = [
         { evaluationNumber: 1, date: 'Lun 24, Mar 2025', weighting: '15%', description: 'prueba mixta', quickGuide: '' },
-        { evaluationNumber: <BoldText>2</BoldText>, date: <BoldText>Mié 09, Abr 2025</BoldText>, weighting: <BoldText>22.5%</BoldText>, description: <BoldText>informe 01</BoldText>, quickGuide: '' },
+        { evaluationNumber: <EmphText>2</EmphText>, date: <EmphText>Mié 09, Abr 2025</EmphText>, weighting: <EmphText>22.5%</EmphText>, description: <EmphText>informe 01</EmphText>, quickGuide: '' },
         { evaluationNumber: 3, date: 'Lun 07, May 2025', weighting: '26.25%', description: 'informe 02', quickGuide: '' },
         { evaluationNumber: 4, date: 'Cada Semana', weighting: '11.25%', description: 'promedio controles', quickGuide: '' },
         { evaluationNumber: 5, date: 'Lun 12, May 2025', weighting: '25%', description: 'examen', quickGuide: '' }

@@ -13,32 +13,205 @@
 ### Ejercicio 01
 **Filtrar alumnos de una carrera específica**. Encuentra a todos los alumnos que estudian Ingeniería Informática
 
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+
+<br/>
+1. Seleccionar colección `alumnos`
+2. Ir a **query** y agregar:
+
+```json
+{ "carrera": "Ingeniería Informática" }
+```
+3. Presionar botón `find`
+
+</details>
+
+<br/>
 ### Ejercicio 02
 **Buscar alumnos mayores de 21 años**. Encuentra a los alumnos cuya edad sea mayor a 21 años
 
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+
+<br/>
+1. Seleccionar colección `alumnos`
+2. Ir a **query** y agregar:
+
+```json
+{ "edad": { $gt: 21 } }
+```
+3. Presionar botón `find`
+
+</details>
+
+<br/>
 ### Ejercicio 03
 **Buscar alumnos que tengan una nota superior a 6.0 en alguna asignatura**. Encuentra alumnos que tengan al menos una asignatura con una nota mayor a 6.0
 
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+
+<br/>
+1. Seleccionar colección `alumnos`
+2. Ir a **query** y agregar:
+
+```json
+{ "notas.nota": { $gt: 6.0 } }
+```
+3. Presionar botón `find`
+
+</details>
+
+<br/>
 ### Ejercicio 04
 **Actualizar el correo de un alumno**. El alumnos Juan Pérez ha cambiado su correo. Ahora su nuevo correo es juan.perez2025@ejemplo.com
 
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+
+<br/>
+1. Seleccionar colección `alumnos`
+2. Ir a query y agregar:
+
+```json
+{ "nombre":"Juan", "apellido":"Pérez" }
+```
+3. Presionar botón `find`
+4. Presionar botón `update` y agregar:
+
+```json
+{ $set: { "correo":"juan.perez2025@ejemplo.com" }
+```
+5. Presionar `refresh`
+
+</details>
+
+<br/>
 ### Ejercicio 05
 **Eliminar a un alumno que se retiró**. Elimina al alumno llamado Carlos Rojas de la base de datos.
 
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+
+<br/>
+1. Seleccionar colección `alumnos`
+2. Ir a query y agregar:
+
+```json
+{ "nombre": "Carlos", "apellido": "Rojas" }
+```
+3. Presionar botón `find`
+4. Presionar botón `delete`
+5. Presionar `refresh`
+
+</details>
+
+<br/>
 ### Ejercicio 06
 **Filtrar docentes del departamento de Informática**. Encuentra todos los docentes que pertenecen al departamento de Informática
 
-### Ejercicio 07
-**Buscar docentes que enseñan "Base de Datos"**. Encuentra todos los docentes que imparten la asignatura "Base de datos"
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
 
+<br/>
+1. Seleccionar colección `docentes`
+2. Ir a query y agregar:
+
+```json
+{ "departamento": "Informática" }
+```
+3. Presionar botón `find`
+
+</details>
+
+<br/>
+### Ejercicio 07
+**Buscar docentes que enseñan "Base de Datos"**. Encuentra todos los docentes que imparten la asignatura "Bases de datos"
+
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+
+<br/>
+1. Seleccionar colección `docentes`
+2. Ir a query y agregar:
+
+```json
+{ "asignaturas": "Bases de Datos" }
+```
+3. Presionar botón `find`
+
+</details>
+
+<br/>
 ### Ejercicio 08
 **Aumentar la edad de un docente**. El docente Roberto Morales ha cumplido años. Debemos aumentar su edad en 1
 
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+
+<br/>
+1. Seleccionar colección `docentes`
+2. Ir a query y agregar:
+
+```json
+{ "nombre": "Roberto", "apellido": "Morales" }
+```
+3. Presionar botón `find`
+4. Presiona botón `update` y agregar:
+
+```json
+{ $inc: { "edad": 1 } }
+```
+5. Presionar `refresh`
+</details>
+
+
+<br/>
 ### Ejercicio 09
 **Agregar una nueva asignatura a un docente**. El docente Lucía Torres ahora impartirá la asignatura de "Cloud Computing". Debemos agregar esta nueva asignatura
 
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+
+<br/>
+1. Seleccionar colección `docentes`
+2. Ir a query y agregar:
+
+```json
+{ "nombre":"Lucía", "apellido":"Torres" }
+```
+3. Presionar botón `find`
+4. Presionar botón `update` y agregar:
+
+```json
+{ $push: { "asignaturas":"Cloud Computing" } }
+```
+5. Presionar `refresh`
+
+</details>
+
+
+<br/>
 ### Ejercicio 10
 **Eliminar un docente que dejó de trabajar en la institución**. El docente Manuel Gutiérrez ha dejado la institución. Debemos eliminarlo de la base de datos
+
+<details>
+
+    <summary style={{color:'red'}}>Solución</summary>
+
+<br/>
+1. Seleccionar colección `docentes`
+2. Ir a query y agregar:
+
+```json
+{ "nombre":"Manuel", "apellido":"Gutiérrez" }
+```
+3. Presionar botón `find`
+4. Presionar botón `delete`
+
+</details>
+
 
 ## Ejercicios Clase 03
 
@@ -53,44 +226,315 @@
 ### Ejercicio 01
 **Insertar un nuevo estudiante**
 
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+
+<br/>
+1. Seleccionar colección `alumnos`
+2. Presionar botón `ADD DATA` > `Insert document`
+3. Ingresar el siguiente documento:
+
+```json
+{
+    "_id": 6,
+    "nombre": "Andrea",
+    "apellido": "Ramírez",
+    "edad": 24,
+    "carrera": "Ingeniería de Software",
+    "correo": "andrea.ramirez@ejemplo.com",
+    "notas": [
+        {"asignatura": "Bases de Datos", "nota": 5.7},
+        {"asignatura": "Programación Avanzada", "nota": 6.1}
+    ]
+}
+```
+4. Presionar botón `Insert`
+
+</details>
+
+<br/>
 ### Ejercicio 02
 **Insertar múltiples docentes**
 
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+
+<br/>
+1. Seleccionar colección `docentes`
+2. Presionar botón `ADD DATA` > `Insert document`
+3. Ingresar los siguientes documentos:
+
+```json
+[
+    {
+        "_id": 6,
+        "nombre": "Elena",
+        "apellido": "Cifuentes",
+        "edad": 39,
+        "departamento": "Ciberseguridad",
+        "correo": "elena.cifuentes@inacap.cl",
+        "asignaturas": ["Hacking Ético", "Ciberseguridad Avanzada"]
+    },
+    {
+        "_id": 7,
+        "nombre": "Mauricio",
+        "apellido": "López",
+        "edad": 44,
+        "departamento": "Redes",
+        "correo": "mauricio.lopez@inacap.cl",
+        "asignaturas": ["Redes Avanzadas", "Seguridad en Redes"]
+    }
+]
+```
+4. Presionar botón `Insert`
+
+</details>
+
+<br/>
 ### Ejercicio 03
 **Filtrar estudiantes por carrera**. Encuentra a los alumnos que estudian Ingeniería Informática
 
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+
+<br/>
+1. Seleccionar colección `alumnos`
+2. Ir a **query** y agregar:
+
+```json
+{ "carrera": "Ingeniería Informática" }
+```
+3. Presionar botón `find`
+
+</details>
+
+
+<br/>
 ### Ejercicio 04
 **Buscar docentes que enseñen "Base de Datos"**. Encuentra todos los docentes que imparten la asignatura "Base de Datos"
 
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+
+<br/>
+1. Seleccionar colección `docentes`
+2. Ir a query y agregar:
+
+```json
+{ "asignaturas":"Bases de Datos" }
+```
+3. Presionar botón `find`
+
+</details>
+
+<br/>
 ### Ejercicio 05
 **Buscar estudiantes con notas mayores a 6.0**. Encuentra alumnos que tengan al menos una asignatura con una nota superior a 6.0
 
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+
+<br/>
+1. Seleccionar colección `alumnos`
+2. Ir a query y agregar: 
+
+```json
+{ "notas.nota": { $gt:6.0 } }
+```
+3. Presionar botón `find`
+
+
+</details>
+
+
+<br/>
 ### Ejercicio 06
 **Filtrar docentes mayores de 40 años**. Encuentra docentes cuya edad sea mayor a 40
 
-### Ejercicio 07
-**Actualizar el correo de un estudiante**. El alumno Juan Pérez ha cambiado su correo. Ahora es juan.perez2025@ejemplol.com
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
 
+<br/>
+1. Seleccionar colección `docentes`
+2. Ir a query y agregar:
+
+```json
+{ "edad": { "$gt":40 } }
+```
+3. Presionar botón `find`
+
+</details>
+
+<br/>
+### Ejercicio 07
+**Actualizar el correo de un estudiante**. El alumno Juan Pérez ha cambiado su correo. Ahora es juan.perez2025@ejemplo.com
+
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+
+<br/>
+1. Seleccionar colección `alumnos`
+2. Ir a query y agregar:
+
+```json
+{ "nombre":"Juan", "apellido":"Pérez" }
+```
+3. Presionar botón `find`
+4. Presionar botón `update` y agregar:
+
+```json
+{ $set: { "correo":"juan.perez2025@ejemplo.com" } }
+```
+5. Presionar `refresh`
+
+</details>
+
+<br/>
 ### Ejercicio 08
 **Aumentar la edad de un docente**. El docente Roberto Morales ha cumplido años. Debemos aumentar su edad en 1
 
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+
+<br/>
+1. Seleccionar colección `docentes`
+2. Ir a query y agregar:
+
+```json
+{ "nombre":"Roberto", "apellido":"Morales" }
+```
+3. Presionar botón `find`
+4. Presionar botón `update` y agregar:
+
+```json
+{ $inc: { "edad":1 } }
+```
+5. Presionar `refresh`
+
+</details>
+
+<br/>
 ### Ejercicio 09
 **Agregar una nueva asignatura a un docente**. El docente Lucía Torres ahora impartira la asignatura "Cloud Computing"
 
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+
+<br/>
+1. Seleccionar colección `docentes`
+2. Ir a query y agregar:
+
+```json
+{ "nombre":"Lucía", "apellido":"Torres" }
+```
+3. Presionar botón `find`
+4. Presionar botón `update` y agregar
+
+```json
+{ $push: { "asignaturas":"Cloud Computing" } }
+```
+5. Presionar `refresh`
+
+</details>
+
+<br/>
 ### Ejercicio 10
 **Eliminar una asignatura específica de un docente**. El docente Andrés Sánchez ya no enseña Ingeniería de Software
 
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+
+<br/>
+1. Seleccionar colección `docentes`
+2. Ir a query y agregar:
+
+```json
+{ "nombre":"Andrés", "apellido":"Sánchez" }
+```
+3. Presionar botón `find`
+4. Presionar botón `update` y agregar
+
+```json
+{ $pull: { "asignaturas":"Ingeniería de Software" } }
+```
+5. Presionar `refresh`
+</details>
+
+<br/>
 ### Ejercicio 11
 **Eliminar a un alumno que se retiró**
 
-### Ejercicio 12
-**Eliminar a un docente que dejó de trabajar**. El docente Manual Gutiérrez ha deja la institución. Debemos eliminarlo
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
 
+<br/>
+1. Seleccionar colección `alumnos`
+2. Ir a query y agregar un alumno cualquiera:
+
+```json
+{"nombre":"Carlos", "apellido":"Rojas"}
+```
+3. Presionar botón `find`
+4. Presionar botón `delete`
+
+</details>
+
+<br/>
+### Ejercicio 12
+**Eliminar a un docente que dejó de trabajar**. El docente Manuel Gutiérrez ha deja la institución. Debemos eliminarlo
+
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+
+<br/>
+1. Seleccionar colección `docentes`
+2. Ir a query y agregar:
+
+```json
+{"nombre":"Manuel", "apellido":"Gutiérrez"}
+```
+3. Presionar botón `find`
+4. Presionar botón `delete`
+
+</details>
+
+<br/>
 ### Ejercicio 13
 **Eliminar alumnos con edad menor a 20**. Borra todos los alumnos menores de 20 años
 
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+
+<br/>
+1. Seleccionar colección `alumnos`
+2. Ir a query y agregar:
+
+```json
+{ "edad": { $lt:20 } }
+```
+3. Presionar botón `find`
+4. Presionar botón `delete`
+
+</details>
+
+<br/>
 ### Ejercicio 14
 **Eliminar docentes de un departamento específico**. Se ha cerrado el departamento de Redes. Elimina todos los docentes de ese departamento
+
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+
+<br/>
+1. Seleccionar colección `docentes`
+2. Ir a query y agregar:
+
+```json
+{ "departamento": "Redes" }
+```
+3. Presionar botón `find`
+4. Presionar botón `delete`
+
+</details>
 
 ## Ejercicios Clase 04
 
@@ -109,6 +553,23 @@
 - Dentro de la base de datos Biblioteca, crea dos colecciones: Libros y Visitantes
 - Asegúrate de que la base de datos y las colecciones se hayan creado correctamente usando MongoDB Compass
 
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+
+<br/>
+1. Ir a `LocalConn`
+    - botón `+`
+    - `Create Database`
+    - nombre: `Biblioteca`
+2. Ir a BD `Biblioteca`
+    - botón `+`
+    - `Create collection`
+    - nombre: `Libros`
+    - nombre: `Visitantes`
+
+</details>
+
+<br/>
 ### Ejercicio 02
 **Inserción de Documentos**
 
@@ -123,30 +584,146 @@
     - email: El correo electrónico del visitante
     - fechaRegistro: La fecha que el visitante se registró en la biblioteca
 
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+
+<br/>
+1. Seleccionar colección `Libros`
+2. Presionar botón `ADD DATA` > `Insert document`
+3. Ingresar los siguientes documentos:
+
+```json
+[
+  {
+    "título": "La sombra del viento",
+    "autor": "Carlos Ruiz Zafón",
+    "anio": 2001,
+    "disponible": true
+  },
+  {
+    "título": "Orgullo y prejuicio",
+    "autor": "Jane Austen",
+    "anio": 1813,
+    "disponible": false
+  },
+  {
+    "título": "Don Quijote de la Mancha",
+    "autor": "Miguel de Cervantes",
+    "anio": 1605,
+    "disponible": true
+  }
+]
+```
+4. Presionar botón `Insert`
+5. Seleccionar colección `Visitantes`
+6. Presionar botón `ADD DATA` > `Insert document`
+7. Ingresar los siguientes documentos:
+
+```json
+[
+  {
+    "nombre": "AAA",
+    "email": "aaa@example.com",
+    "fechaRegistro": { "$date":"2024-04-25T10:15:00.000Z" }
+  },
+  {
+    "nombre": "BBB",
+    "email": "bbb@example.com",
+    "fechaRegistro": { "$date":"2024-04-24T14:30:00.000Z" }
+  }
+]
+```
+8. Presiona botón `Insert`
+
+</details>
+
+<br/>
 ### Ejercicio 03
 **Actualización de Documentos**
 
 - Actualiza un libro en la colección Libros para cambiar su estado de disponible a false
 - Añade un nuevo campo a todos los documentos en la colección Visitantes llamado miembroActivo, estableciendo su valor en true
 
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+
+<br/>
+1. Seleccionar colección `Libros`
+2. Ir a query y agregar:
+
+```json
+{"título": "La sombra del viento"}
+```
+3. Presionar botón `update` y agregar:
+
+```json
+{ $set: { "disponible":false } }
+```
+5. Presiona `refresh`
+
+</details>
+
+<br/>
 ### Ejercicio 04
 **Eliminación de Documentos**
 
 - Elimina un libro de la colección Libros que tenga más de 20 años de antigüedad
 - Elimina un visitante de la colección Visitantes que no haya visitado la biblioteca en el último año
 
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+
+<br/>
+1. Seleccionar colección `Libros`
+2. Ir a query y agregar:
+
+```json
+{ "anio": { $lt: 2005 } }
+```
+3. Presionar botón `find`
+4. Presiona botón `delete`
+5. Seleccionar colección `Visitantes`
+6. Ir a query y agregar:
+
+```json
+{ "fechaRegistro": { $lt: ISODate("2025-01-01T00:00:00.000Z") } }
+```
+7. Presionar botón `find`
+8. Presionar botón `delete`
+
+</details>
+
+
+<br/>
 ### Ejercicio 05
 **Consultas Simples y Uso de Filtros**
 
 - Realiza una consulta para encontrar todos los libros que estén disponibles para préstamo
 - Utiliza un filtro para buscar todos los visitantes que se hayan registrado en la biblioteca en los últimos tres meses
 
+<br/>
+1. Seleccionar colección `Libros`
+2. Ir a query y agregar:
+
+```json
+{ "disponible": true }
+```
+3. Seleccionar colección `Visitantes`
+4. Ir a query y agregar:
+
+```json
+{"fechaRegistro": { $gte: ISODate(2025-01-25) } }
+```
+</details>
+
+<br/>
 ### Ejercicio 06
 **Agregar un Nuevo Campo a Todos los Documentos**
 
 - Se ha decidido registrar el número de copias disponibles de cada libro en la colección Libros
 - Agregar un campo copiasDisponibles con un valor inicial de 5 a todos los documentos en la colección Libros
 
+<br/>
 ### Ejercicio 07
 **Agregar Comentarios a los Libros**
 

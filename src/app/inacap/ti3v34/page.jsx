@@ -28,13 +28,23 @@ export default function Ti3V34() {
         { evaluationNumber: 5, date: 'Lun 12, May 2025', weighting: '25%', description: 'examen', quickGuide: '' }
     ];
     const classData = [
-        { week: '01', class: '01', date: 'Lun 10, Mar \'25', description: "Introducción Seguridad" },
-        { week: '', class: '02', date: 'Mar 11, Mar \'25', description: "Activos de Información", isSuspended: true },
-        { week: '', class: '03', date: 'Mié 12, Mar \'25', description: "Mejoramiento Continuo (Ciclo Deming)" },
-        { week: '02', class: '04', date: 'Lun 17, Mar \'25', description: "" },
+        { week: '01', class: '01', date: 'Lun 10, Mar 2025', description: "Introducción Seguridad" },
+        { week: '', class: '02', date: 'Mar 11, Mar 2025', description: "Activos de Información", isSuspended: true },
+        { week: '', class: '03', date: 'Mié 12, Mar 2025', description: "Mejoramiento Continuo (Ciclo Deming)" },
+        { week: '02', class: '04', date: 'Lun 17, Mar 2025', description: "Vulnerabilidad/Amenaza/Riesgo" },
+        { week: '', class: '05', date: 'Mar 18, Mar 2025', description: "Eventos e Incidentes" },
+        { week: '', class: '06', date: 'Mié 19, Mar 2025', description: "SGSI y ISO27001" },
+        { week: '03', class: '07', date: 'Lun 24, Mar 2025', description: "Evaluación 01" },
+        { week: '', class: '08', date: 'Mar 25, Mar 2025', description: "Ética y Legislación" },
+        { week: '', class: '09', date: 'Mié 26, Mar 2025', description: "" },
+
     ];
     const lectureData = [
-        { week: '01', lecture: '01', date: 'Sáb 22, Mar \'25', description: 'Seguridad de la Información' }
+        { week: '01', lecture: '01', date: 'Sáb 14, Mar 2025', description: 'Seguridad de la Información' },
+        { week: '', lecture: '02', date: 'Sáb 14, Mar 2025', description: 'Fundamentos de la seguridad de la información y seguridad informática' },
+        { week: '02', lecture: '03', date: 'Sáb 21, Mar 2025', description: 'Framework de Seguridad ISO27001:2022 y CIS Controls' },
+        { week: '03', lecture: '04', date: 'Sáb 28, Mar 2025', description: 'Ética y legislación' },
+        { week: '', lecture: '05', date: 'Sáb 28, Mar 2025', description: 'Elementos normativos nacionales e internacionales y delitos informáticos' },
     ];
 
     return (

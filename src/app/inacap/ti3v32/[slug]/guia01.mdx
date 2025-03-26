@@ -686,15 +686,13 @@
 6. Ir a query y agregar:
 
 ```json
-{ "fechaRegistro": { $lt: ISODate("2025-01-01T00:00:00.000Z") } }
+{ "fechaRegistro": { $lt: ISODate("2024-01-01T00:00:00.000Z") } }
 ```
 7. Presionar botón `find`
 8. Presionar botón `delete`
 
 </details>
 
-<details>
-    <summary style={{color:'red'}}>Solución</summary>
 
 <br/>
 ### Ejercicio 05
@@ -702,6 +700,9 @@
 
 - Realiza una consulta para encontrar todos los libros que estén disponibles para préstamo
 - Utiliza un filtro para buscar todos los visitantes que se hayan registrado en la biblioteca en los últimos tres meses
+
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
 
 <br/>
 1. Seleccionar colección `Libros`
@@ -714,7 +715,7 @@
 4. Ir a query y agregar:
 
 ```json
-{"fechaRegistro": { $gte: ISODate(2025-01-25) } }
+{"fechaRegistro": { $gt: ISODate("2024-12-25") } }
 ```
 </details>
 
@@ -725,9 +726,47 @@
 - Se ha decidido registrar el número de copias disponibles de cada libro en la colección Libros
 - Agregar un campo copiasDisponibles con un valor inicial de 5 a todos los documentos en la colección Libros
 
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+
+<br/>
+1. Seleccionar colección `Libros`
+2. Presionar botón `update` y agregar:
+
+```json
+{ $set: { "copiasDisponibles": 5 } }
+```
+3. Presionar botón `refresh`
+
+</details>
+
+
 <br/>
 ### Ejercicio 07
 **Agregar Comentarios a los Libros**
 
 - Ahora queremos agregar comentarios de usuarios a los libros en la colección Libros
 - Usar el operador $push para agregar un nuevo comentario
+
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+
+<br/>
+1. Seleccionar colección `Libros`
+2. Presionar botón `update` y agregar:
+
+```json
+{ $set: { "comentarios": [] } }
+```
+3. Presionar botón `refresh`
+4. Ir a query y agregar:
+
+```json
+{ "título": "Orgullo y prejuicio" } 
+```
+5. Presiona botón `update` y agregar:
+
+```json
+{ $push:{ "comentarios":"muy recomendado" } }
+```
+</details>

@@ -1,0 +1,68 @@
+# Introducción a las bases de datos no estructuradas
+
+## Bases de Datos Relacionales
+
+![](/ti3v32/images/fig02.png)
+
+
+1. Cada fila en una tabla es un registro con una ID única, llamada clave
+2. Las columnas de la tabla contienen los atributos de los datos
+3. Cada registro suele tener un valor para cada atributo, lo que simplifica la creación de relaciones entre los puntos de datos
+4. El lenguaje usado en este tipo de base de datos es NoSQL
+
+### ACID
+
+- **Atomicidad:** Las transacciones son todo o nada
+- **Consistencia:** Solo se guardan datos validos
+- **Aislamiento:** Las transacciones no se afectan entre sí
+- **Durabilidad:** Los datos escritos no se perderán
+
+### Ventajas
+
+1. Mayor soporte y más variedad de herramientas debido a que lleva más tiempo en el mercado
+2. Es útil para manejar y obtener los datos
+3. Permite agregar otros servidores de SQL, por ejemplo, una persona puede acceder a la base de datos de otra
+
+### Desventajas
+
+1. No es flexible (antes de ingresar los objetos, deben estar correctamente validados)
+2. Mientras más compleja sea la base de datos, requiere mayor procesamiento y eso se puede ver reflejado en el rendimiento y consumo de recursos
+
+
+## Bases de Datos No Relacionales
+![](/ti3v32/images/fig01.png)
+
+- Carecen de estructura definida para el almacenamiento de la información
+- Esto permite que las transacciones de datos sean más rápidas que en SQL
+
+### Características
+
+- No utilizan tablas ni columnas. Los datos se almacenan en documentos
+- No utiliza SQL para la gestión de datos
+- Son bases de datos escalables, puede crecer en tamaño con el paso del tiempo
+- Son flexibles en cuanto a los formatos de usado
+- El acceso es rápido debido al tener una estructura simple
+- Están diseñadas para almacenar grandes volúmenes de datos
+- En general, se tratan de proyectos de código abierto
+- Se ejectuan en clúster (serie de computadoreas pequeñas y de gran procesamiento)
+
+### Tipos de BD no estructuradas
+
+1. **Clave-Valor:** Almacena datos como un conjunto de pares clave-valor en los que una clave sirve como un identificador único
+2. **Documentos:** Se representan en formato XML, JSON o BSON. Son flexibles, no utilizan una estructura rígida y hay reducción de la complejidad en las consultas para datos asociados
+3. **Columnas:** Basado en un modelo de almacenamiento 'tabular'. Por cada entrada, hay una columna, por lo tanto, los datos de cada entrada están dispuestos uno debajo del otro; permiten grande volúmenes de datos, poseen gran escalabilidad y disposición de la información 
+4. **Grafos:** Los datos se modelan como un conjunto de relaciones entre elementos, tienen alto rendimiento en consultas de relaciones de proximidad entre datos, y no para ejecutar consultas globales. Existe flexibilidad en la definición de atributos y longitud de registros
+
+### Ventajas
+
+1. **Aplicaciones de big data:** grande volúmenes son manejados fácilmente por las base de datos NoSQL
+2. **Administración de las bases de datos:** Requieren menos administración práctica, cuenta con capacidades de distribución de datos y reparación automática, modelos de datos simplificado y menos requisitos de ajuste y administración
+3. **Versatilidad:** Las posibilidades de crecimiento en el volumen de datos o la posibilidad de incluir cambios sobre la forma en la que ingresan los datos sin necesidad de alterar la estructura, permite adaptarse de forma rápida a un entorno de alto dinamismo
+4. **Crecimiento horizontal:**  Son altamente escalables, si se requieren instalar mayor cantidad de nodos para ampliar la capacidad, se puede hacer sin problemas. Esto no interrumpe la usabilidad o consultas dentro de la base de datos
+
+### Desventajas
+
+1. **Atomicidad:** Algunas de estas bases de datos no incorporan la atomicidad de información. Esto puede derivar en que la información no sea consistente entre nodos
+2. **Software poco documentado:** Puede adolecer de que algunas operaciones sean limitadas por la falta de información sobre las herramientas y características
+3. **Baja estandarización:** No se tiene un criterio plenamente definido entre los motores que se utilizan en este tipo de base de datos. El lenguaje tiende a variar según el tipo de base de datos que se vaya a utilizar
+4. **Herramientas GUI:** La mayoría de las bases de datos NoSQL no contienen una interfaz gráfica. Requiere conocimiento especial para poder ejecutar algunas de ellas

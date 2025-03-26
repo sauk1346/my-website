@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import ClassCard from '../../../components/ClassCard'; 
 import LectureCard from '../../../components/LectureCard'; 
 import EvaluationCard from '../../../components/EvaluationCard';
@@ -11,6 +11,26 @@ import Link from 'next/link';
 import EmphText from '../../../components/EmphText';
 
 export default function Ti3V32() {
+    // Estado para controlar la vista responsiva
+    const [isMobile, setIsMobile] = useState(false);
+
+    // Efecto para detectar el tamaño de la pantalla
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 768);
+        };
+        
+        // Configurar tamaño inicial
+        handleResize();
+        
+        // Agregar listener para cambios de tamaño
+        window.addEventListener('resize', handleResize);
+        
+        // Limpiar listener al desmontar
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
 
     const professorData = {
         name: "Eugenio Alberto Bravo García",
@@ -23,7 +43,7 @@ export default function Ti3V32() {
         { unit: '4', description: 'Unidad integradora para evaluar la competencia' }
     ];
     const evaluationsData = [
-        { evaluationNumber: <EmphText>1</EmphText>, date: <EmphText>'Mié 26, Mar 2025'</EmphText>, weighting: <EmphText>20%</EmphText>, description: <EmphText>MongoDB CRUD</EmphText>, quickGuide: <Link href="ti3v32/guia01" className={styles.link}>Guía 01</Link> },
+        { evaluationNumber: <EmphText>1</EmphText>, date: <EmphText>Mié 26, Mar 2025</EmphText>, weighting: <EmphText>20%</EmphText>, description: <EmphText>MongoDB CRUD</EmphText>, quickGuide: <Link href="ti3v32/guia01" className={styles.link}>Guía 01</Link> },
         { evaluationNumber: 2, date: 'Mié 23, Abr 2025', weighting: '40%', description: '', quickGuide: '' },
         { evaluationNumber: 3, date: 'Mar 06, May 2025', weighting: '30%', description: '', quickGuide: '' },
         { evaluationNumber: 4, date: 'Mié 07, May 2025', weighting: '10%', description: '', quickGuide: '' },
@@ -38,10 +58,9 @@ export default function Ti3V32() {
         { week: '03', class: '07', date: 'Lun 24, Mar 2025', description: <Link href="ti3v32/clase07" className={styles.link}>MongoDB Shell</Link> },
         { week: '', class: '08', date: 'Mar 25, Mar 2025', description: <Link href="ti3v32/clase08" className={styles.link}>Ejercicio con puntaje</Link> },
         { week: '', class: '09', date: 'Mié 26, Mar 2025', description: "Evaluación 01" },
-
     ];
     const lectureData = [
-        { week: '01', lecture: '01', date: 'Sáb 15, Mar 2025', description: 'Introducción a las bases de datos no estructuradas' },
+        { week: '01', lecture: '01', date: 'Sáb 15, Mar 2025', description: <Link href="ti3v32/lectura01" className={styles.link}>Introducción a las bases de datos no estructuradas</Link> },
         { week: '', lecture: '02', date: 'Sáb 15, Mar 2025', description: 'Bases de datos no estructuradas: características y tipos' },
         { week: '02', lecture: '03', date: 'Sáb 22, Mar 2025', description: 'Elementos de las bases de datos no estructuradas documentales y características de Mongo DB' },
         { week: '03', lecture: '04', date: 'Sáb 29, Mar 2025', description: 'Operaciones esenciales con MongoDB' },
@@ -58,7 +77,7 @@ export default function Ti3V32() {
             </p>
 
             <div className={styles.cardContainer}>
-                <div className={styles.card}>
+                <div className={`${styles.card} ${styles.fullWidth}`}>
                     <ProfessorCard professorData={professorData} />
                 </div>
 
@@ -80,20 +99,6 @@ export default function Ti3V32() {
                     </div>
                 </div>
             </div>
-
-            {/* Agregar estilos internos */}
-            <style jsx>{`
-                .link {
-                    color: #2563eb;
-                    text-decoration: none;
-                }
-
-                .link:hover {
-                    text-decoration: underline;
-                }
-            `}</style>
-
-
         </div>
     );
 }

@@ -3,21 +3,26 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.title {
+    padding: 1rem;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  .title {
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 1rem;
-}
-
-.subheading {
+    text-align: center;
+  }
+  
+  .subheading {
     font-size: 1.25rem;
     color: #4a4a4a;
     margin-bottom: 1rem;
-}
-
-.description {
+    text-align: center;
+  }
+  
+  .description {
     margin-bottom: 1.5rem;
     font-size: 1.125rem;
     color: #4a4a4a;
@@ -25,34 +30,127 @@
     background-color: #f1f5f9;
     padding: 1rem;
     border-left: 4px solid #3b82f6;
-}
-
-.cardContainer {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .cardContainer {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;
-}
-
-.cardGroup {
+  }
+  
+  .cardGroup {
     display: flex;
     gap: 1.5rem;
     width: 100%;
     max-width: 1200px;
     justify-content: space-between;
-}
-
-.card {
+  }
+  
+  .card {
     flex: 1;
-    max-width: 48%;
-}
-
-.link {
+    min-width: 0; /* Permite que las tarjetas puedan encogerse si es necesario */
+  }
+  
+  .link {
     color: #2563eb;
     text-decoration: none;
-}
-
-.link:hover {
+  }
+  
+  .link:hover {
     text-decoration: underline;
-}
+  }
+  
+  /* Estilos responsivos */
+  @media (max-width: 1024px) {
+    .cardGroup {
+      gap: 1rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .title {
+      font-size: 2rem;
+    }
+    
+    .description {
+      font-size: 1rem;
+    }
+    
+    .cardGroup {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    
+    .card {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .title {
+      font-size: 1.75rem;
+    }
+    
+    .subheading {
+      font-size: 1.1rem;
+    }
+    
+    .description {
+      padding: 0.75rem;
+      font-size: 0.95rem;
+    }
+    
+    .container {
+      padding: 0.75rem;
+    }
+  }
+  
+  /* Estilos para tablas dentro de las tarjetas */
+  .card table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+  }
+  
+  .card th, 
+  .card td {
+    padding: 0.625rem;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  
+  .card th {
+    font-weight: bold;
+    text-align: left;
+    background-color: #f8fafc;
+  }
+  
+  /* Asegurar que las tablas sean responsivas */
+  @media (max-width: 600px) {
+    .card table {
+      font-size: 0.85rem;
+    }
+    
+    .card th, 
+    .card td {
+      padding: 0.5rem;
+    }
+  }
+  
+  /* Estilos para las tarjetas individuales */
+  .card {
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }

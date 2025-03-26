@@ -190,7 +190,7 @@ Encuentra productos **ingresados entre el 1 y el 15 de marzo de 2024.**
     <summary style={{color:'red'}}>Solución</summary>
 
 ```json
-{"fechaIngreso": {$gt: ISODate("2024-03-01") , $lt: ISODate("2024-03-15")}}
+{"fechaIngreso": {$gte: ISODate("2024-03-01") , $lt: ISODate("2024-03-15")}}
 ```
 </details>
 
@@ -203,7 +203,7 @@ Muestra solo los productos de la categoría "Pantallas" **que no estén en promo
     <summary style={{color:'red'}}>Solución</summary>
 
 ```json
-{"categoria":"pantalla", "detalles.descuento":null}
+{ "categoria": "Pantallas", "descuento": { "$exists": false } }
 ```
 </details>
 
@@ -216,7 +216,7 @@ Agrega un campo ultimaActualizacion con la fecha actual a todos los productos qu
 
 1. Ir a query y agregar:
 ```json
-{"stock":{$gt:5}}
+{"stock":{$lt:5}}
 ```
 
 2. Ir a `update` y agregar:
@@ -240,7 +240,7 @@ Actualiza todos los productos de la categoría "Accesorios" para que su proveedo
 1. Ir a query y agregar:
 
 ```json
-{"categoria":"Accesorios"}
+{ "categoria": "Accesorios", "proveedor": { "$exists": false } }
 ```
 2. Ir a `update` y agregar:
 
@@ -264,7 +264,10 @@ Aumenta el stock en 3 unidades de todos los productos que contengan la palabra "
 1. Ir a query y agregar:
 
 ```json
-{"nombre":"Mouse"}
+{
+  "nombre": { "$regex": "Mouse", "$options": "i" }
+}
+
 ```
 
 2. Ir a `update` y agregar:
@@ -296,7 +299,12 @@ Elimina los productos **cuyo array de etiquetas esté vacío o no exista.**
     <summary style={{color:'red'}}>Solución</summary>
 
 ```json
-{"etiquetas":[]}
+{
+  "$or": [
+    { "etiquetas": { "$exists": false } },
+    { "etiquetas": [] }
+  ]
+}
 ```
 - Luego, botón `delete`
 

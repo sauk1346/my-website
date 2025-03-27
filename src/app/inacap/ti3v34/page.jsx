@@ -1,3 +1,4 @@
+
 import React from 'react';
 import ClassCard from '../../../components/ClassCard'; 
 import LectureCard from '../../../components/LectureCard'; 
@@ -28,7 +29,7 @@ export default function Ti3V34() {
         { evaluationNumber: 5, date: 'Lun 12, May 2025', weighting: '25%', description: 'examen', quickGuide: '' }
     ];
     const classData = [
-        { week: '01', class: '01', date: 'Lun 10, Mar 2025', description: "Introducción Seguridad" },
+        { week: '01', class: '01', date: 'Lun 10, Mar 2025', description: <Link href="ti3v34/clase01" className={styles.link}>Introducción Seguridad</Link> },
         { week: '', class: '02', date: 'Mar 11, Mar 2025', description: "Activos de Información", isSuspended: true },
         { week: '', class: '03', date: 'Mié 12, Mar 2025', description: "Mejoramiento Continuo (Ciclo Deming)" },
         { week: '02', class: '04', date: 'Lun 17, Mar 2025', description: "Vulnerabilidad/Amenaza/Riesgo" },
@@ -36,7 +37,8 @@ export default function Ti3V34() {
         { week: '', class: '06', date: 'Mié 19, Mar 2025', description: "SGSI y ISO27001" },
         { week: '03', class: '07', date: 'Lun 24, Mar 2025', description: "Evaluación 01" },
         { week: '', class: '08', date: 'Mar 25, Mar 2025', description: "Ética y Legislación" },
-        { week: '', class: '09', date: 'Mié 26, Mar 2025', description: "" },
+        { week: '', class: '09', date: 'Mié 26, Mar 2025', description: "Política Nacional de Ciberseguridad" },
+        { week: '04', class: '10', date: 'Lun 31, Mar 2025', description: "" },
 
     ];
     const lectureData = [

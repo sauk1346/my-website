@@ -1,0 +1,46 @@
+/* styles/layout.module.css */
+
+.pageLayout {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .mainContent {
+    width: 100%;
+  }
+  
+  .sidebar {
+    display: none;
+    position: static !important;
+    top: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    right: auto !important;
+  }
+  
+  /* Diseño responsivo para pantallas más grandes */
+  @media (min-width: 1024px) {
+    .pageLayout {
+      flex-direction: row;
+      gap: 2rem;
+    }
+  
+    .mainContent {
+      flex: 1;
+      max-width: 70%;
+    }
+  
+    .sidebar {
+      display: block;
+      width: 30%;
+      max-width: 300px;
+      position: static !important;
+      height: auto;
+      overflow: visible;
+      float: none !important;
+      z-index: auto !important;
+    }
+  }

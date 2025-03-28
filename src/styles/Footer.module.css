@@ -1,0 +1,85 @@
+.footer {
+    width: 100%;
+    padding: 2rem 0;
+    background-color: #f7f7f7;
+    border-top: 1px solid #eaeaea;
+    margin-top: 2rem;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .section {
+    width: 30%;
+    min-width: 250px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .description {
+    color: #666;
+    line-height: 1.6;
+  }
+  
+  .linkList, .contactList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .linkList li, .contactList li {
+    margin-bottom: 0.75rem;
+  }
+  
+  .link {
+    color: #0070f3;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  .link:hover {
+    color: #0051bb;
+    text-decoration: underline;
+  }
+  
+  .contactItem {
+    display: flex;
+    align-items: center;
+  }
+  
+  .icon {
+    margin-right: 0.5rem;
+  }
+  
+  .copyright {
+    width: 100%;
+    text-align: center;
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+    border-top: 1px solid #eaeaea;
+    color: #777;
+    font-size: 0.875rem;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+    
+    .section {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+  }

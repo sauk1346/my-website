@@ -1,0 +1,36 @@
+/* styles/MDXWrapper.module.css */
+
+.mdxLayout {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .mdxContent {
+    width: 100%;
+  }
+  
+  .mdxSidebar {
+    display: none;
+  }
+  
+  /* Pantallas más grandes: 2 columnas */
+  @media (min-width: 1024px) {
+    .mdxLayout {
+      flex-direction: row;
+      gap: 2rem;
+    }
+  
+    .mdxContent {
+      flex: 1;
+      max-width: 70%;
+    }
+  
+    .mdxSidebar {
+      display: block;
+      width: 30%;
+      max-width: 300px;
+    }
+  }

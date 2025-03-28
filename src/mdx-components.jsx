@@ -2,24 +2,62 @@
 import Link from 'next/link';
 import styles from './styles/clases.module.css';
 import { CodeBlock } from "./components/CodeBlock";
-// Eliminamos la importación de NumberedHeadings
+import MDXWrapper from './components/MDXWrapper';
+
+// Función para generar IDs de encabezados
+function getSlug(text) {
+  if (typeof text !== 'string' && typeof text !== 'object') {
+    return '';
+  }
+  
+  let textContent = '';
+  
+  if (typeof text === 'string') {
+    textContent = text;
+  } else if (Array.isArray(text)) {
+    textContent = text.map(item => {
+      if (typeof item === 'string') return item;
+      if (item && item.props && item.props.children) {
+        return typeof item.props.children === 'string' 
+          ? item.props.children 
+          : '';
+      }
+      return '';
+    }).join('');
+  } else if (text && text.props && text.props.children) {
+    textContent = typeof text.props.children === 'string' 
+      ? text.props.children 
+      : '';
+  }
+
+  return textContent
+    .toLowerCase()
+    .replace(/\s+/g, '-')
+    .replace(/[^\w\-]+/g, '')
+    .replace(/\-\-+/g, '-')
+    .replace(/^-+/, '')
+    .replace(/-+$/, '');
+}
+
 export function useMDXComponents(components) {
   return {
-    // Contenedor principal sin numeración de encabezados
+    // Contenedor principal - con envoltura en MDXWrapper
     wrapper: ({ children }) => (
-      <div className={styles.container}>
-        {children}
-      </div>
+      <MDXWrapper>
+        <div className={styles.container}>
+          {children}
+        </div>
+      </MDXWrapper>
     ),
-    // Definir los encabezados normales (sin numeración)
+    // Definir los encabezados con IDs para la tabla de contenidos
     h1: ({ children, ...props }) => (
-      <h1 className={styles.title} {...props}>{children}</h1>
+      <h1 id={props.id || getSlug(children)} className={styles.title} {...props}>{children}</h1>
     ),
     h2: ({ children, ...props }) => (
-      <h2 className={styles.subtitle} {...props}>{children}</h2>
+      <h2 id={props.id || getSlug(children)} className={styles.subtitle} {...props}>{children}</h2>
     ),
     h3: ({ children, ...props }) => (
-      <h3 className={styles.subsubtitle || ''} {...props}>{children}</h3>
+      <h3 id={props.id || getSlug(children)} className={styles.subsubtitle || ''} {...props}>{children}</h3>
     ),
     // Resto de componentes igual que antes
     p: ({ children, ...props }) => (
@@ -31,25 +69,21 @@ export function useMDXComponents(components) {
     li: ({ children, ...props }) => (
       <li className={styles.listItem} {...props}>{children}</li>
     ),
-    // Componente personalizado para enlaces (a) que se verán como <Link>
+    // Componente personalizado para enlaces
     a: ({ href, children, ...props }) => {
-      // Verifica si es un enlace externo
       const isExternal = href && (
         href.startsWith('http') ||
         href.startsWith('mailto:') ||
         href.startsWith('tel:')
       );
-      // Verifica si es un enlace a un archivo
       const isFileLink = href && (
         href.endsWith('.csv') ||
         href.endsWith('.pdf') ||
         href.endsWith('.xlsx') ||
         href.endsWith('.docx')
       );
-      // Clase personalizada para enlaces
       const linkClass = `${styles.link || ''}`;
       if (isExternal || isFileLink) {
-        // Para enlaces externos o archivos, usa un enlace normal pero estilizado
         return (
           <a
             href={href}
@@ -62,7 +96,6 @@ export function useMDXComponents(components) {
           </a>
         );
       }
-      // Para enlaces internos, usa el componente Link de Next.js
       return (
         <Link
           href={href}

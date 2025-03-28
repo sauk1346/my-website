@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <p className={styles.description}>
-        Website created to organize and share: Class notes, Programming codes, Hobbies
+        Choose your Destiny:
       </p>
       
       <div className={styles.cardContainer}>

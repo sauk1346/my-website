@@ -30,14 +30,14 @@ export default function Ti3V34() {
     ];
     const classData = [
         { week: '01', class: '01', date: 'Lun 10, Mar 2025', description: <Link href="ti3v34/clase01" className={styles.link}>Introducción Seguridad</Link> },
-        { week: '', class: '02', date: 'Mar 11, Mar 2025', description: "Activos de Información", isSuspended: true },
-        { week: '', class: '03', date: 'Mié 12, Mar 2025', description: "Mejoramiento Continuo (Ciclo Deming)" },
-        { week: '02', class: '04', date: 'Lun 17, Mar 2025', description: "Vulnerabilidad/Amenaza/Riesgo" },
-        { week: '', class: '05', date: 'Mar 18, Mar 2025', description: "Eventos e Incidentes" },
-        { week: '', class: '06', date: 'Mié 19, Mar 2025', description: "SGSI y ISO27001" },
+        { week: '', class: '02', date: 'Mar 11, Mar 2025', description: <Link href="ti3v34/clase02" className={styles.link}>Seguridad Información / Informática</Link> },
+        { week: '', class: '03', date: 'Mié 12, Mar 2025', description: <Link href="ti3v34/clase03" className={styles.link}>Vulnerabilidad/Amenaza/Riesgo</Link> },
+        { week: '02', class: '04', date: 'Lun 17, Mar 2025', description: <Link href="ti3v34/clase04" className={styles.link}>Eventos e Incidentes</Link> },
+        { week: '', class: '05', date: 'Mar 18, Mar 2025', description: <Link href="ti3v34/clase05" className={styles.link}>SGSI y ISO27001</Link> },
+        { week: '', class: '06', date: 'Mié 19, Mar 2025', description: "CIS Controls" },
         { week: '03', class: '07', date: 'Lun 24, Mar 2025', description: "Evaluación 01" },
-        { week: '', class: '08', date: 'Mar 25, Mar 2025', description: "Ética y Legislación" },
-        { week: '', class: '09', date: 'Mié 26, Mar 2025', description: "Política Nacional de Ciberseguridad" },
+        { week: '', class: '08', date: 'Mar 25, Mar 2025', description: <Link href="ti3v34/clase08" className={styles.link}>Ética y Legislación</Link> },
+        { week: '', class: '09', date: 'Mié 26, Mar 2025', description: <Link href="ti3v34/clase09" className={styles.link}>Política Nacional de Ciberseguridad</Link> },
         { week: '04', class: '10', date: 'Lun 31, Mar 2025', description: "" },
 
     ];

@@ -3,33 +3,29 @@ import Link from 'next/link';
 import styles from './styles/clases.module.css';
 import { CodeBlock } from "./components/CodeBlock";
 import MDXWrapper from './components/MDXWrapper';
-
 // Función para generar IDs de encabezados
 function getSlug(text) {
   if (typeof text !== 'string' && typeof text !== 'object') {
     return '';
   }
-  
   let textContent = '';
-  
   if (typeof text === 'string') {
     textContent = text;
   } else if (Array.isArray(text)) {
     textContent = text.map(item => {
       if (typeof item === 'string') return item;
       if (item && item.props && item.props.children) {
-        return typeof item.props.children === 'string' 
-          ? item.props.children 
+        return typeof item.props.children === 'string'
+          ? item.props.children
           : '';
       }
       return '';
     }).join('');
   } else if (text && text.props && text.props.children) {
-    textContent = typeof text.props.children === 'string' 
-      ? text.props.children 
+    textContent = typeof text.props.children === 'string'
+      ? text.props.children
       : '';
   }
-
   return textContent
     .toLowerCase()
     .replace(/\s+/g, '-')
@@ -38,7 +34,6 @@ function getSlug(text) {
     .replace(/^-+/, '')
     .replace(/-+$/, '');
 }
-
 export function useMDXComponents(components) {
   return {
     // Contenedor principal - con envoltura en MDXWrapper
@@ -68,6 +63,25 @@ export function useMDXComponents(components) {
     ),
     li: ({ children, ...props }) => (
       <li className={styles.listItem} {...props}>{children}</li>
+    ),
+    // Agregar componentes para tablas usando los estilos existentes
+    table: ({ children, ...props }) => (
+      <table className={styles.table} {...props}>{children}</table>
+    ),
+    thead: ({ children, ...props }) => (
+      <thead {...props}>{children}</thead>
+    ),
+    tbody: ({ children, ...props }) => (
+      <tbody {...props}>{children}</tbody>
+    ),
+    tr: ({ children, ...props }) => (
+      <tr {...props}>{children}</tr>
+    ),
+    th: ({ children, ...props }) => (
+      <th {...props}>{children}</th>
+    ),
+    td: ({ children, ...props }) => (
+      <td {...props}>{children}</td>
     ),
     // Componente personalizado para enlaces
     a: ({ href, children, ...props }) => {

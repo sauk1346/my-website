@@ -5,6 +5,7 @@ import EvaluationCard from '../../../components/EvaluationCard';
 import ProfessorCard from '../../../components/ProfessorCard';
 import UnitCard from '../../../components/UnitCard';
 import styles from'../../../styles/Ti3v32.module.css';
+import Link from 'next/link';
 
 export default function Tilv21() {
     const professorData = {
@@ -24,8 +25,11 @@ export default function Tilv21() {
 
     ];
     const lectureData = [
-        { week: '01', lecture: '01', date: 'Sáb 22, Mar \'25', description: 'Conceptos básicos en el desarrollo de software' },
-        { week: '', lecture: '02', date: 'Sáb 22, Mar \'25', description: 'Requisitos y calidad de software según Estándar ISO/IEC 25000' }
+        { week: '01', lecture: '01', date: 'Sáb 15, Mar 2025', description: <Link href='tilv21/lectura01' className={styles.link}>Conceptos básicos en el desarrollo de software</Link>  },
+        { week: '', lecture: '02', date: 'Sáb 15, Mar 2025', description: <Link href='tilv21/lectura02' className={styles.link}>Requisitos y calidad de software según Estándar ISO/IEC 25000</Link> },
+        { week: '02', lecture: '03', date: 'Sáb 22, Mar 2025', description: 'Estándares de testing, basados en normas y estándares de la industria del software' },
+        { week: '03', lecture: '04', date: 'Sáb 29, Mar 2025', description: 'Síntesis de la Unidad' },
+        
     ];
 
     return (

@@ -212,6 +212,32 @@
   color: #b91c1c;
 }
 
+.container table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.75rem;
+  border: 1px solid #e2e8f0;
+}
+
+.container th {
+  background-color: #0e559c;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: #ffffff;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.container td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.container tr:nth-child(even) {
+  background-color: #f8fafc;
+}
+
+
 /* Ajustes para dispositivos móviles */
 @media (max-width: 768px) {
   .container {

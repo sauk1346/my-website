@@ -64,7 +64,7 @@ export default function Ti3V32() {
     ];
     const lectureData = [
         { week: '01', lecture: '01', date: 'Sáb 15, Mar 2025', description: <Link href="ti3v32/lectura01" className={styles.link}>Introducción a las bases de datos no estructuradas</Link> },
-        { week: '', lecture: '02', date: 'Sáb 15, Mar 2025', description: 'Bases de datos no estructuradas: características y tipos' },
+        { week: '', lecture: '02', date: 'Sáb 15, Mar 2025', description: <Link href="ti3v32/lectura02" className={styles.link}>Bases de datos no estructuradas: características y tipos</Link> },
         { week: '02', lecture: '03', date: 'Sáb 22, Mar 2025', description: 'Elementos de las bases de datos no estructuradas documentales y características de Mongo DB' },
         { week: '03', lecture: '04', date: 'Sáb 29, Mar 2025', description: 'Operaciones esenciales con MongoDB' },
         { week: '', lecture: '05', date: 'Sáb 29, Mar 2025', description: 'Etapas del proceso de instalación de MongoDB y principales comandos de gestión' },

@@ -4,7 +4,7 @@ import styles from '../styles/TableOfContents.module.css';
 
 const TableOfContents = () => {
   const [headings, setHeadings] = useState([]);
-  const [activeId, setActiveId] = useState('');
+  const [activeKey, setActiveKey] = useState('');
   // Estado para controlar si debemos usar fixed positioning
   const [isFixed, setIsFixed] = useState(false);
   // Para guardar la posición inicial del TOC
@@ -13,13 +13,20 @@ const TableOfContents = () => {
   // Obtener los encabezados
   useEffect(() => {
     const getHeadings = () => {
+      // Obtener todos los elementos de encabezado en su orden natural en el DOM
       const headingElements = Array.from(document.querySelectorAll('h1, h2, h3, h4, h5, h6'))
         .filter((element) => element.id)
-        .map((element) => ({
-          id: element.id,
-          text: element.textContent,
-          level: Number(element.tagName.substring(1)),
-        }));
+        .map((element, index) => {
+          // Guardar la posición vertical para usarla después en la detección de scroll
+          const offsetTop = element.offsetTop;
+          return {
+            id: element.id,
+            text: element.textContent,
+            level: Number(element.tagName.substring(1)),
+            uniqueKey: `${element.id}-${index}`,
+            offsetTop // Guardar la posición vertical
+          };
+        });
       setHeadings(headingElements);
     };
 
@@ -77,18 +84,33 @@ const TableOfContents = () => {
   const handleScroll = useCallback(() => {
     const scrollPosition = window.scrollY + 100;
     
-    for (let i = headings.length - 1; i >= 0; i--) {
+    // Recorremos los encabezados desde el primero hasta el último
+    // para encontrar el que está actualmente visible
+    let foundActive = false;
+    
+    for (let i = 0; i < headings.length; i++) {
       const heading = headings[i];
-      const element = document.getElementById(heading.id);
+      const nextHeading = i < headings.length - 1 ? headings[i + 1] : null;
       
-      if (element && element.offsetTop <= scrollPosition) {
-        if (activeId !== heading.id) {
-          setActiveId(heading.id);
+      // Si estamos entre este encabezado y el siguiente
+      if (
+        heading.offsetTop <= scrollPosition && 
+        (!nextHeading || nextHeading.offsetTop > scrollPosition)
+      ) {
+        if (activeKey !== heading.uniqueKey) {
+          setActiveKey(heading.uniqueKey);
         }
+        foundActive = true;
         break;
       }
     }
-  }, [headings, activeId]);
+    
+    // Si no encontramos ningún encabezado activo y estamos al principio del documento
+    if (!foundActive && scrollPosition < (headings[0]?.offsetTop || 0) && headings.length > 0) {
+      setActiveKey(headings[0].uniqueKey);
+    }
+    
+  }, [headings, activeKey]);
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
@@ -99,11 +121,11 @@ const TableOfContents = () => {
     };
   }, [handleScroll]);
 
-  const handleClick = (id) => {
-    const element = document.getElementById(id);
+  const handleClick = (heading) => {
+    const element = document.getElementById(heading.id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
-      setActiveId(id);
+      setActiveKey(heading.uniqueKey);
     }
   };
 
@@ -129,7 +151,7 @@ const TableOfContents = () => {
         <ul className={styles.tocList}>
           {headings.map((heading) => (
             <li
-              key={heading.id}
+              key={heading.uniqueKey}
               className={`${styles.tocItem} ${heading.level === 1 ? styles.level1 : ''} ${
                 heading.level === 2 ? styles.level2 : ''
               } ${heading.level === 3 ? styles.level3 : ''} ${
@@ -140,9 +162,9 @@ const TableOfContents = () => {
                 href={`#${heading.id}`}
                 onClick={(e) => {
                   e.preventDefault();
-                  handleClick(heading.id);
+                  handleClick(heading);
                 }}
-                className={`${styles.tocLink} ${activeId === heading.id ? styles.active : ''}`}
+                className={`${styles.tocLink} ${activeKey === heading.uniqueKey ? styles.active : ''}`}
               >
                 {heading.text}
               </a>

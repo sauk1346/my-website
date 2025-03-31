@@ -25,7 +25,7 @@ export default function Ti3V34() {
         { evaluationNumber: 1, date: 'Lun 24, Mar 2025', weighting: '15%', description: 'prueba mixta', quickGuide: '' },
         { evaluationNumber: <EmphText>2</EmphText>, date: <EmphText>Mié 09, Abr 2025</EmphText>, weighting: <EmphText>22.5%</EmphText>, description: <EmphText>informe 01</EmphText>, quickGuide: '' },
         { evaluationNumber: 3, date: 'Lun 07, May 2025', weighting: '26.25%', description: 'informe 02', quickGuide: '' },
-        { evaluationNumber: 4, date: 'Cada Semana', weighting: '11.25%', description: 'promedio controles', quickGuide: '' },
+        { evaluationNumber: 4, date: 'Cada Semana', weighting: '11.25%', description: <Link href='ti3v34/controles' className={styles.link}>promedio controles</Link>, quickGuide: '' },
         { evaluationNumber: 5, date: 'Lun 12, May 2025', weighting: '25%', description: 'examen', quickGuide: '' }
     ];
     const classData = [
@@ -42,11 +42,11 @@ export default function Ti3V34() {
 
     ];
     const lectureData = [
-        { week: '01', lecture: '01', date: 'Sáb 14, Mar 2025', description: 'Seguridad de la Información' },
-        { week: '', lecture: '02', date: 'Sáb 14, Mar 2025', description: 'Fundamentos de la seguridad de la información y seguridad informática' },
-        { week: '02', lecture: '03', date: 'Sáb 21, Mar 2025', description: 'Framework de Seguridad ISO27001:2022 y CIS Controls' },
-        { week: '03', lecture: '04', date: 'Sáb 28, Mar 2025', description: 'Ética y legislación' },
-        { week: '', lecture: '05', date: 'Sáb 28, Mar 2025', description: 'Elementos normativos nacionales e internacionales y delitos informáticos' },
+        { week: '01', lecture: '01', date: 'Sáb 15, Mar 2025', description: 'Seguridad de la Información' },
+        { week: '', lecture: '02', date: 'Sáb 15, Mar 2025', description: 'Fundamentos de la seguridad de la información y seguridad informática' },
+        { week: '02', lecture: '03', date: 'Sáb 22, Mar 2025', description: 'Framework de Seguridad ISO27001:2022 y CIS Controls' },
+        { week: '03', lecture: '04', date: 'Sáb 29, Mar 2025', description: 'Ética y legislación' },
+        { week: '', lecture: '05', date: 'Sáb 29, Mar 2025', description: 'Elementos normativos nacionales e internacionales y delitos informáticos' },
     ];
 
     return (

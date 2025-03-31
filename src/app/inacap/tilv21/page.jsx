@@ -6,6 +6,7 @@ import ProfessorCard from '../../../components/ProfessorCard';
 import UnitCard from '../../../components/UnitCard';
 import styles from'../../../styles/Ti3v32.module.css';
 import Link from 'next/link';
+import EmphText from '../../../components/EmphText';
 
 export default function Tilv21() {
     const professorData = {
@@ -18,16 +19,16 @@ export default function Tilv21() {
         { unit: '3', description: 'Gestión de Defectos, Combinación de Valores de Prueba y Exploración' },
     ];
     const evaluationsData = [
-        { evaluationNumber: 1, date: 'Mié 02, Abr 2025', weighting: '20%', description: 'Prueba', quickGuide: '' },
+        { evaluationNumber: <EmphText>1</EmphText> , date: <EmphText>Mié 02, Abr 2025</EmphText>, weighting: <EmphText>20%</EmphText>, description: <EmphText>Prueba</EmphText>, quickGuide: '' },
         { evaluationNumber: 2, date: 'Lun 21, Abr 2025', weighting: '30%', description: 'informe 01', quickGuide: '' },
         { evaluationNumber: 3, date: 'Lun 05, May 2025', weighting: '35%', description: 'informe 02', quickGuide: '' },
-        { evaluationNumber: 4, date: 'Mié 07, May 2025', weighting: '15%', description: 'promedio controles', quickGuide: '' },
+        { evaluationNumber: 4, date: 'Mié 07, May 2025', weighting: '15%', description: <Link href='tilv21/controles' className={styles.link}>promedio controles</Link>, quickGuide: '' },
 
     ];
     const lectureData = [
         { week: '01', lecture: '01', date: 'Sáb 15, Mar 2025', description: <Link href='tilv21/lectura01' className={styles.link}>Conceptos básicos en el desarrollo de software</Link>  },
         { week: '', lecture: '02', date: 'Sáb 15, Mar 2025', description: <Link href='tilv21/lectura02' className={styles.link}>Requisitos y calidad de software según Estándar ISO/IEC 25000</Link> },
-        { week: '02', lecture: '03', date: 'Sáb 22, Mar 2025', description: 'Estándares de testing, basados en normas y estándares de la industria del software' },
+        { week: '02', lecture: '03', date: 'Sáb 22, Mar 2025', description: <Link href='tilv21/lectura03' className={styles.link}>Estándares de testing, basados en normas y estándares de la industria del software</Link> },
         { week: '03', lecture: '04', date: 'Sáb 29, Mar 2025', description: 'Síntesis de la Unidad' },
         
     ];

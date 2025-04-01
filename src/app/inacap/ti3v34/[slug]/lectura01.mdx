@@ -1,12 +1,59 @@
-# lectura 01
+import MermaidDiagram from '../../../../components/MermaidDiagram'
 
-Este es un texto de rueba
+# Seguridad de la información
 
-```mermaid
-graph TD
-    A[Inicio] --> B[Proceso]
-    B --> C{Decisión}
-    C -->|Sí| D[Resultado 1]
-    C -->|No| E[Resultado 2]
-```
+## Triada de la Seguridad de la información
 
+1. **Confidencialidad:** Se refiere a la procettión de la información contra accesos no autorizados. Es decir, asegura que la información sensible solo esté disponible para aquellos usuarios o sistemas que tengan los permisos adecuados de acceso. Para garantizar la confidencialidad, se utilizan técnicas como la encriptación, la autenticación y la gestión de acceso
+2. **Integridad:** Se refiere a la garantía de que la información no ha sido alterada o modificada sin autorización. Esto implica asegurar que los datos sean precisos, completos y fiables. Para esto, se utilizan técnicas como firmas digitales, checksums y registros de auditoría; estas permiten detectar y prevenir cualquier alteración no autorizada de los datos
+3. **Disponibilidad:** Se refiere a la garantía de que los sistemas y la información están disponibles y accesibles cuando se necesitan. Esto implica proteger los sistemas contra interrupciones, fallos o ataques que puedan afectar su funcionamiento normal. Para garantizar la disponibilidad, se utilizan técnicas como la reduncancia, la copia de seguridad y la planificación de la continuidad del negocio
+
+## Seguridad de la Información vs Seguridad Informática
+
+||Seguridad Información|Seguridad Informática|
+|---|---|---|
+|**Definición**|Conj. de medidas que se centra en la protección de la información en todas sus formas (digital, física, en tránsito, en reposo, etc) y aborda aspectos como la confidencialidad, integridad y disponibilidad|Conj. de medida que se centra específicamente en la protección de los sistema informáticos, incluyendo hardware, software, redes y datos almacenados en esos sistemas|
+|**Objetivo**|Garantizar que la información de una organización esté protegida contra amenazas y riesgos, asegurando su confidencialidad, integridad y disponibilidad|Proteger los sistemas informáticos contra amenazas como virus, malware, intrusiones, fallos de hardware/software, entre otros, asegurando su disponibilidad, integridad y confidencialidad|
+|**Frameworks y estándares relacionados**|- ISO27001 (Gestión de la Seguridad de la Información)<br/> - NIST SP 800-53 (Seguridad y Privacidad en Sistemas de Información)<br/> - ISACA COBIT (Marco de Gobierno y Gestión de TI)|- NIST SP 800-171 (Requisitos de Seguridad para Información Controlada No Clasificada)<br/> - CIS Controls (Controles de Seguridad Críticos)<br/> - PCI DSS (Estándar de Seguridad de Datos para la Industria de Tarjetas de Pago)|
+
+## Implementación SGSI
+- *Sistema de Gestión de la Seguridad de la Información*
+- Mediante la norma ISO 27001 se establecen los requisitos para establecer, implementar, mantener y mejorar un SGSI
+
+1. **Comprensión del contexto de la organización:** La organización debe comprender su contexto externo e interno, así como los requisitos y expectativas de las partes interesadas relevantes
+2. **Liderazgo y compromiso de la dirección:** La alta dirección debe demostrar liderazgo y compromiso con respecto a la seguridad de la información, asignando responsabilidades y recursos apropiados para el SGSI
+3. **Política de seguridad de la información:** Se debe establecer y mantener una política de seguridad de la información documentada que proporcione un marco general para los objetivos y compromisos de seguridad de la información de la organización
+4. **Gestión de riesgos:** La organización debe realizar una evaluzación de riesgos para identificar y valorar los riesgos de seguridad de la información, y luego seleccionar e implementar controles de seguridad adecuados para mitigar estos riesgos
+5. **Soporte organizacional:** Se deben proporcionar los recursos humanos, técnicos y financieros necesarios para implementar y mantener el SGSI, así como para proporcionar concienciación y formación en seguridad de la información
+6. **Operación:** La organización debe planificar, implementar y controlar los procesos necesarios para cumplir con los requisitos de seguridad de la información y lograr los objetivos del SGSI
+7. **Evaluación del desempeño:** Se deben establecer procesos para monitorear, medir, analizar y evaluar el desempeño del SGSI, incluida la realización de auditorías internas períodicas y la revisión por la dirección
+8. **Mejora continua:** La organización debe identificar oportunidades de mejora y tomar acciones para mejorar continuamente la eficacia del SGSI, incluída la respuesta a incidentes de seguridad de la información y la revisión de la política y los objetivos de seguridad de la información
+
+## CIS Controls
+*Controles de Seguridad Críticos*. Conjunto de mejores prácticas desarrolladas por el *Center for Interner Security* (CIS) para ayudar a las organizaciones a mejorar su postura de seguridad cibernética y proteger sus activos de información.
+
+Se dividen en 3 categorías principales. Cada categoría está diseñada para abordar diferentes aspectos de la seguridad y mejorar gradualmente la postura de seguridad global de la organización
+
+### Controles Básicos 
+Son los primeros que todas las organizaciones deben implementar para establecer una base sólida de seguridad:
+
+1. **Inventario y control de activos de hardware** Mantener un inventario actualizado y preciso de todos los dispositivos de hardware dentro de la red de la organización
+2. **Inventario y control de activos de software** Gestionar y rastrear todas la aplicaciones y programas instalados en los dispositivos de la organización
+3. **Gestión continua de vulnerabilidades:** Implementar procesos para identificar, evaluar y remediar vulnerabilidades en sistemas y aplicaciones
+4. **Uso controlado de privilegios administrativos:** Asegurar que los privilegios administrativos se gestionen y controlen adecuadamente para minimizar el riesgo de abuso
+
+### Controles Funcionales
+Abordan áreas más específicas y técnicas de la seguridad cibernética. Sirven para la protección de la infraestructura de TI y la gestión de la seguridad operativa
+
+1. **Configuración segura de dispositivos de hardware y software:** Establecer y mantener configuraciones seguras para todos los dispositivos y software dentro de la organización
+2. **Mantenimiento, monitoreo y análisis de registros de auditoría:** Recopilar, gestionar y analizar registros de auditoría para detectar y responder a incidentes de seguridad
+3. **Protección de datos:** Implementar medidas para proteger los datos de reposo y en tránsito, incluyendo el cifrado y la gestión de claves
+4. **Defensa contra malware:** Utilizar software antivirus y otras herramientas para detectar y prevenir infecciones de malware
+
+### Controles Organizacionales
+Se centran en las políticas, procedimientos y la gestión de la seguridad dentro de la organización. Estos controles aseguran que la seguridad cibernética esté integrada en la cultura organizacional y que todos los empleados comprendan su papel en la protección de la información.
+
+1. **Desarrollo y mantenimiento de políticas de seguridad:** Crear y mantener políticas claras y comprensibles que guíen las acciones de seguridad en la organización
+2. **Gestión de la seguridad de proveedores:** Evaluar y gestionar los riesgos asociados con los proveedores y socios externos
+3. **Formación y concienciación de los usuarios:** Implementar programas de formación y concienciación para educar a los empleados sobre las prácticas de seguridad y las amenazas cibernéticas
+4. **Planificación y ejecución de respuestas a incidentes:** Desarrollar y mantener planes de respuesta a incidentes para gestionar y mitigar los impactos de los incidentes de seguridad

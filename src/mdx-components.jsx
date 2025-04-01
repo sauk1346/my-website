@@ -3,8 +3,6 @@ import Link from 'next/link';
 import styles from './styles/clases.module.css';
 import { CodeBlock } from "./components/CodeBlock";
 import MDXWrapper from './components/MDXWrapper';
-import MermaidRenderer from './components/MermaidRenderer'; // Componente cliente para Mermaid
-
 // Función para generar IDs de encabezados
 function getSlug(text) {
   if (typeof text !== 'string' && typeof text !== 'object') {
@@ -36,7 +34,6 @@ function getSlug(text) {
     .replace(/^-+/, '')
     .replace(/-+$/, '');
 }
-
 export function useMDXComponents(components) {
   return {
     // Contenedor principal - con envoltura en MDXWrapper
@@ -123,18 +120,11 @@ export function useMDXComponents(components) {
         </Link>
       );
     },
-    // Manejo del código con soporte para Mermaid
+    // Manejo del código
     pre: ({ children }) => children,
     code: ({ children, className, ...props }) => {
       const match = /language-(\w+)/.exec(className || '');
       const lang = match ? match[1] : '';
-      
-      // Si el lenguaje es mermaid, usa el componente MermaidRenderer (cliente)
-      if (lang === 'mermaid') {
-        return <MermaidRenderer chart={String(children).trim()} />;
-      }
-      
-      // Para otros lenguajes, usa tu CodeBlock normal
       if (lang) {
         return (
           <pre className={`language-${lang}`}>

@@ -22,11 +22,11 @@ export default function Ti3V34() {
         { unit: '3', description: 'Evaluación de Vulnerabilidades y Matriz de Riesgo' },
     ];
     const evaluationsData = [
-        { evaluationNumber: 1, date: 'Lun 24, Mar 2025', weighting: '15%', description: 'prueba mixta', quickGuide: '' },
-        { evaluationNumber: <EmphText>2</EmphText>, date: <EmphText>Mié 09, Abr 2025</EmphText>, weighting: <EmphText>22.5%</EmphText>, description: <EmphText>informe 01</EmphText>, quickGuide: '' },
-        { evaluationNumber: 3, date: 'Lun 07, May 2025', weighting: '26.25%', description: 'informe 02', quickGuide: '' },
-        { evaluationNumber: 4, date: 'Cada Semana', weighting: '11.25%', description: <Link href='ti3v34/controles' className={styles.link}>promedio controles</Link>, quickGuide: '' },
-        { evaluationNumber: 5, date: 'Lun 12, May 2025', weighting: '25%', description: 'examen', quickGuide: '' }
+        { evaluationNumber: 1, date: 'Lun 24, Mar 2025', weighting: '15%', description: <Link href="ti3v34/eval01" className={styles.link}>Evaluación 01</Link>, quickGuide: '' },
+        { evaluationNumber: <EmphText>2</EmphText>, date: <EmphText>Mié 09, Abr 2025</EmphText>, weighting: <EmphText>22.5%</EmphText>, description: <EmphText>Informe 01</EmphText>, quickGuide: '' },
+        { evaluationNumber: 3, date: 'Lun 07, May 2025', weighting: '26.25%', description: 'Informe 02', quickGuide: '' },
+        { evaluationNumber: 4, date: 'Cada Semana', weighting: '11.25%', description: <Link href='ti3v34/controles' className={styles.link}>Promedio Controles</Link>, quickGuide: '' },
+        { evaluationNumber: 5, date: 'Lun 12, May 2025', weighting: '25%', description: 'Examen', quickGuide: '' }
     ];
     const classData = [
         { week: '01', class: '01', date: 'Lun 10, Mar 2025', description: <Link href="ti3v34/clase01" className={styles.link}>Introducción Seguridad</Link> },
@@ -35,18 +35,21 @@ export default function Ti3V34() {
         { week: '02', class: '04', date: 'Lun 17, Mar 2025', description: <Link href="ti3v34/clase04" className={styles.link}>Eventos e Incidentes</Link> },
         { week: '', class: '05', date: 'Mar 18, Mar 2025', description: <Link href="ti3v34/clase05" className={styles.link}>SGSI y ISO27001</Link> },
         { week: '', class: '06', date: 'Mié 19, Mar 2025', description: "CIS Controls" },
-        { week: '03', class: '07', date: 'Lun 24, Mar 2025', description: "Evaluación 01" },
+        { week: '03', class: '07', date: 'Lun 24, Mar 2025', description: <Link href="ti3v34/eval01" className={styles.link}>Evaluación 01</Link> },
         { week: '', class: '08', date: 'Mar 25, Mar 2025', description: <Link href="ti3v34/clase08" className={styles.link}>Ética y Legislación</Link> },
         { week: '', class: '09', date: 'Mié 26, Mar 2025', description: <Link href="ti3v34/clase09" className={styles.link}>Política Nacional de Ciberseguridad</Link> },
-        { week: '04', class: '10', date: 'Lun 31, Mar 2025', description: "" },
+        { week: '04', class: '10', date: 'Lun 31, Mar 2025', description: "PCI DSS" },
+        { week: '', class: '11', date: 'Mar 01, Abr 2025', description: "" },
+        { week: '', class: '12', date: 'Mié 02, Abr 2025', description: "" },
 
     ];
     const lectureData = [
-        { week: '01', lecture: '01', date: 'Sáb 15, Mar 2025', description: 'Seguridad de la Información' },
-        { week: '', lecture: '02', date: 'Sáb 15, Mar 2025', description: 'Fundamentos de la seguridad de la información y seguridad informática' },
+        { week: '01', lecture: '01', date: 'Sáb 15, Mar 2025', description: <Link href="ti3v34/lectura01" className={styles.link}>Seguridad de la Información</Link> },
+        { week: '', lecture: '02', date: 'Sáb 15, Mar 2025', description: <Link href="ti3v34/lectura02" className={styles.link}>Fundamentos de la seguridad de la información y seguridad informática</Link> },
         { week: '02', lecture: '03', date: 'Sáb 22, Mar 2025', description: 'Framework de Seguridad ISO27001:2022 y CIS Controls' },
         { week: '03', lecture: '04', date: 'Sáb 29, Mar 2025', description: 'Ética y legislación' },
         { week: '', lecture: '05', date: 'Sáb 29, Mar 2025', description: 'Elementos normativos nacionales e internacionales y delitos informáticos' },
+        { week: '04', lecture: '06', date: 'Sáb 05, Abr 2025', description: 'Payment Card Industry Data Security Standard y Convenio de Budapest' },
     ];
 
     return (

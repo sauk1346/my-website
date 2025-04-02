@@ -1,0 +1,174 @@
+# Guía Práctica MongoDB Shell
+
+- Base de datos: evaluacionMongo
+- Colecciones: usuarios, productos
+- datos: [usuarios.json](/ti3v32/data/usuarios02.json), [productos.json](/ti3v32/data/productos02.json)
+## Ejercicio 01
+Buscar todos los usuarios cuya edad sea mayor a 40
+
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+```js
+db.usuarios.find({ edad: { $gt: 40 } })
+```
+</details>
+
+## Ejercicio 02
+Filtrar los usuarios que tengan la etiqueta "newsletter"
+
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+```js
+db.usuarios.find({ etiquetas: "newsletter" })
+```
+</details>
+
+## Ejercicio 03
+Mostrar los usuarios cuya cuidad sea "Puerto Montt"
+
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+```js
+db.usuarios.find({ "direccion.ciudad": "Puerto Montt" })
+```
+</details>
+
+## Ejercicio 04
+Buscar usuarios que hayan comprado una "Tablet"
+
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+```js
+db.usuarios.find({ 
+  compras: { 
+    $elemMatch: { producto: "Tablet" } 
+  } 
+})
+```
+</details>
+
+## Ejercicio 05
+Filtrar usuarios con más de 2 etiquetas
+
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+```js
+db.usuarios.find({ 
+    $expr: { $gt: [ { $size: "$etiquetas" }, 2 ] } 
+})
+```
+</details>
+
+## Ejercicio 06
+Buscar usuarios registrados despues del "1 de febrero de 2024"
+
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+```js
+db.usuarios.find({ 
+    fechaRegistro: { $gt: ISODate("2024-02-01T00:00:00Z") }
+})
+```
+</details>
+
+## Ejercicio 07
+Mostrar usuarios que hayan comprado un producto con precio menor a 100.000
+
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+```js
+db.usuarios.find({ 
+  compras: { 
+    $elemMatch: { precio: { $gt: 100000 } } 
+  } 
+})
+```
+</details>
+
+## Ejercicio 08
+Buscar usuarios que vivan en la región "Los Ríos" y tengan la etiqueta "preferente"
+
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+```js
+db.usuarios.find({ 
+  "direccion.region": "Los Ríos", 
+  etiquetas: "preferente" 
+})
+```
+</details>
+
+## Ejercicio 09
+Mostrar usuarios sin compras registradas
+
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+```js
+db.usuarios.find({ 
+  $or: [
+    { compras: { $size: 0 } },
+    { compras: { $exists: false } }
+  ] 
+})
+```
+</details>
+
+## Ejercicio 10
+Mostrar usuarios con edad entre 25 y 35 años inclusive
+
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+```js
+db.usuarios.find({ 
+  edad: { $gte: 25, $lte: 35 } 
+})
+```
+</details>
+
+## Ejercicio 11
+Mostrar productos que estén en stock menor a 10 unidades
+
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+```js
+db.productos.find({ 
+  stock: { $lt: 10 } 
+})
+```
+</details>
+
+## Ejercicio 12
+Mostrar productos con más de una etiqueta
+
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+```js
+db.productos.find({ 
+  $expr: { $gt: [ { $size: "$etiquetas" }, 1 ] } 
+})
+```
+</details>
+
+## Ejercicio 13
+Buscar productos con etiquetas "oferta" o "destacado"
+
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+```js
+db.productos.find({ 
+  etiquetas: { $in: ["oferta", "destacado"] } 
+})
+```
+</details>
+
+## Ejercicio 14
+Buscar productos agregados después de "marzo de 2024"
+
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+```js
+db.productos.find({ 
+  fechaIngreso: { $gte: ISODate("2024-04-01T00:00:00Z") } 
+})
+```
+</details>

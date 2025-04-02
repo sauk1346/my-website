@@ -1,5 +1,12 @@
 # Repaso NoSql
 
+<iframe 
+    src="/ti3v32/docs/clase06.pdf" 
+    width="100%" 
+    height="440x" 
+    style={{ border: "none" }}
+></iframe>
+
 - **Estructura flexible:** el doc1 puede tener una estructura diferente del doc2 aún si pertenecen a la misma colección
 
 - desventajas
@@ -8,11 +15,19 @@
 
 ## Operadores relacionales de comparación
 
-Ejemplo:
+|Operador|Descripción|Ejemplo|
+|---|---|---|
+|`$eq`|Igual a|`{ edad: { $eq:25 } }`|
+|`$ne`|Distinto de|`{ edad: {$ne:18 } }`|
+|`$gt`|Mayor que|`{ precio: {$gt:1000 } }`|
+|`$gte`|Mayor o igual que|`{ edad: { $gte:18 } }`|
+|`$lt`|Menor que|`{ stock: {$lt:5 } }`|
+|`$lte`|Menor o igual que|`{ stock: {$lte:10 } }`|
 
-- Buscar todos los productos cuyo precio es mayor a 3000
+**Ejemplo:** Buscar todos los productos cuyo precio es mayor o igual a 30000
+
 ```js
-db.productos.find( {"precio":{ $gte: 3000 } } )
+db.productos.find( {"precio":{ $gte: 30000 } } )
 ```
 
 ## Operadores lógicos
@@ -25,7 +40,7 @@ db.productos.find( {"precio":{ $gte: 3000 } } )
 |`$nor`|Ninguna condición debe cumplirse|`{ $nor:[ {ciudad:"Temuco"}, {ciudad:"Valdivia"} ] }`|
 
 
-**Ejemplo**
+**Ejemplo:** Encontrar todos los clientes que tengan una edad mayor a 18 o sean de Puerto Montt
 
 ```js
 db.clientes.find({
@@ -38,7 +53,7 @@ db.clientes.find({
 
 ## Arrays
 
-Ejemplo
+**Ejemplo:** Sea el siguiente documento:
 
 ```json
 {
@@ -47,16 +62,16 @@ Ejemplo
 }
 ```
 
-para consultar se utiliza:
+Buscar los documentos donde el array etiquetas contenga "vip"
 
 ```js
 db.usuarios.find({ etiquetas:"vip" })
 ```
 
-El cual busca todos los documentos donde el array etiquetas contenga "vip"
-
 ## Subdocumentos
 Es un objeto dentro de otro documento
+
+**Ejemplo:** Sea el siguiente documento:
 
 ```json
 {
@@ -68,7 +83,7 @@ Es un objeto dentro de otro documento
 }
 ```
 
-Luego para buscar:
+Buscar a todos los usuarios cuya que sean de Osorno
 
 ```js
 db.usuarios.find({"direccion.ciudad":"Osorno"})
@@ -77,29 +92,44 @@ db.usuarios.find({"direccion.ciudad":"Osorno"})
 ## Consultas sobre Arrays
 
 |Operador|Qué hace|Ejemplo|
-|---|---|---|
-|`$in`|||
-|`$all`|||
-|`$size`|||
-|`$elemMAtch`|||
+|--|---|---|
+|`$in`|Coincide si el campo tiene alguno de los valores|`{ categoria: {$in:["Electrónica", Audio" ] } } `|
+|`$all`|Coincide si el array contiene todos los elementos|`{etiquetas: {$all: ["nuevo", "oferta"]}}`|
+|`$size`|Coincide con la cantidad exacta de elementos del array|`{ etiquetas: { $size:3 } }`|
+|`$elemMAtch`|Coincide con al menos un elemento que cumpla múltiples condiciones|`{compras: {$elemMatch:{producto:"Notebook",precio:{$lt:500000}}}}`|
 
 ## Manejo de fechas
 
-1. Insertar una fecha:
+1. **Insertar una fecha:**
 ```js
 {fechaRegistro: ISODate("2024-03-30")}
 ```
 
-2. Comparar fechas:
+2. **Comparar fechas:**
+```js
+db.registros.find({ 
+    fechaRegistro: { 
+        $gte: ISODate("2024-01-01") 
+    } 
+})
+```
 
-
-3. Filtrar por rango:
-
+3. **Filtrar por rango:**
+```js
+db.eventos.find({ 
+    fecha: { 
+        $gte: ISODate("2024-05-01"), 
+        $lte: ISODate("2024-05-31") 
+    } 
+})
+```
 
 ## Filtro y búsquedas anidadas
 
 ```js
-db.alumnos.find({ "contacto.email":{$ne:null} })
+db.alumnos.find({ 
+    "contacto.email":{$ne:null}
+})
 ```
 
 También se puede usar condiciones combinadas en subdocumentos
@@ -130,15 +160,18 @@ db.alumnos.find({
 }
 ```
 
-Luego consulta con $elemMAtch (busca aunq tenga un solo registro)
+Luego consulta con $elemMAtch (busca aunque tenga un solo registro)
 
 ```js
 db.usuarios.find({
-    compras: {$elmMatch: {producto}}
+    compras: {
+        $elmMatch: {
+            producto:"Teclado", 
+            precio:{$lt:40000}
+        }
+    }
 })
 ```
-
-
 
 # Ejercicios
 
@@ -148,18 +181,21 @@ Mostrar todos los usuarios que tengan más de 30 años
 <details>
     <summary style={{color:'red'}}>Solución</summary>
 ```js
-db["usuarios"].find({"edad":{$gt:30}})
+db.usuarios.find({
+    edad:{$gt:30}
+})
 ```
 </details>
 
 ## Ejercicio 02
-
-Encontrar todos los usuarios que son de Valdivia
+Mostrar los usuarios cuya ciudad sea Valdivia
 
 <details>
     <summary style={{color:'red'}}>Solución</summary>
 ```js
-db.usuarios.find({"direccion.ciudad":"Valdivia"})
+db.usuarios.find({
+    "direccion.ciudad":"Valdivia"
+})
 ```
 </details>
 
@@ -169,7 +205,9 @@ Mostrar usuarios con la etiqueta "vip" en su campo etiquetas
 <details>
     <summary style={{color:'red'}}>Solución</summary>
 ```js
-db.usuarios.find({ etiquetas:"vip" })
+db.usuarios.find({
+    etiquetas:"vip"
+})
 ```
 </details>
 
@@ -179,7 +217,11 @@ Mostrar los usuarios que se registraron después del 1 de febrero del 2024
 <details>
     <summary style={{color:'red'}}>Solución</summary>
 ```js
-db.usuarios.find({fechaRegistro:{$gt:ISODate("2024-02-01")}})
+db.usuarios.find({
+    fechaRegistro:{
+        $gt:ISODate("2024-02-01")
+    }
+})
 ```
 </details>
 
@@ -189,12 +231,22 @@ Mostrar usuarios con edad entre 25 y 35 años
 <details>
     <summary style={{color:'red'}}>Solución</summary>
 ```js
-db.usuarios.find({edad:{$gte:25,$lte:35}})
+db.usuarios.find({
+    edad:{
+        $gte:25,
+        $lte:35
+    }
+})
 ```
 
-opcional
+- opcional
 ```js
-db.usuarios.find({$and: [ {edad: {$gte:25}},{edad:{$lte:35}} ]})
+db.usuarios.find({
+    $and: [ 
+        {edad: {$gte:25}},
+        {edad: {$lte:35}}
+    ]
+})
 ```
 </details>
 
@@ -204,7 +256,9 @@ Mostrar usuarios que no tengan compras registradas
 <details>
     <summary style={{color:'red'}}>Solución</summary>
 ```js
-db.usuarios.find({"compras":{$size:0}})
+db.usuarios.find({
+    "compras": {$size:0}
+})
 ```
 </details>
 
@@ -215,7 +269,11 @@ Buscar usuarios que hayan comprado un producto llamado "Notebook"
     <summary style={{color:'red'}}>Solución</summary>
 ```js
 db.usuarios.find({
-    compras:{$elemMatch:{producto:"Notebook"}}
+    compras:{
+        $elemMatch:{
+            producto:"Notebook"
+        }
+    }
 })
 ```
 </details>
@@ -226,7 +284,10 @@ Mostrar los ususarios que viven en la región "Los Lagos" y tienen etiqueta "new
 <details>
     <summary style={{color:'red'}}>Solución</summary>
 ```js
-db.usuarios.find("direccion.region":"Los Lagos", etiqueta: "newsletter")
+db.usuarios.find({
+    "direccion.region":"Los Lagos", 
+    etiqueta: "newsletter"
+})
 ```
 </details>
 
@@ -239,6 +300,22 @@ Mostrar los usuario ue tienen más de una etiqueda
 db.usuarios.find({
     etiquetas: {$exists: true},
     $expr: {$gt: [ { $size: "$etiquetas"}, 1 ]}
+})
+```
+</details>
+
+## Ejercicio 10
+Mostrar usuarios que hayan comprado algún producto con precio mayor a 100000
+
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+```js
+db.usuarios.find({
+    compras:{
+        $elemMatch:{
+            precio:{$gt:10000}
+        }
+    }
 })
 ```
 </details>

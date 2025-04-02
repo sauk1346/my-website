@@ -38,7 +38,7 @@ export default function Ti3V34() {
         { week: '03', class: '07', date: 'Lun 24, Mar 2025', description: <Link href="ti3v34/eval01" className={styles.link}>Evaluación 01</Link> },
         { week: '', class: '08', date: 'Mar 25, Mar 2025', description: <Link href="ti3v34/clase08" className={styles.link}>Ética y Legislación</Link> },
         { week: '', class: '09', date: 'Mié 26, Mar 2025', description: <Link href="ti3v34/clase09" className={styles.link}>Política Nacional de Ciberseguridad</Link> },
-        { week: '04', class: '10', date: 'Lun 31, Mar 2025', description: "PCI DSS" },
+        { week: '04', class: '10', date: 'Lun 31, Mar 2025', description: <Link href="ti3v34/clase10" className={styles.link}>PCI DSS</Link> },
         { week: '', class: '11', date: 'Mar 01, Abr 2025', description: "" },
         { week: '', class: '12', date: 'Mié 02, Abr 2025', description: "" },
 

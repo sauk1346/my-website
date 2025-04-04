@@ -59,8 +59,12 @@ export default function Ti3V32() {
         { week: '', class: '08', date: 'Mar 25, Mar 2025', description: <Link href='ti3v32/clase08' className={styles.link}>Ejercicio con puntaje</Link> },
         { week: '', class: '09', date: 'Mié 26, Mar 2025', description: <> <Link href='ti3v32/eval01a' className={styles.link}>Eval01-A</Link>, <Link href='ti3v32/eval01b' className={styles.link}>Eval01-B</Link> </>},
         { week: '04', class: '10', date: 'Lun 31, Mar 2025', description: <Link href='ti3v32/clase10' className={styles.link}>Ejercicios MongoSh 01</Link> },
-        { week: '', class: '11', date: 'Mar 01, Abr 2025', description: <Link href='ti3v32/clase11' className={styles.link}>Guía Práctica MongoDB Shell</Link> },
-        { week: '', class: '12', date: 'Mié 02, Abr 2025', description: ""},
+        { week: '', class: '11', date: 'Mar 01, Abr 2025', description: <Link href='ti3v32/clase11' className={styles.link}>Guía Práctica MongoSh 01</Link> },
+        { week: '', class: '12', date: 'Mié 02, Abr 2025', description: <Link href='ti3v32/clase12' className={styles.link}>Guía Práctica MongoSh 02</Link>},
+        { week: '05', class: '13', date: 'Lun 07, Abr 2025', description: ""},
+        { week: '', class: '14', date: 'Mar 08, Abr 2025', description: ""},
+        { week: '', class: '15', date: 'Mié 09, Abr 2025', description: ""},
+
 
 
     ];

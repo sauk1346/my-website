@@ -101,7 +101,7 @@ const Inacap = () => {
     },
     {
       id: 16,
-      fecha: '2025-4-2',
+      fecha: '2025-4-9',
       titulo: '[TILV21] Evaluación 01',
       description: 'Plan de Pruebas de Software'
     },

@@ -39,6 +39,16 @@ Buscar usuarios que hayan comprado una "Tablet"
 
 <details>
     <summary style={{color:'red'}}>Solución</summary>
+
+<br/>
+**Opción 1**
+```js
+db.usuarios.find({ 
+  "compras.producto": "Tablet"  
+})
+```
+
+**Opción 2**
 ```js
 db.usuarios.find({ 
   compras: { 
@@ -47,6 +57,8 @@ db.usuarios.find({
 })
 ```
 </details>
+
+
 
 ## Ejercicio 05
 Filtrar usuarios con más de 2 etiquetas
@@ -67,7 +79,7 @@ Buscar usuarios registrados despues del "1 de febrero de 2024"
     <summary style={{color:'red'}}>Solución</summary>
 ```js
 db.usuarios.find({ 
-    fechaRegistro: { $gt: ISODate("2024-02-01T00:00:00Z") }
+    fechaRegistro: { $gt: "2024-02-01T00:00:00Z" }
 })
 ```
 </details>
@@ -77,6 +89,16 @@ Mostrar usuarios que hayan comprado un producto con precio menor a 100.000
 
 <details>
     <summary style={{color:'red'}}>Solución</summary>
+
+<br/>
+**Opción 1**
+```js
+db.usuarios.find({ 
+  "compras.precio": { $gt: 100000 }  
+})
+```
+
+**Opción 2**
 ```js
 db.usuarios.find({ 
   compras: { 
@@ -91,12 +113,26 @@ Buscar usuarios que vivan en la región "Los Ríos" y tengan la etiqueta "prefer
 
 <details>
     <summary style={{color:'red'}}>Solución</summary>
+
+<br/>
+**Opción 1**
 ```js
 db.usuarios.find({ 
   "direccion.region": "Los Ríos", 
   etiquetas: "preferente" 
 })
 ```
+
+**Opción 2**
+```js
+db.usuarios.find({
+  $and: [
+    { "direccion.region": "Los Ríos" },
+    { etiquetas: "preferente" }
+  ]
+})
+```
+
 </details>
 
 ## Ejercicio 09
@@ -104,6 +140,16 @@ Mostrar usuarios sin compras registradas
 
 <details>
     <summary style={{color:'red'}}>Solución</summary>
+
+<br/>
+**Opción 1**
+```js
+db.usuarios.find({
+  compras: { $in: [null, []] }
+})
+```
+
+**Opción 2**
 ```js
 db.usuarios.find({ 
   $or: [
@@ -155,11 +201,25 @@ Buscar productos con etiquetas "oferta" o "destacado"
 
 <details>
     <summary style={{color:'red'}}>Solución</summary>
+
+<br/>
+**Opción 1**
 ```js
 db.productos.find({ 
   etiquetas: { $in: ["oferta", "destacado"] } 
 })
 ```
+
+**Opción 2**
+```js
+db.productos.find({
+  $or: [
+    { etiquetas: "oferta" },
+    { etiquetas: "destacado" }
+  ]
+})
+```
+
 </details>
 
 ## Ejercicio 14
@@ -169,7 +229,7 @@ Buscar productos agregados después de "marzo de 2024"
     <summary style={{color:'red'}}>Solución</summary>
 ```js
 db.productos.find({ 
-  fechaIngreso: { $gte: ISODate("2024-04-01T00:00:00Z") } 
+  fechaIngreso: { $gte: "2024-04-01T00:00:00Z" } 
 })
 ```
 </details>

@@ -5,28 +5,58 @@ import styles from '../styles/TableOfContents.module.css';
 const TableOfContents = () => {
   const [headings, setHeadings] = useState([]);
   const [activeId, setActiveId] = useState('');
-  // Estado para controlar si debemos usar fixed positioning
   const [isFixed, setIsFixed] = useState(false);
-  // Para guardar la posición inicial del TOC
   const [initialPosition, setInitialPosition] = useState({ top: 0, left: 0, width: 0 });
-
-  // Obtener los encabezados
+  
+  // Obtener los encabezados con sus rangos de posición
   useEffect(() => {
     const getHeadings = () => {
-      const headingElements = Array.from(document.querySelectorAll('h1, h2, h3, h4, h5, h6'))
-        .filter((element) => element.id)
-        .map((element) => ({
-          id: element.id,
-          text: element.textContent,
-          level: Number(element.tagName.substring(1)),
-        }));
-      setHeadings(headingElements);
+      // Obtener todos los encabezados del documento
+      const elements = Array.from(document.querySelectorAll('h1, h2, h3, h4, h5, h6'))
+        .filter(element => element.id);
+      
+      // Ordenar elementos por posición en la página
+      elements.sort((a, b) => {
+        const posA = a.getBoundingClientRect().top + window.scrollY;
+        const posB = b.getBoundingClientRect().top + window.scrollY;
+        return posA - posB;
+      });
+      
+      // Crear la estructura de datos de encabezados con rangos
+      const headingsList = elements.map((element, index) => {
+        const id = element.id;
+        const text = element.textContent;
+        const level = Number(element.tagName.substring(1));
+        const startPosition = element.getBoundingClientRect().top + window.scrollY;
+        
+        // Determinar la posición final (hasta el próximo encabezado o final de página)
+        let endPosition;
+        if (index < elements.length - 1) {
+          endPosition = elements[index + 1].getBoundingClientRect().top + window.scrollY;
+        } else {
+          // Si es el último encabezado, usar el final del documento
+          endPosition = document.body.scrollHeight;
+        }
+        
+        return {
+          id,
+          text,
+          level,
+          startPosition,
+          endPosition
+        };
+      });
+      
+      setHeadings(headingsList);
     };
 
     getHeadings();
 
-    // Detectar cambios en el DOM
-    const observer = new MutationObserver(getHeadings);
+    // Detectar cambios en el DOM y actualizar los encabezados
+    const observer = new MutationObserver(() => {
+      // Usar setTimeout para dar tiempo a que el DOM se actualice completamente
+      setTimeout(getHeadings, 100);
+    });
     observer.observe(document.body, { childList: true, subtree: true });
 
     return () => {
@@ -56,7 +86,6 @@ const TableOfContents = () => {
     const handleScrollPosition = () => {
       const scrollPosition = window.scrollY;
       
-      // Si hemos hecho scroll más allá de la posición inicial del TOC
       if (scrollPosition > initialPosition.top - 20) {
         setIsFixed(true);
       } else {
@@ -73,26 +102,33 @@ const TableOfContents = () => {
     };
   }, [initialPosition]);
 
-  // Manejar el resaltado del encabezado activo
+  // Nueva lógica para determinar el encabezado activo basada en rangos
   const handleScroll = useCallback(() => {
+    // Posición actual del scroll más un pequeño offset para mejorar la experiencia
     const scrollPosition = window.scrollY + 100;
+    let foundActive = false;
     
-    for (let i = headings.length - 1; i >= 0; i--) {
-      const heading = headings[i];
-      const element = document.getElementById(heading.id);
-      
-      if (element && element.offsetTop <= scrollPosition) {
+    // Buscar el encabezado activo comprobando si estamos dentro de su rango
+    for (const heading of headings) {
+      // Si el scroll está dentro del rango de este encabezado
+      if (scrollPosition >= heading.startPosition && scrollPosition < heading.endPosition) {
         if (activeId !== heading.id) {
           setActiveId(heading.id);
         }
-        break;
+        foundActive = true;
+        break; // Encontramos el encabezado activo, no necesitamos seguir buscando
       }
+    }
+    
+    // Si no encontramos ninguno en rango, desactivar todos
+    if (!foundActive && activeId !== '') {
+      setActiveId('');
     }
   }, [headings, activeId]);
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
-    handleScroll();
+    handleScroll(); // Llamar inicialmente para establecer el estado correcto
     
     return () => {
       window.removeEventListener('scroll', handleScroll);
@@ -102,7 +138,9 @@ const TableOfContents = () => {
   const handleClick = (id) => {
     const element = document.getElementById(id);
     if (element) {
+      // Scroll suave al elemento
       element.scrollIntoView({ behavior: 'smooth' });
+      // Activar este encabezado (aunque handleScroll lo hará automáticamente también)
       setActiveId(id);
     }
   };

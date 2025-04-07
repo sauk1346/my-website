@@ -39,17 +39,21 @@ export default function Ti3V34() {
         { week: '', class: '08', date: 'Mar 25, Mar 2025', description: <Link href="ti3v34/clase08" className={styles.link}>Ética y Legislación</Link> },
         { week: '', class: '09', date: 'Mié 26, Mar 2025', description: <Link href="ti3v34/clase09" className={styles.link}>Política Nacional de Ciberseguridad</Link> },
         { week: '04', class: '10', date: 'Lun 31, Mar 2025', description: <Link href="ti3v34/clase10" className={styles.link}>PCI DSS</Link> },
-        { week: '', class: '11', date: 'Mar 01, Abr 2025', description: "" },
-        { week: '', class: '12', date: 'Mié 02, Abr 2025', description: "" },
+        { week: '', class: '11', date: 'Mar 01, Abr 2025', description: <em>No asistí a clases</em> },
+        { week: '', class: '12', date: 'Mié 02, Abr 2025', description: <Link href="ti3v34/clase12" className={styles.link}>Delitos Informáticos</Link> },
+        { week: '05', class: '13', date: 'Lun 07, Abr 2025', description: "Avance informe en clases 01" },
+        { week: '', class: '14', date: 'Mar 08, Abr 2025', description: "Avance informe en clases 02" },
+        { week: '', class: '15', date: 'Mié 09, Abr 2025', description: "" },
 
     ];
     const lectureData = [
-        { week: '01', lecture: '01', date: 'Sáb 15, Mar 2025', description: <Link href="ti3v34/lectura01" className={styles.link}>Seguridad de la Información</Link> },
+        { week: '01', lecture: '01', date: 'Sáb 15, Mar 2025', description: <a href="/ti3v34/docs/lectura01.pdf" target="_blank" rel="noopener noreferrer" className={styles.link}>Seguridad de la Información</a> },
         { week: '', lecture: '02', date: 'Sáb 15, Mar 2025', description: <Link href="ti3v34/lectura02" className={styles.link}>Fundamentos de la seguridad de la información y seguridad informática</Link> },
-        { week: '02', lecture: '03', date: 'Sáb 22, Mar 2025', description: 'Framework de Seguridad ISO27001:2022 y CIS Controls' },
-        { week: '03', lecture: '04', date: 'Sáb 29, Mar 2025', description: 'Ética y legislación' },
-        { week: '', lecture: '05', date: 'Sáb 29, Mar 2025', description: 'Elementos normativos nacionales e internacionales y delitos informáticos' },
-        { week: '04', lecture: '06', date: 'Sáb 05, Abr 2025', description: 'Payment Card Industry Data Security Standard y Convenio de Budapest' },
+        { week: '02', lecture: '03', date: 'Sáb 22, Mar 2025', description: <Link href="ti3v34/lectura03" className={styles.link}>Framework de Seguridad ISO27001:2022 y CIS Controls</Link> },
+        { week: '03', lecture: '04', date: 'Sáb 29, Mar 2025', description: <a href="/ti3v34/docs/lectura04.pdf" target="_blank" rel="noopener noreferrer" className={styles.link}>Ética y legislación</a> },
+        { week: '', lecture: '05', date: 'Sáb 29, Mar 2025', description: <Link href="ti3v34/lectura05" className={styles.link}>Elementos normativos nacionales e internacionales y delitos informáticos</Link> },
+        { week: '04', lecture: '06', date: 'Sáb 05, Abr 2025', description: <Link href="ti3v34/lectura06" className={styles.link}>Payment Card Industry Data Security Standard y Convenio de Budapest</Link> },
+        { week: '05', lecture: '07', date: 'Sáb 12, Abr 2025', description: 'Ley 19.628 (propuesta Ley LPDP)' },
     ];
 
     return (

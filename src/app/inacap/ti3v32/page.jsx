@@ -44,7 +44,7 @@ export default function Ti3V32() {
     ];
     const evaluationsData = [
         { evaluationNumber: 1, date: 'Mié 26, Mar 2025', weighting: '20%', description: <>MongoDB CRUD: <Link href='ti3v32/eval01a' className={styles.link}>Eval01-A</Link>, <Link href='ti3v32/eval01b' className={styles.link}>Eval01-B</Link> </>  , quickGuide: <Link href="ti3v32/guia11" className={styles.link}>Guía 01</Link> },
-        { evaluationNumber: <EmphText>2</EmphText>, date: <EmphText>Mié 23, Abr 2025</EmphText>, weighting: <EmphText>40%</EmphText>, description: <EmphText>MongoDB Shell</EmphText>, quickGuide: <><Link href='ti3v32/guia21' className={styles.link}>Guía 01</Link>, <Link href='ti3v32/guia22' className={styles.link}>Guía 02</Link>, <Link href='ti3v32/guia23' className={styles.link}>Guía 03</Link> </>},
+        { evaluationNumber: <EmphText>2</EmphText>, date: <EmphText>Mié 23, Abr 2025</EmphText>, weighting: <EmphText>40%</EmphText>, description: <EmphText>MongoDB Shell</EmphText>, quickGuide: <><Link href='ti3v32/guia20' className={styles.link}>Guía Operadores</Link>, <Link href='ti3v32/guia21' className={styles.link}>Guía 01</Link>, <Link href='ti3v32/guia22' className={styles.link}>Guía 02</Link>, <Link href='ti3v32/guia23' className={styles.link}>Guía 03</Link>,  </>},
         { evaluationNumber: 3, date: 'Mar 06, May 2025', weighting: '30%', description: '', quickGuide: '' },
         { evaluationNumber: 4, date: 'Mié 07, May 2025', weighting: '10%', description: 'Promedio Evaluaciones', quickGuide: '' },
     ];
@@ -61,8 +61,8 @@ export default function Ti3V32() {
         { week: '04', class: '10', date: 'Lun 31, Mar 2025', description: <Link href='ti3v32/clase10' className={styles.link}>Ejercicios MongoSh 01</Link> },
         { week: '', class: '11', date: 'Mar 01, Abr 2025', description: <Link href='ti3v32/guia21' className={styles.link}>Guía Práctica MongoSh 01</Link> },
         { week: '', class: '12', date: 'Mié 02, Abr 2025', description: <Link href='ti3v32/guia22' className={styles.link}>Guía Práctica MongoSh 02</Link>},
-        { week: '05', class: '13', date: 'Lun 07, Abr 2025', description: ""},
-        { week: '', class: '14', date: 'Mar 08, Abr 2025', description: ""},
+        { week: '05', class: '13', date: 'Lun 07, Abr 2025', description: <Link href='ti3v32/guia23' className={styles.link}>Consultas Avanzadas con $regex</Link>},
+        { week: '', class: '14', date: 'Mar 08, Abr 2025', description: "Visita a Data Center Didáctico"},
         { week: '', class: '15', date: 'Mié 09, Abr 2025', description: ""},
 
 

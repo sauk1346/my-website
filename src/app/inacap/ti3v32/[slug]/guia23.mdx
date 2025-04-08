@@ -1,211 +1,366 @@
-# Repaso Operadores
+# Búsqueda avanzada usando $regex
 
-## Operadores de Comparación
+## Ejemplos
 
-1. **$eq:** igual (*equal*)
+1. **Buscar usuarios cuyo nombre comienza con "Maria"**
 ```js
-db.productos.find({ precio: { $eq: 25 } })
-
-// Equivalente a
-db.productos.find({ precio: 25 })
-```
-2. **$ne:** no igual (*not equal*)
-```js
-db.productos.find({ categoria: { $ne: "electrónica" } })
+db.usuarios.find({ nombre: {$regex: "^Maria"} })
 ```
 
-3. **$gt:** mayor que (*greater than*)
+2. **Buscar usuarios con email que termine en \@gmail.com**
 ```js
-db.productos.find({ precio: { $gt: 50 } })
+db.usuarios.find({ email:{$regex: "@gmail\\.com$"} })
 ```
 
-4. **$gte:** mayor o igual que (*greater than or equal*)
+3. **Buscar usuarios con dirección que contenga "Santiago"**
 ```js
-db.productos.find({ precio: { $gte: 50 } })
+db.usuarios.find({ email:{$regex:"Santiago", $options:"i"} })
 ```
 
-5. **$lt:** menor que (*less than*)
+4. **Buscar comentarios que contengas la palabra "urgente"**
 ```js
-db.productos.find({ stock: { $lt: 20 } })
+db.usuarios.find({ comentarios: { $elemMatch:{$regex:"urgente", $options:"i"} } })
 ```
 
-6. **$lte:** menor o igual que (*less than or equal*)
-```js
-db.productos.find({ stock: { $lte: 20 } })
-```
+# Ejercicios
 
-7. **$in:** está en arreglo (*in array*)
-```js
-db.productos.find({ categoria: { $in: ["electrónica", "computadoras"] } })
-```
-En el ejemplo, encuentra todos los productos donde `categoria` es "electrónica" **O** "computadoras"
-
-8. **$nin:** no está en arreglo (*not in array*)
-```js
-db.productos.find({ categoria: { $nin: ["ropa", "alimentos"] } })
-```
-
-## Operadores lógicos
-
-1. **$and:** (y lógico)
-```js
-db.productos.find({
-  $and: [
-    { precio: { $gt: 20 } },
-    { precio: { $lt: 50 } }
-  ]
-})
-
-// Equivalente a (forma implícita)
-db.productos.find({ precio: { $gt: 20, $lt: 50 } })
-```
-
-2. **$or:** (o lógico)
-```js
-db.productos.find({
-  $or: [
-    { categoria: "electrónica" },
-    { precio: { $lt: 20 } }
-  ]
-})
-```
-
-3. **$not:** (negación)
-```js
-db.productos.find({ precio: { $not: { $gt: 50 } } })
-
-// Equivalente a
-db.productos.find({ precio: { $lte: 50 } })
-```
-
-4. **$nor:** (ni uno ni lo otro)
-```js
-db.productos.find({
-  $nor: [
-    { categoria: "electrónica" },
-    { precio: { $gt: 100 } }
-  ]
-})
-```
-
-## Operadores de elementos
-
-1. **$exists:** verifica si existe el campo
-```js
-db.usuarios.find({ telefono: { $exists: true } })
-```
-
-2. **$type:** verifica el tipo de dato
-```js
-db.usuarios.find({ edad: { $type: "number" } })
-db.usuarios.find({ nombre: { $type: "string" } })
-```
-
-## Operadores de Evaluación
-
-1. **$regex:** buscar usando expresiones regulares 
-```js
-db.productos.find({ nombre: { $regex: /^Tel/i } })
-// Busca productos que empiecen con "Tel" (insensible a mayúsculas)
-```
-
-2. **$expr:** para expresiones de agregación
-```js
-db.pedidos.find({
-  $expr: { $gt: ["$total", "$limite_cliente"] }
-})
-// Busca pedidos donde el total supera el límite del cliente
-```
-
-
-## Operadores de Arreglos
-
-1. **$all:** todos los elementos especificados
-```js
-db.productos.find({ etiquetas: { $all: ["oferta", "nuevo"] } })
-```
-En el ejemplo, encuentra productos que posean ambas etiquetas: "oferta" **Y** "nuevo" (sin importar qué otros valores pueda contener o el orden)
-
-2. **$elemMatch:** coincidencia en elementos de arreglo
-    - Se utiliza para buscar documentos que contienen un array con al menos un elemento que cumple con todos los criterios especificados. Es especialmente útil cuando necesitas hacer coincidencias complejas en array de objetos o documentos embebidos
-    - Brilla cuando necesitas encontrar documentos donde **un mismo elemento** dentro de un array cumpla múltiples condiciones a la vez
-
-```js
-db.usuarios.find({
-  compras: {
-    $elemMatch: {
-      item: "laptop",
-      precio: { $gt: 1000 }
-    }
-  }
-})
-```
-En el ejemplo, la consulta busca un usuario que haya comprado un "laptop" y a un precio mayor a 1000 
-
-3. **$size:** tamaño del arreglo
-```js
-db.usuarios.find({ intereses: { $size: 3 } })
-// Usuarios con exactamente 3 intereses
-```
-
-## Operadores de Actualización
-
-1. **$set:** establecer valores
-```js
-db.productos.updateOne(
-  { _id: ObjectId("5f8a7b2d1c9d440000a7e621") },
-  { $set: { precio: 29.99, stock: 50 } }
-)
-```
-
-2. **$inc:** incrementar valor
-```js
-db.productos.updateOne(
-  { _id: ObjectId("5f8a7b2d1c9d440000a7e621") },
-  { $inc: { stock: -1, vendidos: 1 } }
-)
-```
-
-3. **$push:** añadir a arreglo
-```js
-db.usuarios.updateOne(
-  { nombre: "Ana" },
-  { $push: { intereses: "fotografía" } }
-)
-```
-
-4. **$pull:** eliminar de arreglo
-```js
-db.usuarios.updateOne(
-  { nombre: "Ana" },
-  { $pull: { intereses: "deportes" } }
-)
-```
-
-5. **unset:** eliminar campo
-```js
-db.usuarios.updateOne(
-  { nombre: "Ana" },
-  { $unset: { direccionAntigua: "" } }
-)
-```
-
-# Consulta compleja
-
-Buscar productos de electrónica o computación que cuesten entre $300 y $1000, tengan stock disponible y contengan la palabra "pro" en su nombre
-
+## Ejercicio 01
+Buscar todos los usuarios cuyo nombre contenga la letra "ñ"
 <details>
     <summary style={{color:'red'}}>Solución</summary>
 
+<br/>
+**Opción 01**
 ```js
-db.productos.find({
-  $and: [
-    { $or: [{ categoria: "electrónica" }, { categoria: "computación" }] },
-    { precio: { $gte: 300, $lte: 1000 } },
-    { stock: { $gt: 0 } },
-    { nombre: { $regex: /pro/i } }
-  ]
-})
+db.usuarios.find({ nombre: { $regex: "ñ" } })
 ```
 
+**Opción 02**
+```js
+db.usuarios.find({ nombre: { $regex: /ñ/ } })
+```
+</details>
+
+
+## Ejercicio 02
+Filtrar los usuarios cuyo email contenga el nombre "daniela"
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+
+<br/>
+**Opción 01**
+```js
+db.usuarios.find({ email: { $regex: "daniela", $options: "i" } })
+```
+
+**Opción 02**
+```js
+db.usuarios.find({ email: { $regex: /daniela/i } })
+```
+</details>
+
+## Ejercicio 03
+Mostrar los usuarios con correo de dominio institucional .cl
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+
+<br/>
+**Opción 01**
+```js
+db.usuarios.find({ email: { $regex: "\\.cl$" } })
+```
+
+**Opción 02**
+```js
+db.usuarios.find({ email: { $regex: /\.cl$/ } })
+```
+</details>
+
+## Ejercicio 04
+Buscar usuarios cuya dirección comience con "Avenida"
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+
+<br/>
+**Opción 01**
+```js
+db.usuarios.find({ direccion: { $regex: "^Avenida", $options: "i" } })
+```
+
+**Opción 02**
+```js
+db.usuarios.find({ direccion: { $regex: /^Avenida/i } })
+```
+</details>
+
+## Ejercicio 05
+Filtrar usuarios con direcciones que terminen en un número
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+
+<br/>
+**Opción 01**
+```js
+db.usuarios.find({ direccion: { $regex: "[0-9]$" } })
+```
+
+**Opción 02**
+```js
+db.usuarios.find({ direccion: { $regex: /[0-9]$/ } })
+```
+</details>
+
+## Ejercicio 06
+Mostrar usuarios con algún comentario que contenga la palabra "error"
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+
+<br/>
+**Opción 01**
+```js
+db.usuarios.find({ comentarios: { $regex: "error", $options: "i" } })
+```
+
+**Opción 02**
+```js
+db.usuarios.find({ comentarios: { $regex: /error/i } })
+```
+</details>
+
+## Ejercicio 07
+Buscar usuarios cuyo correo tenga más de un punto (.)
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+
+<br/>
+**Opción 01**
+```js
+db.usuarios.find({ email: { $regex: "\\..*\\." } })
+```
+
+**Opción 02**
+```js
+db.usuarios.find({ email: { $regex: /\..*\./ } })
+```
+</details>
+
+## Ejercicio 08
+Mostrar usuarios con nombre que termine en "ez" (como Rodriguez, Ramirez)
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+
+<br/>
+**Opción 01**
+```js
+db.usuarios.find({ nombre: { $regex: "ez$" } })
+```
+
+**Opción 02**
+```js
+db.usuarios.find({ nombre: { $regex: /ez$/ } })
+```
+</details>
+
+## Ejercicio 09
+Buscar direcciones que contengan la palabra "Puerta"
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+
+<br/>
+**Opción 01**
+```js
+db.usuarios.find({ direccion: { $regex: "Puerta", $options: "i" } })
+```
+
+**Opción 02**
+```js
+db.usuarios.find({ direccion: { $regex: /Puerta/i } })
+```
+</details>
+
+## Ejercicio 10
+Filtrar usuarios con comentarios que empiecen con la letra "C"
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+
+<br/>
+**Opción 01**
+```js
+db.usuarios.find({ comentarios: { $regex: "^C", $options: "i" } })
+```
+
+**Opción 02**
+```js
+db.usuarios.find({ comentarios: { $regex: /^C/i } })
+```
+</details>
+
+## Ejercicio 11
+Buscar usuarios cuyo nombre comience con vocal
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+
+<br/>
+**Opción 01**
+```js
+db.usuarios.find({ nombre: { $regex: "^[aeiouáéíóúAEIOUÁÉÍÓÚ]" } })
+```
+
+**Opción 02**
+```js
+db.usuarios.find({ nombre: { $regex: /^[aeiouáéíóúAEIOUÁÉÍÓÚ]/ } })
+```
+</details>
+
+## Ejercicio 12
+Filtrar usuarios cuyo correo electrónico termine en .es
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+
+<br/>
+**Opción 01**
+```js
+db.usuarios.find({ email: { $regex: "\\.es$" } })
+```
+
+**Opción 02**
+```js
+db.usuarios.find({ email: { $regex: /\.es$/ } })
+```
+</details>
+
+## Ejercicio 13
+Mostrar los usuarios que tengan exactamente dos palabras en el nombre
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+
+<br/>
+**Opción 01**
+```js
+db.usuarios.find({ nombre: { $regex: "^[^\\s]+\\s[^\\s]+$" } })
+```
+
+**Opción 02**
+```js
+db.usuarios.find({ nombre: { $regex: /^[^\s]+\s[^\s]+$/ } })
+```
+</details>
+
+## Ejercicio 14
+Buscar usuarios con algún comentario que incluya una fecha (formato aproximado: dd/mm o dd-mm)
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+
+<br/>
+**Opción 01**
+```js
+db.usuarios.find({ comentarios: { $regex: "\\d{1,2}[\\/\\-]\\d{1,2}" } })
+```
+
+**Opción 02**
+```js
+db.usuarios.find({ comentarios: { $regex: /\d{1,2}[\/\-]\d{1,2}/ } })
+```
+</details>
+
+## Ejercicio 15
+Mostrar usuarios cuya dirección no contenga la palabra "calle" (sin distinguir mayúsculas)
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+
+<br/>
+**Opción 01**
+```js
+db.usuarios.find({ direccion: { $not: { $regex: "calle", $options: "i" } } })
+```
+
+**Opción 02**
+```js
+db.usuarios.find({ direccion: { $not: { $regex: /calle/i } } })
+```
+</details>
+
+## Ejercicio 16
+Filtrar usuarios que tengan comentarios que contengan signos de explamación (!)
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+
+<br/>
+**Opción 01**
+```js
+db.usuarios.find({ comentarios: { $regex: "!" } })
+```
+
+**Opción 02**
+```js
+db.usuarios.find({ comentarios: { $regex: /!/ } })
+```
+</details>
+
+## Ejercicio 17
+Buscar usuarios cuyo email tenga el nombre compuesto (con punto en medio) antes del \@
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+
+<br/>
+**Opción 01**
+```js
+db.usuarios.find({ email: { $regex: "[^@]+\\.[^@]+@" } })
+```
+
+**Opción 02**
+```js
+db.usuarios.find({ email: { $regex: /[^@]+\.[^@]+@/ } })
+```
+</details>
+
+## Ejercicio 18
+Mostrar usuarios cuyo nombre contenga un guión (-), por ejemplo, apellidos compuestos
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+
+<br/>
+**Opción 01**
+```js
+db.usuarios.find({ nombre: { $regex: "-" } })
+```
+
+**Opción 02**
+```js
+db.usuarios.find({ nombre: { $regex: /-/ } })
+```
+</details>
+
+## Ejercicio 19
+Filtrar usuarios que vivan en ciudades que terminen con "a" (por ejemplo: "Murcia", "Valparaíso")
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+
+<br/>
+**Opción 01**
+```js
+db.usuarios.find({ ciudad: { $regex: "a$" } })
+```
+
+**Opción 02**
+```js
+db.usuarios.find({ ciudad: { $regex: /a$/ } })
+```
+</details>
+
+## Ejercicio 20
+Buscar usuarios cuyo nombre contenga doble letra (como "ll", "ss", "rr", etc.)
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+
+<br/>
+**Opción 01**
+```js
+db.usuarios.find({ nombre: { $regex: "([a-zA-Z])\\1" } })
+```
+
+**Opción 02**
+```js
+db.usuarios.find({ nombre: { $regex: /([a-zA-Z])\1/ } })
+```
 </details>

@@ -1,0 +1,100 @@
+# Técnicas y Herramientas de Testing
+Existen múltiplas técnicas de testing, dividias en estáticas y dinámicas, que permiten a los equipos de desarrollo identificar y corregir defectos en diferentes etapas del ciclo de vida del software.
+
+## Definiciones
+
+1. **Aseguramiento de Calidad (QA):** Proceso sistemático de revisar y evaluar los diferentes aspectos del desarrollo de software para asegurar que el producto final cumple con los estándares de Calidad
+2. **Caja blanca:** Técnica de prueba de software en la que el tester tiene conocimiento del código interno, estructura y diseño del software, permitiendo pruebas exhaustivas
+3. **Caja negra:** Técnica de prueba de software que evalúa la funcionalidad del software sin mirar el código interno, estructura o implementación interna
+4. **Control del Calidad(QC):** Conjunto de procedimientos y actividades utilizadas para cumplir con los requisitos de calidad de un producto o servicio, centradas en la identificación y corrección de defectos
+5. **Defecto:** Imperfección o problema en un producto de software que puede causar que falle al cumplir sus requisitos o expectativas
+6. **Error:** Equivocación o falla cometida durante el desarrollo del software que puede llevar a defectos o fallos en el producto final
+7. **Integración continua:** Práctica de desarrollo de software donde los desarrolladores integran frecuentemente su códico en un repositorio central, seguido de verificaciones automáticas para detectar errores lo más pronto posible
+8. **Pruebas de estrés:** Diseñadas para evaluar el comportamiento de un software bajo condiciones extremas de carga, estrés o volumen de datos
+9. **Pruebas de integración:** Diseñadas para verificar la interacción y compatibilidad entre diferentes módulos o componentes de un sistema de software
+10. **Pruebas de rendimiento:** Determina cómo el software se comporta bajo una carga específica en términos de capacidad de respuesta y estabilidad
+11. **Pruebas de regrasión:** Aseguran que los cambios recientes en el código no han introducido nuevos defectos en el software existente
+11. **Pruebas de seguridad:** Permite identificar y mitigar riesgos relacionados con la seguridad, incliyendo vulnerabilidades y posibles ataques
+11. **Pruebas unitarias:** Se centran en verificar el correcto funcionamiento de componentes individuales del software, como funciones o métodos
+
+## Técnicas de Testing
+Métodos sistemáticos utilizados para diseñar y ejecutar pruebas, con el objetivo de encontrar defectos en el software y aseguridad su calidad.
+
+### Técnicas Estáticas
+Se centran en la revisión de la documentación y el código sin ejecutar el software. Esenciales para identificar defectos tempranos en el ciclo de vida del desarrollo de software
+
+- Revisión por pares
+- Inspección
+- Análisis estático
+
+### Técnicas Dinámicas
+Implican la ejecución del software para identificar defectos que ocurren durante su funcionamiento
+
+- Testing de caja blanca
+- Testing de caja negra
+- Testing de regrasión
+- Testing de rendimiento
+
+## Herramientas de Testing
+
+|testing estático|testing dinámico|
+|---|---|
+|sonarqube|selenium|
+|checkstyle|JUnit|
+||LoadRunner|
+
+
+## Alcance de los tipos de testing
+
+### Testing funcional
+Se centra en verificar que cada función del software opere conforme a los requisitos especificados
+
+1. Pruebas unitarias
+2. Pruebas de integración
+3. Pruebas de sistema
+4. Pruebas de aceptación
+
+### Testing no funcional
+Evalúa aspectos del software que no están relacionados con funciones específicas, como el rendimiento, la seguridad y la usabilidad
+
+1. Pruebas de rendimiento
+2. Pruebas de seguridad
+3. Pruebas de usabilidad
+
+## Diseño de casos de testing
+Es una fase crítica en el desarrollo de software, centrada en la planificación meticulosa de las condiciones y escenarios que serán evaluados para aseguridad la calidad y fiabilidad del producto final.
+
+### Identificación de casos de testing
+Es el proceso de determinar las condiciones y escenarios bajo los cuales se evaluará el software. Incluye la definición de entradas, acciones y resultados esperados.
+
+### Técnicas de diseño de casos de testing
+
+1. **Partición de equivalencia:** Divide el conjunto de entradas posibles en clases de equivalencia, de modo que probar una entrada de cada clase sea suficiente para evaluar el comportamiento del software
+2. **Análisis de valores límite:** Se centra en probar los valores en los límites de las clases de equivalencia, ya que es más probable que se encuentren defectos en estos puntos
+3. **Tablas de decisión:** Son una técnica sistemática para representar las reglas de negocio que afectan las condiciones y acciones en casos de prueba
+
+# Actividad de Pŕactica
+
+1. **¿Qué tipo de testing se centra en la evaluación de la facilidad de uso del software?**
+    1. Pruebas de integración
+    2. Pruebas de seguridad
+    3. Pruebas de rendimiento
+    4. <span style={{color:'red'}}>Pruebas de usabilidad</span>
+
+2. **¿Cuál es la diferencia principal entre las técnicas de testing estáticas y dinámicas?**
+    1. Las técnicas estáticas son menos costosas que las dinámicas.
+    2. Las técnicas estáticas se centran en la estructura del código, mientras que las dinámicas se centran en la funcionalidad del software.
+    3. Las técnicas estáticas se realizan después de la codificación, mientras que las dinámicas se realizan antes.
+    4. <span style={{color:'red'}}>Las técnicas estáticas no requieren la ejecución del software, mientras que las dinámicas sí.</span>
+
+3. **¿Qué tipo de pruebas realiza LoadRunner?**
+    1. <span style={{color:'red'}}>Pruebas de rendimiento</span>
+    2. Pruebas de seguridad
+    3. Análisis estático del código
+    4. Pruebas de usabilidad
+
+4. **¿Cuál de las siguientes herramientas se utiliza para el análisis estático del código?**
+    1. Selenium
+    2. JUnit
+    3. <span style={{color:'red'}}>SonarQube</span>
+    4. LoadRunner

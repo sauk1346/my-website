@@ -84,10 +84,10 @@ export default function Ti3V32() {
 
     ];
     const lectureData = [
-        { week: '01', lecture: '01', date: 'Sáb 15, Mar 2025', description: <Link href="ti3v32/lectura01" className={styles.link}>Introducción a las bases de datos no estructuradas</Link> },
+        { week: '01', lecture: '01', date: 'Sáb 15, Mar 2025', description: <a href="/ti3v32/docs/lectura01.pdf" target="_blank" rel="noopener noreferrer" className={styles.link}>Introducción a las bases de datos no estructuradas</a> },
         { week: '', lecture: '02', date: 'Sáb 15, Mar 2025', description: <Link href="ti3v32/lectura02" className={styles.link}>Bases de datos no estructuradas: características y tipos</Link> },
         { week: '02', lecture: '03', date: 'Sáb 22, Mar 2025', description: <Link href="ti3v32/lectura03" className={styles.link}>Elementos de las bases de datos no estructuradas documentales y características de Mongo DB</Link> },
-        { week: '03', lecture: '04', date: 'Sáb 29, Mar 2025', description: <Link href="ti3v32/lectura04" className={styles.link}>Operaciones esenciales con MongoDB</Link> },
+        { week: '03', lecture: '04', date: 'Sáb 29, Mar 2025', description: <a href="/ti3v32/docs/lectura04.pdf" target="_blank" rel="noopener noreferrer" className={styles.link}>Operdores esenciales con MongoDB</a> },
         { week: '', lecture: '05', date: 'Sáb 29, Mar 2025', description: <Link href="ti3v32/lectura05" className={styles.link}>Etapas del proceso de instalación de MongoDB y principales comandos de gestión</Link> },
         { week: '04', lecture: '06', date: 'Sáb 05, Abr 2025', description: <Link href="ti3v32/lectura06" className={styles.link}>Operaciones CRUD en documentos y subdocumentos</Link> },
         { week: '05', lecture: '07', date: 'Sáb 12, Abr 2025', description: '' },

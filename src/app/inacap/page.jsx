@@ -186,7 +186,12 @@ const Inacap = () => {
             <tbody>
               <tr className={styles.tableRow}>
                 <td>TI3V11</td>
-                <td>Introducción a la Programación Segura</td>
+                <td>
+                  <Link href="/inacap/ti3v11" className={styles.link}>
+                    Introducción a la Programación Segura
+                  </Link>
+                </td>
+
               </tr>
               <tr>
                 <td>TI3V12</td>

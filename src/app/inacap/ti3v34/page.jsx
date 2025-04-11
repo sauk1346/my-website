@@ -23,8 +23,8 @@ export default function Ti3V34() {
     ];
     const evaluationsData = [
         { evaluationNumber: 1, date: 'Lun 24, Mar 2025', weighting: '15%', description: <Link href="ti3v34/eval01" className={styles.link}>Evaluación 01</Link>, quickGuide: '' },
-        { evaluationNumber: <EmphText>2</EmphText>, date: <EmphText>Mié 09, Abr 2025</EmphText>, weighting: <EmphText>22.5%</EmphText>, description: <EmphText>Informe 01</EmphText>, quickGuide: '' },
-        { evaluationNumber: 3, date: 'Lun 07, May 2025', weighting: '26.25%', description: 'Informe 02', quickGuide: '' },
+        { evaluationNumber: 2, date: 'Mié 09, Abr 2025', weighting: '22.5%', description: <a href="/ti3v34/docs/informe01.pdf" target="_blank" rel="noopener noreferrer" className={styles.link}>Informe 01</a>, quickGuide: '' },
+        { evaluationNumber: <EmphText>3</EmphText>, date: <EmphText>Lun 07, May 2025</EmphText>, weighting: <EmphText>26.25%</EmphText>, description: <EmphText>Informe 02</EmphText>, quickGuide: '' },
         { evaluationNumber: 4, date: 'Cada Semana', weighting: '11.25%', description: <Link href='ti3v34/controles' className={styles.link}>Promedio Controles</Link>, quickGuide: '' },
         { evaluationNumber: 5, date: 'Lun 12, May 2025', weighting: '25%', description: 'Examen', quickGuide: '' }
     ];
@@ -43,7 +43,10 @@ export default function Ti3V34() {
         { week: '', class: '12', date: 'Mié 02, Abr 2025', description: <Link href="ti3v34/clase12" className={styles.link}>Delitos Informáticos</Link> },
         { week: '05', class: '13', date: 'Lun 07, Abr 2025', description: "Avance informe en clases 01" },
         { week: '', class: '14', date: 'Mar 08, Abr 2025', description: "Avance informe en clases 02" },
-        { week: '', class: '15', date: 'Mié 09, Abr 2025', description: "" },
+        { week: '', class: '15', date: 'Mié 09, Abr 2025', description: <a href="/ti3v34/docs/informe01.pdf" target="_blank" rel="noopener noreferrer" className={styles.link}>Entrega Informe 01</a> },
+        { week: '06', class: '16', date: 'Lun 14, Abr 2025', description: "" },
+        { week: '', class: '17', date: 'Mar 15, Abr 2025', description: "" },
+        { week: '', class: '18', date: 'Mié 16, Abr 2025', description: "" },
 
     ];
     const lectureData = [

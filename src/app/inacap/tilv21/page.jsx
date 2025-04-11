@@ -19,8 +19,20 @@ export default function Tilv21() {
         { unit: '3', description: 'Gestión de Defectos, Combinación de Valores de Prueba y Exploración' },
     ];
     const evaluationsData = [
-        { evaluationNumber: <EmphText>1</EmphText> , date: <EmphText>Mié 09, Abr 2025</EmphText>, weighting: <EmphText>20%</EmphText>, description: <EmphText>Prueba</EmphText>, quickGuide: '' },
-        { evaluationNumber: 2, date: 'Lun 21, Abr 2025', weighting: '30%', description: 'informe 01', quickGuide: '' },
+        { 
+            evaluationNumber: 1,
+            date: 'Mié 09, Abr 2025',
+            weighting: '20%', 
+            description: <Link href='tilv21/eval01' className={styles.link}>Evaluación 01</Link>, 
+            quickGuide: ''
+        },
+        { 
+            evaluationNumber: <EmphText>2</EmphText>,
+            date: <EmphText>Lun 21, Abr 2025</EmphText>, 
+            weighting: <EmphText>30%</EmphText>, 
+            description: <EmphText>informe 01</EmphText>, 
+            quickGuide: '' 
+        },
         { evaluationNumber: 3, date: 'Lun 05, May 2025', weighting: '35%', description: 'informe 02', quickGuide: '' },
         { evaluationNumber: 4, date: 'Mié 07, May 2025', weighting: '15%', description: <Link href='tilv21/controles' className={styles.link}>promedio controles</Link>, quickGuide: '' },
 

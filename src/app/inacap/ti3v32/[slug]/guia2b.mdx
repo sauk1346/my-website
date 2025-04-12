@@ -1,0 +1,472 @@
+# Guía Regex
+
+*Regular Expression*. Son patrones de búsqueda poderosos que permiten encontrar y manipular texto.
+
+En muchos lenguajes de programación, las expresiones regulares se encierran entre barras diagonales `/ /`.
+
+Se pueden clasificar en los siguientes conceptos:
+
+## Caracteres literales
+
+|Regex|Descripción|
+|---|---|
+|`abc`|coincide exactamente con "abc"|
+
+## Metacaracteres
+
+|Regex|Descripción|
+|---|---|
+|`.`|Cualquier caracter (excepto nueva línea)|
+|`^`|Inicio de línea|
+|`$`|Fin de línea|
+|`*`|Cero o más repeticiones|
+|`+`|Una o más repeticiones|
+|`?`|Cero o Una repetición|
+|`\|`|alternativa (OR)|
+|`\`|Escape de metacaracteres|
+
+## Clase de caracteres
+
+|Regex|Descripción|
+|---|---|
+|`[abc]`|Un solo caracter que puede ser cualquiera de éstos|
+|`[^abc]`|Un solo caracter que no puede ser ninguno de éstos|
+|`[a-z]`|Un solo caracter que está en el rango a-z|
+|`\d`|Dígito, equivalente a `[0-9]`|
+|`\w`|Carácter de palabra, equivalente a `[a-zA-Z0-9_]`|
+|`\s`|Espacio en blanco|
+
+## Cuantificadores
+
+|Regex|Descripción|
+|---|---|
+|`{n}`|Exactamente n veces|
+|`{n,}`|Al menos n veces|
+|`{n,m}`|Entre n y m veces|
+
+## Grupos 
+
+|Regex|Descripción|
+|---|---|
+|`(...)`|Captura un grupo|
+|`(?:...)`|Grupo sin captura|
+
+
+# Ejercicios
+Filtrar solo las palabras en verde
+
+## Ejercicio 01
+1. <span style={{color:'green'}}>fooabar</span>
+2. <span style={{color:'green'}}>fooxbar</span>
+3. <span style={{color:'red'}}>baryfoo</span>
+4. <span style={{color:'red'}}>foobar</span>
+5. <span style={{color:'red'}}>fooxybar</span>
+6. <span style={{color:'green'}}>foocbar</span>
+
+
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+```js
+/foo.bar/
+```
+</details>
+
+## Ejercicio 02
+1. <span style={{color:'green'}}>foobar</span>
+2. <span style={{color:'red'}}>barfoo</span>
+3. <span style={{color:'green'}}>fooabcbar</span>
+4. <span style={{color:'green'}}>foobxcbar</span>
+5. <span style={{color:'red'}}>barcbyfoo</span>
+6. <span style={{color:'green'}}>foozbar</span>
+7. <span style={{color:'red'}}>barafoo</span>
+8. <span style={{color:'red'}}>barabfoo</span>
+
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+```js
+/foo.*bar/
+```
+</details>
+
+## Ejercicio 03
+
+1. <span style={{color:'red'}}>fooxxxbar</span>
+2. <span style={{color:'green'}}>foo&nbsp;&nbsp;&nbsp;bar</span>
+3. <span style={{color:'red'}}>fooxbar</span>
+4. <span style={{color:'red'}}>fooxxbar</span>
+5. <span style={{color:'green'}}>foo&nbsp;bar</span>
+6. <span style={{color:'green'}}>foo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bar</span>
+7. <span style={{color:'green'}}>foobar</span>
+8. <span style={{color:'red'}}>fooyyybar</span>
+
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+```js
+/foo\s*bar/
+```
+</details>
+
+## Ejercicio 04
+1. <span style={{color:'green'}}>foo</span>
+2. <span style={{color:'red'}}>moo</span>
+3. <span style={{color:'green'}}>coo</span>
+4. <span style={{color:'red'}}>doo</span>
+5. <span style={{color:'red'}}>poo</span>
+6. <span style={{color:'green'}}>loo</span>
+7. <span style={{color:'red'}}>boo</span>
+8. <span style={{color:'red'}}>hoo</span>
+
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+```js
+/[fcl]oo/
+```
+</details>
+
+## Ejercicio 05
+1. <span style={{color:'green'}}>foo</span>
+2. <span style={{color:'red'}}>moo</span>
+3. <span style={{color:'green'}}>coo</span>
+4. <span style={{color:'green'}}>doo</span>
+5. <span style={{color:'green'}}>poo</span>
+6. <span style={{color:'green'}}>loo</span>
+7. <span style={{color:'green'}}>boo</span>
+8. <span style={{color:'red'}}>hoo</span>
+
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+
+<br/>
+**Opción 01**
+```js
+/[fcdplb]oo/
+```
+
+**Opción 02**
+```js
+/[^mh]oo/
+```
+</details>
+
+## Ejercicio 06
+
+1. <span style={{color:'green'}}>joo</span>
+2. <span style={{color:'red'}}>boo</span>
+3. <span style={{color:'green'}}>koo</span>
+4. <span style={{color:'green'}}>loo</span>
+5. <span style={{color:'red'}}>woo</span>
+6. <span style={{color:'green'}}>moo</span>
+7. <span style={{color:'red'}}>zoo</span>
+8. <span style={{color:'red'}}>coo</span>
+
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+
+```js
+/[j-m]oo/
+```
+</details>
+
+## Ejercicio 07
+1. <span style={{color:'green'}}>joo</span>
+2. <span style={{color:'red'}}>boo</span>
+3. <span style={{color:'green'}}>koo</span>
+4. <span style={{color:'green'}}>loo</span>
+5. <span style={{color:'red'}}>woo</span>
+6. <span style={{color:'green'}}>moo</span>
+7. <span style={{color:'green'}}>zoo</span>
+8. <span style={{color:'red'}}>coo</span>
+
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+
+```js
+/[j-mz]oo/
+```
+</details>
+
+## Ejercicio 08
+1. <span style={{color:'green'}}>joo</span>
+2. <span style={{color:'red'}}>boo</span>
+3. <span style={{color:'green'}}>Koo</span>
+4. <span style={{color:'green'}}>Loo</span>
+5. <span style={{color:'red'}}>woo</span>
+6. <span style={{color:'green'}}>moo</span>
+7. <span style={{color:'green'}}>zoo</span>
+8. <span style={{color:'red'}}>coo</span>
+
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+
+```js
+/[j-mz]oo/i
+```
+</details>
+
+## Ejercicio 09
+1. <span style={{color:'green'}}>xxx.yy</span>
+2. <span style={{color:'green'}}>xx.yyyy</span>
+3. <span style={{color:'green'}}>x.yy</span>
+4. <span style={{color:'red'}}>xy</span>
+5. <span style={{color:'red'}}>xxyy</span>
+6. <span style={{color:'red'}}>yyxx</span>
+7. <span style={{color:'red'}}>yx</span>
+8. <span style={{color:'red'}}>yxxx</span>
+
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+
+```js
+/x+\.y+/
+```
+</details>
+
+## Ejercicio 10
+1. <span style={{color:'green'}}>x#y</span>
+2. <span style={{color:'green'}}>x:y</span>
+3. <span style={{color:'green'}}>x.y</span>
+4. <span style={{color:'red'}}>x&y</span>
+5. <span style={{color:'red'}}>x%y</span>
+
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+
+```js
+/x[^&%]y/
+```
+</details>
+
+## Ejercicio 11
+1. <span style={{color:'green'}}>foo bar baz</span>
+2. <span style={{color:'red'}}>bar foo baz</span>
+3. <span style={{color:'red'}}>baz foo bar</span>
+4. <span style={{color:'red'}}>bar baz foo</span>
+5. <span style={{color:'green'}}>foo baz bar</span>
+6. <span style={{color:'red'}}>baz bar foo</span>
+
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+
+```js
+/^foo.*/
+```
+</details>
+
+## Ejercicio 12
+1. <span style={{color:'red'}}>foo bar baz</span>
+2. <span style={{color:'red'}}>bar foo baz</span>
+3. <span style={{color:'green'}}>baz foo bar</span>
+4. <span style={{color:'red'}}>bar baz foo</span>
+5. <span style={{color:'green'}}>foo baz bar</span>
+6. <span style={{color:'red'}}>baz bar foo</span>
+
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+
+```js
+/.*bar$/
+```
+</details>
+
+## Ejercicio 13
+1. <span style={{color:'green'}}>foo</span>
+2. <span style={{color:'red'}}>foo bar</span>
+3. <span style={{color:'red'}}>baz foo</span>
+4. <span style={{color:'red'}}>foo bar baz</span>
+5. <span style={{color:'red'}}>baz bar foo</span>
+
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+
+```js
+/^foo$/
+```
+</details>
+
+## Ejercicio 14
+Representar ambas palabras "gray" y "grey"
+
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+
+```js
+/gr[ae]y/
+```
+</details>
+
+
+## Ejercicio 15
+Representar un número par de 2 dígitos
+
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+
+```js
+/^[0-9][02468]$/
+```
+</details>
+
+## Ejercicio 16
+Representar un número de 3 digitos que sea multiplo de 5
+
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+
+```js
+/^[0-9][0-9][05]$/
+```
+</details>
+
+## Ejercicio 17
+1. <span style={{color:'green'}}>834</span>
+2. <span style={{color:'green'}}>519</span>
+3. <span style={{color:'red'}}>4874</span>
+4. <span style={{color:'red'}}>5</span>
+5. <span style={{color:'red'}}>89</span>
+6. <span style={{color:'red'}}>45687</span>
+7. <span style={{color:'red'}}>25</span>
+8. <span style={{color:'green'}}>645</span>
+
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+
+```js
+/^\d{3}$/
+```
+</details>
+
+## Ejercicio 18
+1. <span style={{color:'green'}}>lion</span>
+2. <span style={{color:'green'}}>tiger</span>
+3. <span style={{color:'red'}}>leopard</span>
+4. <span style={{color:'red'}}>fox</span>
+5. <span style={{color:'red'}}>kangaroo</span>
+6. <span style={{color:'red'}}>bat</span>
+7. <span style={{color:'green'}}>mouse</span>
+8. <span style={{color:'green'}}>cuckoo</span>
+9. <span style={{color:'green'}}>deer</span>
+
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+
+```js
+/^[a-z]{4,6}$/
+```
+</details>
+
+## Ejercicio 19
+1. <span style={{color:'red'}}>ha</span>
+2. <span style={{color:'green'}}>hahahahaha</span>
+3. <span style={{color:'red'}}>hahaha</span>
+4. <span style={{color:'green'}}>hahahaha</span>
+5. <span style={{color:'red'}}>haha</span>
+6. <span style={{color:'red'}}>\<blank\></span>
+7. <span style={{color:'green'}}>hahahahahaha</span>
+8. <span style={{color:'green'}}>hahahahahahahaha</span>
+9. <span style={{color:'green'}}>hahahahahahahahaha</span>
+
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+
+```js
+/(ha){4,}/
+```
+</details>
+
+## Ejercicio 20
+1. <span style={{color:'green'}}>ha</span>
+2. <span style={{color:'green'}}>haha</span>
+3. <span style={{color:'red'}}>hahahahaha</span>
+4. <span style={{color:'red'}}>hahahaha</span>
+5. <span style={{color:'red'}}>hahaha</span>
+6. <span style={{color:'red'}}>hahahahahahaha</span>
+7. <span style={{color:'red'}}>hahahahahaha</span>
+
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+
+```js
+/^(ha){1,2}$/
+```
+</details>
+
+## Ejercicio 21
+1. <span style={{color:'green'}}>fooaaaabar</span>
+2. <span style={{color:'green'}}>fooabar</span>
+3. <span style={{color:'red'}}>foobar</span>
+4. <span style={{color:'green'}}>fooaabar</span>
+5. <span style={{color:'red'}}>fooxxxbar</span>
+6. <span style={{color:'red'}}>fooxbar</span>
+
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+
+```js
+/^fooa+bar$/
+```
+</details>
+
+## Ejercicio 22
+1. <span style={{color:'green'}}>https:\/\/website</span>
+2. <span style={{color:'green'}}>http:\/\/website</span>
+3. <span style={{color:'red'}}>httpss://website</span>
+4. <span style={{color:'red'}}>httpx://website</span>
+5. <span style={{color:'red'}}>httpxx://website</span>
+
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+
+```js
+/^https?://website/
+```
+</details>
+
+## Ejercicio 23
+1. <span style={{color:'red'}}>sapwood</span>
+2. <span style={{color:'red'}}>rosewood</span>
+3. <span style={{color:'green'}}>logwood</span>
+4. <span style={{color:'red'}}>teakwood</span>
+5. <span style={{color:'green'}}>plywood</span>
+6. <span style={{color:'red'}}>redwood</span>
+
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+
+```js
+/(log|ply)wood/
+```
+</details>
+
+## Ejercicio 24
+Representar las palabras "colour" y "color"
+
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+
+```js
+/colou?r/
+```
+</details>
+
+## Ejercicio 25
+Representar las palabras "ascending" y "descending"
+
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+
+```js
+/(as|des)cending/
+```
+</details>
+
+## Ejercicio 26
+Representar los strings: "a", "aa" y "aaa". Además, excluír strings vacíos
+
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+
+```js
+/a+/
+```
+</details>
+

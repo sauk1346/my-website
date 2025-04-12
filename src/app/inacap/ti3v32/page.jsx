@@ -50,7 +50,8 @@ export default function Ti3V32() {
             weighting: <EmphText>40%</EmphText>, 
             description: <EmphText>MongoDB Shell</EmphText>, 
             quickGuide: <>
-                <Link href='ti3v32/guia20' className={styles.link}>Guía Operadores</Link><br/>
+                <Link href='ti3v32/guia2a' className={styles.link}>Guía Operadores</Link><br/>
+                <Link href='ti3v32/guia2b' className={styles.link}>Guía Regex</Link><br/>
                 <Link href='ti3v32/guia21' className={styles.link}>Guía 01</Link><br/>  
                 <Link href='ti3v32/guia22' className={styles.link}>Guía 02</Link><br/> 
                 <Link href='ti3v32/guia23' className={styles.link}>Guía 03</Link><br/>

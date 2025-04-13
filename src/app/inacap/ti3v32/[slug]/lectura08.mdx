@@ -1,0 +1,130 @@
+# Selección de filtros y condiciones según requerimientos de búsqueda
+
+|||
+|---|---|
+|Búsqueda|`find()`|
+|Actualización|`updateMany()`|
+|Eliminación|`deleteMany()`|
+
+
+## Operaciones de agregaciones
+Nos ayudan a procesar documentos y retornar resultados calculados. Se utilizan mayoritariamente para:
+
+- Agrupar valores de varios documentos
+- Procesamiento y operaciones matemáticas
+- Analizar cambios de datos a lo largo del tiempo
+
+A su vez, se pueden realizar de 2 formas principales:
+
+1. Tuberías y transformaciones
+2. Métodos de agregación de propósito único
+
+### Tuberías y transformaciones
+- Este patrón consta de una o más etapas
+- Cada etapa realiza una operación
+- La salida o resultado se la entrega a la siguiente etapa para su procesamiento
+
+Para aplicar este patrón, se utiliza el método `aggregate()`, el cual recibe un array de operaciones (conocidas como tuberías). Éstas se ejecutarán en secuencia una por una hasta llegar al resultado esperado.
+
+Los operadores más utilizados en tuberías son:
+
+1. `$match`: filtrado de documentos con criterios
+2. `$sort`: orden de documentos
+3. `$project`: selección de campos en específicos
+4. `$group`: agrupación de documentos
+
+### Ejemplos
+
+1. **Mostrar los usuarios que tienen 40 años**
+```js
+db.usuarios.aggregate([
+    {$match: {edad: 40}}
+])
+```
+
+2. **Mostrar todos los usuarios ordenados por edad de forma descendente**
+```js
+db.usuarios.aggregate([
+    {$sort:{edad:-1}}
+])
+```
+
+3. **Mostrar solo la edad y el nombre de los usuarios**
+```js
+db.usuarios.aggregate([
+    {$project:{edad:0, nombre:0}}
+])
+```
+
+4. **Mostrar el promedio de las edades de los usuarios**
+```js
+db.usuarios.aggregate([{
+    $group: {
+        _id: null,
+        Promedio: ($avg: "$edad")
+    }
+}])
+```
+
+5. **Mostrar la suma de las edades de los usuarios**
+```js
+db.usuarios.aggregate([{
+    $group: {
+        _id: null,
+        Suma: {$sum, "$edad"}
+    }
+}])
+```
+
+6. **Mostrar la edad mínima de los usuarios**
+
+```js
+db.usuarios.aggregate({[
+    $group: {
+        _id: null,
+        Minimo: {$min: "$edad"}
+    }
+]})
+```
+
+7. **Mostrar la edad máxima de los usuarios**
+```js
+db.usuarios.aggregate([{
+    $group: {
+        _id: null,
+        Maximo: {$max: "$edad"}
+    }
+}])
+```
+
+# Actividad de Práctica
+
+1. **¿Cuál es el uso de las operaciones de agregación en MongoDB?**
+    1. Procesar documentos y eliminar valores
+    2. <span style={{color:'red'}}>Procesasr documentos y retornar resultados calculados</span>
+    3. Procesar documentos y agregar valores
+    4. Procesar documentos y retornar valores actualizados
+
+2. **Se necesita calcular el promedio de los sueldos de los empleados registrados en la colección Empleados; ¿Cuál de los siguientes operadores se debe usar en la consulta?**
+    1. $count
+    2. $match
+    3. <span style={{color:'red'}}>$group</span>
+    4. $sort
+
+3. **¿Qué acción realiza sobre la colección trabajadores y el campo sueldo la consulta `db.trabajadores.aggregate([{$group: { _id: null,  Mínimo: {$min:  "$sueldo"}}}])` ?**
+    1. <span style={{color:'red'}}>Muestra el menor sueldo registrado</span>
+    2. Muestra el mayor sueldo registrado
+    3. Muestra el promedio de los sueldos registrados
+    4. Muestra la cantidad de sueldos registrados
+
+4. **¿Qué acción realiza la sentencia $match en agregaciones?**
+    1. Agrupa documentos
+    2. Ordena documentos con criterios
+    3. <span style={{color:'red'}}>Filtra documentos con criterios</span>
+    4. Selecciona grupos
+
+5. **¿Cuál es el uso de la sentencia $proyect?**
+    1. <span style={{color:'red'}}>Seleccionar los campos a visualizar en la salida de una consulta</span>
+    2. Ordenar los campos de una consulta
+    3. Agrupar los campos a visualizar en la salida de una consulta
+    4. Filtrar los campos de una consulta

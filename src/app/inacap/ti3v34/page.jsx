@@ -56,7 +56,9 @@ export default function Ti3V34() {
         { week: '03', lecture: '04', date: 'Sáb 29, Mar 2025', description: <a href="/ti3v34/docs/lectura04.pdf" target="_blank" rel="noopener noreferrer" className={styles.link}>Ética y legislación</a> },
         { week: '', lecture: '05', date: 'Sáb 29, Mar 2025', description: <Link href="ti3v34/lectura05" className={styles.link}>Elementos normativos nacionales e internacionales y delitos informáticos</Link> },
         { week: '04', lecture: '06', date: 'Sáb 05, Abr 2025', description: <Link href="ti3v34/lectura06" className={styles.link}>Payment Card Industry Data Security Standard y Convenio de Budapest</Link> },
-        { week: '05', lecture: '07', date: 'Sáb 12, Abr 2025', description: 'Ley 19.628 (propuesta Ley LPDP)' },
+        { week: '05', lecture: '07', date: 'Sáb 12, Abr 2025', description: <Link href="ti3v34/lectura07" className={styles.link}>Ley 19.628 (propuesta Ley LPDP)</Link> },
+        { week: '06', lecture: '08', date: 'Sáb 19, Abr 2025', description: 'Evaluación de vulnerabilidades y matriz de riesgo' },
+        { week: '', lecture: '09', date: 'Sáb 19, Abr 2025', description: 'Tipos de vulnerabilidades según activos TI e identificación de riesgos' },
     ];
 
     return (

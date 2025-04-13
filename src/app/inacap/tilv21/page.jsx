@@ -44,8 +44,9 @@ export default function Tilv21() {
         { week: '03', lecture: '04', date: 'Sáb 29, Mar 2025', description: <Link href='tilv21/lectura04' className={styles.link}>Síntesis de la Unidad</Link> },
         { week: '04', lecture: '05', date: 'Sáb 05, Abr 2025', description: <Link href='tilv21/lectura05' className={styles.link}>Técnicas y herramientas de testing</Link> },
         { week: '', lecture: '06', date: 'Sáb 05, Abr 2025', description: <Link href='tilv21/lectura06' className={styles.link}>Alcances y definiciones de los tipos de testing en el desarrollo de sorftware</Link> },
-        { week: '05', lecture: '07', date: 'Sáb 12, Abr 2025', description: 'Cómo detectar la complejidad del testing' },
-        { week: '', lecture: '08', date: 'Sáb 12, Abr 2025', description: 'Soluciones a problemas y criterios de factibilidad con técnicas de testing' },
+        { week: '05', lecture: '07', date: 'Sáb 12, Abr 2025', description: <Link href='tilv21/lectura07' className={styles.link}>Cómo detectar la complejidad del testing</Link> },
+        { week: '', lecture: '08', date: 'Sáb 12, Abr 2025', description: <Link href='tilv21/lectura08' className={styles.link}>Soluciones a problemas y criterios de factibilidad con técnicas de testing</Link> },
+        { week: '06', lecture: '09', date: 'Sáb 19, Abr 2025', description: 'Síntesis de la Unidad' },
 
         
     ];

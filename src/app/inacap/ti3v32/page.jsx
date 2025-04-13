@@ -91,7 +91,9 @@ export default function Ti3V32() {
         { week: '03', lecture: '04', date: 'Sáb 29, Mar 2025', description: <a href="/ti3v32/docs/lectura04.pdf" target="_blank" rel="noopener noreferrer" className={styles.link}>Operdores esenciales con MongoDB</a> },
         { week: '', lecture: '05', date: 'Sáb 29, Mar 2025', description: <Link href="ti3v32/lectura05" className={styles.link}>Etapas del proceso de instalación de MongoDB y principales comandos de gestión</Link> },
         { week: '04', lecture: '06', date: 'Sáb 05, Abr 2025', description: <Link href="ti3v32/lectura06" className={styles.link}>Operaciones CRUD en documentos y subdocumentos</Link> },
-        { week: '05', lecture: '07', date: 'Sáb 12, Abr 2025', description: '' },
+        { week: '05', lecture: '07', date: 'Sáb 12, Abr 2025', description: <a href="/ti3v32/docs/lectura07.pdf" target="_blank" rel="noopener noreferrer" className={styles.link}>Búsqueda avanzada con MongoDB</a> },
+        { week: '', lecture: '08', date: 'Sáb 12, Abr 2025', description: <Link href="ti3v32/lectura08" className={styles.link}>Selección de filtros y condiciones según requerimientos de búsqueda</Link> },
+        { week: '06', lecture: '09', date: 'Sáb 19, Abr 2025', description: 'Busqueda avanzada usando expresiones regulares' },
     ];
 
     return (

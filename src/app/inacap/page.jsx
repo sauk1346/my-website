@@ -195,7 +195,11 @@ const Inacap = () => {
               </tr>
               <tr>
                 <td>TI3V12</td>
-                <td>Fundamentos de Base de Datos</td>
+                <td>
+                  <Link href="/inacap/ti3v12" className={styles.link}>
+                    Fundamentos de Base de Datos
+                  </Link>
+                </td>
               </tr>
               <tr>
                 <td>TI3V13</td>

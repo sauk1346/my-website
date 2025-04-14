@@ -7,6 +7,7 @@ import "prismjs/components/prism-javascript";
 import "prismjs/components/prism-css";
 import "prismjs/components/prism-jsx";
 import "prismjs/components/prism-python";
+import "prismjs/components/prism-sql";
 
 export function CodeBlock({ children, language }) {
   const codeRef = useRef(null);

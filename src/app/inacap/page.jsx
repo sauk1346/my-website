@@ -187,23 +187,21 @@ const Inacap = () => {
               <tr className={styles.tableRow}>
                 <td>TI3V11</td>
                 <td>
-                  <Link href="/inacap/ti3v11" className={styles.link}>
-                    Introducción a la Programación Segura
-                  </Link>
+                  <Link href="/inacap/ti3v11" className={styles.link}>Introducción a la Programación Segura</Link>
                 </td>
 
               </tr>
               <tr>
                 <td>TI3V12</td>
                 <td>
-                  <Link href="/inacap/ti3v12" className={styles.link}>
-                    Fundamentos de Base de Datos
-                  </Link>
+                  <Link href="/inacap/ti3v12" className={styles.link}>Fundamentos de Base de Datos</Link>
                 </td>
               </tr>
               <tr>
                 <td>TI3V13</td>
-                <td>Fundamentos de Hardware y Software</td>
+                <td>
+                  <Link href="/inacap/ti3v13" className={styles.link}>Fundamentos de Hardware y Software</Link>
+                </td>
               </tr>
               <tr>
                 <td>MVAE02</td>

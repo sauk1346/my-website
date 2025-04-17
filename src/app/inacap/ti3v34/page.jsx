@@ -46,7 +46,10 @@ export default function Ti3V34() {
         { week: '', class: '15', date: 'Mié 09, Abr 2025', description: <a href="/ti3v34/docs/informe01.pdf" target="_blank" rel="noopener noreferrer" className={styles.link}>Entrega Informe 01</a> },
         { week: '06', class: '16', date: 'Lun 14, Abr 2025', description: <Link href="ti3v34/clase16" className={styles.link}>Tipos de Vulnerabilidades (1)</Link> },
         { week: '', class: '17', date: 'Mar 15, Abr 2025', description: <Link href="ti3v34/clase17" className={styles.link}>Tipos de Vulnerabilidades (2)</Link> },
-        { week: '', class: '18', date: 'Mié 16, Abr 2025', description: "" },
+        { week: '', class: '18', date: 'Mié 16, Abr 2025', description: <Link href="ti3v34/clase18" className={styles.link}>Planificación de Recuperación ante Desastres (DRP)</Link> },
+        { week: '07', class: '19', date: 'Lun 21, Abr 2025', description: '' },
+        { week: '', class: '20', date: 'Mar 22, Abr 2025', description: '' },
+        { week: '', class: '21', date: 'Mié 23, Abr 2025', description: '' },
 
     ];
     const lectureData = [

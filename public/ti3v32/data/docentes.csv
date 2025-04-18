@@ -1,6 +1,0 @@
-_id,nombre,apellido,edad,departamento,correo,asignaturas
-1,Roberto,Morales,45,Informática,roberto.morales@inacap.cl,"[""Bases de Datos"", ""Programación Avanzada""]"
-2,Lucía,Torres,38,Redes y Telecomunicaciones,lucia.torres@inacap.cl,"[""Redes Avanzadas"", ""Ciberseguridad""]"
-3,Andrés,Sánchez,50,Desarrollo de Software,andres.sanchez@inacap.cl,"[""Arquitectura de Software"", ""Ingeniería de Software""]"
-4,Patricia,Flores,42,Administración de Empresas,patricia.flores@inacap.cl,"[""Gestión Empresarial"", ""Finanzas Corporativas""]"
-5,Manuel,Gutiérrez,37,Informática,manuel.gutierrez@inacap.cl,"[""Bases de Datos"", ""Desarrollo Web""]"

@@ -1,0 +1,116 @@
+/* Base styles */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Main title */
+  .title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  /* Platforms list */
+  .grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    max-width: 64rem;
+  }
+  
+  /* Platform section */
+  .section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+  
+  /* Platform title */
+  .platformTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 1rem;
+    text-align: center;
+    padding: 0.5rem;
+    background-color: #e5e7eb;
+    border-radius: 6px 6px 0 0;
+  }
+  
+  /* Table styles */
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 8px 8px;
+    border: 1px solid #d1d5db;
+    overflow: hidden;
+  }
+  
+  .table th, 
+  .table td {
+    padding: 0.75rem;
+    text-align: left;
+    border: 1px solid #d1d5db;
+  }
+  
+  .table th {
+    background-color: #1f2937;
+    color: white;
+    font-weight: 500;
+  }
+  
+  .table tr:hover {
+    background-color: #edf2f7;
+    cursor: pointer;
+  }
+  
+  /* Course code */
+  .code {
+    font-family: monospace;
+    color: #4b5563;
+  }
+  
+  /* Certificate link */
+  .link {
+    color: #2563eb;
+    text-decoration: none;
+  }
+  
+  .link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Empty certificate placeholder */
+  .noCertificate {
+    color: #9ca3af;
+    font-style: italic;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .title {
+      font-size: 1.75rem;
+    }
+    
+    .platformTitle {
+      font-size: 1.1rem;
+    }
+    
+    .table th, 
+    .table td {
+      padding: 0.5rem;
+      font-size: 0.9rem;
+    }
+  }

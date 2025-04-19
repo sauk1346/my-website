@@ -49,15 +49,15 @@ export default function Ti3v13() {
 
     ];
     const classData = [
-        { week: '01', class: '01', date: 'Mié 22, May 2024', description: 'Componentes Básicos de Computadores' },
-        { week: '02', class: '02', date: 'Mar 28, May 2024', description: 'Seguridad Física en Manipulación de Hardware' },
+        { week: '01', class: '01', date: 'Mié 22, May 2024', description: <Link href="ti3v13/clase01" className={styles.link}>Componentes Básicos de Computadores</Link> },
+        { week: '02', class: '02', date: 'Mar 28, May 2024', description: <Link href="ti3v13/clase02" className={styles.link}>Seguridad Física en Manipulación de Hardware</Link> },
         { week: '03', class: '03', date: 'Mar 04, Jun 2024', description: 'Taller 01-A' },
-        { week: '', class: '04', date: 'Mié 05, Jun 2024', description: 'Taller 01-B' },
+        { week: '', class: '04', date: 'Mié 05, Jun 2024', description: <Link href="ti3v13/taller01" className={styles.link}>Taller 01-B</Link> },
         { week: '04', class: '05', date: 'Mar 11, Jun 2024', description: 'Evaluación 01-A' },
         { week: '', class: '06', date: 'Mié 12, Jun 2024', description: 'Evaluación 01-B' },
-        { week: '05', class: '07', date: 'Mar 18, Jun 2024', description: 'Sistemas Operativos' },
-        { week: '', class: '08', date: 'Mié 19, Jun 2024', description: 'Higiene digital, Tipos de licencia, versiones de Windows 10' },
-        { week: '06', class: '09', date: 'Mar 25, Jun 2024', description: 'Máquina Virtual: Pasos' },
+        { week: '05', class: '07', date: 'Mar 18, Jun 2024', description: <Link href="ti3v13/clase07" className={styles.link}>Sistemas Operativos</Link> },
+        { week: '', class: '08', date: 'Mié 19, Jun 2024', description: <Link href="ti3v13/clase08" className={styles.link}>Higiene digital, Tipos de licencia, versiones de Windows 10</Link> },
+        { week: '06', class: '09', date: 'Mar 25, Jun 2024', description: <Link href="ti3v13/clase09" className={styles.link}>Máquina Virtual: Pasos</Link> },
         { week: '', class: '10', date: 'Mié 26, Jun 2024', description: 'Virtualbox, Instalación Windows 10' },
         { week: '07', class: '11', date: 'Mar 02, Jul 2024', description: 'Taller 02-A' },
         { week: '', class: '12', date: 'Mié 03, Jul 2024', description: 'Taller 02-B' },

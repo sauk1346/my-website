@@ -13,19 +13,31 @@ export default function Home() {
         <Card
           title="Ingeniería Informática"
           description="Apuntes"
-          image="/inacap_logo.png"
+          image="/logos/inacap_logo.png"
           link='/inacap'
         />
+          <Card
+            title="E-Learning"
+            description="Apuntes"
+            image="/logos/elearning.png"
+            link='/elearning'
+          />
         <Card
           title="Bootcamps"
-          description="Notes"
-          image="/code.jpg"
+          description="Apuntes"
+          image="/logos/code.jpg"
           link='/bootcamps'
         />
         <Card
+          title="Languages"
+          description="Apuntes"
+          image="/logos/language03.png"
+          link='/languages'
+        />
+        <Card
           title="Portfolio"
-          description="My projects"
-          image="/portfolio.png"
+          description="Mis proyectos"
+          image="/logos/portfolio.png"
           link='/portfolio'
         />
 

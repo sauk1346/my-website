@@ -1,0 +1,162 @@
+# Manejo de Excepciones y jerarquías
+
+## Bloques 
+El manejo de excepciones sigue una estructura mediante los bloques:
+
+|Bloques|Descripción|
+|-|----|
+|`try`|Contiene el código que puede generar una excepción. Si ocurre, la ejecución del bloque `try` se detiene y se pasa al bloque `except`|
+|`except`|Especifica cómo manejar una excepción que se ha producido en el bloque `try`. Pueden existir varios bloques `except` para manejar diferentes tipos de excepciones|
+|`else`|Opcional. Se ejecuta si no se produce ninguna excepción en el bloque `try`|
+|`finally`|Opcional. Este bloque se ejecuta siempre, exista una excepción o no. Útil para realizar acciones de limpieza, como cerrar archivos o conexiones, independientemente de lo que suceda|
+
+<img 
+    src="/ti3v21/images/fig34.png"
+    style={{ display: 'block', margin: '0 auto', width:'90%' }} 
+/>
+
+## Tipo de excepciones
+
+### ValueError
+Cuando se recibe un valor con un tipo de dato incorrecto
+
+```python
+# Programa espera número, pero usuario ingresa string
+
+try:
+	edad = int("treinta")
+
+except ValueError as e:
+	print(f"Error: {e}")
+```
+
+### TypeError
+Cuando una operación o función se aplica a un objeto de tipo inapropiado
+
+```python
+# Se intenta "sumar" un string y número
+
+try:
+	resultado = "15" + 5
+
+except TypeError as e:
+	print(f"Error: {e}")
+```
+
+### ZeroDivisionError
+Cuando se intenta dividir un número por 0
+
+```python
+# Se divide 15 entre 0
+
+try:
+	resultado = 15 / 0
+
+except ZeroDivisionError as e:
+	print(f"Error: {e}")
+```
+
+### KeyError
+Para diccionarios. Cuando se intenta acceder a una clave que no existe en el diccionario
+
+```python
+# Diccionario solo tiene clave "nombre", pero 
+# se intenta acceder a clave "apellido"
+
+try:
+	diccionario = {"nombre": "Arturo"}
+	valor = diccionario["apellido"]
+
+except KeyError as e:
+	print(f"Error: {e}")
+```
+
+### IndexError
+Para listas. Cuando se intenta acceder a un elemento fuera del rango de la lista
+
+```python
+# lista solo tiene 3 elementos, pero se intenta acceder 
+# al elemento en la posición 5
+
+try:
+	lista = [10,20,30]
+	elemento = lista[5]
+
+except IndexError as e:
+	print(f"Error: {e}")
+```
+
+### AttributeError
+Para Clases. Cuando se intenta acceder a un atributo que no existe en un objeto
+
+```python
+# Se intenta acceder al "método" de "numero", pero
+# "numero" no es un objeto
+
+try:
+	numero = 42
+	longitud = numero.length
+
+except AttributeError as e:
+	print(f"Error: {e}")
+```
+
+### FileNotFoundError
+Cuando se intenta abrir un archivo que no existe
+
+```python
+try:
+	with open("archivo_inexistente.txt", "r") as archivo:
+		contenido = archivo.read()
+
+except FileNotFoundError as e:
+	print(f"Error: {e}")
+```
+
+### FileExistsError
+Cuando se intenta crear un archivo ya existente
+
+```python
+try:
+	with open("arhivo_existene.txt", "x") as archivo:
+		contenido = archivo.read()
+
+except FileExistsError as e:
+	print(f"Error: {e}")
+```
+
+```shell
+Error: [Errno 17] File exists: 'archivo_existente.txt'
+```
+
+# Actividad de Práctica 09
+
+1. **¿Cuál es la función principal del bloque try en la gestión de excepciones en Python?**
+	1. <span style={{color:'red'}}>Definir cómo manejar excepciones</span>
+	2. Ejecutar código de forma normal 
+	3. Ignorar los errores
+	4. Realizar operaciones de limpieza
+
+2. **En la estructura de manejo de excepciones, ¿qué hace el bloque “except”?**
+	1. Es opcional y no es necesario especificar ninguna excepción
+	2. Ignora cualquier error potencial
+	3. <span style={{color:'red'}}>Maneja las excepciones que se producen en el bloque try</span>
+	4. Define el código que se ejecutará siempre
+
+3. **¿Cuál es el propósito principal del bloque “else” en la gestión de excepciones?**
+	1. Realizar operaciones de limpieza
+	2. Manejar excepciones específicas
+	3. Ignorar cualquier error potencial
+	4. <span style={{color:'red'}}>Ejecutar código solo si no hay excepciones en el bloque try</span>
+
+4. **¿Qué hace el bloque “finally” en la gestión de excepciones?**
+	1. aneja específicamente las excepciones
+	2. Define el código que se ejecutará siempre, independientemente si existen o no las excepciones
+	3. <span style={{color:'red'}}>Es opcional y no es necesario especificar ninguna excepción]</span>
+	4. Ignora las excepciones
+
+5. **¿Cuál es la ventaja de utilizar bloques “try-except” en la resolución de errores en Python?**
+	1. Permite que el código sea más complejo
+	2. Ignora por completo las excepciones
+	3. <span style={{color:'red'}}>Proporciona un enfoque estructurado para manejar errores y evitar la terminación abrupta del programa</span>
+	4. Utiliza la palabra reservada poly en la declaración de clase

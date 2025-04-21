@@ -23,30 +23,30 @@ const Inacap = () => {
             </thead>
             <tbody>
               <tr className={styles.tableRow}>
-                <td>TI3V11</td>
+                <td className={styles.code}>TI3V11</td>
                 <td>
                   <Link href="/inacap/ti3v11" className={styles.link}>Introducción a la Programación Segura</Link>
                 </td>
 
               </tr>
               <tr>
-                <td>TI3V12</td>
+                <td className={styles.code}>TI3V12</td>
                 <td>
                   <Link href="/inacap/ti3v12" className={styles.link}>Fundamentos de Base de Datos</Link>
                 </td>
               </tr>
               <tr>
-                <td>TI3V13</td>
+                <td className={styles.code}>TI3V13</td>
                 <td>
                   <Link href="/inacap/ti3v13" className={styles.link}>Fundamentos de Hardware y Software</Link>
                 </td>
               </tr>
               <tr>
-                <td>MVAE02</td>
+                <td className={styles.code}>MVAE02</td>
                 <td>Resolución de Problemas en Álgebra</td>
               </tr>
               <tr>
-                <td>FVFC03</td>
+                <td className={styles.code}>FVFC03</td>
                 <td>Formación Ciudadana</td>
               </tr>
             </tbody>
@@ -65,29 +65,31 @@ const Inacap = () => {
             </thead>
             <tbody>
               <tr>
-                <td>TI3V21</td>
+                <td className={styles.code}>TI3V21</td>
                 <td>
                   <Link href="/inacap/ti3v21" className={styles.link}>Programación Orientada a Objeto Seguro</Link>
                 </td>
               </tr>
               <tr>
-                <td>TI3V22</td>
-                <td>Bases de Datos Estructuradas</td>
+                <td className={styles.code}>TI3V22</td>
+                <td>
+                <Link href="/inacap/ti3v22" className={styles.link}>Bases de Datos Estructuradas</Link>
+                  </td>
               </tr>
               <tr>
-                <td>TI3V23</td>
+                <td className={styles.code}>TI3V23</td>
                 <td>Metodología de Desarrollo Ágil</td>
               </tr>
               <tr>
-                <td>TI3V25</td>
+                <td className={styles.code}>TI3V25</td>
                 <td>Modelamiento de Soluciones Informáticas</td>
               </tr>
               <tr>
-                <td>AVAN01</td>
+                <td className={styles.code}>AVAN01</td>
                 <td>Administración</td>
               </tr>
               <tr>
-                <td>MVFM01</td>
+                <td className={styles.code}>MVFM01</td>
                 <td>Funciones y Matrices</td>
               </tr>
             </tbody>
@@ -106,11 +108,11 @@ const Inacap = () => {
             </thead>
             <tbody>
               <tr>
-                <td>TI3V31</td>
+                <td className={styles.code}>TI3V31</td>
                 <td>Programación Frontend</td>
               </tr>
               <tr>
-                <td>TI3V32</td>
+                <td className={styles.code}>TI3V32</td>
                 <td>
                   <Link href="/inacap/ti3v32" className={styles.link}>
                     Bases de Datos No Estructuradas
@@ -118,7 +120,7 @@ const Inacap = () => {
                 </td>
               </tr>
               <tr>
-                <td>TI3V34</td>
+                <td className={styles.code}>TI3V34</td>
                 <td>
                   <Link href='/inacap/ti3v34' className={styles.link}>
                   Fundamentos de Seguridad de la Información
@@ -126,15 +128,15 @@ const Inacap = () => {
                 </td>
               </tr>
               <tr>
-                <td>TI3V35</td>
+                <td className={styles.code}>TI3V35</td>
                 <td>Sistemas Operativos</td>
               </tr>
               <tr>
-                <td>FVE01</td>
+                <td className={styles.code}>FVE01</td>
                 <td>Innovación y Emprendimiento I</td>
               </tr>
               <tr>
-                <td>TILV21</td>
+                <td className={styles.code}>TILV21</td>
                 <td>
                   <Link href='/inacap/tilv21' className={styles.link}>
                     (Electivo I) Plan de Pruebas de Software

@@ -30,8 +30,8 @@ export default function Home() {
         <Card
           title="Languages"
           description="Apuntes"
-          image="/logos/language03.png"
-          link='/languages'
+          image="/logos/language.png"
+          link='/idiomas'
         />
         <Card
           title="Portfolio"

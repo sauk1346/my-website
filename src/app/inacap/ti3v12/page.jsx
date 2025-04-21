@@ -1,8 +1,8 @@
 'use client'
 
 import React, { useEffect, useState } from 'react';
-import ProfessorCard from '../../../components/ProfessorCard';
-import styles from'../../../styles/Ti3v32.module.css';
+import ProfessorCard from '@/components/ProfessorCard';
+import styles from'@/styles/Asignature.module.css';
 import Link from 'next/link';
 
 export default function Ti3v12() {

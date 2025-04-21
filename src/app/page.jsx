@@ -8,7 +8,6 @@ export default function Home() {
       <p className={styles.description}>
         Choose your Destiny:
       </p>
-      
       <div className={styles.cardContainer}>
         <Card
           title="Ingeniería Informática"
@@ -16,12 +15,12 @@ export default function Home() {
           image="/logos/inacap_logo.png"
           link='/inacap'
         />
-          <Card
-            title="E-Learning"
-            description="Apuntes"
-            image="/logos/elearning.png"
-            link='/elearning'
-          />
+        <Card
+          title="E-Learning"
+          description="Apuntes"
+          image="/logos/elearning.png"
+          link='/elearning'
+        />
         <Card
           title="Bootcamps"
           description="Apuntes"
@@ -40,7 +39,6 @@ export default function Home() {
           image="/logos/portfolio.png"
           link='/portfolio'
         />
-
       </div>
     </div>
   );

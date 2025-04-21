@@ -1,8 +1,8 @@
 import React from "react";
 import Link from "next/link";
-import styles from '../../styles/Inacap.module.css'
-import Calendar from '../../components/Calendar'
-import EventsData from '../../../public/data/calendar25.json'
+import styles from '@/styles/Inacap.module.css'
+import Calendar from '@/components/Calendar'
+import EventsData from '@/../public/data/calendar25.json'
 
 const Inacap = () => {
   
@@ -66,7 +66,9 @@ const Inacap = () => {
             <tbody>
               <tr>
                 <td>TI3V21</td>
-                <td>Programación Orientada a Objeto Seguro</td>
+                <td>
+                  <Link href="/inacap/ti3v21" className={styles.link}>Programación Orientada a Objeto Seguro</Link>
+                </td>
               </tr>
               <tr>
                 <td>TI3V22</td>

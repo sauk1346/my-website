@@ -1,16 +1,16 @@
 'use client'
 
 import React, { useEffect, useState } from 'react';
-import ClassCard from '../../../components/ClassCard'; 
-import LectureCard from '../../../components/LectureCard'; 
-import EvaluationCard from '../../../components/EvaluationCard';
-import ProfessorCard from '../../../components/ProfessorCard';
-import UnitCard from '../../../components/UnitCard';
-import styles from'../../../styles/Ti3v32.module.css';
+import ClassCard from '@/components/ClassCard'; 
+import LectureCard from '@/components/LectureCard'; 
+import EvaluationCard from '@/components/EvaluationCard';
+import ProfessorCard from '@/components/ProfessorCard';
+import UnitCard from '@/components/UnitCard';
+import styles from'@/styles/Asignature.module.css';
 import Link from 'next/link';
-import EmphText from '../../../components/EmphText';
+import EmphText from '@/components/EmphText';
 
-export default function Ti3V32() {
+export default function Ti3v32() {
     // Estado para controlar la vista responsiva
     const [isMobile, setIsMobile] = useState(false);
 

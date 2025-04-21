@@ -1,0 +1,60 @@
+# Armado de Red  Inalámbrica
+
+## Cisco Packet Tracer
+Es una herramienta de simulación de redes. Permite crear, configurar y simular redes informáticas de manera virtual, sin la necesidad de hardware físico real.
+
+## Conexión inalámbrica
+
+1. Agregar 3 laptops
+```default
+[End devices] > Laptop-PT
+```
+
+2. Agregar 1 router
+```default
+[Network devices] > [Wireless devices] > HomeRouter-PT-AC
+```
+
+3. Establecer conexión entre dispositivos
+```default
+[Connections] > Automatically Choose Connection Type
+```
+
+<img 
+    src="/ti3v13/images/fig08.png"
+    style={{ display: 'block', margin: '0 auto', width:'50%' }} 
+/>
+
+4. Cambiar tarjeta ethernet por tarjeta wireless en los 3 laptops.
+
+<img 
+    src="/ti3v13/images/fig09.png"
+    style={{ display: 'block', margin: '0 auto', width:'100%' }} 
+/>
+
+5. Configurar router
+```default
+router > GUI > Setup
+```
+- IP address
+- Start IP address
+- Maximun number of users
+
+<img 
+    src="/ti3v13/images/fig10.png"
+    style={{ display: 'block', margin: '0 auto', width:'100%' }} 
+/>
+
+6. Verificar conexión entre dispositivos mediante instrucción `ping`
+```default
+laptop > desktop > Command Prompt
+```
+
+```sh
+ping <device_ip_address>
+```
+
+<img 
+    src="/ti3v13/images/fig11.png"
+    style={{ display: 'block', margin: '0 auto', width:'100%' }} 
+/>

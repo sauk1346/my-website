@@ -1,16 +1,15 @@
 
 import React from 'react';
-import ClassCard from '../../../components/ClassCard'; 
-import LectureCard from '../../../components/LectureCard'; 
-import EvaluationCard from '../../../components/EvaluationCard';
-import ProfessorCard from '../../../components/ProfessorCard';
-import UnitCard from '../../../components/UnitCard';
-import styles from'../../../styles/Ti3v32.module.css';
+import ClassCard from '@/components/ClassCard'; 
+import LectureCard from '@/components/LectureCard'; 
+import EvaluationCard from '@/components/EvaluationCard';
+import ProfessorCard from '@/components/ProfessorCard';
+import UnitCard from '@/components/UnitCard';
+import styles from '@/styles/Asignature.module.css';
 import Link from 'next/link';
-import EmphText from '../../../components/EmphText';
+import EmphText from '@/components/EmphText';
 
-export default function Ti3V34() {
-
+export default function Ti3v34() {
 
     const professorData = {
         name: "Sergio Andrés Muñoz Sasso",

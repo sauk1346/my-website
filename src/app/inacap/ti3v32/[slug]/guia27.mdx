@@ -148,17 +148,77 @@ db.estudiantes.find({ G3:{$lt:10} })
 ## Ejercicio 12
 Mostrar estudiantes con promedios de notas entre G1, G2 y G3 mayores a 15
 
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+```js
+db.estudiantes.find({
+    "$expr": {
+        "$gt": [
+            { "$divide": [ { "$add": ["$G1", "$G2", "$G3"] }, 3 ] },
+            15
+        ]
+    }
+})
+```
+</details>
+
+
 ## Ejercicio 13
 Listar estudiantes con absences superiores a 10 y que tengan consumo semanal de alcohol (Walc) mayor que diario (Dalc)
+
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+```js
+db.estudiantes.find({
+    "$expr": {
+        "$and": [
+            { "$gt": ["$absences", 10] },
+            { "$gt": ["$Walc", "$Dalc"] }
+        ]
+    }
+})
+```
+</details>
 
 ## Ejercicio 14
 Buscar estudiantes sin ninguna inasistencia (absences = 0) y calificaciones finales iguales o superiores a 15
 
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+```js
+db.estudiantes.find({
+    "absences": 0,
+    "G3": {"$gte": 15}
+})
+```
+</details>
+
 ## Ejercicio 15
 Filtrar estudiantes cuyo rendimiento empeora en cada evaluación (G1 > G2 > G3)
 
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+```js
+db.estudiantes.find({
+    "$expr": {
+        "$and": [
+            { "$gt": ["$G1", "$G2"] },
+            { "$gt": ["$G2", "$G3"] }
+        ]
+    }
+})
+```
+</details>
+
 ## Ejercicio 16
 Mostrar estudiantes que tengan todos los siguientes campos presentes: activities, internet, romantic
+
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+```js
+
+```
+</details>
 
 ## Ejercicio 17
 Buscar estudiantes donde no exista el campo nursery

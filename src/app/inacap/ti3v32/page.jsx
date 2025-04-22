@@ -7,7 +7,8 @@ import EvaluationCard from '@/components/EvaluationCard';
 import ProfessorCard from '@/components/ProfessorCard';
 import UnitCard from '@/components/UnitCard';
 import styles from'@/styles/Asignature.module.css';
-import Link from 'next/link';
+import CustomLink from '@/components/CustomLink';
+import ExternalLink from '@/components/ExternalLink';
 import EmphText from '@/components/EmphText';
 
 export default function Ti3v32() {
@@ -43,47 +44,48 @@ export default function Ti3v32() {
         { unit: '4', description: 'Unidad integradora para evaluar la competencia' }
     ];
     const evaluationsData = [
-        { evaluationNumber: 1, date: 'Mié 26, Mar 2025', weighting: '20%', description: <><Link href='ti3v32/eval01a' className={styles.link}>Eval01-A</Link>, <Link href='ti3v32/eval01b' className={styles.link}>Eval01-B</Link> </>  , quickGuide: <Link href="ti3v32/guia11" className={styles.link}>Guía 01</Link> },
+        { evaluationNumber: 1, date: 'Mié 26, Mar 2025', weighting: '20%', description: <><CustomLink href='ti3v32/eval01a'>Eval01-A</CustomLink>, <CustomLink href='ti3v32/eval01b'>Eval01-B</CustomLink> </>  , quickGuide: <CustomLink href="ti3v32/guia11">Guía 01</CustomLink> },
         { 
             evaluationNumber: <EmphText>2</EmphText>, 
             date: <EmphText>Mié 23, Abr 2025</EmphText>, 
             weighting: <EmphText>40%</EmphText>, 
             description: <EmphText>MongoDB Shell</EmphText>, 
             quickGuide: <>
-                <Link href='ti3v32/guia2a' className={styles.link}>- Operators</Link><br/>
-                <Link href='ti3v32/guia2b' className={styles.link}>- Regex</Link><br/>
-                <Link href='ti3v32/guia21' className={styles.link}>- Guía 01</Link><br/>  
-                <Link href='ti3v32/guia22' className={styles.link}>- Guía 02</Link><br/> 
-                <Link href='ti3v32/guia23' className={styles.link}>- Guía 03</Link><br/>
-                <Link href='ti3v32/guia24' className={styles.link}>- Guía 04</Link><br/>
-                <Link href='ti3v32/guia25' className={styles.link}>- Guía 05</Link><br/>
-                <Link href='ti3v32/guia26' className={styles.link}>- Guía 06</Link><br/>
-                <Link href='ti3v32/guia27' className={styles.link}>- Guía 07</Link>
+                <CustomLink href='ti3v32/guia2a'>- Operators</CustomLink><br/>
+                <CustomLink href='ti3v32/guia2b'>- Regex</CustomLink><br/>
+                <CustomLink href='ti3v32/guia21'>- Guía 01</CustomLink><br/>  
+                <CustomLink href='ti3v32/guia22'>- Guía 02</CustomLink><br/> 
+                <CustomLink href='ti3v32/guia23'>- Guía 03</CustomLink><br/>
+                <CustomLink href='ti3v32/guia24'>- Guía 04</CustomLink><br/>
+                <CustomLink href='ti3v32/guia25'>- Guía 05</CustomLink><br/>
+                <CustomLink href='ti3v32/guia26'>- Guía 06</CustomLink><br/>
+                <CustomLink href='ti3v32/guia27'>- Guía 07</CustomLink><br/>
+                <CustomLink href='ti3v32/guia28'>- Guía 08</CustomLink>
             </>
         },
         { evaluationNumber: 3, date: 'Mar 06, May 2025', weighting: '30%', description: '', quickGuide: '' },
         { evaluationNumber: 4, date: 'Mié 07, May 2025', weighting: '10%', description: 'Promedio Evaluaciones', quickGuide: '' },
     ];
     const classData = [
-        { week: '01', class: '01', date: 'Lun 10, Mar 2025', description: <Link href="ti3v32/clase01" className={styles.link}>Introducción BD NoSQL</Link> },
+        { week: '01', class: '01', date: 'Lun 10, Mar 2025', description: <CustomLink href="ti3v32/clase01">Introducción BD NoSQL</CustomLink> },
         { week: '', class: '02', date: 'Mar 11, Mar 2025', description: <span style={{textDecoration: 'line-through'}}>Suspensión Clases</span>},
         { week: '', class: '03', date: 'Mié 12, Mar 2025', description: "Ejercicios CRUD"},
-        { week: '02', class: '04', date: 'Lun 17, Mar 2025', description: <Link href="ti3v32/clase04" className={styles.link}>Ejercicios CRUD 02</Link> },
+        { week: '02', class: '04', date: 'Lun 17, Mar 2025', description: <CustomLink href="ti3v32/clase04">Ejercicios CRUD 02</CustomLink> },
         { week: '', class: '05', date: 'Mar 18, Mar 2025', description: "Ejercicios CRUD 03" },
         { week: '', class: '06', date: 'Mié 19, Mar 2025', description: "Ejercicios CRUD 04" },
-        { week: '03', class: '07', date: 'Lun 24, Mar 2025', description: <Link href='ti3v32/clase07' className={styles.link}>MongoDB Shell</Link> },
-        { week: '', class: '08', date: 'Mar 25, Mar 2025', description: <Link href='ti3v32/clase08' className={styles.link}>Ejercicio con puntaje</Link> },
-        { week: '', class: '09', date: 'Mié 26, Mar 2025', description: <> <Link href='ti3v32/eval01a' className={styles.link}>Eval01-A</Link>, <Link href='ti3v32/eval01b' className={styles.link}>Eval01-B</Link> </>},
-        { week: '04', class: '10', date: 'Lun 31, Mar 2025', description: <Link href='ti3v32/clase10' className={styles.link}>Ejercicios MongoSh 01</Link> },
-        { week: '', class: '11', date: 'Mar 01, Abr 2025', description: <Link href='ti3v32/guia21' className={styles.link}>Guía 01</Link> },
-        { week: '', class: '12', date: 'Mié 02, Abr 2025', description: <Link href='ti3v32/guia22' className={styles.link}>Guía 02</Link> },
-        { week: '05', class: '13', date: 'Lun 07, Abr 2025', description: <Link href='ti3v32/guia23' className={styles.link}>Guía 03</Link> },
+        { week: '03', class: '07', date: 'Lun 24, Mar 2025', description: <CustomLink href='ti3v32/clase07'>MongoDB Shell</CustomLink> },
+        { week: '', class: '08', date: 'Mar 25, Mar 2025', description: <CustomLink href='ti3v32/clase08'>Ejercicio con puntaje</CustomLink> },
+        { week: '', class: '09', date: 'Mié 26, Mar 2025', description: <> <CustomLink href='ti3v32/eval01a'>Eval01-A</CustomLink>, <CustomLink href='ti3v32/eval01b'>Eval01-B</CustomLink> </>},
+        { week: '04', class: '10', date: 'Lun 31, Mar 2025', description: <CustomLink href='ti3v32/clase10'>Ejercicios MongoSh 01</CustomLink> },
+        { week: '', class: '11', date: 'Mar 01, Abr 2025', description: <CustomLink href='ti3v32/guia21'>Guía 01</CustomLink> },
+        { week: '', class: '12', date: 'Mié 02, Abr 2025', description: <CustomLink href='ti3v32/guia22'>Guía 02</CustomLink> },
+        { week: '05', class: '13', date: 'Lun 07, Abr 2025', description: <CustomLink href='ti3v32/guia23'>Guía 03</CustomLink> },
         { week: '', class: '14', date: 'Mar 08, Abr 2025', description: <em>Visita a Data Center Didáctico</em>},
-        { week: '', class: '15', date: 'Mié 09, Abr 2025', description: <Link href='ti3v32/guia24' className={styles.link}>Guía 04</Link> },
-        { week: '06', class: '16', date: 'Lun 14, Abr 2025', description: <Link href='ti3v32/guia25' className={styles.link}>Guía 05</Link> },
-        { week: '', class: '17', date: 'Mar 15, Abr 2025', description: <Link href='ti3v32/guia26' className={styles.link}>Guía 06</Link> },
-        { week: '', class: '18', date: 'Mié 16, Abr 2025', description: <Link href='ti3v32/guia27' className={styles.link}>Guía 07</Link> },
-        { week: '07', class: '19', date: 'Lun 21, Abr 2025', description: '' },
+        { week: '', class: '15', date: 'Mié 09, Abr 2025', description: <CustomLink href='ti3v32/guia24'>Guía 04</CustomLink> },
+        { week: '06', class: '16', date: 'Lun 14, Abr 2025', description: <CustomLink href='ti3v32/guia25'>Guía 05</CustomLink> },
+        { week: '', class: '17', date: 'Mar 15, Abr 2025', description: <CustomLink href='ti3v32/guia26'>Guía 06</CustomLink> },
+        { week: '', class: '18', date: 'Mié 16, Abr 2025', description: <CustomLink href='ti3v32/guia27'>Guía 07</CustomLink> },
+        { week: '07', class: '19', date: 'Lun 21, Abr 2025', description: <CustomLink href='ti3v32/guia28'>Guía 08</CustomLink> },
         { week: '', class: '20', date: 'Mar 22, Abr 2025', description: '' },
         { week: '', class: '21', date: 'Mié 23, Abr 2025', description: 'Evaluación 02' },
 
@@ -91,14 +93,14 @@ export default function Ti3v32() {
 
     ];
     const lectureData = [
-        { week: '01', lecture: '01', date: 'Sáb 15, Mar 2025', description: <a href="/ti3v32/docs/lectura01.pdf" target="_blank" rel="noopener noreferrer" className={styles.link}>Introducción a las bases de datos no estructuradas</a> },
-        { week: '', lecture: '02', date: 'Sáb 15, Mar 2025', description: <Link href="ti3v32/lectura02" className={styles.link}>Bases de datos no estructuradas: características y tipos</Link> },
-        { week: '02', lecture: '03', date: 'Sáb 22, Mar 2025', description: <Link href="ti3v32/lectura03" className={styles.link}>Elementos de las bases de datos no estructuradas documentales y características de Mongo DB</Link> },
-        { week: '03', lecture: '04', date: 'Sáb 29, Mar 2025', description: <a href="/ti3v32/docs/lectura04.pdf" target="_blank" rel="noopener noreferrer" className={styles.link}>Operdores esenciales con MongoDB</a> },
-        { week: '', lecture: '05', date: 'Sáb 29, Mar 2025', description: <Link href="ti3v32/lectura05" className={styles.link}>Etapas del proceso de instalación de MongoDB y principales comandos de gestión</Link> },
-        { week: '04', lecture: '06', date: 'Sáb 05, Abr 2025', description: <Link href="ti3v32/lectura06" className={styles.link}>Operaciones CRUD en documentos y subdocumentos</Link> },
-        { week: '05', lecture: '07', date: 'Sáb 12, Abr 2025', description: <a href="/ti3v32/docs/lectura07.pdf" target="_blank" rel="noopener noreferrer" className={styles.link}>Búsqueda avanzada con MongoDB</a> },
-        { week: '', lecture: '08', date: 'Sáb 12, Abr 2025', description: <Link href="ti3v32/lectura08" className={styles.link}>Selección de filtros y condiciones según requerimientos de búsqueda</Link> },
+        { week: '01', lecture: '01', date: 'Sáb 15, Mar 2025', description: <ExternalLink href="/ti3v32/docs/lectura01.pdf">Introducción a las bases de datos no estructuradas</ExternalLink> },
+        { week: '', lecture: '02', date: 'Sáb 15, Mar 2025', description: <CustomLink href="ti3v32/lectura02">Bases de datos no estructuradas: características y tipos</CustomLink> },
+        { week: '02', lecture: '03', date: 'Sáb 22, Mar 2025', description: <CustomLink href="ti3v32/lectura03">Elementos de las bases de datos no estructuradas documentales y características de Mongo DB</CustomLink> },
+        { week: '03', lecture: '04', date: 'Sáb 29, Mar 2025', description: <ExternalLink href="/ti3v32/docs/lectura04.pdf">Operdores esenciales con MongoDB</ExternalLink> },
+        { week: '', lecture: '05', date: 'Sáb 29, Mar 2025', description: <CustomLink href="ti3v32/lectura05">Etapas del proceso de instalación de MongoDB y principales comandos de gestión</CustomLink> },
+        { week: '04', lecture: '06', date: 'Sáb 05, Abr 2025', description: <CustomLink href="ti3v32/lectura06">Operaciones CRUD en documentos y subdocumentos</CustomLink> },
+        { week: '05', lecture: '07', date: 'Sáb 12, Abr 2025', description: <ExternalLink href="/ti3v32/docs/lectura07.pdf">Búsqueda avanzada con MongoDB</ExternalLink> },
+        { week: '', lecture: '08', date: 'Sáb 12, Abr 2025', description: <CustomLink href="ti3v32/lectura08">Selección de filtros y condiciones según requerimientos de búsqueda</CustomLink> },
         { week: '06', lecture: '09', date: 'Sáb 19, Abr 2025', description: 'Busqueda avanzada usando expresiones regulares' },
     ];
 

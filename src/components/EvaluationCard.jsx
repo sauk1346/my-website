@@ -12,7 +12,7 @@ const EvaluationCard = ({ evaluationsData }) => {
             <th className={styles.tableCell}>Fecha</th>
             <th className={styles.tableCell}>Pond.</th>
             <th className={styles.tableCell}>Descripción</th>
-            <th className={styles.tableCell}>Guía Rápida</th>
+            <th className={styles.tableCell}>Guías</th>
           </tr>
         </thead>
         <tbody>

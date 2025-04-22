@@ -1,31 +1,56 @@
-# Actividad de Práctica
+import { Quiz } from '@/components/QuizComponent';
 
-1. **¿Cuál es uno de los beneficios de establecer el alcance en una problemática informática?**
-    1. Aumenta la complejidad del proyecto.
-    2. <span style={{color:'red'}}>Proporciona un enfoque preciso.</span>
-    3. Reduce la comunicación con los interesados.
-    4. Permite la dispersión de recursos.
+# Actividad de Práctica 01
 
-2. **¿Qué implica la gestión efectiva de recursos al conocer el alcance en un proyecto informático?**
-    1. <span style={{color:'red'}}>Maximizar el rendimiento del equipo.</span>
-    2. Aumentar gastos innecesarios.
-    3. Reducir el tiempo de desarrollo.
-    4. Ignorar la asignación de presupuesto.
-
-3. **¿Cómo contribuye un alcance claro a la comunicación efectiva en un proyecto informático?**
-    1. Aumenta los malentendidos.
-    2. Reduce la colaboración entre el equipo.
-    3. <span style={{color:'red'}}>Facilita la comunicación entre los integrantes del equipo y las partes interesadas.</span>
-    4. Genera inconsistencias en la ejecución.
-
-4. **¿Por qué delimitar el alcance es útil para evitar desviaciones no deseadas en un proyecto informático?**
-    1. Permite incrementar la probabilidad de cambios inesperados.
-    2. Favorece dispersar los recursos eficientemente.
-    3. <span style={{color:'red'}}>Permite mantener la consistencia en la ejecución.</span>
-    4. Favorece acelerar el desarrollo del proyecto.
-
-5. **Cuál es uno de los beneficios al identificar el alcance temprano en un proyecto informático**
-    1. Aumentar la incertidumbre en la planificación.
-    2. Facilitar la adaptabilidad a cambios no controlados.
-    3. Dificultar la creación de metas y objetivos realistas.
-    4. <span style={{color:'red'}}>Permitir una mejor planificación estratégica.</span>
+<Quiz questions={[
+  {
+    question: "¿Cuál es uno de los beneficios de establecer el alcance en una problemática informática?",
+    options: [
+      "Aumenta la complejidad del proyecto.",
+      "Proporciona un enfoque preciso.",
+      "Reduce la comunicación con los interesados.",
+      "Permite la dispersión de recursos."
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "¿Qué implica la gestión efectiva de recursos al conocer el alcance en un proyecto informático?",
+    options: [
+      "Maximizar el rendimiento del equipo.",
+      "Aumentar gastos innecesarios.",
+      "Reducir el tiempo de desarrollo.",
+      "Ignorar la asignación de presupuesto."
+    ],
+    correctIndex: 0
+  },
+  {
+    question: "¿Cómo contribuye un alcance claro a la comunicación efectiva en un proyecto informático?",
+    options: [
+      "Aumenta los malentendidos.",
+      "Reduce la colaboración entre el equipo.",
+      "Facilita la comunicación entre los integrantes del equipo y las partes interesadas.",
+      "Genera inconsistencias en la ejecución."
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "¿Por qué delimitar el alcance es útil para evitar desviaciones no deseadas en un proyecto informático?",
+    options: [
+      "Permite incrementar la probabilidad de cambios inesperados.",
+      "Favorece dispersar los recursos eficientemente.",
+      "Permite mantener la consistencia en la ejecución.",
+      "Favorece acelerar el desarrollo del proyecto."
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "Cuál es uno de los beneficios al identificar el alcance temprano en un proyecto informático",
+    options: [
+      "Aumentar la incertidumbre en la planificación.",
+      "Facilitar la adaptabilidad a cambios no controlados.",
+      "Dificultar la creación de metas y objetivos realistas.",
+      "Permitir una mejor planificación estratégica."
+    ],
+    correctIndex: 3
+  }
+]} />

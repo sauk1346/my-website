@@ -12,6 +12,14 @@
   transition: all 0.2s ease;
 }
 
+/* Contenedor TOC en modo oscuro */
+:global(html.dark-mode) .tocContainer,
+:global(html.dark-mode-override) .tocContainer {
+  background-color: #1a1a1a;
+  border-left-color: #4b5563;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+}
+
 .tocHeading {
   font-size: 1.25rem;
   margin-top: 0;
@@ -20,6 +28,14 @@
   color: #1e40af;
   padding-bottom: 0.5rem;
   border-bottom: 1px solid #e2e8f0;
+  transition: color 0.3s ease, border-bottom-color 0.3s ease;
+}
+
+/* Título TOC en modo oscuro */
+:global(html.dark-mode) .tocHeading,
+:global(html.dark-mode-override) .tocHeading {
+  color: #60a5fa;
+  border-bottom-color: #4b5563;
 }
 
 .tocList {
@@ -66,9 +82,22 @@
   transition: all 0.2s ease;
 }
 
+/* Enlaces TOC en modo oscuro */
+:global(html.dark-mode) .tocLink,
+:global(html.dark-mode-override) .tocLink {
+  color: #94a3b8;
+}
+
 .tocLink:hover {
   color: #2563eb;
   background-color: #f1f5f9;
+}
+
+/* Hover de enlaces TOC en modo oscuro */
+:global(html.dark-mode) .tocLink:hover,
+:global(html.dark-mode-override) .tocLink:hover {
+  color: #60a5fa;
+  background-color: #1e293b;
 }
 
 .active {
@@ -76,4 +105,12 @@
   font-weight: 500;
   background-color: #eff6ff;
   border-left: 2px solid #2563eb;
+}
+
+/* Enlace activo TOC en modo oscuro */
+:global(html.dark-mode) .active,
+:global(html.dark-mode-override) .active {
+  color: #60a5fa;
+  background-color: #172554;
+  border-left-color: #60a5fa;
 }

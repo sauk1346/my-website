@@ -7,6 +7,14 @@
   color: #334155;
   line-height: 1.7;
   background-color: #ffffff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Modo oscuro para contenedor */
+:global(html.dark-mode) .container,
+:global(html.dark-mode-override) .container {
+  background-color: #1a1a1a;
+  color: #e5e7eb;
 }
 
 /* Encabezados con mejor jerarquía visual */
@@ -17,6 +25,13 @@
   margin-bottom: 2rem;
   padding-bottom: 0.75rem;
   border-bottom: 2px solid #e2e8f0;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+:global(html.dark-mode) .container h1,
+:global(html.dark-mode-override) .container h1 {
+  color: #60a5fa;
+  border-bottom-color: #4b5563;
 }
 
 .container h2 {
@@ -25,6 +40,12 @@
   margin-top: 2rem;
   margin-bottom: 1rem;
   color: #1e3a8a;
+  transition: color 0.3s ease;
+}
+
+:global(html.dark-mode) .container h2,
+:global(html.dark-mode-override) .container h2 {
+  color: #93c5fd;
 }
 
 .container h3 {
@@ -33,6 +54,12 @@
   margin-top: 1.75rem;
   margin-bottom: 0.75rem;
   color: #2563eb;
+  transition: color 0.3s ease;
+}
+
+:global(html.dark-mode) .container h3,
+:global(html.dark-mode-override) .container h3 {
+  color: #3b82f6;
 }
 
 /* Párrafos más legibles */
@@ -40,6 +67,7 @@
   line-height: 1.8;
   margin-bottom: 1.25rem;
   font-size: 1.05rem;
+  transition: color 0.3s ease;
 }
 
 /* Listas no ordenadas mejoradas */
@@ -71,6 +99,7 @@
 .container li {
   margin-bottom: 0.75rem;
   line-height: 1.6;
+  transition: color 0.3s ease;
 }
 
 .container ol > li {
@@ -81,6 +110,12 @@
 .textBold {
   font-weight: 700;
   color: #1e293b;
+  transition: color 0.3s ease;
+}
+
+:global(html.dark-mode) .textBold,
+:global(html.dark-mode-override) .textBold {
+  color: #f8fafc;
 }
 
 /* Código en línea más moderno */
@@ -95,6 +130,14 @@
   white-space: nowrap;
   border: 1px solid #e2e8f0;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+:global(html.dark-mode) .inlineCode,
+:global(html.dark-mode-override) .inlineCode {
+  background-color: #1e293b;
+  color: #60a5fa;
+  border-color: #4b5563;
 }
 
 /* Bloques de código */
@@ -106,6 +149,14 @@
   overflow-x: auto;
   border: 1px solid #e2e8f0;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+:global(html.dark-mode) .container pre,
+:global(html.dark-mode-override) .container pre {
+  background-color: #111827;
+  border-color: #4b5563;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .container pre code {
@@ -113,6 +164,12 @@
   font-size: 0.9rem;
   line-height: 1.6;
   color: #334155;
+  transition: color 0.3s ease;
+}
+
+:global(html.dark-mode) .container pre code,
+:global(html.dark-mode-override) .container pre code {
+  color: #e5e7eb;
 }
 
 /* Separadores */
@@ -121,6 +178,12 @@
   height: 1px;
   background-color: #e2e8f0;
   margin: 2rem 0;
+  transition: background-color 0.3s ease;
+}
+
+:global(html.dark-mode) .container hr,
+:global(html.dark-mode-override) .container hr {
+  background-color: #4b5563;
 }
 
 /* Enlaces mejorados */
@@ -135,6 +198,17 @@
 .link:hover {
   border-bottom: 1px solid #2563eb;
   color: #1d4ed8;
+}
+
+:global(html.dark-mode) .link,
+:global(html.dark-mode-override) .link {
+  color: #60a5fa;
+}
+
+:global(html.dark-mode) .link:hover,
+:global(html.dark-mode-override) .link:hover {
+  border-bottom: 1px solid #60a5fa;
+  color: #93c5fd;
 }
 
 /* Espaciado vertical */
@@ -155,24 +229,54 @@
   border-collapse: collapse;
   margin-bottom: 1.75rem;
   border: 1px solid #e2e8f0;
+  transition: border-color 0.3s ease;
+}
+
+:global(html.dark-mode) .container table,
+:global(html.dark-mode-override) .container table {
+  border-color: #4b5563;
 }
 
 .container th {
-  background-color: #f8fafc;
+  background-color: #0e559c;
   padding: 0.75rem 1rem;
   text-align: left;
   font-weight: 600;
-  color: #1e40af;
+  color: #ffffff;
   border-bottom: 2px solid #e2e8f0;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+:global(html.dark-mode) .container th,
+:global(html.dark-mode-override) .container th {
+  background-color: #1e40af;
+  border-bottom-color: #4b5563;
 }
 
 .container td {
   padding: 0.75rem 1rem;
   border-bottom: 1px solid #e2e8f0;
+  transition: border-color 0.3s ease;
+}
+
+:global(html.dark-mode) .container td,
+:global(html.dark-mode-override) .container td {
+  border-bottom-color: #4b5563;
 }
 
 .container tr:nth-child(even) {
   background-color: #f8fafc;
+  transition: background-color 0.3s ease;
+}
+
+:global(html.dark-mode) .container tr:nth-child(even),
+:global(html.dark-mode-override) .container tr:nth-child(even) {
+  background-color: #1e293b;
+}
+
+:global(html.dark-mode) .container tr:nth-child(odd),
+:global(html.dark-mode-override) .container tr:nth-child(odd) {
+  background-color: #111827;
 }
 
 /* Bloques de citas */
@@ -184,6 +288,13 @@
   margin-bottom: 1.75rem;
   font-style: italic;
   color: #4b5563;
+  transition: color 0.3s ease, border-left-color 0.3s ease;
+}
+
+:global(html.dark-mode) .container blockquote,
+:global(html.dark-mode-override) .container blockquote {
+  border-left-color: #60a5fa;
+  color: #9ca3af;
 }
 
 /* Componentes de alerta */
@@ -192,6 +303,7 @@
   border-radius: 0.5rem;
   margin-bottom: 1.75rem;
   border-left: 4px solid;
+  transition: background-color 0.3s ease, color 0.3s ease, border-left-color 0.3s ease;
 }
 
 .alert-info {
@@ -200,10 +312,24 @@
   color: #1e40af;
 }
 
+:global(html.dark-mode) .alert-info,
+:global(html.dark-mode-override) .alert-info {
+  background-color: #172554;
+  border-color: #60a5fa;
+  color: #bfdbfe;
+}
+
 .alert-warning {
   background-color: #fef3c7;
   border-color: #f59e0b;
   color: #92400e;
+}
+
+:global(html.dark-mode) .alert-warning,
+:global(html.dark-mode-override) .alert-warning {
+  background-color: #422006;
+  border-color: #f59e0b;
+  color: #fbbf24;
 }
 
 .alert-danger {
@@ -212,31 +338,12 @@
   color: #b91c1c;
 }
 
-.container table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 1.75rem;
-  border: 1px solid #e2e8f0;
+:global(html.dark-mode) .alert-danger,
+:global(html.dark-mode-override) .alert-danger {
+  background-color: #450a0a;
+  border-color: #ef4444;
+  color: #f87171;
 }
-
-.container th {
-  background-color: #0e559c;
-  padding: 0.75rem 1rem;
-  text-align: left;
-  font-weight: 600;
-  color: #ffffff;
-  border-bottom: 2px solid #e2e8f0;
-}
-
-.container td {
-  padding: 0.75rem 1rem;
-  border-bottom: 1px solid #e2e8f0;
-}
-
-.container tr:nth-child(even) {
-  background-color: #f8fafc;
-}
-
 
 /* Ajustes para dispositivos móviles */
 @media (max-width: 768px) {

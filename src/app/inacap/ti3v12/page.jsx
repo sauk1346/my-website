@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import ProfessorCard from '@/components/ProfessorCard';
 import styles from'@/styles/Asignature.module.css';
-import Link from 'next/link';
+import ExternalLink from '@/components/ExternalLink';
 
 export default function Ti3v12() {
     // Estado para controlar la vista responsiva
@@ -45,19 +45,19 @@ export default function Ti3v12() {
             
             <h2 style={{marginTop:'2em',marginBottom:'1em'}}>Material Clases</h2>
             <ul style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '30px', paddingLeft: '0px', listStyle:'none'}}>
-                <li><a href="/ti3v12/docs/clase01.pdf" target="_blank" rel="noopener noreferrer" className={styles.link}>clase01.pdf</a></li>
-                <li><a href="/ti3v12/docs/clase02.pdf" target="_blank" rel="noopener noreferrer" className={styles.link}>clase02.pdf</a></li>
-                <li><a href="/ti3v12/docs/clase03.pdf" target="_blank" rel="noopener noreferrer" className={styles.link}>clase03.pdf</a></li>
-                <li><a href="/ti3v12/docs/clase04.pdf" target="_blank" rel="noopener noreferrer" className={styles.link}>clase04.pdf</a></li>
-                <li><a href="/ti3v12/docs/clase05.pdf" target="_blank" rel="noopener noreferrer" className={styles.link}>clase05.pdf</a></li>
-                <li><a href="/ti3v12/docs/clase06.pdf" target="_blank" rel="noopener noreferrer" className={styles.link}>clase06.pdf</a></li>
-                <li><a href="/ti3v12/docs/clase07.pdf" target="_blank" rel="noopener noreferrer" className={styles.link}>clase07.pdf</a></li>
-                <li><a href="/ti3v12/docs/clase08.pdf" target="_blank" rel="noopener noreferrer" className={styles.link}>clase08.pdf</a></li>
+                <li><ExternalLink href="/ti3v12/docs/clase01.pdf">clase01.pdf</ExternalLink></li>
+                <li><ExternalLink href="/ti3v12/docs/clase02.pdf">clase02.pdf</ExternalLink></li>
+                <li><ExternalLink href="/ti3v12/docs/clase03.pdf">clase03.pdf</ExternalLink></li>
+                <li><ExternalLink href="/ti3v12/docs/clase04.pdf">clase04.pdf</ExternalLink></li>
+                <li><ExternalLink href="/ti3v12/docs/clase05.pdf">clase05.pdf</ExternalLink></li>
+                <li><ExternalLink href="/ti3v12/docs/clase06.pdf">clase06.pdf</ExternalLink></li>
+                <li><ExternalLink href="/ti3v12/docs/clase07.pdf">clase07.pdf</ExternalLink></li>
+                <li><ExternalLink href="/ti3v12/docs/clase08.pdf">clase08.pdf</ExternalLink></li>
             </ul>
         
             <h2 style={{marginTop:'2em',marginBottom:'1em'}}>Resumen</h2>
             <ul style={{listStyle:'none'}}>
-                <li><Link href="ti3v12/guia" className={styles.link}>guia.pdf</Link></li>
+                <li><ExternalLink href="ti3v12/guia">guia.pdf</ExternalLink></li>
             </ul>
 
 

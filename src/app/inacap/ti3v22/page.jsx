@@ -7,7 +7,7 @@ import EvaluationCard from '@/components/EvaluationCard';
 import ProfessorCard from '@/components/ProfessorCard';
 import UnitCard from '@/components/UnitCard';
 import styles from'@/styles/Asignature.module.css';
-import Link from 'next/link';
+import CustomLink from '@/components/CustomLink';
 
 export default function Ti3v22() {
     // Estado para controlar la vista responsiva

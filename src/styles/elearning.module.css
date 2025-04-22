@@ -1,22 +1,26 @@
 /* Base styles */
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    padding: 2rem 1rem;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: var(--background, white);
+  color: var(--foreground, #1f2937);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
   
   /* Main title */
   .title {
     font-size: 2rem;
     font-weight: 700;
-    color: #1f2937;
+    color: var(--foreground, #1f2937);
     margin-bottom: 2rem;
     text-align: center;
+    transition: color 0.3s ease;
   }
   
   /* Platforms list */
@@ -45,53 +49,109 @@
     padding: 0.5rem;
     background-color: #e5e7eb;
     border-radius: 6px 6px 0 0;
+    transition: color 0.3s ease, background-color 0.3s ease;
   }
-  
+
+  :global(html.dark-mode) .platformTitle,
+  :global(html.dark-mode-override) .platformTitle {
+    color: #e5e7eb;
+    background-color: #374151;
+}
+
   /* Table styles */
   .table {
     width: 100%;
     border-collapse: collapse;
     background-color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 0 0 8px 8px;
+    border-radius: 8px;
     border: 1px solid #d1d5db;
-    overflow: hidden;
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
   }
   
-  .table th, 
-  .table td {
+  /* Tabla en modo oscuro */
+  :global(html.dark-mode) .table,
+  :global(html.dark-mode-override) .table {
+    background-color: #1e1e1e;
+    border: 1px solid #4b5563;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
+  }
+
+  .table th, .table td {
     padding: 0.75rem;
     text-align: left;
     border: 1px solid #d1d5db;
+    transition: border-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Celdas de tabla en modo oscuro */
+  :global(html.dark-mode) .table th, 
+  :global(html.dark-mode) .table td,
+  :global(html.dark-mode-override) .table th, 
+  :global(html.dark-mode-override) .table td {
+    border: 1px solid #4b5563;
+    color: #e5e7eb;
   }
   
   .table th {
     background-color: #1f2937;
     color: white;
-    font-weight: 500;
   }
   
+  /* Encabezados de tabla en modo oscuro */
+  :global(html.dark-mode) .table th,
+  :global(html.dark-mode-override) .table th {
+    background-color: #111827;
+    color: #f9fafb;
+  }
+
   .table tr:hover {
     background-color: #edf2f7;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  /* Hover de filas en modo oscuro */
+  :global(html.dark-mode) .table tr:hover,
+  :global(html.dark-mode-override) .table tr:hover {
+    background-color: #2d3748;
   }
   
   /* Course code */
   .code {
     font-family: monospace;
     color: #4b5563;
+    transition: color 0.3s ease;
   }
   
-  /* Certificate link */
+  /* Código en modo oscuro */
+  :global(html.dark-mode) .code,
+  :global(html.dark-mode-override) .code {
+    color: #9ca3af;
+  }
+  
   .link {
     color: #2563eb;
     text-decoration: none;
+    transition: color 0.2s ease;
   }
   
+  /* Enlaces en modo oscuro */
+  :global(html.dark-mode) .link,
+  :global(html.dark-mode-override) .link {
+    color: #60a5fa;
+  }
+
   .link:hover {
     text-decoration: underline;
   }
   
+  /* Hover de enlaces en modo oscuro */
+  :global(html.dark-mode) .link:hover,
+  :global(html.dark-mode-override) .link:hover {
+    color: #93c5fd;
+  }
+
   /* Empty certificate placeholder */
   .noCertificate {
     color: #9ca3af;

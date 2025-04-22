@@ -1,8 +1,8 @@
 import React from "react";
-import Link from "next/link";
 import styles from '@/styles/Inacap.module.css'
 import Calendar from '@/components/Calendar'
 import EventsData from '@/../public/data/calendar25.json'
+import CustomLink from "@/components/CustomLink";
 
 const Inacap = () => {
   
@@ -25,20 +25,20 @@ const Inacap = () => {
               <tr className={styles.tableRow}>
                 <td className={styles.code}>TI3V11</td>
                 <td>
-                  <Link href="/inacap/ti3v11" className={styles.link}>Introducción a la Programación Segura</Link>
+                  <CustomLink href="/inacap/ti3v11">Introducción a la Programación Segura</CustomLink>
                 </td>
 
               </tr>
               <tr>
                 <td className={styles.code}>TI3V12</td>
                 <td>
-                  <Link href="/inacap/ti3v12" className={styles.link}>Fundamentos de Base de Datos</Link>
+                  <CustomLink href="/inacap/ti3v12">Fundamentos de Base de Datos</CustomLink>
                 </td>
               </tr>
               <tr>
                 <td className={styles.code}>TI3V13</td>
                 <td>
-                  <Link href="/inacap/ti3v13" className={styles.link}>Fundamentos de Hardware y Software</Link>
+                  <CustomLink href="/inacap/ti3v13">Fundamentos de Hardware y Software</CustomLink>
                 </td>
               </tr>
               <tr>
@@ -67,13 +67,13 @@ const Inacap = () => {
               <tr>
                 <td className={styles.code}>TI3V21</td>
                 <td>
-                  <Link href="/inacap/ti3v21" className={styles.link}>Programación Orientada a Objeto Seguro</Link>
+                  <CustomLink href="/inacap/ti3v21">Programación Orientada a Objeto Seguro</CustomLink>
                 </td>
               </tr>
               <tr>
                 <td className={styles.code}>TI3V22</td>
                 <td>
-                <Link href="/inacap/ti3v22" className={styles.link}>Bases de Datos Estructuradas</Link>
+                <CustomLink href="/inacap/ti3v22">Bases de Datos Estructuradas</CustomLink>
                   </td>
               </tr>
               <tr>
@@ -114,17 +114,13 @@ const Inacap = () => {
               <tr>
                 <td className={styles.code}>TI3V32</td>
                 <td>
-                  <Link href="/inacap/ti3v32" className={styles.link}>
-                    Bases de Datos No Estructuradas
-                  </Link>
+                  <CustomLink href="/inacap/ti3v32">Bases de Datos No Estructuradas</CustomLink>
                 </td>
               </tr>
               <tr>
                 <td className={styles.code}>TI3V34</td>
                 <td>
-                  <Link href='/inacap/ti3v34' className={styles.link}>
-                  Fundamentos de Seguridad de la Información
-                  </Link>
+                  <CustomLink href='/inacap/ti3v34'>Fundamentos de Seguridad de la Información</CustomLink>
                 </td>
               </tr>
               <tr>
@@ -138,9 +134,7 @@ const Inacap = () => {
               <tr>
                 <td className={styles.code}>TILV21</td>
                 <td>
-                  <Link href='/inacap/tilv21' className={styles.link}>
-                    (Electivo I) Plan de Pruebas de Software
-                  </Link>
+                  <CustomLink href='/inacap/tilv21'>(Electivo I) Plan de Pruebas de Software</CustomLink>
                 </td>
               </tr>
             </tbody>

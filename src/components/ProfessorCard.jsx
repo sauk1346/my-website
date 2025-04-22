@@ -1,10 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
-import styles from '../styles/ProfessorCard.module.css'
+import styles from '@/styles/CardSystem.module.css'
 const ProfessorCard = ({ professorData }) => {
   return (
-    <div className={styles.professorCard}>
-      <h2 className={styles.title}>Profesor</h2>
+    <div className={`${styles.card} ${styles.mediumSmallWidth} ${styles.extraPadding} ${styles.centered}`}>
+      <h2 className={`${styles.title} ${styles.largeTitle} ${styles.boldTitle} ${styles.centeredTitle}`}>
+        Profesor
+      </h2>
       <div className={styles.info}>
         <div className={styles.infoItem}>
           <p className={styles.label}>Nombre:</p>

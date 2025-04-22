@@ -1,39 +1,149 @@
 /* components/Navbar.module.css */
 .navbar {
-    background-color: #2563eb;
-    padding: 1rem;
+  background-color: #2563eb;
+  padding: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+/* Navbar en modo oscuro */
+:global(html.dark-mode) .navbar,
+:global(html.dark-mode-override) .navbar {
+  background-color: #1e293b;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.link:hover {
+  color: #bfdbfe;
+}
+
+/* Link hover en modo oscuro */
+:global(html.dark-mode) .link:hover,
+:global(html.dark-mode-override) .link:hover {
+  color: #93c5fd;
+}
+
+.logo {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Estilos del toggle theme */
+.themeToggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease;
+  color: white;
+}
+
+.themeToggle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Clases para los iconos activos e inactivos */
+.iconActive {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.3s ease, transform 0.2s ease;
+}
+
+.iconInactive {
+  opacity: 0.5;
+  transform: scale(0.9);
+  transition: opacity 0.3s ease, transform 0.2s ease;
+}
+
+/* Color de los iconos */
+.themeToggle svg:first-child {
+  color: #fbbf24; /* Color sol */
+}
+
+.themeToggle svg:last-child {
+  color: #60a5fa; /* Color luna */
+}
+
+/* Ocultar input nativo */
+.toggleInput {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+/* Estilo para el slider del toggle */
+.toggleSlider {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Estilo para el "círculo" del slider */
+.toggleSlider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 1px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+/* Cuando el checkbox está marcado, mueve el círculo a la derecha */
+.toggleInput:checked + .toggleSlider:before {
+  transform: translateX(20px);
+}
+
+/* Cuando el checkbox está marcado, cambia el color del slider */
+.toggleInput:checked + .toggleSlider {
+  background-color: rgba(100, 116, 139, 0.6);
+}
+
+/* Interacción al pasar el mouse */
+.themeToggle:hover .toggleSlider:before {
+  box-shadow: 0 0 2px 1px rgba(255, 255, 255, 0.5);
+}
+
+/* Soporte para preferencias de reducción de movimiento */
+@media (prefers-reduced-motion: no-preference) {
+  .iconActive, .iconInactive {
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.3s ease;
   }
   
-  .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
+  .toggleSlider:before {
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
   }
-  
-  .menu {
-    display: flex;
-    list-style: none;
-    gap: 1.5rem;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .link {
-    color: white;
-    text-decoration: none;
-    transition: color 0.2s ease-in-out;
-  }
-  
-  .link:hover {
-    color: #bfdbfe;
-  }
-  
-  .logo {
-    color: white;
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-decoration: none;
-  }
-  
+}

@@ -1,9 +1,9 @@
 import React from 'react';
-import styles from '../styles/ClassCard.module.css'
+import styles from '@/styles/CardSystem.module.css'
 
 const ClassCard = ({ classData }) => {
   return (
-    <div className={styles.classCard}>
+    <div className={`${styles.card} ${styles}`}>
       <h3 className={styles.title}>Clases</h3>
       <table className={styles.table}>
         <thead>

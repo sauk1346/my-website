@@ -1,156 +1,207 @@
 /* Estilos principales */
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-    max-width: 1400px;
-    margin: 0 auto;
-  }
-  
-  .title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    text-align: center;
-  }
-  
-  .subheading {
-    font-size: 1.25rem;
-    color: #4a4a4a;
-    margin-bottom: 1rem;
-    text-align: center;
-  }
-  
-  .description {
-    margin-bottom: 1.5rem;
-    font-size: 1.125rem;
-    color: #4a4a4a;
-    font-style: italic;
-    background-color: #f1f5f9;
-    padding: 1rem;
-    border-left: 4px solid #3b82f6;
-    width: 100%;
-    box-sizing: border-box;
-  }
-  
-  .cardContainer {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+/* Título en modo oscuro */
+:global(html.dark-mode) .title,
+:global(html.dark-mode-override) .title {
+  color: #f3f4f6;
+}
+
+.subheading {
+  font-size: 1.25rem;
+  color: #4a4a4a;
+  margin-bottom: 1rem;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+/* Subtítulo en modo oscuro */
+:global(html.dark-mode) .subheading,
+:global(html.dark-mode-override) .subheading {
+  color: #d1d5db;
+}
+
+.description {
+  margin-bottom: 1.5rem;
+  font-size: 1.125rem;
+  color: #4a4a4a;
+  font-style: italic;
+  background-color: #f1f5f9;
+  padding: 1rem;
+  border-left: 4px solid #3b82f6;
+  width: 100%;
+  box-sizing: border-box;
+  transition: color 0.3s ease, background-color 0.3s ease, border-left-color 0.3s ease;
+}
+
+/* Descripción en modo oscuro */
+:global(html.dark-mode) .description,
+:global(html.dark-mode-override) .description {
+  color: #d1d5db;
+  background-color: #1e293b;
+  border-left-color: #60a5fa;
+}
+
+.cardContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.cardGroup {
+  display: flex;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1200px;
+  justify-content: space-between;
+}
+
+.card {
+  flex: 1;
+  min-width: 0; /* Permite que las tarjetas puedan encogerse si es necesario */
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.3s ease;
+}
+
+/* Tarjeta en modo oscuro */
+:global(html.dark-mode) .card,
+:global(html.dark-mode-override) .card {
+  background-color: #1e1e1e;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.18);
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Hover de tarjeta en modo oscuro */
+:global(html.dark-mode) .card:hover,
+:global(html.dark-mode-override) .card:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.18);
+}
+
+.link {
+  color: #2563eb;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Enlaces en modo oscuro */
+:global(html.dark-mode) .link,
+:global(html.dark-mode-override) .link {
+  color: #60a5fa;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* Estilos para tablas dentro de las tarjetas */
+.card table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.card th,
+.card td {
+  padding: 0.625rem;
+  border-bottom: 1px solid #e2e8f0;
+  transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+/* Celdas de tabla en modo oscuro */
+:global(html.dark-mode) .card th,
+:global(html.dark-mode) .card td,
+:global(html.dark-mode-override) .card th,
+:global(html.dark-mode-override) .card td {
+  border-bottom: 1px solid #374151;
+  color: #e5e7eb;
+}
+
+.card th {
+  font-weight: bold;
+  text-align: left;
+  background-color: #1f2937;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+/* Encabezados de tabla en modo oscuro */
+:global(html.dark-mode) .card th,
+:global(html.dark-mode-override) .card th {
+  background-color: #111827;
+  color: #f9fafb;
+}
+
+/* Estilos responsivos */
+@media (max-width: 1024px) {
   .cardGroup {
-    display: flex;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+  .description {
+    font-size: 1rem;
+  }
+  .cardGroup {
+    flex-direction: column;
     gap: 1.5rem;
-    width: 100%;
-    max-width: 1200px;
-    justify-content: space-between;
   }
-  
   .card {
-    flex: 1;
-    min-width: 0; /* Permite que las tarjetas puedan encogerse si es necesario */
-  }
-  
-  .link {
-    color: #2563eb;
-    text-decoration: none;
-  }
-  
-  .link:hover {
-    text-decoration: underline;
-  }
-  
-  /* Estilos responsivos */
-  @media (max-width: 1024px) {
-    .cardGroup {
-      gap: 1rem;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .title {
-      font-size: 2rem;
-    }
-    
-    .description {
-      font-size: 1rem;
-    }
-    
-    .cardGroup {
-      flex-direction: column;
-      gap: 1.5rem;
-    }
-    
-    .card {
-      max-width: 100%;
-      width: 100%;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .title {
-      font-size: 1.75rem;
-    }
-    
-    .subheading {
-      font-size: 1.1rem;
-    }
-    
-    .description {
-      padding: 0.75rem;
-      font-size: 0.95rem;
-    }
-    
-    .container {
-      padding: 0.75rem;
-    }
-  }
-  
-  /* Estilos para tablas dentro de las tarjetas */
-  .card table {
+    max-width: 100%;
     width: 100%;
-    border-collapse: collapse;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.75rem;
+  }
+  .subheading {
+    font-size: 1.1rem;
+  }
+  .description {
+    padding: 0.75rem;
     font-size: 0.95rem;
   }
-  
-  .card th, 
+  .container {
+    padding: 0.75rem;
+  }
+}
+
+/* Asegurar que las tablas sean responsivas */
+@media (max-width: 600px) {
+  .card table {
+    font-size: 0.85rem;
+  }
+  .card th,
   .card td {
-    padding: 0.625rem;
-    border-bottom: 1px solid #e2e8f0;
+    padding: 0.5rem;
   }
-  
-  .card th {
-    font-weight: bold;
-    text-align: left;
-    background-color: #1f2937;
-  }
-  
-  /* Asegurar que las tablas sean responsivas */
-  @media (max-width: 600px) {
-    .card table {
-      font-size: 0.85rem;
-    }
-    
-    .card th, 
-    .card td {
-      padding: 0.5rem;
-    }
-  }
-  
-  /* Estilos para las tarjetas individuales */
-  .card {
-    background-color: white;
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    overflow: hidden;
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
-  
-  .card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  }
+}

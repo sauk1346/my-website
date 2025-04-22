@@ -1,9 +1,12 @@
+'use client';
+
 import { Geist, Geist_Mono } from "next/font/google";
+import { useEffect } from "react";
 import "./globals.css";
-import Navbar from '../components/Navbar'
-import Breadcrumb from '../components/Breadcrumb'
+import Navbar from '../components/Navbar';
+import Breadcrumb from '../components/Breadcrumb';
 import "../styles/override.css";
-import Footer from '../components/Footer'
+import Footer from '../components/Footer';
 import 'katex/dist/katex.min.css';
 
 const geistSans = Geist({
@@ -16,12 +19,35 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata = {
-  title: "SaukCode",
-  description: "Code & Notes",
-};
-
 export default function RootLayout({ children }) {
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    
+    // Limpiar todas las clases de tema existentes
+    document.documentElement.classList.remove('dark-mode');
+    document.documentElement.classList.remove('dark-mode-override');
+    document.documentElement.classList.remove('light-mode-override');
+    
+    // Verificar si hay una preferencia guardada
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    console.log('Inicializando tema desde layout:', {
+      savedTheme,
+      prefersDark
+    });
+    
+    // Aplicar el tema según las preferencias
+    if (savedTheme === 'dark') {
+      document.documentElement.classList.add('dark-mode-override');
+    } else if (savedTheme === 'light') {
+      document.documentElement.classList.add('light-mode-override');
+    } else if (prefersDark) {
+      document.documentElement.classList.add('dark-mode');
+    }
+    // Si no hay preferencia y el sistema está en modo claro, no necesitamos clase
+  }, []);
+
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>

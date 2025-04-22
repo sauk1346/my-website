@@ -1,9 +1,9 @@
 import React from 'react';
-import styles from '../styles/EvaluationCard.module.css'
+import styles from '@/styles/CardSystem.module.css'
 
 const EvaluationCard = ({ evaluationsData }) => {
   return (
-    <div className={styles.evaluationCard}>
+    <div className={`${styles.card} ${styles.mediumWidth}`}>
       <h3 className={styles.title}>Evaluaciones</h3>
       <table className={styles.table}>
         <thead>

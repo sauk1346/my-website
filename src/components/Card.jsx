@@ -1,16 +1,15 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import styles from '../styles/Card.module.css';
+import styles from '@/styles/CardSystem.module.css';
 
 export function Card({ title, description, image, link }) {
   return (
     <Link href={link}>
-      <div className={styles.card}>
+      <div className={styles.basicCard}>  {/* Mantiene todas las proporciones originales */}
         <div className={styles.cardContent}>
           <div className={styles.cardImage}>
             <Image
-              className={styles.cardImageImg}
               src={image}
               alt={title}
               width={200}

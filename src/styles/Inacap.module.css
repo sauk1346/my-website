@@ -1,80 +1,147 @@
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    padding: 1rem;
-  }
-  
-  .title {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #1f2937;
-    margin-bottom: 1.5rem;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+/* Título en modo oscuro */
+:global(html.dark-mode) .title,
+:global(html.dark-mode-override) .title {
+  color: #e5e7eb;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  width: 100%;
+  max-width: 64rem;
+}
+
+.semesterTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1rem;
+  text-align: center;
+  padding: 0.5rem;
+  background-color: #e5e7eb;
+  border-radius: 6px 6px 0 0;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Título de semestre en modo oscuro */
+:global(html.dark-mode) .semesterTitle,
+:global(html.dark-mode-override) .semesterTitle {
+  color: #e5e7eb;
+  background-color: #374151;
+}
+
+.code {
+  font-family: monospace;
+  color: #4b5563;
+  transition: color 0.3s ease;
+}
+
+/* Código en modo oscuro */
+:global(html.dark-mode) .code,
+:global(html.dark-mode-override) .code {
+  color: #9ca3af;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Tabla en modo oscuro */
+:global(html.dark-mode) .table,
+:global(html.dark-mode-override) .table {
+  background-color: #1e1e1e;
+  border: 1px solid #4b5563;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
+}
+
+.table th, .table td {
+  padding: 0.75rem;
+  text-align: left;
+  border: 1px solid #d1d5db;
+  transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+/* Celdas de tabla en modo oscuro */
+:global(html.dark-mode) .table th, 
+:global(html.dark-mode) .table td,
+:global(html.dark-mode-override) .table th, 
+:global(html.dark-mode-override) .table td {
+  border: 1px solid #4b5563;
+  color: #e5e7eb;
+}
+
+.table th {
+  background-color: #1f2937;
+  color: white;
+}
+
+/* Encabezados de tabla en modo oscuro */
+:global(html.dark-mode) .table th,
+:global(html.dark-mode-override) .table th {
+  background-color: #111827;
+  color: #f9fafb;
+}
+
+.table tr:hover {
+  background-color: #edf2f7;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover de filas en modo oscuro */
+:global(html.dark-mode) .table tr:hover,
+:global(html.dark-mode-override) .table tr:hover {
+  background-color: #2d3748;
+}
+
+.link {
+  color: #2563eb;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+/* Enlaces en modo oscuro */
+:global(html.dark-mode) .link,
+:global(html.dark-mode-override) .link {
+  color: #60a5fa;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* Hover de enlaces en modo oscuro */
+:global(html.dark-mode) .link:hover,
+:global(html.dark-mode-override) .link:hover {
+  color: #93c5fd;
+}
+
+@media (max-width: 768px) {
   .grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    width: 100%;
-    max-width: 64rem;
+    grid-template-columns: 1fr;
   }
-  
-  .semesterTitle {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: #1f2937;
-    margin-bottom: 1rem;
-    text-align: center;
-    padding: 0.5rem;
-    background-color: #e5e7eb;
-    border-radius: 6px 6px 0 0;
-  }
-  
-  .code {
-    font-family: monospace;
-    color: #4b5563;
-  }
-
-  .table {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    border: 1px solid #d1d5db;
-  }
-  
-  .table th, .table td {
-    padding: 0.75rem;
-    text-align: left;
-    border: 1px solid #d1d5db;
-  }
-  
-  .table th {
-    background-color: #1f2937;
-    color: white;
-  }
-  
-  .table tr:hover {
-    background-color: #edf2f7;
-    cursor: pointer;
-  }
-
-  .link {
-    color: #2563eb;
-    text-decoration: none;
-  }
-  
-  .link:hover {
-    text-decoration: underline;
-  }
-  
-  @media (max-width: 768px) {
-    .grid {
-      grid-template-columns: 1fr;
-    }
-  }
-  
+}

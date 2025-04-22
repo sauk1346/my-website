@@ -1,9 +1,9 @@
 import React from 'react';
-import styles from '../styles/LectureCard.module.css'; // Asegúrate de crear el archivo CSS
+import styles from '@/styles/CardSystem.module.css'
 
 const LectureCard = ({ lectureData }) => {
   return (
-    <div className={styles.lectureCard}>
+    <div className={`${styles.card} ${styles.mediumWidth}`}>
       <h3 className={styles.title}>Lecturas</h3>
       <table className={styles.table}>
         <thead>

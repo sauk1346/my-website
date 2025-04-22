@@ -1,14 +1,88 @@
 :root {
+  /* Colores principales - Modo claro por defecto */
   --background: #ffffff;
-  --foreground: #000000;
+  --foreground: #111111;
+  
+  /* Colores secundarios */
+  --primary: #3b82f6;
+  --primary-hover: #2563eb;
+  --secondary: #6b7280;
+  --accent: #8b5cf6;
+  
+  /* Colores de interfaz */
+  --card-bg: #f9fafb;
+  --input-bg: #ffffff;
+  --input-border: #d1d5db;
+  --border-color: #e5e7eb;
+  --divider: #e5e7eb;
+  
+  /* Colores de estado */
+  --success: #10b981;
+  --error: #ef4444;
+  --warning: #f59e0b;
+  --info: #3b82f6;
+  
+  /* Sombras */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  
+  /* Tipografía */
+  --font-sans: Arial, Helvetica, sans-serif;
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-md: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  
+  /* Espaciado */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  
+  /* Radios de borde */
+  --radius-sm: 0.125rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-full: 9999px;
 }
+
+/* Modo oscuro - preferencia del sistema */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #ffffff;
-    --foreground: #000000;
+    /* Colores principales */
+    --background: #121212;
+    --foreground: #f3f4f6;
+    
+    /* Colores secundarios */
+    --primary: #60a5fa;
+    --primary-hover: #3b82f6;
+    --secondary: #9ca3af;
+    --accent: #a78bfa;
+    
+    /* Colores de interfaz */
+    --card-bg: #1e1e1e;
+    --input-bg: #2d2d2d;
+    --input-border: #4b5563;
+    --border-color: #374151;
+    --divider: #374151;
+    
+    /* Colores de estado */
+    --success: #34d399;
+    --error: #f87171;
+    --warning: #fbbf24;
+    --info: #60a5fa;
+    
+    /* Sombras */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.18);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.18);
   }
 }
 
+/* Estilos base */
 html,
 body {
   max-width: 100vw;
@@ -18,9 +92,11 @@ body {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 * {
@@ -30,12 +106,161 @@ body {
 }
 
 a {
-  color: inherit;
+  color: var(--primary);
   text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--primary-hover);
+}
+
+/* Utilidades para transiciones */
+.transition-colors {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* Clases de componentes comunes */
+.card {
+  background-color: var(--card-bg);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  padding: var(--spacing-md);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+}
+
+.input {
+  background-color: var(--input-bg);
+  border: 1px solid var(--input-border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-sm);
+  color: var(--foreground);
+  transition: border-color 0.2s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+}
+
+/* Invertir imágenes en modo oscuro (preferencia del sistema) */
+.invert-in-dark {
+  filter: none;
 }
 
 @media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+  .invert-in-dark {
+    filter: invert(1);
   }
+}
+
+/* ===== OVERRIDE PARA CAMBIO MANUAL DE TEMA ===== */
+
+/* Sobrescribir preferencia del sistema - Modo claro forzado */
+html.light-mode-override {
+  color-scheme: light !important;
+  
+  /* Colores principales */
+  --background: #ffffff !important;
+  --foreground: #111111 !important;
+  
+  /* Colores secundarios */
+  --primary: #3b82f6 !important;
+  --primary-hover: #2563eb !important;
+  --secondary: #6b7280 !important;
+  --accent: #8b5cf6 !important;
+  
+  /* Colores de interfaz */
+  --card-bg: #f9fafb !important;
+  --input-bg: #ffffff !important;
+  --input-border: #d1d5db !important;
+  --border-color: #e5e7eb !important;
+  --divider: #e5e7eb !important;
+  
+  /* Colores de estado */
+  --success: #10b981 !important;
+  --error: #ef4444 !important;
+  --warning: #f59e0b !important;
+  --info: #3b82f6 !important;
+  
+  /* Sombras */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05) !important;
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Sobrescribir preferencia del sistema - Modo oscuro forzado */
+html.dark-mode-override {
+  color-scheme: dark !important;
+  
+  /* Colores principales */
+  --background: #121212 !important;
+  --foreground: #f3f4f6 !important;
+  
+  /* Colores secundarios */
+  --primary: #60a5fa !important;
+  --primary-hover: #3b82f6 !important;
+  --secondary: #9ca3af !important;
+  --accent: #a78bfa !important;
+  
+  /* Colores de interfaz */
+  --card-bg: #1e1e1e !important;
+  --input-bg: #2d2d2d !important;
+  --input-border: #4b5563 !important;
+  --border-color: #374151 !important;
+  --divider: #374151 !important;
+  
+  /* Colores de estado */
+  --success: #34d399 !important;
+  --error: #f87171 !important;
+  --warning: #fbbf24 !important;
+  --info: #60a5fa !important;
+  
+  /* Sombras */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3) !important;
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.18) !important;
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.18) !important;
+}
+
+/* Invertir imágenes en modo claro forzado */
+html.light-mode-override .invert-in-dark {
+  filter: none !important;
+}
+
+/* Invertir imágenes en modo oscuro forzado */
+html.dark-mode-override .invert-in-dark {
+  filter: invert(1) !important;
+}
+
+/* Estilos forzados para elementos específicos */
+html.light-mode-override body {
+  background-color: #ffffff !important;
+  color: #111111 !important;
+}
+
+html.dark-mode-override body {
+  background-color: #121212 !important;
+  color: #f3f4f6 !important;
 }

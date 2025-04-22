@@ -1,85 +1,134 @@
 .footer {
-    width: 100%;
-    padding: 2rem 0;
-    background-color: #f7f7f7;
-    border-top: 1px solid #eaeaea;
-    margin-top: 2rem;
-  }
-  
+  width: 100%;
+  padding: 2rem 0;
+  background-color: #f7f7f7;
+  border-top: 1px solid #eaeaea;
+  margin-top: 2rem;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Footer en modo oscuro */
+:global(html.dark-mode) .footer,
+:global(html.dark-mode-override) .footer {
+  background-color: #1a1a1a;
+  border-top: 1px solid #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.section {
+  width: 30%;
+  min-width: 250px;
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+/* Título en modo oscuro */
+:global(html.dark-mode) .title,
+:global(html.dark-mode-override) .title {
+  color: #e5e7eb;
+}
+
+.description {
+  color: #666;
+  line-height: 1.6;
+  transition: color 0.3s ease;
+}
+
+/* Descripción en modo oscuro */
+:global(html.dark-mode) .description,
+:global(html.dark-mode-override) .description {
+  color: #9ca3af;
+}
+
+.linkList, .contactList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.linkList li, .contactList li {
+  margin-bottom: 0.75rem;
+}
+
+.link {
+  color: #0070f3;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+/* Enlaces en modo oscuro */
+:global(html.dark-mode) .link,
+:global(html.dark-mode-override) .link {
+  color: #60a5fa;
+}
+
+.link:hover {
+  color: #0051bb;
+  text-decoration: underline;
+}
+
+/* Hover de enlaces en modo oscuro */
+:global(html.dark-mode) .link:hover,
+:global(html.dark-mode-override) .link:hover {
+  color: #93c5fd;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  color: #666;
+  transition: color 0.3s ease;
+}
+
+/* Contacto en modo oscuro */
+:global(html.dark-mode) .contactItem,
+:global(html.dark-mode-override) .contactItem {
+  color: #9ca3af;
+}
+
+.icon {
+  margin-right: 0.5rem;
+}
+
+.copyright {
+  width: 100%;
+  text-align: center;
+  padding-top: 1.5rem;
+  margin-top: 1.5rem;
+  border-top: 1px solid #eaeaea;
+  color: #777;
+  font-size: 0.875rem;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Copyright en modo oscuro */
+:global(html.dark-mode) .copyright,
+:global(html.dark-mode-override) .copyright {
+  border-top: 1px solid #333;
+  color: #9ca3af;
+}
+
+@media (max-width: 768px) {
   .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: column;
   }
-  
   .section {
-    width: 30%;
-    min-width: 250px;
-    margin-bottom: 1.5rem;
-  }
-  
-  .title {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    color: #333;
-  }
-  
-  .description {
-    color: #666;
-    line-height: 1.6;
-  }
-  
-  .linkList, .contactList {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .linkList li, .contactList li {
-    margin-bottom: 0.75rem;
-  }
-  
-  .link {
-    color: #0070f3;
-    text-decoration: none;
-    transition: color 0.2s ease;
-  }
-  
-  .link:hover {
-    color: #0051bb;
-    text-decoration: underline;
-  }
-  
-  .contactItem {
-    display: flex;
-    align-items: center;
-  }
-  
-  .icon {
-    margin-right: 0.5rem;
-  }
-  
-  .copyright {
     width: 100%;
-    text-align: center;
-    padding-top: 1.5rem;
-    margin-top: 1.5rem;
-    border-top: 1px solid #eaeaea;
-    color: #777;
-    font-size: 0.875rem;
+    margin-bottom: 2rem;
   }
-  
-  @media (max-width: 768px) {
-    .container {
-      flex-direction: column;
-    }
-    
-    .section {
-      width: 100%;
-      margin-bottom: 2rem;
-    }
-  }
+}

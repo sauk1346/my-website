@@ -1,0 +1,119 @@
+/* TableCard.module.css - Sistema unificado para tarjetas con tablas */
+
+.tableCard {
+    background-color: var(--card-bg, white);
+    box-shadow: var(--shadow-md, 0 4px 6px rgba(0, 0, 0, 0.1));
+    border-radius: var(--radius-md, 8px);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Variantes de tamaño */
+  .autoWidth {
+    max-width: max-content;
+  }
+  
+  .mediumWidth {
+    max-width: 640px;
+  }
+  
+  .wideWidth {
+    max-width: 800px;
+  }
+  
+  .title {
+    font-size: var(--text-lg, 1.25rem);
+    font-weight: 600;
+    color: var(--foreground, #2d3748);
+    margin-bottom: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .boldTitle {
+    font-weight: bold;
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .tableHeader {
+    background-color: var(--primary, #2d3748);
+    color: white;
+    transition: background-color 0.3s ease;
+  }
+  
+  .tableCell, .headerCell, .cell {
+    padding: 0.75rem;
+    text-align: left;
+    transition: border-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .tableCell {
+    border: 1px solid var(--border-color, #e2e8f0);
+  }
+  
+  .tableRow {
+    transition: background-color 0.3s ease;
+  }
+  
+  .tableRow:hover {
+    background-color: var(--card-bg-hover, #edf2f7);
+    cursor: pointer;
+  }
+  
+  .withBorders .tableRow {
+    border-top: 1px solid var(--border-color, #e2e8f0);
+  }
+  
+  .noBorders .tableCell {
+    border: none;
+  }
+  
+  .suspended {
+    text-decoration: line-through;
+  }
+  
+  /* Soporte para modo oscuro */
+  :global(html.dark-mode) .tableCard,
+  :global(html.dark-mode-override) .tableCard {
+    background-color: var(--card-bg, #1e1e1e);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  }
+  
+  :global(html.dark-mode) .title,
+  :global(html.dark-mode-override) .title {
+    color: var(--foreground, #e5e7eb);
+  }
+  
+  :global(html.dark-mode) .tableHeader,
+  :global(html.dark-mode-override) .tableHeader {
+    background-color: var(--primary, #1a202c);
+  }
+  
+  :global(html.dark-mode) .tableCell,
+  :global(html.dark-mode-override) .tableCell,
+  :global(html.dark-mode) .withBorders .tableRow,
+  :global(html.dark-mode-override) .withBorders .tableRow {
+    border-color: var(--border-color, #4a5568);
+    color: var(--foreground, #e5e7eb);
+  }
+  
+  :global(html.dark-mode) .tableRow:hover,
+  :global(html.dark-mode-override) .tableRow:hover {
+    background-color: var(--card-bg-hover, #2d3748);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .tableCard {
+      padding: 0.75rem;
+    }
+    
+    .tableCell, .headerCell, .cell {
+      padding: 0.5rem;
+    }
+  }

@@ -1,10 +1,10 @@
 import React from 'react';
-import styles from '../styles/UnitCard.module.css'
+import styles from '@/styles/CardSystem.module.css'
 
 const UnitCard = ({ unitsData }) => {
   return (
-    <div className={styles.unitCard}>
-      <h3 className={styles.title}>Unidades</h3>
+    <div className={`${styles.card} ${styles.wideWidth}`}>
+      <h3 className={`${styles.title} ${styles.boldTitle}`}>Unidades</h3>
       <table className={styles.table}>
         <thead>
           <tr className={styles.tableHeader}>

@@ -11,37 +11,37 @@ export default function Idiomas() {
           title="Alemán"
           description="Apuntes"
           image="/logos/germany_flag.png"
-          link='/inacap'
+          link='idiomas/aleman'
         />
         <Card
           title="Coreano"
           description="Apuntes"
           image="/logos/korean_flag.png"
-          link='/elearning'
+          link='idiomas/coreano'
         />
         <Card
           title="Chino Mandarín"
           description="Apuntes"
           image="/logos/china_flag.png"
-          link='/bootcamps'
+          link='idiomas/chino'
         />
         <Card
           title="Inglés"
           description="Apuntes"
           image="/logos/english_flag.png"
-          link='/languages'
+          link='idiomas/ingles'
         />
         <Card
           title="Japonés"
           description="Apuntes"
           image="/logos/japan_flag.png"
-          link='/portfolio'
+          link='idiomas/japones'
         />
         <Card
           title="Ruso"
           description="Apuntes"
           image="/logos/russia_flag.png"
-          link='/portfolio'
+          link='idiomas/ruso'
         />
       </div>
     </div>

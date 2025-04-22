@@ -1,8 +1,16 @@
-/* components/Breadcrumb.css */
+/* components/Breadcrumb.module.css */
 .breadcrumb {
   padding: 10px;
   background-color: #ffffff;
   border-radius: 5px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Breadcrumb en modo oscuro */
+:global(html.dark-mode) .breadcrumb,
+:global(html.dark-mode-override) .breadcrumb {
+  background-color: #1e1e1e;
+  border-bottom: 1px solid #374151;
 }
 
 .breadcrumbList {
@@ -17,6 +25,13 @@
   color: #0070f3;
   text-decoration: none;
   font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+/* Enlaces en modo oscuro */
+:global(html.dark-mode) .breadcrumbItem,
+:global(html.dark-mode-override) .breadcrumbItem {
+  color: #60a5fa;
 }
 
 .breadcrumbItem:hover {
@@ -26,9 +41,23 @@
 .breadcrumbSeparator {
   margin: 0 8px;
   color: #888;
+  transition: color 0.3s ease;
+}
+
+/* Separador en modo oscuro */
+:global(html.dark-mode) .breadcrumbSeparator,
+:global(html.dark-mode-override) .breadcrumbSeparator {
+  color: #9ca3af;
 }
 
 .breadcrumbText {
   color: #555;
   font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+/* Texto en modo oscuro */
+:global(html.dark-mode) .breadcrumbText,
+:global(html.dark-mode-override) .breadcrumbText {
+  color: #d1d5db;
 }

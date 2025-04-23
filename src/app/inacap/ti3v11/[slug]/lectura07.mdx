@@ -1,31 +1,56 @@
+import { Quiz } from '@/components/QuizComponent';
+
 # Actividad de Práctica 07
 
-1. **¿Cúal de las siguientes estructuras de Python permite tomar desiciones basadas en condiciones?**
-    1. switch
-    2. <span style={{color:'red'}}>if</span>
-    3. while
-    4. for
-
-2. **¿Cuál es la función principal de un bucle `for` de Python?**
-    1. <span style={{color:'red'}}>Iterar sobre una secuencia de elementos.</span>
-    2. Realizar operaciones aritméticas.
-    3. Definir funciones personalizadas.
-    4. Tomar decisiones condicionales.
-
-3. **¿Qué palabra clave se utiliza en Python para indicar una acción alternativa en una estructura `if` y `else`?**
-    1. then
-    2. and
-    3. <span style={{color:'red'}}>elif</span>
-    4. or
-
-4. **¿Cuál de los siguientes bucles se ejecuta mientras una condición sea verdadera?**
-    1. repeat
-    2. do-while
-    3. <span style={{color:'red'}}>while</span>
-    4. for
-
-5. **¿Cuál es el propósito principal de la palabra clase `break` en un bucle de Python?**
-    1. Establecer una pausa temporal.
-    2. Reiniciar el bucle desde el principio.
-    3. Continuar con la siguiente iteración.
-    4. <span style={{color:'red'}}>Detener la ejecución del bucle.</span>
+<Quiz questions={[
+   {
+      question:"¿Cuál de las siguientes estructuras de Python permite tomar decisiones basadas en condiciones?",
+      options:[
+         "switch",
+         "if",
+         "while",
+         "for"
+      ],
+      correctIndex:1
+   },
+   {
+      question:"¿Cuál es la función principal de un bucle \"for\" de Python?",
+      options:[
+         "Iterar sobre una secuencia de elementos.",
+         "Realizar operaciones aritméticas.",
+         "Definir funciones personalizadas.",
+         "Tomar decisiones condicionales."
+      ],
+      correctIndex:0
+   },
+   {
+      question:"¿Qué palabra clave se utiliza en Python para indicar una acción alternativa en una estructura \"if\" y \"else\"?",
+      options:[
+         "then",
+         "and",
+         "elif",
+         "or"
+      ],
+      correctIndex:2
+   },
+   {
+      question:"¿Cuál de los siguientes bucles se ejecuta mientras una condición sea verdadera?",
+      options:[
+         "repeat",
+         "do-while",
+         "while",
+         "for"
+      ],
+      correctIndex:2
+   },
+   {
+      question:"¿Cuál es el propósito principal de la palabra clave \"break\" en un bucle de Python?",
+      options:[
+         "Establecer una pausa temporal.",
+         "Reiniciar el bucle desde el principio.",
+         "Continuar con la siguiente iteración.",
+         "Detener la ejecución del bucle."
+      ],
+      correctIndex:3
+   }
+]} />

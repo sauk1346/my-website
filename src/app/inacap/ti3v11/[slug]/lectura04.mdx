@@ -1,31 +1,56 @@
-# Actividad de Pŕactica 04
+import { Quiz } from '@/components/QuizComponent';
 
-1. **¿Cuál es uno de los objetivos principales de la validación de Diagramas de Flujo de Datos?**
-    1. <span style={{color:'red'}}>Optimización del Desarrollo del Sistema.</span>
-    2. Maximiar la Complejidad del Sistema.
-    3. Minimizar la Coherencia con Requisitos del Usuario.
-    4. Aprobar Stakeholders.
+# Actividad de Práctica 04
 
-2. **¿Por qué es importante la validación en el proceso de diseño de sistemas?**
-    1. Complica el diseño y hacerlo más desafiante.
-    2. <span style={{color:'red'}}>Reduce riesgos y evitar errores costosos en etapas posteriores.</span>
-    3. Aleja los requisitos del usuario.
-    4. Crea obstáculos en la comunicación entre equipos.
-
-3. **¿Cuál es una consideración importante al validar un Diagrama de Flujo de Datos?**
-    1. Ignorar las reglas de negocio para simplificar el diseño.
-    2. Liberarse por la eficiencia del diseño.
-    3. Validar sólo con desarrolladores, no con stakeholders.
-    4. <span style={{color:'red'}}>segurarse de que la solución sea tecnológicamente factible.</span>
-
-4. **¿Por qué es crucial obtener la aprobación de stakeholders durante la validación?**
-    1. Los stakeholders no aportan valor al proceso.
-    2. Complicar el proceso de diseño.
-    3. <span style={{color:'red'}}>Garantizar un diseño aceptado y respaldado por quienes se beneficiarán del sistema.</span>
-    4. La validación no requiere la aprobación de nadie.
-
-5. **¿Qué implica la rastreabilidad en la validación de un Diagrama de Flujo de Datos?**
-    1. No es necesario establecer conexiones con otros artefactos del sistema.
-    2. <span style={{color:'red'}}>Establecer una conexión clara entre el diagrama y modelos de base de datos.</span>
-    3. Ignorar cualquier relación con otros artefactos del sistema.
-    4. No se requiere seguir la trazabilidad en la validación.
+<Quiz questions={[
+   {
+      question:"¿Cuál es uno de los objetivos principales de la validación de Diagramas de Flujo de Datos?",
+      options:[
+         "Optimización del Desarrollo del Sistema.",
+         "Maximizar la Complejidad del Sistema.",
+         "Minimizar la Coherencia con Requisitos del Usuario.",
+         "Aprobar Stakeholders."
+      ],
+      correctIndex:0
+   },
+   {
+      question:"¿Por qué es importante la validación en el proceso de diseño de sistemas?",
+      options:[
+         "Complica el diseño y hacerlo más desafiante.",
+         "Reduce riesgos y evitar errores costosos en etapas posteriores.",
+         "Aleja los requisitos del usuario.",
+         "Crea obstáculos en la comunicación entre equipos."
+      ],
+      correctIndex:1
+   },
+   {
+      question:"¿Cuál es una consideración importante al validar un Diagrama de Flujo de Datos?",
+      options:[
+         "Ignorar las reglas de negocio para simplificar el diseño.",
+         "Liberarse por la eficiencia del diseño.",
+         "Validar sólo con desarrolladores, no con stakeholders.",
+         "Asegurarse de que la solución sea tecnológicamente factible."
+      ],
+      correctIndex:3
+   },
+   {
+      question:"¿Por qué es crucial obtener la aprobación de stakeholders durante la validación?",
+      options:[
+         "Los stakeholders no aportan valor al proceso.",
+         "Complicar el proceso de diseño.",
+         "Garantizar un diseño aceptado y respaldado por quienes se beneficiarán del sistema.",
+         "La validación no requiere la aprobación de nadie."
+      ],
+      correctIndex:2
+   },
+   {
+      question:"¿Qué implica la rastreabilidad en la validación de un Diagrama de Flujo de Datos?",
+      options:[
+         "No es necesario establecer conexiones con otros artefactos del sistema.",
+         "Establecer una conexión clara entre el diagrama y modelos de base de datos.",
+         "Ignorar cualquier relación con otros artefactos del sistema.",
+         "No se requiere seguir la trazabilidad en la validación."
+      ],
+      correctIndex:1
+   }
+]} />

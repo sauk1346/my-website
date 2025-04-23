@@ -1,31 +1,56 @@
+import { Quiz } from '@/components/QuizComponent';
+
 # Actividad de Práctica 10
 
-1. **¿Cuál de las siguientes opciones en Python se utiliza para agregar un elemento al final de una lista?**
-    1. insert()
-    2. <span style={{color:'red'}}>append()</span>
-    3. extend()
-    4. add()
-
-2. **¿Cuál de las siguientes opciones en Python se utiliza para eliminar un elemento de una lista por su valor?**
-    1. <span style={{color:'red'}}>remove()</span>
-    2. delete()
-    3. pop()
-    4. clear()
-
-3. **¿Cuál de las siguientes opciones en Python se utiliza para modificar un elemento en una tupla?**
-    1. update()
-    2. append()
-    3. <span style={{color:'red'}}>Las tuplas no pueden ser modificadas</span>
-    4. replace()
-
-4. **¿Cuál de las siguientes opciones en Python se utiliza para agregar un nuevo par clave-valor a un diccionario?**
-    1. <span style={{color:'red'}}>update()</span>
-    2. add()
-    3. merge()
-    4. insert()
-
-5. **¿Cuál de los siguientes métodos se utiliza en Python para obtener todos los valores de un diccionario?**
-    1. getvalues()
-    2. all_values()
-    3. <span style={{color:'red'}}>values()</span>
-    4. get_values()
+<Quiz questions={[
+  {
+    question:"¿Cuál de las siguientes opciones en Python se utiliza para agregar un elemento al final de una lista?",
+    options:[
+      "insert()",
+      "append()",
+      "extend()",
+      "add()"
+    ],
+    correctIndex:1
+  },
+  {
+    question:"¿Cuál de las siguientes opciones en Python se utiliza para eliminar un elemento de una lista por su valor?",
+    options:[
+      "remove()",
+      "delete()",
+      "pop()",
+      "clear()"
+    ],
+    correctIndex:0
+  },
+  {
+    question:"¿Cuál de las siguientes opciones en Python se utiliza para modificar un elemento en una tupla?",
+    options:[
+      "update()",
+      "append()",
+      "Las tuplas no pueden ser modificadas",
+      "replace()"
+    ],
+    correctIndex:2
+  },
+  {
+    question:"¿Cuál de las siguientes opciones en Python se utiliza para agregar un nuevo par clave-valor a un diccionario?",
+    options:[
+      "update()",
+      "add()",
+      "merge()",
+      "insert()"
+    ],
+    correctIndex:0
+  },
+  {
+    question:"¿Cuál de los siguientes métodos se utiliza en Python para obtener todos los valores de un diccionario?",
+    options:[
+      "getvalues()",
+      "all_values()",
+      "values()",
+      "get_values()"
+    ],
+    correctIndex:2
+  }
+]} />

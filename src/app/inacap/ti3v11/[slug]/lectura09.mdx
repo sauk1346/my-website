@@ -1,31 +1,56 @@
+import { Quiz } from '@/components/QuizComponent';
+
 # Actividad de Práctica 09
 
-1. **¿Cuál de las siguiente estructuras de datos en Python es mutable?**
-    1. Tupla
-    2. <span style={{color:'red'}}>Lista</span>
-    3. Listas y Tuplas
-    4. Ninguna
-
-2. **¿Cuál de las siguientes estructuras de datos en Python es inmutable?**
-    1. <span style={{color:'red'}}>Tupla</span>
-    2. Lista
-    3. Diccionario
-    4. Conjunto
-
-3. **¿Qué estructura de datos en Python utiliza pares de clave-valor para almacenar información?**
-    1. Tupla
-    2. Lista
-    3. <span style={{color:'red'}}>Diccionario</span>
-    4. Conjunto
-
-4. **¿Cuál de las siguientes estructuras de datos en Python utiliza paréntesis para su definición?**
-    1. <span style={{color:'red'}}>Tupla</span>
-    2. Lista
-    3. Diccionario
-    4. Conjunto
-
-5. **¿Cuál es la estructura de datos más eficiente para buscar y acceder a elementos mediantes una clave única?**
-    1. Tupla
-    2. Lista
-    3. <span style={{color:'red'}}>Diccionario</span>
-    4. Conjunto
+<Quiz questions={[
+   {
+      question:"¿Cuál de las siguientes estructuras de datos en Python es mutable?",
+      options:[
+         "Tupla",
+         "Lista",
+         "Listas y Tuplas",
+         "Ninguna"
+      ],
+      correctIndex:1
+   },
+   {
+      question:"¿Cuál de las siguientes estructuras de datos en Python es inmutable?",
+      options:[
+         "Tupla",
+         "Lista",
+         "Diccionario",
+         "Conjunto"
+      ],
+      correctIndex:0
+   },
+   {
+      question:"¿Qué estructura de datos en Python utiliza pares de clave-valor para almacenar información?",
+      options:[
+         "Tupla",
+         "Lista",
+         "Diccionario",
+         "Conjunto"
+      ],
+      correctIndex:2
+   },
+   {
+      question:"¿Cuál de las siguientes estructuras de datos en Python utiliza paréntesis para su definición?",
+      options:[
+         "Tupla",
+         "Lista",
+         "Diccionario",
+         "Conjunto"
+      ],
+      correctIndex:0
+   },
+   {
+      question:"¿Cuál es la estructura de datos más eficiente para buscar y acceder a elementos mediante una clave única?",
+      options:[
+         "Tupla",
+         "Lista",
+         "Diccionario",
+         "Conjunto"
+      ],
+      correctIndex:2
+   }
+]} />

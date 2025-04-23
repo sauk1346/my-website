@@ -1,31 +1,56 @@
-# Actividad de Pŕactica 02
+import { Quiz } from '@/components/QuizComponent';
 
-1. **¿Cuál es uno de los aspectos clave en el método de simulación?**
-    1. Dividir y vencer.
-    2. <span style={{color:'red'}}>Experimentación.</span>
-    3. Algoritmos.
-    4. Método heurístico.
+# Actividad de Práctica 02
 
-2. **¿Cuál es el enfoque que implica dividir un proble grande en subproblemas más pequeños y resolverlos de manera independiente?**
-    1. Algoritmos.
-    2. Heurísticas.
-    3. Simulación.
-    4. <span style={{color:'red'}}>Divide y Vencerás.</span>
-
-3. **¿Cuál es el papel fundamental de las variables en la resolución de problemas en informática?**
-    1. Limitar la eficiencia del algotirmo.
-    2. <span style={{color:'red'}}>Identificar y delimitar el problema.</span>
-    3. Aumentar la complejidad del model.
-    4. Garantizar recursos infinitos.
-
-4. **¿Qué método implica el uso de reglas generales o atajos mentales para resolver problemas de manera más rápida y eficiente?**
-    1. Algoritmos.
-    2. Divide y Vencerás.
-    3. <span style={{color:'red'}}>Método Heurístico.</span>
-    4. Simulación.
-
-5. **¿Cuál es un paso fundamental en el enfoque "Divide y Vencerás"?**
-    1. <span style={{color:'red'}}>Combinar.</span>
-    2. Identificar variables.
-    3. Experimentar.
-    4. Validar el modelo.
+<Quiz questions={[
+   {
+      question:"¿Cuál es uno de los aspectos clave en el método de simulación?",
+      options:[
+         "Dividir y vencer.",
+         "Experimentación.",
+         "Algoritmos.",
+         "Método heurístico."
+      ],
+      correctIndex:1
+   },
+   {
+      question:"¿Cuál es el enfoque que implica dividir un problema grande en subproblemas más pequeños y resolverlos de manera independiente?",
+      options:[
+         "Algoritmos.",
+         "Heurísticas.",
+         "Simulación.",
+         "Divide y Vencerás."
+      ],
+      correctIndex:3
+   },
+   {
+      question:"¿Cuál es el papel fundamental de las variables en la resolución de problemas en informática?",
+      options:[
+         "Limitar la eficiencia del algoritmo.",
+         "Identificar y delimitar el problema.",
+         "Aumentar la complejidad del modelo.",
+         "Garantizar recursos infinitos."
+      ],
+      correctIndex:1
+   },
+   {
+      question:"¿Qué método implica el uso de reglas generales o atajos mentales para resolver problemas de manera más rápida y eficiente?",
+      options:[
+         "Algoritmos.",
+         "Divide y Vencerás.",
+         "Método Heurístico.",
+         "Simulación."
+      ],
+      correctIndex:2
+   },
+   {
+      question:"¿Cuál es un paso fundamental en el enfoque \"Divide y Vencerás\"?",
+      options:[
+         "Combinar.",
+         "Identificar variables.",
+         "Experimentar.",
+         "Validar el modelo."
+      ],
+      correctIndex:0
+   }
+]} />

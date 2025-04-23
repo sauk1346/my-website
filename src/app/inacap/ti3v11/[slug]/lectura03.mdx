@@ -1,31 +1,56 @@
+import { Quiz } from '@/components/QuizComponent';
+
 # Actividad de Práctica 03
 
-1. **¿Cuál es la representación gráfica en un proceso en un Diagrama de Flujo de Datos?**
-    1. Cuadrado.
-    2. <span style={{color:'red'}}>Círculo u óvalo.</span>
-    3. Rectángulo.
-    4. Flecha.
-
-2. **¿Qué elemento en un Diagrama de Flujo de Datos denota una ubicación donde se almacenan datos?**
-    1. Círculo u óvalo.
-    2. <span style={{color:'red'}}>Rectángulo.</span>
-    3. Flecha.
-    4. Borde con rectángulo.
-
-3. **¿Cómo se representan las direcciones en que los datos se mueven entre procesos, almacenes de datos y entidades externas en un Diagrama de Flujo de Datos?**
-    1. Cuadrado.
-    2. Círculo u óvalo.
-    3. <span style={{color:'red'}}>Flechas.</span>
-    4. Rectángulo.
-
-4. **¿Qué componente en un Diagrama de Flujo de Datos representa fuentes o destinos de datos fuera del sistema que se está modelando?**
-    1. Cuadrado.
-    2. Círculo u óvalo.
-    3. <span style={{color:'red'}}>Rectángulo con bordes.</span>
-    4. Flecha.
-
-5. **¿Cuál es el nivel que ofrece una vista de alto nivel del sistema, mostrando las interacciones entre el sistema y sus entidades externas en un Diagrama de Flujo de Datos?**
-    1. Diagramas Detallados (Nivel de Descomposición).
-    2. <span style={{color:'red'}}>Diagrama de Contexto.</span>
-    3. Jerarquía.
-    4. Flujo de Datos.
+<Quiz questions={[
+   {
+      question:"¿Cuál es la representación gráfica en un proceso en un Diagrama de Flujo de Datos?",
+      options:[
+         "Cuadrado.",
+         "Círculo u óvalo.",
+         "Rectángulo.",
+         "Flecha."
+      ],
+      correctIndex:1
+   },
+   {
+      question:"¿Qué elemento en un Diagrama de Flujo de Datos denota una ubicación donde se almacenan datos?",
+      options:[
+         "Círculo u óvalo.",
+         "Rectángulo.",
+         "Flecha.",
+         "Borde con rectángulo."
+      ],
+      correctIndex:1
+   },
+   {
+      question:"¿Cómo se representan las direcciones en que los datos se mueven entre procesos, almacenes de datos y entidades externas en un Diagrama de Flujo de Datos?",
+      options:[
+         "Cuadrado.",
+         "Círculo u óvalo.",
+         "Flechas.",
+         "Rectángulo."
+      ],
+      correctIndex:2
+   },
+   {
+      question:"¿Qué componente en un Diagrama de Flujo de Datos representa fuentes o destinos de datos fuera del sistema que se está modelando?",
+      options:[
+         "Cuadrado.",
+         "Círculo u óvalo.",
+         "Rectángulo con bordes.",
+         "Flecha."
+      ],
+      correctIndex:2
+   },
+   {
+      question:"¿Cuál es el nivel que ofrece una vista de alto nivel del sistema, mostrando las interacciones entre el sistema y sus entidades externas en un Diagrama de Flujo de Datos?",
+      options:[
+         "Diagramas Detallados (Nivel de Descomposición).",
+         "Diagrama de Contexto.",
+         "Jerarquía.",
+         "Flujo de Datos."
+      ],
+      correctIndex:1
+   }
+]} />

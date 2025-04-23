@@ -1,31 +1,56 @@
+import { Quiz } from '@/components/QuizComponent';
+
 # Actividad de Práctica 05
 
-1. **¿Qué palabra clave se utiliza en una estructura de desición?**
-    1. switch
-    2. <span style={{color:'red'}}>if</span>
-    3. choose
-    4. decide
-
-2. **¿Cómo se realiza la asignación de un valor a una variable en Python?**
-    1. <span style={{color:'red'}}>=</span>
-    2. =>
-    3. :=
-    4. ==
-
-3. **¿Cuál es el propósito de la palabra clave `elif` en una estructura de decisión?**
-    1. Indica el final de una estructura de desición.
-    2. Representa el bloque de código que se ejecuta si la condición del "if" es falsa.
-    3. <span style={{color:'red'}}>Introduce una nueva condición a verificar si la condición del "if" es falsa.</span>
-    4. Extrae la condición a una variable.
-
-4. **¿Cuál de estos bucles podemos usar para iterar sobre una secuencia de elementos?**
-    1. loop
-    2. repeat
-    3. <span style={{color:'red'}}>for</span>
-    4. while
-
-5. **¿Qué instrucción se utiliza para interrumpir la ejecución de un bucle antes de que la condición sea falsa?**
-    1. pause
-    2. stop
-    3. exit
-    4. <span style={{color:'red'}}>break</span>
+<Quiz questions={[
+   {
+      question:"¿Qué palabra clave se utiliza en una estructura de decisión?",
+      options:[
+         "switch",
+         "if",
+         "choose",
+         "decide"
+      ],
+      correctIndex:1
+   },
+   {
+      question:"¿Cómo se realiza la asignación de un valor a una variable en Python?",
+      options:[
+         "=",
+         "=>",
+         ":=",
+         "=="
+      ],
+      correctIndex:0
+   },
+   {
+      question:"¿Cuál es el propósito de la palabra clave `elif` en una estructura de decisión?",
+      options:[
+         "Indica el final de una estructura de decisión.",
+         "Representa el bloque de código que se ejecuta si la condición del \"if\" es falsa.",
+         "Introduce una nueva condición a verificar si la condición del \"if\" es falsa.",
+         "Extrae la condición a una variable."
+      ],
+      correctIndex:2
+   },
+   {
+      question:"¿Cuál de estos bucles podemos usar para iterar sobre una secuencia de elementos?",
+      options:[
+         "loop",
+         "repeat",
+         "for",
+         "while"
+      ],
+      correctIndex:2
+   },
+   {
+      question:"¿Qué instrucción se utiliza para interrumpir la ejecución de un bucle antes de que la condición sea falsa?",
+      options:[
+         "pause",
+         "stop",
+         "exit",
+         "break"
+      ],
+      correctIndex:3
+   }
+]} />

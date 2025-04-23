@@ -216,19 +216,61 @@ Mostrar estudiantes que tengan todos los siguientes campos presentes: activities
 <details>
     <summary style={{color:'red'}}>Solución</summary>
 ```js
-
+db.estudiantes.find({
+    activities: { $exists: true },
+    internet: { $exists: true },
+    romantic: { $exists: true }
+})
 ```
 </details>
 
 ## Ejercicio 17
 Buscar estudiantes donde no exista el campo nursery
 
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+```js
+db.estudiantes.find({
+    nursery: { $exists: false }
+})
+```
+</details>
+
 ## Ejercicio 18
 Filtrar estudiantes con más de 2 fallos (failures) y que además no tengan apoyo familiar (famsup: "no")
+
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+```js
+db.estudiantes.find({
+    failures: { $gt: 2 },
+    famsup: "no"
+})
+```
+</details>
 
 ## Ejercicio 19
 Mostrar estudiantes que tengan como tutor al "mother" y cuyo consumo diario de alcohol (Dalc) sea igual o mayor a 3
 
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+```js
+db.estudiantes.find({
+    guardian: "mother",
+    Dalc: { $gte: 3 }
+})
+```
+</details>
+
 ## Ejercicio 20
 Listar estudiantes que vivan en zona rural (address: "R") y cuya nota final (G3) sea igual a la nota inicial (G1)
 
+<details>
+    <summary style={{color:'red'}}>Solución</summary>
+```js
+db.estudiantes.find({
+    address: "R",
+    $expr: { $eq: ["$G3", "$G1"] }
+})
+```
+</details>

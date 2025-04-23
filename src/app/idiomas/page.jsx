@@ -28,7 +28,7 @@ export default function Idiomas() {
         <Card
           title="Inglés"
           description="Apuntes"
-          image="/logos/english_flag.png"
+          image="/logos/usa_flag.png"
           link='idiomas/ingles'
         />
         <Card

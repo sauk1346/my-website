@@ -60,7 +60,8 @@ export default function Ti3v32() {
                 <CustomLink href='ti3v32/guia25'>- Guía 05</CustomLink><br/>
                 <CustomLink href='ti3v32/guia26'>- Guía 06</CustomLink><br/>
                 <CustomLink href='ti3v32/guia27'>- Guía 07</CustomLink><br/>
-                <CustomLink href='ti3v32/guia28'>- Guía 08</CustomLink>
+                <CustomLink href='ti3v32/guia28'>- Guía 08</CustomLink><br/>
+                <CustomLink href='ti3v32/guia29'>- Guía 09</CustomLink>
             </>
         },
         { evaluationNumber: 3, date: 'Mar 06, May 2025', weighting: '30%', description: '', quickGuide: '' },
@@ -86,7 +87,7 @@ export default function Ti3v32() {
         { week: '', class: '17', date: 'Mar 15, Abr 2025', description: <CustomLink href='ti3v32/guia26'>Guía 06</CustomLink> },
         { week: '', class: '18', date: 'Mié 16, Abr 2025', description: <CustomLink href='ti3v32/guia27'>Guía 07</CustomLink> },
         { week: '07', class: '19', date: 'Lun 21, Abr 2025', description: <CustomLink href='ti3v32/guia28'>Guía 08</CustomLink> },
-        { week: '', class: '20', date: 'Mar 22, Abr 2025', description: '' },
+        { week: '', class: '20', date: 'Mar 22, Abr 2025', description: <CustomLink href='ti3v32/guia29'>Guía 09</CustomLink> },
         { week: '', class: '21', date: 'Mié 23, Abr 2025', description: 'Evaluación 02' },
 
 

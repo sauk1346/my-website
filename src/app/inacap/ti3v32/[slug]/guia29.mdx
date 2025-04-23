@@ -1,0 +1,192 @@
+import ExternalLink from '@/components/ExternalLink'
+
+# Guía de Ejercicios - Base de datos de Pacientes de Clínica
+
+- **Base de Datos:** clinicaDB
+- **Colección:** pacientes
+- **JSON:**: <ExternalLink href='/ti3v32/data/pacientes.json'>pacientes.json</ExternalLink>
+
+## Ejercicio 01
+Buscar pacientes mayores de 50 años
+
+<details>
+    <summary>Solución</summary>
+```js
+db.pacientes.find({ edad:{$gt:50} })
+```
+</details>
+
+## Ejercicio 02
+Filtrar pacientes con plan de salud "Premium"
+
+<details>
+    <summary>Solución</summary>
+```js
+db.pacientes.find({ plan_salud:"Premium" })
+```
+</details>
+
+## Ejercicio 03
+Mostrar pacientes activos (activo: true)
+
+<details>
+    <summary>Solución</summary>
+```js
+db.pacientes.find({ activo:true })
+```
+</details>
+
+## Ejercicio 04
+Listar pacientes que vivan en la comuna "Ñuñoa"
+
+<details>
+    <summary>Solución</summary>
+```js
+db.pacientes.find({ comuna:"Ñuñoa" })
+```
+</details>
+
+## Ejercicio 05
+Buscar pacientes que ingresaron después del año 2020
+
+<details>
+    <summary>Solución</summary>
+```js
+db.pacientes.find({ fecha_ingreso:{$gt:"2020-12-31"} })
+```
+</details>
+
+## Ejercicio 06
+Buscar pacientes con plan "Básico" o "Intermedio"
+
+<details>
+    <summary>Solución</summary>
+```js
+db.pacientes.find({
+    plan_salud:{$in:["Básico","Intermedio"]}
+})
+
+```
+</details>
+
+## Ejercicio 07
+Mostrar pacientes cuya evaluación de 2023 sea mayor que la de 2021
+
+<details>
+    <summary>Solución</summary>
+```js
+db.pacientes.find({
+    $expr:{
+        $gt:["$evaluaciones.2023","$evaluaciones.2021"]
+    }
+})
+```
+</details>
+
+## Ejercicio 08
+Filtrar pacientes activos con menos de 3 tratamientos
+
+<details>
+    <summary>Solución</summary>
+```js
+db.pacientes.find({
+    activo: true,
+    $expr: { $gte: [{$size: "$tratamientos"}, 3] }
+})
+```
+</details>
+
+## Ejercicio 09
+Buscar pacientes que **no** vivan en "Maipú"
+
+<details>
+    <summary>Solución</summary>
+```js
+db.pacientes.find({
+    comuna:{$nin:["Maipú"]}
+})
+```
+</details>
+
+## Ejercicio 10
+Mostrar pacientes con más de 2 tratamientos
+
+<details>
+    <summary>Solución</summary>
+```js
+db.pacientes.find({
+    $expr:{
+        $gt:[{$size:"$tratamientos"},2]
+    }
+})
+```
+</details>
+
+## Ejercicio 11
+Buscar pacientes cuyo nombre comience con "A"
+
+<details>
+    <summary>Solución</summary>
+```js
+db.pacientes.find({ nombre:/^A/i })
+```
+</details>
+
+## Ejercicio 12
+Listar pacientes cuyo plan contenga la palabra "medio" (sin distinguir mayúsculas)
+
+<details>
+    <summary>Solución</summary>
+```js
+db.pacientes.find({ plan_salud:/medio/i })
+```
+</details>
+
+## Ejercicio 13
+Mostrar pacientes con al menos un tratamiento que incluya "Cardio"
+
+<details>
+    <summary>Solución</summary>
+```js
+db.pacientes.find({ tratamientos:/Cardio/i })
+```
+</details>
+
+## Ejercicio 14
+Buscar pacientes que no tengan evaluación registrada para el año "2023"
+
+<details>
+    <summary>Solución</summary>
+```js
+db.pacientes.find({
+    $or:[
+        {"evaluaciones.2023":{$exists:false}},
+        {"evaluaciones.2023":null}
+    ]
+})
+```
+</details>
+
+## Ejercicio 15
+Mostrar pacientes que sí tengan el campo tratamientos
+
+<details>
+    <summary>Solución</summary>
+```js
+db.pacientes.find({ tratamientos:{$exists:true} })
+```
+</details>
+
+## Ejercicio 16
+Filtrar pacientes con exactamente 3 tratamientos
+
+<details>
+    <summary>Solución</summary>
+```js
+db.pacientes.find({
+    $expr:{
+        $eq:[{$size:"$tratamientos"},3]
+    }
+})
+```
+</details>

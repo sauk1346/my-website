@@ -235,5 +235,30 @@ db.empleados.find({
 ## Ejercicio 19
 Filtrar empleados cuya ciudad de residencia sea "Santiago" y su cargo contenga "jefe" o "gerente"
 
+<details>
+    <summary>Solución</summary>
+```js
+db.empleados.find({ 
+    "direccion.ciudad": "Santiago",
+    $or: [
+        {cargo: /jefe/i},
+        {cargo: /gerente/i}
+    ]
+})
+```
+</details>
+
 ## Ejercicio 20
 Buscar empleados que tengan una evaluación que haya ido en descenso: 2021 > 2022 > 2023
+
+<details>
+    <summary>Solución</summary>
+```js
+db.empleados.find({
+    $and: [
+        {$expr: {$gt: ["$evaluaciones.2021", "$evaluaciones.2022"]}},
+        {$expr: {$gt: ["$evaluaciones.2022", "$evaluaciones.2023"]}}
+    ]
+})
+```
+</details>

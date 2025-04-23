@@ -1,0 +1,14 @@
+.emph-text {
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  /* Modo claro */
+  .emph-text.light {
+    color: red;
+  }
+  
+  /* Modo oscuro */
+  .emph-text.dark {
+    color: #ff6b6b;
+  }

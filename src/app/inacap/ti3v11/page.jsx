@@ -8,6 +8,7 @@ import ProfessorCard from '@/components/ProfessorCard';
 import UnitCard from '@/components/UnitCard';
 import styles from'@/styles/Asignature.module.css';
 import CustomLink from '@/components/CustomLink';
+import ExternalLink from '@/components/ExternalLink';
 
 export default function Ti3v11() {
     // Estado para controlar la vista responsiva
@@ -60,7 +61,7 @@ export default function Ti3v11() {
             evaluationNumber: 3, 
             date: 'Mar 23, Jul 2024', 
             weighting: '35%', 
-            description: <a href="/ti3v11/docs/eval03_sol.pdf" target="_blank" rel="noopener noreferrer">Informe SAMM y SDL</a>, 
+            description: <ExternalLink href="/ti3v11/docs/eval03_sol.pdf">Informe SAMM y SDL</ExternalLink>, 
             quickGuide: '' 
         },
         { 
@@ -96,7 +97,7 @@ export default function Ti3v11() {
         { week: '', class: '22', date: 'Vie 12, Jul 2024', description: <CustomLink href='ti3v11/clase22'>Clase Recuperativa</CustomLink> },
         { week: '09', class: '23', date: 'Mié 17, Jul 2024', description: <CustomLink href='ti3v11/clase23'>Desarrollo Seguro</CustomLink> },
         { week: '', class: '24', date: 'Jue 18, Jul 2024', description: <CustomLink href='ti3v11/clase24'>Encriptación</CustomLink> },
-        { week: '10', class: '25', date: 'Mar 23, Jul 2024', description: <a href="/ti3v11/docs/eval03_sol.pdf" target="_blank" rel="noopener noreferrer">Informe SAMM y SDL</a> },
+        { week: '10', class: '25', date: 'Mar 23, Jul 2024', description: <ExternalLink href="/ti3v11/docs/eval03_sol.pdf">Informe SAMM y SDL</ExternalLink> },
 
 
     ];

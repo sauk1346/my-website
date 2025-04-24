@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import ProfessorCard from '@/components/ProfessorCard';
 import styles from'@/styles/Asignature.module.css';
 import ExternalLink from '@/components/ExternalLink';
+import CustomLink from '@/components/CustomLink';
 
 export default function Ti3v12() {
     // Estado para controlar la vista responsiva
@@ -57,7 +58,7 @@ export default function Ti3v12() {
         
             <h2 style={{marginTop:'2em',marginBottom:'1em'}}>Resumen</h2>
             <ul style={{listStyle:'none'}}>
-                <li><ExternalLink href="ti3v12/guia">guia.pdf</ExternalLink></li>
+                <li><CustomLink href="ti3v12/guia">guia.pdf</CustomLink></li>
             </ul>
 
 

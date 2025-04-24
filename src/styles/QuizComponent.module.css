@@ -16,6 +16,28 @@
   transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Nuevas clases para mejorar la sangría */
+.questionTitleWrapper {
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.questionNumber {
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: var(--foreground, #111111);
+  margin-right: 6px;
+  flex-shrink: 0;
+}
+
+.questionText {
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: var(--foreground, #111111);
+  transition: color 0.3s ease;
+}
+
+/* Mantener esta clase para compatibilidad, pero no se usará para el texto */
 .questionTitle {
   font-weight: bold;
   font-size: 0.9rem;
@@ -42,6 +64,21 @@
   transition: all 0.2s ease;
   position: relative;
   font-size: 0.9rem;
+}
+
+/* Clases adicionales para las opciones */
+.optionContent {
+  display: flex;
+  width: calc(100% - 24px); /* Espacio para el icono */
+}
+
+.optionLetter {
+  margin-right: 6px;
+  flex-shrink: 0;
+}
+
+.optionText {
+  flex: 1;
 }
 
 .optionButton:hover {
@@ -115,7 +152,11 @@
 }
 
 :global(html.dark-mode) .questionTitle,
-:global(html.dark-mode-override) .questionTitle {
+:global(html.dark-mode) .questionNumber,
+:global(html.dark-mode) .questionText,
+:global(html.dark-mode-override) .questionTitle,
+:global(html.dark-mode-override) .questionNumber,
+:global(html.dark-mode-override) .questionText {
   color: var(--foreground, #f3f4f6);
 }
 

@@ -70,7 +70,12 @@ export const QuizQuestion = ({ question, options, correctIndex, questionNumber }
         className={styles.confettiCanvas}
       />
       
-      <p className={styles.questionTitle}>{questionNumber}. {question}</p>
+      {/* Estructura modificada para mejorar la sangría */}
+      <div className={styles.questionTitleWrapper}>
+        <span className={styles.questionNumber}>{questionNumber}.</span>
+        <span className={styles.questionText}>{question}</span>
+      </div>
+      
       <div className={styles.optionsContainer}>
         {options.map((option, index) => {
           // Convertir el índice numérico a letra (0 -> a, 1 -> b, etc.)
@@ -88,7 +93,10 @@ export const QuizQuestion = ({ question, options, correctIndex, questionNumber }
                   : ''
               }`}
             >
-              <span className={styles.optionText}>{letter}) {option}</span>
+              <div className={styles.optionContent}>
+                <span className={styles.optionLetter}>{letter})</span>
+                <span className={styles.optionText}>{option}</span>
+              </div>
               {selectedOption === index && (
                 <span className={styles.iconContainer}>
                   {index === correctIndex ? (

@@ -1,31 +1,56 @@
+import { Quiz } from '@/components/QuizComponent';
+
 # Actividad de Práctica 03
 
-1. **¿Qué función cumple la marca en la esquina de la CPU al verificar la orientación correcta durante la instalación?**
-    1. Indicar la fecha de fabricación.
-    2. Facilitar la identificación del fabricante.
-    3. <span style={{color:'red'}}>Coincidir con una marca en el zócalo de la placa madre.</span>
-    4. Mejorar la estética del sistema.
-
-2. **¿Cuál de las siguientes acciones demuestra la aplicación correcta de medidas de seguridad física al manipular piezas y herramientas en un entorno infomático?**
-    1. Utilizar guantes de látex al manipular componentes internos.
-    2. Manipular las piezas internas de una computadora sin equipo de protección.
-    3. <span style={{color:'red'}}>Conectar una pulsera antiestáticas y anclarla a una parte metálica antes de tocas los componentes.</span>
-    4. Trabajar en un entorno desordenado sin considerar la organización de las herramientas.
-
-3. **¿Cuál de las siguientes prácticas demuestra el manejo seguro de herramientas y piezas durante la configuración de dispositivos?**
-    1. Colocar las herramientas en el suelo mientras se trabaja para tener más espacio en la mesa.
-    2. Guardar las piezas pequeñas en un recipiente desordenado sin clasificación.
-    3. <span style={{color:'red'}}>Utilizar un destornillador de calidad adecuada para los tornillos del dispositivo.</span>
-    4. Ignorar las normativas de seguridad y proceder a abrir el dispositivo sin medidas de protección.
-
-4. **¿Cuál de las siguientes acciones es una medida de seguridad física esencial al manipular piezas internas de una computadora?**
-    1. Tocar los componentes directamente con las manos para una mejor manipulación.
-    2. Utilizar una pulsera antiestática sólo si el entorno está seco.
-    3. Manipular componentes sin considerar la electricidad estática.
-    4. <span style={{color:'red'}}>Evitar tocar directamente los componentes y utilizar una pulsera antiestática.</span>
-
-5. **¿Cuál es la importancia de seguir medidas de seguridad física al manipular herramientas y piezas en un entorno informático?**
-    1. Sólo es necesario si se trabaja en un entorno húmedo.
-    2. <span style={{color:'red'}}>Garantiza la seguridad del técnico y la integridad de los componentes.</span>
-    3. No tiene importancia, ya que las herramientas y piezas son resistentes.
-    4. Sólo es relevante si se manipulan dispositivos antiguos.
+<Quiz questions={[
+  {
+    question: "¿Qué función cumple la marca en la esquina de la CPU al verificar la orientación correcta durante la instalación?",
+    options: [
+      "Indicar la fecha de fabricación.",
+      "Facilitar la identificación del fabricante.",
+      "Coincidir con una marca en el zócalo de la placa madre.",
+      "Mejorar la estética del sistema."
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "¿Cuál de las siguientes acciones demuestra la aplicación correcta de medidas de seguridad física al manipular piezas y herramientas en un entorno informático?",
+    options: [
+      "Utilizar guantes de látex al manipular componentes internos.",
+      "Manipular las piezas internas de una computadora sin equipo de protección.",
+      "Conectar una pulsera antiestática y anclarla a una parte metálica antes de tocar los componentes.",
+      "Trabajar en un entorno desordenado sin considerar la organización de las herramientas."
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "¿Cuál de las siguientes prácticas demuestra el manejo seguro de herramientas y piezas durante la configuración de dispositivos?",
+    options: [
+      "Colocar las herramientas en el suelo mientras se trabaja para tener más espacio en la mesa.",
+      "Guardar las piezas pequeñas en un recipiente desordenado sin clasificación.",
+      "Utilizar un destornillador de calidad adecuada para los tornillos del dispositivo.",
+      "Ignorar las normativas de seguridad y proceder a abrir el dispositivo sin medidas de protección."
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "¿Cuál de las siguientes acciones es una medida de seguridad física esencial al manipular piezas internas de una computadora?",
+    options: [
+      "Tocar los componentes directamente con las manos para una mejor manipulación.",
+      "Utilizar una pulsera antiestática sólo si el entorno está seco.",
+      "Manipular componentes sin considerar la electricidad estática.",
+      "Evitar tocar directamente los componentes y utilizar una pulsera antiestática."
+    ],
+    correctIndex: 3
+  },
+  {
+    question: "¿Cuál es la importancia de seguir medidas de seguridad física al manipular herramientas y piezas en un entorno informático?",
+    options: [
+      "Sólo es necesario si se trabaja en un entorno húmedo.",
+      "Garantiza la seguridad del técnico y la integridad de los componentes.",
+      "No tiene importancia, ya que las herramientas y piezas son resistentes.",
+      "Sólo es relevante si se manipulan dispositivos antiguos."
+    ],
+    correctIndex: 1
+  }
+]} />

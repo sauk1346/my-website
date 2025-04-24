@@ -1,31 +1,56 @@
+import { Quiz } from '@/components/QuizComponent';
+
 # Actividad de Práctica 15
 
-1. **¿Qué protocolo se utiliza comúnmente para asignar direcciones IP de manera dinámica en una red?**
-    1. <span style={{color:'red'}}>DHCP</span>
-    2. DNS
-    3. TCP
-    4. HTTP
-
-2. **¿Cuál de las siguientes opciones representa una dirección IP válida en el formato IPv4?**
-    1. 192.256.1.1
-    2. 3001:0db8:85a3:0000:0000:8a2e:0370:7334
-    3. <span style={{color:'red'}}>172.16.0.1</span>
-    4. FE80::1
-
-3. **¿Cuál de las siguientes es una característica clave de la configuración de una dirección IP estática en un dispositivo de red?**
-    1. Asignación dinámica e direcciones
-    2. Renovación automática e la IP
-    3. Mantenimiento centralizado
-    4. <span style={{color:'red'}}>Asignación manual e direcciones</span>
-
-4. **¿Cuál es el propósito principal de asignar direcciones IP a dispositivos finales en un segmento de red?**
-    1. Facilitar identificación de dispositivos por su nombre
-    2. Mejorar la velocidad de la conexión
-    3. Identificar la ubicación geográfica de los dispositivos
-    4. <span style={{color:'red'}}>Permitir la comunicación y a identificación única e cada dispositivo en la red</span>
-
-5. **¿Cuál es la principal diferencia entre una dirección IP estática y una dirección IP dinámica?**
-    1. Una dirección IP estática se asigna automáticamente, mientras que una dinámica se configura manualmente
-    2. Una dirección IP estática cambia cada vez que se reinicia el dispositivo, mientras que una dinámica permanece constante
-    3. <span style={{color:'red'}}>Una dirección IP estática se configura manualmente y no cambia, mientras que una dinámica se asigna automáticamente y puede cambiar</span>
-    4. No hay diferencia significativa entre una dirección IP estática y una dinámica
+<Quiz questions={[
+  {
+    question: "¿Qué protocolo se utiliza comúnmente para asignar direcciones IP de manera dinámica en una red?",
+    options: [
+      "DHCP",
+      "DNS",
+      "TCP",
+      "HTTP"
+    ],
+    correctIndex: 0
+  },
+  {
+    question: "¿Cuál de las siguientes opciones representa una dirección IP válida en el formato IPv4?",
+    options: [
+      "192.256.1.1",
+      "3001:0db8:85a3:0000:0000:8a2e:0370:7334",
+      "172.16.0.1",
+      "FE80::1"
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "¿Cuál de las siguientes es una característica clave de la configuración de una dirección IP estática en un dispositivo de red?",
+    options: [
+      "Asignación dinámica de direcciones",
+      "Renovación automática de la IP",
+      "Mantenimiento centralizado",
+      "Asignación manual de direcciones"
+    ],
+    correctIndex: 3
+  },
+  {
+    question: "¿Cuál es el propósito principal de asignar direcciones IP a dispositivos finales en un segmento de red?",
+    options: [
+      "Facilitar identificación de dispositivos por su nombre",
+      "Mejorar la velocidad de la conexión",
+      "Identificar la ubicación geográfica de los dispositivos",
+      "Permitir la comunicación y la identificación única de cada dispositivo en la red"
+    ],
+    correctIndex: 3
+  },
+  {
+    question: "¿Cuál es la principal diferencia entre una dirección IP estática y una dirección IP dinámica?",
+    options: [
+      "Una dirección IP estática se asigna automáticamente, mientras que una dinámica se configura manualmente",
+      "Una dirección IP estática cambia cada vez que se reinicia el dispositivo, mientras que una dinámica permanece constante",
+      "Una dirección IP estática se configura manualmente y no cambia, mientras que una dinámica se asigna automáticamente y puede cambiar",
+      "No hay diferencia significativa entre una dirección IP estática y una dinámica"
+    ],
+    correctIndex: 2
+  }
+]} />

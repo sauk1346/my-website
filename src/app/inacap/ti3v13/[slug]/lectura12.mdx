@@ -1,31 +1,56 @@
+import { Quiz } from '@/components/QuizComponent';
+
 # Actividad de Práctica 12
 
-1. **¿Qué acciones se pueden tomar para solucionar problema comunes después de la instalación de un sistema operativo?**
-    1. <span style={{color:'red'}}>Implementar actualizaciones y controladores necesarios.</span>
-    2. Ignorar los problemas y esperar a que desaparezcan.
-    3. Desinstalar el sistema operativo.
-    4. Evitar cualquier cambio en la configuración.
-
-2. **En el contexto de la verificación de la instalación, ¿por qué es crucial actualizar el sistema operativo?**
-    1. Dehacer la instalación original.
-    2. Añadir nuevas funciones no relacionadas con la seguridad.
-    3. Eliminar todos los archivos del sistema.
-    4. <span style={{color:'red'}}>Corregir vulnerabilidades y mejorar el rendimiento.</span>
-
-3. **¿Cuál de los siguientes es el programa incluido en Windows 11 para protegerlo contra virus y spyware?**
-    1. Microsoft Office 360
-    2. <span style={{color:'red'}}>Microsoft Defender Antivirus</span>
-    3. Microsoft ScanDisk
-    4. Kaspersky Antivirus
-
-4. **¿Cuál es el propósito principal de realizar una verificación de la instalación de un sistema operativo después de su configuración?**
-    1. Acelerar el rendimiento del sistema.
-    2. Desinstalar el sistema operativo.
-    3. <span style={{color:'red'}}>Identificar posibles errores y garantizar una configuración correcta.</span>
-    4. Evitar cualquier cambio en la configuración.
-
-5. **Durante la verificación de la configuración de un sistema operativo, ¿por qué es importante revisar y ajustar la configuración de seguridad?**
-    1. Para añadir nuevas funciones no relacionadas con la seguridad.
-    2. Deshacer la instalación original.
-    3. Eliminar todos los archivos del sistema.
-    4. <span style={{color:'red'}}>Para identificar y corregir posibles vulnerabilidades.</span>
+<Quiz questions={[
+  {
+    question: "¿Qué acciones se pueden tomar para solucionar problemas comunes después de la instalación de un sistema operativo?",
+    options: [
+      "Implementar actualizaciones y controladores necesarios.",
+      "Ignorar los problemas y esperar a que desaparezcan.",
+      "Desinstalar el sistema operativo.",
+      "Evitar cualquier cambio en la configuración."
+    ],
+    correctIndex: 0
+  },
+  {
+    question: "En el contexto de la verificación de la instalación, ¿por qué es crucial actualizar el sistema operativo?",
+    options: [
+      "Deshacer la instalación original.",
+      "Añadir nuevas funciones no relacionadas con la seguridad.",
+      "Eliminar todos los archivos del sistema.",
+      "Corregir vulnerabilidades y mejorar el rendimiento."
+    ],
+    correctIndex: 3
+  },
+  {
+    question: "¿Cuál de los siguientes es el programa incluido en Windows 11 para protegerlo contra virus y spyware?",
+    options: [
+      "Microsoft Office 360",
+      "Microsoft Defender Antivirus",
+      "Microsoft ScanDisk",
+      "Kaspersky Antivirus"
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "¿Cuál es el propósito principal de realizar una verificación de la instalación de un sistema operativo después de su configuración?",
+    options: [
+      "Acelerar el rendimiento del sistema.",
+      "Desinstalar el sistema operativo.",
+      "Identificar posibles errores y garantizar una configuración correcta.",
+      "Evitar cualquier cambio en la configuración."
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "Durante la verificación de la configuración de un sistema operativo, ¿por qué es importante revisar y ajustar la configuración de seguridad?",
+    options: [
+      "Para añadir nuevas funciones no relacionadas con la seguridad.",
+      "Deshacer la instalación original.",
+      "Eliminar todos los archivos del sistema.",
+      "Para identificar y corregir posibles vulnerabilidades."
+    ],
+    correctIndex: 3
+  }
+]} />

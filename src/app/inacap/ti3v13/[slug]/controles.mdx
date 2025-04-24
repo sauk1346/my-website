@@ -1,77 +1,155 @@
+import { Quiz } from '@/components/QuizComponent';
+
 # Controles
 
 ## Control 01
-
-1. **Un técnico está resolviendo problemas de una computadora que ha experimentado un fallo de hardware detectado por la BIOS ¿Cuál de las siguientes describe de manera clara uno de los métodos utilizados para este tipo de fallos?**
-    - <span style={{color:'red'}}>La computadora emite una secuencia de sonidos que señalan una falla en algún dispositivo.</span>
-
-2. **¿Cuál de las siguientes opciones es el puerto que comúnmente se utiliza para conectar un mouser a una computadora?**
-    - <span style={{color:'red'}}>USB.</span>
-
-3. **Antes un caso de sobrecalentamiento del procesador, de acuerdo con la normativa de seguridad vigetne. ¿Qué componente es el primero en alejar el calor del procesador?**
-    - <span style={{color:'red'}}>Pasta térmica.</span>
-
-4. **¿Cuál es la razón fundamental por la que una empresa debe garantizar el mantenimiento preventivo en sus computadores?**
-    - <span style={{color:'red'}}>Contribuye a salvaguardar los equipos informáticos contra posibles problemas futuros.</span>
-
-5. **En caso de pérdida o robo de un dispositivo móvil. ¿Cuál de los siguientes conforman los procedimientos que deben configurarse para resguardar su información privada almacenada?**
-    - <span style={{color:'red'}}>Encriptar los medios de almacenamiento / Habilitar la contraseña de acceso del dispositivo.</span>
+<Quiz questions={[
+  {
+    question: "Un técnico está resolviendo problemas de una computadora que ha experimentado un fallo de hardware detectado por la BIOS ¿Cuál de las siguientes describe de manera clara uno de los métodos utilizados para este tipo de fallos?",
+    options: [
+      "El sistema operativo muestra un mensaje de error detallado.",
+      "La computadora emite una secuencia de sonidos que señalan una falla en algún dispositivo.",
+      "El monitor se apaga automáticamente para prevenir daños.",
+      "Se reinicia el sistema y se ejecuta un diagnóstico automático."
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "¿Cuál de las siguientes opciones es el puerto que comúnmente se utiliza para conectar un mouse a una computadora?",
+    options: [
+      "Puerto serial",
+      "USB.",
+      "Puerto HDMI",
+      "Puerto Ethernet"
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "Ante un caso de sobrecalentamiento del procesador, de acuerdo con la normativa de seguridad vigente. ¿Qué componente es el primero en alejar el calor del procesador?",
+    options: [
+      "Ventilador del procesador",
+      "Pasta térmica.",
+      "Disipador de calor",
+      "Sistema de refrigeración líquida"
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "¿Cuál es la razón fundamental por la que una empresa debe garantizar el mantenimiento preventivo en sus computadores?",
+    options: [
+      "Aumenta la velocidad de procesamiento.",
+      "Contribuye a salvaguardar los equipos informáticos contra posibles problemas futuros.",
+      "Reduce el consumo de energía eléctrica.",
+      "Mejora la apariencia física de los equipos."
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "En caso de pérdida o robo de un dispositivo móvil. ¿Cuál de los siguientes conforman los procedimientos que deben configurarse para resguardar su información privada almacenada?",
+    options: [
+      "Activar el GPS / Instalar aplicaciones antirrobo",
+      "Encriptar los medios de almacenamiento / Habilitar la contraseña de acceso del dispositivo.",
+      "Desactivar el WiFi / Eliminar las cuentas de correo",
+      "Formatear remotamente / Reportar el IMEI a la operadora"
+    ],
+    correctIndex: 1
+  }
+]} />
 
 ## Control 02
-
-
-1. **¿Cuál de las siguientes opciones es una herramienta integrada en Windows 11 para realizar respaldos y restaurar archivos y configuraciones?**
-    1. Time Machine
-    2. <span style={{color:'red'}}>File History </span>
-    3. Time Capsule
-    4. SuperDuper
-
-2. **¿Cuál de las siguientes opciones es el mejor modelo de servicio en la Nube que ofrece a los usuarios acceso a las aplicaciones basadas en la web, sin la necesidad de instalar o mantener software local?**
-    1. Infraestructura como Servicio (IaaS)
-    2. Plataforma como Servicio (PaaS)
-    3. <span style={{color:'red'}}>Software como Servicio (SaaS)</span>
-    4. Almacenamiento en la nube
-
-3. **Para cumplir con los requerimientos de creación de cuentas de usuario y grupos locales. ¿Cuál de las siguientes opciones permite asignar permisos específicos a un grupo recién creado en un sistema Windows?**
-    1. chmod
-    2. chown
-    3. net user
-    4. <span style={{color:'red'}}>net localgroup</span>
-
-4. ¿Cuál es el comando para formatear una partición de disco duro en el sistema operativo Windows?
-    1. diskpart
-    2. <span style={{color:'red'}}>format</span>
-    3. fdisk
-    4. mkfs
-
-5. **¿Cuál es el comando correcto en la línea de comandos para crear un directorio en un sistema Unix/Linux?**
-    1. create dir /nombre_directorio
-    2. <span style={{color:'red'}}>mkdir nombre_directorio</span>
-    3. newfolder -name nombre_directorio
-    4. dir /make nombre_directorio
+<Quiz questions={[
+  {
+    question: "¿Cuál de las siguientes opciones es una herramienta integrada en Windows 11 para realizar respaldos y restaurar archivos y configuraciones?",
+    options: [
+      "Time Machine",
+      "File History",
+      "Time Capsule",
+      "SuperDuper"
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "¿Cuál de las siguientes opciones es el mejor modelo de servicio en la Nube que ofrece a los usuarios acceso a las aplicaciones basadas en la web, sin la necesidad de instalar o mantener software local?",
+    options: [
+      "Infraestructura como Servicio (IaaS)",
+      "Plataforma como Servicio (PaaS)",
+      "Software como Servicio (SaaS)",
+      "Almacenamiento en la nube"
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "Para cumplir con los requerimientos de creación de cuentas de usuario y grupos locales. ¿Cuál de las siguientes opciones permite asignar permisos específicos a un grupo recién creado en un sistema Windows?",
+    options: [
+      "chmod",
+      "chown",
+      "net user",
+      "net localgroup"
+    ],
+    correctIndex: 3
+  },
+  {
+    question: "¿Cuál es el comando para formatear una partición de disco duro en el sistema operativo Windows?",
+    options: [
+      "diskpart",
+      "format",
+      "fdisk",
+      "mkfs"
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "¿Cuál es el comando correcto en la línea de comandos para crear un directorio en un sistema Unix/Linux?",
+    options: [
+      "create dir /nombre_directorio",
+      "mkdir nombre_directorio",
+      "newfolder -name nombre_directorio",
+      "dir /make nombre_directorio"
+    ],
+    correctIndex: 1
+  }
+]} />
 
 ## Control 03
-
-1. **¿Cuál de las siguientes opciones describe un tipo de red que engloba varias redes geográficamente dispersas, abarcando un área extensa?**
-    1. LAN
-    2. SAN
-    3. <span style={{color:'red'}}>WAN</span>
-    4. PAN
-
-2. **Según el modelo TCP/IP. ¿Cuál es la capa equivalente a la Capa de Enlace de datos, en el modelo OSI?**
-    1. <span style={{color:'red'}}>Capa acceso a la red</span>
-    2. Capa de transporte
-    3. Capa de red
-    4. Capa de enlace de datos
-
-3. **¿Cuál es una medida efectiva para configurar la seguridad de un router inalámbrico?**
-    1. <span style={{color:'red'}}>Configurar WPA3 o WPA2 con una clave fuerte.</span>
-    2. Desactivar completamente la seguridad para facilitar el acceso.
-    3. Utilizar un cifrado WEP para proteger la red.
-    4. Permitir acceso sin contraseña para usuarios conocidos.
-
-4. **¿Cómo podrías solucionar problemas en una red WLAN relacionados con la velocidad de conexión?**
-    1. Cambiar la configuración del enrutador a una banda más lenta.
-    2. Aumentar la potencia de transmisión del enrutador.
-    3. <span style={{color:'red'}}>Cambiar el canal de transmisión para evitar interferencias.</span>
-    4. Desactivar completamente la red inalámbrica.
+<Quiz questions={[
+  {
+    question: "¿Cuál de las siguientes opciones describe un tipo de red que engloba varias redes geográficamente dispersas, abarcando un área extensa?",
+    options: [
+      "LAN",
+      "SAN",
+      "WAN",
+      "PAN"
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "Según el modelo TCP/IP. ¿Cuál es la capa equivalente a la Capa de Enlace de datos, en el modelo OSI?",
+    options: [
+      "Capa acceso a la red",
+      "Capa de transporte",
+      "Capa de red",
+      "Capa de enlace de datos"
+    ],
+    correctIndex: 0
+  },
+  {
+    question: "¿Cuál es una medida efectiva para configurar la seguridad de un router inalámbrico?",
+    options: [
+      "Configurar WPA3 o WPA2 con una clave fuerte.",
+      "Desactivar completamente la seguridad para facilitar el acceso.",
+      "Utilizar un cifrado WEP para proteger la red.",
+      "Permitir acceso sin contraseña para usuarios conocidos."
+    ],
+    correctIndex: 0
+  },
+  {
+    question: "¿Cómo podrías solucionar problemas en una red WLAN relacionados con la velocidad de conexión?",
+    options: [
+      "Cambiar la configuración del enrutador a una banda más lenta.",
+      "Aumentar la potencia de transmisión del enrutador.",
+      "Cambiar el canal de transmisión para evitar interferencias.",
+      "Desactivar completamente la red inalámbrica."
+    ],
+    correctIndex: 2
+  }
+]} />

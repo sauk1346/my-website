@@ -1,31 +1,55 @@
+import { Quiz } from '@/components/QuizComponent';
+
 # Actividad de Práctica 10
-
-1. **¿Cuál de las siguiente describe mejor lo que representa un directorio en un sistema operativo?**
-    1. Una lista de programas instalados.
-    2. Un espacio de almacenamiento temporal.
-    3. <span style={{color:'red'}}>Una estructura jerárquica que organiza archivos y subdirectorios.</span>
-    4. Un conjunto de configuraciones de usuario.
-
-2. **¿Cómo interactúa un usuario con la línea de comando?**
-    1. Mediante gestos táctiles.
-    2. <span style={{color:'red'}}>A través de instrucciones escritas.</span>
-    3. Con comandos de voz.
-    4. Utilizando un lápiz óptico.
-
-3. **¿Qué acción representa una mala práctica en el manejo de permisos en directorios?**
-    1. Asignar permisos de lectura a todos los usuarios.
-    2. Mantener todos los directorios como privados.
-    3. Conceder permisos de escritura a usuarios no autorizados.
-    4. <span style={{color:'red'}}>No establecer política de permisos.</span>
-
-4. **¿Cuál de las siguientes se considera buena práctica para dar nombres a los archivos?**
-    1. utilizar nombres largos difícil de descrifrar.
-    2. Incorporar caracteres especiales.
-    3. <span style={{color:'red'}}>Mantener nombres cortos y descriptivos.</span>
-    4. Incorportar emojis para mayor claridad.
-
-5. **Cuál es el comando correcto en la línea de comandos para crear un directorio en un sistema Unix/Linux?**
-    1. create/dir/nombre_directoriosistema de detección especial
-    2. <span style={{color:'red'}}>mkdir nombre_directorio</span>
-    3. newfolder -name nombre_directorio
-    4. dir /make nombre_directorio
+<Quiz questions={[
+  {
+    question: "¿Cuál de las siguientes describe mejor lo que representa un directorio en un sistema operativo?",
+    options: [
+      "Una lista de programas instalados.",
+      "Un espacio de almacenamiento temporal.",
+      "Una estructura jerárquica que organiza archivos y subdirectorios.",
+      "Un conjunto de configuraciones de usuario."
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "¿Cómo interactúa un usuario con la línea de comando?",
+    options: [
+      "Mediante gestos táctiles.",
+      "A través de instrucciones escritas.",
+      "Con comandos de voz.",
+      "Utilizando un lápiz óptico."
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "¿Qué acción representa una mala práctica en el manejo de permisos en directorios?",
+    options: [
+      "Asignar permisos de lectura a todos los usuarios.",
+      "Mantener todos los directorios como privados.",
+      "Conceder permisos de escritura a usuarios no autorizados.",
+      "No establecer política de permisos."
+    ],
+    correctIndex: 3
+  },
+  {
+    question: "¿Cuál de las siguientes se considera buena práctica para dar nombres a los archivos?",
+    options: [
+      "Utilizar nombres largos difíciles de descifrar.",
+      "Incorporar caracteres especiales.",
+      "Mantener nombres cortos y descriptivos.",
+      "Incorporar emojis para mayor claridad."
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "¿Cuál es el comando correcto en la línea de comandos para crear un directorio en un sistema Unix/Linux?",
+    options: [
+      "create /dir/nombre_directorio",
+      "mkdir nombre_directorio",
+      "newfolder -name nombre_directorio",
+      "dir /make nombre_directorio"
+    ],
+    correctIndex: 1
+  }
+]} />

@@ -1,31 +1,56 @@
+import { Quiz } from '@/components/QuizComponent';
+
 # Actividad de Práctica 14
 
-1. **¿Cuáles de las siguientes describe correctamente un dispositivo final en una red?**
-    1. Enrutador que gestiona el tráfico entre diferentes redes
-    2. Conecta multiples dispositivos en una red local
-    3. <span style={{color:'red'}}>Proporciona servicios y recursos a los usuarios finales</span>
-    4. Direccion IP dinámica a través de DHCP
-
-2. **¿Cuál de los siguientes se clasifica como dispositivo intermedio de red?**
-    1. Teléfonos inteligentes
-    2. Impresoras con conexión inalámbrica
-    3. Cámaras de vigilancia
-    4. <span style={{color:'red'}}>Routers</span>
-
-3. **¿Cuáles de las siguientes describen al Modelo OSI?**
-    1. Posee 4 capas y realiza el manejo de aplicaciones
-    2. Posee 6 capas y realiza enrutamiento de datos
-    3. <span style={{color:'red'}}>Posee 7 capas y describe la comunicación de datos entre dispositivos</span>
-    4. Posee 5 capas y convierte los datos en formato comprensible
-
-4. **¿Cuál de los siguientes corresponde al modelo de referencia más utilizado en la actualidad?**
-    1. Modelo ABC
-    2. <span style={{color:'red'}}>Modelo TCP/IP</span>
-    3. Modelo LAN/WAN
-    4. Modelo de Enlace
-
-5. **¿Cuáles de las siguientes afirmaciones describe mejor la diferencia entre modelo OSI y TCP/IP?**
-    1. El modelo OSI tiene 7 capas, mientras que TCP/IP tiene 5 capas, por lo que conlleva a una diferencia relevante en la cantidad de niveles de abstracción.
-    2. La principal diferencia está en la nomenclatura de las capas, en el caso de OSI utiliza nombres más descriptivos, mientras que TCP/IP utiliza nombres más cortos.
-    3. <span style={{color:'red'}}>TCP/IP se caracteriza por su simplicidad y adaptabilidad, mientras que OSI es más teórico y menos implementado.</span>
-    4. Ambos comparten la misma cantidad de capas, pero TCP/IP se enfoca más en la conectividad de red, mientras que OSI se centra en la abstracción y funciones específicas de cada capa.
+<Quiz questions={[
+  {
+    question: "¿Cuáles de las siguientes describe correctamente un dispositivo final en una red?",
+    options: [
+      "Enrutador que gestiona el tráfico entre diferentes redes",
+      "Conecta múltiples dispositivos en una red local",
+      "Proporciona servicios y recursos a los usuarios finales",
+      "Dirección IP dinámica a través de DHCP"
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "¿Cuál de los siguientes se clasifica como dispositivo intermedio de red?",
+    options: [
+      "Teléfonos inteligentes",
+      "Impresoras con conexión inalámbrica",
+      "Cámaras de vigilancia",
+      "Routers"
+    ],
+    correctIndex: 3
+  },
+  {
+    question: "¿Cuáles de las siguientes describen al Modelo OSI?",
+    options: [
+      "Posee 4 capas y realiza el manejo de aplicaciones",
+      "Posee 6 capas y realiza enrutamiento de datos",
+      "Posee 7 capas y describe la comunicación de datos entre dispositivos",
+      "Posee 5 capas y convierte los datos en formato comprensible"
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "¿Cuál de los siguientes corresponde al modelo de referencia más utilizado en la actualidad?",
+    options: [
+      "Modelo ABC",
+      "Modelo TCP/IP",
+      "Modelo LAN/WAN",
+      "Modelo de Enlace"
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "¿Cuáles de las siguientes afirmaciones describe mejor la diferencia entre modelo OSI y TCP/IP?",
+    options: [
+      "El modelo OSI tiene 7 capas, mientras que TCP/IP tiene 5 capas, por lo que conlleva a una diferencia relevante en la cantidad de niveles de abstracción.",
+      "La principal diferencia está en la nomenclatura de las capas, en el caso de OSI utiliza nombres más descriptivos, mientras que TCP/IP utiliza nombres más cortos.",
+      "TCP/IP se caracteriza por su simplicidad y adaptabilidad, mientras que OSI es más teórico y menos implementado.",
+      "Ambos comparten la misma cantidad de capas, pero TCP/IP se enfoca más en la conectividad de red, mientras que OSI se centra en la abstracción y funciones específicas de cada capa."
+    ],
+    correctIndex: 2
+  }
+]} />

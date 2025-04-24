@@ -1,3 +1,5 @@
+import { Quiz } from '@/components/QuizComponent';
+
 # Librerías para Consumo de Datos Externos
 
 ## ¿Por qué?
@@ -14,32 +16,55 @@ pip install requests
 
 # Actividad de Práctica 11
 
-1. **¿Por qué es importante manejar excepciones al interactuar con librerías externas?**
-	1. Evita el uso de librerías extenas.
-	2. <span style={{color:'red'}}>Proporciona una respuesta adecuada a los errores que puedan ocurrir.</span>
-	3. Para que el código sea más complicado.
-	4. Aumenta el rendimiento del programa.
-
-2. **De los siguientes enunciados, ¿cuál es el propósito de atrapar excepciones específicas al manejar errores en el consumo de datos externos?**
-	1. Evitar atrapar excepciones.
-	2. Generar más errores en el programa.
-	3. <span style={{color:'red'}}>Proporcionar un manejo de errores específico para cada situación.</span>
-	4. Simplificar el código.
-
-3. **¿Cuál de las siguientes opciones es una buena práctica al utilizar bloques try-except para manejar excepciones al interactuar con librerías externas?**
-	1. Atrapa todas las excepciones en un solo bloque try-except.
-	2. Evita usar bloques try-except.
-	3. Evita atrapar excepciones.
-	4. <span style={{color:'red'}}>Atrapa solo excepciones específicas y proporciona un manejo de errores adecuado.</span>
-
-4. **De los siguientes enunciados, ¿cuál es el objetivo principal de proporcionar retroalimentación al manejar excepciones al interactuar con librerías externas?**
-	1. Ocultar los errores al usuario final.
-	2. <span style={{color:'red'}}>Facilitar la depuración y resolución de problemas.</span>
-	3. Aumentar la complejidad del código.
-	4. Complicar la implementación de las librerías.
-
-5. **De los siguientes enunciados, ¿cuál es el propósito principal del bloque try-except al manejar excepciones al interactuar con librerías externas?**
-	1. Evitar que se lancen excepciones.
-	2. Simplificar el código.
-	3. <span style={{color:'red'}}>Proporcionar un manejo de erorres adecuado y controlado.</span>
-	4. Aumentar la velocidad de ejecución del programa.
+<Quiz questions={[
+  {
+    question: "¿Por qué es importante manejar excepciones al interactuar con librerías externas?",
+    options: [
+      "Evita el uso de librerías externas.",
+      "Proporciona una respuesta adecuada a los errores que puedan ocurrir.",
+      "Para que el código sea más complicado.",
+      "Aumenta el rendimiento del programa."
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "De los siguientes enunciados, ¿cuál es el propósito de atrapar excepciones específicas al manejar errores en el consumo de datos externos?",
+    options: [
+      "Evitar atrapar excepciones.",
+      "Generar más errores en el programa.",
+      "Proporcionar un manejo de errores específico para cada situación.",
+      "Simplificar el código."
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "¿Cuál de las siguientes opciones es una buena práctica al utilizar bloques try-except para manejar excepciones al interactuar con librerías externas?",
+    options: [
+      "Atrapa todas las excepciones en un solo bloque try-except.",
+      "Evita usar bloques try-except.",
+      "Evita atrapar excepciones.",
+      "Atrapa solo excepciones específicas y proporciona un manejo de errores adecuado."
+    ],
+    correctIndex: 3
+  },
+  {
+    question: "De los siguientes enunciados, ¿cuál es el objetivo principal de proporcionar retroalimentación al manejar excepciones al interactuar con librerías externas?",
+    options: [
+      "Ocultar los errores al usuario final.",
+      "Facilitar la depuración y resolución de problemas.",
+      "Aumentar la complejidad del código.",
+      "Complicar la implementación de las librerías."
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "De los siguientes enunciados, ¿cuál es el propósito principal del bloque try-except al manejar excepciones al interactuar con librerías externas?",
+    options: [
+      "Evitar que se lancen excepciones.",
+      "Simplificar el código.",
+      "Proporcionar un manejo de errores adecuado y controlado.",
+      "Aumentar la velocidad de ejecución del programa."
+    ],
+    correctIndex: 2
+  }
+]} />

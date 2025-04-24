@@ -1,3 +1,5 @@
+import { Quiz } from '@/components/QuizComponent';
+
 # Solución con hash y conectada a base de datos
 
 ## ¿Para qué sirve?
@@ -39,32 +41,55 @@
 
 # Actividad de práctica 17
 
-1. **De los siguientes enunciados, ¿qué sería un hash en el contexto de la seguridad informática?**
-	1. <span style={{color:'red'}}>Una función matemática que convierte una entrada en una cadena de caracteres única</span>
-	2. Un algoritmo de cifrado simétrico
-	3. una técnica para la transmisión segura de datos
-	4. Un método para la autenticación de usuarios en línea
-
-2. **¿Cuál de los siguientes algoritmos de hash es considerado inseguro debido a vulnerabilidades conocidad?**
-	1. SHA-256
-	2. <span style={{color:'red'}}>MD5</span>
-	3. SHA-512
-	4. Bcrypt
-
-3. **¿Qué técnica de las siguientes se utiliza junto con el hashing para aumentar la seguridad de las contraseñas almacenadas?**
-	1. <span style={{color:'red'}}>Salting</span>
-	2. Encriptación simétrica
-	3. Sanitización de entradas
-	4. Escapado de datos
-
-4. **¿Cuál de las siguientes prácticas es fundamental para prevenir los ataques de inyección SQL?**
-	1. Concatenación de datos de usuario en las consultas SQL
-	2. <span style={{color:'red'}}>Uso de consultas preparadas</span>
-	3. Validación de entradas con listas negras
-	4. Deshabilitación de la autenticación de usuarios
-
-5. **¿Qué beneficio ofrece el uso de un único usuario de base de datos para la aplicación?**
-	1. Aumenta la superficie de ataque
-	2. Disminuye el rendimiento del sistema
-	3. Complica la auditoría de la base de datos
-	4. <span style={{color:'red'}}>Facilita la gestión de accesos</span>
+<Quiz questions={[
+  {
+    question: "De los siguientes enunciados, ¿qué sería un hash en el contexto de la seguridad informática?",
+    options: [
+      "Una función matemática que convierte una entrada en una cadena de caracteres única",
+      "Un algoritmo de cifrado simétrico",
+      "Una técnica para la transmisión segura de datos",
+      "Un método para la autenticación de usuarios en línea"
+    ],
+    correctIndex: 0
+  },
+  {
+    question: "¿Cuál de los siguientes algoritmos de hash es considerado inseguro debido a vulnerabilidades conocidas?",
+    options: [
+      "SHA-256",
+      "MD5",
+      "SHA-512",
+      "Bcrypt"
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "¿Qué técnica de las siguientes se utiliza junto con el hashing para aumentar la seguridad de las contraseñas almacenadas?",
+    options: [
+      "Salting",
+      "Encriptación simétrica",
+      "Sanitización de entradas",
+      "Escapado de datos"
+    ],
+    correctIndex: 0
+  },
+  {
+    question: "¿Cuál de las siguientes prácticas es fundamental para prevenir los ataques de inyección SQL?",
+    options: [
+      "Concatenación de datos de usuario en las consultas SQL",
+      "Uso de consultas preparadas",
+      "Validación de entradas con listas negras",
+      "Deshabilitación de la autenticación de usuarios"
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "¿Qué beneficio ofrece el uso de un único usuario de base de datos para la aplicación?",
+    options: [
+      "Aumenta la superficie de ataque",
+      "Disminuye el rendimiento del sistema",
+      "Complica la auditoría de la base de datos",
+      "Facilita la gestión de accesos"
+    ],
+    correctIndex: 3
+  }
+]} />

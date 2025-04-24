@@ -1,3 +1,5 @@
+import { Quiz } from '@/components/QuizComponent';
+
 # Clase de Python con deserialización de información
 
 ## ¿Qué es?
@@ -39,32 +41,55 @@ with open("datos.json", "w") as archivo:
 
 # Actividad de Práctica 12
 
-1. **De los siguientes enunciados, ¿cuál es el propósito principal de la deserialización de información en Python?**
-	1. <span style={{color:'red'}}>Convertir datos en formato JSON en objetos Python</span>
-	2. Convertir objetos Python en formato JSON
-	3. Convertir datos JSON en datos XML
-	4. Convertir objetos Python en cadenas de texto JSON
-
-2. **De los siguientes enunciados, ¿cuál es la función de la biblioteca json que se utiliza para convertir un objeto Python en una cadena de texto JSON?**
-	1. json.loads()
-	2. json.load()
-	3. <span style={{color:'red'}}>json.dumps()</span>
-	4. json.dump()
-
-3. **¿Cuál es la función de la biblioteca json que se utiliza para cargar datos desde un archivo JSON?**
-	1. json.loads()
-	2. json.dumps()
-	3. json.dump()
-	4. <span style={{color:'red'}}>json.load()</span>
-
-4. **¿Qué función de la biblioteca json se utiliza para convertir una cadena de texto JSON en un objeto Python?**
-	1. json.dumps()
-	2. <span style={{color:'red'}}>json.loads()</span>
-	3. json.dump()
-	4. json.load()
-
-5. **De los siguientes enunciados, ¿cuál es el principal propósito de la deserialización de información en el contexto de la creación de clases en Python?**
-	1. Convertir objetos Python en formato JSON
-	2. Convertir objetos Python en cadenas de texto JSON
-	3. <span style={{color:'red'}}>Convertir datos JSON en objetos Python para su manipulación en el código</span>
-	4. Convertir datos JSON en datos XML
+<Quiz questions={[
+  {
+    question: "De los siguientes enunciados, ¿cuál es el propósito principal de la deserialización de información en Python?",
+    options: [
+      "Convertir datos en formato JSON en objetos Python",
+      "Convertir objetos Python en formato JSON",
+      "Convertir datos JSON en datos XML",
+      "Convertir objetos Python en cadenas de texto JSON"
+    ],
+    correctIndex: 0
+  },
+  {
+    question: "De los siguientes enunciados, ¿cuál es la función de la biblioteca json que se utiliza para convertir un objeto Python en una cadena de texto JSON?",
+    options: [
+      "json.loads()",
+      "json.load()",
+      "json.dumps()",
+      "json.dump()"
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "¿Cuál es la función de la biblioteca json que se utiliza para cargar datos desde un archivo JSON?",
+    options: [
+      "json.loads()",
+      "json.dumps()",
+      "json.dump()",
+      "json.load()"
+    ],
+    correctIndex: 3
+  },
+  {
+    question: "¿Qué función de la biblioteca json se utiliza para convertir una cadena de texto JSON en un objeto Python?",
+    options: [
+      "json.dumps()",
+      "json.loads()",
+      "json.dump()",
+      "json.load()"
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "De los siguientes enunciados, ¿cuál es el principal propósito de la deserialización de información en el contexto de la creación de clases en Python?",
+    options: [
+      "Convertir objetos Python en formato JSON",
+      "Convertir objetos Python en cadenas de texto JSON",
+      "Convertir datos JSON en objetos Python para su manipulación en el código",
+      "Convertir datos JSON en datos XML"
+    ],
+    correctIndex: 2
+  }
+]} />

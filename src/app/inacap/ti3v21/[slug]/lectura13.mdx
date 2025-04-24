@@ -1,3 +1,5 @@
+import { Quiz } from '@/components/QuizComponent';
+
 # Registra data obtenida en base de datos"
 
 ## ¿Qué es una API?
@@ -60,32 +62,55 @@ conn.close()
 
 # Actividad de Práctica 13
 
-1. **De los siguientes enunciados, ¿cuál es el propósito principal de la biblioteca Requests en Python?**
-	1. <span style={{color:'red'}}>Interactuar con APIs y realizar solicitudes HTTP</span>
-	2. Realizar consultas a bases de datos relacionales
-	3. Generar gráficos y visualizaciones de datos
-	4. Realizar operaciones matemáticas avanzadas
-
-2. **De los siguientes enunciados, ¿cuál es el propósito de la función json.loads() en Python?**
-	1. Realizar una solicitud HTTP a una API
-	2. <span style={{color:'red'}}>Convertir una cadena de texto JSON en un objeto Python</span>
-	3. Insertar datos en una base de datos MySQL
-	4. Crear un archivo JSON a partir de un diccionario de Python
-
-3. **¿Cuál de las siguientes bibliotecas de Python se utiliza para interactuar con bases de datos MySQL?**
-	1. pandas
-	2. requests
-	3. json
-	4. <span style={{color:'red'}}>pymysql</span>
-
-4. **¿Qué método de los siguientes se utiliza para insertar datos en una tabla de una base de datos MySQL utilizando PyMySQL?**
-	1. execute_query()
-	2. <span style={{color:'red'}}>execute()</span>
-	3. fetchall()
-	4. insert_data()
-
-5. **¿Cuál de los siguientes enunciados es el propósito principal de la deserialización de datos en Python al interactuar con APIs y bases de datos?**
-	1. Convertir objetos Python en formato JSON
-	2. Enviar solicitudes HTTP a APIs
-	3. <span style={{color:'red'}}>Convertir datos en formato JSON en objetos Python para su manipulación</span>
-	4. Crear gráficos y visualizaciones de datos
+<Quiz questions={[
+  {
+    question: "De los siguientes enunciados, ¿cuál es el propósito principal de la biblioteca Requests en Python?",
+    options: [
+      "Interactuar con APIs y realizar solicitudes HTTP",
+      "Realizar consultas a bases de datos relacionales",
+      "Generar gráficos y visualizaciones de datos",
+      "Realizar operaciones matemáticas avanzadas"
+    ],
+    correctIndex: 0
+  },
+  {
+    question: "De los siguientes enunciados, ¿cuál es el propósito de la función json.loads() en Python?",
+    options: [
+      "Realizar una solicitud HTTP a una API",
+      "Convertir una cadena de texto JSON en un objeto Python",
+      "Insertar datos en una base de datos MySQL",
+      "Crear un archivo JSON a partir de un diccionario de Python"
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "¿Cuál de las siguientes bibliotecas de Python se utiliza para interactuar con bases de datos MySQL?",
+    options: [
+      "pandas",
+      "requests",
+      "json",
+      "pymysql"
+    ],
+    correctIndex: 3
+  },
+  {
+    question: "¿Qué método de los siguientes se utiliza para insertar datos en una tabla de una base de datos MySQL utilizando PyMySQL?",
+    options: [
+      "execute_query()",
+      "execute()",
+      "fetchall()",
+      "insert_data()"
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "¿Cuál de los siguientes enunciados es el propósito principal de la deserialización de datos en Python al interactuar con APIs y bases de datos?",
+    options: [
+      "Convertir objetos Python en formato JSON",
+      "Enviar solicitudes HTTP a APIs",
+      "Convertir datos en formato JSON en objetos Python para su manipulación",
+      "Crear gráficos y visualizaciones de datos"
+    ],
+    correctIndex: 2
+  }
+]} />

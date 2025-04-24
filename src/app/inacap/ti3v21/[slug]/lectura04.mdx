@@ -1,3 +1,5 @@
+import { Quiz } from '@/components/QuizComponent';
+
 # Solucionando un problema con Diagrma de clases UML
 
 ## Problema
@@ -81,35 +83,59 @@ Relación de cantidad entre las distintas asociaciones de clases
     src="/ti3v21/images/fig31.png"
     style={{ display: 'block', margin: '0 auto', width:'70%' }} 
 />
+<br/>
 
 # Actividad de Práctica 04
 
-1. **¿Cuál de las siguientes opcionres describe correctamente el propósito principal de un diagrama de clases?**
-	1. Representar la secuencia temporal de un proceso
-	2. <span style={{color:'red'}}>Visualizar las relaciones estáticas entre las clases en un sistema</span>
-	3. Mostrar la distribución de componentes en un sistema
-	4. Ilustrar las interacciones entre objetos en tiempo real
-
-2. **¿Cuál de estos símbolos se suele representar una asociación en un diagrama de clases?**
-	1. Flecha con punta vacía
-	2. Rombo
-	3. <span style={{color:'red'}}>Línea sólida</span>
-	4. Flecha doble
-
-3. **¿Cuál es la función principal de una clase abstracta en un diagrama de clases?**
-	1. <span style={{color:'red'}}>Ser una plantilla para otras clases</span>
-	2. Representar una instancia específica
-	3. Indicar una asociación débil
-	4. Flecha doble
-
-4. **¿Qué representa el símbolo de multiplicidad en una asociación en un diagrama de clases?**
-	1. La dirección de la asociación
-	2. El tipo de relación
-	3. <span style={{color:'red'}}>El número de instancias de la clase relacionada</span>
-	4. La visibilidad de los atributos
-
-5. **¿Cuál es el propósito principal de la herencia en un diagrama de clases?**
-	1. Línea punteada con flecha
-	2. Representar asociaciones entre objetos en tiempo real
-	3. Indicar una relación de composición entre clases
-	4. <span style={{color:'red'}}>Compartir atributos y comportamientos entre clases</span>
+<Quiz questions={[
+  {
+    question: "¿Cuál de las siguientes opciones describe correctamente el propósito principal de un diagrama de clases?",
+    options: [
+      "Representar la secuencia temporal de un proceso",
+      "Visualizar las relaciones estáticas entre las clases en un sistema",
+      "Mostrar la distribución de componentes en un sistema",
+      "Ilustrar las interacciones entre objetos en tiempo real"
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "¿Cuál de estos símbolos se suele representar una asociación en un diagrama de clases?",
+    options: [
+      "Flecha con punta vacía",
+      "Rombo",
+      "Línea sólida",
+      "Flecha doble"
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "¿Cuál es la función principal de una clase abstracta en un diagrama de clases?",
+    options: [
+      "Ser una plantilla para otras clases",
+      "Representar una instancia específica",
+      "Indicar una asociación débil",
+      "Flecha doble"
+    ],
+    correctIndex: 0
+  },
+  {
+    question: "¿Qué representa el símbolo de multiplicidad en una asociación en un diagrama de clases?",
+    options: [
+      "La dirección de la asociación",
+      "El tipo de relación",
+      "El número de instancias de la clase relacionada",
+      "La visibilidad de los atributos"
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "¿Cuál es el propósito principal de la herencia en un diagrama de clases?",
+    options: [
+      "Línea punteada con flecha",
+      "Representar asociaciones entre objetos en tiempo real",
+      "Indicar una relación de composición entre clases",
+      "Compartir atributos y comportamientos entre clases"
+    ],
+    correctIndex: 3
+  }
+]} />

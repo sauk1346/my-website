@@ -1,3 +1,5 @@
+import { Quiz } from '@/components/QuizComponent';
+
 # Scripts Seguros en Python
 
 ## Librería bcrypt
@@ -19,33 +21,56 @@ pip install bcrypt
 
 # Actividad de Práctica 10
 
-1. **¿Qué es un "Salt" en el contexto de la seguridad de contraseñas?**
-	1. <span style={{color:'red'}}>Un valor aleatorio único combinado con la contraseña antes de aplicar la función de hash.</span>
-	2. Una barrera simbólica para mejorar el sabor de las contraseñas.
-	3. El resultado de una función de hash aplicada a una contraseña.
-	4. Un tipo de ataque cibernético.
-
-2. **¿Cuál de los siguientes algoritmos de hash es comúnmente utilizado para almacenar contraseñas de manera segura?**
-	1. MD5
-	2. <span style={{color:'red'}}>SHA-256</span>
-	3. SHA-1
-	4. CRC32
-
-3. **¿Cuál de los siguientes enunciados corresponde el propósito principal de la autenticación de usuarios en scripts Python seguros?**
-	1. Mejorar la velocidad de ejecución de los scripts.
-	2. Garantizar la integridad de los datos almacenados.
-	3. Ignorar cualquier error potencial.
-	4. <span style={{color:'red'}}>Verificar la identidad de los usuarios que intentan acceder al sistema.</span>
-
-4. **¿Por qué es importante utilizar funciones de hash irreversibles al almacenar contraseñas en una base de datos?**
-	1. Facilita la recuperación de contraseñas olvidadas.
-	2. <span style={{color:'red'}}>Previene el robo de identidad y proteger la confidencialidad.</span>
-	3. Asegura que las contraseñas sean visibles en la base de datos.
-	4. Acelera el proceso de comparación de contraseñas.
-
-5. **¿Cómo contribuye la aplicación de funciones hash a la seguridad de los datos sensibles almacenados en una base de datos?**
-	1. Facilita la manipulación directa de los datos.
-	2. Aumenta el tamaño de la base de datos.
-	3. <span style={{color:'red'}}>Proporciona una capa adicional de seguridad al ocultar los datos reales.</span>
-	4. Ralentiza el acceso a los datos almacenados.
+<Quiz questions={[
+  {
+    question: "¿Qué es un \"Salt\" en el contexto de la seguridad de contraseñas?",
+    options: [
+      "Un valor aleatorio único combinado con la contraseña antes de aplicar la función de hash.",
+      "Una barrera simbólica para mejorar el sabor de las contraseñas.",
+      "El resultado de una función de hash aplicada a una contraseña.",
+      "Un tipo de ataque cibernético."
+    ],
+    correctIndex: 0
+  },
+  {
+    question: "¿Cuál de los siguientes algoritmos de hash es comúnmente utilizado para almacenar contraseñas de manera segura?",
+    options: [
+      "MD5",
+      "SHA-256",
+      "SHA-1",
+      "CRC32"
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "¿Cuál de los siguientes enunciados corresponde el propósito principal de la autenticación de usuarios en scripts Python seguros?",
+    options: [
+      "Mejorar la velocidad de ejecución de los scripts.",
+      "Garantizar la integridad de los datos almacenados.",
+      "Ignorar cualquier error potencial.",
+      "Verificar la identidad de los usuarios que intentan acceder al sistema."
+    ],
+    correctIndex: 3
+  },
+  {
+    question: "¿Por qué es importante utilizar funciones de hash irreversibles al almacenar contraseñas en una base de datos?",
+    options: [
+      "Facilita la recuperación de contraseñas olvidadas.",
+      "Previene el robo de identidad y proteger la confidencialidad.",
+      "Asegura que las contraseñas sean visibles en la base de datos.",
+      "Acelera el proceso de comparación de contraseñas."
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "¿Cómo contribuye la aplicación de funciones hash a la seguridad de los datos sensibles almacenados en una base de datos?",
+    options: [
+      "Facilita la manipulación directa de los datos.",
+      "Aumenta el tamaño de la base de datos.",
+      "Proporciona una capa adicional de seguridad al ocultar los datos reales.",
+      "Ralentiza el acceso a los datos almacenados."
+    ],
+    correctIndex: 2
+  }
+]} />
 

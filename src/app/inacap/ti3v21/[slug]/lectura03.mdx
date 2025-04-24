@@ -1,3 +1,5 @@
+import { Quiz } from '@/components/QuizComponent';
+
 # Relaciones entre Clases
 
 ## Diagrama de Clases
@@ -52,34 +54,58 @@
     style={{ display: 'block', margin: '0 auto', width:'70%' }} 
 />
 <br/>
+
 # Actividad de Práctica 03
 
-1. **¿Qué tipo de relación entre clases es más probable encontrar al analizar un problema de suministro y demanda en un mercado?**
-	1. Relación de herencia
-	2. Relación de agregación
-	3. Relación de composición
-	4. <span style={{color:'red'}}>Relación de asociación</span>
-
-2. **¿Cuál es el símbolo que indica una asociación entre dos clases en un diagrama de clases UML?**
-	1. Línea punteada
-	2. Flecha hacia adelante
-	3. <span style={{color:'red'}}>Línea sólida</span>
-	4. Flecha doble
-
-3. **¿Qué símbolo se utiliza para indicar la herencia entre dos clases en un diagrama de clases UML?**
-	1. Línea punteada
-	2. Triángulo vacío
-	3. Flecha doble
-	4. <span style={{color:'red'}}>Línea sólida con una flecha</span>
-
-4. **¿Qué símbolo se emplea para mostrar una relación de composición entre dos clases en undiagrama de clases UML?**
-	1. Flecha doble
-	2. <span style={{color:'red'}}>Línea sólida con un diamante pintado de negro</span>
-	3. Línea punteada
-	4. Rombo lleno
-
-5. **¿Qué símbolo que se emplea para mostrar una relación de agregación entre dos clases en un diagrama de clases UML?**
-	1. Línea punteada con flecha
-	2. Rombo lleno
-	3. <span style={{color:'red'}}>Línea sólida con un diamante pintado de blanco</span>
-	4. Flecha doble
+<Quiz questions={[
+  {
+    question: "¿Qué tipo de relación entre clases es más probable encontrar al analizar un problema de suministro y demanda en un mercado?",
+    options: [
+      "Relación de herencia",
+      "Relación de agregación",
+      "Relación de composición",
+      "Relación de asociación"
+    ],
+    correctIndex: 3
+  },
+  {
+    question: "¿Cuál es el símbolo que indica una asociación entre dos clases en un diagrama de clases UML?",
+    options: [
+      "Línea punteada",
+      "Flecha hacia adelante",
+      "Línea sólida",
+      "Flecha doble"
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "¿Qué símbolo se utiliza para indicar la herencia entre dos clases en un diagrama de clases UML?",
+    options: [
+      "Línea punteada",
+      "Triángulo vacío",
+      "Flecha doble",
+      "Línea sólida con una flecha"
+    ],
+    correctIndex: 3
+  },
+  {
+    question: "¿Qué símbolo se emplea para mostrar una relación de composición entre dos clases en un diagrama de clases UML?",
+    options: [
+      "Flecha doble",
+      "Línea sólida con un diamante pintado de negro",
+      "Línea punteada",
+      "Rombo lleno"
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "¿Qué símbolo se emplea para mostrar una relación de agregación entre dos clases en un diagrama de clases UML?",
+    options: [
+      "Línea punteada con flecha",
+      "Rombo lleno",
+      "Línea sólida con un diamante pintado de blanco",
+      "Flecha doble"
+    ],
+    correctIndex: 2
+  }
+]} />

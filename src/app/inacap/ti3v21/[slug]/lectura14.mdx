@@ -1,3 +1,5 @@
+import { Quiz } from '@/components/QuizComponent';
+
 # Requerimientos de la solución
 
 ## Identificación de los requerimientos
@@ -8,34 +10,55 @@
 
 # Actividad de práctica 14
 
-1. **De los siguientes enunciados, ¿cuál es el propósito principal de identificar los requerimientos de la solución en el desarrollo de software?**
-	1. <span style={{color:'red'}}>Establecer una dirección clara y comprender las necesidades del cliente.</span>
-	2. Acelerar el proceso de desarrollo.
-	3. Reducir costos operativos.
-	4. Minimizar el tiempo de prueba.
-
-2. **¿Qué beneficio proporciona la identificación adecuada de los requerimientos en el desarrollo de software?**
-	1. Mayor complejidad del proyecto.
-	2. Mayor probabilidad de errores y fallas.
-	3. <span style={{color:'red'}}>Reducción de los costos de desarrollo.</span>
-	4. Menor comunicación entre los equipos.
-
-3. **De las siguientes afirmaciones, ¿qué desventaja podría surgir si los requerimientos no se identifican correctamente?**
-	1. Aumento de la comunicación entre los equipos.
-	2. Mayor comprensión de las necesidades del cliente.
-	3. Reducción de errores y fallas en el producto final.
-	4. <span style={{color:'red'}}>Ambigüedad y malentendidos en el desarrollo del software.</span>
-
-4. **¿Cuál de las siguientes opciones es una ventaja clave de identificar los requerimientos de la solución al principio del proceso de desarrollo?**
-	1. Mayor resistencia al cambio.
-	2. <span style={{color:'red'}}>Mejor comunicación entre los equipos.</span>
-	3. Menor probabilidad de cumplir con los objetivos del proyecto.
-	4. Mayor complejidad en la planificación del proyecto.
-
-5. **De las siguientes opciones, ¿cuál ayuda a establecer claramente los objetivos y funcionalidades del software?**
-	1. Desarrollo ágil.
-	2. Pruebas unitarias.
-	3. <span style={{color:'red'}}>Identificación de requerimientos.</span>
-	4. Documentación del código.
-
-
+<Quiz questions={[
+  {
+    question: "De los siguientes enunciados, ¿cuál es el propósito principal de identificar los requerimientos de la solución en el desarrollo de software?",
+    options: [
+      "Establecer una dirección clara y comprender las necesidades del cliente.",
+      "Acelerar el proceso de desarrollo.",
+      "Reducir costos operativos.",
+      "Minimizar el tiempo de prueba."
+    ],
+    correctIndex: 0
+  },
+  {
+    question: "¿Qué beneficio proporciona la identificación adecuada de los requerimientos en el desarrollo de software?",
+    options: [
+      "Mayor complejidad del proyecto.",
+      "Mayor probabilidad de errores y fallas.",
+      "Reducción de los costos de desarrollo.",
+      "Menor comunicación entre los equipos."
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "De las siguientes afirmaciones, ¿qué desventaja podría surgir si los requerimientos no se identifican correctamente?",
+    options: [
+      "Aumento de la comunicación entre los equipos.",
+      "Mayor comprensión de las necesidades del cliente.",
+      "Reducción de errores y fallas en el producto final.",
+      "Ambigüedad y malentendidos en el desarrollo del software."
+    ],
+    correctIndex: 3
+  },
+  {
+    question: "¿Cuál de las siguientes opciones es una ventaja clave de identificar los requerimientos de la solución al principio del proceso de desarrollo?",
+    options: [
+      "Mayor resistencia al cambio.",
+      "Mejor comunicación entre los equipos.",
+      "Menor probabilidad de cumplir con los objetivos del proyecto.",
+      "Mayor complejidad en la planificación del proyecto."
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "De las siguientes opciones, ¿cuál ayuda a establecer claramente los objetivos y funcionalidades del software?",
+    options: [
+      "Desarrollo ágil.",
+      "Pruebas unitarias.",
+      "Identificación de requerimientos.",
+      "Documentación del código."
+    ],
+    correctIndex: 2
+  }
+]} />

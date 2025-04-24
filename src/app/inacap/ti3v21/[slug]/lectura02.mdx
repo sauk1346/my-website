@@ -1,3 +1,5 @@
+import { Quiz } from '@/components/QuizComponent';
+
 # Símbolos de los diagramas de clases en UML
 
 ## Diagrama UML
@@ -46,35 +48,59 @@
     src="/ti3v21/images/fig18.png"
     style={{ display: 'block', margin: '0 auto', width:'70%' }} 
 />
+<br/>
 
-## Actividad de Práctica 02
+# Actividad de Práctica 02
 
-1. **¿Qué símbolo se utiliza para representar una clase en un diagrama de clases UML?**
-	1. Fecha
-	2. <span style={{color:'red'}}>Cuadro</span>
-	3. Rombo
-	4. Círculo
-
-2. **¿Qué símbolo se utiliza para indicar la visibilidad pública de los miembros de una clase en un diagrama de clases UML?**
-	1. <span style={{color:'red'}}>Símbolo más (+)</span>
-	2. Un arterísco (*)
-	3. Símbolo numeral (#)
-	4. Un guión (-)
-
-3. **¿Qué símbolo se utiliza para representar una clase abstracta en UML?**
-	1. abstract
-	2. \{abstract\}
-	3. \[abstract\]
-	4. <span style={{color:'red'}}>\<\<abstract\>\></span>
-
-4. **¿Qué símbolo se utiliza para indicar la visibilidad heredada de los atributos de una clase en un diagrama de clases UML?**
-	1. Un arterísco (*)
-	2. <span style={{color:'red'}}>Símbolo numeral (#)</span>
-	3. Un guión (-)
-	4. Símbolo más (+)
-
-5. **¿Cuál es la forma correcta de representar un parámetro de un método en un diagrama de clases UML?**
-	1. (parámetro)
-	2. \{parámetro\}
-	3. <span style={{color:'red'}}>parámetro: tipoDato</span>
-	4. :parámetro:
+<Quiz questions={[
+  {
+    question: "¿Qué símbolo se utiliza para representar una clase en un diagrama de clases UML?",
+    options: [
+      "Fecha",
+      "Cuadro",
+      "Rombo",
+      "Círculo"
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "¿Qué símbolo se utiliza para indicar la visibilidad pública de los miembros de una clase en un diagrama de clases UML?",
+    options: [
+      "Símbolo más (+)",
+      "Un asterisco (*)",
+      "Símbolo numeral (#)",
+      "Un guión (-)"
+    ],
+    correctIndex: 0
+  },
+  {
+    question: "¿Qué símbolo se utiliza para representar una clase abstracta en UML?",
+    options: [
+      "abstract",
+      "{abstract}",
+      "[abstract]",
+      "<<abstract>>"
+    ],
+    correctIndex: 3
+  },
+  {
+    question: "¿Qué símbolo se utiliza para indicar la visibilidad heredada de los atributos de una clase en un diagrama de clases UML?",
+    options: [
+      "Un asterisco (*)",
+      "Símbolo numeral (#)",
+      "Un guión (-)",
+      "Símbolo más (+)"
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "¿Cuál es la forma correcta de representar un parámetro de un método en un diagrama de clases UML?",
+    options: [
+      "(parámetro)",
+      "{parámetro}",
+      "parámetro: tipoDato",
+      ":parámetro:"
+    ],
+    correctIndex: 2
+  }
+]} />

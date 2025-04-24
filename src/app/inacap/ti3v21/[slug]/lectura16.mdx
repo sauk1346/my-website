@@ -1,3 +1,5 @@
+import { Quiz } from '@/components/QuizComponent';
+
 # Aplicando metodologías ágiles de desarrollo
 
 ## ¿Qué es?
@@ -50,33 +52,55 @@ A pesar de haber muchas, todas tienen el mismo enfoque: iteración rápida, la r
 
 # Actividad de Práctica 16
 
-1. **¿Cuál es el rol de Scrum Master en un equipo ágil?**
-	a. <span style={{color:'red'}}>Facilita el proceso Scrum, elimina obstáculos y promueve un ambiente de trabajo colaborativo.</span>
-	b. Representa los intereses del cliente y define los requisitos del proyecto.
-	c. Se encarga de realizar las tareas de desarrollo del proyecto.
-	d. Prioriza y gestiona el backlog del producto.
-
-2. **¿Cuál de las siguientes opciones es la función del Product Owner en un equipo ágil?**
-
-	a. Facilita el proceso Scrum y eliminta obstáculos.
-	b. Realiza las tareas de desarrollo del proyecto.
-	c. <span style={{color:'red'}}>Representa los intereses del cliente y define los requisitos del proyecto.</span>
-	d. Coordina las actividades del equipo durante el Sprint.
-
-3. **¿Qué artefacto de Scrum contiene una lista priorizada de todos los elementos de trabajo que se espera que se realicen en el proyecto?**
-	a. Incremento
-	b. Sprint Backlog
-	c. Sprint Goal
-	d. <span style={{color:'red'}}>Backlog del Producto</span>
-
-4. **¿Cuál es el objetivo de la reunión de planificación del Sprint en Scrum?**
-	a. Revisar el trabajo realizado durante el Sprint
-	b. <span style={{color:'red'}}>Identificar y seleccionar los elementos del backlog del producto que se trabajarán durante el Sprint</span>
-	c. Demostrar el trabajo completado al Product Owner y a las partes interesadas
-	d. Reflexionar sobre el desempeño del equipo durante el Sprint
-
-5. **¿Qué evento de Scrum proporciona una oportunidad para reflexionar sobre el desempeño del equipo durante el Sprint y buscar formas de mejorar en el futuro?**
-	a. Reunión Diaria de Scrum
-	b. Revisión del Sprint
-	c. <span style={{color:'red'}}>Retrospectiva del Sprint</span>
-	d. Reunión de Planificación del Sprint
+<Quiz questions={[
+  {
+    question: "¿Cuál es el rol de Scrum Master en un equipo ágil?",
+    options: [
+      "Facilita el proceso Scrum, elimina obstáculos y promueve un ambiente de trabajo colaborativo.",
+      "Representa los intereses del cliente y define los requisitos del proyecto.",
+      "Se encarga de realizar las tareas de desarrollo del proyecto.",
+      "Prioriza y gestiona el backlog del producto."
+    ],
+    correctIndex: 0
+  },
+  {
+    question: "¿Cuál de las siguientes opciones es la función del Product Owner en un equipo ágil?",
+    options: [
+      "Facilita el proceso Scrum y elimina obstáculos.",
+      "Realiza las tareas de desarrollo del proyecto.",
+      "Representa los intereses del cliente y define los requisitos del proyecto.",
+      "Coordina las actividades del equipo durante el Sprint."
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "¿Qué artefacto de Scrum contiene una lista priorizada de todos los elementos de trabajo que se espera que se realicen en el proyecto?",
+    options: [
+      "Incremento",
+      "Sprint Backlog",
+      "Sprint Goal",
+      "Backlog del Producto"
+    ],
+    correctIndex: 3
+  },
+  {
+    question: "¿Cuál es el objetivo de la reunión de planificación del Sprint en Scrum?",
+    options: [
+      "Revisar el trabajo realizado durante el Sprint",
+      "Identificar y seleccionar los elementos del backlog del producto que se trabajarán durante el Sprint",
+      "Demostrar el trabajo completado al Product Owner y a las partes interesadas",
+      "Reflexionar sobre el desempeño del equipo durante el Sprint"
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "¿Qué evento de Scrum proporciona una oportunidad para reflexionar sobre el desempeño del equipo durante el Sprint y buscar formas de mejorar en el futuro?",
+    options: [
+      "Reunión Diaria de Scrum",
+      "Revisión del Sprint",
+      "Retrospectiva del Sprint",
+      "Reunión de Planificación del Sprint"
+    ],
+    correctIndex: 2
+  }
+]} />

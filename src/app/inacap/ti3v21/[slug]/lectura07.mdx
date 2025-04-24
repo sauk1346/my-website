@@ -1,4 +1,5 @@
-import styles from '@/styles/clases.module.css'
+import ExternalLink from '@/components/ExternalLink'
+import { Quiz } from '@/components/QuizComponent';
 
 # Librerías de Python con conexión a base de datos
 
@@ -6,7 +7,7 @@ import styles from '@/styles/clases.module.css'
 
 - Es un repositorio centralizado de paquetes para Python
 - Es un almacén en línea que permite a los desarrolladores compartir sus bibliotecas y aplicaciones de manera fácil y accesible
-- Link: <a href="https://pypi.org/" target="_blank" rel="noopener noreferrer" className={styles.link}>https://pypi.org/</a>
+- Link: <ExternalLink href="https://pypi.org/">https://pypi.org/</ExternalLink>
 
 ## Conectores a Bases de Datos
 
@@ -30,34 +31,57 @@ Desde la terminal, ejecutar el comando:
 pip install pymysql
 ```
 
-## Actividad de Práctica 07
+# Actividad de Práctica 07
 
-1. **¿Cuál es el propósito principal de PyPI en el contexto de librerías Python para conexión a bases de datos?**
-	1. <span style={{color:'red'}}>Servir como repositorio oficial para compartir, distribuir y descargar librerías Python</span>
-	2. Proporcionar tutoriales de programación en Python
-	3. Albergar únicamente librerías para desarrollo web
-	4. Ser un foro de discusión para desarrolladores
-
-2. **¿Cómo se instala una librería desde PyPI utilizando pip?**
-	1. pip load nombre_de_la_libreria
-	2. pip download nombre_de_la_libreria
-	3. <span style={{color:'red'}}>pip install nombre_de_la_libreria</span>
-	4. pip get nombre_de_la_libreria
-
-3. **¿Por qué es importante considerar la pertinencia con el sistema gestor de bases de datos al elegir una librería de conexión?**
-	1. PyPI sólo admite librerías compatibles con sistemas gestores específicos
-    2. Sólo las librerías oficiales de Python son pertinentes
-	3. Hay que asegurar que la librería sea compatible con el sistema de control de versiones
-	4. <span style={{color:'red'}}>Garantizar que la librería pueda comunicarse efectivamente con el sistema de gestión de bases de datos que estás utilizando</span>
-
-4. **¿Qué componente esencial proporciona PyPI para facilitar la comprensión y utilización efectiva de una librería?**
-	1. Número de descargas
-	2. <span style={{color:'red'}}>Documentación detallada</span>
-	3. Nivel de popularidad
-	4. Número de issues en GitHub
-
-5. **¿Cuál es el propósito principal al especificar la versión de una librería al instalarla desde PyPI?**
-	1. Controlar la velocidad de descarga
-	2. Proporcionar información adicional a la librería
-	3. <span style={{color:'red'}}>Mantener la coherencia y prevenir conflictos de dependencias</span>
-	4. Hay que asegurar que la librería sea compatible con el sistema operativo
+<Quiz questions={[
+  {
+    question: "¿Cuál es el propósito principal de PyPI en el contexto de librerías Python para conexión a bases de datos?",
+    options: [
+      "Servir como repositorio oficial para compartir, distribuir y descargar librerías Python",
+      "Proporcionar tutoriales de programación en Python",
+      "Albergar únicamente librerías para desarrollo web",
+      "Ser un foro de discusión para desarrolladores"
+    ],
+    correctIndex: 0
+  },
+  {
+    question: "¿Cómo se instala una librería desde PyPI utilizando pip?",
+    options: [
+      "pip load nombre_de_la_libreria",
+      "pip download nombre_de_la_libreria",
+      "pip install nombre_de_la_libreria",
+      "pip get nombre_de_la_libreria"
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "¿Por qué es importante considerar la pertinencia con el sistema gestor de bases de datos al elegir una librería de conexión?",
+    options: [
+      "PyPI sólo admite librerías compatibles con sistemas gestores específicos",
+      "Sólo las librerías oficiales de Python son pertinentes",
+      "Hay que asegurar que la librería sea compatible con el sistema de control de versiones",
+      "Garantizar que la librería pueda comunicarse efectivamente con el sistema de gestión de bases de datos que estás utilizando"
+    ],
+    correctIndex: 3
+  },
+  {
+    question: "¿Qué componente esencial proporciona PyPI para facilitar la comprensión y utilización efectiva de una librería?",
+    options: [
+      "Número de descargas",
+      "Documentación detallada",
+      "Nivel de popularidad",
+      "Número de issues en GitHub"
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "¿Cuál es el propósito principal al especificar la versión de una librería al instalarla desde PyPI?",
+    options: [
+      "Controlar la velocidad de descarga",
+      "Proporcionar información adicional a la librería",
+      "Mantener la coherencia y prevenir conflictos de dependencias",
+      "Hay que asegurar que la librería sea compatible con el sistema operativo"
+    ],
+    correctIndex: 2
+  }
+]} />

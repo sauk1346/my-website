@@ -1,3 +1,5 @@
+import { Quiz } from '@/components/QuizComponent';
+
 # Códigos de herencia, encapsulamiento y polimorfismo
 
 ## El método "constructor" de la Clase
@@ -222,32 +224,55 @@ print("Tipo de combustible:", auto_carreras.tipo_combustible())
 
 # Actividad de Práctica 06
 
-1. **¿Cómo se establece la herencia entre dos clases en Python?**
-	1. <span style={{color:'red'}}>Con la declaración de clase "class NuevaClase(ClaseExistente)"</span>
-	2. Usando la palabra clave extends
-	3. Utilizando el operador >>
-	4. Mediante la palabra clave inherits
-
-2. **¿Cómo se logra el encapsulamiento en Python?**
-	1. Definiendo la clase dentro de otra clase
-	2. <span style={{color:'red'}}>Mediante el uso de guiones bajos (_) al inicio del nombre de un atributo o método</span>
-	3. Declarando la clase con el modificador encapsulated
-	4. Utilizando la palabra clave private
-
-3. **En el contexto de polimorfismo, ¿cómo se crea una Clase abstracta en Python?**
-	1. Utilizando la palabra clave **common_interface** antes de la definición de la clase
-	2. Creando una función principal llamada **interface** en cada clase
-	3. Definiendo una clase con el nombre **interface** y heredándola
-	4. <span style={{color:'red'}}>Declarando un conjunto de métodos **abstractos** en una clase base</span>
-
-4. **En Python, ¿cuál es el modificador que se utiliza para indicar una atributo o método como privado?**
-	1. Palabra reservada **secure**
-	2. Palabra reservada **hidden**
-	3. <span style={{color:'red'}}><strong>Guiones bajos (_)</strong> al inicio del nombre</span>
-	4. Palabra reservada **private**
-
-5. **¿Cómo se aplica el polimorfismo en Python?**
-	1. Definiendo una función principal llamada polymorph en cada clase
-	2. Creando una clase única para cada tipo de objeto
-	3. <span style={{color:'red'}}>Permitiendo que objetos de diferentes clases respondan al mismo método definido en una interfaz común</span>
-	4. Utilizando la palabra reservada poly en la declaración de clase
+<Quiz questions={[
+  {
+    question: "¿Cómo se establece la herencia entre dos clases en Python?",
+    options: [
+      "Con la declaración de clase \"class NuevaClase(ClaseExistente)\"",
+      "Usando la palabra clave extends",
+      "Utilizando el operador >>",
+      "Mediante la palabra clave inherits"
+    ],
+    correctIndex: 0
+  },
+  {
+    question: "¿Cómo se logra el encapsulamiento en Python?",
+    options: [
+      "Definiendo la clase dentro de otra clase",
+      "Mediante el uso de guiones bajos (_) al inicio del nombre de un atributo o método",
+      "Declarando la clase con el modificador encapsulated",
+      "Utilizando la palabra clave private"
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "En el contexto de polimorfismo, ¿cómo se crea una Clase abstracta en Python?",
+    options: [
+      "Utilizando la palabra clave common_interface antes de la definición de la clase",
+      "Creando una función principal llamada interface en cada clase",
+      "Definiendo una clase con el nombre interface y heredándola",
+      "Declarando un conjunto de métodos abstractos en una clase base"
+    ],
+    correctIndex: 3
+  },
+  {
+    question: "En Python, ¿cuál es el modificador que se utiliza para indicar un atributo o método como privado?",
+    options: [
+      "Palabra reservada secure",
+      "Palabra reservada hidden",
+      "Guiones bajos (_) al inicio del nombre",
+      "Palabra reservada private"
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "¿Cómo se aplica el polimorfismo en Python?",
+    options: [
+      "Definiendo una función principal llamada polymorph en cada clase",
+      "Creando una clase única para cada tipo de objeto",
+      "Permitiendo que objetos de diferentes clases respondan al mismo método definido en una interfaz común",
+      "Utilizando la palabra reservada poly en la declaración de clase"
+    ],
+    correctIndex: 2
+  }
+]} />

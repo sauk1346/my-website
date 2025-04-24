@@ -1,3 +1,5 @@
+import { Quiz } from '@/components/QuizComponent';
+
 # Conceptos Básicos de POO
 
 ## POO
@@ -61,36 +63,56 @@
 - Se pueden definir métodos y atributos, pero no se pueden instanciar objetos
 - Son usadas para construir subclases y con éstas instancias objetos
 
-
 # Actividad de Práctica 01
-
-1. **¿Qué es una clase en programación orientada a objetos?**
-	1. <span style={{color:'red'}}>Un modelo o plantilla para crear objetos.</span>
-	2. Una instancia de un objeto.
-	3. Un conjunto de variables.
-	4. Un método que realiza operaciones.
-
-2. **¿Cuál es el propósito de la herencia en programación orientada a objetos?**
-	1. Definir variables en una clase.
-	2. Crear múltiples instancias de una clase.
-	3. <span style={{color:'red'}}>Permitir que una clase herede atributos y métodos de otra.</span>
-	4. Combinar varias clases en una.
-
-3. **¿Qué es el polimorfismo en programación orientada a objetos?**
-	1. La capacidad de una clase para heredar de múltiples clases.
-	2. La capacidad de una clase para tener múltiples instancias.
-	3. La capacidad de una clase para cambiar su estructura interna.
-	4. <span style={{color:'red'}}>La capacidad de una calses para tomar diferentes formas y comportarse de manera diferente.</span>
-
-4. **¿Qué son los atributos en programación orientada a objetos?**
-	1. Funciones que realizan operaciones.
-	2. <span style={{color:'red'}}>Variables que almacenan datos.</span>
-	3. Métodos que definen la estructura de una clase.
-	4. Instrucciones para crear objetos.
-
-5. **¿Cuál es el propósito de los métodos en programación orientada a objetos?**
-	1. Definir variables en una clase.
-	2. Almacenar datos en una instancia.
-	3. <span style={{color:'red'}}>Realizar operaciones o acciones en un objeto.</span>
-	4. Crear instancias de una clase.
-
+<Quiz questions={[
+  {
+    question: "¿Qué es una clase en programación orientada a objetos?",
+    options: [
+      "Un modelo o plantilla para crear objetos.",
+      "Una instancia de un objeto.",
+      "Un conjunto de variables.",
+      "Un método que realiza operaciones."
+    ],
+    correctIndex: 0
+  },
+  {
+    question: "¿Cuál es el propósito de la herencia en programación orientada a objetos?",
+    options: [
+      "Definir variables en una clase.",
+      "Crear múltiples instancias de una clase.",
+      "Permitir que una clase herede atributos y métodos de otra.",
+      "Combinar varias clases en una."
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "¿Qué es el polimorfismo en programación orientada a objetos?",
+    options: [
+      "La capacidad de una clase para heredar de múltiples clases.",
+      "La capacidad de una clase para tener múltiples instancias.",
+      "La capacidad de una clase para cambiar su estructura interna.",
+      "La capacidad de una clase para tomar diferentes formas y comportarse de manera diferente."
+    ],
+    correctIndex: 3
+  },
+  {
+    question: "¿Qué son los atributos en programación orientada a objetos?",
+    options: [
+      "Funciones que realizan operaciones.",
+      "Variables que almacenan datos.",
+      "Métodos que definen la estructura de una clase.",
+      "Instrucciones para crear objetos."
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "¿Cuál es el propósito de los métodos en programación orientada a objetos?",
+    options: [
+      "Definir variables en una clase.",
+      "Almacenar datos en una instancia.",
+      "Realizar operaciones o acciones en un objeto.",
+      "Crear instancias de una clase."
+    ],
+    correctIndex: 2
+  }
+]} />

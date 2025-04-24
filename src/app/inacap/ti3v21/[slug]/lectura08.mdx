@@ -1,3 +1,5 @@
+import { Quiz } from '@/components/QuizComponent';
+
 # Manipulación de registros
 Se utilizará la librería PyMySql para la manipulación de registros de datos en bases de datos. Esto mediante operaciones CRUD (crear, leer, actualizar, eliminar)
 
@@ -70,32 +72,55 @@ connection.commit()
 
 # Actividad de Práctica 08
 
-1. **¿Por qué es beneficioso encapsular la lógica de conexión y manipulación de la base de datos en una clase?**
-	1. <span style={{color:'red'}}>Facilita la reutilización de código y simplifica el mantenimiento</span>
-	2. Reduce la velocidad de conexión
-	3. Permite que la aplicación sea menos segura
-	4. Complica la gestión de parámetros de conexión
-
-2. **¿Cuál es uno de los beneficios clave al contar con una clase de conexión en una aplicación?**
-	1. Solo es útil para aplicaciones pequeñas
-	2. Aumenta la complejidad de la aplicación
-	3. <span style={{color:'red'}}>Promueve la consistencia y simplifica el mantenimiento</span>
-	4. Facilita la repetición de la lógica de conexión en diferentes partes del código
-
-3. **¿Cuál es el propósito principal de la encapsulación en una clase de conexión?**
-	1. Aumentar la complejidad del código
-	2. Permitir que la aplicación sea menos segura
-	3. Facilitar la repetición de código
-	4. <span style={{color:'red'}}>Ocultar la lógica interna y proporcionar una interfaz controlada</span>
-
-4. **¿Por qué es esencial gestionar de manera segura el ciclo de vida de la conexión a la base de datos?**
-	1. Porque facilita la gestión de múltiples conexiones simultáneas
-	2. <span style={{color:'red'}}>Porque garantiza que los recursos de la base de datos se utilicen de manera eficiente y se liberen adecuadamente</span>
-	3. Porque permite que la aplicación sea más vulnerable
-	4. Porque permite aumentar la complejidad del código
-
-5. **¿Por qué es importante utilizar un usuario específico de base de datos en una aplicación en lugar de utilizar credenciales de administrador?**
-	1. Porque facilita la gestión de contraseñas
-	2. Porque los usuarios específicos no pueden realizar operaciones en la base de datos
-	3. <span style={{color:'red'}}>Porque aumenta la seguridad al restringir los privilegios según las necesidades de la aplicación</span>
-	4. Porque los usuarios específicos sólo son necesarios para aplicaciones web
+<Quiz questions={[
+  {
+    question: "¿Por qué es beneficioso encapsular la lógica de conexión y manipulación de la base de datos en una clase?",
+    options: [
+      "Facilita la reutilización de código y simplifica el mantenimiento",
+      "Reduce la velocidad de conexión",
+      "Permite que la aplicación sea menos segura",
+      "Complica la gestión de parámetros de conexión"
+    ],
+    correctIndex: 0
+  },
+  {
+    question: "¿Cuál es uno de los beneficios clave al contar con una clase de conexión en una aplicación?",
+    options: [
+      "Solo es útil para aplicaciones pequeñas",
+      "Aumenta la complejidad de la aplicación",
+      "Promueve la consistencia y simplifica el mantenimiento",
+      "Facilita la repetición de la lógica de conexión en diferentes partes del código"
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "¿Cuál es el propósito principal de la encapsulación en una clase de conexión?",
+    options: [
+      "Aumentar la complejidad del código",
+      "Permitir que la aplicación sea menos segura",
+      "Facilitar la repetición de código",
+      "Ocultar la lógica interna y proporcionar una interfaz controlada"
+    ],
+    correctIndex: 3
+  },
+  {
+    question: "¿Por qué es esencial gestionar de manera segura el ciclo de vida de la conexión a la base de datos?",
+    options: [
+      "Porque facilita la gestión de múltiples conexiones simultáneas",
+      "Porque garantiza que los recursos de la base de datos se utilicen de manera eficiente y se liberen adecuadamente",
+      "Porque permite que la aplicación sea más vulnerable",
+      "Porque permite aumentar la complejidad del código"
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "¿Por qué es importante utilizar un usuario específico de base de datos en una aplicación en lugar de utilizar credenciales de administrador?",
+    options: [
+      "Porque facilita la gestión de contraseñas",
+      "Porque los usuarios específicos no pueden realizar operaciones en la base de datos",
+      "Porque aumenta la seguridad al restringir los privilegios según las necesidades de la aplicación",
+      "Porque los usuarios específicos sólo son necesarios para aplicaciones web"
+    ],
+    correctIndex: 2
+  }
+]} />

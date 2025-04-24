@@ -1,8 +1,8 @@
-import styles from '@/styles/clases.module.css'
+import ExternalLink from '@/components/ExternalLink'
 
 # Evaluación 01
 
-- **Instrucciones:** <a href="/ti3v21/docs/prueba01.pdf" target="_blank" rel="noopener noreferrer" className={styles.link}>prueba01.pdf</a>
+- **Instrucciones:** <ExternalLink href="/ti3v21/docs/prueba01.pdf">prueba01.pdf</ExternalLink>
 
 ## Pregunta 01 (5 ptos)
 Desarrolle un programa que permita al usuario ingresar hasta donde desea la serie y despliegue por pantalla lo siguiente:
@@ -18,7 +18,7 @@ Ingrese hasta donde desea la serie: 10
 ```
 
 <details>
-	<summary style={{color:'red'}}>Solución</summary>
+	<summary>Solución</summary>
 
 ```python
 serie = int(input("Ingrese hasta donde desea la serie: "))
@@ -40,7 +40,7 @@ print("="+str(suma_serie))
 Desarrolle un programa que permita al usuario ingresar 10 números y al finalizar desplegar por pantalla cuántos fueron mayores y cuántos menores al primer número ingresado. Si ingresa un cero en el primer número debemos validar, enviar un mensaje de error y pedir que reintente.
 
 <details>
-	<summary style={{color:'red'}}>Solución</summary>
+	<summary>Solución</summary>
 
 ```python
 num1_valido = False
@@ -70,7 +70,7 @@ print(f"Números menores que {num1}: {cont_menor:.0f}")
 Desarrolle un programa que permita ingresar `n` números y al finalizar desplegar cuántos fueron primos.
 
 <details>
-	<summary style={{color:'red'}}>Solución</summary>
+	<summary>Solución</summary>
 
 ```python
 def es_primo(num):

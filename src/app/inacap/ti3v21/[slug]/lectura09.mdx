@@ -1,3 +1,5 @@
+import { Quiz } from '@/components/QuizComponent';
+
 # Manejo de Excepciones y jerarquías
 
 ## Bloques 
@@ -131,32 +133,55 @@ Error: [Errno 17] File exists: 'archivo_existente.txt'
 
 # Actividad de Práctica 09
 
-1. **¿Cuál es la función principal del bloque try en la gestión de excepciones en Python?**
-	1. <span style={{color:'red'}}>Definir cómo manejar excepciones</span>
-	2. Ejecutar código de forma normal 
-	3. Ignorar los errores
-	4. Realizar operaciones de limpieza
-
-2. **En la estructura de manejo de excepciones, ¿qué hace el bloque “except”?**
-	1. Es opcional y no es necesario especificar ninguna excepción
-	2. Ignora cualquier error potencial
-	3. <span style={{color:'red'}}>Maneja las excepciones que se producen en el bloque try</span>
-	4. Define el código que se ejecutará siempre
-
-3. **¿Cuál es el propósito principal del bloque “else” en la gestión de excepciones?**
-	1. Realizar operaciones de limpieza
-	2. Manejar excepciones específicas
-	3. Ignorar cualquier error potencial
-	4. <span style={{color:'red'}}>Ejecutar código solo si no hay excepciones en el bloque try</span>
-
-4. **¿Qué hace el bloque “finally” en la gestión de excepciones?**
-	1. aneja específicamente las excepciones
-	2. Define el código que se ejecutará siempre, independientemente si existen o no las excepciones
-	3. <span style={{color:'red'}}>Es opcional y no es necesario especificar ninguna excepción]</span>
-	4. Ignora las excepciones
-
-5. **¿Cuál es la ventaja de utilizar bloques “try-except” en la resolución de errores en Python?**
-	1. Permite que el código sea más complejo
-	2. Ignora por completo las excepciones
-	3. <span style={{color:'red'}}>Proporciona un enfoque estructurado para manejar errores y evitar la terminación abrupta del programa</span>
-	4. Utiliza la palabra reservada poly en la declaración de clase
+<Quiz questions={[
+  {
+    question: "¿Cuál es la función principal del bloque try en la gestión de excepciones en Python?",
+    options: [
+      "Definir cómo manejar excepciones",
+      "Ejecutar código que podría generar excepciones",
+      "Ignorar los errores",
+      "Realizar operaciones de limpieza"
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "En la estructura de manejo de excepciones, ¿qué hace el bloque \"except\"?",
+    options: [
+      "Es opcional y no es necesario especificar ninguna excepción",
+      "Ignora cualquier error potencial",
+      "Maneja las excepciones que se producen en el bloque try",
+      "Define el código que se ejecutará siempre"
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "¿Cuál es el propósito principal del bloque \"else\" en la gestión de excepciones?",
+    options: [
+      "Realizar operaciones de limpieza",
+      "Manejar excepciones específicas",
+      "Ignorar cualquier error potencial",
+      "Ejecutar código solo si no hay excepciones en el bloque try"
+    ],
+    correctIndex: 3
+  },
+  {
+    question: "¿Qué hace el bloque \"finally\" en la gestión de excepciones?",
+    options: [
+      "Maneja específicamente las excepciones",
+      "Define el código que se ejecutará siempre, independientemente si existen o no las excepciones",
+      "Es opcional y no es necesario especificar ninguna excepción",
+      "Ignora las excepciones"
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "¿Cuál es la ventaja de utilizar bloques \"try-except\" en la resolución de errores en Python?",
+    options: [
+      "Permite que el código sea más complejo",
+      "Ignora por completo las excepciones",
+      "Proporciona un enfoque estructurado para manejar errores y evitar la terminación abrupta del programa",
+      "Utiliza la palabra reservada poly en la declaración de clase"
+    ],
+    correctIndex: 2
+  }
+]} />

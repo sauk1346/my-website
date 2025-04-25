@@ -61,7 +61,7 @@ export default function Ti3v11() {
             evaluationNumber: 3, 
             date: 'Mar 23, Jul 2024', 
             weighting: '35%', 
-            description: <ExternalLink href="/ti3v11/docs/eval03_sol.pdf">Informe SAMM y SDL</ExternalLink>, 
+            description: <ExternalLink href="/inacap/ti3v11/docs/eval03_sol.pdf">Informe SAMM y SDL</ExternalLink>, 
             quickGuide: '' 
         },
         { 
@@ -97,7 +97,7 @@ export default function Ti3v11() {
         { week: '', class: '22', date: 'Vie 12, Jul 2024', description: <CustomLink href='ti3v11/clase22'>Clase Recuperativa</CustomLink> },
         { week: '09', class: '23', date: 'Mié 17, Jul 2024', description: <CustomLink href='ti3v11/clase23'>Desarrollo Seguro</CustomLink> },
         { week: '', class: '24', date: 'Jue 18, Jul 2024', description: <CustomLink href='ti3v11/clase24'>Encriptación</CustomLink> },
-        { week: '10', class: '25', date: 'Mar 23, Jul 2024', description: <ExternalLink href="/ti3v11/docs/eval03_sol.pdf">Informe SAMM y SDL</ExternalLink> },
+        { week: '10', class: '25', date: 'Mar 23, Jul 2024', description: <ExternalLink href="/inacap/ti3v11/docs/eval03_sol.pdf">Informe SAMM y SDL</ExternalLink> },
 
 
     ];

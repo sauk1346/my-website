@@ -1,3 +1,5 @@
+import { Quiz } from '@/components/QuizComponent'
+
 # Elementos de las Bases de Datos no Estructuradas
 
 ## Limitaciones de las Bases de Datos estructuradas
@@ -46,34 +48,57 @@ Son la unidad básica de organización de información en MongoDB. Se trata de u
 ## Colecciones
 Es un grupo de documentos y desempeña un papel análogo a las tablas de las bases de datos relacionales.
 
-# Actividad de Práctica
+# Actividad de Práctica 02
 
-1. **¿Cómo MongoDB almacena internamente los datos?**
-    1. Documentos dinámicos
-    2. Documentos de texto
-    3. Documentos array
-    4. <span style={{color:'red'}}>Documentos JSON</span>
-
-2. **Dos usuarios están conectados a la misma base de datos, uno de ellos está leyendo información en el mismo momento en que el otro usuario escribe en la base de datos, ¿Qué tipo de inconsistencia se produce?**
-    1. <span style={{color:'red'}}>Lectura</span>
-    2. Escritura
-    3. Sesión
-    4. Persistencia
-
-3. **¿Cuál de las siguientes características corresponde a una base de datos NoSQL?**
-    1. Tienen un esquema fijo
-    2. Usan SQL
-    3. <span style={{color:'red'}}>Son de código abierto</span>
-    4. Son relacionales
-
-4. **¿Cuál es la unidad básica de organización de información en MongoDB?**
-    1. Colecciones
-    2. Base de datos
-    3. <span style={{color:'red'}}>Documentos</span>
-    4. Tablas
-
-5. **¿De qué manera MongoDB estructura las instancias?**
-    1. En base de datos con cero o más tablas
-    2. En documentos con cero o más tablas
-    3. En documentos con cero o más colecciones
-    4. <span style={{color:'red'}}>En bases de datos con cero o más colecciones</span>
+<Quiz questions={[
+  {
+    question: "¿Cómo MongoDB almacena internamente los datos?",
+    options: [
+      "Documentos dinámicos",
+      "Documentos de texto",
+      "Documentos array",
+      "Documentos JSON"
+    ],
+    correctIndex: 3
+  },
+  {
+    question: "Dos usuarios están conectados a la misma base de datos, uno de ellos está leyendo información en el mismo momento en que el otro usuario escribe en la base de datos, ¿Qué tipo de inconsistencia se produce?",
+    options: [
+      "Lectura",
+      "Escritura",
+      "Sesión",
+      "Persistencia"
+    ],
+    correctIndex: 0
+  },
+  {
+    question: "¿Cuál de las siguientes características corresponde a una base de datos NoSQL?",
+    options: [
+      "Tienen un esquema fijo",
+      "Usan SQL",
+      "Son de código abierto",
+      "Son relacionales"
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "¿Cuál es la unidad básica de organización de información en MongoDB?",
+    options: [
+      "Colecciones",
+      "Base de datos",
+      "Documentos",
+      "Tablas"
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "¿De qué manera MongoDB estructura las instancias?",
+    options: [
+      "En base de datos con cero o más tablas",
+      "En documentos con cero o más tablas",
+      "En documentos con cero o más colecciones",
+      "En bases de datos con cero o más colecciones"
+    ],
+    correctIndex: 3
+  }
+]} />

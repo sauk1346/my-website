@@ -4,7 +4,7 @@ import ExternalLink from '@/components/ExternalLink'
 
 - **Base de Datos:** clinicaDB
 - **Colección:** pacientes
-- **JSON:**: <ExternalLink href='/ti3v32/data/pacientes.json'>pacientes.json</ExternalLink>
+- **JSON:**: <ExternalLink href='inacap/ti3v32/data/pacientes.json'>pacientes.json</ExternalLink>
 
 ## Ejercicio 01
 Buscar pacientes mayores de 50 años
@@ -91,7 +91,7 @@ Filtrar pacientes activos con menos de 3 tratamientos
 ```js
 db.pacientes.find({
     activo: true,
-    $expr: { $gte: [{$size: "$tratamientos"}, 3] }
+    $expr: { $lt: [{$size: "$tratamientos"}, 3] }
 })
 ```
 </details>
@@ -103,7 +103,7 @@ Buscar pacientes que **no** vivan en "Maipú"
     <summary>Solución</summary>
 ```js
 db.pacientes.find({
-    comuna:{$nin:["Maipú"]}
+    comuna:{$ne:"Maipú"}
 })
 ```
 </details>

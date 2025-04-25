@@ -1,4 +1,4 @@
-import styles from '@/styles/clases.module.css';
+import ExternalLink from '@/components/ExternalLink';
 
 # Búsqueda avanzada usando $regex 01
 
@@ -27,12 +27,12 @@ db.usuarios.find({ comentarios: { $elemMatch:{$regex:"urgente", $options:"i"} } 
 # Ejercicios
 - **Base de Datos:** guia04
 - **Colleción:** usuarios
-- **Datos:** <a href="/ti3v32/data/usuarios03.json" target="_blank" rel="noopener noreferrer" className={styles.link}>usuarios.json</a>
+- **JSON:** <ExternalLink href='/inacap/ti3v32/data/usuarios03.json'>usuarios.json</ExternalLink> 
 
 ## Ejercicio 01
 Buscar todos los usuarios cuyo nombre contenga la letra "ñ"
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 
 <br/>
 **Opción 01:** notación regex para mongoDB
@@ -50,7 +50,7 @@ db.usuarios.find({ nombre: { $regex: /ñ/i } })
 ## Ejercicio 02
 Filtrar los usuarios cuyo email contenga el nombre "daniela"
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 
 <br/>
 **Opción 01:** notación regex para mongoDB
@@ -67,7 +67,7 @@ db.usuarios.find({ email: { $regex: /daniela/i } })
 ## Ejercicio 03
 Mostrar los usuarios con correo de dominio institucional.cl
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 
 <br/>
 **Opción 01:** notación regex para mongoDB
@@ -84,7 +84,7 @@ db.usuarios.find({ email: { $regex: /\.cl$/ } })
 ## Ejercicio 04
 Buscar usuarios cuya dirección comience con "Avenida"
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 
 <br/>
 **Opción 01:** notación regex para mongoDB
@@ -101,7 +101,7 @@ db.usuarios.find({ direccion: { $regex: /^Avenida/i } })
 ## Ejercicio 05
 Filtrar usuarios con direcciones que terminen en un número
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 
 <br/>
 **Opción 01:** notación regex para mongoDB
@@ -118,7 +118,7 @@ db.usuarios.find({ direccion: { $regex: /\d+$/ } })
 ## Ejercicio 06
 Mostrar usuarios con algún comentario que contenga la palabra "error"
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 
 <br/>
 **Opción 01:** notación regex para mongoDB
@@ -146,7 +146,7 @@ db.usuarios.find({ comentarios: { $regex: /error/i } })
 ## Ejercicio 07
 Buscar usuarios cuyo correo tenga más de un punto (.)
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 
 <br/>
 **Opción 01:** notación regex para mongoDB
@@ -163,7 +163,7 @@ db.usuarios.find({ email: { $regex: /\..*\./ } })
 ## Ejercicio 08
 Mostrar usuarios con nombre que termine en "ez" (como Rodriguez, Ramirez)
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 
 <br/>
 **Opción 01:** notación regex para mongoDB
@@ -190,7 +190,7 @@ db.usuarios.find({ nombre: { $regex: /ez$/i } })
 ## Ejercicio 09
 Buscar direcciones que contengan la palabra "Puerta"
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 
 <br/>
 **Opción 01:** notación regex para mongoDB
@@ -207,7 +207,7 @@ db.usuarios.find({ direccion: { $regex: /Puerta/i } })
 ## Ejercicio 10
 Filtrar usuarios con comentarios que empiecen con la letra "C"
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 
 <br/>
 **Opción 01:** notación regex para mongoDB
@@ -236,7 +236,7 @@ db.usuarios.find({ comentarios: { $regex: /^C/i } })
 ## Ejercicio 11
 Buscar usuarios cuyo nombre comience con vocal
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 
 <br/>
 **Opción 01:** notación regex para mongoDB
@@ -253,7 +253,7 @@ db.usuarios.find({ nombre: { $regex: /^[aeiouáéíóú]/i } })
 ## Ejercicio 12
 Filtrar usuarios cuyo correo electrónico termine en .es
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 
 <br/>
 **Opción 01:** notación regex para mongoDB
@@ -270,7 +270,7 @@ db.usuarios.find({ email: { $regex: /\.es$/i } })
 ## Ejercicio 13
 Mostrar los usuarios que tengan exactamente dos palabras en el nombre
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 
 <br/>
 
@@ -298,7 +298,7 @@ db.usuarios.find({ nombre: { $regex: /^\w+\s\w+$/i } })
 ## Ejercicio 14
 Buscar usuarios con algún comentario que incluya una fecha (formato aproximado: dd/mm o dd-mm)
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 
 <br/>
 **Opción 01:** notación regex para mongoDB
@@ -315,7 +315,7 @@ db.usuarios.find({ comentarios: { $regex: /\d{2}[/-]\d{2}/ } })
 ## Ejercicio 15
 Mostrar usuarios cuya dirección no contenga la palabra "calle" (sin distinguir mayúsculas)
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 
 <br/>
 **Opción 01:** notación regex para mongoDB
@@ -332,7 +332,7 @@ db.usuarios.find({ direccion: { $not: { $regex: /calle/i } } })
 ## Ejercicio 16
 Filtrar usuarios que tengan comentarios que contengan signos de explamación (!)
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 
 <br/>
 **Opción 01:** notación regex para mongoDB
@@ -360,7 +360,7 @@ db.usuarios.find({ comentarios: { $regex: /!/ } })
 ## Ejercicio 17
 Buscar usuarios cuyo email tenga el nombre compuesto (con punto en medio) antes del \@
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 
 <br/>
 **Opción 01:** notación regex para mongoDB
@@ -377,7 +377,7 @@ db.usuarios.find({ email: { $regex: /\w+\.\w+@/ } })
 ## Ejercicio 18
 Mostrar usuarios cuyo nombre contenga un guión (-), por ejemplo, apellidos compuestos
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 
 <br/>
 **Opción 01:** notación regex para mongoDB
@@ -394,7 +394,7 @@ db.usuarios.find({ nombre: { $regex: /-/ } })
 ## Ejercicio 19
 Filtrar usuarios que vivan en ciudades que terminen con "a" (por ejemplo: "Murcia", "Valparaíso")
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 
 <br/>
 **Opción 01:** notación regex para mongoDB
@@ -421,7 +421,7 @@ db.usuarios.find({ direccion: { $regex: /[aá]$/i } })
 ## Ejercicio 20
 Buscar usuarios cuyo nombre contenga doble letra (como "ll", "ss", "rr", etc.)
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 
 <br/>
 **Opción 01:** notación regex para mongoDB

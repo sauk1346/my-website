@@ -14,7 +14,7 @@
     - detalles (subdocumento con marca, garantiaMeses)
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 
 ```json
 [
@@ -88,7 +88,7 @@
 Agrega un producto nuevo que contenga un array de etiquetas (por ejemplo: ["gaming", "nuevo", "destacado"]) y un subdocumento de detalles.
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 
 ```json
 {
@@ -111,7 +111,7 @@ Agrega un producto nuevo que contenga un array de etiquetas (por ejemplo: ["gami
 Inserta al menos 2 productos con campos adicionales como proveedor y descuento.
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 
 ```json
 [
@@ -152,7 +152,7 @@ Inserta al menos 2 productos con campos adicionales como proveedor y descuento.
 Muestra todos los productos que tengan **más de 10 unidades en stock** y un **precio menor a 200.**
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 
 ```json
 {"stock":{$gt:10}, "precio":{$lt:200}}
@@ -164,7 +164,7 @@ Muestra todos los productos que tengan **más de 10 unidades en stock** y un **p
 Filtra productos que tengan la etiqueta "gaming" dentro del array etiquetas.
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 
 ```json
 {"etiquetas":"gaming"}
@@ -175,7 +175,7 @@ Filtra productos que tengan la etiqueta "gaming" dentro del array etiquetas.
 ### Ejercicio 05
 Busca productos **cuya garantía sea de 12 meses o más** (desde el subdocumento detalles.garantiaMeses).
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 
 ```json
 {"detalles.garantiaMeses":{$gte:12}}
@@ -187,7 +187,7 @@ Busca productos **cuya garantía sea de 12 meses o más** (desde el subdocumento
 Encuentra productos **ingresados entre el 1 y el 15 de marzo de 2024.**
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 
 ```json
 {"fechaIngreso": {$gte: ISODate("2024-03-01") , $lt: ISODate("2024-03-15")}}
@@ -200,7 +200,7 @@ Muestra solo los productos de la categoría "Pantallas" **que no estén en promo
 
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 
 ```json
 { "categoria": "Pantallas", "descuento": { "$exists": false } }
@@ -212,7 +212,7 @@ Muestra solo los productos de la categoría "Pantallas" **que no estén en promo
 Agrega un campo ultimaActualizacion con la fecha actual a todos los productos que tengan menos de 5 unidades en stock.
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 
 1. Ir a query y agregar:
 ```json
@@ -235,7 +235,7 @@ Agrega un campo ultimaActualizacion con la fecha actual a todos los productos qu
 Actualiza todos los productos de la categoría "Accesorios" para que su proveedor sea "TechGlobal" **solo si aún no tienen campo proveedor.**
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 
 1. Ir a query y agregar:
 
@@ -259,7 +259,7 @@ Actualiza todos los productos de la categoría "Accesorios" para que su proveedo
 Aumenta el stock en 3 unidades de todos los productos que contengan la palabra "Mouse" en su nombre (usa expresión regular).
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 
 1. Ir a query y agregar:
 
@@ -283,7 +283,7 @@ Aumenta el stock en 3 unidades de todos los productos que contengan la palabra "
 Elimina todos los productos que tengan una garantía de **menos de 6 meses.**
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 
 ```json
 { "detalles.garantiaMeses": {$lt:6}}
@@ -296,7 +296,7 @@ Elimina todos los productos que tengan una garantía de **menos de 6 meses.**
 ### Ejercicio 12
 Elimina los productos **cuyo array de etiquetas esté vacío o no exista.**
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 
 ```json
 {

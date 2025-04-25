@@ -1,3 +1,5 @@
+import { Quiz } from '@/components/QuizComponent'
+
 # Bases de datos NoSQL: Características y Tipos
 
 ## Bases de datos Estructuradas
@@ -85,35 +87,57 @@ Son 4 propiedades cruciales que definen las transacciones de las bases de datos 
 |**Almacenamiento**|Tamaño medio|Optimizado para grandes volúmenes de datos|
 |**Escalabilidad**|Alta pero costosa|Alta|
 
-# Actividad de Práctica
+# Actividad de Práctica 01
 
-1. **¿Qué tipo de base de datos no estructurada es MongoDB?**
-    1. Grafos
-    2. <span style={{color:'red'}}>Documentos</span>
-    3. Columnas
-    4. Clave-valor
-
-2. **Una empresa necesita crear un sistema informático cuya principal característica sea la gran cantidad de datos que deben ser procesados de forma no transaccional. ¿Cuál de las siguientes bases de datos recomendarías para el desarrollo del sistema?**
-    1. Mysql
-    2. Oracle
-    3. <span style={{color:'red'}}>CouchDB</span>
-    4. SQLServer
-
-3. **¿Cuáles son las características del esquema de una base de datos no estructurada?**
-    1. <span style={{color:'red'}}>Es un esquema con diferentes estructuras que usa documentos embebidos.</span>
-    2. Es horizontal; se pueden agregar equipos sin alterar su rendimiento.
-    3. Su procesamiento de datos y retorno de valores es mucho más rápido que en las bases de datos estructuradas.
-    4. En general, se trata de proyectos de código abierto.
-
-4. **¿Cuál de las siguientes alternativas es una desventaja de las bases de datos relacionales?**
-    1. Menor capacidad de procesamiento de transacciones.
-    2. Menor soporte en el mercado.
-    3. <span style={{color:'red'}}>Menor rendimiento al tener estructura más compleja y mayor consumo de recursos.</span>
-    2. Es horizontal; se pueden agregar equipos sin alterar su rendimiento.
-    4. Menor adaptabilidad para agregar prestaciones en los servidores.
-
-5. **En cuanto a las bases de datos no estructuradas (NoSQL), ¿cuál de las siguientes alternativas representa diferencias respecto a las bases de datos estructuradas (SQL)?**
-    1. <span style={{color:'red'}}>Permite la redundancia de datos, su estructura es dinámica y está basada en documentos.</span>
-    2. Redundancia controlada, basada en tablas y su estructura es fija.
-    3. Su estructura es dinámica, redundancia controlada de datos y para aplicaciones consistentes.
-    4. Son relacionales, basadas en documentos y con estructura dinámica.
+<Quiz questions={[
+  {
+    question: "¿Qué tipo de base de datos no estructurada es MongoDB?",
+    options: [
+      "Grafos",
+      "Documentos",
+      "Columnas",
+      "Clave-valor"
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "Una empresa necesita crear un sistema informático cuya principal característica sea la gran cantidad de datos que deben ser procesados de forma no transaccional. ¿Cuál de las siguientes bases de datos recomendarías para el desarrollo del sistema?",
+    options: [
+      "Mysql",
+      "Oracle",
+      "CouchDB",
+      "SQLServer"
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "¿Cuáles son las características del esquema de una base de datos no estructurada?",
+    options: [
+      "Es un esquema con diferentes estructuras que usa documentos embebidos.",
+      "Es horizontal; se pueden agregar equipos sin alterar su rendimiento.",
+      "Su procesamiento de datos y retorno de valores es mucho más rápido que en las bases de datos estructuradas.",
+      "En general, se trata de proyectos de código abierto."
+    ],
+    correctIndex: 0
+  },
+  {
+    question: "¿Cuál de las siguientes alternativas es una desventaja de las bases de datos relacionales?",
+    options: [
+      "Menor capacidad de procesamiento de transacciones.",
+      "Menor soporte en el mercado.",
+      "Menor rendimiento al tener estructura más compleja y mayor consumo de recursos.",
+      "Menor adaptabilidad para agregar prestaciones en los servidores."
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "En cuanto a las bases de datos no estructuradas (NoSQL), ¿cuál de las siguientes alternativas representa diferencias respecto a las bases de datos estructuradas (SQL)?",
+    options: [
+      "Permite la redundancia de datos, su estructura es dinámica y está basada en documentos.",
+      "Redundancia controlada, basada en tablas y su estructura es fija.",
+      "Su estructura es dinámica, redundancia controlada de datos y para aplicaciones consistentes.",
+      "Son relacionales, basadas en documentos y con estructura dinámica."
+    ],
+    correctIndex: 0
+  }
+]} />

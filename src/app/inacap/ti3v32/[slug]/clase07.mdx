@@ -87,7 +87,7 @@ db.productos.find().pretty
 **Filtrar por un campo especifico**. Encuentra todos los productos en la categoría "Accesorios"
 
 <details>
-  <summary style={{color:'red'}}>Solución</summary>
+  <summary>Solución</summary>
 ```js
 db.productos.find({categoria:"Accesorios"}).pretty()
 ```
@@ -98,7 +98,7 @@ db.productos.find({categoria:"Accesorios"}).pretty()
 Filtrar productos con precio mayor a 100
 
 <details>
-  <summary style={{color:'red'}}>Solución</summary>
+  <summary>Solución</summary>
 ```js
 db.productos.find({precio:{$gt:100}}).pretty()
 ```
@@ -109,7 +109,7 @@ db.productos.find({precio:{$gt:100}}).pretty()
 Buscar un documento
 
 <details>
-  <summary style={{color:'red'}}>Solución</summary>
+  <summary>Solución</summary>
 ```js
 db.productos.findOne({nombre:"Teclado Mecánico"})
 ```
@@ -120,7 +120,7 @@ db.productos.findOne({nombre:"Teclado Mecánico"})
 **Actualizar un solo documento**. Modificar el precio de un producto
 
 <details>
-  <summary style={{color:'red'}}>Solución</summary>
+  <summary>Solución</summary>
 ```js
 db.productos.updateOne(
     {nombre:"Teclado Mecánico"},
@@ -134,7 +134,7 @@ db.productos.updateOne(
 **Actualizar múltiples documentos**. Aumentar en 5 unidades el stock de todos los productos de la categoría "Accesorios"
 
 <details>
-  <summary style={{color:'red'}}>Solución</summary>
+  <summary>Solución</summary>
 ```js
 db.productos.updateMany(
     {categoria:"Accesorios"},
@@ -155,7 +155,7 @@ Agregar un nuevo campo
 **Eliminar un documento específico**. Elimnar el "Mouse Inalámbrico"
 
 <details>
-  <summary style={{color:'red'}}>Solución</summary>
+  <summary>Solución</summary>
 ```js
 db.productos.deleteOne({nombre:"Mouse Inalámbrico"})
 ```
@@ -166,7 +166,7 @@ db.productos.deleteOne({nombre:"Mouse Inalámbrico"})
 **Eliminar múltiples documentos**. Eliminar todos los productos con stock 0
 
 <details>
-  <summary style={{color:'red'}}>Solución</summary>
+  <summary>Solución</summary>
 ```js
 db.productos.deleteMany({stock:0})
 ```

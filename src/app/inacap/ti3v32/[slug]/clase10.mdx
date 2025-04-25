@@ -1,11 +1,7 @@
-# Repaso NoSql
+import ExternalLink from '@/components/ExternalLink'
 
-<iframe 
-    src="/ti3v32/docs/clase06.pdf" 
-    width="100%" 
-    height="440x" 
-    style={{ border: "none" }}
-></iframe>
+# Repaso NoSql
+**Material Clase:** <ExternalLink href='/inacap/ti3v32/docs/clase06.pdf'>clase06.pdf</ExternalLink>
 
 - **Estructura flexible:** el doc1 puede tener una estructura diferente del doc2 aún si pertenecen a la misma colección
 
@@ -179,7 +175,7 @@ db.usuarios.find({
 Mostrar todos los usuarios que tengan más de 30 años
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 ```js
 db.usuarios.find({
     edad:{$gt:30}
@@ -191,7 +187,7 @@ db.usuarios.find({
 Mostrar los usuarios cuya ciudad sea Valdivia
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 ```js
 db.usuarios.find({
     "direccion.ciudad":"Valdivia"
@@ -203,7 +199,7 @@ db.usuarios.find({
 Mostrar usuarios con la etiqueta "vip" en su campo etiquetas
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 ```js
 db.usuarios.find({
     etiquetas:"vip"
@@ -215,7 +211,7 @@ db.usuarios.find({
 Mostrar los usuarios que se registraron después del 1 de febrero del 2024
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 ```js
 db.usuarios.find({
     fechaRegistro:{
@@ -229,7 +225,7 @@ db.usuarios.find({
 Mostrar usuarios con edad entre 25 y 35 años
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 ```js
 db.usuarios.find({
     edad:{
@@ -254,7 +250,7 @@ db.usuarios.find({
 Mostrar usuarios que no tengan compras registradas
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 ```js
 db.usuarios.find({
     "compras": {$size:0}
@@ -266,7 +262,7 @@ db.usuarios.find({
 Buscar usuarios que hayan comprado un producto llamado "Notebook"
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 ```js
 db.usuarios.find({
     compras:{
@@ -282,7 +278,7 @@ db.usuarios.find({
 Mostrar los ususarios que viven en la región "Los Lagos" y tienen etiqueta "newsletter"
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 ```js
 db.usuarios.find({
     "direccion.region":"Los Lagos", 
@@ -295,7 +291,7 @@ db.usuarios.find({
 Mostrar los usuario ue tienen más de una etiqueda
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 ```js
 db.usuarios.find({
     etiquetas: {$exists: true},
@@ -308,7 +304,7 @@ db.usuarios.find({
 Mostrar usuarios que hayan comprado algún producto con precio mayor a 100000
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 ```js
 db.usuarios.find({
     compras:{

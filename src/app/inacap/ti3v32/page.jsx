@@ -46,10 +46,10 @@ export default function Ti3v32() {
     const evaluationsData = [
         { evaluationNumber: 1, date: 'Mié 26, Mar 2025', weighting: '20%', description: <><CustomLink href='ti3v32/eval01a'>Eval01-A</CustomLink>, <CustomLink href='ti3v32/eval01b'>Eval01-B</CustomLink> </>  , quickGuide: <CustomLink href="ti3v32/guia11">Guía 01</CustomLink> },
         { 
-            evaluationNumber: <EmphText>2</EmphText>, 
-            date: <EmphText>Mié 23, Abr 2025</EmphText>, 
-            weighting: <EmphText>40%</EmphText>, 
-            description: <EmphText>MongoDB Shell</EmphText>, 
+            evaluationNumber: 2, 
+            date: 'Mié 23, Abr 2025', 
+            weighting: '40%', 
+            description: 'Eval02-A, Eval02-B', 
             quickGuide: <>
                 <CustomLink href='ti3v32/guia2a'>- Operators</CustomLink><br/>
                 <CustomLink href='ti3v32/guia2b'>- Regex</CustomLink><br/>
@@ -64,16 +64,21 @@ export default function Ti3v32() {
                 <CustomLink href='ti3v32/guia29'>- Guía 09</CustomLink>
             </>
         },
-        { evaluationNumber: 3, date: 'Mar 06, May 2025', weighting: '30%', description: '', quickGuide: '' },
+        { 
+            evaluationNumber: <EmphText>3</EmphText>,
+            date: <EmphText>Mar 06, May 2025</EmphText>,
+            weighting: <EmphText>30%</EmphText>,
+            description: <EmphText>Evaluación 03</EmphText>,
+            quickGuide: '' },
         { evaluationNumber: 4, date: 'Mié 07, May 2025', weighting: '10%', description: 'Promedio Evaluaciones', quickGuide: '' },
     ];
     const classData = [
         { week: '01', class: '01', date: 'Lun 10, Mar 2025', description: <CustomLink href="ti3v32/clase01">Introducción BD NoSQL</CustomLink> },
         { week: '', class: '02', date: 'Mar 11, Mar 2025', description: <span style={{textDecoration: 'line-through'}}>Suspensión Clases</span>},
-        { week: '', class: '03', date: 'Mié 12, Mar 2025', description: "Ejercicios CRUD"},
-        { week: '02', class: '04', date: 'Lun 17, Mar 2025', description: <CustomLink href="ti3v32/clase04">Ejercicios CRUD 02</CustomLink> },
-        { week: '', class: '05', date: 'Mar 18, Mar 2025', description: "Ejercicios CRUD 03" },
-        { week: '', class: '06', date: 'Mié 19, Mar 2025', description: "Ejercicios CRUD 04" },
+        { week: '', class: '03', date: 'Mié 12, Mar 2025', description: "Ejercicios CRUD (1)"},
+        { week: '02', class: '04', date: 'Lun 17, Mar 2025', description: <CustomLink href="ti3v32/clase04">Ejercicios CRUD (2)</CustomLink> },
+        { week: '', class: '05', date: 'Mar 18, Mar 2025', description: "Ejercicios CRUD (3)" },
+        { week: '', class: '06', date: 'Mié 19, Mar 2025', description: "Ejercicios CRUD (4)" },
         { week: '03', class: '07', date: 'Lun 24, Mar 2025', description: <CustomLink href='ti3v32/clase07'>MongoDB Shell</CustomLink> },
         { week: '', class: '08', date: 'Mar 25, Mar 2025', description: <CustomLink href='ti3v32/clase08'>Ejercicio con puntaje</CustomLink> },
         { week: '', class: '09', date: 'Mié 26, Mar 2025', description: <> <CustomLink href='ti3v32/eval01a'>Eval01-A</CustomLink>, <CustomLink href='ti3v32/eval01b'>Eval01-B</CustomLink> </>},
@@ -94,13 +99,13 @@ export default function Ti3v32() {
 
     ];
     const lectureData = [
-        { week: '01', lecture: '01', date: 'Sáb 15, Mar 2025', description: <ExternalLink href="/ti3v32/docs/lectura01.pdf">Introducción a las bases de datos no estructuradas</ExternalLink> },
+        { week: '01', lecture: '01', date: 'Sáb 15, Mar 2025', description: <ExternalLink href="/inacap/ti3v32/docs/lectura01.pdf">Introducción a las bases de datos no estructuradas</ExternalLink> },
         { week: '', lecture: '02', date: 'Sáb 15, Mar 2025', description: <CustomLink href="ti3v32/lectura02">Bases de datos no estructuradas: características y tipos</CustomLink> },
         { week: '02', lecture: '03', date: 'Sáb 22, Mar 2025', description: <CustomLink href="ti3v32/lectura03">Elementos de las bases de datos no estructuradas documentales y características de Mongo DB</CustomLink> },
-        { week: '03', lecture: '04', date: 'Sáb 29, Mar 2025', description: <ExternalLink href="/ti3v32/docs/lectura04.pdf">Operdores esenciales con MongoDB</ExternalLink> },
+        { week: '03', lecture: '04', date: 'Sáb 29, Mar 2025', description: <ExternalLink href="/inacap/ti3v32/docs/lectura04.pdf">Operdores esenciales con MongoDB</ExternalLink> },
         { week: '', lecture: '05', date: 'Sáb 29, Mar 2025', description: <CustomLink href="ti3v32/lectura05">Etapas del proceso de instalación de MongoDB y principales comandos de gestión</CustomLink> },
         { week: '04', lecture: '06', date: 'Sáb 05, Abr 2025', description: <CustomLink href="ti3v32/lectura06">Operaciones CRUD en documentos y subdocumentos</CustomLink> },
-        { week: '05', lecture: '07', date: 'Sáb 12, Abr 2025', description: <ExternalLink href="/ti3v32/docs/lectura07.pdf">Búsqueda avanzada con MongoDB</ExternalLink> },
+        { week: '05', lecture: '07', date: 'Sáb 12, Abr 2025', description: <ExternalLink href="/inacap/ti3v32/docs/lectura07.pdf">Búsqueda avanzada con MongoDB</ExternalLink> },
         { week: '', lecture: '08', date: 'Sáb 12, Abr 2025', description: <CustomLink href="ti3v32/lectura08">Selección de filtros y condiciones según requerimientos de búsqueda</CustomLink> },
         { week: '06', lecture: '09', date: 'Sáb 19, Abr 2025', description: 'Busqueda avanzada usando expresiones regulares' },
     ];

@@ -1,14 +1,7 @@
-import {SpacerBlock} from '@/components/CodeBlock'
+import ExternalLink from '@/components/ExternalLink'
 
-# Ejercicios CRUD
-
-<iframe 
-    src="/ti3v32/docs/clase03.pdf" 
-    width="90%" 
-    height="440x" 
-    style={{ border: "none" }}
-></iframe>
-
+# Ejercicios CRUD (2)
+**Material Clase:** <ExternalLink href='/inacap/ti3v32/docs/clase03.pdf'>clase03.pdf</ExternalLink>
 
 ## Diferencia SQL y NoSql
 
@@ -36,8 +29,13 @@ En las BD NoSql existe una **pseudo-relación**, es decir, si bien no existe una
 ```
 <br/>
 # Ejercicios
+Cargar los siguientes archivos a la Base de Datos:
 
-Cargar los archivos [productos.csv](/ti3v32/data/productos.csv), [docentes.csv](/ti3v32/data/docentes.csv) y [alumnos csv](/ti3v32/data/alumnos.csv) a la BD
+- <ExternalLink href='/inacap/ti3v32/data/productos.csv'>productos.csv</ExternalLink>
+- <ExternalLink href='/inacap/ti3v32/data/docentes.csv'>docentes.csv</ExternalLink>
+- <ExternalLink href='/inacap/ti3v32/data/alumnos.csv'>alumnos.csv</ExternalLink>
+
+**Pasos:**
 
 1. Crear 3 colecciones: productos, docentes, alumnos
 2. Agregar los csv a sus respectivas colecciones 
@@ -48,7 +46,7 @@ Cargar los archivos [productos.csv](/ti3v32/data/productos.csv), [docentes.csv](
 **Insertar un nuevo estudiante**
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 
 <br/>
 - Seleccionar colección `alumnos`
@@ -71,7 +69,7 @@ Cargar los archivos [productos.csv](/ti3v32/data/productos.csv), [docentes.csv](
 **Insertar múltiple docentes**
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 
 <br/>
 - Seleccionar colección `docentes`
@@ -105,7 +103,7 @@ Cargar los archivos [productos.csv](/ti3v32/data/productos.csv), [docentes.csv](
 **Filtrar estudiantes por carrera**. Encuentra a los alumnos que estudien Ingeniería informática
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 
 <br/>
 - Seleccionar colección `alumnos`
@@ -123,7 +121,7 @@ Cargar los archivos [productos.csv](/ti3v32/data/productos.csv), [docentes.csv](
 Buscar docentes que enseñan Bases de datos
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 
 <br/>
 - Seleccionar colección `docentes`
@@ -140,7 +138,7 @@ Buscar docentes que enseñan Bases de datos
 **Buscar estudiantes con notas mayores a 6.0**. Encuentra alumnos que tengan al menos una asignatura con una nota superior a 6.0
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 
 <br/>
 - Seleccionar colección `alumnos`
@@ -159,7 +157,7 @@ Buscar docentes que enseñan Bases de datos
 **Filtrar docentes mayores de 40 años**. Encuentra docentes cuya edad sea mayor a 40
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 
 <br/>
 - Seleccionar colección `docentes`
@@ -174,10 +172,10 @@ Buscar docentes que enseñan Bases de datos
 
 
 ## Ejercicio 07
-**Actualizar el correo de un estudiante**. El alumnos Juan Pérez ha cambiado su correo. Ahora es juan.perez2025@ejemplo.com
+**Actualizar el correo de un estudiante**. El alumnos Juan Pérez ha cambiado su correo. Ahora es juan.perez2025ejemplo.com
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 
 <br/>
 - Seleccionar colección `alumnos`
@@ -201,7 +199,7 @@ Buscar docentes que enseñan Bases de datos
 **Aumentar la edad de un docente.** El docente Roberto Morales ha cumplido años. Debemos aumentar su edad en 1
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 
 <br/>
 - Seleccionar colección `docentes`
@@ -224,7 +222,7 @@ Buscar docentes que enseñan Bases de datos
 **Agregar una nueva asignatura a un docente**. El docente Lucía Torres ahora impartirá la asignatura Cloud Computing
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 
 <br/>
 - Seleccionar colección `docentes`
@@ -247,7 +245,7 @@ Buscar docentes que enseñan Bases de datos
 **Eliminar una asignatura específica de un docente**. El docente Andrés Sánchez ya no enseña Ingeniería de Software
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 
 <br/>
 - Seleccionar colección `docentes`
@@ -270,7 +268,7 @@ Buscar docentes que enseñan Bases de datos
 Eliminar a un alumno que se retiró
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 
 <br/>
 - Seleccionar colección `alumnos`

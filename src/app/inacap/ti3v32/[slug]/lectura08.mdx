@@ -1,3 +1,5 @@
+import { Quiz } from '@/components/QuizComponent';
+
 # Selección de filtros y condiciones según requerimientos de búsqueda
 
 |||
@@ -97,34 +99,57 @@ db.usuarios.aggregate([{
 }])
 ```
 
-# Actividad de Práctica
+# Actividad de Práctica 05
 
-1. **¿Cuál es el uso de las operaciones de agregación en MongoDB?**
-    1. Procesar documentos y eliminar valores
-    2. <span style={{color:'red'}}>Procesasr documentos y retornar resultados calculados</span>
-    3. Procesar documentos y agregar valores
-    4. Procesar documentos y retornar valores actualizados
-
-2. **Se necesita calcular el promedio de los sueldos de los empleados registrados en la colección Empleados; ¿Cuál de los siguientes operadores se debe usar en la consulta?**
-    1. $count
-    2. $match
-    3. <span style={{color:'red'}}>$group</span>
-    4. $sort
-
-3. **¿Qué acción realiza sobre la colección trabajadores y el campo sueldo la consulta `db.trabajadores.aggregate([{$group: { _id: null,  Mínimo: {$min:  "$sueldo"}}}])` ?**
-    1. <span style={{color:'red'}}>Muestra el menor sueldo registrado</span>
-    2. Muestra el mayor sueldo registrado
-    3. Muestra el promedio de los sueldos registrados
-    4. Muestra la cantidad de sueldos registrados
-
-4. **¿Qué acción realiza la sentencia $match en agregaciones?**
-    1. Agrupa documentos
-    2. Ordena documentos con criterios
-    3. <span style={{color:'red'}}>Filtra documentos con criterios</span>
-    4. Selecciona grupos
-
-5. **¿Cuál es el uso de la sentencia $proyect?**
-    1. <span style={{color:'red'}}>Seleccionar los campos a visualizar en la salida de una consulta</span>
-    2. Ordenar los campos de una consulta
-    3. Agrupar los campos a visualizar en la salida de una consulta
-    4. Filtrar los campos de una consulta
+<Quiz questions={[
+  {
+    question: "¿Cuál es el uso de las operaciones de agregación en MongoDB?",
+    options: [
+      "Procesar documentos y eliminar valores",
+      "Procesar documentos y retornar resultados calculados",
+      "Procesar documentos y agregar valores",
+      "Procesar documentos y retornar valores actualizados"
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "Se necesita calcular el promedio de los sueldos de los empleados registrados en la colección Empleados; ¿Cuál de los siguientes operadores se debe usar en la consulta?",
+    options: [
+      "$count",
+      "$match",
+      "$group",
+      "$sort"
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "¿Qué acción realiza sobre la colección trabajadores y el campo sueldo la consulta db.trabajadores.aggregate([{$group: { _id: null, Mínimo: {$min: \"$sueldo\"}}}]) ?",
+    options: [
+      "Muestra el menor sueldo registrado",
+      "Muestra el mayor sueldo registrado",
+      "Muestra el promedio de los sueldos registrados",
+      "Muestra la cantidad de sueldos registrados"
+    ],
+    correctIndex: 0
+  },
+  {
+    question: "¿Qué acción realiza la sentencia $match en agregaciones?",
+    options: [
+      "Agrupa documentos",
+      "Ordena documentos con criterios",
+      "Filtra documentos con criterios",
+      "Selecciona grupos"
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "¿Cuál es el uso de la sentencia $project?",
+    options: [
+      "Seleccionar los campos a visualizar en la salida de una consulta",
+      "Ordenar los campos de una consulta",
+      "Agrupar los campos a visualizar en la salida de una consulta",
+      "Filtrar los campos de una consulta"
+    ],
+    correctIndex: 0
+  }
+]} />

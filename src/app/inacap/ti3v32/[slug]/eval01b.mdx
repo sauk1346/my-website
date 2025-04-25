@@ -1,126 +1,211 @@
+import { Quiz } from '@/components/QuizComponent';
+
 # Evaluación 1 - Versión B
 
 ## Sección de Alternativas (40 puntos)
 
-1. **¿Cuál es la principal característica de una base de datos NoSQL como MongoDB?**
-    1. Utiliza solo tablas relacionales
-    2. Requiere esquema fijo
-    3. <span style={{color:'red'}}>Usa documentos flexibles</span>
-    4. Solo permite texto plano
-
-2. **¿Qué formato se basa en JSON pero es más eficiente para el almacenamiento interno de MongoDB?**
-    1. YAML
-    2. CSV
-    3. <span style={{color:'red'}}>BSON</span>
-    4. HTML
-
-3. **En MongoDB Compass, ¿qué permite el botón "Insert Document"?**
-    1. Crear un nuevo campo
-    2. Cargar un archivo JSON externo
-    3. <span style={{color:'red'}}>Insertar un nuevo documento manualmente</span>
-    4. Eliminar un documento
-
-4. **¿Cuál de los siguiente <span style={{color:'red'}}>no</span> es un tipo de dato válido en MongoDB?**
-    1. String
-    2. Boolean
-    3. Date
-    4. <span style={{color:'red'}}>Float64List</span>
-
-5. **¿Qué operador permite filtrar documentos con valores <span style={{color:'red'}}>diferentes</span> al especificado?**
-    1. $eq
-    2. <span style={{color:'red'}}>$ne</span>
-    3. $gt
-    4. $lt
-
-6. **¿Cuál es la estructura correcta para representar un documento en MongoDB?**
-    1. Tabla con columnas
-    2. <span style={{color:'red'}}>Objeto con pares clave-valor</span>
-    3. Lista separada por comas
-    4. Archivo binario
-
-7. **¿Qué campo único se asigna automáticamente a cada documento en MongoDB?**
-    1. id_doc
-    2. uuid
-    3. <span style={{color:'red'}}>_id</span>
-    4. ref
-
-8. **¿Qué acción se realiza cuando hacer clic en el botón "Delete Document" en Compass?**
-    1. Se borra toda la base de datos
-    2. Se elimina la colección
-    3. <span style={{color:'red'}}>Se elimina un documento específico</span>
-    4. Se borra solo un campo del documento
-
-9. **¿Qué operador se utiliza para comprobar si un campo está presente en los documentos?**
-    1. $in
-    2. <span style={{color:'red'}}>$exists</span>
-    3. $has
-    4. $check
-
-10. **¿Qué campo se recomienda usar para guardar fechas en MongoDB?**
-    1. dateField como tipo string
-    2. Cualquier campo con NumberLong
-    3. <span style={{color:'red'}}>fecha con tipo ISODate</span>
-    4. No es necesario usar fechas en MongoDB
-
-11. **¿Qué hace el operador $in en una consulta?**
-    1. Inserta varios valores
-    2. Elimina campos nulos
-    3. <span style={{color:'red'}}>Busca si un valor pertenece a un conjunto</span>
-    4. Agrega datos a un array
-
-12. **¿Qué tipo de dato es un array en MongoDB?**
-    1. Una lista de claves
-    2. Un campo único
-    3. Una colección
-    4. <span style={{color:'red'}}>Una lista ordenada de valores</span>
-
-13. **¿Qué sucede si intentas insertar dos documentos con el mismo valor en _id?**
-    1. Ambos se almacenan como versiones
-    2. <span style={{color:'red'}}>Se lanza un error</span>
-    3. El documento anterior se actualiza
-    4. Se eliminan ambos
-
-14. **¿Qué puedes hacer desde la pestaña "Documents" en Compass?**
-    1. Ejecutar scripts JavaScript
-    2. Importar drivers
-    3. <span style={{color:'red'}}>Ver y editar documentos visualmente</span>
-    4. Crear nuevas bases de datos
-
-15. **¿Cuál de los siguientes operadores sirve para combinar varias condiciones de filtro?**
-    1. <span style={{color:'red'}}>$or</span>
-    2. $like
-    3. $contains
-    4. $group
-
-16. **¿Qué operador filtra documentos cuya propiedad está dentro de un rango de valores?**
-    1. $range
-    2. <span style={{color:'red'}}>$in</span>
-    3. $between
-    4. $map
-
-17. **¿Qué campo representa el número total de registros de una colección?**
-    1. total_rows
-    2. documentCount
-    3. <span style={{color:'red'}}>Se obtiene con countDocuments()</span>
-    4. No se puede saber
-
-18. **¿Qué herramienta permite ver la estructura interna y tipos de campos de una colección en Compass?**
-    1. Aggregation
-    2. <span style={{color:'red'}}>Schema</span>
-    3. Import
-    4. Atlas Sync
-
-19. **¿Qué tipo de operación representa “Update One”?**
-    1. Reemplazar todos los documentos
-    2. <span style={{color:'red'}}>Actualizar el primer documento que cumpla una condición</span>
-    3. Crear una colección
-    4. Borrar una base de datos
-
-20. **¿Cuál de las siguientes opciones es un ejemplo válido de subdocumento?**
-    1. "detalles": "marca, color"
-    2. "detalles": \[“marca”, “color”\]
-    3. <span style={{color:'red'}}>"detalles": \{ "marca": "LG", "color": "Negro" \}</span>
-    4. "detalles": marca: "LG", color: "Negro"
+<Quiz questions={[
+  {
+    question: "¿Cuál es la principal característica de una base de datos NoSQL como MongoDB?",
+    options: [
+      "Utiliza solo tablas relacionales",
+      "Requiere esquema fijo",
+      "Usa documentos flexibles",
+      "Solo permite texto plano"
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "¿Qué formato se basa en JSON pero es más eficiente para el almacenamiento interno de MongoDB?",
+    options: [
+      "YAML",
+      "CSV",
+      "BSON",
+      "HTML"
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "En MongoDB Compass, ¿qué permite el botón \"Insert Document\"?",
+    options: [
+      "Crear un nuevo campo",
+      "Cargar un archivo JSON externo",
+      "Insertar un nuevo documento manualmente",
+      "Eliminar un documento"
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "¿Cuál de los siguientes no es un tipo de dato válido en MongoDB?",
+    options: [
+      "String",
+      "Boolean",
+      "Date",
+      "Float64List"
+    ],
+    correctIndex: 3
+  },
+  {
+    question: "¿Qué operador permite filtrar documentos con valores diferentes al especificado?",
+    options: [
+      "$eq",
+      "$ne",
+      "$gt",
+      "$lt"
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "¿Cuál es la estructura correcta para representar un documento en MongoDB?",
+    options: [
+      "Tabla con columnas",
+      "Objeto con pares clave-valor",
+      "Lista separada por comas",
+      "Archivo binario"
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "¿Qué campo único se asigna automáticamente a cada documento en MongoDB?",
+    options: [
+      "id_doc",
+      "uuid",
+      "_id",
+      "ref"
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "¿Qué acción se realiza cuando haces clic en el botón \"Delete Document\" en Compass?",
+    options: [
+      "Se borra toda la base de datos",
+      "Se elimina la colección",
+      "Se elimina un documento específico",
+      "Se borra solo un campo del documento"
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "¿Qué operador se utiliza para comprobar si un campo está presente en los documentos?",
+    options: [
+      "$in",
+      "$exists",
+      "$has",
+      "$check"
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "¿Qué campo se recomienda usar para guardar fechas en MongoDB?",
+    options: [
+      "dateField como tipo string",
+      "Cualquier campo con NumberLong",
+      "fecha con tipo ISODate",
+      "No es necesario usar fechas en MongoDB"
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "¿Qué hace el operador $in en una consulta?",
+    options: [
+      "Inserta varios valores",
+      "Elimina campos nulos",
+      "Busca si un valor pertenece a un conjunto",
+      "Agrega datos a un array"
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "¿Qué tipo de dato es un array en MongoDB?",
+    options: [
+      "Una lista de claves",
+      "Un campo único",
+      "Una colección",
+      "Una lista ordenada de valores"
+    ],
+    correctIndex: 3
+  },
+  {
+    question: "¿Qué sucede si intentas insertar dos documentos con el mismo valor en _id?",
+    options: [
+      "Ambos se almacenan como versiones",
+      "Se lanza un error",
+      "El documento anterior se actualiza",
+      "Se eliminan ambos"
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "¿Qué puedes hacer desde la pestaña \"Documents\" en Compass?",
+    options: [
+      "Ejecutar scripts JavaScript",
+      "Importar drivers",
+      "Ver y editar documentos visualmente",
+      "Crear nuevas bases de datos"
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "¿Cuál de los siguientes operadores sirve para combinar varias condiciones de filtro?",
+    options: [
+      "$or",
+      "$like",
+      "$contains",
+      "$group"
+    ],
+    correctIndex: 0
+  },
+  {
+    question: "¿Qué operador filtra documentos cuya propiedad está dentro de un rango de valores?",
+    options: [
+      "$range",
+      "$in",
+      "$between",
+      "$map"
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "¿Qué campo representa el número total de registros de una colección?",
+    options: [
+      "total_rows",
+      "documentCount",
+      "Se obtiene con countDocuments()",
+      "No se puede saber"
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "¿Qué herramienta permite ver la estructura interna y tipos de campos de una colección en Compass?",
+    options: [
+      "Aggregation",
+      "Schema",
+      "Import",
+      "Atlas Sync"
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "¿Qué tipo de operación representa \"Update One\"?",
+    options: [
+      "Reemplazar todos los documentos",
+      "Actualizar el primer documento que cumpla una condición",
+      "Crear una colección",
+      "Borrar una base de datos"
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "¿Cuál de las siguientes opciones es un ejemplo válido de subdocumento?",
+    options: [
+      "\"detalles\": \"marca, color\"",
+      "\"detalles\": [\"marca\", \"color\"]",
+      "\"detalles\": { \"marca\": \"LG\", \"color\": \"Negro\" }",
+      "\"detalles\": marca: \"LG\", color: \"Negro\""
+    ],
+    correctIndex: 2
+  }
+]} />
 
 ## Parte Práctica (60 puntos)
 
@@ -132,7 +217,7 @@
 - Insertar al menos 4 documentos en cada colección con datos realistas
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 
 <br/>
 1. Documentos para colección "usuarios":
@@ -198,7 +283,7 @@ Inserta **2 nuevos documentos** en la colección usuarios. Cada uno debe contene
 Agrega el campo extra activo (boolean) en **uno** de ellos
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 
 <br/>
 ```json
@@ -226,7 +311,7 @@ Usa la barra de filtros para lo siguiente:
 1. En usuarios, muestra los que tengan edad menor o igual a 25
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 
 <br/>
 ```json
@@ -238,7 +323,7 @@ Usa la barra de filtros para lo siguiente:
 2. En productos, filtra los productos que contengarn la palabra "Pro" en su nombre
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 
 <br/>
 ```json
@@ -252,7 +337,7 @@ Realiza las siguiente actualizaciones desde la interfaz visual:
 1. Cambia el correo de un usuario existente
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 
 <br/>
 - Ir a query y agregar:
@@ -269,7 +354,7 @@ Realiza las siguiente actualizaciones desde la interfaz visual:
 2. Agrega el campo `vip:true` a todos los usuarios con edad mayor a 30
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 <br/>
 - Ir a query y agregar:
 ```json
@@ -286,7 +371,7 @@ Realiza las siguiente actualizaciones desde la interfaz visual:
 3. Modifica el precio de un producto, sumando 10
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 <br/>
 - Ir a query y agregar:
 ```json
@@ -303,7 +388,7 @@ Elimina desde Compass:
 1. Un usuario cuyo campo activo sea false (puedes editar uno si es necesario)
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 <br/>
 - Ir a query y agregar:
 ```json
@@ -317,7 +402,7 @@ Elimina desde Compass:
 2. Un producto cuyo precio sea mayor a 1000
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 <br/>
 - Ir a query y agregar:
 ```json

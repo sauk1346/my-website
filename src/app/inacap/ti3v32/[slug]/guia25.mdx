@@ -1,10 +1,10 @@
-import styles from '@/styles/clases.module.css';
+import ExternalLink from '@/components/ExternalLink';
 
 # Guía de Consultas avanzadas - BD de películas
 
 - **Base de datos:** peliculasDB
 - **Colección:** peliculas
-- **JSON: <a href="https://drive.google.com/file/d/1G5YIffrCRilK6LFRFoKVVb9kw9T0MqVs/view?usp=sharing" target="_blank" rel="noopener noreferrer" className={styles.link}>peliculas.json</a>**
+- **JSON:** <ExternalLink href="https://drive.google.com/file/d/1G5YIffrCRilK6LFRFoKVVb9kw9T0MqVs/view?usp=sharing">peliculas.json</ExternalLink>
 - **Objetivo:** Aplicar búsquedas y filtros sobre una base de datos realista usando MongoDB Compass o mongosh
 
 
@@ -12,7 +12,7 @@ import styles from '@/styles/clases.module.css';
 Buscar películas cuyo título contenga la palabra "love" (sin importar mayúsculas)
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 ```js
 db.peliculas.find({ title:{$regex:/love/i} })
 ```
@@ -22,7 +22,7 @@ db.peliculas.find({ title:{$regex:/love/i} })
 Filtrar películas con más de 100 minutos de duración
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 ```js
 db.peliculas.find({ runtime:{$gt:100} })
 ```
@@ -32,7 +32,7 @@ db.peliculas.find({ runtime:{$gt:100} })
 Listar películas que hayan sido lanzadas a partir del año 2010
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 ```js
 db.peliculas.find({ release_date: {$gte: ISODate("2010-01-01")} })
 ```
@@ -42,7 +42,7 @@ db.peliculas.find({ release_date: {$gte: ISODate("2010-01-01")} })
 Buscar películas con una calificación promedio (vote_average) mayor a 7
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 ```js
 db.peliculas.find({ vote_average:{$gt:7} })
 ```
@@ -52,7 +52,7 @@ db.peliculas.find({ vote_average:{$gt:7} })
 Mostrar películas con idioma original en inglés
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 ```js
 db.peliculas.find({ original_language:"en" })
 ```
@@ -62,7 +62,7 @@ db.peliculas.find({ original_language:"en" })
 Listar películas que no sean para adultos (adult:false) y que tengan una sinopsis (overview) que mencione la palabra "mystery"
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 ```js
 db.peliculas.find({adult:false, overview:{$regex:/mystery/i}})
 ```
@@ -72,7 +72,7 @@ db.peliculas.find({adult:false, overview:{$regex:/mystery/i}})
 Buscar películas producidas en Japón o Alemania
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 ```js
 db.peliculas.find({
     $or:[
@@ -87,7 +87,7 @@ db.peliculas.find({
 Filtrar películas con género "Documentary" y una puntuación entre 6 y 8
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 ```js
 db.peliculas.find({
     genres:{$regex:/Documentary/i},
@@ -100,7 +100,7 @@ db.peliculas.find({
 Listar películas que mencionen "terrorism" o "war" en sus palabras clave (keywords)
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 ```js
 db.peliculas.find({ keywords:{$regex:/(\bterrorism\b|\bwar\b)/i} })
 ```
@@ -110,7 +110,7 @@ db.peliculas.find({ keywords:{$regex:/(\bterrorism\b|\bwar\b)/i} })
 Mostrar películas que hablen más de un idioma (más de 1 en "spoken_languages")
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 ```js
 db.peliculas.find({ spoken_languages: {$regex: /,/} })
 ```
@@ -120,7 +120,7 @@ db.peliculas.find({ spoken_languages: {$regex: /,/} })
 Buscar películas que hayan sido estrenadas antes del año 2000
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 ```js
 db.peliculas.find( {release_date:{$lt:ISODate("2000-01-01")} })
 ```
@@ -130,7 +130,7 @@ db.peliculas.find( {release_date:{$lt:ISODate("2000-01-01")} })
 Listar películas cuyo "title" empiece con "The"
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 ```js
 db.peliculas.find({ title:{$regex:/^The/} })
 ```
@@ -140,7 +140,7 @@ db.peliculas.find({ title:{$regex:/^The/} })
 Mostrar películas cuya descripción contenga un número (por ejemplo, "WWII", "2022")
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 ```js
 db.peliculas.find({ overview:{$regex:/\d|I{2,}/} })
 ```
@@ -150,7 +150,7 @@ db.peliculas.find({ overview:{$regex:/\d|I{2,}/} })
 Buscar películas que no tengan el campo "tagline"
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 ```js
 db.peliculas.find({ tagline:{$exists:false} })
 ```
@@ -160,7 +160,7 @@ db.peliculas.find({ tagline:{$exists:false} })
 Listar películas que duren exactamente 90 minutos
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 ```js
 db.peliculas.find({ runtime:90 })
 ```
@@ -170,7 +170,7 @@ db.peliculas.find({ runtime:90 })
 Buscar películas con "vote_count" mayor a 50 y menor o igual a 100
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 ```js
 db.peliculas.find({ vote_count:{$gt:50, $lte:100} })
 ```
@@ -180,7 +180,7 @@ db.peliculas.find({ vote_count:{$gt:50, $lte:100} })
 Mostrar películas con géneros múltiples separados por coma (más de un género en el string)
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 ```js
 db.peliculas.find({ genres:{$regex:/,/} })
 ```
@@ -190,17 +190,17 @@ db.peliculas.find({ genres:{$regex:/,/} })
 Listar películas con palabras claves (keywords) que incluyan "based on" (ej: "base on play")
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 ```js
 db.peliculas.find({ keywords:{$regex:/(based on)/i} })
 ```
 </details>
 
 ## Ejercicio 19
-Filtrar películas producidas fuerda de "United States of America"
+Filtrar películas producidas fuera de "United States of America"
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 ```js
 db.peliculas.find({
     production_countries: { $not: { $regex: /United States of America/ } }
@@ -212,7 +212,7 @@ db.peliculas.find({
 Buscar películas que contengan el término "director" en los keywords
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 ```js
 db.peliculas.find({ keywords:{$regex:/director/i} })
 ```

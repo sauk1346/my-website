@@ -1,16 +1,16 @@
-import styles from '@/styles/clases.module.css';
+import ExternalLink from '@/components/ExternalLink';
 
 # Búsqueda Avanzada usando \$regex 02
 
 - **Base de Datos:** guia04
 - **Colleción:** usuarios
-- **Datos:** <a href="/ti3v32/data/usuarios04.json" target="_blank" rel="noopener noreferrer" className={styles.link}>usuarios.json</a>
+- **Json:** <ExternalLink href='/inacap/ti3v32/data/usuarios04.json'>usuarios.json</ExternalLink>
 
 ## Ejercicio 01
 Buscar usuarios cuyo nombre contenga una vocal con tilde (á, é, í, ó, ú)
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 ```js
 db.usuarios.find({ nombre: {$regex:/[áíúéó]/i} })
 ```
@@ -20,7 +20,7 @@ db.usuarios.find({ nombre: {$regex:/[áíúéó]/i} })
 Filtrar usuarios con email que contenga un número
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 ```js
 db.usuarios.find({ email:{$regex: /\d/}})
 ```
@@ -30,7 +30,7 @@ db.usuarios.find({ email:{$regex: /\d/}})
 Buscar usuarios con correo institucional que termine en .edu.cl
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 ```js
 db.usuarios.find({ "email":{$regex:/\.edu\.cl$/} })
 ```
@@ -40,7 +40,7 @@ db.usuarios.find({ "email":{$regex:/\.edu\.cl$/} })
 Mostrar usuarios cuya dirección contenga la palabra "Oficina"
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 ```js
 db.usuarios.find({ "direccion": {$regex: /Oficina/i} })
 ```
@@ -50,7 +50,7 @@ db.usuarios.find({ "direccion": {$regex: /Oficina/i} })
 Buscar usuarios cuya dirección termine con una palabra de 5 letras
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 ```js
 db.usuarios.find({ "direccion":{$regex:/\w{5}$/} })
 ```
@@ -60,7 +60,7 @@ db.usuarios.find({ "direccion":{$regex:/\w{5}$/} })
 Filtrar usuarios con comentarios que contengan la palabra "reclamo" o "solicitud"
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 ```js
 db.usuarios.find({ "comentarios": {$regex:/reclamo|solicitud/} })
 ```
@@ -70,7 +70,7 @@ db.usuarios.find({ "comentarios": {$regex:/reclamo|solicitud/} })
 Mostrar usuarios cuyo email tenga tres palabras antes del \@
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 ```js
 db.usuarios.find({ "email":{$regex:/\w+\.\w+\.\w+\@/} })
 ```
@@ -80,7 +80,7 @@ db.usuarios.find({ "email":{$regex:/\w+\.\w+\.\w+\@/} })
 Buscar nombres que comiencen con "Luis" o "Lucía"
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 ```js
 db.usuarios.find({ "nombre":{$regex:/^(Luis|Lucía)/i} })
 ```
@@ -90,7 +90,7 @@ db.usuarios.find({ "nombre":{$regex:/^(Luis|Lucía)/i} })
 Mostrar direcciones que contengan el término "Depto" o "Piso"
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 ```js
 db.usuarios.find({ "direccion":{$regex:/Depto|Piso/i} })
 
@@ -101,7 +101,7 @@ db.usuarios.find({ "direccion":{$regex:/Depto|Piso/i} })
 Filtrar usuarios con comentarios que contengan un símbolo especial (\@, \!, \#)
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 ```js
 db.usuarios.find({"comentarios":{$regex:/\@\!\#/} })
 ```
@@ -111,7 +111,7 @@ db.usuarios.find({"comentarios":{$regex:/\@\!\#/} })
 Buscar usuarios cuya edad sea mayor al doble de la cantidad de etiquetas
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 ```js
 db.usuarios.find({
   $expr: {
@@ -125,7 +125,7 @@ db.usuarios.find({
 Mostrar usuarios qu tengan exactamente 3 etiquetas
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 ```js
 db.usuarios.find({
   "etiquetas": { $size: 3 }
@@ -137,7 +137,7 @@ db.usuarios.find({
 Mostrar usuarios cuya edad corresponda al cálculo 2025 - añoNacimiento 
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 ```js
 db.usuarios.find({
   $expr: {
@@ -151,7 +151,7 @@ db.usuarios.find({
 Mostrar usuarios con más de dos compras registradas
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 ```js
 db.usuarios.find({
   $expr: {
@@ -162,10 +162,10 @@ db.usuarios.find({
 </details>
 
 ## Ejercicio 15
-Buscar usuarios registraados durante el año 2023 (usando $expr)
+Buscar usuarios registrados durante el año 2023 (usando $expr)
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 ```js
 db.usuarios.find({
   $expr: {
@@ -179,7 +179,7 @@ db.usuarios.find({
 Filtrar usuarios cuya comuna y región sean exactamente iguales
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 ```js
 db.usuarios.find({
   $expr: {
@@ -193,7 +193,7 @@ db.usuarios.find({
 Filtrar usuarios que hayan comprado productos con un precio promedio mayor a \$300.000
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 ```js
 db.usuarios.find({
   "compras.precio": { $gt: 300000 }
@@ -205,7 +205,7 @@ db.usuarios.find({
 Mostrar usuarios que tengan más etiquetas que productos comprados
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 ```js
 db.usuarios.find({
   $expr: {
@@ -219,7 +219,7 @@ db.usuarios.find({
 Buscar usuarios que tengan comentarios y etiquetas, y además hayan comprado un "Mouse"
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 ```js
 db.usuarios.find({
   "comentarios": { $exists: true, $ne: [] },
@@ -233,7 +233,7 @@ db.usuarios.find({
 Filtrar usuarios mayores de 40 años con menos de 2 compras registradas
 
 <details>
-    <summary style={{color:'red'}}>Solución</summary>
+    <summary>Solución</summary>
 ```js
 db.usuarios.find({
   "edad": { $gt: 40 },

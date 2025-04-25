@@ -1,3 +1,5 @@
+import { Quiz } from '@/components/QuizComponent';
+
 # Estándares de testing
 
 ## ISO/IEC 29119
@@ -5,11 +7,11 @@
 - Proporciona un marco integral para todos los aspectos del proceso de pruebas 
 
 <img 
-  src="/tilv21/images/fig02.png"  
+  src="/inacap/tilv21/images/fig02.png"  
   style={{ display: 'block', margin: '0 auto', width:'100%'}} 
 />
-
 <br/>
+
 - Parte 1 - **Conceptos y definiciones:** Proporciona la terminología y los conceptos fundamentales del testing de software
 - Parte 2 - **Proceso de pruebas:** Describe un conjunto de procesos para gestionar y realizar pruebas de software
 - Parte 3 - **Documentación de pruebas:** Establece plantillas y directrices para la documentación relacionada con las pruebas
@@ -22,9 +24,10 @@
 Incluye plantillas para varios documentos clave en el proceso de pruebas
 
 <img 
-  src="/tilv21/images/fig04.png"  
+  src="/inacap/tilv21/images/fig04.png"  
   style={{ display: 'block', margin: '0 auto', width:'100%'}} 
 />
+<br/>
 
 1. **Plan de pruebas:** Descripción del enfoque, recursos y cronograma de las actividades de prueba
 2. **Especificación de casos de prueba:** Detalle de las pruebas individuales que se deben realizar
@@ -44,39 +47,62 @@ Incluye varios niveles de certificación diseñados para validar un conjunto esp
 - **OWASP ZAP (zed attack proxy):** Herramienta para encontrar vulnerabilidades en seguridad en aplicaciones web
 
 <img 
-  src="/tilv21/images/fig03.png"  
+  src="/inacap/tilv21/images/fig03.png"  
   style={{ display: 'block', margin: '0 auto', width:'100%'}} 
 />
-
 <br/>
-# Actividad de práctica
 
-1. **¿Qué norma internacional proporciona un marco integral para todos los aspectos del proceso de pruebas de software?**
-    1. ISO/IEC 25010
-    2. IEEE 829
-    3. <span style={{color:'red'}}>ISO/IEC 29119</span>
-    4. OWASP
+# Actividad de práctica 03
 
-2. **¿Cuál de los siguientes estándares proporciona guías completas para realizar pruebas de seguridad en aplicaciones web?**
-    1. IEEE 829
-    2. ISO/IEC 29119
-    3. ISO/IEC 25010
-    4. <span style={{color:'red'}}>OWASP Testing Guide</span>
-
-3. **¿Qué recurso proporciona una lista de las diez vulnerabilidades de seguridad más críticas en aplicaciones web?**
-    1. <span style={{color:'red'}}>OWASP Top Ten</span>
-    2. ISO/IEC 29119
-    3. OWASP ZAP
-    4. OWASP Testing Guide
-
-4. **¿Qué estándar incluye plantillas para varios documentos clave en el proceso de pruebas, como el plan de pruebas y el informe de pruebas?**
-    1. ISO/IEC 29119
-    2. <span style={{color:'red'}}>IEEE 829</span>
-    3. OWASP
-    4. ISTQB
-
-5. **¿Cuál de los siguientes estándares ofrece certificaciones reconocidas internacionalmente para profesionales del testing de software?**
-    1. <span style={{color:'red'}}>ISTQB</span>
-    2. IEEE 829
-    3. OWASP
-    4. ISO/IEC 25010
+<Quiz questions={[
+  {
+    question: "¿Qué norma internacional proporciona un marco integral para todos los aspectos del proceso de pruebas de software?",
+    options: [
+      "ISO/IEC 25010",
+      "IEEE 829",
+      "ISO/IEC 29119",
+      "OWASP"
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "¿Cuál de los siguientes estándares proporciona guías completas para realizar pruebas de seguridad en aplicaciones web?",
+    options: [
+      "IEEE 829",
+      "ISO/IEC 29119",
+      "ISO/IEC 25010",
+      "OWASP Testing Guide"
+    ],
+    correctIndex: 3
+  },
+  {
+    question: "¿Qué recurso proporciona una lista de las diez vulnerabilidades de seguridad más críticas en aplicaciones web?",
+    options: [
+      "OWASP Top Ten",
+      "ISO/IEC 29119",
+      "OWASP ZAP",
+      "OWASP Testing Guide"
+    ],
+    correctIndex: 0
+  },
+  {
+    question: "¿Qué estándar incluye plantillas para varios documentos clave en el proceso de pruebas, como el plan de pruebas y el informe de pruebas?",
+    options: [
+      "ISO/IEC 29119",
+      "IEEE 829",
+      "OWASP",
+      "ISTQB"
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "¿Cuál de los siguientes estándares ofrece certificaciones reconocidas internacionalmente para profesionales del testing de software?",
+    options: [
+      "ISTQB",
+      "IEEE 829",
+      "OWASP",
+      "ISO/IEC 25010"
+    ],
+    correctIndex: 0
+  }
+]} />

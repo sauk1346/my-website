@@ -1,3 +1,5 @@
+import { Quiz } from '@/components/QuizComponent';
+
 # Cómo detectar la complejidad del testing
 
 1. **Complejidad intrínseca:** Se refiere a la complejidad inherente del software, basada en factores como la lógica del negocio, las dependencias entre módulo y la arquitectura del sistema
@@ -22,28 +24,47 @@
 2. **Media:** Sistemas con un número moderado de funcionalidades, algunas dependencias y tecnologías mixtas
 3. **Alta:** Sistemas con muchas funcionalidades, alta interdependencia entre módulos y uso de tecnologías avanzadas o personalizadas
 
-# Actividad de Práctica
+# Actividad de Práctica 07
 
-1. **¿Qué técnica se utiliza para medir la complejidad ciclomática del software?**
-    1. Pruebas de integración
-    2. Evaluación de impacto
-    3. <span style={{color:'red'}}>Modelo de McCabe</span>
-    4. Análisis de puntos de función
-
-2. **¿Cuál de los siguientes factores no contribuye a la complejidad del testing?**
-    1. Interdependencia de módulos
-    2. Tecnologías utilizadas
-    3. Tecnologías utilizadas
-    4. <span style={{color:'red'}}>Tamaño del equipo de desarrollo</span>
-
-3. **¿Cuál es un ejemplo de un sistema de baja complejidad en testing?**
-    1. <span style={{color:'red'}}>Sistema con funcionalidades básicas</span>
-    2. Sistema con funcionalidades avanzadas
-    3. Sistemas con muchas dependencias
-    4. Sistema con requisitos de alta seguridad
-
-4. **¿Cuál de las siguientes herramientas es comúnmente utilizada para la automatización de pruebas?**
-    1. SonarQube
-    2. JIRA
-    3. TestRail
-    4. <span style={{color:'red'}}>Selenium</span>
+<Quiz questions={[
+  {
+    question: "¿Qué técnica se utiliza para medir la complejidad ciclomática del software?",
+    options: [
+      "Pruebas de integración",
+      "Evaluación de impacto",
+      "Modelo de McCabe",
+      "Análisis de puntos de función"
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "¿Cuál de los siguientes factores no contribuye a la complejidad del testing?",
+    options: [
+      "Interdependencia de módulos",
+      "Tecnologías utilizadas",
+      "Complejidad de algoritmos",
+      "Tamaño del equipo de desarrollo"
+    ],
+    correctIndex: 3
+  },
+  {
+    question: "¿Cuál es un ejemplo de un sistema de baja complejidad en testing?",
+    options: [
+      "Sistema con funcionalidades básicas",
+      "Sistema con funcionalidades avanzadas",
+      "Sistemas con muchas dependencias",
+      "Sistema con requisitos de alta seguridad"
+    ],
+    correctIndex: 0
+  },
+  {
+    question: "¿Cuál de las siguientes herramientas es comúnmente utilizada para la automatización de pruebas?",
+    options: [
+      "SonarQube",
+      "JIRA",
+      "TestRail",
+      "Selenium"
+    ],
+    correctIndex: 3
+  }
+]} />

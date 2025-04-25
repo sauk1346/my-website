@@ -1,3 +1,5 @@
+import { Quiz } from '@/components/QuizComponent';
+
 # Requisitos y calidad de software según Estándar ISO/IEC 25000
 
 Requisitos y calidad juegan roles cruciales en la planificación y ejecución de pruebas
@@ -9,8 +11,7 @@ Sirven como base para desarrollar casos de prueba y escenarios de prueba. Los te
 2. **No Funcionales:** Describen cómo debe comportarse el sistema. Incluyen aspectos como rendimiento, seguridad, usabilidad, fiabilidad, etc.
 
 <img 
-  src="/tilv21/images/fig01.png" 
-  alt="Figura 1" 
+  src="/inacap/tilv21/images/fig01.png" 
   style={{ display: 'block', margin: '0 auto' }} 
 />
 
@@ -89,44 +90,67 @@ Miden la capacidad del software para protegerser contra amenazas y vulnerabilida
 - Proporciona un marco de referencia para la evaluación de la calidad del software
 - Guía a las organizaciones en la especificación y evaluación de la calidad del software mediante un conjunto coherente de normas, modelos y prácticas
 
+# Actividad de Práctica 02
 
-
-# Actividad de Práctica
-
-1. **Según ISO/IEC 25010, ¿cuál de las siguientes no es una subcaracterística de la calidad del software?**
-    1. Portabilidad
-    2. Seguridad
-    3. <span style={{color:'red'}}>Correctitud</span>
-    4. Eficiencia de rendimiento
-
-2. **¿Qué son los requisitos en el contexto del desarrollo de software?**
-    1. Las herramientas utilizadas para desarrollas el software
-    2. <span style={{color:'red'}}>Las especificaciones y condiciones que el software debe cumplir</span>
-    3. Las métricas para medir la calidad del software
-    4. Las actividades realizadas durante las pruebas de software
-
-3. **¿Cuál de las siguientes no es una característica evaluada para medir la calidad del software?**
-    1. Fiabilidad
-    2. <span style={{color:'red'}}>Complejidad</span>
-    3. Correctitud
-    4. Usabilidad
-
-4. **¿Qué tipo de requisitos describen qué debe hacer el sistema?**
-    1. Requisitos de rendimiento
-    2. Requisitos de usabilidad
-    3. <span style={{color:'red'}}>Requisitos funcionales</span>
-    4. Requisitos no funcionales
-
-5. **¿Qué se evalúa durante una auditoría de proceso en el contexto del testing de software?**
-    1. <span style={{color:'red'}}>El cumplimiento de prácticas y estándares establecidos</span>
-    2. La arquitectura del software
-    3. El diseño del software
-    4. El código fuente del software
-
-6. **¿Qué es el ciclo de vida del software según la norma ISO/IEC 12207?**
-    1. <span style={{color:'red'}}>Un conjunto de procesos para el desarrollo y mantenimiento del software</span>
-    2. Un sistema para el control de versiones del software
-    3. Una metodología específica de desarrollo ágil
-    4. Una secuencia de pruebas de software
-
-
+<Quiz questions={[
+  {
+    question: "Según ISO/IEC 25010, ¿cuál de las siguientes no es una subcaracterística de la calidad del software?",
+    options: [
+      "Portabilidad",
+      "Seguridad",
+      "Correctitud",
+      "Eficiencia de rendimiento"
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "¿Qué son los requisitos en el contexto del desarrollo de software?",
+    options: [
+      "Las herramientas utilizadas para desarrollar el software",
+      "Las especificaciones y condiciones que el software debe cumplir",
+      "Las métricas para medir la calidad del software",
+      "Las actividades realizadas durante las pruebas de software"
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "¿Cuál de las siguientes no es una característica evaluada para medir la calidad del software?",
+    options: [
+      "Fiabilidad",
+      "Complejidad",
+      "Correctitud",
+      "Usabilidad"
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "¿Qué tipo de requisitos describen qué debe hacer el sistema?",
+    options: [
+      "Requisitos de rendimiento",
+      "Requisitos de usabilidad",
+      "Requisitos funcionales",
+      "Requisitos no funcionales"
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "¿Qué se evalúa durante una auditoría de proceso en el contexto del testing de software?",
+    options: [
+      "El cumplimiento de prácticas y estándares establecidos",
+      "La arquitectura del software",
+      "El diseño del software",
+      "El código fuente del software"
+    ],
+    correctIndex: 0
+  },
+  {
+    question: "¿Qué es el ciclo de vida del software según la norma ISO/IEC 12207?",
+    options: [
+      "Un conjunto de procesos para el desarrollo y mantenimiento del software",
+      "Un sistema para el control de versiones del software",
+      "Una metodología específica de desarrollo ágil",
+      "Una secuencia de pruebas de software"
+    ],
+    correctIndex: 0
+  }
+]} />

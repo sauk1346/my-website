@@ -1,3 +1,5 @@
+import { Quiz } from '@/components/QuizComponent';
+
 # Técnicas y Herramientas de Testing
 Existen múltiplas técnicas de testing, dividias en estáticas y dinámicas, que permiten a los equipos de desarrollo identificar y corregir defectos en diferentes etapas del ciclo de vida del software.
 
@@ -73,28 +75,47 @@ Es el proceso de determinar las condiciones y escenarios bajo los cuales se eval
 2. **Análisis de valores límite:** Se centra en probar los valores en los límites de las clases de equivalencia, ya que es más probable que se encuentren defectos en estos puntos
 3. **Tablas de decisión:** Son una técnica sistemática para representar las reglas de negocio que afectan las condiciones y acciones en casos de prueba
 
-# Actividad de Pŕactica
+# Actividad de Práctica 05
 
-1. **¿Qué tipo de testing se centra en la evaluación de la facilidad de uso del software?**
-    1. Pruebas de integración
-    2. Pruebas de seguridad
-    3. Pruebas de rendimiento
-    4. <span style={{color:'red'}}>Pruebas de usabilidad</span>
-
-2. **¿Cuál es la diferencia principal entre las técnicas de testing estáticas y dinámicas?**
-    1. Las técnicas estáticas son menos costosas que las dinámicas.
-    2. Las técnicas estáticas se centran en la estructura del código, mientras que las dinámicas se centran en la funcionalidad del software.
-    3. Las técnicas estáticas se realizan después de la codificación, mientras que las dinámicas se realizan antes.
-    4. <span style={{color:'red'}}>Las técnicas estáticas no requieren la ejecución del software, mientras que las dinámicas sí.</span>
-
-3. **¿Qué tipo de pruebas realiza LoadRunner?**
-    1. <span style={{color:'red'}}>Pruebas de rendimiento</span>
-    2. Pruebas de seguridad
-    3. Análisis estático del código
-    4. Pruebas de usabilidad
-
-4. **¿Cuál de las siguientes herramientas se utiliza para el análisis estático del código?**
-    1. Selenium
-    2. JUnit
-    3. <span style={{color:'red'}}>SonarQube</span>
-    4. LoadRunner
+<Quiz questions={[
+  {
+    question: "¿Qué tipo de testing se centra en la evaluación de la facilidad de uso del software?",
+    options: [
+      "Pruebas de integración",
+      "Pruebas de seguridad",
+      "Pruebas de rendimiento",
+      "Pruebas de usabilidad"
+    ],
+    correctIndex: 3
+  },
+  {
+    question: "¿Cuál es la diferencia principal entre las técnicas de testing estáticas y dinámicas?",
+    options: [
+      "Las técnicas estáticas son menos costosas que las dinámicas.",
+      "Las técnicas estáticas se centran en la estructura del código, mientras que las dinámicas se centran en la funcionalidad del software.",
+      "Las técnicas estáticas se realizan después de la codificación, mientras que las dinámicas se realizan antes.",
+      "Las técnicas estáticas no requieren la ejecución del software, mientras que las dinámicas sí."
+    ],
+    correctIndex: 3
+  },
+  {
+    question: "¿Qué tipo de pruebas realiza LoadRunner?",
+    options: [
+      "Pruebas de rendimiento",
+      "Pruebas de seguridad",
+      "Análisis estático del código",
+      "Pruebas de usabilidad"
+    ],
+    correctIndex: 0
+  },
+  {
+    question: "¿Cuál de las siguientes herramientas se utiliza para el análisis estático del código?",
+    options: [
+      "Selenium",
+      "JUnit",
+      "SonarQube",
+      "LoadRunner"
+    ],
+    correctIndex: 2
+  }
+]} />

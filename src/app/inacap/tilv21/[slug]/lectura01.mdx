@@ -1,3 +1,5 @@
+import { Quiz } from '@/components/QuizComponent';
+
 # Conceptos básicos en el Desarrollo de Software
 
 - **Verificación:** Es el proceso de evaluar la calidad del software
@@ -27,32 +29,55 @@ Es un proceso utilizado para evaluar el software de acuerdo con las demandas del
 
 # Actividad de Práctica 01
 
-1. **¿Cuál es la diferencia principal entre un defecto y una falla en el software?**
-    1. Un defecto se produce durante la ejecución del software, mientras que una falla ocurre durante la fase de desarrollo.
-    2. Un defecto es un resultado esperado, mientras que una falla es un resultado inesperado.
-    3. Un defecto es una acción humana incorrecta, mientras que una falla es un problema de diseño. 
-    4. <span style={{color:'red'}}>Un defecto es la causa de un problema, mientras que una falla es su manifestación visible durante la ejecución del software.</span>
-
-2. **¿Qué métodos se utilizan comúnmente en el proceso de validación?**
-    1. Evaluacion de planos y especificaciones.
-    2. Revisiones, inspecciones y recorridos.
-    3. Verificación de requisitos y verificación del diseño.
-    4. <span style={{color:'red'}}>Pruebas de caja negra y pruebas de caja blanca.</span>
-
-3. **¿Cuál de las siguientes afirmaciones describe mejor la validación en las pruebas de software?**
-    1. Se realiza antes de la verificación.
-    2. Es un proceso estático de revisión del diseño, el código y los documentos.
-    3. <span style={{color:'red'}}>Es un proceso dinámico de evaluación del software en función de las demandas del cliente.</span>
-    4. No requiere la ejecución de código.
-
-4. **¿Qué es un error en el contexto del desarrollo de software?**
-    1. La manifestación visible de un problema cuando el software se ejecuta.
-    2. <span style={{color:'red'}}>Una acción humana que produce un resultado incorrecto o inesperado.</span>
-    3. Una imperfección en el código que causa un mal funcionamiento del software.
-    4. Un problema que surge durante la fase de pruebas del software.
-
-5. **¿Qué pregunta clave debe responderse durante las pruebas de verificación?**
-    1. ¿El software funciona correctamente y cumple los requisitos del cliente?
-    2. <span style={{color:'red'}}>¿Estamos desarrollando el producto preciso, según las especificaciones?</span>
-    3. ¿El software funciona correctamente en el entorno real?
-    4. ¿El producto final es efectivo y cumple con las especificaciones?
+<Quiz questions={[
+  {
+    question: "¿Cuál es la diferencia principal entre un defecto y una falla en el software?",
+    options: [
+      "Un defecto se produce durante la ejecución del software, mientras que una falla ocurre durante la fase de desarrollo.",
+      "Un defecto es un resultado esperado, mientras que una falla es un resultado inesperado.",
+      "Un defecto es una acción humana incorrecta, mientras que una falla es un problema de diseño.",
+      "Un defecto es la causa de un problema, mientras que una falla es su manifestación visible durante la ejecución del software."
+    ],
+    correctIndex: 3
+  },
+  {
+    question: "¿Qué métodos se utilizan comúnmente en el proceso de validación?",
+    options: [
+      "Evaluación de planos y especificaciones.",
+      "Revisiones, inspecciones y recorridos.",
+      "Verificación de requisitos y verificación del diseño.",
+      "Pruebas de caja negra y pruebas de caja blanca."
+    ],
+    correctIndex: 3
+  },
+  {
+    question: "¿Cuál de las siguientes afirmaciones describe mejor la validación en las pruebas de software?",
+    options: [
+      "Se realiza antes de la verificación.",
+      "Es un proceso estático de revisión del diseño, el código y los documentos.",
+      "Es un proceso dinámico de evaluación del software en función de las demandas del cliente.",
+      "No requiere la ejecución de código."
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "¿Qué es un error en el contexto del desarrollo de software?",
+    options: [
+      "La manifestación visible de un problema cuando el software se ejecuta.",
+      "Una acción humana que produce un resultado incorrecto o inesperado.",
+      "Una imperfección en el código que causa un mal funcionamiento del software.",
+      "Un problema que surge durante la fase de pruebas del software."
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "¿Qué pregunta clave debe responderse durante las pruebas de verificación?",
+    options: [
+      "¿El software funciona correctamente y cumple los requisitos del cliente?",
+      "¿Estamos desarrollando el producto preciso, según las especificaciones?",
+      "¿El software funciona correctamente en el entorno real?",
+      "¿El producto final es efectivo y cumple con las especificaciones?"
+    ],
+    correctIndex: 1
+  }
+]} />

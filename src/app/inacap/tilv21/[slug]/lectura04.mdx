@@ -1,3 +1,5 @@
+import { Quiz } from '@/components/QuizComponent';
+
 # Síntesis de la Unidad
 
 1. Diferenciación entre: error, defecto y fallo
@@ -28,39 +30,58 @@ Proporcionan marcos y directrices para la ejecución de pruebas, ayudando a aseg
 |Ayuda a gestionar eficientemente el ciclo de vida del ISO/IEC 25000|ISO/IEC12207|
 |Ayudan a gestionar y ejecutar pruebas de manera eficiente, garantizando que el software sea seguri, fiabla y cumpla con los requisitos establecidos|ISTQB, OWASP|
 
+# Actividad de Práctica 04
 
-# Actividad de Práctica
-
-1. **¿Cuál es la diferencia fundamental entre un error y un bug en el contexto del desarrollo de software?**
-    1. Un error es un problema detectado durante las pruebas, mientras que un bug es un fallo en el sistema en producción.
-    2. No hay diferencia entre error y bug; ambos términos se utilizan indistintamente.
-    3. Un error es un fallo en el sistema en producción, mientras que un bug es un problema detectado durante las pruebas. 
-    4. <span style={{color:'red'}}>Un error es una acción humana que produce un resultado incorrecto, mientras que un bug es una imperfección en el código o diseño que causa un mal funcionamiento.</span> 
-
-2. **¿Cuál de los siguientes procesos de la ISO/IEC 12207 incluye la planificación de pruebas?**
-    1. Proceso de desarrollo
-    2. <span style={{color:'red'}}>Proceso de gestión del proyecto</span>
-    3. Proceso de verificación
-    4. Proceso de validación
-
-3. **¿Qué proceso es parte de la norma ISO/IEC 12207 para asegurar que los módulos funcionan correctamente cuando se combinan?**
-    1. Pruebas unitarias
-    2. Pruebas de sistemas
-    3. <span style={{color:'red'}}>Pruebas de integración</span>
-    4. Pruebas de aceptación
-
-
-4. **¿Cuál de las siguientes afirmaciones describe mejor la validación en las pruebas de software?**
-    1. <span style={{color:'red'}}>Es un proceso dinámico de evaluación del software en función de las demandas del cliente</span>
-    2. Se realiza antes de la verificación
-    3. Es un proceso estático de revisión del diseño, el código y los documentos
-    4. No requiere la ejecución de código
-
-5. **¿Qué proporciona el estándar IEEE 829?**
-    1. <span style={{color:'red'}}>Plantillas y guías para la documentación de pruebas de software</span>
-    2. Herramientas para encontrar vulnerabilidades de seguridad en aplicaciones web
-    3. Métricas de calidad para productos de software
-    4. Certificaciones para profesionales de testing de software
- 
-
+<Quiz questions={[
+  {
+    question: "¿Cuál es la diferencia fundamental entre un error y un bug en el contexto del desarrollo de software?",
+    options: [
+      "Un error es un problema detectado durante las pruebas, mientras que un bug es un fallo en el sistema en producción.",
+      "No hay diferencia entre error y bug; ambos términos se utilizan indistintamente.",
+      "Un error es un fallo en el sistema en producción, mientras que un bug es un problema detectado durante las pruebas.",
+      "Un error es una acción humana que produce un resultado incorrecto, mientras que un bug es una imperfección en el código o diseño que causa un mal funcionamiento."
+    ],
+    correctIndex: 3
+  },
+  {
+    question: "¿Cuál de los siguientes procesos de la ISO/IEC 12207 incluye la planificación de pruebas?",
+    options: [
+      "Proceso de desarrollo",
+      "Proceso de gestión del proyecto",
+      "Proceso de verificación",
+      "Proceso de validación"
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "¿Qué proceso es parte de la norma ISO/IEC 12207 para asegurar que los módulos funcionan correctamente cuando se combinan?",
+    options: [
+      "Pruebas unitarias",
+      "Pruebas de sistemas",
+      "Pruebas de integración",
+      "Pruebas de aceptación"
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "¿Cuál de las siguientes afirmaciones describe mejor la validación en las pruebas de software?",
+    options: [
+      "Es un proceso dinámico de evaluación del software en función de las demandas del cliente",
+      "Se realiza antes de la verificación",
+      "Es un proceso estático de revisión del diseño, el código y los documentos",
+      "No requiere la ejecución de código"
+    ],
+    correctIndex: 0
+  },
+  {
+    question: "¿Qué proporciona el estándar IEEE 829?",
+    options: [
+      "Plantillas y guías para la documentación de pruebas de software",
+      "Herramientas para encontrar vulnerabilidades de seguridad en aplicaciones web",
+      "Métricas de calidad para productos de software",
+      "Certificaciones para profesionales de testing de software"
+    ],
+    correctIndex: 0
+  }
+]} />
 

@@ -1,3 +1,5 @@
+import { Quiz } from '@/components/QuizComponent';
+
 # Soluciones a problemas y criterios de factibilidad con técnicas de testing
 
 ## Técnicas de testing
@@ -41,34 +43,57 @@ Son fundamentales para determinar la vulnerabilidad y la conveniencia de impleme
 4. **Análisis de resultados:** Evaluzar los resultados de las pruebas para identificar defectos y áreas de mejora
 5. **Informe de pruebas:** Documentar los hallazgos, conclusiones y recomendaciones para futuras acciones
 
-# Actividad de Práctica
+# Actividad de Práctica 08
 
-1. **¿Qué problema común se enfoca en la velocidad y capacidad de respuesta del software?**
-    1. <span style={{color:'red'}}>Defectos de rendimiento</span>
-    2. Problemas de usabilidad
-    3. Problemas de seguridad
-    4. Defectos funcionales
-
-2. **¿Qué técnica de testing se utiliza para detectar errores en componentes individuales del software?**
-    1. Pruebas de aceptación
-    2. <span style={{color:'red'}}>Pruebas unitarias</span>
-    3. Pruebas de integración
-    4. Pruebas de sistemas
-
-3. **¿Cuál es un criterio de factibilidad importante al considerar soluciones tentativas en testing?**
-    1. Complejidad del código
-    2. Preferencias del equipo
-    3. <span style={{color:'red'}}>Disponibilidad de recursos</span>
-    4. Estilo de codificación
-
-4. **¿Qué enfoque de testing promueve la integración continua de pruebas a lo largo del ciclo de desarrollo?**
-    1. Waterfall model
-    2. DevOps
-    3. V-model
-    4. <span style={{color:'red'}}>Agile testing</span>
-
-5. **¿Qué modelo de testing se realiza en paralelo con el desarrollo, con fases de testing correspondientes a cada fase de desarrollo?**
-    1. <span style={{color:'red'}}>V-model</span>
-    2. Waterfall model
-    3. DevOps
-    4. Agile testing
+<Quiz questions={[
+  {
+    question: "¿Qué problema común se enfoca en la velocidad y capacidad de respuesta del software?",
+    options: [
+      "Defectos de rendimiento",
+      "Problemas de usabilidad",
+      "Problemas de seguridad",
+      "Defectos funcionales"
+    ],
+    correctIndex: 0
+  },
+  {
+    question: "¿Qué técnica de testing se utiliza para detectar errores en componentes individuales del software?",
+    options: [
+      "Pruebas de aceptación",
+      "Pruebas unitarias",
+      "Pruebas de integración",
+      "Pruebas de sistemas"
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "¿Cuál es un criterio de factibilidad importante al considerar soluciones tentativas en testing?",
+    options: [
+      "Complejidad del código",
+      "Preferencias del equipo",
+      "Disponibilidad de recursos",
+      "Estilo de codificación"
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "¿Qué enfoque de testing promueve la integración continua de pruebas a lo largo del ciclo de desarrollo?",
+    options: [
+      "Waterfall model",
+      "DevOps",
+      "V-model",
+      "Agile testing"
+    ],
+    correctIndex: 3
+  },
+  {
+    question: "¿Qué modelo de testing se realiza en paralelo con el desarrollo, con fases de testing correspondientes a cada fase de desarrollo?",
+    options: [
+      "V-model",
+      "Waterfall model",
+      "DevOps",
+      "Agile testing"
+    ],
+    correctIndex: 0
+  }
+]} />

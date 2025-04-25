@@ -1,196 +1,328 @@
+import { Quiz } from '@/components/QuizComponent';
+
 # Controles
 
 ## Control 01
-**Nota: 6/6**
 
-1. **En el contexto de métricas de calidad, si se está midiendo el MTBF (Mean Time Between Failures) de un sistema, ¿qué aspecto se está evaluando específicamente?**
-    1. <span style={{color:'red'}}>El tiempo promedio entre fallos consecutivos</span>
-	2. La cantidad total de fallos en un período
-	3. La frecuencia con que ocurren los fallos
-	4. El tiempo promedio que toma reparar un fallo
-
-2. **¿Cuál de las siguientes afirmaciones describe mejor la diferencia principal entre verificación y validación en el desarrollo de software?**
-	1. La verificación se realiza al final del desarrollo del producto sin necesitar saber si es  el correcto, mientras que la validación se realiza durante todo el proceso.
-	2. <span style={{color:'red'}}>La verificación determina si se está construyendo el producto correctamente, mientras que la validación determina si se está construyendo el producto correcto.</span>
-	3. La verificación se enfoca en el código, mientras que la validación se enfoca en los requisitos del usuario para corroborar la construcción del producto correcto.
-	4. La verificación es un proceso dinámico enfocado en los detalles del producto, mientras que la validación es estática y se da al inicio y fin del proceso.
-
-3. **En el contexto de la calidad del software, ¿qué representa mejor el concepto de "Correctitud"?**
-	1. El software utiliza de manera óptima los recursos del sistema
-	2. El software puede usarse en diferentes entornos o plataformas
-	3. <span style={{color:'red'}}>El software hace lo que se supone que debe hacer</span>
-	4. El software es fácil de usar y entender para el usuario final
-
-4. **Durante la fase de validación de un software, ¿cuál de las siguientes actividades NO corresponde a este proceso?**
-	1. <span style={{color:'red'}}>Verificar la documentación de requisitos</span>
-	2. Realizar pruebas de funcionamiento en producción
-	3. Realizar pruebas de integración del sistema
-	4. Ejecutar pruebas de aceptación del usuario
-
-5. **¿Qué fase del proceso de verificación y validación se centra en evaluar si la aplicación de software cumple con las especificaciones de diseño mencionadas en la documentación?**
-	1. Validación operativa
-	2. Verificación de los requisitos
-	3. Verificación del código
-	4. <span style={{color:'red'}}>Verificación del diseño</span>
-
-6. **En un proyecto de desarrollo de software, se detecta que un módulo no funciona según lo esperado debido a una interpretación incorrecta de los requisitos por parte del desarrollador. Según los conceptos estudiados, esto corresponde a:**
-	1. Un defecto en el código
-	2. Una falla del sistema
-	3. <span style={{color:'red'}}>Un error humano</span>
-	4. Un bug del sistema
+<Quiz questions={[
+  {
+    question: "En el contexto de métricas de calidad, si se está midiendo el MTBF (Mean Time Between Failures) de un sistema, ¿qué aspecto se está evaluando específicamente?",
+    options: [
+      "El tiempo promedio entre fallos consecutivos",
+      "La cantidad total de fallos en un período",
+      "La frecuencia con que ocurren los fallos",
+      "El tiempo promedio que toma reparar un fallo"
+    ],
+    correctIndex: 0
+  },
+  {
+    question: "¿Cuál de las siguientes afirmaciones describe mejor la diferencia principal entre verificación y validación en el desarrollo de software?",
+    options: [
+      "La verificación se realiza al final del desarrollo del producto sin necesitar saber si es el correcto, mientras que la validación se realiza durante todo el proceso.",
+      "La verificación determina si se está construyendo el producto correctamente, mientras que la validación determina si se está construyendo el producto correcto.",
+      "La verificación se enfoca en el código, mientras que la validación se enfoca en los requisitos del usuario para corroborar la construcción del producto correcto.",
+      "La verificación es un proceso dinámico enfocado en los detalles del producto, mientras que la validación es estática y se da al inicio y fin del proceso."
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "En el contexto de la calidad del software, ¿qué representa mejor el concepto de \"Correctitud\"?",
+    options: [
+      "El software utiliza de manera óptima los recursos del sistema",
+      "El software puede usarse en diferentes entornos o plataformas",
+      "El software hace lo que se supone que debe hacer",
+      "El software es fácil de usar y entender para el usuario final"
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "Durante la fase de validación de un software, ¿cuál de las siguientes actividades NO corresponde a este proceso?",
+    options: [
+      "Verificar la documentación de requisitos",
+      "Realizar pruebas de funcionamiento en producción",
+      "Realizar pruebas de integración del sistema",
+      "Ejecutar pruebas de aceptación del usuario"
+    ],
+    correctIndex: 0
+  },
+  {
+    question: "¿Qué fase del proceso de verificación y validación se centra en evaluar si la aplicación de software cumple con las especificaciones de diseño mencionadas en la documentación?",
+    options: [
+      "Validación operativa",
+      "Verificación de los requisitos",
+      "Verificación del código",
+      "Verificación del diseño"
+    ],
+    correctIndex: 3
+  },
+  {
+    question: "En un proyecto de desarrollo de software, se detecta que un módulo no funciona según lo esperado debido a una interpretación incorrecta de los requisitos por parte del desarrollador. Según los conceptos estudiados, esto corresponde a:",
+    options: [
+      "Un defecto en el código",
+      "Una falla del sistema",
+      "Un error humano",
+      "Un bug del sistema"
+    ],
+    correctIndex: 2
+  }
+]} />
 
 ## Control 02
-**Nota: 5/6**
 
-1. **En el contexto de la ISO/IEC 29119, ¿qué parte del estándar se enfoca específicamente en proporcionar métodos y enfoques para realizar pruebas efectivas?**
-	1. <span style={{color:'red'}}>Parte 4 - Técnicas de Pruebas</span>
-	2. Parte 1 - Estrategias de pruebas
-	3. Parte 2 - Proceso de Pruebas
-	4. Parte 3 - Documentación de Pruebas
-
-2. **¿Por qué el documento de plan de pruebas proporciona una descripción detallada del enfoque, recursos y cronograma de las actividades de prueba?**
-	1. <span style={{color:'red'}}>Para establecer una base clara para la ejecución y evaluación de las pruebas</span>
-	2. Para cumplir con los deberes de los testers en las tareas administrativas
-	3. Para impresionar a los clientes con documentación extensa sobre las pruebas
-	4. Para cumplir con los requisitos legales de documentación de las pruebas
-
-3. **En una empresa el equipo está implementando la norma ISO/IEC 12207 para asegurar la calidad y cumplimiento regulatorio del proyecto. Recientemente, has notado que hay confusión entre los equipos sobre dónde y cuándo se deben realizar ciertas actividades clave de testing. Considerando las mejores prácticas de la ISO/IEC 12207 y la naturaleza crítica del software médico, ¿cómo abordarías la actividad de "Diseño de Pruebas" en este proyecto para maximizar la eficacia y el cumplimiento normativo?**
-	1. Incluirla exclusivamente en el Proceso de Verificación, para garantizar una revisión independiente de los requisitos del sistema.
-	2. Integrarla en el Proceso de Desarrollo, permitiendo una colaboración estrecha entre desarrolladores y testers desde las etapas iniciales.
-	3. <span style={{color:'red'}}>Dividirla entre los Procesos de Desarrollo y Verificación, con un diseño inicial en el desarrollo y una revisión en la verificación.</span>
-	4. Asignarla al Proceso de Validación, para asegurar que las pruebas se diseñen con un enfoque en la satisfacción del usuario final y los requisitos regulatorios.
-
-4. **En el contexto de la norma ISO/IEC 12207, ¿cuál de las siguientes afirmaciones describe mejor el propósito principal del estándar en relación con el ciclo de vida del software?**
-	1. Proporcionar un conjunto de herramientas de desarrollo para el ciclo de vida del software
-	2. Crear un sistema de certificación para profesionales de desarrollo de software
-	3. <span style={{color:'red'}}>Establecer un marco unificado para la gestión de procesos del ciclo de vida del software</span>
-	4. Definir una metodología específica para el desarrollo ágil de software durante todo el ciclo
-
-5. **¿Qué proceso de la ISO/IEC 12207 incluye la actividad de "Pruebas de Regresión"?**
-	1. Proceso de Validación
-	2. <span style={{color:'red'}}>Proceso de Mantenimiento</span>
-	3. Proceso de Desarrollo
-	4. Proceso de Verificación
-
-6. **¿Por qué es importante que la parte de Documentación de Pruebas se ocupe de establecer plantillas y directrices para la documentación relacionada con las pruebas?**
-	1. Para aumentar el volumen de documentación del proyecto como respaldo descartable
-	2. <span style={{color:'red'}}>Para estandarizar y mejorar la calidad, consistencia y eficiencia del proceso de pruebas</span>
-	3. Para cumplir y mejorar los requisitos exigidos en la normativa del proceso de pruebas
-	4. Para justificar la contratación de más personal garantizando la calidad y eficiencia
+<Quiz questions={[
+  {
+    question: "En el contexto de la ISO/IEC 29119, ¿qué parte del estándar se enfoca específicamente en proporcionar métodos y enfoques para realizar pruebas efectivas?",
+    options: [
+      "Parte 4 - Técnicas de Pruebas",
+      "Parte 1 - Estrategias de pruebas",
+      "Parte 2 - Proceso de Pruebas",
+      "Parte 3 - Documentación de Pruebas"
+    ],
+    correctIndex: 0
+  },
+  {
+    question: "¿Por qué el documento de plan de pruebas proporciona una descripción detallada del enfoque, recursos y cronograma de las actividades de prueba?",
+    options: [
+      "Para establecer una base clara para la ejecución y evaluación de las pruebas",
+      "Para cumplir con los deberes de los testers en las tareas administrativas",
+      "Para impresionar a los clientes con documentación extensa sobre las pruebas",
+      "Para cumplir con los requisitos legales de documentación de las pruebas"
+    ],
+    correctIndex: 0
+  },
+  {
+    question: "En una empresa el equipo está implementando la norma ISO/IEC 12207 para asegurar la calidad y cumplimiento regulatorio del proyecto. Recientemente, has notado que hay confusión entre los equipos sobre dónde y cuándo se deben realizar ciertas actividades clave de testing. Considerando las mejores prácticas de la ISO/IEC 12207 y la naturaleza crítica del software médico, ¿cómo abordarías la actividad de \"Diseño de Pruebas\" en este proyecto para maximizar la eficacia y el cumplimiento normativo?",
+    options: [
+      "Incluirla exclusivamente en el Proceso de Verificación, para garantizar una revisión independiente de los requisitos del sistema.",
+      "Integrarla en el Proceso de Desarrollo, permitiendo una colaboración estrecha entre desarrolladores y testers desde las etapas iniciales.",
+      "Dividirla entre los Procesos de Desarrollo y Verificación, con un diseño inicial en el desarrollo y una revisión en la verificación.",
+      "Asignarla al Proceso de Validación, para asegurar que las pruebas se diseñen con un enfoque en la satisfacción del usuario final y los requisitos regulatorios."
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "En el contexto de la norma ISO/IEC 12207, ¿cuál de las siguientes afirmaciones describe mejor el propósito principal del estándar en relación con el ciclo de vida del software?",
+    options: [
+      "Proporcionar un conjunto de herramientas de desarrollo para el ciclo de vida del software",
+      "Crear un sistema de certificación para profesionales de desarrollo de software",
+      "Establecer un marco unificado para la gestión de procesos del ciclo de vida del software",
+      "Definir una metodología específica para el desarrollo ágil de software durante todo el ciclo"
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "¿Qué proceso de la ISO/IEC 12207 incluye la actividad de \"Pruebas de Regresión\"?",
+    options: [
+      "Proceso de Validación",
+      "Proceso de Mantenimiento",
+      "Proceso de Desarrollo",
+      "Proceso de Verificación"
+    ],
+    correctIndex: 3
+  },
+  {
+    question: "¿Por qué es importante que la parte de Documentación de Pruebas se ocupe de establecer plantillas y directrices para la documentación relacionada con las pruebas?",
+    options: [
+      "Para aumentar el volumen de documentación del proyecto como respaldo descartable",
+      "Para estandarizar y mejorar la calidad, consistencia y eficiencia del proceso de pruebas",
+      "Para cumplir y mejorar los requisitos exigidos en la normativa del proceso de pruebas",
+      "Para justificar la contratación de más personal garantizando la calidad y eficiencia"
+    ],
+    correctIndex: 1
+  }
+]} />
 
 ## Control 03
-**Nota: 6/6**
 
-1. **Una empresa de desarrollo de software está implementando la norma ISO/IEC 12207 y desea mejorar su proceso de testing. Durante la fase de integración del software, se descubren múltiples errores que no fueron detectados en etapas anteriores. ¿Qué proceso de la norma debería reforzarse principalmente para prevenir esta situación en futuros proyectos?**
-	1. Proceso de Gestión
-	2. Proceso de Mantenimiento
-	3. <span style={{color:'red'}}>Proceso de Verificación</span>
-	4. Proceso de Validación
-
-2. **En el contexto de pruebas de software, ¿qué representa un "defecto"?**
-	1. <span style={{color:'red'}}>Una imperfección en el código o diseño del software</span>
-	2. Una acción humana que produce un resultado incorrecto
-	3. Un problema observable por el usuario final
-	4. Una especificación incorrecta en los requisitos del software
-
-3. **Un startup de tecnología está desarrollando una aplicación web innovadora y quiere asegurarse de que cumple con los estándares de seguridad más actuales. Considerando las limitaciones de recursos típicas de un startup, ¿por qué utilizar la guía OWASP Top Ten y OWASP ZAP sería más efectivo y eficiente para abordar las pruebas de seguridad?**
-	1. Establece un servicio de consultoría experta relacionada a las normativas
-	2. <span style={{color:'red'}}>Ofrece un enfoque económico y centrado en las vulnerabilidades más críticas</span>
-	3. Garantiza el cumplimiento total de todas las regulaciones de seguridad
-	4. Proporciona una certificación de seguridad reconocida internacionalmente
-
-4. **¿Cuál es el tipo de prueba que se realiza para evaluar la interacción entre diferentes módulos o componentes del software?**
-	1. <span style={{color:'red'}}>Pruebas de integración</span>
-	2. Pruebas unitarias
-	3. Pruebas de sistema
-	4. Pruebas de aceptación
-
-5. **¿Cuál de las siguientes opciones NO es una característica típica de la calidad del software según la ISO/IEC 25010?**
-	1. Mantenibilidad
-	2. Usabilidad
-	3. <span style={{color:'red'}}>Escalabilidad</span>
-	4. Eficiencia
-
-6. **En un proyecto de desarrollo de software crítico para la seguridad, el equipo de testing ha identificado un conflicto entre los requisitos de rendimiento y los de seguridad. Según la ISO/IEC 12207, ¿qué proceso sería el más adecuado para resolver este conflicto y asegurar que tanto el rendimiento como la seguridad se aborden adecuadamente en las pruebas?**
-	1. Proceso de Verificación del Sistema
-	2. <span style={{color:'red'}}>Proceso de Análisis de Requisitos del Sistema</span>
-	3. Proceso de Desarrollo del Proyecto
-	4. Proceso de Gestión del Proyecto
+<Quiz questions={[
+  {
+    question: "Una empresa de desarrollo de software está implementando la norma ISO/IEC 12207 y desea mejorar su proceso de testing. Durante la fase de integración del software, se descubren múltiples errores que no fueron detectados en etapas anteriores. ¿Qué proceso de la norma debería reforzarse principalmente para prevenir esta situación en futuros proyectos?",
+    options: [
+      "Proceso de Gestión",
+      "Proceso de Mantenimiento",
+      "Proceso de Verificación",
+      "Proceso de Validación"
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "En el contexto de pruebas de software, ¿qué representa un \"defecto\"?",
+    options: [
+      "Una imperfección en el código o diseño del software",
+      "Una acción humana que produce un resultado incorrecto",
+      "Un problema observable por el usuario final",
+      "Una especificación incorrecta en los requisitos del software"
+    ],
+    correctIndex: 0
+  },
+  {
+    question: "Un startup de tecnología está desarrollando una aplicación web innovadora y quiere asegurarse de que cumple con los estándares de seguridad más actuales. Considerando las limitaciones de recursos típicas de un startup, ¿por qué utilizar la guía OWASP Top Ten y OWASP ZAP sería más efectivo y eficiente para abordar las pruebas de seguridad?",
+    options: [
+      "Establece un servicio de consultoría experta relacionada a las normativas",
+      "Ofrece un enfoque económico y centrado en las vulnerabilidades más críticas",
+      "Garantiza el cumplimiento total de todas las regulaciones de seguridad",
+      "Proporciona una certificación de seguridad reconocida internacionalmente"
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "¿Cuál es el tipo de prueba que se realiza para evaluar la interacción entre diferentes módulos o componentes del software?",
+    options: [
+      "Pruebas de integración",
+      "Pruebas unitarias",
+      "Pruebas de sistema",
+      "Pruebas de aceptación"
+    ],
+    correctIndex: 0
+  },
+  {
+    question: "¿Cuál de las siguientes opciones NO es una característica típica de la calidad del software según la ISO/IEC 25010?",
+    options: [
+      "Mantenibilidad",
+      "Usabilidad",
+      "Escalabilidad",
+      "Eficiencia"
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "En un proyecto de desarrollo de software crítico para la seguridad, el equipo de testing ha identificado un conflicto entre los requisitos de rendimiento y los de seguridad. Según la ISO/IEC 12207, ¿qué proceso sería el más adecuado para resolver este conflicto y asegurar que tanto el rendimiento como la seguridad se aborden adecuadamente en las pruebas?",
+    options: [
+      "Proceso de Verificación del Sistema",
+      "Proceso de Análisis de Requisitos del Sistema",
+      "Proceso de Desarrollo del Proyecto",
+      "Proceso de Gestión del Proyecto"
+    ],
+    correctIndex: 1
+  }
+]} />
 
 ## Control 04
-**Nota: 6/6**
 
-1. **Un equipo necesita evaluar cómo responde su aplicación ante miles de usuarios concurrentes. ¿Qué herramienta debería emplear?**
-	1. SonarQube
-	2. Selenium
-	3. Checkstyle
-	4. <span style={{color:'red'}}>LoadRunner</span>
-
-2. **¿Cuál de las siguientes herramientas se utiliza para la automatización de pruebas funcionales en navegadores web?**
-	1. SonarQube
-	2. LoadRunner
-	3. <span style={{color:'red'}}>Selenium</span>
-	4. JUnit
-
-3. **Un equipo de desarrollo quiere asegurarse de que un cambio reciente en el código no afecte funcionalidades previas. ¿Qué técnica dinámica de testing debería aplicar?**
-	1. Testing de caja blanca
-	2. Testing de carga
-	3. Revisión por pares
-	4. <span style={{color:'red'}}>Testing de regresión</span>
-
-4. **¿Cuál es la principal diferencia entre el testing de caja blanca y el testing de caja negra?**
-	1. <span style={{color:'red'}}>El testing de caja blanca analiza la estructura interna del código, mientras que el testing de caja negra se centra en los resultados sin conocer el código.</span>
-	2. Ambos métodos requieren acceso al código fuente para su correcta implementación, por lo que no pueden diferenciarse.
-	3. El testing de caja negra examina los estándares de codificación, mientras que el testing de caja blanca evalúa la usabilidad.
-	4. El testing de caja blanca solo se usa en software embebido, mientras que el testing de caja negra se aplica en aplicaciones web.
-
-5. **¿Para qué se usa SonarQube en el testing de software?**
-	1. <span style={{color:'red'}}>Para analizar estáticamente el código y detectar vulnerabilidades</span>
-	2. Para realizar pruebas de integración en arquitecturas microservicio
-	3. Para automatizar pruebas unitarias
-	4. Para ejecutar pruebas de rendimiento en entornos distribuidos
-
-6. **Un equipo de desarrollo desea asegurar la conformidad del código Java con estándares de estilo y buenas prácticas. ¿Qué herramienta debería utilizar?**
-	1. <span style={{color:'red'}}>Checkstyle</span>
-	2. JUnit
-	3. LoadRunner
-	4. Selenium
+<Quiz questions={[
+  {
+    question: "Un equipo necesita evaluar cómo responde su aplicación ante miles de usuarios concurrentes. ¿Qué herramienta debería emplear?",
+    options: [
+      "SonarQube",
+      "Selenium",
+      "Checkstyle",
+      "LoadRunner"
+    ],
+    correctIndex: 3
+  },
+  {
+    question: "¿Cuál de las siguientes herramientas se utiliza para la automatización de pruebas funcionales en navegadores web?",
+    options: [
+      "SonarQube",
+      "LoadRunner",
+      "Selenium",
+      "JUnit"
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "Un equipo de desarrollo quiere asegurarse de que un cambio reciente en el código no afecte funcionalidades previas. ¿Qué técnica dinámica de testing debería aplicar?",
+    options: [
+      "Testing de caja blanca",
+      "Testing de carga",
+      "Revisión por pares",
+      "Testing de regresión"
+    ],
+    correctIndex: 3
+  },
+  {
+    question: "¿Cuál es la principal diferencia entre el testing de caja blanca y el testing de caja negra?",
+    options: [
+      "El testing de caja blanca analiza la estructura interna del código, mientras que el testing de caja negra se centra en los resultados sin conocer el código.",
+      "Ambos métodos requieren acceso al código fuente para su correcta implementación, por lo que no pueden diferenciarse.",
+      "El testing de caja negra examina los estándares de codificación, mientras que el testing de caja blanca evalúa la usabilidad.",
+      "El testing de caja blanca solo se usa en software embebido, mientras que el testing de caja negra se aplica en aplicaciones web."
+    ],
+    correctIndex: 0
+  },
+  {
+    question: "¿Para qué se usa SonarQube en el testing de software?",
+    options: [
+      "Para analizar estáticamente el código y detectar vulnerabilidades",
+      "Para realizar pruebas de integración en arquitecturas microservicio",
+      "Para automatizar pruebas unitarias",
+      "Para ejecutar pruebas de rendimiento en entornos distribuidos"
+    ],
+    correctIndex: 0
+  },
+  {
+    question: "Un equipo de desarrollo desea asegurar la conformidad del código Java con estándares de estilo y buenas prácticas. ¿Qué herramienta debería utilizar?",
+    options: [
+      "Checkstyle",
+      "JUnit",
+      "LoadRunner",
+      "Selenium"
+    ],
+    correctIndex: 0
+  }
+]} />
 
 ## Control 05
-**Nota: 6/6**
 
-1. **¿Cuál de las siguientes técnicas es la más adecuada para verificar el correcto funcionamiento de funciones individuales dentro de un módulo?**
-	1. <span style={{color:'red'}}>Pruebas unitarias</span>
-	2. Pruebas de integración
-	3. Pruebas de estrés
-	4. Pruebas de caja negra
-
-2. **¿Qué técnica de testing es adecuada para evaluar el rendimiento de un servidor ante un aumento repentino de usuarios concurrentes?**
-	1. Pruebas de seguridad
-	2. Pruebas unitarias
-	3. <span style={{color:'red'}}>Pruebas de estrés</span>
-	4. Pruebas de caja negra
-
-3. **Un equipo de desarrollo está probando una aplicación de banca en línea con múltiples módulos altamente interdependientes y funciones de seguridad avanzadas. Según la clasificación de complejidad en testing, ¿en qué categoría debería clasificarse este caso de prueba?**
-	1. <span style={{color:'red'}}>Alta complejidad</span>
-	2. Media complejidad
-	3. Baja y alta complejidad
-	4. Baja complejidad
-
-4. **¿Cuál es la principal ventaja de las pruebas de rendimiento en software?**
-	1. No tienen un impacto real en la experiencia del usuario
-	2. Permiten detectar vulnerabilidades de seguridad
-	3. Evalúan si los módulos individuales funcionan correctamente
-	4. <span style={{color:'red'}}>Aseguran que el software funcione bien bajo diferentes condiciones de carga</span>
-
-5. **Un equipo de desarrollo ha corregido un error en la funcionalidad de pago de una aplicación. ¿Qué tipo de pruebas se deben realizar para asegurar que el cambio no afectó otras funciones?**
-	1. Pruebas de estrés
-	2. Pruebas unitarias
-	3. <span style={{color:'red'}}>Pruebas de regresión</span>
-	4. Pruebas de caja blanca
-
-6. **¿Cuál es la principal diferencia entre pruebas unitarias y pruebas de integración?**
-	1. Las pruebas unitarias solo prueban la interfaz gráfica
-	2. Las pruebas unitarias se realizan después de las de integración
-	3. <span style={{color:'red'}}>Las pruebas unitarias evalúan componentes individuales</span>
-	4. Las pruebas de integración siempre son manuales
+<Quiz questions={[
+  {
+    question: "¿Cuál de las siguientes técnicas es la más adecuada para verificar el correcto funcionamiento de funciones individuales dentro de un módulo?",
+    options: [
+      "Pruebas unitarias",
+      "Pruebas de integración",
+      "Pruebas de estrés",
+      "Pruebas de caja negra"
+    ],
+    correctIndex: 0
+  },
+  {
+    question: "¿Qué técnica de testing es adecuada para evaluar el rendimiento de un servidor ante un aumento repentino de usuarios concurrentes?",
+    options: [
+      "Pruebas de seguridad",
+      "Pruebas unitarias",
+      "Pruebas de estrés",
+      "Pruebas de caja negra"
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "Un equipo de desarrollo está probando una aplicación de banca en línea con múltiples módulos altamente interdependientes y funciones de seguridad avanzadas. Según la clasificación de complejidad en testing, ¿en qué categoría debería clasificarse este caso de prueba?",
+    options: [
+      "Alta complejidad",
+      "Media complejidad",
+      "Baja y alta complejidad",
+      "Baja complejidad"
+    ],
+    correctIndex: 0
+  },
+  {
+    question: "¿Cuál es la principal ventaja de las pruebas de rendimiento en software?",
+    options: [
+      "No tienen un impacto real en la experiencia del usuario",
+      "Permiten detectar vulnerabilidades de seguridad",
+      "Evalúan si los módulos individuales funcionan correctamente",
+      "Aseguran que el software funcione bien bajo diferentes condiciones de carga"
+    ],
+    correctIndex: 3
+  },
+  {
+    question: "Un equipo de desarrollo ha corregido un error en la funcionalidad de pago de una aplicación. ¿Qué tipo de pruebas se deben realizar para asegurar que el cambio no afectó otras funciones?",
+    options: [
+      "Pruebas de estrés",
+      "Pruebas unitarias",
+      "Pruebas de regresión",
+      "Pruebas de caja blanca"
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "¿Cuál es la principal diferencia entre pruebas unitarias y pruebas de integración?",
+    options: [
+      "Las pruebas unitarias solo prueban la interfaz gráfica",
+      "Las pruebas unitarias se realizan después de las de integración",
+      "Las pruebas unitarias evalúan componentes individuales",
+      "Las pruebas de integración siempre son manuales"
+    ],
+    correctIndex: 2
+  }
+]} />

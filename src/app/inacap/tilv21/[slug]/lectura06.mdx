@@ -1,3 +1,5 @@
+import { Quiz } from '@/components/QuizComponent';
+
 # Alcances y definiciones de los tipos de testing
 
 ## Pruebas funcionales
@@ -20,28 +22,47 @@ Se llevan a cabo sin un plan de prueba formal. Permite a los testers explorar el
 
 Son valiosas para identificar problemas que no pueden ser evidentes en pruebas estructuradas y para mejorar la calidad general del software
 
-# Actividad de práctica
+# Actividad de práctica 06
 
-1. **¿Cuál es el principal objetivo de las pruebas de regresión en el desarrollo de software?**
-    1. Detectar defectos en las funciones básicas del software.
-    2. Validar la interoperabilidad entre componentes.
-    3. Verificar que el software cumpla con los requisitos del usuario.
-    4. <span style={{color:'red'}}>Asegurar que los cambios recientes no hayan introducido errores en el software.</span>
-
-2. **¿Qué tipo de testing se centra en evaluar cómo responde el software bajo diferentes niveles de carga y estrés?**
-    1. Pruebas de integración
-    2. Pruebas de seguridad
-    3. Pruebas de usabilidad
-    4. <span style={{color:'red'}}>Pruebas de rendimiento</span>
-
-3. **¿Cuál de las siguientes afirmaciones describe mejor las pruebas exploratorias?**
-    1. Pruebas para verificar la seguridad del software
-    2. <span style={{color:'red'}}>Pruebas realizadas sin un plan de prueba formal</span>
-    3. Pruebas para validar la facilidad de uso del software
-    4. Pruebas para evaluar el rendimiento del software
-
-4. **¿Cuál es el tipo de testing que se enfoca en verificar que diferentes módulos o subsistemas de software funcionen juntos correctamente como un sistema integrado?**
-    1. Pruebas unitarias
-    2. <span style={{color:'red'}}>Pruebas de integración</span>
-    3. Pruebas de regresión
-    4. Pruebas de aceptación
+<Quiz questions={[
+  {
+    question: "¿Cuál es el principal objetivo de las pruebas de regresión en el desarrollo de software?",
+    options: [
+      "Detectar defectos en las funciones básicas del software.",
+      "Validar la interoperabilidad entre componentes.",
+      "Verificar que el software cumpla con los requisitos del usuario.",
+      "Asegurar que los cambios recientes no hayan introducido errores en el software."
+    ],
+    correctIndex: 3
+  },
+  {
+    question: "¿Qué tipo de testing se centra en evaluar cómo responde el software bajo diferentes niveles de carga y estrés?",
+    options: [
+      "Pruebas de integración",
+      "Pruebas de seguridad",
+      "Pruebas de usabilidad",
+      "Pruebas de rendimiento"
+    ],
+    correctIndex: 3
+  },
+  {
+    question: "¿Cuál de las siguientes afirmaciones describe mejor las pruebas exploratorias?",
+    options: [
+      "Pruebas para verificar la seguridad del software",
+      "Pruebas realizadas sin un plan de prueba formal",
+      "Pruebas para validar la facilidad de uso del software",
+      "Pruebas para evaluar el rendimiento del software"
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "¿Cuál es el tipo de testing que se enfoca en verificar que diferentes módulos o subsistemas de software funcionen juntos correctamente como un sistema integrado?",
+    options: [
+      "Pruebas unitarias",
+      "Pruebas de integración",
+      "Pruebas de regresión",
+      "Pruebas de aceptación"
+    ],
+    correctIndex: 1
+  }
+]} />

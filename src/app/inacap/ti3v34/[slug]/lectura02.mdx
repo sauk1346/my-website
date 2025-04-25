@@ -1,3 +1,5 @@
+import { Quiz } from '@/components/QuizComponent';
+
 # Fundamentos de la Seguridad de la Información y Seguridad Informática
 
 En la era digital actual, la información se ha convertido en un activo invaluable para individuos, organizacines y sociedades.
@@ -27,34 +29,57 @@ Para esto, se utilizan técnicas como la redundancia, la copia de seguridad y la
 3. Contribuye a la continuidad del negocio, pues previene interrupciones operativas causadas por ciberataques o fallos en los sistemas
 4. Ayuda a las organizaciones a cumplir con las normativas y estándares internacionales, evitando sanciones legales y mejorando su posición competitiva en el mercado
 
-# Actividad de Práctica
+# Actividad de Práctica 01
 
-1. **¿Cuáles son los componentes de la triada de la seguridad de la información?**
-    1. Ciberseguridad, confidencialidad e Integridad
-    2. Autenticidad, diponibilidad y Disponibilidad
-    3. <span style={{color:'red'}}>Confidencialidad, integridad y Disponibilidad</span>
-    4. Confidencialidad, integridad y ciberseguridad
-
-2. **¿Cuál es uno de los elementos principales de la triada de la seguridad de la información que se ve afectado por el ataque de ransomware?**
-    1. Confidencialidad
-    2. Integridad
-    3. <span style={{color:'red'}}>Disponibilidad</span>
-    4. Sostenibilidad
-
-3. **¿Qué medida podría ayudar a prevenir futuros ataques de ransomware?**
-    1. <span style={{color:'red'}}>Realizar copias de seguridad regulares y almacenarlas fuera del sitio</span>
-    2. Implementar firewalls para proteger contra intrusiones externas
-    3. Mejorar la velociad de conexión a Internet para reducir el tiempo de respuesta ante incidentes
-    4. Ninguna es correcta
-
-4. **Proteger los sistemas informáticos contra amenazas como virus, malware, intrusiones, fallos de hardware/software, entre otros, es el objetivo de:**
-    1. <span style={{color:'red'}}>Seguridad Informática</span>
-    2. Seguridad de la Información
-    3. Departamento de Compras Informáticas
-    4. Ninguna es correcta
-
-5. **Garantizar que la información de una organización esté protegida contra amenazas y riesgos, asegurando su confidencialidad, integridad y disponibilidad es el objetivo de:**
-    1. <span style={{color:'red'}}>Seguridad de la Información</span>
-    2. Seguridad Informática
-    3. Departamento de Recursos Humanos
-    4. Ninguna es correcta
+<Quiz questions={[
+  {
+    question: "¿Cuáles son los componentes de la triada de la seguridad de la información?",
+    options: [
+      "Ciberseguridad, confidencialidad e Integridad",
+      "Autenticidad, disponibilidad y Disponibilidad",
+      "Confidencialidad, integridad y Disponibilidad",
+      "Confidencialidad, integridad y ciberseguridad"
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "¿Cuál es uno de los elementos principales de la triada de la seguridad de la información que se ve afectado por el ataque de ransomware?",
+    options: [
+      "Confidencialidad",
+      "Integridad",
+      "Disponibilidad",
+      "Sostenibilidad"
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "¿Qué medida podría ayudar a prevenir futuros ataques de ransomware?",
+    options: [
+      "Realizar copias de seguridad regulares y almacenarlas fuera del sitio",
+      "Implementar firewalls para proteger contra intrusiones externas",
+      "Mejorar la velocidad de conexión a Internet para reducir el tiempo de respuesta ante incidentes",
+      "Ninguna es correcta"
+    ],
+    correctIndex: 0
+  },
+  {
+    question: "Proteger los sistemas informáticos contra amenazas como virus, malware, intrusiones, fallos de hardware/software, entre otros, es el objetivo de:",
+    options: [
+      "Seguridad Informática",
+      "Seguridad de la Información",
+      "Departamento de Compras Informáticas",
+      "Ninguna es correcta"
+    ],
+    correctIndex: 0
+  },
+  {
+    question: "Garantizar que la información de una organización esté protegida contra amenazas y riesgos, asegurando su confidencialidad, integridad y disponibilidad es el objetivo de:",
+    options: [
+      "Seguridad de la Información",
+      "Seguridad Informática",
+      "Departamento de Recursos Humanos",
+      "Ninguna es correcta"
+    ],
+    correctIndex: 0
+  }
+]} />

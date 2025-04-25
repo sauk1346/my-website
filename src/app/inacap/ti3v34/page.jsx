@@ -22,11 +22,10 @@ export default function Ti3v34() {
         { unit: '3', description: 'Evaluación de Vulnerabilidades y Matriz de Riesgo' },
     ];
     const evaluationsData = [
-        { evaluationNumber: 1, date: 'Lun 24, Mar 2025', weighting: '15%', description: <CustomLink href="ti3v34/eval01">Evaluación 01</CustomLink>, quickGuide: '' },
-        { evaluationNumber: 2, date: 'Mié 09, Abr 2025', weighting: '22.5%', description: <ExternalLink href="/ti3v34/docs/informe01.pdf">Informe 01</ExternalLink>, quickGuide: '' },
-        { evaluationNumber: <EmphText>3</EmphText>, date: <EmphText>Lun 07, May 2025</EmphText>, weighting: <EmphText>26.25%</EmphText>, description: <EmphText>Informe 02</EmphText>, quickGuide: '' },
-        { evaluationNumber: 4, date: 'Cada Semana', weighting: '11.25%', description: <CustomLink href='ti3v34/controles'>Promedio Controles</CustomLink>, quickGuide: '' },
-        { evaluationNumber: 5, date: 'Lun 12, May 2025', weighting: '25%', description: 'Examen', quickGuide: '' }
+        { evaluationNumber: 1, date: 'Lun 24, Mar 2025', weighting: '20%', description: <CustomLink href="ti3v34/eval01">Evaluación 01</CustomLink>, quickGuide: '' },
+        { evaluationNumber: 2, date: 'Mié 09, Abr 2025', weighting: '30%', description: <ExternalLink href="/inacap/ti3v34/docs/informe01.pdf">Informe 01</ExternalLink>, quickGuide: '' },
+        { evaluationNumber: <EmphText>3</EmphText>, date: <EmphText>Lun 07, May 2025</EmphText>, weighting: <EmphText>35%</EmphText>, description: <EmphText>Informe 02</EmphText>, quickGuide: '' },
+        { evaluationNumber: 4, date: 'Cada Semana', weighting: '15%', description: <CustomLink href='ti3v34/controles'>Promedio Controles</CustomLink>, quickGuide: '' },
     ];
     const classData = [
         { week: '01', class: '01', date: 'Lun 10, Mar 2025', description: <CustomLink href="ti3v34/clase01">Introducción Seguridad</CustomLink> },
@@ -43,7 +42,7 @@ export default function Ti3v34() {
         { week: '', class: '12', date: 'Mié 02, Abr 2025', description: <CustomLink href="ti3v34/clase12">Delitos Informáticos</CustomLink> },
         { week: '05', class: '13', date: 'Lun 07, Abr 2025', description: "Avance informe en clases 01" },
         { week: '', class: '14', date: 'Mar 08, Abr 2025', description: "Avance informe en clases 02" },
-        { week: '', class: '15', date: 'Mié 09, Abr 2025', description: <ExternalLink href="/ti3v34/docs/informe01.pdf">Entrega Informe 01</ExternalLink> },
+        { week: '', class: '15', date: 'Mié 09, Abr 2025', description: <ExternalLink href="/inacap/ti3v34/docs/informe01.pdf">Entrega Informe 01</ExternalLink> },
         { week: '06', class: '16', date: 'Lun 14, Abr 2025', description: <CustomLink href="ti3v34/clase16">Tipos de Vulnerabilidades (1)</CustomLink> },
         { week: '', class: '17', date: 'Mar 15, Abr 2025', description: <CustomLink href="ti3v34/clase17">Tipos de Vulnerabilidades (2)</CustomLink> },
         { week: '', class: '18', date: 'Mié 16, Abr 2025', description: <CustomLink href="ti3v34/clase18">Planificación de Recuperación ante Desastres (DRP)</CustomLink> },
@@ -53,10 +52,10 @@ export default function Ti3v34() {
 
     ];
     const lectureData = [
-        { week: '01', lecture: '01', date: 'Sáb 15, Mar 2025', description: <ExternalLink href="/ti3v34/docs/lectura01.pdf">Seguridad de la Información</ExternalLink> },
+        { week: '01', lecture: '01', date: 'Sáb 15, Mar 2025', description: <ExternalLink href="/inacap/ti3v34/docs/lectura01.pdf">Seguridad de la Información</ExternalLink> },
         { week: '', lecture: '02', date: 'Sáb 15, Mar 2025', description: <CustomLink href="ti3v34/lectura02">Fundamentos de la seguridad de la información y seguridad informática</CustomLink> },
         { week: '02', lecture: '03', date: 'Sáb 22, Mar 2025', description: <CustomLink href="ti3v34/lectura03">Framework de Seguridad ISO27001:2022 y CIS Controls</CustomLink> },
-        { week: '03', lecture: '04', date: 'Sáb 29, Mar 2025', description: <ExternalLink href="/ti3v34/docs/lectura04.pdf">Ética y legislación</ExternalLink> },
+        { week: '03', lecture: '04', date: 'Sáb 29, Mar 2025', description: <ExternalLink href="/inacap/ti3v34/docs/lectura04.pdf">Ética y legislación</ExternalLink> },
         { week: '', lecture: '05', date: 'Sáb 29, Mar 2025', description: <CustomLink href="ti3v34/lectura05">Elementos normativos nacionales e internacionales y delitos informáticos</CustomLink> },
         { week: '04', lecture: '06', date: 'Sáb 05, Abr 2025', description: <CustomLink href="ti3v34/lectura06">Payment Card Industry Data Security Standard y Convenio de Budapest</CustomLink> },
         { week: '05', lecture: '07', date: 'Sáb 12, Abr 2025', description: <CustomLink href="ti3v34/lectura07">Ley 19.628 (propuesta Ley LPDP)</CustomLink> },

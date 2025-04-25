@@ -1,3 +1,5 @@
+import { Quiz } from '@/components/QuizComponent';
+
 # Elementos normativos nacionales e internacionales y delitos informáticos
 
 ## Política Nacional de Ciberdefensa en Chile
@@ -204,35 +206,57 @@ Es uno de los marcos legales más importantes para la protección de datos perso
 
 1. **HHS:** La Oficina de Derechos Civiles del HSS es responsable de la supervición y el cumplimiento de las normas HIPAA
 
+# Actividad de Práctica 03
 
-# Actividad de Práctica
-
-1. **¿Cuál es el principal desafío que enfrenta Chile en materia de ciberseguridad frente a esta situación?**
-    1. Falta de recursos económicos para implementar medidas de seguridad
-    2. Carencia de una legislación robusta que proteja adecuadamente los datos en línea
-    3. <span style={{color:'red'}}>Escasez de personal calificado en el área de ciberseguridad</span>
-    4. Inexistencia de herramientas tecnológicas para detectar y prevenir ataques cibernéticos
-
-2. **¿Qué aspecto clave debe abordar la política nacional de ciberseguridad para enfrentar esta situación?**
-    1. Mejora de la infraestructura tecnológica de las instituciones financieras
-    2. <span style={{color:'red'}}>Implementación de programas de concientización sobre ciberseguridad para empleados y ciudadanos</span>
-    3. Establecimiento de alianzas internacionales para compartir información y buenas prácticas
-    4. Desarrollo de leyes más estrictas y sanciones severas para los perpretadores de ataques cibernéticos
-
-3. **¿Cuál sería un paso inicial efectivo que podría tomar el gobierno chileno para abordar esta situación?**
-    1. Controlar a consultores internacionales para realizar una evaluación de seguridad en las instituciones financieras
-    2. Establecer un centro de operaciones de seguridad cibernética para monitorear y responder a amenazas en tiempo real
-    3. Organizar conferencias y eventos para promover la colaboración entre el sector público y privado en materia de ciberseguridad
-    4. <span style={{color:'red'}}>Crear una campaña de sensibilización en medios de comunicación masiva sobre los riesgos de seguridad cibernética y cómo protegerse</span>
-
-4. **¿Cuál es el propósito principal de la Ley Marco de Ciberseguridad en Chile?**
-    1. Regular el acceso a internet en el país
-    2. <span style={{color:'red'}}>Establecer un marco legal para proteger la infraestructura crítica y los datos digitales</span>
-    3. Limitar la libertad de expresión en línea
-    4. Promover el acceso irrestricto a la información en internet
-
-5. **¿Qué regulación establece estándares para la protección de datos personales en la Unión Europea y cuál se centra, específicamente, en la protección de la información de salud en Estados Unidos?**
-    1. <span style={{color:'red'}}>GDPR e HIPAA, respectivamente</span>
-    2. HIPAA y GDPR, respectivamente
-    3. PCI DSS e HIPAA, respectivamente
-    4. PCI DSS y GDPR, respectivamente
+<Quiz questions={[
+  {
+    question: "¿Cuál es el principal desafío que enfrenta Chile en materia de ciberseguridad frente a esta situación?",
+    options: [
+      "Falta de recursos económicos para implementar medidas de seguridad",
+      "Carencia de una legislación robusta que proteja adecuadamente los datos en línea",
+      "Escasez de personal calificado en el área de ciberseguridad",
+      "Inexistencia de herramientas tecnológicas para detectar y prevenir ataques cibernéticos"
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "¿Qué aspecto clave debe abordar la política nacional de ciberseguridad para enfrentar esta situación?",
+    options: [
+      "Mejora de la infraestructura tecnológica de las instituciones financieras",
+      "Implementación de programas de concientización sobre ciberseguridad para empleados y ciudadanos",
+      "Establecimiento de alianzas internacionales para compartir información y buenas prácticas",
+      "Desarrollo de leyes más estrictas y sanciones severas para los perpetradores de ataques cibernéticos"
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "¿Cuál sería un paso inicial efectivo que podría tomar el gobierno chileno para abordar esta situación?",
+    options: [
+      "Controlar a consultores internacionales para realizar una evaluación de seguridad en las instituciones financieras",
+      "Establecer un centro de operaciones de seguridad cibernética para monitorear y responder a amenazas en tiempo real",
+      "Organizar conferencias y eventos para promover la colaboración entre el sector público y privado en materia de ciberseguridad",
+      "Crear una campaña de sensibilización en medios de comunicación masiva sobre los riesgos de seguridad cibernética y cómo protegerse"
+    ],
+    correctIndex: 3
+  },
+  {
+    question: "¿Cuál es el propósito principal de la Ley Marco de Ciberseguridad en Chile?",
+    options: [
+      "Regular el acceso a internet en el país",
+      "Establecer un marco legal para proteger la infraestructura crítica y los datos digitales",
+      "Limitar la libertad de expresión en línea",
+      "Promover el acceso irrestricto a la información en internet"
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "¿Qué regulación establece estándares para la protección de datos personales en la Unión Europea y cuál se centra, específicamente, en la protección de la información de salud en Estados Unidos?",
+    options: [
+      "GDPR e HIPAA, respectivamente",
+      "HIPAA y GDPR, respectivamente",
+      "PCI DSS e HIPAA, respectivamente",
+      "PCI DSS y GDPR, respectivamente"
+    ],
+    correctIndex: 0
+  }
+]} />

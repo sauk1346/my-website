@@ -1,10 +1,10 @@
-import styles from '@/styles/clases.module.css';
+import ExternalLink from '@/components/ExternalLink';
 
 # Política Nacional de Ciberseguridad
 
 **Material Clase:** 
-- <a href="/ti3v34/docs/pnc.pdf" target="_blank" rel="noopener noreferrer" className={styles.link}>pnc.pdf</a>
-- <a href="/ti3v34/docs/ley21663.pdf" target="_blank" rel="noopener noreferrer" className={styles.link}>ley21663.pdf</a>
+- <ExternalLink href="/inacap/ti3v34/docs/pnc.pdf">pnc.pdf</ExternalLink>
+- <ExternalLink href="/inacap/ti3v34/docs/ley21663.pdf">ley21663.pdf</ExternalLink>
 
 ## Importancia
 
@@ -59,7 +59,11 @@ La falta de cumplimiento con la nueva ley puede resultar en severas sanciones, q
 
 ## Lo que debiera ser
 
-![](/ti3v34/images/fig28.png)
+<img 
+    src="/inacap/ti3v34/images/fig28.png"
+    style={{ display: 'block', margin: '0 auto', width:'70%' }} 
+/>
+<br/>
 
 1. **Seguridad de la Información:** Establece políticas, procedimientos y manuales que dicen relación con la aplicación de estándares ISO27001 - 27002, NIST, entre otros
 2. **Ciberseguridad:** Aplica procedimientos indicados por Seguridad de la Información, además, realiza configuración segura (hardening), técnicas de protección (firewall, antivirus, IDS), y realiza auditorias de eventos

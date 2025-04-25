@@ -1,3 +1,5 @@
+import { Quiz } from '@/components/QuizComponent';
+
 # Ley 19.628 (propuesta Ley LPDP)
 
 Se enfoca en la protección de datos personales, especificando cómo deben ser tratados de acuerdo a la normativa chilena.
@@ -46,34 +48,57 @@ Se enfoca en la protección de datos personales, especificando cómo deben ser t
 2. **Proporcionalidad y Minimización de Datos:** Se promueve el principio de proporcionalidad en el tratamiento de datos, limitando la recolección y uso de datos personales a lo estrictamente necesario para la finalidad prevista
 3. **Transparencia y Confianza:** La ley busca fomentar la confianza en el manejo de datos personales mediante la transparencia en el tratamiento y la información proporcionadad a los titulares de datos
 
-# Actividad de Práctica
+# Actividad de Práctica 05
 
-1. **¿Cuál es el principal objetivo de la Ley 19.628 en Chile?**
-    1. Promover el comercio electrónico
-    2. Regular el uso de redes sociales
-    3. <span style={{color:'red'}}>Garantizar la protección de los datos personales de las personas naturales</span>
-    4. Aumentar la transparencia en las transacciones financieras
-
-2. **¿Qué principio del tratamiento de datos establece que los datos deben ser recolectados con una finalidad específica, explícita y legítima?**
-    1. Licitud
-    2. <span style={{color:'red'}}>Finalidad</span>
-    3. Proporcionalidad
-    4. Transparencia
-
-3. **¿Cuál de los siguientes derechos permite a los titulares de datos solicitar la corrección de datos incorrectos o incompletos?**
-    1. Acceso
-    2. <span style={{color:'red'}}>Rectificación</span>
-    3. Cancelación
-    4. Oposición
-
-4. **¿Qué principio subyacente de la Ley 19.628 promueve limitar la recolección y uso de datos personales a lo estrictamente necesario?**
-    1. Derecho a la privacidad
-    2. <span style={{color:'red'}}>Proporcionalidad y minimización de datos</span>
-    3. Transparencia y confianza
-    4. Licitud
-
-5. **¿Cuál de las siguientes medidas procesales es una obligación de los responsables de bases de datos según la Ley 19.628?**
-    1. Publicar datos personales en sitios web públicos
-    2. <span style={{color:'red'}}>Adoptar medidas técnicas y organizativas para garantizar la seguridad de los datos</span>
-    3. Compartir datos personales con cualquier entidad que lo solicite
-    4. Vender datos personales a terceros
+<Quiz questions={[
+  {
+    question: "¿Cuál es el principal objetivo de la Ley 19.628 en Chile?",
+    options: [
+      "Promover el comercio electrónico",
+      "Regular el uso de redes sociales",
+      "Garantizar la protección de los datos personales de las personas naturales",
+      "Aumentar la transparencia en las transacciones financieras"
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "¿Qué principio del tratamiento de datos establece que los datos deben ser recolectados con una finalidad específica, explícita y legítima?",
+    options: [
+      "Licitud",
+      "Finalidad",
+      "Proporcionalidad",
+      "Transparencia"
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "¿Cuál de los siguientes derechos permite a los titulares de datos solicitar la corrección de datos incorrectos o incompletos?",
+    options: [
+      "Acceso",
+      "Rectificación",
+      "Cancelación",
+      "Oposición"
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "¿Qué principio subyacente de la Ley 19.628 promueve limitar la recolección y uso de datos personales a lo estrictamente necesario?",
+    options: [
+      "Derecho a la privacidad",
+      "Proporcionalidad y minimización de datos",
+      "Transparencia y confianza",
+      "Licitud"
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "¿Cuál de las siguientes medidas procesales es una obligación de los responsables de bases de datos según la Ley 19.628?",
+    options: [
+      "Publicar datos personales en sitios web públicos",
+      "Adoptar medidas técnicas y organizativas para garantizar la seguridad de los datos",
+      "Compartir datos personales con cualquier entidad que lo solicite",
+      "Vender datos personales a terceros"
+    ],
+    correctIndex: 1
+  }
+]} />

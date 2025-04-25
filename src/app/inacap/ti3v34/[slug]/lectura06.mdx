@@ -1,3 +1,5 @@
+import { Quiz } from '@/components/QuizComponent';
+
 # PCI DSS y Convenio de Budapest
 
 ## PCI DSS
@@ -136,34 +138,57 @@ Desarrollado por el Consejo de Europa con participación de Estados Unidos, Cana
 1. **Modelo para Legislaciones Nacionales:** El convenio ha servido como modelo para legislación de muchos países, incluso de aquellos que no son miembros del Consejo de Europa
 2. **Adopción Internacional:** Más de 60 países han firmado el convenio, reflejando su importancia global en la lucha contra la ciberdelincuencia
 
-# Actividad de Práctica
+# Actividad de Práctica 04
 
-1. **¿Cuál es el principal propósito del Payment Card Industry Data Security Standard (PCI DSS)?**
-    1. Aumentar las ventas de tarjetas de crédito
-    2. Establecer estándares de calidad para las tarjetas de crédito
-    3. <span style={{color:'red'}}>Proteger la información sensible del titular de la tarjeta contra robo y el fraude</span>
-    4. Simplificar el proceso de pago en línea
-
-2. **¿Quién establece el Payment Card Industry Data Security Standard (PCI DSS)?**
-    1. El gobierno de los Estados Unidos
-    2. La Organizacipn Internacional de Normalización (ISO)
-    3. <span style={{color:'red'}}>El Payment Card Industry Security Standards Council (PCI DSS)</span>
-    4. La Asociación de Bancos Internacionales 
-
-3. **¿Cuál es el propósito de la segmentación de la red según el PCI DSS?**
-    1. Aumentar la velocidad de las transacciones con tarjetas de crédito
-    2. <span style={{color:'red'}}>Separar los sistemas de datos de tarjetas de otros sistemas para reducir el riesgo de comprometer los datos</span>
-    3. Reducir el costo de mantenimiento de la red
-    4. Mejorar la calidad de la señal de red
-
-4. **¿Cuál de los siguientes delitos está tipificado en el Convenio de Budapest?**
-    1. Falsificación de documentos físicos
-    2. <span style={{color:'red'}}>Producción y distribución de pornografía infantil</span>
-    3. Robo de identidad física
-    4. Tráfico de sustancias ilegales
-
-5. **¿Cuál es el principal objetivo del Convenio de Budapest?**
-    1. Promover el comercio electrónico
-    2. <span style={{color:'red'}}>Proporcionar un marco común para combatir el crimen en el ciberespacio</span>
-    3. Desarrollar nuevas tecnologías de Internet
-    4. Establecer una red social internacional
+<Quiz questions={[
+  {
+    question: "¿Cuál es el principal propósito del Payment Card Industry Data Security Standard (PCI DSS)?",
+    options: [
+      "Aumentar las ventas de tarjetas de crédito",
+      "Establecer estándares de calidad para las tarjetas de crédito",
+      "Proteger la información sensible del titular de la tarjeta contra robo y el fraude",
+      "Simplificar el proceso de pago en línea"
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "¿Quién establece el Payment Card Industry Data Security Standard (PCI DSS)?",
+    options: [
+      "El gobierno de los Estados Unidos",
+      "La Organización Internacional de Normalización (ISO)",
+      "El Payment Card Industry Security Standards Council (PCI SSC)",
+      "La Asociación de Bancos Internacionales"
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "¿Cuál es el propósito de la segmentación de la red según el PCI DSS?",
+    options: [
+      "Aumentar la velocidad de las transacciones con tarjetas de crédito",
+      "Separar los sistemas de datos de tarjetas de otros sistemas para reducir el riesgo de comprometer los datos",
+      "Reducir el costo de mantenimiento de la red",
+      "Mejorar la calidad de la señal de red"
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "¿Cuál de los siguientes delitos está tipificado en el Convenio de Budapest?",
+    options: [
+      "Falsificación de documentos físicos",
+      "Producción y distribución de pornografía infantil",
+      "Robo de identidad física",
+      "Tráfico de sustancias ilegales"
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "¿Cuál es el principal objetivo del Convenio de Budapest?",
+    options: [
+      "Promover el comercio electrónico",
+      "Proporcionar un marco común para combatir el crimen en el ciberespacio",
+      "Desarrollar nuevas tecnologías de Internet",
+      "Establecer una red social internacional"
+    ],
+    correctIndex: 1
+  }
+]} />

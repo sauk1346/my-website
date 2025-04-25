@@ -1,3 +1,5 @@
+import { Quiz } from '@/components/QuizComponent';
+
 # Frameworks de Seguridad 
 
 ## Norma ISO 27001
@@ -56,34 +58,57 @@ Existen varios controles CIS, pero los típicos son:
 
 Estos controles proporcionan una base sólida para abordad la problemática de las amenazas persistentes avanzadas, ayudando a mitigar los riesgos y proteger los activos de información de la organización.
 
-# Actividad de Práctica
+# Actividad de Práctica 02
 
-1. **¿Qué estándar o normativa proporciona pautas para establecer un SGSI?**
-    1. ISO 9001
-    2. ISO 14001
-    3. <span style={{color:'red'}}>ISO 27001</span>
-    4. ISO 27010
-
-2. **¿Cuál de los siguientes es un objetivo principal de la norma ISO 27001?**
-    1. Proteger contra virus y malware
-    2. <span style={{color:'red'}}>Establecer un Sistema de Gestión de Seguridad de la información</span>
-    3. Optimizar la velocidad de conexión a Internet
-    4. Mantener la confidencialidad de datos personales
-
-3. **Es un requisito que se debe cumplir para implementar un SGSI, según la ISO 27001.**
-    1. Comprender el contexto de la organización
-    2. Tener documentada una Política de Seguridad de la información
-    3. Realizar una evaluación de riesgos para identificar y valorar los riesgos de seguridad de la información
-    4. <span style={{color:'red'}}>Todas son correctas</span>
-
-4. **¿Cuáles son las categorías de CIS Controls?**
-    1. Controles básicos, controles fundamentales y controles informáticos
-    2. Controles organizacionales y controles informáticos
-    3. Controles básicos y controles fundamentales
-    4. <span style={{color:'red'}}>Controles básicos, controles fundamentales y controles organizacionales</span>
-
-5. **No es correcto acerca de los CIS Controls.**
-    1. Ayudan a mitigar los riesgos y proteger los activos de información de la organización
-    2. Proporcionan una base sólida para abordar la problemática de las amenazas persistentes avanzadas
-    3. <span style={{color:'red'}}>Sirven como herramienta preventiva que solo debe activarse ante riesgos inminentes</span>
-    4. Cada una de sus tres categorías está diseñada para abordar diferentes aspectos de la seguridad y mejorar gradualmente la seguridad global de la organización
+<Quiz questions={[
+  {
+    question: "¿Qué estándar o normativa proporciona pautas para establecer un SGSI?",
+    options: [
+      "ISO 9001",
+      "ISO 14001",
+      "ISO 27001",
+      "ISO 27010"
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "¿Cuál de los siguientes es un objetivo principal de la norma ISO 27001?",
+    options: [
+      "Proteger contra virus y malware",
+      "Establecer un Sistema de Gestión de Seguridad de la información",
+      "Optimizar la velocidad de conexión a Internet",
+      "Mantener la confidencialidad de datos personales"
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "Es un requisito que se debe cumplir para implementar un SGSI, según la ISO 27001.",
+    options: [
+      "Comprender el contexto de la organización",
+      "Tener documentada una Política de Seguridad de la información",
+      "Realizar una evaluación de riesgos para identificar y valorar los riesgos de seguridad de la información",
+      "Todas son correctas"
+    ],
+    correctIndex: 3
+  },
+  {
+    question: "¿Cuáles son las categorías de CIS Controls?",
+    options: [
+      "Controles básicos, controles fundamentales y controles informáticos",
+      "Controles organizacionales y controles informáticos",
+      "Controles básicos y controles fundamentales",
+      "Controles básicos, controles fundamentales y controles organizacionales"
+    ],
+    correctIndex: 3
+  },
+  {
+    question: "No es correcto acerca de los CIS Controls.",
+    options: [
+      "Ayudan a mitigar los riesgos y proteger los activos de información de la organización",
+      "Proporcionan una base sólida para abordar la problemática de las amenazas persistentes avanzadas",
+      "Sirven como herramienta preventiva que solo debe activarse ante riesgos inminentes",
+      "Cada una de sus tres categorías está diseñada para abordar diferentes aspectos de la seguridad y mejorar gradualmente la seguridad global de la organización"
+    ],
+    correctIndex: 2
+  }
+]} />

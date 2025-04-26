@@ -49,7 +49,7 @@ export default function Ti3v32() {
             evaluationNumber: 2, 
             date: 'Mié 23, Abr 2025', 
             weighting: '40%', 
-            description: 'Eval02-A, Eval02-B', 
+            description: <><CustomLink href='ti3v32/eval02a'>Eval02-A</CustomLink>, <CustomLink href='ti3v32/eval02b'>Eval02-B</CustomLink></>, 
             quickGuide: <>
                 <CustomLink href='ti3v32/guia2a'>- Operators</CustomLink><br/>
                 <CustomLink href='ti3v32/guia2b'>- Regex</CustomLink><br/>
@@ -93,9 +93,10 @@ export default function Ti3v32() {
         { week: '', class: '18', date: 'Mié 16, Abr 2025', description: <CustomLink href='ti3v32/guia27'>Guía 07</CustomLink> },
         { week: '07', class: '19', date: 'Lun 21, Abr 2025', description: <CustomLink href='ti3v32/guia28'>Guía 08</CustomLink> },
         { week: '', class: '20', date: 'Mar 22, Abr 2025', description: <CustomLink href='ti3v32/guia29'>Guía 09</CustomLink> },
-        { week: '', class: '21', date: 'Mié 23, Abr 2025', description: 'Evaluación 02' },
-
-
+        { week: '', class: '21', date: 'Mié 23, Abr 2025', description: <><CustomLink href='ti3v32/eval02a'>Eval02-A</CustomLink>, <CustomLink href='ti3v32/eval02b'>Eval02-B</CustomLink></> },
+        { week: '08', class: '22', date: 'Lun 28, Abr 2025', description: '' },
+        { week: '', class: '23', date: 'Mar 29, Abr 2025', description: '' },
+        { week: '', class: '24', date: 'Mié 30, Abr 2025', description: '' },
 
     ];
     const lectureData = [
@@ -107,7 +108,8 @@ export default function Ti3v32() {
         { week: '04', lecture: '06', date: 'Sáb 05, Abr 2025', description: <CustomLink href="ti3v32/lectura06">Operaciones CRUD en documentos y subdocumentos</CustomLink> },
         { week: '05', lecture: '07', date: 'Sáb 12, Abr 2025', description: <ExternalLink href="/inacap/ti3v32/docs/lectura07.pdf">Búsqueda avanzada con MongoDB</ExternalLink> },
         { week: '', lecture: '08', date: 'Sáb 12, Abr 2025', description: <CustomLink href="ti3v32/lectura08">Selección de filtros y condiciones según requerimientos de búsqueda</CustomLink> },
-        { week: '06', lecture: '09', date: 'Sáb 19, Abr 2025', description: 'Busqueda avanzada usando expresiones regulares' },
+        { week: '06', lecture: '09', date: 'Sáb 19, Abr 2025', description: <CustomLink href="ti3v32/lectura09">Busqueda avanzada usando expresiones regulares</CustomLink> },
+        { week: '07', lecture: '10', date: 'Sáb 26, Abr 2025', description: 'Comandos de búsqueda en subdocumentos con iteración y asociaciones lógicas' },
     ];
 
     return (

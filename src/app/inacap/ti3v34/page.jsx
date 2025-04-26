@@ -46,9 +46,13 @@ export default function Ti3v34() {
         { week: '06', class: '16', date: 'Lun 14, Abr 2025', description: <CustomLink href="ti3v34/clase16">Tipos de Vulnerabilidades (1)</CustomLink> },
         { week: '', class: '17', date: 'Mar 15, Abr 2025', description: <CustomLink href="ti3v34/clase17">Tipos de Vulnerabilidades (2)</CustomLink> },
         { week: '', class: '18', date: 'Mié 16, Abr 2025', description: <CustomLink href="ti3v34/clase18">Planificación de Recuperación ante Desastres (DRP)</CustomLink> },
-        { week: '07', class: '19', date: 'Lun 21, Abr 2025', description: <CustomLink href="ti3v34/clase19">Puntuaciones CVSS</CustomLink> },
-        { week: '', class: '20', date: 'Mar 22, Abr 2025', description: '' },
-        { week: '', class: '21', date: 'Mié 23, Abr 2025', description: '' },
+        { week: '07', class: '19', date: 'Lun 21, Abr 2025', description: <CustomLink href="ti3v34/clase19">Controles de Mitigación y Evaluación de Riesgo</CustomLink> },
+        { week: '', class: '20', date: 'Mar 22, Abr 2025', description: <CustomLink href="ti3v34/clase20">Matriz de Riesgo</CustomLink>  },
+        { week: '', class: '21', date: 'Mié 23, Abr 2025', description: <em>Libre para estudio [TI3V32]</em> },
+        { week: '08', class: '22', date: 'Lun 28, Abr 2025', description: '' },
+        { week: '', class: '23', date: 'Mar 29, Abr 2025', description: '' },
+        { week: '', class: '24', date: 'Mié 30, Abr 2025', description: '' },
+
 
     ];
     const lectureData = [
@@ -59,8 +63,10 @@ export default function Ti3v34() {
         { week: '', lecture: '05', date: 'Sáb 29, Mar 2025', description: <CustomLink href="ti3v34/lectura05">Elementos normativos nacionales e internacionales y delitos informáticos</CustomLink> },
         { week: '04', lecture: '06', date: 'Sáb 05, Abr 2025', description: <CustomLink href="ti3v34/lectura06">Payment Card Industry Data Security Standard y Convenio de Budapest</CustomLink> },
         { week: '05', lecture: '07', date: 'Sáb 12, Abr 2025', description: <CustomLink href="ti3v34/lectura07">Ley 19.628 (propuesta Ley LPDP)</CustomLink> },
-        { week: '06', lecture: '08', date: 'Sáb 19, Abr 2025', description: 'Evaluación de vulnerabilidades y matriz de riesgo' },
-        { week: '', lecture: '09', date: 'Sáb 19, Abr 2025', description: 'Tipos de vulnerabilidades según activos TI e identificación de riesgos' },
+        { week: '06', lecture: '08', date: 'Sáb 19, Abr 2025', description: <ExternalLink href="/inacap/ti3v34/docs/lectura08.pdf">Evaluación de vulnerabilidades y matriz de riesgo</ExternalLink> },
+        { week: '', lecture: '09', date: 'Sáb 19, Abr 2025', description: <CustomLink href="ti3v34/lectura09">Tipos de vulnerabilidades según activos TI e identificación de riesgos</CustomLink>  },
+        { week: '07', lecture: '10', date: 'Sáb 26, Abr 2025', description: <CustomLink href="ti3v34/lectura10">Matriz de Riesgo y políticas de prevención de riesgos</CustomLink> },
+        { week: '08', lecture: '11', date: 'Sáb 03, May 2025', description: 'Controles de mitigación y de riesgos y mejoras tecnológicas ante desastres' },
     ];
 
     return (

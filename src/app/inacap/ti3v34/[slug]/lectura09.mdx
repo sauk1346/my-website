@@ -1,0 +1,288 @@
+import { Quiz } from '@/components/QuizComponent';
+
+# Tipos de vulnerabilidades según activos TI e identificación de riesgos
+
+## Clasificación de Vulnerabilidades por activos
+
+
+<table>
+    <thead>
+        <tr>
+            <th>Activos</th>
+            <th>Vulnerabilidades</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Software</td>
+            <td>
+                <ul>
+                    <li>Vulnerabilidades de aplicacion</li>
+                    <ul>
+                        <li>Inyección SQL</li>
+                        <li>Cross-Site Scripting (XSS)</li>
+                        <li>Cros-Site Request Forgery (CSRF)</li>
+                    </ul>
+                    <li>Vulnerabilidades del sistema operativo</li>
+                    <ul>
+                        <li>Desbordamiento de buffer</li>
+                        <li>Escalada de privilegios</li>
+                    </ul>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Hardware</td>
+            <td>
+                <ul>
+                    <li>Vulnerabilidades físicas</li>
+                    <ul>
+                        <li>Manipulación directa</li>
+                        <li>Ataques de canal lateral</li>
+                    </ul>
+                    <li>Firmware</li>
+                    <ul>
+                        <li>Exploits de firmware</li>
+                    </ul>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Redes</td>
+            <td>
+                <ul>
+                    <li>Vulnerabilidades de protocolo</li>
+                    <ul>
+                        <li>Ataques Man-in-the-Middle (MitM)</li>
+                        <li>Inyección de paquetes</li>
+                    </ul>
+                    <li>Vulnerabilidades de configuración</li>
+                    <ul>
+                        <li>Configuración insegura</li>
+                    </ul>
+                    <li>Vulnerabilidades de Wi-Fi</li>
+                    <ul>
+                        <li>Creackeo de claves Wi-Fi</li>
+                    </ul>
+
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Bases de datos</td>
+            <td>
+                <ul>
+                    <li>Exposición de datos</li>
+                    <li>Pérdida de integridad de Datos</li>
+                    <li>Fuga de datos</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Activos humanos</td>
+            <td>
+                <ul>
+                    <li>Ingeniería social</li>
+                    <ul>
+                        <li>Phishing</li>
+                        <li>Vishing</li>
+                    </ul>
+                    <li>Errores humanos</li>
+                    <ul>
+                        <li>Configuraciones incorrectas</li>
+                        <li>Uso inapropiado de credenciales</li>
+                    </ul>
+                </ul>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+## Identificación de activos
+Permite tener una visión clara y detallada de los elementos que componen la infraestructura tecnológica, facilitando la implementación de medidas de seguridad adecuadas.
+
+1. **Software**
+    - Inventario de aplicaciones, sistemas operativos y herramientas
+    - Evaluación de la criticidad basada en la función y los datos que manejan
+2. **Hardware**
+    - Registro de servidores, equipos de red, dispositivos de almacenamiento
+    - Evaluación del valor en función de la operación y datos almacenados
+3. **Redes**
+    - Mapeo de dispositivos de red, segmentos de red, y configuraciones
+    - Identificación de puntos críticos y nodos vulnerables
+4. **Base de datos**
+    - Inventario de base de datos, sistemas de gestión de bases de datos (DBMS)
+    - Clasificación según la sensibilidad y el volumen de datos
+5. **Activos humanos**
+    - Listado de usuarios, roles y permisos
+    - Evaluación de la criticidad basada en acceso y roles desempeñados
+
+Una identificación exhaustiva de activos permite detectar vulnerabilidades y gestionar mejor los riesgos asociados a cada uno de ellos.
+
+## Clasificación de activos
+
+|Clasificación|Descripción|
+|---|---|
+|Activos críticos|Son esenciales para la operacion continua de la organización|
+|Activos sensibles|Manejan información confidencial o personal|
+|Activos no críticos|Su pérdida no afectaría severamente las operaciones|
+
+## Identificación de riesgos según tipo de Industria y TI
+
+<table>
+    <thead>
+        <tr>
+            <th>Industria</th>
+            <th>Riesgo</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Industria financiera</td>
+            <td>
+                <ul>
+                    <li>Activos de información</li>
+                    <ul>
+                        <li>Datos financieros</li>
+                        <li>Sistema de transacciones</li>
+                    </ul>
+                    <li>Riesgos de relación</li>
+                    <ul>
+                        <li>Fraude y robo de identidad</li>
+                        <li>Ataques de phishing</li>
+                        <li>Robo de datos</li>
+                    </ul>
+                    <li>Ejemplo: Caso Equifax (2017)</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Salud</td>
+            <td>
+                <ul>
+                    <li>Activos de información</li>
+                    <ul>
+                        <li>Registros de Salud Electrónicos (EHR)</li>
+                        <li>Sistemas de Diagnóstico y Tratamiento</li>
+                    </ul>
+                    <li>Riesgos de relación</li>
+                    <ul>
+                        <li>Exposición de Datos de Pacientes</li>
+                        <li>Interrución de Servicios Médicos</li>
+                    </ul>
+                    <li>Ejemplo: Ataque WannaCry (2017)</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Tecnología y telecomunicaciones</td>
+            <td>
+                <ul>
+                    <li>Activos de información</li>
+                    <ul>
+                        <li>Datos de usuario</li>
+                        <li>Infraestructura de red</li>
+                    </ul>
+                    <li>Riesgos de relación</li>
+                    <ul>
+                        <li>Interceptación de datos</li>
+                        <li>Compromiso de infraestructura</li>
+                    </ul>
+                    <li>Ejemplo: Ataque a Yahoo (2013-2014)</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Comercio electrónico</td>
+            <td>
+                <ul>
+                    <li>Activos de información</li>
+                    <ul>
+                        <li>Datos de clientes</li>
+                        <li>Plataformas de comercio</li>
+                    </ul>
+                    <li>Riesgos de relación</li>
+                    <ul>
+                        <li>Robo de información de pago</li>
+                        <li>Fraudo de comercio electrónico</li>
+                    </ul>
+                    <li>Ejemplo: Brecha en Target (2013)</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Manufactura</td>
+            <td>
+                <ul>
+                    <li>Activos de información</li>
+                    <ul>
+                        <li>Propiedad intelectual</li>
+                        <li>Sistemas de control industrial</li>
+                    </ul>
+                    <li>Riesgos de relación</li>
+                    <ul>
+                        <li>Espionaje industrial</li>
+                        <li>Sabotaje de producción</li>
+                    </ul>
+                    <li>Ejemplo: Ataque Stuxnet (2010)</li>
+                </ul>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+# Actividad de Práctica 06
+
+<Quiz questions={[
+    {
+        question:"¿Cuál de las siguientes es una vulnerabilidad de aplicación en software?",
+        options:[
+            "Ataques Man-in-the-Middle",
+            "Desbordamiento de Buffer",
+            "Inyección de SQL",
+            "Crackeo de Claves Wi-Fi"
+        ],
+        correctIndex: 2
+    },
+    {
+        question:"¿Qué tipo de vulnerabilidad se asocia comúnmente con el hardware?",
+        options:[
+            "Cross-Site Request Forgery (CSRF)",
+            "Manipulación directa",
+            "Inyección de paquetes",
+            "Pérdida de integridad de datos"
+        ],
+        correctIndex: 1
+    },
+    {
+        question:"¿Cuál es un ejemplo de una vulnerabilidad de configuración en redes?",
+        options:[
+            "Escalada de privilegios",
+            "Inyección de paquetes",
+            "Configuración insegura",
+            "Exposición de datos"
+        ],
+        correctIndex: 2
+    },
+    {
+        question:"¿Qué tipo de vulnerabilidad puede causar la fuga de datos en bases de datos?",
+        options:[
+            "Desbordamiento de Buffer",
+            "Exposición de datos",
+            "Phishing",
+            "Ataques de canal lateral"
+        ],
+        correctIndex: 1
+    },
+    {
+        question:"¿Cuál es una estrategia de mitigación que implica analizar periódicamente para identificar nuevas vulnerabilidades?",
+        options:[
+            "Monitoreo continuo",
+            "Evaluaciones de riesgo regulares",
+            "Protección de datos",
+            "Conciencia y capacitación"
+        ],
+        correctIndex: 1 
+    }
+]} />

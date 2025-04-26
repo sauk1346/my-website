@@ -109,7 +109,8 @@ export default function Ti3v32() {
         { week: '05', lecture: '07', date: 'Sáb 12, Abr 2025', description: <ExternalLink href="/inacap/ti3v32/docs/lectura07.pdf">Búsqueda avanzada con MongoDB</ExternalLink> },
         { week: '', lecture: '08', date: 'Sáb 12, Abr 2025', description: <CustomLink href="ti3v32/lectura08">Selección de filtros y condiciones según requerimientos de búsqueda</CustomLink> },
         { week: '06', lecture: '09', date: 'Sáb 19, Abr 2025', description: <CustomLink href="ti3v32/lectura09">Busqueda avanzada usando expresiones regulares</CustomLink> },
-        { week: '07', lecture: '10', date: 'Sáb 26, Abr 2025', description: 'Comandos de búsqueda en subdocumentos con iteración y asociaciones lógicas' },
+        { week: '07', lecture: '10', date: 'Sáb 26, Abr 2025', description: <CustomLink href="ti3v32/lectura10">Comandos de búsqueda en subdocumentos con iteración y asociaciones lógicas</CustomLink> },
+        { week: '08', lecture: '11', date: 'Sáb 03, May 2025', description: '' },
     ];
 
     return (

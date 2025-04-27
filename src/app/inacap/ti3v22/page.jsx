@@ -58,8 +58,8 @@ export default function Ti3v22() {
             evaluationNumber: 3, 
             date: 'Mar 08, Oct 2024', 
             weighting: '40%', 
-            description: 'Evaluación 03', 
-            quickGuide: 'Guía 1, Guía 2'
+            description: <><CustomLink href='ti3v22/eval03a'>Eval03-A</CustomLink>, <CustomLink href='ti3v22/eval03b'>Eval03-B</CustomLink></>, 
+            quickGuide: <><CustomLink href='ti3v22/guia21'>Guía 01</CustomLink>, <CustomLink href='ti3v22/guia22'>Guía 02</CustomLink></>
         },
         { 
             evaluationNumber: 4, 
@@ -83,10 +83,10 @@ export default function Ti3v22() {
         { week: '06', class: '11', date: 'Lun 16, Sep 2024', description: <CustomLink href='ti3v22/clase11'>Ejercicios</CustomLink> },
         { week: '07', class: '12', date: 'Lun 23, Sep 2024', description: <><CustomLink href='ti3v22/eval02a'>Eval02-A</CustomLink>, <CustomLink href='ti3v22/eval02b'>Eval02-B</CustomLink></> },
         { week: '', class: '13', date: 'Mar 24, Sep 2024', description: 'Revisión Evaluación 02' },
-        { week: '08', class: '14', date: 'Lun 30, Sep 2024', description: 'Ejercicios PL/SQL (1)' },
+        { week: '08', class: '14', date: 'Lun 30, Sep 2024', description: <CustomLink href='ti3v22/clase14'>Ejercicios PL/SQL (1)</CustomLink> },
         { week: '', class: '15', date: 'Mar 01, Oct 2024', description: 'Ejercicios PL/SQL (2)' },
         { week: '09', class: '16', date: 'Lun 07, Oct 2024', description: 'Ejercicios PL/SQL (3)' },
-        { week: '', class: '17', date: 'Mar 08, Oct 2024', description: 'Evaluación 03' },
+        { week: '', class: '17', date: 'Mar 08, Oct 2024', description: <><CustomLink href='ti3v22/eval03a'>Eval03-A</CustomLink>, <CustomLink href='ti3v22/eval03b'>Eval03-B</CustomLink></> },
     ];
     const lectureData = [
         { week: '01', lecture: '01', date: 'Sáb 17, Ago 2024', description: 'Introducción a Oracle Database' },

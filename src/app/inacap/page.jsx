@@ -24,22 +24,16 @@ const Inacap = () => {
             <tbody>
               <tr className={styles.tableRow}>
                 <td className={styles.code}>TI3V11</td>
-                <td>
-                  <CustomLink href="/inacap/ti3v11">Introducción a la Programación Segura</CustomLink>
-                </td>
+                <td><CustomLink href="/inacap/ti3v11">Introducción a la Programación Segura</CustomLink></td>
 
               </tr>
               <tr>
                 <td className={styles.code}>TI3V12</td>
-                <td>
-                  <CustomLink href="/inacap/ti3v12">Fundamentos de Base de Datos</CustomLink>
-                </td>
+                <td><CustomLink href="/inacap/ti3v12">Fundamentos de Base de Datos</CustomLink></td>
               </tr>
               <tr>
                 <td className={styles.code}>TI3V13</td>
-                <td>
-                  <CustomLink href="/inacap/ti3v13">Fundamentos de Hardware y Software</CustomLink>
-                </td>
+                <td><CustomLink href="/inacap/ti3v13">Fundamentos de Hardware y Software</CustomLink></td>
               </tr>
               <tr>
                 <td className={styles.code}>MVAE02</td>
@@ -66,19 +60,15 @@ const Inacap = () => {
             <tbody>
               <tr>
                 <td className={styles.code}>TI3V21</td>
-                <td>
-                  <CustomLink href="/inacap/ti3v21">Programación Orientada a Objeto Seguro</CustomLink>
-                </td>
+                <td><CustomLink href="/inacap/ti3v21">Programación Orientada a Objeto Seguro</CustomLink></td>
               </tr>
               <tr>
                 <td className={styles.code}>TI3V22</td>
-                <td>
-                <CustomLink href="/inacap/ti3v22">Bases de Datos Estructuradas</CustomLink>
-                  </td>
+                <td><CustomLink href="/inacap/ti3v22">Bases de Datos Estructuradas</CustomLink></td>
               </tr>
               <tr>
                 <td className={styles.code}>TI3V23</td>
-                <td>Metodología de Desarrollo Ágil</td>
+                <td><CustomLink href='/inacap/ti3v23'>Metodología de Desarrollo Ágil</CustomLink> </td>
               </tr>
               <tr>
                 <td className={styles.code}>TI3V25</td>

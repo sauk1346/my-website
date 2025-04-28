@@ -54,7 +54,7 @@ export default function Ti3v23() {
             evaluationNumber: 2, 
             date: 'Vie 29, Nov 2024', 
             weighting: '35\% * 75\%', 
-            description: 'Informe 01', 
+            description: <ExternalLink href='/inacap/ti3v23/docs/informe01.pdf'>Informe 01</ExternalLink>, 
             quickGuide: ''
         },
         { 
@@ -80,11 +80,11 @@ export default function Ti3v23() {
         },
     ];
     const classData = [
-        { week: '01', class: '01', date: 'Lun 21, Oct 2024', description: 'Introducción al Desarrollo Ágil' },
-        { week: '02', class: '02', date: 'Lun 28, Oct 2024', description: 'Pilares y Principios del Desarrollo Ágil' },
-        { week: '03', class: '03', date: 'Lun 04, Nov 2024', description: 'Roles en Metodología SCRUM, Evaluación 01' },
-        { week: '04', class: '04', date: 'Lun 11, Nov 2024', description: 'Historias de Usuario' },
-        { week: '05', class: '05', date: 'Lun 18, Nov 2024', description: 'Proyecto Etapa 1' },
+        { week: '01', class: '01', date: 'Lun 21, Oct 2024', description: <CustomLink href='ti3v23/clase01'>Introducción al Desarrollo Ágil</CustomLink> },
+        { week: '02', class: '02', date: 'Lun 28, Oct 2024', description: <CustomLink href='ti3v23/clase02'>Pilares y Principios del Desarrollo Ágil</CustomLink> },
+        { week: '03', class: '03', date: 'Lun 04, Nov 2024', description: <><CustomLink href='ti3v23/clase03'>Roles en Metodología SCRUM</CustomLink>, Evaluación 01</> },
+        { week: '04', class: '04', date: 'Lun 11, Nov 2024', description: <CustomLink href='ti3v23/clase04'>Historias de Usuario</CustomLink> },
+        { week: '05', class: '05', date: 'Lun 18, Nov 2024', description: <CustomLink href='ti3v23/clase05'>Proyecto Etapa 1</CustomLink> },
         { week: '06', class: '06', date: 'Lun 25, Nov 2024', description: 'Tablero Kanban' },
         { week: '07', class: '07', date: 'Lun 02, Dic 2024', description: 'Historias Perfectas' },
         { week: '08', class: '08', date: 'Lun 09, Dic 2024', description: 'Evaluación 03' },

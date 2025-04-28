@@ -1,10 +1,10 @@
 import styles from '@/styles/elearning.module.css'
 import Link from 'next/link';
 
-const Ch001 = () => {
+const En001 = () => {
     return (
         <div className={styles.container}>
-            <h1 style={{marginBottom:'30px'}}>Chinese for HSK 1</h1>
+            <h1 style={{marginBottom:'30px'}}>The Pronunciation of American English</h1>
     
             <div className={styles.grid}>
                 {/* Tabla de Cursos */}
@@ -21,20 +21,20 @@ const Ch001 = () => {
                         <tr className={styles.tableRow}>
                             <td>01</td>
                             <td>
-                                <Link href='ch001/lesson01' className={styles.link}>你好 Nǐ hǎo!</Link>    
+                                <Link href='en001/lesson01' className={styles.link}>Consonant Pretest</Link>    
                             </td>
                         </tr>
                         <tr className={styles.tableRow}>
                             <td>02</td>
-                            <td>你是哪国人? Nǐ shì nǎ guó rén?</td>
+                            <td>Consonant Overview</td>
                         </tr>
                         <tr className={styles.tableRow}>
                             <td>03</td>
-                            <td>你多大了? Nǐ duō dà le? </td>
+                            <td>Voiced and Voiceless Sounds</td>
                         </tr>
                         <tr className={styles.tableRow}>
                             <td>04</td>
-                            <td>我的电话号码是... Wǒ de diànhuà hàomǎ shì... </td>
+                            <td>Shadowing a Conversation</td>
                         </tr>
 
                         </tbody>
@@ -45,4 +45,4 @@ const Ch001 = () => {
         </div>
         );
 }
-export default Ch001;
+export default En001;

@@ -40,8 +40,8 @@ export default function Ti3v34() {
         { week: '04', class: '10', date: 'Lun 31, Mar 2025', description: <CustomLink href="ti3v34/clase10">PCI DSS</CustomLink> },
         { week: '', class: '11', date: 'Mar 01, Abr 2025', description: <em>No asistí a clases</em> },
         { week: '', class: '12', date: 'Mié 02, Abr 2025', description: <CustomLink href="ti3v34/clase12">Delitos Informáticos</CustomLink> },
-        { week: '05', class: '13', date: 'Lun 07, Abr 2025', description: "Avance informe en clases 01" },
-        { week: '', class: '14', date: 'Mar 08, Abr 2025', description: "Avance informe en clases 02" },
+        { week: '05', class: '13', date: 'Lun 07, Abr 2025', description: "Avance Informe 01 (1)" },
+        { week: '', class: '14', date: 'Mar 08, Abr 2025', description: "Avance Informe 01 (2)" },
         { week: '', class: '15', date: 'Mié 09, Abr 2025', description: <ExternalLink href="/inacap/ti3v34/docs/informe01.pdf">Entrega Informe 01</ExternalLink> },
         { week: '06', class: '16', date: 'Lun 14, Abr 2025', description: <CustomLink href="ti3v34/clase16">Tipos de Vulnerabilidades (1)</CustomLink> },
         { week: '', class: '17', date: 'Mar 15, Abr 2025', description: <CustomLink href="ti3v34/clase17">Tipos de Vulnerabilidades (2)</CustomLink> },
@@ -49,8 +49,8 @@ export default function Ti3v34() {
         { week: '07', class: '19', date: 'Lun 21, Abr 2025', description: <CustomLink href="ti3v34/clase19">Controles de Mitigación y Evaluación de Riesgo</CustomLink> },
         { week: '', class: '20', date: 'Mar 22, Abr 2025', description: <CustomLink href="ti3v34/clase20">Matriz de Riesgo</CustomLink>  },
         { week: '', class: '21', date: 'Mié 23, Abr 2025', description: <em>Libre para estudio [TI3V32]</em> },
-        { week: '08', class: '22', date: 'Lun 28, Abr 2025', description: '' },
-        { week: '', class: '23', date: 'Mar 29, Abr 2025', description: '' },
+        { week: '08', class: '22', date: 'Lun 28, Abr 2025', description: "Avance Informe 02 (1)" },
+        { week: '', class: '23', date: 'Mar 29, Abr 2025', description: "Avance Informe 02 (2)" },
         { week: '', class: '24', date: 'Mié 30, Abr 2025', description: '' },
 
 

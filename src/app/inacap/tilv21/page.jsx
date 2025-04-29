@@ -23,19 +23,38 @@ export default function Tilv21() {
         { 
             evaluationNumber: 1,
             date: 'Mié 09, Abr 2025',
-            weighting: '20%', 
+            weighting: '20% * 75%', 
             description: <CustomLink href='tilv21/eval01'>Evaluación 01</CustomLink>, 
             quickGuide: ''
         },
         { 
             evaluationNumber: <EmphText>2</EmphText>,
             date: <EmphText>Mié 30, Abr 2025</EmphText>, 
-            weighting: <EmphText>30%</EmphText>, 
+            weighting: <EmphText>30% * 75%</EmphText>, 
             description: <EmphText>Informe 01</EmphText>, 
             quickGuide: '' 
         },
-        { evaluationNumber: 3, date: 'Lun 05, May 2025', weighting: '35%', description: 'Informe 02', quickGuide: '' },
-        { evaluationNumber: 4, date: 'Mié 07, May 2025', weighting: '15%', description: <CustomLink href='tilv21/controles'>Promedio controles</CustomLink>, quickGuide: '' },
+        {
+            evaluationNumber: 3, 
+            date: 'Jue 08, May 2025',
+            weighting: '35% * 75%',
+            description: 'Informe 02',
+            quickGuide: '' 
+        },
+        { 
+            evaluationNumber: 4, 
+            date: 'Jue 08, May 2025',
+            weighting: '15% * 75%',
+            description: <CustomLink href='tilv21/controles'>Promedio controles</CustomLink>,
+            quickGuide: ''
+        },
+        { 
+            evaluationNumber: 5,
+            date: '12 al 17, May 2025',
+            weighting: '25%',
+            description: 'Examen (obligatorio)',
+            quickGuide: ''
+        }
 
     ];
     const lectureData = [

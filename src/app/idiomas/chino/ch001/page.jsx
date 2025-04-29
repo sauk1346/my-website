@@ -1,5 +1,5 @@
 import styles from '@/styles/elearning.module.css'
-import Link from 'next/link';
+import CustomLink from '@/components/CustomLink';
 
 const Ch001 = () => {
     return (
@@ -20,13 +20,11 @@ const Ch001 = () => {
                         <tbody>
                         <tr className={styles.tableRow}>
                             <td>01</td>
-                            <td>
-                                <Link href='ch001/lesson01' className={styles.link}>你好 Nǐ hǎo!</Link>    
-                            </td>
+                            <td><CustomLink href='ch001/lesson01'>你好 Nǐ hǎo!</CustomLink></td>
                         </tr>
                         <tr className={styles.tableRow}>
                             <td>02</td>
-                            <td>你是哪国人? Nǐ shì nǎ guó rén?</td>
+                            <td><CustomLink href='ch001/lesson02'>你是哪国人? Nǐ shì nǎ guó rén?</CustomLink></td>
                         </tr>
                         <tr className={styles.tableRow}>
                             <td>03</td>

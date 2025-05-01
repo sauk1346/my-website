@@ -22,7 +22,7 @@ const Ingles = () => {
                         </thead>
                         <tbody>
                         <tr className={styles.tableRow}>
-                            <td className={styles.code}>en001</td>
+                            <td className={styles.code}>EN001</td>
                             <td>
                             <Link href='ingles/en001' className={styles.link}>The Pronunciation of American English</Link>
                             </td>

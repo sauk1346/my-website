@@ -1,12 +1,13 @@
 import React from 'react';
 import { Card } from "@/components/Card";
-import styles from '@/styles/Home.module.css';
+import homeStyles from '@/styles/Home.module.css';
+import styles from '@/styles/elearning.module.css';
 
 export default function ELearning() {
   return (
-    <div className={styles.container}>
+    <div className={homeStyles.mainContainer}>
       <h1 className={styles.title}>E-Learning</h1>
-      <div className={styles.cardContainer}>
+      <div className={homeStyles.cardContainer}>
         <Card
           title="Coursera"
           description="Apuntes"
@@ -38,6 +39,6 @@ export default function ELearning() {
           link='elearning/udemy'
         />
       </div>
-    </div>  
+    </div>
   );
 }

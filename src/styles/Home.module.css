@@ -1,17 +1,28 @@
-  /* Estilo para el párrafo */
-  .description {
-    margin-top: 32px;
-    font-size: 1.125rem;
-    text-align: center;
-  }
-  
-  /* Flex container para las cards */
-  .cardContainer {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-    justify-content: center;
-    margin-top: 32px;
-    width: 100%;
-    max-width: 100%;
-  }  
+/* Contenedor principal con altura mínima */
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  width: 100%;
+  padding: 2rem 1rem;
+}
+
+/* Estilo para el párrafo */
+.description {
+  margin-top: 32px;
+  font-size: 1.125rem;
+  text-align: center;
+}
+
+/* Flex container para las cards */
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 32px;
+  width: 100%;
+  max-width: 100%;
+}

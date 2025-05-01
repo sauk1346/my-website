@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.css';
 
 export default function Home() {
   return (
-    <div>
+    <div className={styles.mainContainer}>
       <p className={styles.description}>
         Choose your Destiny:
       </p>
@@ -28,7 +28,7 @@ export default function Home() {
           link='/bootcamps'
         />
         <Card
-          title="Languages"
+          title="Idiomas"
           description="Apuntes"
           image="/logos/language.png"
           link='/idiomas'

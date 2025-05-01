@@ -22,7 +22,7 @@ const Chino = () => {
                         </thead>
                         <tbody>
                         <tr className={styles.tableRow}>
-                            <td className={styles.code}>ch001</td>
+                            <td className={styles.code}>CH001</td>
                             <td>
                             <CustomLink href='chino/ch001'>Chinese for HSK 1</CustomLink>
                             </td>

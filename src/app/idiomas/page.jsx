@@ -1,46 +1,46 @@
 import React from 'react';
 import { Card } from "@/components/Card";
-import styles from '@/styles/Home.module.css';
+import homeStyles from '@/styles/Home.module.css';
 
 export default function Idiomas() {
   return (
-    <div className={styles.container}>
-      <h1 className={styles.title}>Idiomas</h1>
-      <div className={styles.cardContainer}>
+    <div className={homeStyles.mainContainer}>
+      <h1 className={homeStyles.title}>Idiomas</h1>
+      <div className={homeStyles.cardContainer}>
         <Card
           title="Alemán"
           description="Apuntes"
-          image="/logos/germany_flag.png"
+          image="https://kapowaz.github.io/square-flags/flags/de.svg"
           link='idiomas/aleman'
         />
         <Card
           title="Coreano"
           description="Apuntes"
-          image="/logos/korean_flag.png"
+          image="https://kapowaz.github.io/square-flags/flags/kr.svg"
           link='idiomas/coreano'
         />
         <Card
           title="Chino Mandarín"
           description="Apuntes"
-          image="/logos/china_flag.png"
+          image="https://kapowaz.github.io/square-flags/flags/cn.svg"
           link='idiomas/chino'
         />
         <Card
           title="Inglés"
           description="Apuntes"
-          image="/logos/usa_flag.png"
+          image="https://kapowaz.github.io/square-flags/flags/us.svg"
           link='idiomas/ingles'
         />
         <Card
           title="Japonés"
           description="Apuntes"
-          image="/logos/japan_flag.png"
+          image="https://kapowaz.github.io/square-flags/flags/jp.svg"
           link='idiomas/japones'
         />
         <Card
           title="Ruso"
           description="Apuntes"
-          image="/logos/russia_flag.png"
+          image="https://kapowaz.github.io/square-flags/flags/ru.svg"
           link='idiomas/ruso'
         />
       </div>

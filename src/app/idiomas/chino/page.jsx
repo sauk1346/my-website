@@ -1,5 +1,5 @@
 import styles from '@/styles/elearning.module.css'
-import Link from 'next/link';
+import CustomLink from '@/components/CustomLink';
 
 const Chino = () => {
     return (
@@ -24,7 +24,7 @@ const Chino = () => {
                         <tr className={styles.tableRow}>
                             <td className={styles.code}>ch001</td>
                             <td>
-                            <Link href='chino/ch001' className={styles.link}>Chinese for HSK 1</Link>
+                            <CustomLink href='chino/ch001'>Chinese for HSK 1</CustomLink>
                             </td>
                             <td>Coursera</td>
                             <td>Peking University</td>

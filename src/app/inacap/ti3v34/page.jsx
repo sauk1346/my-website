@@ -49,9 +49,12 @@ export default function Ti3v34() {
         { week: '07', class: '19', date: 'Lun 21, Abr 2025', description: <CustomLink href="ti3v34/clase19">Controles de Mitigación y Evaluación de Riesgo</CustomLink> },
         { week: '', class: '20', date: 'Mar 22, Abr 2025', description: <CustomLink href="ti3v34/clase20">Matriz de Riesgo</CustomLink>  },
         { week: '', class: '21', date: 'Mié 23, Abr 2025', description: <em>Libre para estudio [TI3V32]</em> },
-        { week: '08', class: '22', date: 'Lun 28, Abr 2025', description: "Avance Informe 02 (1)" },
-        { week: '', class: '23', date: 'Mar 29, Abr 2025', description: "Avance Informe 02 (2)" },
-        { week: '', class: '24', date: 'Mié 30, Abr 2025', description: '' },
+        { week: '08', class: '22', date: 'Lun 28, Abr 2025', description: 'Avance Informe 02 (1)' },
+        { week: '', class: '23', date: 'Mar 29, Abr 2025', description: 'Avance Informe 02 (2)' },
+        { week: '', class: '24', date: 'Mié 30, Abr 2025', description: 'Avance Informe 02 (3)' },
+        { week: '09', class: '25', date: 'Lun 05, May 2025', description: '' },
+        { week: '', class: '26', date: 'Mar 06, May 2025', description: '' },
+        { week: '', class: '27', date: 'Mié 07, May 2025', description: 'Entrega Informe 02' },
 
 
     ];

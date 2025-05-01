@@ -7,6 +7,7 @@ import UnitCard from '@/components/UnitCard';
 import styles from'@/styles/Asignature.module.css';
 import CustomLink from '@/components/CustomLink';
 import EmphText from '@/components/EmphText';
+import ExternalLink from '@/components/ExternalLink';
 
 export default function Tilv21() {
     
@@ -28,17 +29,17 @@ export default function Tilv21() {
             quickGuide: ''
         },
         { 
-            evaluationNumber: <EmphText>2</EmphText>,
-            date: <EmphText>Mié 30, Abr 2025</EmphText>, 
-            weighting: <EmphText>30% * 75%</EmphText>, 
-            description: <EmphText>Informe 01</EmphText>, 
+            evaluationNumber: 2,
+            date: 'Mié 30, Abr 2025', 
+            weighting: '30% * 75%', 
+            description: <ExternalLink href='/inacap/tilv21/docs/informe01.pdf'>Informe 01</ExternalLink>, 
             quickGuide: '' 
         },
         {
             evaluationNumber: 3, 
-            date: 'Jue 08, May 2025',
-            weighting: '35% * 75%',
-            description: 'Informe 02',
+            date: <EmphText>Jue 08, May 2025</EmphText>,
+            weighting: <EmphText>35% * 75%</EmphText>,
+            description: <EmphText>Informe 02</EmphText>,
             quickGuide: '' 
         },
         { 

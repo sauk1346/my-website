@@ -3,6 +3,7 @@
   background-color: #2563eb;
   padding: 1rem;
   transition: background-color 0.3s ease;
+  position: relative;
 }
 
 /* Navbar en modo oscuro */
@@ -25,6 +26,7 @@
   gap: 1.5rem;
   padding: 0;
   margin: 0;
+  align-items: center;
 }
 
 .link {
@@ -137,6 +139,152 @@
   box-shadow: 0 0 2px 1px rgba(255, 255, 255, 0.5);
 }
 
+/* Nuevo - Botón hamburguesa para móvil */
+.menuButton {
+  display: none;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 20;
+}
+
+/* Estilos para el menú móvil */
+.mobileMenu {
+  display: none;
+}
+
+/* Media queries para hacer responsivo */
+@media (max-width: 768px) {
+  .container {
+    flex-wrap: wrap;
+  }
+  
+  .menuButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .menu {
+    display: none;
+  }
+  
+  .mobileMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #2563eb;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    z-index: 10;
+    transition: transform 0.3s ease;
+    transform: translateY(-100%);
+    overflow-y: auto; /* Permitir scroll si el contenido es muy alto */
+  }
+  
+  :global(html.dark-mode) .mobileMenu,
+  :global(html.dark-mode-override) .mobileMenu {
+    background-color: #1e293b;
+  }
+  
+  .mobileMenuOpen {
+    transform: translateY(0);
+  }
+  
+  .logo {
+    margin: 0 auto;
+    position: relative;
+    z-index: 5;
+  }
+  
+  .mobileMenuHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .mobileMenuItem {
+    font-size: 1.25rem;
+    margin: 0.5rem 0;
+  }
+  
+  .closeButton {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+}
+
+/* Contenedor para los elementos del menú móvil */
+.mobileMenuContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+/* Estilo específico para el toggle de tema en móvil */
+.mobileThemeToggle {
+  margin-top: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Media query específica para dispositivos móviles en orientación horizontal */
+@media (max-width: 768px) and (max-height: 500px) {
+  .mobileMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+  }
+  
+  .mobileMenuContent {
+    gap: 0.75rem;
+    overflow-y: auto;
+    padding-bottom: 1rem;
+  }
+  
+  .mobileMenuItem {
+    margin: 0.25rem 0;
+    font-size: 1.1rem;
+  }
+  
+  /* Ajustar el botón de tema en el menú móvil */
+  .mobileThemeToggle {
+    margin-top: 0.5rem;
+    position: static;
+  }
+  
+  /* Asegurar que el logo no se superponga con otros elementos */
+  .logo {
+    position: relative;
+    z-index: 5;
+  }
+}
+
 /* Soporte para preferencias de reducción de movimiento */
 @media (prefers-reduced-motion: no-preference) {
   .iconActive, .iconInactive {
@@ -144,6 +292,10 @@
   }
   
   .toggleSlider:before {
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  
+  .mobileMenu {
     transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
   }
 }

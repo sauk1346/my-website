@@ -7,6 +7,7 @@ import styles from '../styles/Navbar.module.css';
 const Navbar = () => {
   const [darkMode, setDarkMode] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   
   // Función para verificar el tema actual
   const checkTheme = () => {
@@ -34,9 +35,10 @@ const Navbar = () => {
     return prefersDark;
   };
   
-  // Detectar el tema inicial y cambios
+  // Detectar el tema inicial y cambios + manejar el overflow del body
   useEffect(() => {
     if (typeof window !== 'undefined') {
+      // Configuración del tema
       const initialDarkMode = checkTheme();
       console.log('Estado inicial del tema:', initialDarkMode ? 'oscuro' : 'claro');
       setDarkMode(initialDarkMode);
@@ -53,9 +55,19 @@ const Navbar = () => {
         attributeFilter: ['class'] 
       });
       
-      return () => observer.disconnect();
+      // Manejar el overflow del body basado en mobileMenuOpen
+      if (mobileMenuOpen) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = '';
+      }
+      
+      return () => {
+        observer.disconnect();
+        document.body.style.overflow = '';
+      };
     }
-  }, []);
+  }, [mobileMenuOpen]); // Añadimos mobileMenuOpen como dependencia
   
   // Función para cambiar el tema
   const toggleTheme = () => {
@@ -77,6 +89,11 @@ const Navbar = () => {
         document.documentElement.classList.add('light-mode-override');
       }
     }
+  };
+  
+  // Función para cerrar el menú móvil cuando se hace clic en un enlace
+  const handleLinkClick = () => {
+    setMobileMenuOpen(false);
   };
   
   // Evitar problemas de hidratación
@@ -104,10 +121,94 @@ const Navbar = () => {
     );
   }
 
+  // Componentes para los iconos
+  const MenuIcon = () => (
+    <svg 
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round">
+      <line x1="3" y1="12" x2="21" y2="12" />
+      <line x1="3" y1="6" x2="21" y2="6" />
+      <line x1="3" y1="18" x2="21" y2="18" />
+    </svg>
+  );
+  
+  const CloseIcon = () => (
+    <svg 
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round">
+      <line x1="18" y1="6" x2="6" y2="18" />
+      <line x1="6" y1="6" x2="18" y2="18" />
+    </svg>
+  );
+  
+  // Componente del ThemeToggle para reutilizarlo
+  const ThemeToggleComponent = () => (
+    <label className={styles.themeToggle}>
+      <svg
+        className={darkMode ? styles.iconInactive : styles.iconActive}
+        xmlns="http://www.w3.org/2000/svg"
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round">
+        <circle cx="12" cy="12" r="5" />
+        <path
+          d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" />
+      </svg>
+      <input 
+        type="checkbox" 
+        checked={darkMode}
+        onChange={toggleTheme}
+        className={styles.toggleInput} 
+      />
+      <span className={styles.toggleSlider}></span>
+      <svg
+        className={darkMode ? styles.iconActive : styles.iconInactive}
+        xmlns="http://www.w3.org/2000/svg"
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+      </svg>
+    </label>
+  );
+
   return (
     <div className={styles.navbar}>
       <div className={styles.container}>
-        {/* Left navbar-side */}
+        {/* Botón del menú para móvil */}
+        <button 
+          className={styles.menuButton} 
+          onClick={() => setMobileMenuOpen(true)}
+          aria-label="Abrir menú de navegación"
+        >
+          <MenuIcon />
+        </button>
+        
+        {/* Left navbar-side - solo visible en desktop */}
         <ul className={styles.menu}>
           <li>
             <Link href="/inacap" className={styles.link}>
@@ -131,7 +232,7 @@ const Navbar = () => {
           SaukCode
         </Link>
         
-        {/* Right navbar-side */}
+        {/* Right navbar-side - solo visible en desktop */}
         <ul className={styles.menu}>
           <li>
             <Link href="/" className={styles.link}>
@@ -149,45 +250,69 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <label className={styles.themeToggle}>
-              <svg
-                className={darkMode ? styles.iconInactive : styles.iconActive}
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round">
-                <circle cx="12" cy="12" r="5" />
-                <path
-                  d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" />
-              </svg>
-              <input 
-                type="checkbox" 
-                checked={darkMode}
-                onChange={toggleTheme}
-                className={styles.toggleInput} 
-              />
-              <span className={styles.toggleSlider}></span>
-              <svg
-                className={darkMode ? styles.iconActive : styles.iconInactive}
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round">
-                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-              </svg>
-            </label>
+            <ThemeToggleComponent />
           </li>
         </ul>
+        
+        {/* Menú móvil - visible solo cuando está abierto */}
+        <div className={`${styles.mobileMenu} ${mobileMenuOpen ? styles.mobileMenuOpen : ''}`}>
+          <button 
+            className={styles.closeButton} 
+            onClick={() => setMobileMenuOpen(false)}
+            aria-label="Cerrar menú de navegación"
+          >
+            <CloseIcon />
+          </button>
+          
+          <div className={styles.mobileMenuContent}>
+            <Link 
+              href="/" 
+              className={`${styles.link} ${styles.mobileMenuItem}`}
+              onClick={handleLinkClick}
+            >
+              Home
+            </Link>
+            <Link 
+              href="/about" 
+              className={`${styles.link} ${styles.mobileMenuItem}`}
+              onClick={handleLinkClick}
+            >
+              About
+            </Link>
+            <Link 
+              href="/contact" 
+              className={`${styles.link} ${styles.mobileMenuItem}`}
+              onClick={handleLinkClick}
+            >
+              Contact
+            </Link>
+            <Link 
+              href="/inacap" 
+              className={`${styles.link} ${styles.mobileMenuItem}`}
+              onClick={handleLinkClick}
+            >
+              Inacap
+            </Link>
+            <Link 
+              href="/bootcamps" 
+              className={`${styles.link} ${styles.mobileMenuItem}`}
+              onClick={handleLinkClick}
+            >
+              Bootcamp
+            </Link>
+            <Link 
+              href="/portfolio" 
+              className={`${styles.link} ${styles.mobileMenuItem}`}
+              onClick={handleLinkClick}
+            >
+              Portfolio
+            </Link>
+            
+            <div className={styles.mobileThemeToggle}>
+              <ThemeToggleComponent />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

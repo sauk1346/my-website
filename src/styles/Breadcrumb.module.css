@@ -4,6 +4,20 @@
   background-color: #ffffff;
   border-radius: 5px;
   transition: background-color 0.3s ease, border-color 0.3s ease;
+  overflow-x: auto; /* Permite desplazamiento horizontal */
+  white-space: nowrap; /* Evita que el texto se envuelva */
+  scrollbar-width: thin; /* Para Firefox */
+  -ms-overflow-style: none; /* Para IE y Edge */
+}
+
+/* Ocultar scrollbar para Chrome, Safari y Opera */
+.breadcrumb::-webkit-scrollbar {
+  height: 4px;
+}
+
+.breadcrumb::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
 }
 
 /* Breadcrumb en modo oscuro */
@@ -11,6 +25,11 @@
 :global(html.dark-mode-override) .breadcrumb {
   background-color: #1e1e1e;
   border-bottom: 1px solid #374151;
+}
+
+:global(html.dark-mode) .breadcrumb::-webkit-scrollbar-thumb,
+:global(html.dark-mode-override) .breadcrumb::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .breadcrumbList {
@@ -26,6 +45,11 @@
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
+  display: inline-block; /* Asegura que los elementos se muestren en línea */
+  max-width: 200px; /* Máximo ancho para cada elemento */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 /* Enlaces en modo oscuro */
@@ -42,6 +66,7 @@
   margin: 0 8px;
   color: #888;
   transition: color 0.3s ease;
+  flex-shrink: 0; /* Evita que los separadores se compriman */
 }
 
 /* Separador en modo oscuro */
@@ -54,10 +79,95 @@
   color: #555;
   font-weight: 500;
   transition: color 0.3s ease;
+  display: inline-block;
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 /* Texto en modo oscuro */
 :global(html.dark-mode) .breadcrumbText,
 :global(html.dark-mode-override) .breadcrumbText {
   color: #d1d5db;
+}
+
+/* Estilos responsivos para móviles */
+@media (max-width: 768px) {
+  .breadcrumb {
+    padding: 8px;
+  }
+  
+  .breadcrumbItem, .breadcrumbText {
+    max-width: 120px; /* Ancho más pequeño en móviles */
+    font-size: 0.9rem;
+  }
+  
+  .breadcrumbSeparator {
+    margin: 0 5px;
+  }
+  
+  /* Variante compacta para rutas muy largas */
+  .compactMode .breadcrumbItem,
+  .compactMode .breadcrumbText {
+    max-width: 80px;
+  }
+}
+
+/* Estilos para el botón de expansión/compresión */
+.breadcrumbToggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #0070f3;
+  margin-left: 8px;
+  font-size: 0.9rem;
+  padding: 3px 8px;
+  border-radius: 4px;
+  background-color: rgba(0, 112, 243, 0.1);
+  display: none; /* Oculto por defecto */
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+:global(html.dark-mode) .breadcrumbToggle,
+:global(html.dark-mode-override) .breadcrumbToggle {
+  color: #60a5fa;
+  background-color: rgba(96, 165, 250, 0.1);
+}
+
+.breadcrumbToggle:hover {
+  background-color: rgba(0, 112, 243, 0.2);
+}
+
+:global(html.dark-mode) .breadcrumbToggle:hover,
+:global(html.dark-mode-override) .breadcrumbToggle:hover {
+  background-color: rgba(96, 165, 250, 0.2);
+}
+
+/* Mostrar botón de expansión solo cuando hay overflow */
+.breadcrumb.hasOverflow .breadcrumbToggle {
+  display: block;
+}
+
+/* Estilos para el modo comprimido */
+.compressed .intermediateItem {
+  display: none;
+}
+
+.compressed .breadcrumbSeparator {
+  margin: 0 2px;
+}
+
+.compressed .ellipsis {
+  display: inline-block;
+  margin: 0 2px;
+  color: #888;
+}
+
+:global(html.dark-mode) .compressed .ellipsis,
+:global(html.dark-mode-override) .compressed .ellipsis {
+  color: #9ca3af;
 }

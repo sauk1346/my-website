@@ -1,12 +1,28 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from '../styles/Calendar.module.css';
 
 // El componente ahora recibe eventos como prop con un valor por defecto (array vacío)
 const Calendar = ({ eventos = [] }) => {
   const [currentDate, setCurrentDate] = useState(new Date());
   const [selectedDay, setSelectedDay] = useState(null);
+  const [isMobile, setIsMobile] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+
+  // Efecto para detectar dispositivos móviles
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 480);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => {
+      window.removeEventListener('resize', checkMobile);
+    };
+  }, []);
 
   // Obtener días del mes actual
   const getDaysInMonth = (date) => {
@@ -61,16 +77,20 @@ const Calendar = ({ eventos = [] }) => {
   ];
   
   // Nombres de los días en español (reordenados para comenzar con lunes)
-  const dayNames = ['Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb', 'Dom'];
+  const dayNames = ['L', 'M', 'X', 'J', 'V', 'S', 'D'];
 
   // Cambiar al mes anterior
   const prevMonth = () => {
     setCurrentDate(new Date(currentDate.getFullYear(), currentDate.getMonth() - 1, 1));
+    setSelectedDay(null);
+    setShowModal(false);
   };
 
   // Cambiar al mes siguiente
   const nextMonth = () => {
     setCurrentDate(new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 1));
+    setSelectedDay(null);
+    setShowModal(false);
   };
 
   // Formatear fecha como string para usarla como clave en el objeto de eventos
@@ -81,6 +101,9 @@ const Calendar = ({ eventos = [] }) => {
   // Seleccionar un día para ver sus eventos
   const selectDay = (day) => {
     setSelectedDay(day);
+    if (isMobile) {
+      setShowModal(true);
+    }
   };
 
   // Obtener eventos para un día específico
@@ -101,15 +124,69 @@ const Calendar = ({ eventos = [] }) => {
            date.getMonth() === today.getMonth() &&
            date.getFullYear() === today.getFullYear();
   };
+  
+  // Formatear fecha para la vista detallada
+  const formatDetailDate = (date) => {
+    const dayNames = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
+    return `${dayNames[date.getDay()]}, ${date.getDate()} de ${monthNames[date.getMonth()]}`;
+  };
+  
+  // Cerrar el modal
+  const closeModal = () => {
+    setShowModal(false);
+  };
+
+  // Renderizar detalles del día 
+  const renderDayDetails = () => {
+    if (!selectedDay) return null;
+    
+    const eventosDelDia = getEventosDelDia(selectedDay);
+    
+    return (
+      <div className={styles.dayDetails}>
+        <h3 className={styles.dayDetailsTitle}>
+          {formatDetailDate(selectedDay.date)}
+          <button 
+            className={styles.closeDetailsButton}
+            onClick={() => setSelectedDay(null)}
+            aria-label="Cerrar detalles"
+          >
+            ×
+          </button>
+        </h3>
+        
+        {eventosDelDia.length > 0 ? (
+          <div className={styles.eventsList}>
+            {eventosDelDia.map(evento => (
+              <div key={evento.id} className={styles.eventItem}>
+                <div className={styles.eventItemHeader}>
+                  {evento.hora && <span className={styles.eventItemTime}>{evento.hora}</span>}
+                  <span className={styles.eventItemTitle}>{evento.titulo}</span>
+                </div>
+                {evento.description && (
+                  <div className={styles.eventItemDescription}>
+                    {evento.description}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        ) : (
+          <p className={styles.noEvents}>No hay eventos para este día.</p>
+        )}
+      </div>
+    );
+  };
 
   return (
-    <div className={styles.calendarioContainer}>
+    <div className={`${styles.calendarioContainer} ${showModal ? styles.detailsModalActive : ''} ${selectedDay && !isMobile ? styles.hasSelectedDay : ''}`}>
       <div className={styles.calendario}>
         {/* Cabecera del calendario */}
         <div className={styles.calendarioHeader}>
           <button 
             onClick={prevMonth}
             className={styles.calendarioNavButton}
+            aria-label="Mes anterior"
           >
             &lt;
           </button>
@@ -119,6 +196,7 @@ const Calendar = ({ eventos = [] }) => {
           <button 
             onClick={nextMonth}
             className={styles.calendarioNavButton}
+            aria-label="Mes siguiente"
           >
             &gt;
           </button>
@@ -136,6 +214,9 @@ const Calendar = ({ eventos = [] }) => {
         {/* Días del mes */}
         <div className={styles.calendarioDaysGrid}>
           {days.map((day, index) => {
+            const dayEvents = getEventosDelDia(day);
+            const hasDay = hasEvents(day);
+            
             return (
               <div 
                 key={index} 
@@ -146,17 +227,25 @@ const Calendar = ({ eventos = [] }) => {
               >
                 <div className={`${styles.calendarioDayHeader} ${isToday(day.date) ? styles.todayHeader : ''}`}>
                   <span>{day.date.getDate()}</span>
-                  {hasEvents(day) && (
+                  {hasDay && (
                     <span className={styles.eventIndicator}></span>
                   )}
                 </div>
                 <div className={styles.calendarioEvents}>
-                  {getEventosDelDia(day).map(evento => (
+                  {/* Mostrar solo los primeros eventos */}
+                  {dayEvents.slice(0, 2).map(evento => (
                     <div key={evento.id} className={styles.calendarioEvent}>
                       {evento.hora && <span className={styles.eventTime}>{evento.hora}: </span>}
                       {evento.titulo}
                     </div>
                   ))}
+                  
+                  {/* Indicador de más eventos */}
+                  {dayEvents.length > 2 && (
+                    <div className={styles.calendarioEvent}>
+                      +{dayEvents.length - 2} más
+                    </div>
+                  )}
                 </div>
               </div>
             );
@@ -164,31 +253,47 @@ const Calendar = ({ eventos = [] }) => {
         </div>
       </div>
       
-      {/* Detalles del día seleccionado */}
-      {selectedDay && (
-        <div className={styles.dayDetails}>
-          <h3 className={styles.dayDetailsTitle}>
-            {selectedDay.date.getDate()} de {monthNames[selectedDay.date.getMonth()]}
-          </h3>
-          {getEventosDelDia(selectedDay).length > 0 ? (
-            <div className={styles.eventsList}>
-              {getEventosDelDia(selectedDay).map(evento => (
-                <div key={evento.id} className={styles.eventItem}>
-                  <div className={styles.eventItemHeader}>
-                    {evento.hora && <span className={styles.eventItemTime}>{evento.hora}</span>}
-                    <span className={styles.eventItemTitle}>{evento.titulo}</span>
-                  </div>
-                  {evento.description && (
-                    <div className={styles.eventItemDescription}>
-                      {evento.description}
+      {/* Detalles del día (para vista desktop y orientación horizontal) */}
+      {selectedDay && renderDayDetails()}
+      
+      {/* Modal para dispositivos móviles */}
+      {showModal && selectedDay && (
+        <div className={styles.detailsModal} onClick={closeModal}>
+          <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
+            <button 
+              className={styles.modalCloseButton}
+              onClick={closeModal}
+              aria-label="Cerrar detalles"
+            >
+              ×
+            </button>
+            {/* Renderizamos directamente los detalles del día dentro del modal */}
+            <div className={styles.dayDetails}>
+              <h3 className={styles.dayDetailsTitle}>
+                {formatDetailDate(selectedDay.date)}
+              </h3>
+              
+              {getEventosDelDia(selectedDay).length > 0 ? (
+                <div className={styles.eventsList}>
+                  {getEventosDelDia(selectedDay).map(evento => (
+                    <div key={evento.id} className={styles.eventItem}>
+                      <div className={styles.eventItemHeader}>
+                        {evento.hora && <span className={styles.eventItemTime}>{evento.hora}</span>}
+                        <span className={styles.eventItemTitle}>{evento.titulo}</span>
+                      </div>
+                      {evento.description && (
+                        <div className={styles.eventItemDescription}>
+                          {evento.description}
+                        </div>
+                      )}
                     </div>
-                  )}
+                  ))}
                 </div>
-              ))}
+              ) : (
+                <p className={styles.noEvents}>No hay eventos para este día.</p>
+              )}
             </div>
-          ) : (
-            <p className={styles.noEvents}>No hay eventos para este día.</p>
-          )}
+          </div>
         </div>
       )}
     </div>

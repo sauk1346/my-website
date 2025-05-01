@@ -71,8 +71,10 @@ export default function Tilv21() {
         { week: '07', lecture: '10', date: 'Sáb 26, Abr 2025', description: <CustomLink href='tilv21/lectura10'>Gestión de defectos, combinación de valores de prueba y exploración</CustomLink> },
         { week: '', lecture: '11', date: 'Sáb 26, Abr 2025', description: <CustomLink href='tilv21/lectura11'>Técnicas para pruebas exploratorias</CustomLink> },
         { week: '', lecture: '12', date: 'Sáb 26, Abr 2025', description: <CustomLink href='tilv21/lectura12'>Ciclo de vida de un defecto de software</CustomLink> },
-        { week: '08', lecture: '13', date: 'Sáb 03, May 2025', description: 'Defectos, errores y fallos según criterios de factibilidad de plan de pruebas' },
+        { week: '08', lecture: '13', date: 'Sáb 03, May 2025', description: <CustomLink href='tilv21/lectura13'>Defectos, errores y fallos según criterios de factibilidad de plan de pruebas</CustomLink> },
         { week: '', lecture: '14', date: 'Sáb 03, May 2025', description: 'Procesos de seguimiento en el monitoreo' },
+        { week: '09', lecture: '15', date: 'Sáb 10, May 2025', description: 'Síntesis de la Unidad' },
+        
 
 
         

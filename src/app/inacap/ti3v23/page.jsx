@@ -97,15 +97,15 @@ export default function Ti3v23() {
         { week: '02', lecture: '03', date: 'Sáb 02, Nov 2024', description: <CustomLink href='ti3v23/lectura03'>Selección Metodologías Ágiles</CustomLink> },
         { week: '', lecture: '04', date: 'Sáb 02, Nov 2024', description: <CustomLink href='ti3v23/lectura04'>Optimización de recursos</CustomLink> },
         { week: '03', lecture: '05', date: 'Sáb 09, Nov 2024', description: <CustomLink href='ti3v23/lectura05'>Levantamiento de requerimientos</CustomLink> },
-        { week: '', lecture: '06', date: 'Sáb 09, Nov 2024', description: 'Roles y funciones en SCRUM' },
-        { week: '04', lecture: '07', date: 'Sáb 16, Nov 2024', description: 'Planificación de sprint en SCRUM' },
-        { week: '', lecture: '08', date: 'Sáb 16, Nov 2024', description: 'Metología Kanban' },
+        { week: '', lecture: '06', date: 'Sáb 09, Nov 2024', description: <CustomLink href='ti3v23/lectura06'>Roles y funciones en SCRUM</CustomLink> },
+        { week: '04', lecture: '07', date: 'Sáb 16, Nov 2024', description: <CustomLink href='ti3v23/lectura07'>Planificación de sprint en SCRUM</CustomLink> },
+        { week: '', lecture: '08', date: 'Sáb 16, Nov 2024', description: <CustomLink href='ti3v23/lectura08'>Metología Kanban</CustomLink> },
         { week: '05', lecture: '-', date: 'Sáb 23, Nov 2024', description: 'Repaso de los contenidos de la Unidad' },
-        { week: '06', lecture: '09', date: 'Sáb 30, Nov 2024', description: 'Definición de entregables iniciales' },
-        { week: '', lecture: '10', date: 'Sáb 30, Nov 2024', description: 'Reuniones de trabajo' },
-        { week: '07', lecture: '11', date: 'Sáb 07, Dic 2024', description: 'Diagrama de Casos de Uso' },
-        { week: '08', lecture: '12', date: 'Sáb 14, Dic 2024', description: 'Mockups' },
-        { week: '', lecture: '13', date: 'Sáb 14, Dic 2024', description: 'Etapa de Cierre' },
+        { week: '06', lecture: '09', date: 'Sáb 30, Nov 2024', description: <CustomLink href='ti3v23/lectura09'>Definición de entregables iniciales</CustomLink> },
+        { week: '', lecture: '10', date: 'Sáb 30, Nov 2024', description: <CustomLink href='ti3v23/lectura10'>Reuniones de trabajo</CustomLink> },
+        { week: '07', lecture: '11', date: 'Sáb 07, Dic 2024', description: <CustomLink href='ti3v23/lectura11'>Diagrama de Casos de Uso</CustomLink> },
+        { week: '08', lecture: '12', date: 'Sáb 14, Dic 2024', description: <CustomLink href='ti3v23/lectura12'>Mockups</CustomLink> },
+        { week: '', lecture: '13', date: 'Sáb 14, Dic 2024', description: <CustomLink href='ti3v23/lectura13'>Etapa de Cierre</CustomLink> },
     ];
 
     return (

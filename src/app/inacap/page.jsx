@@ -60,19 +60,19 @@ const Inacap = () => {
             <tbody>
               <tr>
                 <td className={styles.code}>TI3V21</td>
-                <td><CustomLink href="/inacap/ti3v21">Programación Orientada a Objeto Seguro</CustomLink></td>
+                <td><CustomLink href="inacap/ti3v21">Programación Orientada a Objeto Seguro</CustomLink></td>
               </tr>
               <tr>
                 <td className={styles.code}>TI3V22</td>
-                <td><CustomLink href="/inacap/ti3v22">Bases de Datos Estructuradas</CustomLink></td>
+                <td><CustomLink href="inacap/ti3v22">Bases de Datos Estructuradas</CustomLink></td>
               </tr>
               <tr>
                 <td className={styles.code}>TI3V23</td>
-                <td><CustomLink href='/inacap/ti3v23'>Metodología de Desarrollo Ágil</CustomLink> </td>
+                <td><CustomLink href='inacap/ti3v23'>Metodología de Desarrollo Ágil</CustomLink> </td>
               </tr>
               <tr>
                 <td className={styles.code}>TI3V25</td>
-                <td>Modelamiento de Soluciones Informáticas</td>
+                <td><CustomLink href='inacap/ti3v25'>Modelamiento de Soluciones Informáticas</CustomLink></td>
               </tr>
               <tr>
                 <td className={styles.code}>AVAN01</td>

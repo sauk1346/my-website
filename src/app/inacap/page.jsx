@@ -76,7 +76,7 @@ const Inacap = () => {
               </tr>
               <tr>
                 <td className={styles.code}>AVAN01</td>
-                <td>Administración</td>
+                <td><CustomLink href='inacap/avan01'>Administración</CustomLink></td>
               </tr>
               <tr>
                 <td className={styles.code}>MVFM01</td>

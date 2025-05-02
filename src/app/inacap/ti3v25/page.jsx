@@ -68,7 +68,7 @@ export default function Ti3v25() {
             evaluationNumber: 4, 
             date: 'Mié 16, Oct 2024', 
             weighting: '10%', 
-            description: 'Promedio Controles', 
+            description: <CustomLink href='ti3v25/controles'>Promedio Controles</CustomLink>, 
             quickGuide: ''
         },
         
@@ -104,12 +104,12 @@ export default function Ti3v25() {
 
     ];
     const lectureData = [
-        { week: '01', lecture: '01', date: 'Sáb 17, Ago 2024', description: 'Toma de requerimientos' },
+        { week: '01', lecture: '01', date: 'Sáb 17, Ago 2024', description: <CustomLink href='ti3v25/lectura01'>Toma de requerimientos</CustomLink> },
         { week: '', lecture: '02', date: 'Sáb 17, Ago 2024', description: 'Análisis de requerimientos' },
-        { week: '02', lecture: '03', date: 'Sáb 24, Ago 2024', description: 'Casos de Uso' },
-        { week: '', lecture: '04', date: 'Sáb 24, Ago 2024', description: 'Diagramas de base de datos' },
-        { week: '03', lecture: '05', date: 'Sáb 31, Ago 2024', description: 'Diagramas de flujo' },
-        { week: '', lecture: '06', date: 'Sáb 31, Ago 2024', description: 'Kanban' },
+        { week: '02', lecture: '03', date: 'Sáb 24, Ago 2024', description: <CustomLink href='ti3v25/lectura03'>Casos de Uso</CustomLink> },
+        { week: '', lecture: '04', date: 'Sáb 24, Ago 2024', description: <CustomLink href='ti3v25/lectura04'>Diagramas de base de datos</CustomLink> },
+        { week: '03', lecture: '05', date: 'Sáb 31, Ago 2024', description: <CustomLink href='ti3v25/lectura05'>Diagramas de flujo</CustomLink> },
+        { week: '', lecture: '06', date: 'Sáb 31, Ago 2024', description: <CustomLink href='ti3v25/lectura06'>Kanban</CustomLink> },
         { week: '04', lecture: '07', date: 'Sáb 07, Sep 2024', description: 'Paradigma 4+1' },
         { week: '', lecture: '08', date: 'Sáb 07, Sep 2024', description: 'Paradigma 4+1: Vista Lógica' },
         { week: '05', lecture: '09', date: 'Sáb 14, Sep 2024', description: 'Paradigma 4+1: Vista de Desarrollo' },

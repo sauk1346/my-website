@@ -1,0 +1,393 @@
+import { Quiz } from '@/components/QuizComponent';
+
+# Controles
+
+## Control 01
+
+<Quiz questions={[
+	{
+		question: "¿Cuál es la relación entre la ”Vista Lógica” y la ”Vista de Desarrollo” en el Paradigma 4+1 y cómo influyen una en la otra?",
+		options: [
+			"La Vista Lógica dicta la estructura del código en la Vista de Desarrollo.",
+			"La Vista de Desarrollo define cómo se comportan las tareas en el sistema.",
+			"Son independientes y no se influyen mutuamente.",
+			"La Vista de Desarrollo es fundamental para comprender cómo se organizan las características del software."
+		],
+		correctIndex: 0
+	},
+    {
+		question: "¿Por qué es importante la ”Vista de Escenarios” en el Paradigma 4+1 y cómo contribuye a la comprensión de la arquitectura de software?",
+		options: [
+			"Describe la organización del código y la programación.",
+			"Muestra cómo se despliega el software en el hardware.",
+			"Proporciona una conexión directa entre los requisitos del sistema y su arquitectura.",
+			"Analiza los procesos que corren en el sistema y cómo se gestionan."
+		],
+		correctIndex: 2
+	},
+    {
+		question: "¿Cómo contribuye la ”Vista Física” en el Paradigma 4+1 al desarrollo de software en el contexto de Cloud computing?",
+		options: [
+			"Describe la interacción entre los stakeholders.",
+			"Detalla la organización del código y la programación.",
+			"Analiza el comportamiento de las tareas en el sistema.",
+			"Planifica el despliegue del software en entornos Cloud computing."
+		],
+		correctIndex: 3
+	},
+    {
+		question: "¿Cuál es la principal característica de los Diagramas de Secuencia en la Vista lógica?",
+		options: [
+			"Se centran en la estructura estática del sistema.",
+			"Se centran en el flujo de operaciones y mensajes entre objetos.",
+			"Representan la comunicación entre componentes del sistema.",
+			"Muestran la secuencia de eventos en el sistema."
+		],
+		correctIndex: 1
+	},
+    {
+		question: "¿Cuál es la función principal de los Diagramas de Clase en la Vista lógica?",
+		options: [
+			"Mostrar el flujo de mensajes entre objetos.",
+			"Representar la secuencia de operaciones del sistema.",
+			"Mostrar la estructura estática del sistema y las relaciones entre clases.",
+			"Representar la comunicación entre componentes del sistema."
+		],
+		correctIndex: 2
+	},
+    {
+		question: "¿Qué papel juega la ”Vista de Procesos” en la optimización del rendimiento del sistema en el Paradigma 4+1?",
+		options: [
+			"Optimizar el rendimiento mediante el análisis del flujo de operaciones.",
+			"Facilitar la comunicación entre diferentes equipos de desarrollo.",
+			"Diseñar la interfaz de usuario y la experiencia del usuario.",
+			"Establecer protocolos de seguridad y privacidad de datos."
+		],
+		correctIndex: 0
+	},
+]} />
+
+## Control 02
+
+<Quiz questions={[
+  {
+    question: "¿Cuál es la ventaja de usar carriles en los Diagramas de Actividad?",
+    options: [
+      "Simplificar la comprensión de responsabilidades en el proceso.",
+      "Representar la estructura física del sistema.",
+      "Detallar el código fuente de los componentes del software.",
+      "Mostrar la secuencia de eventos en tiempo real."
+    ],
+    correctIndex: 0
+  },
+  {
+    question: "¿Cuál es el propósito principal de la Vista de Procesos en el Paradigma 4+1?",
+    options: [
+      "Ilustrar el flujo y la dinámica de los procesos internos del sistema.",
+      "Detallar la organización del código y la modularización del sistema.",
+      "Representar la interacción entre los componentes del hardware.",
+      "Mostrar la estructura estática del sistema."
+    ],
+    correctIndex: 0
+  },
+  {
+    question: "¿Qué representan los Diagramas de Actividad en la Vista de Procesos?",
+    options: [
+      "La estructura física del sistema.",
+      "Las decisiones de diseño de software.",
+      "El flujo de operaciones y comportamiento dinámico del sistema.",
+      "La interacción entre los usuarios y el sistema."
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "¿Cuál es la principal ventaja de usar Diagramas de Paquetes en la Vista de Desarrollo?",
+    options: [
+      "Describir los algoritmos de procesamiento de datos.",
+      "Gestionar la complejidad en sistemas grandes mediante la agrupación de elementos.",
+      "Representar la interacción en tiempo real entre componentes.",
+      "Mostrar el comportamiento dinámico del sistema."
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "¿Cómo ayuda la Vista de Procesos en sistemas basados en microservicios?",
+    options: [
+      "Facilitando la gestión y coordinación de múltiples servicios.",
+      "Optimizando la interfaz gráfica del usuario.",
+      "Gestionando el almacenamiento de datos.",
+      "Controlando el acceso a los recursos del sistema."
+    ],
+    correctIndex: 0
+  },
+  {
+    question: "¿Qué importancia tienen los Diagramas de Actividad en el desarrollo ágil de software?",
+    options: [
+      "Representar la distribución física del software.",
+      "Facilitar la planificación y adaptación ágil de los procesos.",
+      "Visualizar el comportamiento estático del sistema.",
+      "Controlar la seguridad y el acceso al sistema."
+    ],
+    correctIndex: 1
+  }
+]} />
+
+## Control 03
+
+<Quiz questions={[
+  {
+    question: "¿Qué elemento de la Vista Física es crucial para la arquitectura de cloud computing?",
+    options: [
+      "Diagrama de Clases.",
+      "Diagrama de Despliegue.",
+      "Diagrama de Secuencia.",
+      "Diagrama de Actividad."
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "¿Cuál es el beneficio de aplicar la Vista Física en sistemas distribuidos?",
+    options: [
+      "Reducir costos de desarrollo.",
+      "Asegurar una distribución eficiente de componentes.",
+      "Simplificar la codificación.",
+      "Mejorar la seguridad del sistema."
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "¿Qué indica la relación de \"include\" en un Caso de Uso dentro de la Vista de Escenarios?",
+    options: [
+      "Un flujo alternativo que puede o no ejecutarse.",
+      "Una extensión opcional del caso de uso principal.",
+      "Un paso que es siempre necesario en la ejecución del caso de uso principal.",
+      "Una funcionalidad que se ejecuta en paralelo al caso de uso principal."
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "¿Qué propósito tienen los escenarios en el Paradigma 4+1?",
+    options: [
+      "Detallar la estructura de la base de datos del sistema.",
+      "Demostrar la integración de las vistas lógica, desarrollo, procesos y física.",
+      "Reemplazar la necesidad de pruebas de software.",
+      "Servir como documentación técnica para el equipo de desarrollo."
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "En el contexto del Paradigma 4+1, ¿qué vista está directamente asociada con la implementación de funcionalidades descritas en los casos de uso?",
+    options: [
+      "Vista Lógica.",
+      "Vista Física.",
+      "Vista de Desarrollo.",
+      "Vista de Escenarios."
+    ],
+    correctIndex: 3
+  },
+  {
+    question: "¿Cómo ayuda la Vista de Escenarios en la comunicación dentro del equipo de desarrollo?",
+    options: [
+      "Proporciona un lenguaje de programación común.",
+      "Ofrece un lenguaje común para capturar y comunicar requisitos funcionales.",
+      "Elimina la necesidad de reuniones de equipo.",
+      "Documenta exclusivamente el código fuente."
+    ],
+    correctIndex: 1
+  }
+]} />
+
+## Control 04
+
+<Quiz questions={[
+  {
+    question: "¿Qué representa un diagrama BPMN en el modelado de procesos de negocio?",
+    options: [
+      "La estructura de la base de datos.",
+      "El flujo y la estructura de los procesos de negocio.",
+      "El diseño de la interfaz de usuario.",
+      "El plan de marketing digital."
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "¿Cómo contribuyen los 'Canales' en el modelo CANVAS al desarrollo de negocios en TI?",
+    options: [
+      "Proveer datos para análisis financiero.",
+      "Definir cómo la empresa se comunica y entrega su propuesta de valor a los clientes.",
+      "Determinar la estructura organizacional.",
+      "Establecer métricas de rendimiento del personal."
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "¿Cuál es el rol de la 'Propuesta de Valor' en el modelo CANVAS?",
+    options: [
+      "Determinar los costos operativos del negocio.",
+      "Establecer relaciones con inversores.",
+      "Describir el valor único que el negocio ofrece a sus clientes.",
+      "Identificar recursos clave para la producción."
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "¿Qué importancia tiene la 'Estructura de Costos' en la aplicación del modelo CANVAS en TI?",
+    options: [
+      "Definir el salario de los empleados.",
+      "Identificar inversiones en publicidad.",
+      "Enumerar y analizar todos los costos involucrados en la operación del modelo de negocio.",
+      "Establecer precios de venta de productos y servicios."
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "¿Qué implica la mejora continua en TI?",
+    options: [
+      "Reducción de costos operativos.",
+      "Optimización constante de procesos y sistemas para aumentar la eficiencia.",
+      "Expansión del mercado de la empresa.",
+      "Desarrollo de nuevas líneas de productos."
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "¿Cómo impacta la sección de 'Recursos Clave' en la planificación de proyectos de TI?",
+    options: [
+      "Estableciendo la agenda de reuniones de equipo.",
+      "Identificando los activos tecnológicos y humanos esenciales para el proyecto.",
+      "Definiendo la estructura jerárquica del equipo de TI.",
+      "Estableciendo métricas para la evaluación del desempeño."
+    ],
+    correctIndex: 1
+  }
+]} />
+
+## Control 05
+
+<Quiz questions={[
+  {
+    question: "¿Cómo ayuda el modelo CANVAS en el proceso de BPMN?",
+    options: [
+      "Proporciona una estructura detallada de tareas.",
+      "Identifica los segmentos de clientes y propuestas de valor.",
+      "Define el flujo de secuencia en el proceso.",
+      "Establece artefactos y anotaciones."
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "¿Qué representa un 'Evento de Inicio' en un diagrama BPMN?",
+    options: [
+      "El final de un proceso.",
+      "Una decisión crítica dentro del proceso.",
+      "El comienzo de un proceso.",
+      "Una interrupción en el flujo del proceso."
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "¿Qué objetivo busca la fase de Planificación en el ciclo de vida de la gestión de procesos?",
+    options: [
+      "Establecer objetivos y estrategias claras para el proyecto.",
+      "Implementar las estrategias y planes desarrollados.",
+      "Monitorear el progreso del proyecto y su rendimiento.",
+      "Identificar y analizar los resultados obtenidos del proyecto."
+    ],
+    correctIndex: 0
+  },
+  {
+    question: "¿Cómo contribuye la metodología ágil durante la fase de Implementación en el ciclo de vida de la gestión de procesos?",
+    options: [
+      "Optimizando la distribución de recursos.",
+      "Permitiendo una implementación flexible y adaptativa.",
+      "Proporcionando análisis detallados de rendimiento.",
+      "Facilitando la revisión y el feedback de los usuarios finales."
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "En un diagrama BPMN, ¿cuál es la función principal de un 'Evento Intermedio'?",
+    options: [
+      "Iniciar un nuevo proceso.",
+      "Representar la finalización del proceso.",
+      "Indicar un punto de espera o una acción que ocurre durante el proceso.",
+      "Dividir o unir flujos en el proceso."
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "¿Qué importancia tiene la Revisión en el ciclo de vida de la gestión de procesos?",
+    options: [
+      "Evaluar el cumplimiento de objetivos y planificar mejoras.",
+      "Establecer los objetivos iniciales del proyecto.",
+      "Implementar cambios y mejoras en el proyecto.",
+      "Monitorear y reportar el progreso del proyecto."
+    ],
+    correctIndex: 0
+  }
+]} />
+
+## Control 06
+
+<Quiz questions={[
+  {
+    question: "¿Qué objetivo busca la fase de Planificación en el ciclo de vida de la gestión de procesos?",
+    options: [
+      "Establecer objetivos y estrategias claras para el proyecto.",
+      "Implementar las estrategias y planes desarrollados.",
+      "Monitorear el progreso del proyecto y su rendimiento.",
+      "Identificar y analizar los resultados obtenidos del proyecto."
+    ],
+    correctIndex: 0
+  },
+  {
+    question: "En relación al ciclo de vida en la gestión de procesos, ¿cuál de las siguientes opciones presenta el orden correcto y gradual de las fases o etapas que tiene?",
+    options: [
+      "1. Monitoreo - 2. Revisión - 3. Planificación - 4. Implementación - 5. Mejora continua.",
+      "1. Revisión - 2. Planificación - 3. Implementación - 4. Monitoreo - 5. Mejora continua.",
+      "1. Planificación - 2. Implementación - 3. Monitoreo - 4. Revisión - 5. Mejora continua.",
+      "1. Implementación - 2. Planificación - 3. Implementación - 4. Monitoreo - 5. Mejora continua."
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "En el contexto del ciclo de vida de la gestión de procesos, ¿cuál es la principal función del Monitoreo?",
+    options: [
+      "Desarrollar e implementar el código del proyecto.",
+      "Planificar las fases iniciales del proyecto.",
+      "Observar y evaluar continuamente el rendimiento del proyecto.",
+      "Realizar ajustes finales en el producto o servicio."
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "¿Qué importancia tiene la Revisión en el ciclo de vida de la gestión de procesos?",
+    options: [
+      "Evaluar el cumplimiento de objetivos y planificar mejoras.",
+      "Establecer los objetivos iniciales del proyecto.",
+      "Implementar cambios y mejoras en el proyecto.",
+      "Monitorear y reportar el progreso del proyecto."
+    ],
+    correctIndex: 0
+  },
+  {
+    question: "¿Cómo apoya la Mejora Continua el desarrollo sostenible de un proyecto en el ciclo de vida de la gestión de procesos?",
+    options: [
+      "Definiendo los objetivos iniciales del proyecto.",
+      "Optimizando constantemente los procesos basados en la revisión.",
+      "Implementando las estrategias y planes iniciales.",
+      "Monitoreando el rendimiento del proyecto en tiempo real."
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "¿Cómo contribuye la metodología ágil durante la fase de Implementación en el ciclo de vida de la gestión de procesos?",
+    options: [
+      "Optimizando la distribución de recursos.",
+      "Permitiendo una implementación flexible y adaptativa.",
+      "Proporcionando análisis detallados de rendimiento.",
+      "Facilitando la revisión y el feedback de los usuarios finales."
+    ],
+    correctIndex: 1
+  }
+]} />

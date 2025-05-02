@@ -28,7 +28,7 @@ const Ch001 = () => {
                         </tr>
                         <tr className={styles.tableRow}>
                             <td>03</td>
-                            <td>你多大了? Nǐ duō dà le? </td>
+                            <td><CustomLink href='ch001/lesson03'>你多大了? Nǐ duō dà le?</CustomLink></td>
                         </tr>
                         <tr className={styles.tableRow}>
                             <td>04</td>

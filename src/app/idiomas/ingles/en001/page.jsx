@@ -9,32 +9,30 @@ const En001 = () => {
             <div className={styles.grid}>
                 {/* Tabla de Cursos */}
                 <div>
-                    <h2 className={styles.platformTitle}>Module 01</h2>
+                    <h2 className={styles.platformTitle}>Modules</h2>
                     <table className={styles.table}>
                         <thead>
                         <tr>
-                            <th>Lesson</th>
+                            <th>Modules</th>
                             <th>Description</th>
                         </tr>
                         </thead>
                         <tbody>
                         <tr className={styles.tableRow}>
                             <td>01</td>
-                            <td>
-                                <Link href='en001/lesson01' className={styles.link}>Consonant Pretest</Link>    
-                            </td>
+                            <td><Link href='en001/module01' className={styles.link}>Consonant Directions, Voiced and Voiceless, Shadowing a Conversation</Link></td>
                         </tr>
                         <tr className={styles.tableRow}>
                             <td>02</td>
-                            <td>Consonant Overview</td>
+                            <td><Link href='en001/module02' className={styles.link}>Consonants that Pop, Consonants that Hiss, Confusing Consonants</Link></td>
                         </tr>
                         <tr className={styles.tableRow}>
                             <td>03</td>
-                            <td>Voiced and Voiceless Sounds</td>
+                            <td>Module 03</td>
                         </tr>
                         <tr className={styles.tableRow}>
                             <td>04</td>
-                            <td>Shadowing a Conversation</td>
+                            <td>Module 04</td>
                         </tr>
 
                         </tbody>

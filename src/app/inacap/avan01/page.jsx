@@ -32,14 +32,17 @@ export default function Tilv21() {
             evaluationNumber: 2,
             date: 'Dom 22, Sep 2024',
             weighting: '40% * 75%', 
-            description: 'Informe 01', 
+            description: <ExternalLink href='/inacap/avan01/docs/informe01.pdf'>Informe 01</ExternalLink>, 
             quickGuide: ''
         },
         { 
             evaluationNumber: 3,
             date: 'Vie 11, Oct 2024',
             weighting: '30% * 75%', 
-            description: 'Informe Pitch, PPT', 
+            description: <>
+                <ExternalLink href='/inacap/avan01/docs/informe02.pdf'>- Informe Pitch</ExternalLink><br/>
+                <ExternalLink href='/inacap/avan01/docs/slide.pdf'>- PPT</ExternalLink>
+                </>,
             quickGuide: ''
         },
         { 
@@ -60,22 +63,22 @@ export default function Tilv21() {
 
     ];
     const lectureData = [
-        { week: '01', lecture: '01', date: 'Sáb 24, Ago 2024', description: 'La evolución de las organizaciones'  },
-        { week: '', lecture: '02', date: 'Sáb 24, Ago 2024', description: 'Los padres de la administración'  },
-        { week: '', lecture: '03', date: 'Sáb 24, Ago 2024', description: 'Administración: Conceptos, definiciones e historia'  },
-        { week: '', lecture: '04', date: 'Sáb 24, Ago 2024', description: 'Dinámicas transformacionales y tendencias de las organizaciones'  },
-        { week: '02', lecture: '05', date: 'Sáb 31, Ago 2024', description: 'Tendencias, Clusters, Hub y Núcleos de trabajo'  },
-        { week: '', lecture: '06', date: 'Sáb 31, Ago 2024', description: 'Sostenibilidad y las ODS'  },
-        { week: '03', lecture: '07', date: 'Sáb 07, Sep 2024', description: 'Personalidad jurídica de nuevos emprendimientos y organizaciones existentes'  },
-        { week: '', lecture: '08', date: 'Sáb 07, Sep 2024', description: 'Ciclos de vida de los proyectos'  },
-        { week: '04', lecture: '09', date: 'Sáb 14, Sep 2024', description: 'Áreas funcionales: gestión de personas y contabilidad y finanzas'  },
-        { week: '05', lecture: '10', date: 'Sáb 21, Sep 2024', description: 'Funcionamiento de las organizaciones actuales'  },
-        { week: '', lecture: '11', date: 'Sáb 21, Sep 2024', description: 'Evaluación de gestión a través de indicadores'  },
-        { week: '06', lecture: '12', date: 'Sáb 28, Sep 2024', description: 'Planificación'  },
-        { week: '', lecture: '13', date: 'Sáb 28, Sep 2024', description: 'Organización: tipos, autoridad y poder'  },
-        { week: '07', lecture: '14', date: 'Sáb 05, Oct 2024', description: 'Dirección'  },
-        { week: '', lecture: '15', date: 'Sáb 05, Oct 2024', description: 'Control'  },
-        { week: '', lecture: '16', date: 'Sáb 05, Oct 2024', description: 'Herramientas básicas de análisis de gestión'  }       
+        { week: '01', lecture: '01', date: 'Sáb 24, Ago 2024', description: <CustomLink href='avan01/lectura01'>La evolución de las organizaciones</CustomLink> },
+        { week: '', lecture: '02', date: 'Sáb 24, Ago 2024', description: <CustomLink href='avan01/lectura02'>Los padres de la administración</CustomLink> },
+        { week: '', lecture: '03', date: 'Sáb 24, Ago 2024', description: <CustomLink href='avan01/lectura03'>Administración: Conceptos, definiciones e historia</CustomLink> },
+        { week: '', lecture: '04', date: 'Sáb 24, Ago 2024', description: <CustomLink href='avan01/lectura04'>Dinámicas transformacionales y tendencias de las organizaciones</CustomLink> },
+        { week: '02', lecture: '05', date: 'Sáb 31, Ago 2024', description: <CustomLink href='avan01/lectura05'>Tendencias, Clusters, Hub y Núcleos de trabajo</CustomLink> },
+        { week: '', lecture: '06', date: 'Sáb 31, Ago 2024', description: 'Sostenibilidad y las ODS' },
+        { week: '03', lecture: '07', date: 'Sáb 07, Sep 2024', description: 'Personalidad jurídica de nuevos emprendimientos y organizaciones existentes' },
+        { week: '', lecture: '08', date: 'Sáb 07, Sep 2024', description: 'Ciclos de vida de los proyectos' },
+        { week: '04', lecture: '09', date: 'Sáb 14, Sep 2024', description: 'Áreas funcionales: gestión de personas y contabilidad y finanzas' },
+        { week: '05', lecture: '10', date: 'Sáb 21, Sep 2024', description: 'Funcionamiento de las organizaciones actuales' },
+        { week: '', lecture: '11', date: 'Sáb 21, Sep 2024', description: 'Evaluación de gestión a través de indicadores' },
+        { week: '06', lecture: '12', date: 'Sáb 28, Sep 2024', description: 'Planificación' },
+        { week: '', lecture: '13', date: 'Sáb 28, Sep 2024', description: 'Organización: tipos, autoridad y poder' },
+        { week: '07', lecture: '14', date: 'Sáb 05, Oct 2024', description: 'Dirección' },
+        { week: '', lecture: '15', date: 'Sáb 05, Oct 2024', description: 'Control' },
+        { week: '', lecture: '16', date: 'Sáb 05, Oct 2024', description: 'Herramientas básicas de análisis de gestión' }       
     ];
 
     return (

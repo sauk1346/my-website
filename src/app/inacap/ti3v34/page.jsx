@@ -69,7 +69,7 @@ export default function Ti3v34() {
         { week: '06', lecture: '08', date: 'Sáb 19, Abr 2025', description: <ExternalLink href="/inacap/ti3v34/docs/lectura08.pdf">Evaluación de vulnerabilidades y matriz de riesgo</ExternalLink> },
         { week: '', lecture: '09', date: 'Sáb 19, Abr 2025', description: <CustomLink href="ti3v34/lectura09">Tipos de vulnerabilidades según activos TI e identificación de riesgos</CustomLink>  },
         { week: '07', lecture: '10', date: 'Sáb 26, Abr 2025', description: <CustomLink href="ti3v34/lectura10">Matriz de Riesgo y políticas de prevención de riesgos</CustomLink> },
-        { week: '08', lecture: '11', date: 'Sáb 03, May 2025', description: 'Controles de mitigación y de riesgos y mejoras tecnológicas ante desastres' },
+        { week: '08', lecture: '11', date: 'Sáb 03, May 2025', description: <CustomLink href="ti3v34/lectura11">Controles de mitigación y de riesgos y mejoras tecnológicas ante desastres</CustomLink> },
     ];
 
     return (

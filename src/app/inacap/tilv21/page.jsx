@@ -62,18 +62,18 @@ export default function Tilv21() {
         { week: '01', lecture: '01', date: 'Sáb 15, Mar 2025', description: <CustomLink href='tilv21/lectura01'>Conceptos básicos en el desarrollo de software</CustomLink>  },
         { week: '', lecture: '02', date: 'Sáb 15, Mar 2025', description: <CustomLink href='tilv21/lectura02'>Requisitos y calidad de software según Estándar ISO/IEC 25000</CustomLink> },
         { week: '02', lecture: '03', date: 'Sáb 22, Mar 2025', description: <CustomLink href='tilv21/lectura03'>Estándares de testing, basados en normas y estándares de la industria del software</CustomLink> },
-        { week: '03', lecture: '04', date: 'Sáb 29, Mar 2025', description: <CustomLink href='tilv21/lectura04'>Síntesis de la Unidad</CustomLink> },
+        { week: '03', lecture: '04', date: 'Sáb 29, Mar 2025', description: <CustomLink href='tilv21/lectura04'>Síntesis de la Unidad 01</CustomLink> },
         { week: '04', lecture: '05', date: 'Sáb 05, Abr 2025', description: <CustomLink href='tilv21/lectura05'>Técnicas y herramientas de testing</CustomLink> },
         { week: '', lecture: '06', date: 'Sáb 05, Abr 2025', description: <CustomLink href='tilv21/lectura06'>Alcances y definiciones de los tipos de testing en el desarrollo de sorftware</CustomLink> },
         { week: '05', lecture: '07', date: 'Sáb 12, Abr 2025', description: <CustomLink href='tilv21/lectura07'>Cómo detectar la complejidad del testing</CustomLink> },
         { week: '', lecture: '08', date: 'Sáb 12, Abr 2025', description: <CustomLink href='tilv21/lectura08'>Soluciones a problemas y criterios de factibilidad con técnicas de testing</CustomLink> },
-        { week: '06', lecture: '09', date: 'Sáb 19, Abr 2025', description: <CustomLink href='tilv21/lectura09'>Síntesis de la Unidad</CustomLink> },
+        { week: '06', lecture: '09', date: 'Sáb 19, Abr 2025', description: <CustomLink href='tilv21/lectura09'>Síntesis de la Unidad 02</CustomLink> },
         { week: '07', lecture: '10', date: 'Sáb 26, Abr 2025', description: <CustomLink href='tilv21/lectura10'>Gestión de defectos, combinación de valores de prueba y exploración</CustomLink> },
         { week: '', lecture: '11', date: 'Sáb 26, Abr 2025', description: <CustomLink href='tilv21/lectura11'>Técnicas para pruebas exploratorias</CustomLink> },
         { week: '', lecture: '12', date: 'Sáb 26, Abr 2025', description: <CustomLink href='tilv21/lectura12'>Ciclo de vida de un defecto de software</CustomLink> },
         { week: '08', lecture: '13', date: 'Sáb 03, May 2025', description: <CustomLink href='tilv21/lectura13'>Defectos, errores y fallos según criterios de factibilidad de plan de pruebas</CustomLink> },
         { week: '', lecture: '14', date: 'Sáb 03, May 2025', description: <CustomLink href='tilv21/lectura14'>Procesos de seguimiento en el monitoreo</CustomLink> },
-        { week: '09', lecture: '15', date: 'Sáb 10, May 2025', description: 'Síntesis de la Unidad' },
+        { week: '09', lecture: '15', date: 'Sáb 10, May 2025', description: <CustomLink href='tilv21/lectura15'>Síntesis de la Unidad 03</CustomLink> },
         
 
 

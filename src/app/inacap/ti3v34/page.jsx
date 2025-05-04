@@ -24,7 +24,7 @@ export default function Ti3v34() {
     const evaluationsData = [
         { evaluationNumber: 1, date: 'Lun 24, Mar 2025', weighting: '20%', description: <CustomLink href="ti3v34/eval01">Evaluación 01</CustomLink>, quickGuide: '' },
         { evaluationNumber: 2, date: 'Mié 09, Abr 2025', weighting: '30%', description: <ExternalLink href="/inacap/ti3v34/docs/informe01.pdf">Informe 01</ExternalLink>, quickGuide: '' },
-        { evaluationNumber: <EmphText>3</EmphText>, date: <EmphText>Lun 07, May 2025</EmphText>, weighting: <EmphText>35%</EmphText>, description: <EmphText>Informe 02</EmphText>, quickGuide: '' },
+        { evaluationNumber: <EmphText>3</EmphText>, date: <EmphText>Mié 07, May 2025</EmphText>, weighting: <EmphText>35%</EmphText>, description: <EmphText>Informe 02</EmphText>, quickGuide: '' },
         { evaluationNumber: 4, date: 'Cada Semana', weighting: '15%', description: <CustomLink href='ti3v34/controles'>Promedio Controles</CustomLink>, quickGuide: '' },
     ];
     const classData = [

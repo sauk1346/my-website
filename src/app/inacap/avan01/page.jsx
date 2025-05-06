@@ -25,7 +25,7 @@ export default function Tilv21() {
             evaluationNumber: 1,
             date: 'Sáb 31, Ago 2024',
             weighting: '20% * 75%', 
-            description: 'Evaluación 01', 
+            description: <CustomLink href='avan01/eval01'>Evaluación 01</CustomLink>, 
             quickGuide: ''
         },
         { 
@@ -68,10 +68,10 @@ export default function Tilv21() {
         { week: '', lecture: '03', date: 'Sáb 24, Ago 2024', description: <CustomLink href='avan01/lectura03'>Administración: Conceptos, definiciones e historia</CustomLink> },
         { week: '', lecture: '04', date: 'Sáb 24, Ago 2024', description: <CustomLink href='avan01/lectura04'>Dinámicas transformacionales y tendencias de las organizaciones</CustomLink> },
         { week: '02', lecture: '05', date: 'Sáb 31, Ago 2024', description: <CustomLink href='avan01/lectura05'>Tendencias, Clusters, Hub y Núcleos de trabajo</CustomLink> },
-        { week: '', lecture: '06', date: 'Sáb 31, Ago 2024', description: 'Sostenibilidad y las ODS' },
-        { week: '03', lecture: '07', date: 'Sáb 07, Sep 2024', description: 'Personalidad jurídica de nuevos emprendimientos y organizaciones existentes' },
+        { week: '', lecture: '06', date: 'Sáb 31, Ago 2024', description: <CustomLink href='avan01/lectura06'>Sostenibilidad y las ODS</CustomLink> },
+        { week: '03', lecture: '07', date: 'Sáb 07, Sep 2024', description: <CustomLink href='avan01/lectura07'>Personalidad jurídica de nuevos emprendimientos y organizaciones existentes</CustomLink> },
         { week: '', lecture: '08', date: 'Sáb 07, Sep 2024', description: 'Ciclos de vida de los proyectos' },
-        { week: '04', lecture: '09', date: 'Sáb 14, Sep 2024', description: 'Áreas funcionales: gestión de personas y contabilidad y finanzas' },
+        { week: '04', lecture: '09', date: 'Sáb 14, Sep 2024', description: <CustomLink href='avan01/lectura09'>Áreas funcionales: gestión de personas y contabilidad y finanzas</CustomLink> },
         { week: '05', lecture: '10', date: 'Sáb 21, Sep 2024', description: 'Funcionamiento de las organizaciones actuales' },
         { week: '', lecture: '11', date: 'Sáb 21, Sep 2024', description: 'Evaluación de gestión a través de indicadores' },
         { week: '06', lecture: '12', date: 'Sáb 28, Sep 2024', description: 'Planificación' },

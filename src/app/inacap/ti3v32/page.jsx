@@ -97,8 +97,8 @@ export default function Ti3v32() {
         { week: '08', class: '22', date: 'Lun 28, Abr 2025', description: <CustomLink href='ti3v32/clase22'>Python, MongoDB y APIs</CustomLink> },
         { week: '', class: '23', date: 'Mar 29, Abr 2025', description: <CustomLink href='ti3v32/guia31'>Guía 10</CustomLink> },
         { week: '', class: '24', date: 'Mié 30, Abr 2025', description: <span style={{textDecoration: 'line-through'}}>Suspensión Clases</span> },
-        { week: '09', class: '25', date: 'Lun 05, May 2025', description: '' },
-        { week: '', class: '26', date: 'Mar 06, May 2025', description: 'Evaluación 03' },
+        { week: '09', class: '25', date: 'Lun 05, May 2025', description: <CustomLink href='ti3v32/guia32'>Guía 11</CustomLink> },
+        { week: '', class: '26', date: 'Mar 06, May 2025', description: 'Eval03-A, Eval03-B' },
         { week: '', class: '27', date: 'Mié 07, May 2025', description: '' },
 
     ];

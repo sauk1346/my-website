@@ -1,0 +1,222 @@
+import ExternalLink from '@/components/ExternalLink';
+
+# Prueba - MongoDB Consultas Avanzadas (Versión D)
+
+## Ayuda de términos útiles para consultas en MongoDB
+- $gt, $lt, $gte, $lte, $eq, $ne: Comparaciones
+- $and, $or, $not, $nor: Lógicos
+- $regex: Expresiones regulares
+- $size, $elemMatch: Arrays
+- $expr: Comparación entre campos
+- $avg, $add, $divide, $strLenCP: Funciones dentro de $expr
+
+## Instrucciones
+- **Base de datos:** empresaDB
+- **Colección:** empleados
+- **JSON:** <ExternalLink href>empleados.json</ExternalLink>
+
+Responde los siguientes ejercicios usando consultas en MongoDB Shell
+
+## Ejercicio 01
+Buscar empleados cuya comuna termine en vocal.
+
+<details>
+    <summary>Solución</summary>
+```js
+db.empleados.find({
+    comuna: /[aeiouáéíóú]$/i
+})
+```
+</details>
+
+## Ejercicio 02
+Filtrar empleados con sueldo entre $800.000 y $2.700.000 y edad mayor a 30.
+
+<details>
+    <summary>Solución</summary>
+```js
+db.empleados.find({
+    sueldo: { $gte: 800000, $lte: 2700000 },
+    edad: { $gt: 30 }
+})
+```
+</details>
+
+## Ejercicio 03
+Mostrar empleados inactivos que no pertenezcan al área de TI.
+
+<details>
+    <summary>Solución</summary>
+```js
+db.empleados.find({
+    activo: false,
+    area: { $ne: "TI" }
+})
+```
+</details>
+
+## Ejercicio 04
+Listar empleados con contrato anterior a 2019 y que aún estén activos.
+
+<details>
+    <summary>Solución</summary>
+```js
+db.empleados.find({
+    contratado: { $lt: "2019-01-01" },
+    activo: true
+})
+```
+</details>
+
+## Ejercicio 05
+Buscar empleados cuyo cargo contenga más de una palabra.
+
+<details>
+    <summary>Solución</summary>
+```js
+db.empleados.find({
+    cargo: /\s+/
+})
+```
+</details>
+
+## Ejercicio 06
+Mostrar empleados con exactamente 2 evaluaciones registradas.
+
+<details>
+    <summary>Solución</summary>
+```js
+db.empleados.find({
+    $expr: { 
+        $eq: [{ $size: { $objectToArray: "$evaluaciones" } }, 2] }
+})
+```
+</details>
+
+## Ejercicio 07
+Filtrar empleados que tengan evaluación 2021 menor que la 2022 y esta menor que la 2023.
+
+<details>
+    <summary>Solución</summary>
+```js
+db.empleados.find({
+    "evaluaciones.2021": { $exists: true },
+    "evaluaciones.2022": { $exists: true },
+    "evaluaciones.2023": { $exists: true },
+    $expr: {
+        $and: [
+            { $lt: ["$evaluaciones.2021", "$evaluaciones.2022"] },
+            { $lt: ["$evaluaciones.2022", "$evaluaciones.2023"] }
+        ]
+    }
+})
+```
+</details>
+
+## Ejercicio 08
+Mostrar empleados cuyo nombre tenga más de 12 caracteres.
+
+<details>
+    <summary>Solución</summary>
+```js
+db.empleados.find({
+    $expr: { 
+        $gt: [{ $strLenCP: "$nombre" }, 12] }
+})
+```
+</details>
+
+## Ejercicio 09
+Listar empleados que no tengan el campo 'evaluaciones'.
+
+<details>
+    <summary>Solución</summary>
+```js
+db.empleados.find({
+    evaluaciones: { $exists: false }
+})
+```
+</details>
+
+## Ejercicio 10
+Filtrar empleados que tengan habilidades que empiecen con 'P'.
+
+<details>
+    <summary>Solución</summary>
+```js
+db.empleados.find({ habilidades: /^P/ })
+```
+</details>
+
+## Ejercicio 11
+Buscar empleados cuya comuna contenga la palabra 'Condes' (ignorar mayúsculas).
+
+<details>
+    <summary>Solución</summary>
+```js
+db.empleados.find({ comuna: /Condes/i })
+```
+</details>
+
+## Ejercicio 12
+Mostrar empleados donde la media entre evaluación 2022 y 2023 sea mayor que 4.5.
+
+<details>
+    <summary>Solución</summary>
+```js
+db.empleados.find({
+    "evaluaciones.2022": { $exists: true },
+    "evaluaciones.2023": { $exists: true },
+    $expr: {
+        $gt: [
+            { $divide: [
+                { $add: ["$evaluaciones.2022", "$evaluaciones.2023"] },
+                2
+              ]
+            },
+            4.5
+        ]
+    }
+})
+```
+</details>
+
+## Ejercicio 13
+Buscar empleados con cargo que incluya 'QA' y sueldo menor a $1.000.000.
+
+<details>
+    <summary>Solución</summary>
+```js
+db.empleados.find({
+    cargo: /QA/i,
+    sueldo: { $lt: 1000000 }
+})
+```
+</details>
+
+## Ejercicio 14
+Mostrar empleados cuya edad sea igual al número de habilidades por 10.
+
+<details>
+    <summary>Solución</summary>
+```js
+db.empleados.find({
+    $expr: {
+        $eq: [
+            "$edad",
+            { $multiply: [{ $size: "$habilidades" }, 10] }
+        ]
+    }
+})
+```
+</details>
+
+## Ejercicio 15
+Filtrar empleados donde la dirección contenga al menos un número.
+
+<details>
+    <summary>Solución</summary>
+```js
+db.empleados.find({ direccion: /[0-9]/ })
+```
+</details>

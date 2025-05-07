@@ -65,12 +65,17 @@ export default function Ti3v32() {
             </>
         },
         { 
-            evaluationNumber: <EmphText>3</EmphText>,
-            date: <EmphText>Mar 06, May 2025</EmphText>,
-            weighting: <EmphText>30%</EmphText>,
-            description: <EmphText>Evaluación 03</EmphText>,
+            evaluationNumber: 3,
+            date: 'Mar 06, May 2025',
+            weighting: '30%',
+            description: <><CustomLink href='ti3v32/eval03c'>Eval03-C</CustomLink>, <CustomLink href='ti3v32/eval03d'>Eval03-D</CustomLink></>,
             quickGuide: '' },
-        { evaluationNumber: 4, date: 'Mié 07, May 2025', weighting: '10%', description: 'Promedio Evaluaciones', quickGuide: '' },
+        { 
+            evaluationNumber: 4, 
+            date: 'Mié 07, May 2025', 
+            weighting: '10%', 
+            description: 'Promedio Evaluaciones',
+            quickGuide: '' },
     ];
     const classData = [
         { week: '01', class: '01', date: 'Lun 10, Mar 2025', description: <CustomLink href="ti3v32/clase01">Introducción BD NoSQL</CustomLink> },
@@ -98,7 +103,7 @@ export default function Ti3v32() {
         { week: '', class: '23', date: 'Mar 29, Abr 2025', description: <CustomLink href='ti3v32/guia31'>Guía 10</CustomLink> },
         { week: '', class: '24', date: 'Mié 30, Abr 2025', description: <span style={{textDecoration: 'line-through'}}>Suspensión Clases</span> },
         { week: '09', class: '25', date: 'Lun 05, May 2025', description: <CustomLink href='ti3v32/guia32'>Guía 11</CustomLink> },
-        { week: '', class: '26', date: 'Mar 06, May 2025', description: 'Eval03-A, Eval03-B' },
+        { week: '', class: '26', date: 'Mar 06, May 2025', description: <><CustomLink href='ti3v32/eval03c'>Eval03-C</CustomLink>, <CustomLink href='ti3v32/eval03d'>Eval03-D</CustomLink></> },
         { week: '', class: '27', date: 'Mié 07, May 2025', description: '' },
 
     ];

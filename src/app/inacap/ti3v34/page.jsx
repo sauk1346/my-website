@@ -52,8 +52,8 @@ export default function Ti3v34() {
         { week: '08', class: '22', date: 'Lun 28, Abr 2025', description: 'Avance Informe 02 (1)' },
         { week: '', class: '23', date: 'Mar 29, Abr 2025', description: 'Avance Informe 02 (2)' },
         { week: '', class: '24', date: 'Mié 30, Abr 2025', description: 'Avance Informe 02 (3)' },
-        { week: '09', class: '25', date: 'Lun 05, May 2025', description: '' },
-        { week: '', class: '26', date: 'Mar 06, May 2025', description: '' },
+        { week: '09', class: '25', date: 'Lun 05, May 2025', description: 'Avance Informe 02 (4)' },
+        { week: '', class: '26', date: 'Mar 06, May 2025', description: 'Avance Informe 02 (5)' },
         { week: '', class: '27', date: 'Mié 07, May 2025', description: 'Entrega Informe 02' },
 
 

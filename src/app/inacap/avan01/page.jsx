@@ -49,7 +49,7 @@ export default function Tilv21() {
             evaluationNumber: 4,
             date: 'Vie 11, Oct 2024',
             weighting: '10% * 75%', 
-            description: 'Promedio Controles', 
+            description: <CustomLink href='avan01/controles'>Promedio Controles</CustomLink>, 
             quickGuide: ''
         },
         { 

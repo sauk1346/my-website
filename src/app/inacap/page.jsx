@@ -80,7 +80,7 @@ const Inacap = () => {
               </tr>
               <tr>
                 <td className={styles.code}>MVFM01</td>
-                <td>Funciones y Matrices</td>
+                <td><CustomLink href='inacap/mvfm01'>Funciones y Matrices</CustomLink></td>
               </tr>
             </tbody>
           </table>

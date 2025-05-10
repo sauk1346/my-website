@@ -37,9 +37,9 @@ export default function Tilv21() {
         },
         {
             evaluationNumber: 3, 
-            date: <EmphText>Jue 08, May 2025</EmphText>,
-            weighting: <EmphText>35% * 75%</EmphText>,
-            description: <EmphText>Informe 02</EmphText>,
+            date: 'Jue 08, May 2025',
+            weighting: '35% * 75%',
+            description: <ExternalLink href='/inacap/tilv21/docs/informe02.pdf'>Informe 02</ExternalLink>,
             quickGuide: '' 
         },
         { 
@@ -51,9 +51,9 @@ export default function Tilv21() {
         },
         { 
             evaluationNumber: 5,
-            date: '12 al 17, May 2025',
-            weighting: '25%',
-            description: 'Examen (obligatorio)',
+            date: <EmphText>Vie 16, May 2025</EmphText>,
+            weighting: <EmphText>25%</EmphText>,
+            description: <EmphText>Examen (obligatorio)</EmphText>,
             quickGuide: ''
         }
 

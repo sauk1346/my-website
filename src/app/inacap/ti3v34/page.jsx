@@ -22,10 +22,34 @@ export default function Ti3v34() {
         { unit: '3', description: 'Evaluación de Vulnerabilidades y Matriz de Riesgo' },
     ];
     const evaluationsData = [
-        { evaluationNumber: 1, date: 'Lun 24, Mar 2025', weighting: '20%', description: <CustomLink href="ti3v34/eval01">Evaluación 01</CustomLink>, quickGuide: '' },
-        { evaluationNumber: 2, date: 'Mié 09, Abr 2025', weighting: '30%', description: <ExternalLink href="/inacap/ti3v34/docs/informe01.pdf">Informe 01</ExternalLink>, quickGuide: '' },
-        { evaluationNumber: <EmphText>3</EmphText>, date: <EmphText>Mié 07, May 2025</EmphText>, weighting: <EmphText>35%</EmphText>, description: <EmphText>Informe 02</EmphText>, quickGuide: '' },
-        { evaluationNumber: 4, date: 'Cada Semana', weighting: '15%', description: <CustomLink href='ti3v34/controles'>Promedio Controles</CustomLink>, quickGuide: '' },
+        { 
+            evaluationNumber: 1,
+            date: 'Lun 24, Mar 2025',
+            weighting: '20%',
+            description: <CustomLink href="ti3v34/eval01">Evaluación 01</CustomLink>,
+            quickGuide: ''
+        },
+        { 
+            evaluationNumber: 2,
+            date: 'Mié 09, Abr 2025',
+            weighting: '30%',
+            description: <ExternalLink href="/inacap/ti3v34/docs/informe01.pdf">Informe 01</ExternalLink>,
+            quickGuide: ''
+        },
+        { 
+            evaluationNumber: 3,
+            date: 'Mié 07, May 2025',
+            weighting: '35%',
+            description: <ExternalLink href='/inacap/ti3v34/docs/informe02.pdf'>Informe 02</ExternalLink>,
+            quickGuide: ''
+        },
+        { 
+            evaluationNumber: 4,
+            date: 'Cada Semana',
+            weighting: '15%',
+            description: <CustomLink href='ti3v34/controles'>Promedio Controles</CustomLink>,
+            quickGuide: ''
+        }
     ];
     const classData = [
         { week: '01', class: '01', date: 'Lun 10, Mar 2025', description: <CustomLink href="ti3v34/clase01">Introducción Seguridad</CustomLink> },
@@ -54,7 +78,7 @@ export default function Ti3v34() {
         { week: '', class: '24', date: 'Mié 30, Abr 2025', description: 'Avance Informe 02 (3)' },
         { week: '09', class: '25', date: 'Lun 05, May 2025', description: 'Avance Informe 02 (4)' },
         { week: '', class: '26', date: 'Mar 06, May 2025', description: 'Avance Informe 02 (5)' },
-        { week: '', class: '27', date: 'Mié 07, May 2025', description: 'Entrega Informe 02' },
+        { week: '', class: '27', date: 'Mié 07, May 2025', description: <ExternalLink href='/inacap/ti3v34/docs/informe02.pdf'>Entrega Informe 02</ExternalLink> },
 
 
     ];

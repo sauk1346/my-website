@@ -1,0 +1,85 @@
+import ExternalLink from '@/components/ExternalLink';
+import MathDisplay from '@/components/MathDisplay';
+
+# ARPA 01: Consumo de energía
+
+## Material
+
+- <ExternalLink href='/inacap/mvfm01/docs/ARPA11.pdf'>ARPA1.pdf</ExternalLink>
+- <ExternalLink href='/inacap/mvfm01/docs/ARPA11_Extension.pdf'>ARPA1_Extension.pdf</ExternalLink>
+
+## Ejercicio 01
+Considera la siguiente infografía del valor total a pagar en un mes determinado según el consumo de energía:
+
+<img
+	src="/inacap/mvfm01/images/fig01.png"
+	style={{ display: 'block', margin: '0 auto', width:'60%'}}
+/>
+<br/>
+
+¿Cuántos Kwh de energía consumió un cliente si el valor total a pagar fue $8300?
+
+<details>
+    <summary>Solución</summary>
+
+1. Se convierte el infograma a tabla, y se determinan los puntos a graficar.
+
+|Cantidad Kwh|Costo mensual|Coordenadas|
+|---|---|---|
+|1|1100|A = (1, 1100)|
+|2|1300|B = (2, 1300)|
+|3|1500|C = (3, 1500)|
+
+2. Se genera la función <MathDisplay formula="f(x)" inline={true} /> mediante el comando `AjustePolinómico(l1,n)`
+3. Se encuentra el valor de <MathDisplay formula="x" inline={true} /> para <MathDisplay formula="f(x) = 8300" inline={true} /> mediante el comando `Resuelve(f(x) = a)`
+
+<img
+	src="/inacap/mvfm01/images/fig03.png"
+	style={{ display: 'block', margin: '0 auto', width:'60%'}}
+/>
+<br/>
+
+<MathDisplay formula="\therefore" inline={true} /> Si el valor total a pagar fue de $8300 , el cliente consumió 37 Kwh.
+</details>
+
+## Ejercicio 02
+Considera la siguiente infografía del valor total a pagar en un mes determinado según el consumo de energía:
+
+<img
+	src="/inacap/mvfm01/images/fig02.png"
+	style={{ display: 'block', margin: '0 auto', width:'60%'}}
+/>
+<br/>
+
+De acuerdo a esta información, y considerando una regularidad lineal, ¿cuál es la expresión algebraica que permite escribir el valor total a pagar en función de los Kwh de energía consumidos?
+
+<details>
+    <summary>Solución</summary>
+
+1. Se convierte el infograma a tabla, y se determinan los puntos a graficar.
+
+|Cantidad Kwh|Costo mensual|Coordenadas|
+|---|---|---|
+|2|1400|A = (2, 1400)|
+|5|1800|B = (5, 1800)|
+
+
+2. Se genera la función <MathDisplay formula="f(x)" inline={true} /> mediante el comando `AjustePolinómico(l1,n)`
+
+<img
+	src="/inacap/mvfm01/images/fig04.png"
+	style={{ display: 'block', margin: '0 auto', width:'60%'}}
+/>
+<br/>
+
+<MathDisplay formula="\therefore" inline={true} /> La expresión algebraica que permite escribir el valor total a pagar en función de los Kwh consumidos es:
+
+<MathDisplay formula=
+    "f(x) \approx 133,33 \cdot x + 1133,33" />
+
+Donde:
+
+- <MathDisplay formula="f(x)" inline={true} /> es el valor total mensual a pagar.
+- <MathDisplay formula="x" inline={true} /> es la cantidad de Kwh consumida al mes.
+
+</details>

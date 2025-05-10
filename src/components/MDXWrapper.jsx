@@ -1,5 +1,4 @@
 "use client"
-
 import React from 'react';
 import TableOfContents from './TableOfContents';
 import styles from '../styles/MDXWrapper.module.css';

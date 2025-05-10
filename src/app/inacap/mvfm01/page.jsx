@@ -2,14 +2,12 @@
 
 import React, { useEffect, useState } from 'react';
 import ClassCard from '@/components/ClassCard'; 
-import LectureCard from '@/components/LectureCard'; 
 import EvaluationCard from '@/components/EvaluationCard';
 import ProfessorCard from '@/components/ProfessorCard';
 import UnitCard from '@/components/UnitCard';
 import styles from'@/styles/Asignature.module.css';
 import CustomLink from '@/components/CustomLink';
 import ExternalLink from '@/components/ExternalLink';
-import EmphText from '@/components/EmphText';
 
 export default function Mvfm01() {
     // Estado para controlar la vista responsiva
@@ -75,8 +73,8 @@ export default function Mvfm01() {
     ];
     const classData = [
         { week: '01', class: '01', date: 'Lun 12, Ago 2024', description: <>
-            - ARPA 1: Consumo de enería<br/>
-            - SM 1: Servicio Eléctrico
+            <CustomLink href='mvfm01/arpa11'>- ARPA 1: Consumo de energía</CustomLink><br/>
+            <CustomLink href='mvfm01/sm11'>- SM 1: Servicio Eléctrico</CustomLink>
             </> 
         },
         { week: '02', class: '02', date: 'Lun 19, Ago 2024', description: '- ARPA 2: Lanzamiento de una piedra' },

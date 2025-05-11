@@ -1,5 +1,4 @@
 import ExternalLink from '@/components/ExternalLink';
-import MathDisplay from '@/components/MathDisplay';
 
 # ARPA 01: Consumo de energía
 
@@ -30,8 +29,8 @@ Considera la siguiente infografía del valor total a pagar en un mes determinado
 |2|1300|B = (2, 1300)|
 |3|1500|C = (3, 1500)|
 
-2. Se genera la función <MathDisplay formula="f(x)" inline={true} /> mediante el comando `AjustePolinómico(l1,n)`
-3. Se encuentra el valor de <MathDisplay formula="x" inline={true} /> para <MathDisplay formula="f(x) = 8300" inline={true} /> mediante el comando `Resuelve(f(x) = a)`
+2. Se genera la función $f(x)$ mediante el comando `AjustePolinómico(l1,n)`
+3. Se encuentra el valor de $x$ para $f(x) = 8300$ mediante el comando `Resuelve(f(x) = a)`
 
 <img
 	src="/inacap/mvfm01/images/fig03.png"
@@ -39,7 +38,7 @@ Considera la siguiente infografía del valor total a pagar en un mes determinado
 />
 <br/>
 
-<MathDisplay formula="\therefore" inline={true} /> Si el valor total a pagar fue de $8300 , el cliente consumió 37 Kwh.
+$\therefore$ Si el valor total a pagar fue de \$$8300$ , el cliente consumió $37$ Kwh.
 </details>
 
 ## Ejercicio 02
@@ -64,7 +63,7 @@ De acuerdo a esta información, y considerando una regularidad lineal, ¿cuál e
 |5|1800|B = (5, 1800)|
 
 
-2. Se genera la función <MathDisplay formula="f(x)" inline={true} /> mediante el comando `AjustePolinómico(l1,n)`
+2. Se genera la función $f(x)$ mediante el comando `AjustePolinómico(l1,n)`
 
 <img
 	src="/inacap/mvfm01/images/fig04.png"
@@ -72,14 +71,16 @@ De acuerdo a esta información, y considerando una regularidad lineal, ¿cuál e
 />
 <br/>
 
-<MathDisplay formula="\therefore" inline={true} /> La expresión algebraica que permite escribir el valor total a pagar en función de los Kwh consumidos es:
+$\therefore$ La expresión algebraica que permite escribir el valor total a pagar en función de los Kwh consumidos es:
 
-<MathDisplay formula=
-    "f(x) \approx 133,33 \cdot x + 1133,33" />
+$$
+\begin{aligned}
+    f(x) \approx 133,33 \cdot x + 1133,33
+\end{aligned}
+$$
 
 Donde:
 
-- <MathDisplay formula="f(x)" inline={true} /> es el valor total mensual a pagar.
-- <MathDisplay formula="x" inline={true} /> es la cantidad de Kwh consumida al mes.
-
+- $f(x)$ es el valor total mensual a pagar.
+- $x$ es la cantidad de Kwh consumida al mes.
 </details>

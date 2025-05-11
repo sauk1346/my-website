@@ -1,11 +1,18 @@
 import createMDX from '@next/mdx';
 import remarkGfm from 'remark-gfm';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
 
 const withMDX = createMDX({
   extension: /\.mdx?$/,
   options: {
-    remarkPlugins: [remarkGfm], // Añadir remark-gfm para soporte de tablas
-    rehypePlugins: [],
+    remarkPlugins: [
+      remarkGfm, // Añadir remark-gfm para soporte de tablas
+      remarkMath, // Añadir remark-math para detectar sintaxis LaTeX
+    ], 
+    rehypePlugins: [
+      rehypeKatex, // Añadir rehype-katex para renderizar LaTeX
+    ],
   },
 });
 

@@ -1,5 +1,4 @@
 import ExternalLink from '@/components/ExternalLink';
-import MathDisplay from '@/components/MathDisplay';
 
 # Situación de Modelación 1: Servicio Eléctrico
 
@@ -43,18 +42,19 @@ Existe algún tipo de regularidad en las columnas "Administración del servicio"
 />
 <br/>
 
-<MathDisplay formula="\therefore" inline={true} /> La expresión algebraica que modela el total a pagar en la boleta en función del consumo estimado mensual es:
+$\therefore$ La expresión algebraica que modela el total a pagar en la boleta en función del consumo estimado mensual es:
 
-<MathDisplay formula=
-    "f(x) \approx 163,5 \cdot x + 1324,3" />
+$$
+\begin{aligned}
+    f(x) \approx 163,5 \cdot x + 1324,3
+\end{aligned}
+$$
 
 Donde:
 
-- <MathDisplay formula="x" inline={true} /> es el consumo estimado mensual (kWh).
-- <MathDisplay formula="f(x)" inline={true} /> es el total a pagar (\$).
-
+- $x$ es el consumo estimado mensual (kWh).
+- $f(x)$ es el total a pagar (\$).
 </details>
-
 
 ## Actividad 03
 Considera la función planteada en la actividad anterior.
@@ -70,7 +70,7 @@ Considera la función planteada en la actividad anterior.
 />
 <br/>
 
-<MathDisplay formula="\therefore" inline={true} /> El total a pagar si una persona consume <MathDisplay formula="234" inline={true} /> kWh es <MathDisplay formula="\$39583.3" inline={true} />
+$\therefore$ El total a pagar si una persona consume $234$ kWh es \$$39583.3$
 </details>
 
 2. La página de la empresa ha publicado que el total a pagar por 234 kWh es de \$35595. ¿Existe alguna diferencia con la respuesta de la pregunta anterior? Analiza.
@@ -78,12 +78,12 @@ Considera la función planteada en la actividad anterior.
 <details>
     <summary>Solución</summary>
 
-Si, existe una diferencia entre el resultado de <MathDisplay formula="f(234)" inline={true} /> y el resultado publicado por la empresa:
+Si, existe una diferencia entre el resultado de $f(234)$ y el resultado publicado por la empresa:
 
-- <MathDisplay formula="f(234) = 39583,3" inline={true} />
-- Publicación empresa: <MathDisplay formula="234" inline={true} /> Kwh tiene un costo de <MathDisplay formula="\$35595" inline={true} />
+- $f(234) = 39583,3$
+- Publicación empresa: $234$ Kwh tiene un costo de \$$35595$
 
-Esto se debe a que el modelo <MathDisplay formula="f(x)" inline={true} /> está hecho a partir de unos pocos datos. Además, estos datos están poco dispersos entre sí, lo que generará un modelo con alta precisión para valores cercanos a estos puntos, pero baja precisión para el caso contrario.
+Esto se debe a que el modelo $f(x)$ está hecho a partir de unos pocos datos. Además, estos datos están poco dispersos entre sí, lo que generará un modelo con alta precisión para valores cercanos a estos puntos, pero baja precisión para el caso contrario.
 
 Si se agrega este nuevo dato publicado, es posible mejorar el modelo. 
 
@@ -99,12 +99,15 @@ Si se agrega este nuevo dato publicado, es posible mejorar el modelo.
 />
 <br/>
 
-El nuevo modelo <MathDisplay formula="g(x)" inline={true} /> es:
+El nuevo modelo $g(x)$ es:
 
-<MathDisplay formula=
-    "g(x) \approx 146,24 \cdot x + 1375,94" />
+$$
+\begin{aligned}
+	g(x) \approx 146,24 \cdot x + 1375,94
+\end{aligned}
+$$
 
-Donde <MathDisplay formula="g(234) = 35595,75" inline={true} /> el cual se ajusta mejor al dato publicado por la empresa.
+Donde $g(234) = 35595,75$ el cual se ajusta mejor al dato publicado por la empresa.
 </details>
 
 3. ¿Cuántos kWh se deben consumir para pagar un total de \$20000 en la boleta?
@@ -112,7 +115,7 @@ Donde <MathDisplay formula="g(234) = 35595,75" inline={true} /> el cual se ajust
 <details>
     <summary>Solución</summary>
 
-Se utiliza el nuevo modelo <MathDisplay formula="g(x)" inline={true} />:
+Se utiliza el nuevo modelo $g(x)$:
 
 <img
 	src="/inacap/mvfm01/images/fig10.png"
@@ -120,7 +123,7 @@ Se utiliza el nuevo modelo <MathDisplay formula="g(x)" inline={true} />:
 />
 <br/>
 
-<MathDisplay formula="\therefore" inline={true} /> Se deben consumir un total de <MathDisplay formula="127,35" inline={true} /> kWh para pagar un total de <MathDisplay formula="\$20000" inline={true} /> en la boleta.
+$\therefore$ Se deben consumir un total de $127,35$ kWh para pagar un total de \$$20000$ en la boleta.
 </details>
 
 ## Actividad 04
@@ -139,7 +142,7 @@ La empresa ha entregado la siguiente información en su página web:
 <details>
     <summary>Solución</summary>
 
-Se genera la función <MathDisplay formula="h(x)" inline={true} />
+Se genera la función $h(x)$
 
 <img
 	src="/inacap/mvfm01/images/fig11.png"
@@ -153,15 +156,18 @@ Se genera la función <MathDisplay formula="h(x)" inline={true} />
 />
 <br/>
 
-<MathDisplay formula="\therefore" inline={true} /> La expresión algebraica que modela el total a pagar en la boleta en función del consumo estimado total es:
+$\therefore$ La expresión algebraica que modela el total a pagar en la boleta en función del consumo estimado total es:
 
-<MathDisplay formula=
-    "h(x) \approx 163,55 \cdot x + 1324,50" />
+$$
+\begin{aligned}
+	h(x) \approx 163,55 \cdot x + 1324,50
+\end{aligned}
+$$
 
 Donde:
 
-- <MathDisplay formula="x" inline={true} /> es el consumo estimado total (kWh).
-- <MathDisplay formula="h(x)" inline={true} /> es el total a pagar (\$).
+- $x$ es el consumo estimado total (kWh).
+- $h(x)$ es el total a pagar (\$).
 </details>
 
 2. ¿Cuál sería el total a pagar si una persona consumiera 234 kWh?
@@ -175,7 +181,7 @@ Donde:
 />
 <br/>
 
-<MathDisplay formula="\therefore" inline={true} /> El total a pagar si una persona consume <MathDisplay formula="234" inline={true} /> kWh es <MathDisplay formula="39594,94" inline={true} />
+$\therefore$ El total a pagar si una persona consume $234$ kWh es \$$39594,94$
 </details>
 
 3. ¿Existe alguna diferencia entre la respuesta de la pregunta anterior y lo publicado por la empresa? Analiza.
@@ -183,12 +189,12 @@ Donde:
 <details>
     <summary>Solución</summary>
 
-Si, existe una diferencia entre el resultado de <MathDisplay formula="h(234)" inline={true} /> y el resultado publicado por la empresa:
+Si, existe una diferencia entre el resultado de $h(234)$ y el resultado publicado por la empresa:
 
-- <MathDisplay formula="h(234) = 39594,94" inline={true} />
-- Publicación empresa: <MathDisplay formula="234" inline={true} /> Kwh tiene un costo de <MathDisplay formula="\$35595" inline={true} />
+- $h(234) = 39594,94$
+- Publicación empresa: $234$ Kwh tiene un costo de \$$35595$
 
-Nuevamente, el modelo <MathDisplay formula="h(x)" inline={true} /> está hecho a partir de unos pocos datos. Esta vez, los datos tienen una mejor dispersión en comparación con la Actividad 1, pero siguen siendo una cantidad baja.
+Nuevamente, el modelo $h(x)$ está hecho a partir de unos pocos datos. Esta vez, los datos tienen una mejor dispersión en comparación con la Actividad 1, pero siguen siendo una cantidad baja.
 
 Si se agrega el dato de la empresa a este conjunto de datos, es posible seguir mejorando el modelo:
 
@@ -204,10 +210,13 @@ Si se agrega el dato de la empresa a este conjunto de datos, es posible seguir m
 />
 <br/>
 
-El nuevo modelo <MathDisplay formula="j(x)" inline={true} /> a partir de todos los datos proporcionados por la empresa es:
+El nuevo modelo $j(x)$ a partir de todos los datos proporcionados por la empresa es:
 
-<MathDisplay formula=
-    "j(x) \approx 163,04 \cdot x  + 771,26" />
+$$
+\begin{aligned}
+    j(x) \approx 163,04 \cdot x  + 771,26
+\end{aligned}
+$$
 </details>
 
 4. ¿Cuántos kWh se deben consumir para pagar \$20000 en la boleta?
@@ -215,7 +224,7 @@ El nuevo modelo <MathDisplay formula="j(x)" inline={true} /> a partir de todos l
 <details>
     <summary>Solución</summary>
 
-Se utiliza el nuevo modelo  <MathDisplay formula="j(x)" inline={true} />:
+Se utiliza el nuevo modelo  $j(x)$:
 
 <img
 	src="/inacap/mvfm01/images/fig16.png"
@@ -223,7 +232,7 @@ Se utiliza el nuevo modelo  <MathDisplay formula="j(x)" inline={true} />:
 />
 <br/>
 
-<MathDisplay formula="\therefore" inline={true} /> Se deben consumir <MathDisplay formula="117,94" inline={true} /> kWh para pagar <MathDisplay formula="\$20000" inline={true} /> en la boleta.
+$\therefore$ Se deben consumir $117,94$ kWh para pagar \$$20000$ en la boleta.
 </details>
 
 ## Actividad 05 
@@ -318,10 +327,10 @@ Se resumen los siguientes resultados:
 
 |Empresa|Modelo de costo|
 |---|---|
-|LUMINUS|<MathDisplay formula="f_4(x) \approx 163,55 \cdot x + 1324,50" inline={true} />|
-|CHISPITA|<MathDisplay formula="f_5(x) \approx 132,68 \cdot x + 685,93" inline={true} />|
+|LUMINUS|$f_4(x) \approx 163,55 \cdot x + 1324,50$|
+|CHISPITA|$f_5(x) \approx 132,68 \cdot x + 685,93$|
 
-- De la gráfica se observa que el punto de intersección <MathDisplay formula="K" inline={true} /> es <MathDisplay formula="(-20,69 ; -2059,20)" inline={true} />
-- En el contexto gráfico, <MathDisplay formula="K" inline={true} /> representa el pto. donde el mismo consumo en kWh tiene el mismo costo (\$) en ambas empresas.
-- En el contexto algebraico, los valores encontrados no tienen sentido, ya que el consumo de energía <MathDisplay formula="x" inline={true} /> no puede ser negativo (los hogares no generan energía). Por lo tanto, los costos de la empresa no se igualan dentro de un rango de consumo <MathDisplay formula="x" inline={true} /> razonable, donde <MathDisplay formula="x \in [0,\infty)" inline={true} />
+- De la gráfica se observa que el punto de intersección $K$ es $(-20,69 ; -2059,20)$
+- En el contexto gráfico, $K$ representa el pto. donde el mismo consumo en kWh tiene el mismo costo (\$) en ambas empresas.
+- En el contexto algebraico, los valores encontrados no tienen sentido, ya que el consumo de energía $x$ no puede ser negativo (los hogares no generan energía). Por lo tanto, los costos de la empresa no se igualan dentro de un rango de consumo $x$ razonable, donde $x \in [0,\infty)$
 </details>

@@ -1,0 +1,248 @@
+import ExternalLink from '@/components/ExternalLink';
+
+# Situación de Modelación 02: Sueño Dorado
+
+## Material Clase
+- <ExternalLink href='/inacap/mvfm01/docs/sm12.pdf'>sm12.pdf</ExternalLink>
+
+## Actividad 01
+Sabiendo que los ingresos obtenidos por la venta de un producto se calculan mediante la expresión:
+
+$$
+\begin{aligned}
+ingresos = precio\: de\: venta\: por\: unidad \cdot cantidad\: de\: unidades\: vendidas
+\end{aligned}
+$$
+
+y que el precio de venta que la empresa ha fijado para este producto es de \$80000, responde:
+
+1. Completa la tabla con los ingresos que se obtienen, de acuerdo a la información dada inicialmente
+
+|Unidades vendidas|Ingresos($)|
+|---|---|
+|100||
+|200||
+|300||
+|400||
+|500||
+
+<details>
+    <summary>Solución</summary>
+
+|Unidades vendidas|Ingresos($)|
+|---|---|
+|100|8 millones|
+|200|16 millones|
+|300|24 millones|
+|400|32 millones|
+|500|40 millones|
+</details>
+
+2. ¿Cuál es la expresión algebraica de la función que permite modelar el ingreso dependiendo de la cantidad de unidades vendidas?
+
+<details>
+    <summary>Solución</summary>
+
+$$
+\begin{aligned}
+    f(x) = 80000 \cdot x
+\end{aligned}
+$$
+
+donde:
+
+- $x$: cantidad de unidades vendidas
+- $80000$: precio de venta por unidad
+- $f(x)$: ingresos
+</details>
+
+3. ¿Qué ocurre con los ingresos de la empresa a medida que vende una mayor cantidad del producto?
+
+<details>
+    <summary>Solución</summary>
+
+Los ingresos aumentan proporcionalmente a medida que se venden más productos.
+</details>
+
+4. ¿Existe alguna cantidad de unidades vendidas para que los ingresos sean máximos?
+
+<details>
+    <summary>Solución</summary>
+
+- Para este caso particular no, ya que no se menciona una cantidad máxima de unidades vendidas.
+- Si la empresa solo puede vender hasta una cantidad $n$, entonces el ingreso máximo de la empresa sería:
+
+$$
+\begin{aligned}
+    ingreso_{máx} = f(n) = 80000 \cdot n
+\end{aligned}
+$$
+</details>
+
+5. ¿Existe alguna cantidad de unidades vendidas para la cual la empresa no tenga ingresos?
+
+<details>
+    <summary>Solución</summary>
+
+Si. Cuando la empresa no vende ningún producto $x=0$, su ingreso es $0$.
+
+$$
+\begin{aligned}
+    f(0) = 80000 \cdot 0 = 0
+\end{aligned}
+$$
+</details>
+
+6. ¿Cuál es el número de almohadas que se deben vender para alcanzar ingresos de 1200 millones de pesos?
+
+<details>
+    <summary>Solución</summary>
+<br/>
+<img
+	src="/inacap/mvfm01/images/fig28.png"
+	style={{ display: 'block', margin: '0 auto', width:'60%'}}
+/>
+<br/>
+
+$\therefore$ Se deben vender $15000$ almohadas para alcanzar un ingreso de $1200$ millones de pesos.
+</details>
+
+## Actividad 02
+Si la función de costos de la empresa es $C(x) = -0.14x^2 + 1580x + 805000000$, donde $x$ está expresada en unidades del producto, responde:
+
+1. ¿Qué ocurre con los costos de la empresa a medida que produce una mayor cantidad del producto? ¿Por qué crees que ocurre esto?
+
+<details>
+    <summary>Solución</summary>
+
+- El factor que acompaña a $x^2$ es negativo, por lo que la función es una parábola invertida.
+- Entonces a medida que aumentan las unidades de producto $x$, la función de costo $C(x)$ también aumentará, hasta un punto máximo (vértice).
+- Luego del punto máximo, los costos disminuirán a medida que aumenten las unidades de producto $x$
+</details>
+
+2. ¿Cuál es el costo de no producir unidades?
+
+<details>
+    <summary>Solución</summary>
+
+$$
+\begin{aligned}
+C(0) &= -0.14 \cdot 0 + 1580 \cdot 0 + 805000000\\[5pt]
+&= 805000000
+\end{aligned}
+$$
+
+$\therefore$ El costo de no producir unidades es de \$$805$ millones.
+</details>
+
+3. ¿Qué cantidad del producto genera el costo máximo? ¿Y el costo mínimo?
+
+<details>
+    <summary>Solución</summary>
+<br/>
+<img
+	src="/inacap/mvfm01/images/fig29.png"
+	style={{ display: 'block', margin: '0 auto', width:'60%'}}
+/>
+<br/>
+
+- El costo máximo es generado al producir $\approx 5643$ unidades.
+- El costo mínimo $0$ es generado al producir $\approx 81681$ unidades.
+
+El costo mínimo $0$ es teórico, ya que en la práctica una empresa siempre tiene que cubrir costos de operación mínimos, como salarios, mantenimiento de equipos, servicios públicos, alquiler, etc.
+
+Además la meta de una empresa no es tener un costo 0, sino de ser rentable y sostenible en el largo plazo.
+</details>
+
+## Actividad 03
+Analizando las funciones anteriores, responde:
+
+1. ¿Para qué cantidad de unidades producidad y vendidad la empresa alcanza un punto de equilibrio, es decir, donde los costos sean iguales a los ingresos?
+
+<details>
+    <summary>Solución</summary>
+
+Sean las funciónes de ingreso $I(x)$ y costo $C(x)$:
+
+$$
+\begin{aligned}
+    I(x) &= 80000 \cdot x\\[5pt] 
+    C(x) &= -0.14 \cdot x^2 + 1580 \cdot x + 805000000
+\end{aligned}
+$$
+
+El punto de equilibro ocurre cuando:
+
+$$
+\begin{aligned}
+    I(x) = C(x)
+\end{aligned}
+$$
+
+<img
+	src="/inacap/mvfm01/images/fig30.png"
+	style={{ display: 'block', margin: '0 auto', width:'60%'}}
+/>
+<br/>
+
+Entonces, el punto de equilibro donde los ingresos son iguales a los costos, ocurre cuando se producen $\approx 10084$ unidades.
+</details>
+
+2. ¿Para qué cantidad de unidades producidas y vendidas la empresa obtendrá ganancias?
+
+<details>
+    <summary>Solución</summary>
+
+Considerando el punto de equilibrio $10084$ unidades:
+
+- La función de costo $C(x)$ va en descenso, ya que su costo máximo es generado al producir $5643$ unidades.
+- La función de ingreso $I(x)$ siempre va en aumento, ya que es lineal positiva.
+- Entonces, para una cantidad mayor al punto de equilibrio, $I(x) > C(x)$
+
+$\therefore$ La empresa obtendrá ganancias para una cantidad producida mayor a $10084$ unidades.
+</details>
+
+3. ¿Para qué cantidad de unidades producidad y vendidas la empresa tendrá pérdidas?
+
+<details>
+    <summary>Solución</summary>
+
+Similar a la Pregunta 2:
+
+- Para una cantidad menor al punto de equilibro, $I(x) < C(x)$
+
+$\therefore$ La empresa tendrá pérdidas para una cantidad producida menor a $10084$ unidades.
+</details>
+
+4. ¿Cuál es la expresión algebraica que permite determinar las ganancias de la empresa, en pesos, de acuerdo a la cantidad de unidades vendidas de su almohada "sueño dorado"?. Considera que las ganancias se calculan restando los costos del producto a los ingresos obtenidos por ventas.
+
+<details>
+    <summary>Solución</summary>
+
+Sea la función utilidad $U(x)$:
+
+$$
+\begin{aligned}
+    U(x) = ingresos - costos
+\end{aligned}
+$$
+
+<img
+	src="/inacap/mvfm01/images/fig31.png"
+	style={{ display: 'block', margin: '0 auto', width:'60%'}}
+/>
+<br/>
+
+La función que permite determinar las ganancias de la empresas es:
+
+$$
+\begin{aligned}
+    U(x) = \frac{7}{50} \cdot x^2 + 78420 \cdot x - 805 \cdot 10^6
+\end{aligned}
+$$
+
+Donde:
+
+- $x$: unidades de productos
+- $U(x)$: ganancia de la empresa
+</details>

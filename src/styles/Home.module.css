@@ -9,11 +9,41 @@
   padding: 2rem 1rem;
 }
 
+/* Sección individual */
+.section {
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Título de sección */
+.sectionTitle {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  position: relative;
+}
+
+.sectionTitle::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #6366f1, #8b5cf6);
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
 /* Estilo para el párrafo */
 .description {
-  margin-top: 32px;
+  margin-top: 1rem;
   font-size: 1.125rem;
   text-align: center;
+  max-width: 600px;
+  color: #94a3b8;
 }
 
 /* Flex container para las cards */
@@ -25,4 +55,25 @@
   margin-top: 32px;
   width: 100%;
   max-width: 100%;
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+  .sectionTitle {
+    font-size: 1.75rem;
+  }
+  
+  .description {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .mainContainer {
+    padding: 1.5rem 0.75rem;
+  }
+  
+  .sectionTitle {
+    font-size: 1.5rem;
+  }
 }

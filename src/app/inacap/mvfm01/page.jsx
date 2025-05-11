@@ -77,12 +77,11 @@ export default function Mvfm01() {
             <CustomLink href='mvfm01/sm11'>- SM 1: Servicio Eléctrico</CustomLink>
             </> 
         },
-        { week: '02', class: '02', date: 'Lun 19, Ago 2024', description: '- ARPA 2: Lanzamiento de una piedra' },
-        { week: '', class: '03', date: 'Mié 21, Ago 2024', description: '- SM 2: Sueño dorado' },
-        
+        { week: '02', class: '02', date: 'Lun 19, Ago 2024', description: <CustomLink href='mvfm01/arpa12'>- ARPA 2: Lanzamiento de una piedra</CustomLink> },
+        { week: '', class: '03', date: 'Mié 21, Ago 2024', description: <CustomLink href='mvfm01/sm12'>- SM 2: Sueño dorado</CustomLink> },
         { week: '03', class: '04', date: 'Lun 26, Ago 2024', description: <>
-            - ARPA 3: Eliminación de fármacos<br/>
-            - SM 3: Desabastecimiento
+            <CustomLink href='mvfm01/arpa13'>- ARPA 3: Eliminación de fármacos</CustomLink><br/>
+            <CustomLink href='mvfm01/sm13'>- SM 3: Desabastecimiento</CustomLink>
             </> 
         },
         { week: '', class: '05', date: 'Mié 28, Ago 2024', description: '- SM 4: Crecimiento de Bacterias' },

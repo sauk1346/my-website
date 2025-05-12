@@ -3,12 +3,12 @@
 import React, { useState, useEffect } from 'react';
 import styles from '../styles/Calendar.module.css';
 
-// El componente ahora recibe eventos como prop con un valor por defecto (array vacío)
 const Calendar = ({ eventos = [] }) => {
   const [currentDate, setCurrentDate] = useState(new Date());
   const [selectedDay, setSelectedDay] = useState(null);
   const [isMobile, setIsMobile] = useState(false);
   const [showModal, setShowModal] = useState(false);
+  const [selectedDayEvents, setSelectedDayEvents] = useState([]);
 
   // Efecto para detectar dispositivos móviles
   useEffect(() => {
@@ -83,6 +83,7 @@ const Calendar = ({ eventos = [] }) => {
   const prevMonth = () => {
     setCurrentDate(new Date(currentDate.getFullYear(), currentDate.getMonth() - 1, 1));
     setSelectedDay(null);
+    setSelectedDayEvents([]);
     setShowModal(false);
   };
 
@@ -90,6 +91,7 @@ const Calendar = ({ eventos = [] }) => {
   const nextMonth = () => {
     setCurrentDate(new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 1));
     setSelectedDay(null);
+    setSelectedDayEvents([]);
     setShowModal(false);
   };
 
@@ -98,18 +100,26 @@ const Calendar = ({ eventos = [] }) => {
     return `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
   };
 
+  // Obtener eventos para un día específico
+  const getEventosDelDia = (day) => {
+    if (!day) return [];
+    
+    const dateKey = formatDateKey(day.date);
+    return eventos.filter(evento => evento.fecha === dateKey);
+  };
+
   // Seleccionar un día para ver sus eventos
   const selectDay = (day) => {
-    setSelectedDay(day);
+    // Actualizar el día seleccionado
+    setSelectedDay({...day});
+    
+    // IMPORTANTE: Actualizar explícitamente los eventos del día seleccionado
+    const eventsForDay = getEventosDelDia(day);
+    setSelectedDayEvents(eventsForDay);
+    
     if (isMobile) {
       setShowModal(true);
     }
-  };
-
-  // Obtener eventos para un día específico
-  const getEventosDelDia = (day) => {
-    const dateKey = formatDateKey(day.date);
-    return eventos.filter(evento => evento.fecha === dateKey);
   };
 
   // Verificar si un día tiene eventos
@@ -136,11 +146,15 @@ const Calendar = ({ eventos = [] }) => {
     setShowModal(false);
   };
 
+  // Cerrar los detalles del día
+  const closeDetails = () => {
+    setSelectedDay(null);
+    setSelectedDayEvents([]);
+  };
+
   // Renderizar detalles del día 
   const renderDayDetails = () => {
     if (!selectedDay) return null;
-    
-    const eventosDelDia = getEventosDelDia(selectedDay);
     
     return (
       <div className={styles.dayDetails}>
@@ -148,16 +162,16 @@ const Calendar = ({ eventos = [] }) => {
           {formatDetailDate(selectedDay.date)}
           <button 
             className={styles.closeDetailsButton}
-            onClick={() => setSelectedDay(null)}
+            onClick={closeDetails}
             aria-label="Cerrar detalles"
           >
             ×
           </button>
         </h3>
         
-        {eventosDelDia.length > 0 ? (
+        {selectedDayEvents.length > 0 ? (
           <div className={styles.eventsList}>
-            {eventosDelDia.map(evento => (
+            {selectedDayEvents.map(evento => (
               <div key={evento.id} className={styles.eventItem}>
                 <div className={styles.eventItemHeader}>
                   {evento.hora && <span className={styles.eventItemTime}>{evento.hora}</span>}
@@ -267,15 +281,15 @@ const Calendar = ({ eventos = [] }) => {
             >
               ×
             </button>
-            {/* Renderizamos directamente los detalles del día dentro del modal */}
+            {/* Contenido del modal */}
             <div className={styles.dayDetails}>
               <h3 className={styles.dayDetailsTitle}>
                 {formatDetailDate(selectedDay.date)}
               </h3>
               
-              {getEventosDelDia(selectedDay).length > 0 ? (
+              {selectedDayEvents.length > 0 ? (
                 <div className={styles.eventsList}>
-                  {getEventosDelDia(selectedDay).map(evento => (
+                  {selectedDayEvents.map(evento => (
                     <div key={evento.id} className={styles.eventItem}>
                       <div className={styles.eventItemHeader}>
                         {evento.hora && <span className={styles.eventItemTime}>{evento.hora}</span>}

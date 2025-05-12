@@ -1,10 +1,13 @@
 'use client';
 
 import Link from 'next/link';
+import { useRouter, usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import styles from '../styles/Navbar.module.css';
 
 const Navbar = () => {
+  const router = useRouter();
+  const pathname = usePathname();
   const [darkMode, setDarkMode] = useState(false);
   const [mounted, setMounted] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -40,7 +43,6 @@ const Navbar = () => {
     if (typeof window !== 'undefined') {
       // Configuración del tema
       const initialDarkMode = checkTheme();
-      console.log('Estado inicial del tema:', initialDarkMode ? 'oscuro' : 'claro');
       setDarkMode(initialDarkMode);
       setMounted(true);
       
@@ -67,12 +69,11 @@ const Navbar = () => {
         document.body.style.overflow = '';
       };
     }
-  }, [mobileMenuOpen]); // Añadimos mobileMenuOpen como dependencia
+  }, [mobileMenuOpen]);
   
   // Función para cambiar el tema
   const toggleTheme = () => {
     const newDarkMode = !darkMode;
-    console.log('Cambiando tema a:', newDarkMode ? 'oscuro' : 'claro');
     
     if (typeof window !== 'undefined') {
       localStorage.setItem('theme', newDarkMode ? 'dark' : 'light');
@@ -91,29 +92,58 @@ const Navbar = () => {
     }
   };
   
-  // Función para cerrar el menú móvil cuando se hace clic en un enlace
-  const handleLinkClick = () => {
+  // Función para navegar a una sección
+  const navigateToSection = (sectionId, e) => {
+    if (e) e.preventDefault();
+    
+    // Si no estamos en la página principal, primero navegamos a home
+    if (pathname !== '/') {
+      // Almacenar el destino de la sección en sessionStorage
+      sessionStorage.setItem('scrollToSection', sectionId);
+      router.push('/');
+    } else {
+      // Si ya estamos en la página principal, scroll directo a la sección
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+    
+    // Cerrar el menú móvil si está abierto
     setMobileMenuOpen(false);
   };
+  
+  // Función para verificar si hay que hacer scroll al cargar la página
+  useEffect(() => {
+    if (pathname === '/' && typeof window !== 'undefined') {
+      const sectionToScroll = sessionStorage.getItem('scrollToSection');
+      if (sectionToScroll) {
+        // Pequeño timeout para asegurar que la página esté completamente cargada
+        setTimeout(() => {
+          const section = document.getElementById(sectionToScroll);
+          if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+          }
+          // Limpiar el sessionStorage después de usar
+          sessionStorage.removeItem('scrollToSection');
+        }, 500);
+      }
+    }
+  }, [pathname]);
   
   // Evitar problemas de hidratación
   if (!mounted) {
     return (
       <div className={styles.navbar}>
         <div className={styles.container}>
-          {/* Contenido del navbar sin botón de tema */}
-          <ul className={styles.menu}>
-            <li><Link href="/inacap" className={styles.link}>Inacap</Link></li>
-            <li><Link href="/bootcamps" className={styles.link}>Bootcamp</Link></li>
-            <li><Link href="/portfolio" className={styles.link}>Portfolio</Link></li>
-          </ul>
+          {/* Logo */}
+          <span className={styles.logo}>SaukCode</span>
           
-          <Link href="/" className={styles.logo}>SaukCode</Link>
-          
+          {/* Menú placeholder */}
           <ul className={styles.menu}>
-            <li><Link href="/" className={styles.link}>Home</Link></li>
-            <li><Link href="/about" className={styles.link}>About</Link></li>
-            <li><Link href="/contact" className={styles.link}>Contact</Link></li>
+            <li><span className={styles.link}>Programación</span></li>
+            <li><span className={styles.link}>Idiomas</span></li>
+            <li><span className={styles.link}>Sobre mí</span></li>
             <li><div className={styles.themeToggle}></div></li>
           </ul>
         </div>
@@ -208,45 +238,38 @@ const Navbar = () => {
           <MenuIcon />
         </button>
         
-        {/* Left navbar-side - solo visible en desktop */}
-        <ul className={styles.menu}>
-          <li>
-            <Link href="/inacap" className={styles.link}>
-              Inacap
-            </Link>
-          </li>
-          <li>
-            <Link href="/bootcamps" className={styles.link}>
-              Bootcamp
-            </Link>
-          </li>
-          <li>
-            <Link href="/portfolio" className={styles.link}>
-              Portfolio
-            </Link>
-          </li>
-        </ul>
-        
         {/* Logo */}
         <Link href="/" className={styles.logo}>
           SaukCode
         </Link>
         
-        {/* Right navbar-side - solo visible en desktop */}
+        {/* Menú principal */}
         <ul className={styles.menu}>
           <li>
-            <Link href="/" className={styles.link}>
-              Home
+            <Link 
+              href="/#programacion" 
+              onClick={(e) => navigateToSection('programacion', e)} 
+              className={styles.link}
+            >
+              Programación
             </Link>
           </li>
           <li>
-            <Link href="/about" className={styles.link}>
-              About
+            <Link 
+              href="/#idiomas" 
+              onClick={(e) => navigateToSection('idiomas', e)} 
+              className={styles.link}
+            >
+              Idiomas
             </Link>
           </li>
           <li>
-            <Link href="/contact" className={styles.link}>
-              Contact
+            <Link 
+              href="/#sobre-mi" 
+              onClick={(e) => navigateToSection('sobre-mi', e)} 
+              className={styles.link}
+            >
+              Sobre mí
             </Link>
           </li>
           <li>
@@ -254,7 +277,7 @@ const Navbar = () => {
           </li>
         </ul>
         
-        {/* Menú móvil - visible solo cuando está abierto */}
+        {/* Menú móvil */}
         <div className={`${styles.mobileMenu} ${mobileMenuOpen ? styles.mobileMenuOpen : ''}`}>
           <button 
             className={styles.closeButton} 
@@ -266,46 +289,25 @@ const Navbar = () => {
           
           <div className={styles.mobileMenuContent}>
             <Link 
-              href="/" 
+              href="/#programacion" 
+              onClick={(e) => navigateToSection('programacion', e)} 
               className={`${styles.link} ${styles.mobileMenuItem}`}
-              onClick={handleLinkClick}
             >
-              Home
+              Programación
             </Link>
             <Link 
-              href="/about" 
+              href="/#idiomas" 
+              onClick={(e) => navigateToSection('idiomas', e)} 
               className={`${styles.link} ${styles.mobileMenuItem}`}
-              onClick={handleLinkClick}
             >
-              About
+              Idiomas
             </Link>
             <Link 
-              href="/contact" 
+              href="/#sobre-mi" 
+              onClick={(e) => navigateToSection('sobre-mi', e)} 
               className={`${styles.link} ${styles.mobileMenuItem}`}
-              onClick={handleLinkClick}
             >
-              Contact
-            </Link>
-            <Link 
-              href="/inacap" 
-              className={`${styles.link} ${styles.mobileMenuItem}`}
-              onClick={handleLinkClick}
-            >
-              Inacap
-            </Link>
-            <Link 
-              href="/bootcamps" 
-              className={`${styles.link} ${styles.mobileMenuItem}`}
-              onClick={handleLinkClick}
-            >
-              Bootcamp
-            </Link>
-            <Link 
-              href="/portfolio" 
-              className={`${styles.link} ${styles.mobileMenuItem}`}
-              onClick={handleLinkClick}
-            >
-              Portfolio
+              Sobre mí
             </Link>
             
             <div className={styles.mobileThemeToggle}>

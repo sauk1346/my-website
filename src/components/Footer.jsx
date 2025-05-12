@@ -1,8 +1,32 @@
+'use client';
+
 import React from 'react';
 import Link from 'next/link';
+import { useRouter, usePathname } from 'next/navigation';
 import styles from '../styles/Footer.module.css';
 
 const Footer = () => {
+  const router = useRouter();
+  const pathname = usePathname();
+  
+  // Función para navegar a una sección
+  const navigateToSection = (sectionId, e) => {
+    if (e) e.preventDefault();
+    
+    // Si no estamos en la página principal, primero navegamos a home
+    if (pathname !== '/') {
+      // Almacenar el destino de la sección en sessionStorage
+      sessionStorage.setItem('scrollToSection', sectionId);
+      router.push('/');
+    } else {
+      // Si ya estamos en la página principal, scroll directo a la sección
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
+  
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
@@ -17,18 +41,30 @@ const Footer = () => {
           <h3 className={styles.title}>Quick Links</h3>
           <ul className={styles.linkList}>
             <li>
-              <Link href="/inacap" className={styles.link}>
-                Inacap
+              <Link 
+                href="/#programacion" 
+                onClick={(e) => navigateToSection('programacion', e)} 
+                className={styles.link}
+              >
+                Programación
               </Link>
             </li>
             <li>
-              <Link href="/bootcamps" className={styles.link}>
-                Bootcamps
+              <Link 
+                href="/#idiomas" 
+                onClick={(e) => navigateToSection('idiomas', e)} 
+                className={styles.link}
+              >
+                Idiomas
               </Link>
             </li>
             <li>
-              <Link href="/portfolio" className={styles.link}>
-                Portfolio
+              <Link 
+                href="/#sobre-mi" 
+                onClick={(e) => navigateToSection('sobre-mi', e)} 
+                className={styles.link}
+              >
+                Sobre mí
               </Link>
             </li>
           </ul>
@@ -43,14 +79,24 @@ const Footer = () => {
               </a>
             </li>
             <li className={styles.contactItem}>
-              <a href="https://github.com/sauk1346" target="_blank" rel="noopener noreferrer" className={styles.link}>
+              <Link 
+                href="https://github.com/sauk1346" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className={styles.link}
+              >
                 <span className={styles.icon}>🐙</span> GitHub
-              </a>
+              </Link>
             </li>
             <li className={styles.contactItem}>
-              <a href="https://www.linkedin.com/in/atmoralesc/" target="_blank" rel="noopener noreferrer" className={styles.link}>
+              <Link 
+                href="https://www.linkedin.com/in/atmoralesc/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className={styles.link}
+              >
                 <span className={styles.icon}>💼</span> LinkedIn
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

@@ -1,13 +1,31 @@
-/* components/Breadcrumb.module.css */
+/* components/Breadcrumb.module.css - Actualización */
+
 .breadcrumb {
   padding: 10px;
   background-color: #ffffff;
-  border-radius: 5px;
   transition: background-color 0.3s ease, border-color 0.3s ease;
   overflow-x: auto; /* Permite desplazamiento horizontal */
   white-space: nowrap; /* Evita que el texto se envuelva */
   scrollbar-width: thin; /* Para Firefox */
   -ms-overflow-style: none; /* Para IE y Edge */
+  
+  /* Ocupar todo el ancho disponible */
+  width: 100%;
+  /* Eliminar border-radius para que ocupe todo el ancho */
+  border-radius: 0;
+}
+
+/* Contenedor interno para el contenido del breadcrumb */
+.breadcrumbList {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto; /* Centrar el contenido */
+  align-items: center;
+  max-width: 1200px; /* Mismo ancho máximo que otros contenedores */
+  width: 100%;
+  padding-left: var(--spacing-md, 1rem);
+  padding-right: var(--spacing-md, 1rem);
 }
 
 /* Ocultar scrollbar para Chrome, Safari y Opera */
@@ -25,6 +43,8 @@
 :global(html.dark-mode-override) .breadcrumb {
   background-color: #1e1e1e;
   border-bottom: 1px solid #374151;
+  /* Asegurar que ocupe todo el ancho en modo oscuro */
+  width: 100%;
 }
 
 :global(html.dark-mode) .breadcrumb::-webkit-scrollbar-thumb,
@@ -32,21 +52,14 @@
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-.breadcrumbList {
-  display: flex;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  align-items: center;
-}
-
+/* El resto de las clases se mantienen igual */
 .breadcrumbItem {
   color: #0070f3;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
-  display: inline-block; /* Asegura que los elementos se muestren en línea */
-  max-width: 200px; /* Máximo ancho para cada elemento */
+  display: inline-block;
+  max-width: 200px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -66,7 +79,7 @@
   margin: 0 8px;
   color: #888;
   transition: color 0.3s ease;
-  flex-shrink: 0; /* Evita que los separadores se compriman */
+  flex-shrink: 0;
 }
 
 /* Separador en modo oscuro */
@@ -94,12 +107,17 @@
 
 /* Estilos responsivos para móviles */
 @media (max-width: 768px) {
+  .breadcrumbList {
+    padding-left: var(--spacing-sm, 0.5rem);
+    padding-right: var(--spacing-sm, 0.5rem);
+  }
+  
   .breadcrumb {
-    padding: 8px;
+    padding: 8px 0;
   }
   
   .breadcrumbItem, .breadcrumbText {
-    max-width: 120px; /* Ancho más pequeño en móviles */
+    max-width: 120px;
     font-size: 0.9rem;
   }
   
@@ -125,9 +143,9 @@
   padding: 3px 8px;
   border-radius: 4px;
   background-color: rgba(0, 112, 243, 0.1);
-  display: none; /* Oculto por defecto */
+  display: none;
   position: absolute;
-  right: 10px;
+  right: calc(var(--spacing-md, 1rem) + 10px); /* Ajuste para posicionamiento */
   top: 50%;
   transform: translateY(-50%);
 }
@@ -170,4 +188,11 @@
 :global(html.dark-mode) .compressed .ellipsis,
 :global(html.dark-mode-override) .compressed .ellipsis {
   color: #9ca3af;
+}
+
+@media (max-width: 480px) {
+  .breadcrumbList {
+    padding-left: var(--spacing-sm, 0.5rem);
+    padding-right: var(--spacing-sm, 0.5rem);
+  }
 }

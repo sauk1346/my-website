@@ -8,7 +8,7 @@ const Inacap = () => {
   
   return (
     <div className={styles.container}>
-      <h1 style={{marginBottom:'30px'}}>Malla Curricular</h1>
+      <h1 className={styles.title}>Malla Curricular</h1>
 
       <div className={styles.grid}>
         {/* Tabla del semestre 1 */}
@@ -131,9 +131,10 @@ const Inacap = () => {
           </table>
         </div>
       </div>
-      
-      <h1 style={{marginTop:'60px'}}>Calendario 2025</h1>
-      <Calendar eventos={EventsData}/>
+      <div className={styles.container}>
+        <h1 className={styles.title}>Calendario 2025</h1>
+        <Calendar eventos={EventsData}/>
+      </div>
     </div>
   );
 };

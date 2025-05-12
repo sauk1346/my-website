@@ -24,7 +24,7 @@ export default function Home() {
             <Card
               title="E-Learning"
               description="Plataformas"
-              image="/logos/elearning.png"
+              image="/logos/learnlogo.png"
               link='/elearning'
             />
             <Card

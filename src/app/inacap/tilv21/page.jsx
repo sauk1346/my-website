@@ -54,7 +54,13 @@ export default function Tilv21() {
             date: <EmphText>Vie 16, May 2025</EmphText>,
             weighting: <EmphText>25%</EmphText>,
             description: <EmphText>Examen (obligatorio)</EmphText>,
-            quickGuide: ''
+            quickGuide: <>
+                <CustomLink href='tilv21/controles'>Controles</CustomLink><br/>
+                <CustomLink href='tilv21/lecturas'>Lecturas</CustomLink><br/>
+                <CustomLink href='tilv21/unidad01'>Unidad01</CustomLink><br/>
+                Unidad02<br/>
+                Unidad03
+                </>
         }
 
     ];

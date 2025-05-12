@@ -68,6 +68,10 @@ export function useMDXComponents(components) {
     li: ({ children, ...props }) => (
       <li className={styles.listItem} {...props}>{children}</li>
     ),
+    // Agregar componente para citas blockquote
+    blockquote: ({ children, ...props }) => (
+      <blockquote className={styles.blockquote || ''} {...props}>{children}</blockquote>
+    ),
     // Agregar componentes para tablas usando los estilos existentes
     table: ({ children, ...props }) => (
       <table className={styles.table} {...props}>{children}</table>

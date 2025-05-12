@@ -37,7 +37,7 @@ export default function Home() {
               title="CodeTraining"
               description="Ejercicios"
               image="/logos/codeTraining.png"
-              link='/bootcamps'
+              link='/training'
             />
           </div>
         </div>

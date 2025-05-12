@@ -11,6 +11,9 @@ import "prismjs/components/prism-css";
 import "prismjs/components/prism-jsx";
 import "prismjs/components/prism-python";
 import "prismjs/components/prism-sql";
+import "prismjs/components/prism-java";
+import "prismjs/components/prism-c";
+import "prismjs/components/prism-cpp";
 import styles from "@/styles/CodeBlock.module.css";
 
 export function CodeBlock({ children, language }) {

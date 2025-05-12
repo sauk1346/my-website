@@ -3,6 +3,7 @@
   max-width: 900px;
   margin: 0 auto;
   padding: 2rem;
+  min-height: 100vh;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   color: #334155;
   line-height: 1.7;
@@ -281,15 +282,37 @@
 
 /* Bloques de citas */
 .container blockquote {
-  border-left: 4px solid #3b82f6;
-  padding-left: 1.5rem;
+  border-left: none;
+  padding-left: 0;
   margin-left: 0;
   margin-right: 0;
   margin-bottom: 1.75rem;
-  font-style: italic;
+  font-style: normal;
   color: #4b5563;
-  transition: color 0.3s ease, border-left-color 0.3s ease;
+  white-space: pre-wrap;
+  display: flex;
+  align-items: flex-start; /* Alinea los elementos en la parte superior */
+  transition: color 0.3s ease;
+  position: relative; /* Para posicionamiento de pseudo-elementos */
 }
+
+.container blockquote > * {
+  flex: 1;
+  padding-left: 1.5rem; /* Espacio a la izquierda del texto */
+}
+
+/* Barra lateral como pseudo-elemento con longitud controlada */
+.container blockquote::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4px;
+  height: calc(100% - 1.1rem); /* Resta un pequeño espacio al final */
+  background-color: #3b82f6;
+  transition: background-color 0.3s ease;
+}
+
 
 :global(html.dark-mode) .container blockquote,
 :global(html.dark-mode-override) .container blockquote {

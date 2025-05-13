@@ -84,18 +84,18 @@ export default function Mvfm01() {
             <CustomLink href='mvfm01/sm13'>- SM 3: Desabastecimiento</CustomLink>
             </> 
         },
-        { week: '', class: '05', date: 'Mié 28, Ago 2024', description: '- SM 4: Crecimiento de Bacterias' },
-        { week: '04', class: '06', date: 'Lun 02, Sep 2024', description: '- ARPA 4: La escala Ritcher' },
+        { week: '', class: '05', date: 'Mié 28, Ago 2024', description: <CustomLink href='mvfm01/sm14'>- SM 4: Crecimiento de Bacterias</CustomLink> },
+        { week: '04', class: '06', date: 'Lun 02, Sep 2024', description: <CustomLink href='mvfm01/arpa14'>- ARPA 4: La escala Ritcher</CustomLink> },
         { week: '', class: '07', date: 'Mié 04, Sep 2024', description: <>
-            - AFO 09<br/>
-            - AFO 10
+            <CustomLink href='mvfm01/afo1-09'>- AFO 09</CustomLink><br/>
+            <CustomLink href='mvfm01/afo1-10'>- AFO 10</CustomLink>
             </> },
-        { week: '05', class: '08', date: 'Lun 09, Sep 2024', description: '- SM 5: Seguidores en Instagram' },
+        { week: '05', class: '08', date: 'Lun 09, Sep 2024', description: <CustomLink href='mvfm01/sm15'>- SM 5: Seguidores en Instagram</CustomLink> },
         { week: '', class: '09', date: 'Mié 11, Sep 2024', description: <del>- Suspensión Clases</del> },
         { week: '06', class: '10', date: 'Lun 16, Sep 2024', description: <>
             - Revisión Control 1 y 2<br/>
-            - AFO 05<br/>
-            - AFO 10
+            <CustomLink href='mvfm01/afo1-05'>- AFO 05</CustomLink><br/>
+            <CustomLink href='mvfm01/afo1-10'>- AFO 10</CustomLink>
             </> },
         { week: '07', class: '11', date: 'Lun 23, Sep 2024', description: '- Repaso Logaritmo' },
         { week: '', class: '12', date: 'Mié 25, Sep 2024', description: '- Guía Resumen Unidad 1' },

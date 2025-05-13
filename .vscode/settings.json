@@ -1,0 +1,5 @@
+{
+    "mdx.validateMdx": true,
+    "diagnostics.ignoredMdxTags": ["\\ln", "\\cdot", "\\begin", "\\end", "\\aligned"],
+    "problems.decorations.enabled": false
+}

@@ -42,23 +42,63 @@ const Hr11 = () => {
                             </tr>
                             <tr>
                                 <td className={styles.code}>PY006</td>
-                                <td>Write a function</td>
+                                <td><CustomLink href='hr11/py006'>Write a function</CustomLink></td>
                             </tr>
                             <tr>
                                 <td className={styles.code}>PY007</td>
-                                <td>Print Function</td>
+                                <td><CustomLink href='hr11/py007'>Print Function</CustomLink></td>
                             </tr>
                             <tr>
                                 <td className={styles.code}>PY008</td>
-                                <td>List Comprehensions</td>
+                                <td><CustomLink href='hr11/py008'>List Comprehensions</CustomLink></td>
                             </tr>
                             <tr>
                                 <td className={styles.code}>PY009</td>
-                                <td>Find the Runner-Up Score!</td>
+                                <td><CustomLink href='hr11/py009'>Find the Runner-Up Score!</CustomLink></td>
                             </tr>
                             <tr>
                                 <td className={styles.code}>PY010</td>
-                                <td>Nested Lists</td>
+                                <td><CustomLink href='hr11/py010'>Nested Lists</CustomLink></td>
+                            </tr>
+                            <tr>
+                                <td className={styles.code}>PY011</td>
+                                <td><CustomLink href='hr11/py011'>Finding the percentage</CustomLink></td>
+                            </tr>
+                            <tr>
+                                <td className={styles.code}>PY012</td>
+                                <td>Lists</td>
+                            </tr>
+                            <tr>
+                                <td className={styles.code}>PY013</td>
+                                <td>Tuples</td>
+                            </tr>
+                            <tr>
+                                <td className={styles.code}>PY014</td>
+                                <td>sWAP cASE</td>
+                            </tr>
+                            <tr>
+                                <td className={styles.code}>PY015</td>
+                                <td>String Split and Join</td>
+                            </tr>
+                            <tr>
+                                <td className={styles.code}>PY016</td>
+                                <td>what's Your Name?</td>
+                            </tr>
+                            <tr>
+                                <td className={styles.code}>PY017</td>
+                                <td>Mutations</td>
+                            </tr>
+                            <tr>
+                                <td className={styles.code}>PY018</td>
+                                <td>Find a String</td>
+                            </tr>
+                            <tr>
+                                <td className={styles.code}>PY019</td>
+                                <td>String Validators</td>
+                            </tr>
+                            <tr>
+                                <td className={styles.code}>PY020</td>
+                                <td>Text Alignment</td>
                             </tr>
                             
                             </tbody>

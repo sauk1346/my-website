@@ -27,7 +27,7 @@ const LeetCode = () => {
                             </tr>
                             <tr>
                                 <td className={styles.code}>LC0002</td>
-                                <td>Add Two Numbers</td>
+                                <td><CustomLink href='leetcode/lc0002'>Add Two Numbers</CustomLink></td>
                                 <td>Linked List, Math, Recursion</td>
                             </tr>
                             <tr>
@@ -74,6 +74,11 @@ const LeetCode = () => {
                                 <td className={styles.code}>LC2094</td>
                                 <td><CustomLink href='leetcode/lc2094'>Finding 3-Digit Even Numbers</CustomLink></td>
                                 <td>Array, Hash Table, Sorting, Enumeration</td>
+                            </tr>
+                            <tr>
+                                <td className={styles.code}>LC3335</td>
+                                <td><CustomLink href='leetcode/lc3335'>Total Characters in String After Transformations I</CustomLink></td>
+                                <td>Hash Table, Math, String, Dynamic Programming, Counting</td>
                             </tr>
                             
                             </tbody>

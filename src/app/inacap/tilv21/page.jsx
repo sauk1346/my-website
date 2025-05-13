@@ -58,8 +58,8 @@ export default function Tilv21() {
                 <CustomLink href='tilv21/controles'>Controles</CustomLink><br/>
                 <CustomLink href='tilv21/lecturas'>Lecturas</CustomLink><br/>
                 <CustomLink href='tilv21/unidad01'>Unidad01</CustomLink><br/>
-                Unidad02<br/>
-                Unidad03
+                <CustomLink href='tilv21/unidad02'>Unidad02</CustomLink><br/>
+                <CustomLink href='tilv21/unidad03'>Unidad03</CustomLink>
                 </>
         }
 

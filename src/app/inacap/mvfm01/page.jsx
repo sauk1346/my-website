@@ -45,7 +45,7 @@ export default function Mvfm01() {
             evaluationNumber: 1, 
             date: 'Lun 30, Sep 2024', 
             weighting: '25%', 
-            description: 'Evaluación 01' , 
+            description: <ExternalLink href='/inacap/mvfm01/docs/eval01.pdf'>Evaluación 01</ExternalLink> , 
             quickGuide: ''
         },
         { 
@@ -97,9 +97,9 @@ export default function Mvfm01() {
             <CustomLink href='mvfm01/afo1-05'>- AFO 05</CustomLink><br/>
             <CustomLink href='mvfm01/afo1-10'>- AFO 10</CustomLink>
             </> },
-        { week: '07', class: '11', date: 'Lun 23, Sep 2024', description: '- Repaso Logaritmo' },
-        { week: '', class: '12', date: 'Mié 25, Sep 2024', description: '- Guía Resumen Unidad 1' },
-        { week: '08', class: '13', date: 'Lun 30, Sep 2024', description: '- Evaluación 01' },
+        { week: '07', class: '11', date: 'Lun 23, Sep 2024', description: <CustomLink href='mvfm01/repaso01'>- Repaso (sin logaritmo)</CustomLink> },
+        { week: '', class: '12', date: 'Mié 25, Sep 2024', description: <CustomLink href='mvfm01/guia01'>- Guía Resumen Unidad 1</CustomLink> },
+        { week: '08', class: '13', date: 'Lun 30, Sep 2024', description: <ExternalLink href='/inacap/mvfm01/docs/eval01.pdf'>- Evaluación 01</ExternalLink> },
         { week: '', class: '14', date: 'Mié 02, Oct 2024', description: <>
             - Introducción a Trigonometría<br/>
             - ARPA 1: La plaza de skate

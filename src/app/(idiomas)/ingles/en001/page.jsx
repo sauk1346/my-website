@@ -1,3 +1,4 @@
+import CustomLink from '@/components/CustomLink';
 import styles from '@/styles/elearning.module.css'
 import Link from 'next/link';
 
@@ -20,15 +21,15 @@ const En001 = () => {
                         <tbody>
                         <tr className={styles.tableRow}>
                             <td>01</td>
-                            <td><Link href='en001/module01' className={styles.link}>Consonant Directions, Voiced and Voiceless, Shadowing a Conversation</Link></td>
+                            <td><CustomLink href='en001/module01'>Consonant Directions, Voiced and Voiceless, Shadowing a Conversation</CustomLink></td>
                         </tr>
                         <tr className={styles.tableRow}>
                             <td>02</td>
-                            <td><Link href='en001/module02' className={styles.link}>Consonants that Pop, Consonants that Hiss, Confusing Consonants</Link></td>
+                            <td><CustomLink href='en001/module02'>Consonants Sounds that Pop, Consonants Sounds that Hiss, Confusing Consonants Pairs</CustomLink></td>
                         </tr>
                         <tr className={styles.tableRow}>
                             <td>03</td>
-                            <td>Module 03</td>
+                            <td><CustomLink href='en001/module03'>Consonant Sounds that Hum, Consonant Sounds that Flow, Confusing Consonant Pairs 2</CustomLink></td>
                         </tr>
                         <tr className={styles.tableRow}>
                             <td>04</td>

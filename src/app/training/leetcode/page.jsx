@@ -80,6 +80,11 @@ const LeetCode = () => {
                                 <td><CustomLink href='leetcode/lc3335'>Total Characters in String After Transformations I</CustomLink></td>
                                 <td>Hash Table, Math, String, Dynamic Programming, Counting</td>
                             </tr>
+                            <tr>
+                                <td className={styles.code}>LC3337</td>
+                                <td><CustomLink href='leetcode/lc3337'>Total Characters in String After Transformations II</CustomLink></td>
+                                <td>Hash Table, Math, String, Dynamic Programming, Counting</td>
+                            </tr>
                             
                             </tbody>
                         </table>

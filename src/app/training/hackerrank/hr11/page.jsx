@@ -66,15 +66,15 @@ const Hr11 = () => {
                             </tr>
                             <tr>
                                 <td className={styles.code}>PY012</td>
-                                <td>Lists</td>
+                                <td><CustomLink href='hr11/py012'>Lists</CustomLink></td>
                             </tr>
                             <tr>
                                 <td className={styles.code}>PY013</td>
-                                <td>Tuples</td>
+                                <td><CustomLink href='hr11/py013'>Tuples</CustomLink></td>
                             </tr>
                             <tr>
                                 <td className={styles.code}>PY014</td>
-                                <td>sWAP cASE</td>
+                                <td><CustomLink href='hr11/py014'>sWAP cASE</CustomLink></td>
                             </tr>
                             <tr>
                                 <td className={styles.code}>PY015</td>

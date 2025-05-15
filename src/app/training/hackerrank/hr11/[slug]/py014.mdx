@@ -1,0 +1,33 @@
+# sWAP cASE
+
+You are given a string and your task is to swap cases. In other words, convert all lowercase letters to uppercase letters and vice versa.
+
+For Example
+
+- Www.HackerRank.com → wWW.hACKERrANK.COM
+- Pythonist 2 → pYTHONIST 2 
+
+<details>
+    <summary>Solution</summary>
+```python
+def swap_case(s):
+    
+    resultado = ""
+    for caracter in s:
+        codigo = ord(caracter)
+        
+        #ascii uppercases
+        if 65 <= codigo <= 90:  
+            resultado += chr(codigo + 32)
+        
+        # ascii lowecases
+        elif 97 <= codigo <= 122:
+            resultado += chr(codigo - 32)
+        
+        # numbers
+        else:
+            resultado += caracter   
+    
+    return resultado
+```
+</details>

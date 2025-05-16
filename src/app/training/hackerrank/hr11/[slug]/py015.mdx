@@ -1,0 +1,41 @@
+# String Split and Join
+
+
+## Task
+You are given a string. Split the string on a `" "` (space) delimiter and join using a `-` hyphen.
+
+## Function Description Complete the split_and_join function in the editor below
+
+```python
+def split_and_join(line):
+    # write your code here
+
+if __name__ == '__main__':
+    line = input()
+    result = split_and_join(line)
+    print(result)
+```
+
+split_and_join has the following parameters:
+
+- string line: a string of space-separated words
+
+## Example
+
+>**Input**
+>this is a string
+
+>**Output**
+>this-is-a-string
+
+
+<details>
+    <summary>Solution</summary>
+```python
+def split_and_join(line):
+    my_list = line.split(" ")
+    result = "-".join(my_list)
+
+    return result
+```
+</details>

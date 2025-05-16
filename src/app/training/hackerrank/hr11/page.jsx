@@ -78,15 +78,15 @@ const Hr11 = () => {
                             </tr>
                             <tr>
                                 <td className={styles.code}>PY015</td>
-                                <td>String Split and Join</td>
+                                <td><CustomLink href='hr11/py015'>String Split and Join</CustomLink></td>
                             </tr>
                             <tr>
                                 <td className={styles.code}>PY016</td>
-                                <td>what's Your Name?</td>
+                                <td><CustomLink href='hr11/py016'>What's Your Name?</CustomLink></td>
                             </tr>
                             <tr>
                                 <td className={styles.code}>PY017</td>
-                                <td>Mutations</td>
+                                <td><CustomLink href='hr11/py017'>Mutations</CustomLink></td>
                             </tr>
                             <tr>
                                 <td className={styles.code}>PY018</td>
@@ -99,6 +99,22 @@ const Hr11 = () => {
                             <tr>
                                 <td className={styles.code}>PY020</td>
                                 <td>Text Alignment</td>
+                            </tr>
+                            <tr>
+                                <td className={styles.code}>PY021</td>
+                                <td>Text Wrap</td>
+                            </tr>
+                            <tr>
+                                <td className={styles.code}>PY022</td>
+                                <td>Designer Door Mat</td>
+                            </tr>
+                            <tr>
+                                <td className={styles.code}>PY023</td>
+                                <td>String Formatting</td>
+                            </tr>
+                            <tr>
+                                <td className={styles.code}>PY024</td>
+                                <td>Alphabet Rangoli</td>
                             </tr>
                             
                             </tbody>

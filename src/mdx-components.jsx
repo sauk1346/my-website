@@ -1,4 +1,4 @@
-// mdx-components.jsx
+import React from 'react';
 import Link from 'next/link';
 import styles from './styles/clases.module.css';
 import { CodeBlock } from "./components/CodeBlock";

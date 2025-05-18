@@ -1,0 +1,121 @@
+# String Validators
+
+Python has built-in string validation methods for basic data. It can check if a string is composed of aphabetical characters, alphanumeric characters, digits, etc.
+
+1. `str.isalnum()` : Checks if all the characters of a string are alphanumeric (a-z, A-Z and 0-9)
+
+```python
+>>> print 'ab123'.isalnum()
+True
+>>> print 'ab123#'.isalnum()
+False
+```
+
+2. `str.isalpha()` : Checks if all the characters of a stirng are alphabetical (a-z and A-Z)
+
+```python
+>>> print 'abcD'.isalpha()
+True
+>>> print 'abcd1'.isalpha()
+False
+```
+
+3. `str.isdigit()` : Checks if all the characters of a string are digits (0-9)
+
+```python
+>>> print '1234'.isdigit()
+True
+>>> print '123edsd'.isdigit()
+False
+```
+
+4. `str.islower()` : Checks if all the characters of a string are lowercase character (a-z)
+
+```python
+>>> print 'abcd123#'.islower()
+True
+>>> print 'Abcd123#'.islower()
+False
+```
+
+5. `str.isupper()` : Checks if all the characters of a string are uppercase character (A-Z)
+
+```python
+>>> print 'ABCD123#'.isupper()
+True
+>>> print 'Abcd123#'.isupper()
+False
+```
+
+## Task
+
+You are given a string $S$. Your task is to find out if the string $S$ contains:
+
+- alphanumeric characters, alphabetical characters, digits, lowecase and uppercase characters
+
+
+## Input Format
+A single line containing a string $S$
+
+## Output Format
+- In the first line, print `True` if $S$ has any alphanumeric character. Otherwise, print `False`
+- In the second line, print `True` if $S$ has any alphabetical characters. Otherwise, print `False`  
+- In the third line, print `True` if $S$ has any digits. Otherwise, print `False`  
+- In the fourth line, print `True` if $S$ has any lowercase characters. Otherwise, print `False` 
+- In the fifth line, print `True` if $S$ has any uppercase characters. Otherwise, print `False`
+
+## Example
+
+> **Input**
+> qA2
+
+> **Output**
+> True
+> True
+> True
+> True
+> True
+
+
+<details>
+    <summary>Solution</summary>
+```python
+if __name__ == '__main__':
+    s = input()
+    
+    any_alphanumeric = False
+    for i in s:
+        if i.isalnum():
+            any_alphanumeric = True
+            break
+    print(any_alphanumeric)
+    
+    any_alphabetical = False
+    for i in s:
+        if i.isalpha():
+            any_alphabetical = True
+            break
+    print(any_alphabetical)
+    
+    any_digit = False
+    for i in s:
+        if i.isdigit():
+            any_digit = True
+            break
+    print(any_digit)
+            
+    any_lowercase = False
+    for i in s:
+        if i.islower():
+            any_lowercase = True
+            break
+    print(any_lowercase)
+    
+    any_uppercase = False
+    for i in s:
+        if i.isupper():
+            any_uppercase = True
+            break
+    print(any_uppercase)
+```
+</details>

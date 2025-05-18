@@ -1,0 +1,58 @@
+# Longest Unequal Adjacent Group Subsequence II
+
+You are given a string array `words`, and an array `groups`, both arrays having length `n`.
+
+The **hamming distance** between two strings of equal lenght is the number of positions at which the corresponding characters are **different**.
+
+You need to select the **longest** subsequence from an array of indices $[0, 1, ..., n-1]$ such that for the subsequence denoted as $[i_0, i_1, ..., i_{k-1}]$ having length $k$, the following holds:
+
+- For **adjacent** indices in the subsequences, their corresponding groups are **unequal**, i.e., groups[i_j] != groups[ij+1]
+
+
+
+## Solutions
+
+<details>
+    <summary>Python</summary>
+```python
+class Solution:
+    def getWordsInLongestSubsequence(self,words, groups):
+        n = len(words)
+        
+        lis = [1] * n  
+        parent = [-1] * n  
+        
+        lis_len = 1  
+        lis_end = 0  
+        
+        def hammingDistance(s1, s2):
+            if len(s1) != len(s2):
+                return float('inf')
+            return sum(c1 != c2 for c1, c2 in zip(s1, s2))
+        
+        for i in range(n):
+            for j in range(i + 1, n):
+                if (groups[i] != groups[j] and 
+                    len(words[i]) == len(words[j]) and 
+                    hammingDistance(words[i], words[j]) == 1 and 
+                    lis[i] + 1 > lis[j]):
+                    
+                    lis[j] = lis[i] + 1
+                    parent[j] = i
+                    
+                    if lis[j] > lis_len:
+                        lis_len = lis[j]
+                        lis_end = j
+        
+        ans = []
+        cur = lis_end
+        
+        while cur != -1:
+            ans.append(words[cur])
+            cur = parent[cur]
+        
+        ans.reverse()
+        
+        return ans
+```
+</details>

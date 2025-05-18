@@ -90,15 +90,15 @@ const Hr11 = () => {
                             </tr>
                             <tr>
                                 <td className={styles.code}>PY018</td>
-                                <td>Find a String</td>
+                                <td><CustomLink href='hr11/py018'>Find a String</CustomLink></td>
                             </tr>
                             <tr>
                                 <td className={styles.code}>PY019</td>
-                                <td>String Validators</td>
+                                <td><CustomLink href='hr11/py019'>String Validators</CustomLink></td>
                             </tr>
                             <tr>
                                 <td className={styles.code}>PY020</td>
-                                <td>Text Alignment</td>
+                                <td><CustomLink href='hr11/py020'>Text Alignment</CustomLink></td>
                             </tr>
                             <tr>
                                 <td className={styles.code}>PY021</td>

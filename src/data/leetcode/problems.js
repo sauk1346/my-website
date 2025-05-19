@@ -23,6 +23,42 @@ export const problems = {
       difficulty: "Medium",
       categories: ["general"]
     },
+    "LC0183": {
+      title: "Customer Who Never Order",
+      topics: ["Database"],
+      difficulty: "Easy",
+      categories: ["pandas"]
+    },
+    "LC0361": {
+      title: "Bomb Enemy",
+      topics: ["Array", "Dynamic Programming", "Matrix"],
+      difficulty: "Medium",
+      categories: ["general"]
+    },
+    "LC0595": {
+      title: "Big Countries",
+      topics: ["Array", "Hash Table"],
+      difficulty: "Easy",
+      categories: ["pandas"]
+    },
+    "LC1148": {
+      title: "Article Views I",
+      topics: ["Database"],
+      difficulty: "Easy",
+      categories: ["pandas"]
+    },
+    "LC1757": {
+      title: "Recyclable and Low Fat Products",
+      topics: ["Database"],
+      difficulty: "Easy",
+      categories: ["pandas"]
+    },
+    "LC1931": {
+      title: "Painting a Grid With Three Different Colors",
+      topics: ["Dynamic Programming"],
+      difficulty: "Hard",
+      categories: ["general"]
+    },
     "LC2094": {
       title: "Finding 3-Digit Even Numbers",
       topics: ["Array", "Hash Table", "Sorting", "Enumeration"],
@@ -53,16 +89,4 @@ export const problems = {
       difficulty: "Hard",
       categories: ["general"]
     },
-    "LC0595": {
-      title: "Big Countries",
-      topics: ["Array", "Hash Table"],
-      difficulty: "Easy",
-      categories: ["pandas"]
-    },
-    "LC1757": {
-      title: "Recyclable and Low Fat Products",
-      topics: ["Database"],
-      difficulty: "Easy",
-      categories: ["pandas"]
-    }
   };

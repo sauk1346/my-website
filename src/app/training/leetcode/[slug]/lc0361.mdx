@@ -1,0 +1,108 @@
+# Bomb Enemy
+
+Given an `m x n` matrix `grid` where each cell is either a wall `'W'`, and enemy `'E'` or empty `0`, return *the maximun enemies you can kill using one bomb.* You can only place the bomb in a empty cell.
+
+The bomb kills all the enemies in the same row and columns from the planted point until it hits the wall since it is too strong to be destroyed.
+
+## Examples
+
+**Example 1:**
+<img
+	src="/training/leetcode/fig04.jpg"
+	style={{ display: 'block', margin: '0 auto', width:'60%'}}
+/>
+<br/>
+
+> **Input:** grid = [["0","E","0","0"],["E","0","W","E"],["0","E","0","0"]]
+> **Output:** 3
+
+**Example 2:**
+<img
+	src="/training/leetcode/fig05.jpg"
+	style={{ display: 'block', margin: '0 auto', width:'60%'}}
+/>
+<br/>
+
+> **Input:** grid = [["W","W","W"],["0","0","0"],["E","E","E"]]
+> **Output:** 1
+
+
+## Solution
+
+<details>
+    <summary>Python</summary>
+```python
+class Solution:
+    def maxKilledEnemies(self, grid: List[List[str]]) -> int:
+    
+        if not grid or not grid[0]:
+            return 0
+        
+        m, n = len(grid), len(grid[0])
+        max_killed = 0
+        
+        # Arrays para almacenar enemigos en cada dirección para cada celda
+        row_kills = [[0] * n for _ in range(m)]
+        col_kills = [[0] * n for _ in range(m)]
+        
+        # Procesar filas - calcular enemigos por fila
+        for i in range(m):
+            # Procesamiento de izquierda a derecha
+            row_count = 0
+            for j in range(n):
+                if grid[i][j] == 'W':
+                    row_count = 0  # Reset al encontrar muro
+                elif grid[i][j] == 'E':
+                    row_count += 1
+                    
+                row_kills[i][j] = row_count
+            
+            # Procesamiento de derecha a izquierda
+            row_count = 0
+            for j in range(n-1, -1, -1):
+                if grid[i][j] == 'W':
+                    row_count = 0
+                elif grid[i][j] == 'E':
+                    row_count += 1
+                    
+                # Importante: no sobrescribir, sino sumar
+                row_kills[i][j] += row_count
+                # Si es una E, restamos 1 para no contar dos veces
+                if grid[i][j] == 'E':
+                    row_kills[i][j] -= 1
+        
+        # Procesar columnas - calcular enemigos por columna
+        for j in range(n):
+            # Procesamiento de arriba a abajo
+            col_count = 0
+            for i in range(m):
+                if grid[i][j] == 'W':
+                    col_count = 0
+                elif grid[i][j] == 'E':
+                    col_count += 1
+                    
+                col_kills[i][j] = col_count
+            
+            # Procesamiento de abajo a arriba
+            col_count = 0
+            for i in range(m-1, -1, -1):
+                if grid[i][j] == 'W':
+                    col_count = 0
+                elif grid[i][j] == 'E':
+                    col_count += 1
+                    
+                col_kills[i][j] += col_count
+                # Si es una E, restamos 1 para no contar dos veces
+                if grid[i][j] == 'E':
+                    col_kills[i][j] -= 1
+        
+        # Encontrar la celda con máximo alcance
+        for i in range(m):
+            for j in range(n):
+                if grid[i][j] == '0':  # Solo en celdas vacías
+                    total_killed = row_kills[i][j] + col_kills[i][j]
+                    max_killed = max(max_killed, total_killed)
+        
+        return max_killed
+``` 
+</details>

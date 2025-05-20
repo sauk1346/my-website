@@ -54,5 +54,5 @@ const courseData = {
         { week: '01', lecture: '01', date: 'Sáb 24, May 2025', description: 'Direccionamiento de redes basada en protocolos TCP/IP' },
         { week: '', lecture: '02', date: 'Sáb 24, May 2025', description: 'Interconexión de dispositivos y redes' },
     ],
-;
-export default courseData;}
+};
+export default courseData;

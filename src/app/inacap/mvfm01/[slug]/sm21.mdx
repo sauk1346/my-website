@@ -1,0 +1,294 @@
+import ExternalLink from '@/components/ExternalLink';
+
+# Situación de Modelación 1: La Rampa
+
+## Material
+- <ExternalLink href='/inacap/mvfm01/docs/sm21.pdf'>sm21.pdf</ExternalLink>
+
+Para asegurar que las rampas sean accesibles y seguras, la norma vigente en Chile establece que la pendiente máxima permitida para rampas es del 12% para distancias horizontales de hasta 150cm. Esto significa que, por cada 100cm de recorrido horizontal, la rampa puede tener hasta 12cm de altura. Cuando la distancia horizontal es mayor a 150cm, la pendiente debe reducirse a un 8%.
+
+## Actividad 01
+Considerando la ilustración
+
+<img
+	src="/inacap/mvfm01/images/fig121.png"
+	style={{ display: 'block', margin: '0 auto', width:'80%'}}
+/>
+<br/>
+
+Completa la siguiente tabla con las diferentes medidas que podría tener una rampa:
+
+|Distancia horizontal (D) cm|Diferencia de nivel cm|Pendiente %| Pendiente en decimal|
+|---|---|---|---|
+||12||
+||12||
+||12||
+||8||
+||8||
+||8||
+
+<details>
+	<summary>Solución</summary>
+<br/>
+<img
+	src="/inacap/mvfm01/images/fig122.png"
+	style={{ display: 'block', margin: '0 auto', width:'30%'}}
+/>
+<br/>
+
+|Distancia horizontal (D) cm|Diferencia de nivel cm|Pendiente %| Pendiente en decimal|
+|---|---|---|---|
+|50 |6|12|6/50 = 0.12|
+|100|12|12|12/100 = 0.12|
+|150|18|12|18/150 = 0.12|
+|200|16|8|16/200 = 0.08|
+|250|20|8|20/250 = 0.08|
+|300|24|8|24/300 = 0.08|
+
+</details><br/><br/>
+
+## Actividad 02
+Utiliza Geogebra Para dibujar las rampas de la tabla anterior utilizando el comando **Polígono**:
+
+Podría resultar conveniente utilizar el punto de coordenadas (0,0) en el plano como punto de partida y el semieje de las abscisas x, para representar la distancia horizontal de cada rampa. Luego responde las siguientes preguntas
+
+1. **¿Qué tipo de triángulo representa las rampas dibujadas?**
+
+<details>
+	<summary>Solución</summary>
+<br/>
+<img
+	src="/inacap/mvfm01/images/fig123.png"
+	style={{ display: 'block', margin: '0 auto', width:'35%'}}
+/>
+<br/>
+
+<img
+	src="/inacap/mvfm01/images/fig124.svg"
+	style={{ display: 'block', margin: '0 auto', width:'100%'}}
+/>
+<br/>
+
+Si consideramos cada rampa como un triángulo, entonces cada rampa es un triángulo rectángulo, ya que su base es perpendicular con su altura, formando un ángulo de 90° en ambas rampas
+</details><br/><br/>
+
+2. **¿Qué semejanzas observas entre las rampas dibujadas?**
+
+<details>
+	<summary>Solución</summary>
+
+- En ambas rampas existe una proporcion definida entre su base y altura
+- En ambas rampas existe un ángulo de 90 grados
+</details><br/><br/>
+
+3. **¿Qué diferencias observas entre las rampas dibujadas?**
+<details>
+	<summary>Solución</summary>
+
+- Cada rampa posee una pendiente diferente
+- La primera rampa tiene un rango límite, para $x \in (0, 150]$
+- La segunda rampa tiene un rango para $x \in (150, \infty)$
+</details><br/><br/>
+
+## Actividad 03
+Utiliza Geogebra para medir los ángulos interiores de las rampas representadas. Luego responde las siguiente preguntas:
+
+1. **¿Cuál es la medida del ángulo de inclinación de las rampas con una pendiente del 12%?**
+
+<details>
+	<summary>Solución</summary>
+
+- GeoGebra: `Herramientas >> Medición >> Ángulo`
+
+<img
+	src="/inacap/mvfm01/images/fig125.svg"
+	style={{ display: 'block', margin: '0 auto', width:'100%'}}
+/>
+<br/>
+
+El ángulo de inclinación de la rampa con una pendiente del 12% es `6.84` grados
+
+También se puede calcular con arcoTangente, ya que la pendiente es la relación entre los catetos del triángulo
+
+<img
+	src="/inacap/mvfm01/images/fig126.png"
+	style={{ display: 'block', margin: '0 auto', width:'30%'}}
+/>
+<br/>
+</details><br/><br/>
+
+2. **¿Cuál es la medida del ángulo de inclinación de las rampas con una pendiente del 8%?**
+
+<details>
+	<summary>Solución</summary>
+<br/>
+<img
+	src="/inacap/mvfm01/images/fig125.svg"
+	style={{ display: 'block', margin: '0 auto', width:'100%'}}
+/>
+<br/>
+
+El ángulo de inclinación de la rampa con una pendiente del 8% es `4.57` grados
+
+También se puede calcular con arcoTangente, ya que la pendiente es la relación entre los catetos del triángulo
+
+<img
+	src="/inacap/mvfm01/images/fig127.png"
+	style={{ display: 'block', margin: '0 auto', width:'30%'}}
+/>
+<br/>
+</details><br/><br/>
+
+3. **¿Cuál debería ser la medida del ángulo de inclinación de una rampa cuya pendiente sea del 6%?**
+
+<details>
+	<summary>Solución</summary>
+<br/>
+<img
+	src="/inacap/mvfm01/images/fig128.png"
+	style={{ display: 'block', margin: '0 auto', width:'30%'}}
+/>
+<br/>
+
+El ángulo de inclinación para una rampa cuya pendiente es del 6%, es de `3.43` grados
+</details><br/><br/>
+
+## Actividad 04 
+
+1. **Completa la tabla siguiente usando Geogebra o tu calculadora para calcular los valores del seno, coseno y tangente del ángulo especificado en cada caso. Considera las siguientes definiciones:**
+
+<img
+	src="/inacap/mvfm01/images/fig132.svg"
+	style={{ display: 'block', margin: '0 auto', width:'60%'}}
+/>
+<br/>
+
+- **D:** distancia horizontal que recorre la rampa
+- **N:** elevación vertical de la rampa
+- **H:** Longitud de la rampa medida a lo largo de la hipotenusa del triángulo rectángulo que representa la rampa
+
+Aproxima por redondeo:
+	
+- los valores de los ángulos a dos lugares decimales
+- los del seno, coseno, tangente y cocientes a cuatro lugares decimales
+
+|Pendiente de la rampa|áng. Inclinación rampa $\alpha$ (grados)|$\sin\alpha$|$\cos\alpha$|$\tan\alpha$|$N/H$|$D/H$|$N/D$|
+|---|---|---|---|---|---|---|---|
+|12%||||||||
+|8%||||||||
+|6%||||||||
+
+<details>
+	<summary>Solución</summary>
+<br/>
+<div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '20px' }}>
+  <div>
+    <img
+      src="/inacap/mvfm01/images/fig129.png"
+      style={{ width: '100%', height: 'auto' }}
+    />
+  </div>
+  <div>
+    <img
+      src="/inacap/mvfm01/images/fig130.png"
+      style={{ width: '100%', height: 'auto' }}
+    />
+  </div>
+  <div>
+    <img
+      src="/inacap/mvfm01/images/fig131.png"
+      style={{ width: '100%', height: 'auto' }}
+    />
+  </div>
+</div>
+
+|Pendiente de la rampa|áng. Inclinación rampa $\alpha$ (grados)|$\sin\alpha$|$\cos\alpha$|$\tan\alpha$|$N/H$|$D/H$|$N/D$|
+|---|---|---|---|---|---|---|---|
+|12%|6.84|0.1191|0.9929|0.12|$\sin\alpha$|$\cos\alpha$|$\tan\alpha$|
+|8%|4.57|0.0797|0.9968|0.08|$\sin\alpha$|$\cos\alpha$|$\tan\alpha$|
+|6%|3.43|0.0599|0.9982|0.06|$\sin\alpha$|$\cos\alpha$|$\tan\alpha$|
+</details><br/><br/>
+
+2. **¿Cómo se relacionan las razones trigonométricas de seno, coseno, tangente con los datos de la tabla?**
+
+<details>
+	<summary>Solución</summary>
+
+$$
+\begin{aligned}
+\sin\alpha &= \frac{cateto\;opuesto}{hipotenusa} &= \frac{N}{H}\\[10pt]
+\cos\alpha &= \frac{cateto\;adyacente}{hipotenusa} &= \frac{D}{H}\\[10pt]
+\tan\alpha &= \frac{cateto\;opuesto}{cateto\;adyacente} &= \frac{N}{D}\\[10pt]
+\end{aligned}
+$$
+
+</details><br/><br/>
+
+## Actividad 05
+
+1. **¿Qué comandos de GeoGebra y qué funciones de tu calculadora te permiten determinar el ángulo de un triángulo rectángulo conociendo sus datos, sin necesidad de representarlo gráficamente? Verifícalo con los datos obtenidos en la tabla de la actividad anterior.**
+
+<details>
+	<summary>Solución</summary>
+
+Conociendo sus catetos, o en su defecto la razón de sus catetos (pendiente rampa). Luego se despeja el ángulo mediante:
+
+$$
+\begin{aligned}
+    ángulo = \tan^{-1}(pendiente)
+\end{aligned}
+$$
+
+- GeoGebra: `arctan`
+- Calculadora: `tan^-1`
+</details><br/><br/>
+
+2. **Si se desea que el ángulo de inclinación de una rampa sea de 4°, ¿Cuál debería ser el pocentaje aproximado de su pendiente?**
+
+<details>
+	<summary>Solución</summary>
+
+$$
+\begin{aligned}
+    ángulo &= \tan^{-1}(pendiente)\\[5pt]
+    \tan(ángulo) &= pendiente\\[5pt]
+\end{aligned}
+$$
+
+<img
+	src="/inacap/mvfm01/images/fig133.png"
+	style={{ display: 'block', margin: '0 auto', width:'30%'}}
+/>
+<br/>
+
+$\therefore$ El porcentaje aproximado de su pendiente debería ser 6.99%
+</details><br/><br/>
+
+### Pregunta C
+Considerando que la diferencia de nivel deseada para la rampa mencionada en la pregunta anterior es de 25cm, ¿cuál debería ser la distancia horizontal que la rampa debe recorrer?
+<details>
+	<summary>Solución</summary>
+<br/>
+<img
+	src="/inacap/mvfm01/images/fig132.svg"
+	style={{ display: 'block', margin: '0 auto', width:'60%'}}
+/>
+<br/>
+
+
+$$
+\begin{aligned}
+    \tan(4) &= N/D\\[5pt]
+    D &= N/\tan(4)\\[5pt]
+    &= 25/tan(4)\\[5pt]
+\end{aligned}
+$$
+
+<img
+	src="/inacap/mvfm01/images/fig134.png"
+	style={{ display: 'block', margin: '0 auto', width:'30%'}}
+/>
+<br/>
+
+$\therefore$ La distancia horizontal que la rampa debe recorrer es de 357.52 cm
+</details><br/><br/>

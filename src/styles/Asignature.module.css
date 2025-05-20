@@ -130,45 +130,7 @@
   text-decoration: underline;
 }
 
-/* Estilos para tablas dentro de las tarjetas */
-.card table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 0.95rem;
-}
-
-.card th,
-.card td {
-  padding: 0.625rem;
-  border-bottom: 1px solid #e2e8f0;
-  transition: border-color 0.3s ease, color 0.3s ease;
-}
-
-/* Celdas de tabla en modo oscuro */
-:global(html.dark-mode) .card th,
-:global(html.dark-mode) .card td,
-:global(html.dark-mode-override) .card th,
-:global(html.dark-mode-override) .card td {
-  border-bottom: 1px solid #374151;
-  color: #e5e7eb;
-}
-
-.card th {
-  font-weight: bold;
-  text-align: left;
-  background-color: #1f2937;
-  color: white;
-  transition: background-color 0.3s ease;
-}
-
-/* Encabezados de tabla en modo oscuro */
-:global(html.dark-mode) .card th,
-:global(html.dark-mode-override) .card th {
-  background-color: #111827;
-  color: #f9fafb;
-}
-
-/* ==================== NUEVOS ESTILOS PARA NAVEGACIÓN POR PESTAÑAS ==================== */
+/* ==================== ESTILOS PARA NAVEGACIÓN POR PESTAÑAS ==================== */
 
 /* Estilos para pestañas */
 .tabNavigation {
@@ -230,7 +192,7 @@
   width: 100%;
 }
 
-/* ==================== NUEVOS ESTILOS PARA TARJETAS ==================== */
+/* ==================== ESTILOS PARA TARJETAS ==================== */
 
 .cardHeader {
   padding: 1rem;
@@ -280,7 +242,7 @@
   color: #f3f4f6;
 }
 
-/* ==================== NUEVOS ESTILOS PARA ELEMENTOS DE INFORMACIÓN ==================== */
+/* ==================== ESTILOS PARA ELEMENTOS DE INFORMACIÓN ==================== */
 
 .infoItem {
   margin-bottom: 0.75rem;
@@ -300,7 +262,7 @@
   color: #94a3b8;
 }
 
-/* ==================== NUEVOS ESTILOS PARA LISTAS ==================== */
+/* ==================== ESTILOS PARA LISTAS ==================== */
 
 .listNoStyle {
   list-style: none;
@@ -353,130 +315,55 @@
   background-color: #172554;
 }
 
-/* ==================== NUEVOS ESTILOS PARA TABLAS ==================== */
+/* ==================== ESTILOS PARA LISTA DE CLASES ==================== */
 
-.tableContainer {
-  overflow-x: auto;
-  width: 100%;
-  border-radius: 0.5rem;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+.classList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
-/* Modo oscuro para contenedor de tabla */
-:global(html.dark-mode) .tableContainer,
-:global(html.dark-mode-override) .tableContainer {
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
-}
-
-.dataTable {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.dataTable th {
-  background-color: #1f2937;
-  color: white;
+.classItem {
   padding: 0.75rem;
-  text-align: left;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* Modo oscuro para encabezados de tabla */
-:global(html.dark-mode) .dataTable th,
-:global(html.dark-mode-override) .dataTable th {
-  background-color: #111827;
-}
-
-.dataTable td {
-  padding: 0.75rem;
-  border-bottom: 1px solid #e2e8f0;
-  transition: border-color 0.3s ease, background-color 0.3s ease;
-}
-
-/* Modo oscuro para celdas de tabla */
-:global(html.dark-mode) .dataTable td,
-:global(html.dark-mode-override) .dataTable td {
-  border-bottom: 1px solid #374151;
-  color: #e5e7eb;
-}
-
-.dataTable tr:hover {
-  background-color: #f8fafc;
-  transition: background-color 0.3s ease;
-}
-
-/* Modo oscuro para filas de tabla al pasar el mouse */
-:global(html.dark-mode) .dataTable tr:hover,
-:global(html.dark-mode-override) .dataTable tr:hover {
-  background-color: #1e293b;
-}
-
-.highlightRow {
-  background-color: #eff6ff;
-  transition: background-color 0.3s ease;
-}
-
-/* Modo oscuro para fila destacada */
-:global(html.dark-mode) .highlightRow,
-:global(html.dark-mode-override) .highlightRow {
-  background-color: #172554;
-}
-
-/* ==================== NUEVOS ESTILOS PARA ALERTAS ==================== */
-
-.alertBox {
-  margin-top: 1.5rem;
-  padding: 1rem;
-  background-color: #fef3c7;
-  border: 1px solid #f59e0b;
+  background-color: white;
+  border: 1px solid #e2e8f0;
   border-radius: 0.375rem;
   transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
-/* Modo oscuro para cajas de alerta */
-:global(html.dark-mode) .alertBox,
-:global(html.dark-mode-override) .alertBox {
-  background-color: #422006;
-  border-color: #d97706;
+/* Modo oscuro para items de clase */
+:global(html.dark-mode) .classItem,
+:global(html.dark-mode-override) .classItem {
+  background-color: #1e1e1e;
+  border-color: #374151;
 }
 
-.alertTitle {
+.classHeader {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  font-size: 1rem;
-  font-weight: bold;
-  color: #92400e;
   margin-bottom: 0.5rem;
+  position: relative;
+  padding-right: 7.5rem; /* Para dejar espacio a la fecha */
+}
+
+.classNumber {
+  font-weight: 500;
+  color: #1f2937;
   transition: color 0.3s ease;
+  margin-right: auto; /* Empuja la fecha hacia la derecha */
 }
 
-/* Modo oscuro para títulos de alerta */
-:global(html.dark-mode) .alertTitle,
-:global(html.dark-mode-override) .alertTitle {
-  color: #f59e0b;
+/* Modo oscuro para número de clase */
+:global(html.dark-mode) .classNumber,
+:global(html.dark-mode-override) .classNumber {
+  color: #e5e7eb;
 }
 
-.alertIcon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 1.5rem;
-  height: 1.5rem;
-  background-color: #f59e0b;
-  color: white;
-  border-radius: 9999px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
+.classDescription {
+  margin-top: 0.25rem;
 }
 
-/* Modo oscuro para iconos de alerta */
-:global(html.dark-mode) .alertIcon,
-:global(html.dark-mode-override) .alertIcon {
-  background-color: #d97706;
-}
-
-/* ==================== NUEVOS ESTILOS PARA LISTA DE LECTURAS ==================== */
+/* ==================== ESTILOS PARA LISTA DE LECTURAS ==================== */
 
 .lectureList {
   display: flex;
@@ -501,17 +388,17 @@
 
 .lectureHeader {
   display: flex;
-  justify-content: space-between; /* Esto distribuye espacio, pero no fuerza alineación completa */
   align-items: center;
   margin-bottom: 0.5rem;
-  position: relative; /* Para posicionamiento absoluto del elemento fecha */
-  padding-right: 7.5rem; /* Espacio para la fecha (ajusta según sea necesario) */
+  position: relative;
+  padding-right: 7.5rem; /* Para dejar espacio a la fecha */
 }
 
 .lectureNumber {
   font-weight: 500;
   color: #1f2937;
   transition: color 0.3s ease;
+  margin-right: auto; /* Empuja la fecha hacia la derecha */
 }
 
 /* Modo oscuro para número de lectura */
@@ -524,24 +411,259 @@
   margin-top: 0.25rem;
 }
 
-.lectureDate {
-  font-size: 0.875rem;
-  color: #64748b;
-  background-color: #f1f5f9;
-  padding: 0.25rem 0.5rem;
-  border-radius: 0.25rem;
-  transition: color 0.3s ease, background-color 0.3s ease;
-  white-space: nowrap; /* Evita que la fecha se rompa en varias líneas */
-  position: absolute; /* Posicionamiento absoluto */
-  right: 0; /* Alineado completamente a la derecha */
-  top: 0; /* Alineado con la parte superior */
+/* ==================== ESTILOS PARA FECHAS CONSISTENTES ==================== */
+
+/* Contenedor de fecha */
+.dateContainer {
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
-/* Modo oscuro para fechas de lectura */
-:global(html.dark-mode) .lectureDate,
-:global(html.dark-mode-override) .lectureDate {
+/* Contenedor de fecha de evaluación */
+.evaluationDateWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-bottom: 0.25rem;
+  color: #64748b;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+/* Modo oscuro para contenedor de fecha */
+:global(html.dark-mode) .evaluationDateWrapper,
+:global(html.dark-mode-override) .evaluationDateWrapper {
   color: #94a3b8;
+}
+
+/* Fecha de evaluación */
+.evaluationDate {
+  font-weight: 500;
+}
+
+/* Clases específicas para clases y lecturas */
+.classItem .evaluationDateWrapper,
+.lectureItem .evaluationDateWrapper {
+  white-space: nowrap;
+}
+
+/* ==================== ESTILOS PARA LA SECCIÓN DE EVALUACIONES ==================== */
+
+/* Grid para mostrar tarjetas de evaluación */
+.evaluationGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+/* Tarjeta de evaluación */
+.evaluationCard {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 10px -2px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  border-top: 4px solid #3b82f6;
+}
+
+/* Modo oscuro para tarjetas de evaluación */
+:global(html.dark-mode) .evaluationCard,
+:global(html.dark-mode-override) .evaluationCard {
+  background-color: #1e1e1e;
+  border-top: 4px solid #60a5fa;
+  box-shadow: 0 4px 10px -2px rgba(0, 0, 0, 0.3);
+}
+
+/* Encabezado de tarjeta de evaluación */
+.evaluationHeader {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* Modo oscuro para encabezado de evaluación */
+:global(html.dark-mode) .evaluationHeader,
+:global(html.dark-mode-override) .evaluationHeader {
+  border-bottom: 1px solid #374151;
+}
+
+/* Insignia de número de evaluación */
+.evaluationBadge {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: #3b82f6;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+/* Modo oscuro para insignia de evaluación */
+:global(html.dark-mode) .evaluationBadge,
+:global(html.dark-mode-override) .evaluationBadge {
+  background-color: #60a5fa;
+}
+
+/* Contenedor de metadatos de evaluación */
+.evaluationMeta {
+  flex: 1;
+}
+
+/* Título de evaluación */
+.evaluationTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0;
+  color: #1f2937;
+}
+
+/* Modo oscuro para título de evaluación */
+:global(html.dark-mode) .evaluationTitle,
+:global(html.dark-mode-override) .evaluationTitle {
+  color: #f3f4f6;
+}
+
+/* Cuerpo de tarjeta de evaluación */
+.evaluationBody {
+  padding: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Descripción de evaluación */
+.evaluationDescription {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+  color: #4b5563;
+}
+
+/* Modo oscuro para descripción */
+:global(html.dark-mode) .evaluationDescription,
+:global(html.dark-mode-override) .evaluationDescription {
+  color: #d1d5db;
+}
+
+/* Contenedor de guías de estudio */
+.evaluationGuides {
+  background-color: #f8fafc;
+  border-radius: 0.375rem;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+/* Modo oscuro para guías */
+:global(html.dark-mode) .evaluationGuides,
+:global(html.dark-mode-override) .evaluationGuides {
   background-color: #1e293b;
+}
+
+/* Título de guías */
+.guidesTitle {
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  color: #1f2937;
+}
+
+/* Modo oscuro para título de guías */
+:global(html.dark-mode) .guidesTitle,
+:global(html.dark-mode-override) .guidesTitle {
+  color: #f3f4f6;
+}
+
+/* Lista de guías */
+.guidesList {
+  font-size: 0.875rem;
+  color: #4b5563;
+}
+
+/* Modo oscuro para lista de guías */
+:global(html.dark-mode) .guidesList,
+:global(html.dark-mode-override) .guidesList {
+  color: #d1d5db;
+}
+
+/* Pie de tarjeta de evaluación */
+.evaluationFooter {
+  padding: 1rem;
+  border-top: 1px solid #e2e8f0;
+  background-color: #f8fafc;
+}
+
+/* Modo oscuro para pie de tarjeta */
+:global(html.dark-mode) .evaluationFooter,
+:global(html.dark-mode-override) .evaluationFooter {
+  border-top: 1px solid #374151;
+  background-color: #1e293b;
+}
+
+/* Contenedor de peso */
+.weightWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-bottom: 0.5rem;
+  color: #64748b;
+  font-size: 0.875rem;
+}
+
+/* Modo oscuro para contenedor de peso */
+:global(html.dark-mode) .weightWrapper,
+:global(html.dark-mode-override) .weightWrapper {
+  color: #94a3b8;
+}
+
+/* Peso de evaluación */
+.evaluationWeight {
+  font-weight: bold;
+  color: #1f2937;
+}
+
+/* Modo oscuro para peso */
+:global(html.dark-mode) .evaluationWeight,
+:global(html.dark-mode-override) .evaluationWeight {
+  color: #f3f4f6;
+}
+
+/* Contenedor de barra de peso */
+.weightBarContainer {
+  height: 0.5rem;
+  background-color: #e2e8f0;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+/* Modo oscuro para contenedor de barra */
+:global(html.dark-mode) .weightBarContainer,
+:global(html.dark-mode-override) .weightBarContainer {
+  background-color: #374151;
+}
+
+/* Barra de peso */
+.weightBar {
+  height: 100%;
+  background-color: #3b82f6;
+  border-radius: 9999px;
+}
+
+/* Modo oscuro para barra de peso */
+:global(html.dark-mode) .weightBar,
+:global(html.dark-mode-override) .weightBar {
+  background-color: #60a5fa;
 }
 
 /* ==================== ESTILOS RESPONSIVOS ==================== */
@@ -570,7 +692,16 @@
     max-width: 100%;
     width: 100%;
   }
+}
+
+@media (max-width: 640px) {
+  .evaluationGrid {
+    grid-template-columns: 1fr;
+  }
   
+  .evaluationCard {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 480px) {
@@ -598,22 +729,5 @@
   .tabButton {
     flex: 1 0 auto;
     justify-content: center;
-  }
-}
-
-/* Asegurar que las tablas sean responsivas */
-@media (max-width: 600px) {
-  .card table {
-    font-size: 0.85rem;
-  }
-  
-  .card th,
-  .card td {
-    padding: 0.5rem;
-  }
-  
-  .dataTable th,
-  .dataTable td {
-    padding: 0.5rem;
   }
 }

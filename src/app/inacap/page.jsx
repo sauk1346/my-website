@@ -99,33 +99,27 @@ const Inacap = () => {
             <tbody>
               <tr>
                 <td className={styles.code}>TI3V31</td>
-                <td>Programación Frontend</td>
+                <td><CustomLink href="/inacap/ti3v31">Programación Frontend</CustomLink></td>
               </tr>
               <tr>
                 <td className={styles.code}>TI3V32</td>
-                <td>
-                  <CustomLink href="/inacap/ti3v32">Bases de Datos No Estructuradas</CustomLink>
-                </td>
+                <td><CustomLink href="/inacap/ti3v32">Bases de Datos No Estructuradas</CustomLink></td>
               </tr>
               <tr>
                 <td className={styles.code}>TI3V34</td>
-                <td>
-                  <CustomLink href='/inacap/ti3v34'>Fundamentos de Seguridad de la Información</CustomLink>
-                </td>
+                <td><CustomLink href='/inacap/ti3v34'>Fundamentos de Seguridad de la Información</CustomLink></td>
               </tr>
               <tr>
                 <td className={styles.code}>TI3V35</td>
-                <td>Sistemas Operativos</td>
+                <td><CustomLink href='/inacap/ti3v35'>Sistemas Operativos</CustomLink></td>
               </tr>
               <tr>
-                <td className={styles.code}>FVE01</td>
-                <td>Innovación y Emprendimiento I</td>
+                <td className={styles.code}>FVIE01</td>
+                <td><CustomLink href='/inacap/fvie01'>Innovación y Emprendimiento I</CustomLink></td>
               </tr>
               <tr>
                 <td className={styles.code}>TILV21</td>
-                <td>
-                  <CustomLink href='/inacap/tilv21'>(Electivo I) Plan de Pruebas de Software</CustomLink>
-                </td>
+                <td><CustomLink href='/inacap/tilv21'>(Electivo I) Plan de Pruebas de Software</CustomLink></td>
               </tr>
             </tbody>
           </table>

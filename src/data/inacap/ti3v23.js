@@ -2,7 +2,7 @@ import React from 'react';
 import CustomLink from '@/components/CustomLink';
 import ExternalLink from '@/components/ExternalLink';
 
-export default {
+const courseData = {
     courseCode: "TI3V23",
     courseTitle: "Metodología de Desarrollo Ágil",
     courseDescription: "Asignatura lectiva, dictada en modalidad semipresencial. Al finalizar, el estudiante será capaz de implementar metodologías ágiles en proyectos de gran escala a través del uso de framework SCRUM, considerando el Trabajo Colaborativo y Comunicación.",
@@ -80,4 +80,5 @@ export default {
         { week: '08', lecture: '12', date: 'Sáb 14, Dic 2024', description: <CustomLink href='ti3v23/lectura12'>Mockups</CustomLink> },
         { week: '', lecture: '13', date: 'Sáb 14, Dic 2024', description: <CustomLink href='ti3v23/lectura13'>Etapa de Cierre</CustomLink> },
     ],
-}
+};
+export default courseData;

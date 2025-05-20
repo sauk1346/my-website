@@ -2,7 +2,7 @@ import React from 'react';
 import CustomLink from '@/components/CustomLink';
 import ExternalLink from '@/components/ExternalLink';
 
-export default {
+const courseData = {
     courseCode: "TI3V34",
     courseTitle: "Fundamentos de Seguridad de la Información",
     courseDescription: "Fundamentos de Seguridad de la Información es una asignatura lectiva, del área formativa de Tecnologías de Información y Ciberseguridad, dictada en modalidad presencial con componente online. Al finalizar, el estudiante será capaz de evaluar y mitigar riesgos en base a detección de vulnerabilidades en el marco de la ley y normas vigentes, considerando la Ética y Ciudadanía.",
@@ -88,4 +88,5 @@ export default {
         { week: '07', lecture: '10', date: 'Sáb 26, Abr 2025', description: <CustomLink href="ti3v34/lectura10">Matriz de Riesgo y políticas de prevención de riesgos</CustomLink> },
         { week: '08', lecture: '11', date: 'Sáb 03, May 2025', description: <CustomLink href="ti3v34/lectura11">Controles de mitigación y de riesgos y mejoras tecnológicas ante desastres</CustomLink> },
     ],
-}
+};
+export default courseData;

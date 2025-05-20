@@ -2,7 +2,7 @@ import React from 'react';
 import CustomLink from '@/components/CustomLink';
 import ExternalLink from '@/components/ExternalLink';
 
-export default {
+const courseData = {
     courseCode: "TI3V31",
     courseTitle: "Programación Frontend",
     courseDescription: "Programación Front End es una asignatura práctica, del área formativa de Tecnologías de Información y Ciberseguridad, dictada en modalidad semipresencial. Al finalizar, el estudiante será capaz de desarrollar aplicaciones web utilizando tecnología de Front End, considerando la Resolución de Problemas, Innovación y Emprendimiento.",
@@ -55,5 +55,6 @@ export default {
         { week: '', lecture: '03', date: 'Sáb 24, May 2025', description: 'Tutorial Interactivo de HTML' },
         { week: '', lecture: '04', date: 'Sáb 24, May 2025', description: 'Tutorial Práctico: convertir un diseño en HTML' },
     ],
-}
+};
+export default courseData;
     

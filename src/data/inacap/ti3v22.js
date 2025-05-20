@@ -2,7 +2,7 @@ import React from 'react';
 import CustomLink from '@/components/CustomLink';
 import ExternalLink from '@/components/ExternalLink';
 
-export default {
+const courseData = {
     courseCode: "TI3V22",
     courseTitle: "Bases de Datos Estructuradas",
     courseDescription: "Asignatura enfocada en habilidades prácticas más que en teoría pura, lo cual es crucial para aplicaciones reales en tecnologías de información y ciberseguridad.",
@@ -84,4 +84,5 @@ export default {
         { week: '08', lecture: '17', date: 'Sáb 05, Oct 2024', description: 'Creación de triggers' },
         { week: '', lecture: '18', date: 'Sáb 05, Oct 2024', description: 'Auditoría en la base de datos utilizando triggers' },
     ],
-}
+};
+export default courseData;

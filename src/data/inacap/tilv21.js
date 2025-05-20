@@ -2,7 +2,7 @@ import React from 'react';
 import CustomLink from '@/components/CustomLink';
 import ExternalLink from '@/components/ExternalLink';
 
-export default {
+const courseData = {
     courseCode: "TILV21",
     courseTitle: "Plan de Pruebas de Software",
     courseDescription: "Plan de Pruebas de Software es una asignatura práctica del área formativa de especialidad de Tecnologías de Información y Ciberseguridad, dictada en modalidad online. Al finalizar, el estudiante será capaz de garantizar la funcionalidad, seguridad y eficiencia en el desarrollo de software, considerando la Resolución de problemas, Innovación y Emprendimiento.",
@@ -76,4 +76,5 @@ export default {
         { week: '', lecture: '14', date: 'Sáb 03, May 2025', description: <CustomLink href='tilv21/lectura14'>Procesos de seguimiento en el monitoreo</CustomLink> },
         { week: '09', lecture: '15', date: 'Sáb 10, May 2025', description: <CustomLink href='tilv21/lectura15'>Síntesis de la Unidad 03</CustomLink> },
     ],
-}
+};
+export default courseData;

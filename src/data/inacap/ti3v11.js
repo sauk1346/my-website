@@ -2,7 +2,7 @@ import React from 'react';
 import CustomLink from '@/components/CustomLink';
 import ExternalLink from '@/components/ExternalLink';
 
-export default {
+const courseData = {
     courseCode: "TI3V11",
     courseTitle: "Introducción a la Programación Segura",
     courseDescription: "Asignatura de tipo práctico. Al finalizar, el estudiante conocerá: Fundamentos de Python, Estructuras de Control y Decisión, Manejo de almacenamiento de datos y uso de librerías asociadas a seguridad informática.",
@@ -89,4 +89,5 @@ export default {
         { week: '08', lecture: '12', date: 'Sáb 13, Jul 2024', description: <CustomLink href='ti3v11/lectura12'>Librerías externas y seguras</CustomLink> },
         { week: '', lecture: '13', date: 'Sáb 13, Jul 2024', description: <CustomLink href='ti3v11/lectura13'>Script con jerarquía de excepciones</CustomLink> },       
     ],
-}
+};
+export default courseData;

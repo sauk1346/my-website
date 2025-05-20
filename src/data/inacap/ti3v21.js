@@ -2,7 +2,7 @@ import React from 'react';
 import CustomLink from '@/components/CustomLink';
 import ExternalLink from '@/components/ExternalLink';
 
-export default {
+const courseData = {
   courseCode: "TI3V21",
   courseTitle: "Programación Orientada a Objeto Seguro",
   courseDescription: "Asignatura Práctica, dictada en modalidad presencial con componentes online. Al finalizar, el estudiante será capaz de crear una solución de software con estándares de seguridad que responda a los paradigmas de programación orientada a objetos y conectarse a una Base de datos, considerando el aprendizaje continuo.",
@@ -86,4 +86,5 @@ export default {
         { week: '09', lecture: '16', date: 'Sáb 21, Dic 2024', description: <CustomLink href="ti3v21/lectura16">Aplicando metodologías ágiles de desarrollo</CustomLink> },
         { week: '', lecture: '17', date: 'Sáb 21, Dic 2024', description: <CustomLink href="ti3v21/lectura17">Solución con hash y conectada a base de datos</CustomLink> },
     ],
-}
+};
+export default courseData;

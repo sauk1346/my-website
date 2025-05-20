@@ -2,7 +2,7 @@ import React from 'react';
 import CustomLink from '@/components/CustomLink';
 import ExternalLink from '@/components/ExternalLink';
 
-export default {
+const courseData = {
     courseCode: "TI3V35",
     courseTitle: "Sistemas Operativos",
     courseDescription: "Sistemas operativos es una asignatura práctica, del área formativa de Tecnologías de Información y Ciberseguridad, dictada en modalidad presencial con componente online. Al finalizar, el estudiante será capaz de gestionar y administrar distintos sistemas operativos con el objetivo de configurar servicios de infraestructura, considerando el aprendizaje continuo y la resolución de problemas.",
@@ -54,5 +54,5 @@ export default {
         { week: '01', lecture: '01', date: 'Sáb 24, May 2025', description: 'Direccionamiento de redes basada en protocolos TCP/IP' },
         { week: '', lecture: '02', date: 'Sáb 24, May 2025', description: 'Interconexión de dispositivos y redes' },
     ],
-
-}
+;
+export default courseData;}

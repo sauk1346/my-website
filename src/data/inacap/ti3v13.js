@@ -2,7 +2,7 @@ import React from 'react';
 import CustomLink from '@/components/CustomLink';
 import ExternalLink from '@/components/ExternalLink';
 
-export default {
+const courseData = {
     courseCode: "TI3V13",
     courseTitle: "Fundamentos de Hardware y Software",
     courseDescription: "Asignatura práctica. Se desarrollan habilidades para: Configurar e instalar Sistemas Operativos en PCs, portátiles y dispositivos móviles, configuración básica de redes LAN y WLAN utilizando software simulador de redes.",
@@ -85,4 +85,5 @@ export default {
         { week: '09', lecture: '17', date: 'Sáb 20, Jul 2024', description: 'Redes LAN y WLAN' },
         { week: '', lecture: '18', date: 'Sáb 20, Jul 2024', description: 'Normativa para configuración de Redes' },
     ],
-}
+};
+export default courseData;

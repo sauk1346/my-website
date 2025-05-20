@@ -2,7 +2,7 @@ import React from 'react';
 import CustomLink from '@/components/CustomLink';
 import ExternalLink from '@/components/ExternalLink';
 
-export default {
+const courseData = {
     courseCode: "MVFM01",
     courseTitle: "Funciones y Matrices",
     courseDescription: "Asignatura lectiva. Al finalizar, el estudiantes será capaz de: Integrar habilidades fundamentales de mateméticas, Utilizar herramientas tecnológicas en contexto personal, ocupacional, social, científico.",
@@ -120,5 +120,5 @@ export default {
         { week: '18', class: '33', date: 'Lun 09, Dic 2024', description: '- Entrega Proyecto' },
         { week: '', class: '34', date: 'Mié 11, Dic 2024', description: '- Cierre de Notas' },
     ],
-
-}
+};
+export default courseData;

@@ -2,7 +2,7 @@ import React from 'react';
 import CustomLink from '@/components/CustomLink';
 import ExternalLink from '@/components/ExternalLink';
 
-export default {
+const courseData = {
     courseCode: "TI3V25",
     courseTitle: "Modelamiento de Soluciones Informáticas",
     courseDescription: "Asignatura práctica. Al finalizar, el estudiante será capaz de Elaborar diagramas UML, Evaluar y analizar requerimientos, Crear diseños de interfaz, Aplicar modelos de procesos de negocio (BPMN).",
@@ -94,4 +94,5 @@ export default {
         { week: '', lecture: '16', date: 'Sáb 12, Oct 2024', description: 'Análisis de factibilidad' },
         { week: '09', lecture: '17', date: 'Sáb 19, Oct 2024', description: 'Ciclo de vida de la gestión de procesos' },
     ],
-}
+};
+export default courseData;

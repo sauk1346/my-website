@@ -2,7 +2,7 @@ import React from 'react';
 import CustomLink from '@/components/CustomLink';
 import ExternalLink from '@/components/ExternalLink';
 
-export default {
+const courseData = {
     courseCode: "FVIE01",
     courseTitle: "Innovación y Emprendimiento I",
     courseDescription: "Innovación y emprendimiento I es una asignatura de carácter práctico del Área de Formación para la Empleabilidad, dictada en modalidad presencial. Al finalizar, los estudiantes podrán aplicar el ciclo de innovación para el desarrollo de una solución que responda a las oportunidades del entorno y a las necesidades reales de usuarios/clientes, identificando la propuesta de valor y los pasos para proyectar y concretar dicha idea en una empresa.",
@@ -54,6 +54,5 @@ export default {
         { week: '', lecture: '02', date: 'Sáb 24, May 2025', description: 'Elaboración de cuestionarios' },
         { week: '', lecture: '03', date: 'Sáb 24, May 2025', description: 'Observación no participante' },
     ],
-
-
-}
+};
+export default courseData;

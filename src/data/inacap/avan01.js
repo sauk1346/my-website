@@ -2,7 +2,7 @@ import React from 'react';
 import CustomLink from '@/components/CustomLink';
 import ExternalLink from '@/components/ExternalLink';
 
-export default {
+const courseData = {
     courseCode: "AVAN01",
     courseTitle: "Administración",
     courseDescription: "Asignatura lectiva, dictada en modalidad online. Al finalizar el estudiante será capaz de: Identificar las organizaciones o proyectos del sector productivo y servicios, según las tendencias y dinámicas transformacionales, Reconocer el funcionamiento operativo asociado a las áreas funcionales de una organización o proyecto.",
@@ -74,4 +74,5 @@ export default {
         { week: '', lecture: '15', date: 'Sáb 05, Oct 2024', description: 'Control' },
         { week: '', lecture: '16', date: 'Sáb 05, Oct 2024', description: 'Herramientas básicas de análisis de gestión' }       
     ],
-}
+};
+export default courseData;

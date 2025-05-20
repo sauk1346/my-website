@@ -82,7 +82,7 @@ const courseData = {
         { week: '07', lecture: '12', date: 'Sáb 07, Dic 2024', description: <CustomLink href="ti3v21/lectura12">Clase de Python con deserialización de información</CustomLink> },
         { week: '', lecture: '13', date: 'Sáb 07, Dic 2024', description: <CustomLink href="ti3v21/lectura13">Registra data obtenida en Base de datos</CustomLink> },
         { week: '08', lecture: '14', date: 'Sáb 14, Dic 2024', description: <CustomLink href="ti3v21/lectura14">Requerimientos de la solución</CustomLink> },
-        { week: '', lecture: '15', date: 'Sáb 14, Dic 2024', description: <CustomLink href="ti3v21/lectura15">Diseño de diagrama de clases y casos de uso'</CustomLink> },
+        { week: '', lecture: '15', date: 'Sáb 14, Dic 2024', description: <CustomLink href="ti3v21/lectura15">Diseño de diagrama de clases y casos de uso</CustomLink> },
         { week: '09', lecture: '16', date: 'Sáb 21, Dic 2024', description: <CustomLink href="ti3v21/lectura16">Aplicando metodologías ágiles de desarrollo</CustomLink> },
         { week: '', lecture: '17', date: 'Sáb 21, Dic 2024', description: <CustomLink href="ti3v21/lectura17">Solución con hash y conectada a base de datos</CustomLink> },
     ],

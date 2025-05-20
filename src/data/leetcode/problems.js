@@ -37,7 +37,7 @@ export const problems = {
     },
     "LC0595": {
       title: "Big Countries",
-      topics: ["Array", "Hash Table"],
+      topics: ["Database"],
       difficulty: "Easy",
       categories: ["pandas"]
     },
@@ -47,8 +47,20 @@ export const problems = {
       difficulty: "Easy",
       categories: ["pandas"]
     },
+    "LC1683": {
+      title: "Invalid Tweets",
+      topics: ["Database"],
+      difficulty: "Easy",
+      categories: ["pandas"]
+    },
     "LC1757": {
       title: "Recyclable and Low Fat Products",
+      topics: ["Database"],
+      difficulty: "Easy",
+      categories: ["pandas"]
+    },
+    "LC1873": {
+      title: "Calculate Special Bonus",
       topics: ["Database"],
       difficulty: "Easy",
       categories: ["pandas"]
@@ -75,6 +87,12 @@ export const problems = {
       title: "Longest Unequal Adjacent Groups Subsequence II",
       topics: ["Array", "String", "Dynamic Programming", "Greedy"],
       difficulty: "Hard",
+      categories: ["general"]
+    },
+    "LC3024": {
+      title: "Type of Triangle",
+      topics: ["Array", "Math", "Sorting"],
+      difficulty: "Easy",
       categories: ["general"]
     },
     "LC3335": {

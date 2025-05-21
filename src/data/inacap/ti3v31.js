@@ -47,7 +47,7 @@ const courseData = {
         }
     ],
     classData: [
-        { week: '01', class: '01', date: 'Mar 20, May 2025', description: <del>Suspesión clases: pre-feriado</del> },
+        { week: '01', class: '01', date: 'Mar 20, May 2025', description: <del>Suspensión clases: pre-feriado</del> },
     ],
     lectureData: [
         { week: '01', lecture: '01', date: 'Sáb 24, May 2025', description: 'Unidad 1: Desarrollo de sitio web estático utilizando HTML5 y CSS3' },

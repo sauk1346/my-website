@@ -47,6 +47,18 @@ export const problems = {
       difficulty: "Easy",
       categories: ["pandas"]
     },
+    "LC1517": {
+      title: "Find Users With Valid E-mails",
+      topics: ["Database"],
+      difficulty: "Easy",
+      categories: ["pandas"]
+    },
+    "LC1667": {
+      title: "Fix Names in a Table",
+      topics: ["Database"],
+      difficulty: "Easy",
+      categories: ["pandas"]
+    },
     "LC1683": {
       title: "Invalid Tweets",
       topics: ["Database"],
@@ -105,6 +117,12 @@ export const problems = {
       title: "Total Characters in String After Transformations II",
       topics: ["Hash Table", "Math", "String", "Dynamic Programming", "Counting"],
       difficulty: "Hard",
+      categories: ["general"]
+    },
+    "LC3355": {
+      title: "Zero Array Transformation I",
+      topics: ["Array", "Prefix Sum"],
+      difficulty: "Medium",
       categories: ["general"]
     },
   };

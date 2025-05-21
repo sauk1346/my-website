@@ -1,5 +1,5 @@
 import styles from '@/styles/elearning.module.css'
-import CustomLink from '@/components/CustomLink';
+import CustomLink from '@/components/ui/CustomLink';
 
 const Ch001 = () => {
     return (

@@ -6,7 +6,7 @@ import styles from '@/styles/CardSystem.module.css';
 export function Card({ title, description, image, link }) {
   return (
     <Link href={link}>
-      <div className={styles.basicCard}>  {/* Mantiene todas las proporciones originales */}
+      <div className={`${styles.basicCard} ${styles.withGradientLine}`}> {/* Agregada la clase withGradientLine */}
         <div className={styles.cardContent}>
           <div className={styles.cardImage}>
             <Image

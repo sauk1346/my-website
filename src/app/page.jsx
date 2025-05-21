@@ -1,7 +1,7 @@
 'use client';
 
-import React from 'react'; // Eliminado useEffect que ya no usaremos
-import { Card } from "@/components/Card";
+import React from 'react';
+import { Card } from "@/components/ui/Card";
 import styles from '@/styles/Home.module.css';
 
 export default function Home() {

@@ -1,15 +1,22 @@
-/* components/TableOfContents.module.css */
+/* TableOfContents.module.css */
+/* Wrapper para mantener el contexto de ancho */
+.tocWrapper {
+  position: fixed;
+  width: 100%;
+  max-width: 300px;
+}
+
 .tocContainer {
   padding: 1.25rem;
   border-left: 2px solid #e2e8f0;
   background-color: #ffffff;
   border-radius: 0.5rem;
   margin-left: 1rem;
-  display: block;
-  width: 100%;
-  /* Las propiedades position se manejarán dinámicamente en el componente */
+  box-sizing: border-box;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  transition: all 0.2s ease;
+  overflow-y: auto;
+  position: sticky;
+  top: 20px;
 }
 
 /* Contenedor TOC en modo oscuro */
@@ -20,6 +27,7 @@
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
 }
 
+/* El resto del CSS permanece igual */
 .tocHeading {
   font-size: 1.25rem;
   margin-top: 0;
@@ -68,7 +76,7 @@
   font-size: 0.85rem;
 }
 
-.level5 {
+.level5, .level6 {
   margin-left: 2rem;
   font-size: 0.8rem;
 }
@@ -104,7 +112,7 @@
   color: #2563eb;
   font-weight: 500;
   background-color: #eff6ff;
-  border-left: 2px solid #2563eb;
+  border-left: 3px solid #2563eb;
 }
 
 /* Enlace activo TOC en modo oscuro */
@@ -112,5 +120,29 @@
 :global(html.dark-mode-override) .active {
   color: #60a5fa;
   background-color: #172554;
-  border-left-color: #60a5fa;
+  border-left: 3px solid #60a5fa;
+}
+
+/* Responsive design para TOC */
+@media (max-width: 768px) {
+  .tocWrapper {
+    max-width: 250px;
+  }
+  .tocContainer {
+    padding: 1rem;
+  }
+  .tocHeading {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .tocWrapper {
+    max-width: 100%;
+  }
+}
+
+/* Clase para controlar la altura máxima y evitar tapar el footer */
+.footerSpace {
+  max-height: calc(100vh - 450px);
 }

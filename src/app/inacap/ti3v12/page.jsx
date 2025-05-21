@@ -1,10 +1,10 @@
 'use client'
 
 import React, { useEffect, useState } from 'react';
-import ProfessorCard from '@/components/ProfessorCard';
+import ProfessorCard from '@/components/education/ProfessorCard';
 import styles from'@/styles/Asignature.module.css';
-import ExternalLink from '@/components/ExternalLink';
-import CustomLink from '@/components/CustomLink';
+import ExternalLink from '@/components/ui/ExternalLink';
+import CustomLink from '@/components/ui/CustomLink';
 
 export default function Ti3v12() {
     // Estado para controlar la vista responsiva

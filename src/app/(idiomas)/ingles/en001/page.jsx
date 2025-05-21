@@ -1,4 +1,4 @@
-import CustomLink from '@/components/CustomLink';
+import CustomLink from '@/components/ui/CustomLink';
 import styles from '@/styles/elearning.module.css'
 import Link from 'next/link';
 

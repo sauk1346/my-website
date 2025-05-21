@@ -44,3 +44,45 @@
       z-index: auto !important;
     }
   }
+
+  .paginationControls {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
+  gap: 5px;
+}
+
+.paginationButton {
+  padding: 6px 12px;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.paginationButton:hover:not([disabled]) {
+  background-color: #e9ecef;
+}
+
+.paginationButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.currentPage {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.currentPage:hover {
+  background-color: #0069d9;
+}
+
+.tableInfo {
+  margin-top: 10px;
+  text-align: center;
+  color: #6c757d;
+  font-size: 0.9rem;
+}

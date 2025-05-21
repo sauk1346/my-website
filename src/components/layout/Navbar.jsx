@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { useRouter, usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
-import styles from '../styles/Navbar.module.css';
+import styles from '@/styles/Navbar.module.css';
 
 const Navbar = () => {
   const router = useRouter();

@@ -1,8 +1,8 @@
 import React from "react";
 import styles from '@/styles/Inacap.module.css'
-import Calendar from '@/components/Calendar'
+import Calendar from '@/components/education/Calendar'
 import EventsData from '@/../public/data/calendar25.json'
-import CustomLink from "@/components/CustomLink";
+import CustomLink from "@/components/ui/CustomLink";
 
 const Inacap = () => {
   

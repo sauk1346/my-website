@@ -1,128 +1,356 @@
-import CustomLink from '@/components/CustomLink';
-import styles from '@/styles/elearning.module.css'
-import Link from 'next/link';
+'use client'
 
-const Hr11 = () => {
+import { useState, useMemo } from 'react';
+import CustomLink from '@/components/ui/CustomLink';
+import styles from '@/styles/hackerrank.module.css';
+import { getCategoryByCode } from '@/data/hackerrank/categories';
+import { pythonProblems, categories, difficulties } from '@/data/hackerrank/Hr11Data';
+
+const Hr11Page = () => {
+  // Obtener información de la categoría
+  const categoryCode = "hr11";
+  const categoryInfo = getCategoryByCode(categoryCode);
+  
+  if (!categoryInfo) {
+    return <div className={styles.container}>Categoría no encontrada: {categoryCode}</div>;
+  }
+  
+  // Estado para filtros
+  const [searchTerm, setSearchTerm] = useState('');
+  const [categoryFilter, setCategoryFilter] = useState('');
+  const [difficultyFilter, setDifficultyFilter] = useState('');
+  
+  // Estado para ordenación
+  const [sortConfig, setSortConfig] = useState({ key: 'id', direction: 'asc' });
+  
+  // Estado para paginación
+  const [currentPage, setCurrentPage] = useState(1);
+  const problemsPerPage = 10;
+  
+  // Cálculo de estadísticas
+  const getStats = () => {
+    const easy = pythonProblems.filter(p => p.difficulty === "Easy").length;
+    const medium = pythonProblems.filter(p => p.difficulty === "Medium").length;
+    const hard = pythonProblems.filter(p => p.difficulty === "Hard").length;
+    
+    return {
+      total: pythonProblems.length,
+      easy,
+      medium,
+      hard,
+      categories: new Set(pythonProblems.map(p => p.category)).size
+    };
+  };
+  
+  const stats = getStats();
+  
+  // Filtrar y ordenar problemas
+  const filteredAndSortedProblems = useMemo(() => {
+    // Filtrar primero
+    let filtered = pythonProblems.filter(problem => {
+      // Filtro de búsqueda
+      const matchesSearch = 
+        problem.title.toLowerCase().includes(searchTerm.toLowerCase()) || 
+        problem.id.toLowerCase().includes(searchTerm.toLowerCase());
+      
+      // Filtro de categoría
+      const matchesCategory = 
+        categoryFilter === '' || problem.category === categoryFilter;
+      
+      // Filtro de dificultad
+      const matchesDifficulty = 
+        difficultyFilter === '' || problem.difficulty === difficultyFilter;
+      
+      return matchesSearch && matchesCategory && matchesDifficulty;
+    });
+    
+    // Ordenar después
+    return filtered.sort((a, b) => {
+      if (sortConfig.key === 'id') {
+        // Ordenar por ID numéricamente
+        const idA = parseInt(a.id.replace(/\D/g, ''));
+        const idB = parseInt(b.id.replace(/\D/g, ''));
+        return sortConfig.direction === 'asc' ? idA - idB : idB - idA;
+      } else {
+        // Ordenar por otros campos alfabéticamente
+        const valueA = a[sortConfig.key].toString().toLowerCase();
+        const valueB = b[sortConfig.key].toString().toLowerCase();
+        return sortConfig.direction === 'asc' 
+          ? valueA.localeCompare(valueB) 
+          : valueB.localeCompare(valueA);
+      }
+    });
+  }, [pythonProblems, searchTerm, categoryFilter, difficultyFilter, sortConfig]);
+  
+  // Calcular paginación
+  const totalProblems = filteredAndSortedProblems.length;
+  const totalPages = Math.max(1, Math.ceil(totalProblems / problemsPerPage));
+  
+  // Asegurarnos de que la página actual es válida
+  const validCurrentPage = Math.max(1, Math.min(currentPage, totalPages));
+  if (currentPage !== validCurrentPage) {
+    setCurrentPage(validCurrentPage);
+  }
+  
+  // Obtener solo los problemas para la página actual
+  const startIndex = (validCurrentPage - 1) * problemsPerPage;
+  const paginatedProblems = filteredAndSortedProblems.slice(
+    startIndex,
+    startIndex + problemsPerPage
+  );
+  
+  // Función para cambiar ordenación
+  const requestSort = (key) => {
+    let direction = 'asc';
+    if (sortConfig.key === key && sortConfig.direction === 'asc') {
+      direction = 'desc';
+    }
+    setSortConfig({ key, direction });
+    setCurrentPage(1); // Resetear a primera página al ordenar
+  };
+  
+  // Componente para encabezado ordenable
+  const SortableHeader = ({ column, label }) => {
+    const isSorted = sortConfig.key === column;
+    const sortDirection = isSorted ? sortConfig.direction : null;
+    
     return (
-        <div className={styles.pageContainer}>
-            <div className={styles.container}>
-                <h1 className={styles.title}><span className={styles.code}>[HR11]</span>Python</h1>        
-                <div className={styles.grid}>
-                    
-                    {/* Tabla de Tópicos */}
-                    <div>
-                        <h2 className={styles.platformTitle}>Problems</h2>
-                        <table className={styles.table}>
-                            <thead>
-                            <tr>
-                                <th>Code</th>
-                                <th>Descripción</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td className={styles.code}>PY001</td>
-                                <td><CustomLink href='hr11/py001'>Say "Hello, World!" With Python</CustomLink> </td>
-                            </tr>
-                            <tr>
-                                <td className={styles.code}>PY002</td>
-                                <td><CustomLink href='hr11/py002'>Python If-Else</CustomLink></td>
-                            </tr>
-                            <tr>
-                                <td className={styles.code}>PY003</td>
-                                <td><CustomLink href='hr11/py003'>Arithmetic Operators</CustomLink></td>
-                            </tr>
-                            <tr>
-                                <td className={styles.code}>PY004</td>
-                                <td><CustomLink href='hr11/py004'>Python: Division</CustomLink></td>
-                            </tr>
-                            <tr>
-                                <td className={styles.code}>PY005</td>
-                                <td><CustomLink href='hr11/py005'>Loops</CustomLink></td>
-                            </tr>
-                            <tr>
-                                <td className={styles.code}>PY006</td>
-                                <td><CustomLink href='hr11/py006'>Write a function</CustomLink></td>
-                            </tr>
-                            <tr>
-                                <td className={styles.code}>PY007</td>
-                                <td><CustomLink href='hr11/py007'>Print Function</CustomLink></td>
-                            </tr>
-                            <tr>
-                                <td className={styles.code}>PY008</td>
-                                <td><CustomLink href='hr11/py008'>List Comprehensions</CustomLink></td>
-                            </tr>
-                            <tr>
-                                <td className={styles.code}>PY009</td>
-                                <td><CustomLink href='hr11/py009'>Find the Runner-Up Score!</CustomLink></td>
-                            </tr>
-                            <tr>
-                                <td className={styles.code}>PY010</td>
-                                <td><CustomLink href='hr11/py010'>Nested Lists</CustomLink></td>
-                            </tr>
-                            <tr>
-                                <td className={styles.code}>PY011</td>
-                                <td><CustomLink href='hr11/py011'>Finding the percentage</CustomLink></td>
-                            </tr>
-                            <tr>
-                                <td className={styles.code}>PY012</td>
-                                <td><CustomLink href='hr11/py012'>Lists</CustomLink></td>
-                            </tr>
-                            <tr>
-                                <td className={styles.code}>PY013</td>
-                                <td><CustomLink href='hr11/py013'>Tuples</CustomLink></td>
-                            </tr>
-                            <tr>
-                                <td className={styles.code}>PY014</td>
-                                <td><CustomLink href='hr11/py014'>sWAP cASE</CustomLink></td>
-                            </tr>
-                            <tr>
-                                <td className={styles.code}>PY015</td>
-                                <td><CustomLink href='hr11/py015'>String Split and Join</CustomLink></td>
-                            </tr>
-                            <tr>
-                                <td className={styles.code}>PY016</td>
-                                <td><CustomLink href='hr11/py016'>What's Your Name?</CustomLink></td>
-                            </tr>
-                            <tr>
-                                <td className={styles.code}>PY017</td>
-                                <td><CustomLink href='hr11/py017'>Mutations</CustomLink></td>
-                            </tr>
-                            <tr>
-                                <td className={styles.code}>PY018</td>
-                                <td><CustomLink href='hr11/py018'>Find a String</CustomLink></td>
-                            </tr>
-                            <tr>
-                                <td className={styles.code}>PY019</td>
-                                <td><CustomLink href='hr11/py019'>String Validators</CustomLink></td>
-                            </tr>
-                            <tr>
-                                <td className={styles.code}>PY020</td>
-                                <td><CustomLink href='hr11/py020'>Text Alignment</CustomLink></td>
-                            </tr>
-                            <tr>
-                                <td className={styles.code}>PY021</td>
-                                <td>Text Wrap</td>
-                            </tr>
-                            <tr>
-                                <td className={styles.code}>PY022</td>
-                                <td>Designer Door Mat</td>
-                            </tr>
-                            <tr>
-                                <td className={styles.code}>PY023</td>
-                                <td>String Formatting</td>
-                            </tr>
-                            <tr>
-                                <td className={styles.code}>PY024</td>
-                                <td>Alphabet Rangoli</td>
-                            </tr>
-                            
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
+      <th 
+        className={`${styles.sortableHeader} ${isSorted ? styles.sorted : ''}`}
+        onClick={() => requestSort(column)}
+      >
+        {label}
+        {isSorted && (
+          <span className={styles.sortIndicator}>
+            {sortDirection === 'asc' ? ' ▲' : ' ▼'}
+          </span>
+        )}
+      </th>
+    );
+  };
+  
+  // Estilo para dificultad
+  const getDifficultyClass = (difficulty) => {
+    switch (difficulty.toLowerCase()) {
+      case 'easy': return styles.easy;
+      case 'medium': return styles.medium;
+      case 'hard': return styles.hard;
+      default: return '';
+    }
+  };
+  
+  // Componente de paginación
+  const Pagination = () => {
+    if (totalPages <= 1) return null;
+    
+    // Mostrar máximo 5 páginas centradas alrededor de la actual
+    const maxVisiblePages = 5;
+    let startPage = Math.max(1, validCurrentPage - Math.floor(maxVisiblePages / 2));
+    let endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
+    
+    // Ajustar startPage si endPage está al máximo
+    if (endPage === totalPages) {
+      startPage = Math.max(1, endPage - maxVisiblePages + 1);
+    }
+    
+    const pageNumbers = [];
+    for (let i = startPage; i <= endPage; i++) {
+      pageNumbers.push(i);
+    }
+    
+    return (
+      <div className={styles.paginationControls}>
+        <button
+          onClick={() => setCurrentPage(1)}
+          disabled={validCurrentPage === 1}
+          className={styles.paginationButton}
+        >
+          «
+        </button>
+        <button
+          onClick={() => setCurrentPage(validCurrentPage - 1)}
+          disabled={validCurrentPage === 1}
+          className={styles.paginationButton}
+        >
+          ‹
+        </button>
+        
+        {pageNumbers.map(page => (
+          <button
+            key={page}
+            onClick={() => setCurrentPage(page)}
+            className={`${styles.paginationButton} ${page === validCurrentPage ? styles.currentPage : ''}`}
+          >
+            {page}
+          </button>
+        ))}
+        
+        <button
+          onClick={() => setCurrentPage(validCurrentPage + 1)}
+          disabled={validCurrentPage === totalPages}
+          className={styles.paginationButton}
+        >
+          ›
+        </button>
+        <button
+          onClick={() => setCurrentPage(totalPages)}
+          disabled={validCurrentPage === totalPages}
+          className={styles.paginationButton}
+        >
+          »
+        </button>
+      </div>
+    );
+  };
+  
+  return (
+    <div className={styles.pageContainer}>
+      <div className={styles.container}>
+        <h1 className={styles.title}>
+          <span className={styles.code}>[{categoryInfo.code}]</span> {categoryInfo.title}
+        </h1>
+        
+        {/* Estadísticas */}
+        <div className={styles.statsContainer}>
+          <div className={styles.statItem}>
+            <span className={styles.statNumber}>{stats.total}</span>
+            <span className={styles.statLabel}>Problems</span>
+          </div>
+          
+          <div className={styles.statItem}>
+            <span className={styles.statNumber}>{stats.easy}</span>
+            <span className={styles.statLabel}>Easy</span>
+          </div>
+          
+          <div className={styles.statItem}>
+            <span className={styles.statNumber}>{stats.medium}</span>
+            <span className={styles.statLabel}>Medium</span>
+          </div>
+          
+          <div className={styles.statItem}>
+            <span className={styles.statNumber}>{stats.hard || 0}</span>
+            <span className={styles.statLabel}>Hard</span>
+          </div>
+          
+          <div className={styles.statItem}>
+            <span className={styles.statNumber}>{stats.categories}</span>
+            <span className={styles.statLabel}>Categories</span>
+          </div>
         </div>
-        );
-}
-export default Hr11;
+        
+        {/* Filtros */}
+        <div className={styles.filterContainer}>
+          <input
+            type="text"
+            placeholder="Search problems..."
+            value={searchTerm}
+            onChange={(e) => {
+              setSearchTerm(e.target.value);
+              setCurrentPage(1); // Resetear paginación
+            }}
+            className={styles.searchInput}
+          />
+          
+          <select 
+            value={categoryFilter}
+            onChange={(e) => {
+              setCategoryFilter(e.target.value);
+              setCurrentPage(1);
+            }}
+            className={styles.filterSelect}
+          >
+            <option value="">All Categories</option>
+            {categories.map(category => (
+              <option key={category} value={category}>{category}</option>
+            ))}
+          </select>
+          
+          <select 
+            value={difficultyFilter}
+            onChange={(e) => {
+              setDifficultyFilter(e.target.value);
+              setCurrentPage(1);
+            }}
+            className={styles.filterSelect}
+          >
+            <option value="">All Difficulties</option>
+            {difficulties.map(difficulty => (
+              <option key={difficulty} value={difficulty}>{difficulty}</option>
+            ))}
+          </select>
+          
+          {(searchTerm || categoryFilter || difficultyFilter) && (
+            <button 
+              onClick={() => {
+                setSearchTerm('');
+                setCategoryFilter('');
+                setDifficultyFilter('');
+                setCurrentPage(1);
+              }}
+              className={styles.resetButton}
+            >
+              Reset Filters
+            </button>
+          )}
+        </div>
+        
+        {/* Título de sección */}
+        <h2 className={styles.platformTitle}>{categoryInfo.title} Problems</h2>
+        
+        {/* Tabla de problemas */}
+        <div className={styles.tableWrapper}>
+          <table className={styles.table}>
+            <thead>
+              <tr>
+                <SortableHeader column="id" label="Code" />
+                <SortableHeader column="title" label="Title" />
+                <SortableHeader column="category" label="Category" />
+                <SortableHeader column="difficulty" label="Difficulty" />
+              </tr>
+            </thead>
+            <tbody>
+              {paginatedProblems.length === 0 ? (
+                <tr>
+                  <td colSpan="4" style={{ textAlign: 'center', padding: '2rem' }}>
+                    No problems match your search criteria.
+                  </td>
+                </tr>
+              ) : (
+                paginatedProblems.map((problem) => (
+                  <tr key={problem.id}>
+                    <td className={styles.code}>{problem.id}</td>
+                    <td>
+                      {problem.slug ? (
+                        <CustomLink href={`hr11/${problem.id.toLowerCase()}`}>
+                          {problem.title}
+                        </CustomLink>
+                      ) : (
+                        problem.title
+                      )}
+                    </td>
+                    <td>{problem.category}</td>
+                    <td className={getDifficultyClass(problem.difficulty)}>
+                      {problem.difficulty}
+                    </td>
+                  </tr>
+                ))
+              )}
+            </tbody>
+          </table>
+        </div>
+        
+        {/* Información de paginación */}
+        <div className={styles.tableInfo}>
+          Showing {totalProblems > 0 ? startIndex + 1 : 0}-
+          {Math.min(startIndex + problemsPerPage, totalProblems)} of {totalProblems} problems
+        </div>
+        
+        {/* Controles de paginación */}
+        <Pagination />
+        
+      </div>
+    </div>
+  );
+};
+
+export default Hr11Page;

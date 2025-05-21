@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from 'react';
 import styles from '@/styles/leetcode.module.css';
-import CustomLink from '@/components/CustomLink';
+import CustomLink from '@/components/ui/CustomLink';
 import { problems } from '@/data/leetcode/problems';
 import { categories } from '@/data/leetcode/categories';
 
@@ -14,6 +14,12 @@ export default function LeetCode() {
   
   // State for sorting by category (separate for each table)
   const [sortConfigs, setSortConfigs] = useState({});
+  
+  // State for pagination by category (separate for each table)
+  const [paginationStates, setPaginationStates] = useState({});
+  
+  // Problems per page
+  const PROBLEMS_PER_PAGE = 20;
 
   // Extract all unique topics for the filter
   const allTopics = useMemo(() => {
@@ -42,12 +48,26 @@ export default function LeetCode() {
         [categoryId]: { key, direction }
       };
     });
+    
+    // Reset to page 1 when sorting changes
+    changePage(categoryId, 1);
+  };
+  
+  // Function to change the current page for a specific table
+  const changePage = (categoryId, pageNumber) => {
+    setPaginationStates(prevStates => ({
+      ...prevStates,
+      [categoryId]: pageNumber
+    }));
   };
 
   // Component to render a problem table by category
   const ProblemTable = ({ categoryId, title, showAllProblems = false }) => {
     // Get the sort configuration for this category or use the default
     const sortConfig = sortConfigs[categoryId] || { key: 'id', direction: 'asc' };
+    
+    // Get the current page for this category or default to page 1
+    const currentPage = paginationStates[categoryId] || 1;
 
     // Component for sortable column header (local to this table)
     const SortableHeader = ({ column, label }) => {
@@ -137,6 +157,25 @@ export default function LeetCode() {
         return 0;
       });
     }, [categoryId, searchTerm, topicFilter, difficultyFilter, sortConfig, showAllProblems]);
+    
+    // Calculate pagination info
+    const totalProblems = filteredAndSortedProblems.length;
+    const totalPages = Math.max(1, Math.ceil(totalProblems / PROBLEMS_PER_PAGE));
+    
+    // Ensure current page is valid
+    const validCurrentPage = Math.max(1, Math.min(currentPage, totalPages));
+    
+    // If the current page is invalid (outside range), update it
+    if (currentPage !== validCurrentPage) {
+      changePage(categoryId, validCurrentPage);
+    }
+    
+    // Get only the problems for the current page
+    const startIndex = (validCurrentPage - 1) * PROBLEMS_PER_PAGE;
+    const paginatedProblems = filteredAndSortedProblems.slice(
+      startIndex, 
+      startIndex + PROBLEMS_PER_PAGE
+    );
 
     if (filteredAndSortedProblems.length === 0) {
       return (
@@ -153,6 +192,71 @@ export default function LeetCode() {
       const lowerDifficulty = difficulty.toLowerCase();
       return styles[lowerDifficulty] || '';
     };
+    
+    // Render pagination controls
+    const PaginationControls = () => {
+      if (totalPages <= 1) return null;
+      
+      // Calculate page numbers to display
+      // Show 5 page numbers centered around current page when possible
+      const pageNumbers = [];
+      const maxVisiblePages = 5;
+      let startPage = Math.max(1, validCurrentPage - Math.floor(maxVisiblePages / 2));
+      let endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
+      
+      // Adjust start page if end page is maxed out
+      if (endPage === totalPages) {
+        startPage = Math.max(1, endPage - maxVisiblePages + 1);
+      }
+      
+      for (let i = startPage; i <= endPage; i++) {
+        pageNumbers.push(i);
+      }
+      
+      return (
+        <div className={styles.paginationControls}>
+          <button
+            onClick={() => changePage(categoryId, 1)}
+            disabled={validCurrentPage === 1}
+            className={styles.paginationButton}
+          >
+            «
+          </button>
+          <button
+            onClick={() => changePage(categoryId, validCurrentPage - 1)}
+            disabled={validCurrentPage === 1}
+            className={styles.paginationButton}
+          >
+            ‹
+          </button>
+          
+          {pageNumbers.map(page => (
+            <button
+              key={page}
+              onClick={() => changePage(categoryId, page)}
+              className={`${styles.paginationButton} ${page === validCurrentPage ? styles.currentPage : ''}`}
+            >
+              {page}
+            </button>
+          ))}
+          
+          <button
+            onClick={() => changePage(categoryId, validCurrentPage + 1)}
+            disabled={validCurrentPage === totalPages}
+            className={styles.paginationButton}
+          >
+            ›
+          </button>
+          <button
+            onClick={() => changePage(categoryId, totalPages)}
+            disabled={validCurrentPage === totalPages}
+            className={styles.paginationButton}
+          >
+            »
+          </button>
+        </div>
+      );
+    };
 
     return (
       <div>
@@ -168,7 +272,7 @@ export default function LeetCode() {
               </tr>
             </thead>
             <tbody>
-              {filteredAndSortedProblems.map(([id, problem]) => (
+              {paginatedProblems.map(([id, problem]) => (
                 <tr key={id}>
                   <td className={styles.code}>{id}</td>
                   <td>
@@ -186,8 +290,9 @@ export default function LeetCode() {
           </table>
         </div>
         <div className={styles.tableInfo}>
-          Showing {filteredAndSortedProblems.length} problems
+          Showing {startIndex + 1}-{Math.min(startIndex + PROBLEMS_PER_PAGE, totalProblems)} of {totalProblems} problems
         </div>
+        <PaginationControls />
       </div>
     );
   };
@@ -235,6 +340,13 @@ export default function LeetCode() {
                 setSearchTerm('');
                 setTopicFilter('');
                 setDifficultyFilter('');
+                
+                // Reset all pagination states to page 1 when filters change
+                const resetPagination = {};
+                Object.keys(paginationStates).forEach(categoryId => {
+                  resetPagination[categoryId] = 1;
+                });
+                setPaginationStates(resetPagination);
               }}
               className={styles.resetButton}
             >

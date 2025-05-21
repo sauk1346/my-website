@@ -1,5 +1,5 @@
 import styles from '@/styles/elearning.module.css'
-import ExternalLink from '@/components/ExternalLink';
+import ExternalLink from '@/components/ui/ExternalLink';
 
 const Udd = () => {
     return (

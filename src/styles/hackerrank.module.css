@@ -1,0 +1,809 @@
+/* Contenedor de fondo que ocupa toda la pantalla */
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--background, white);
+  color: var(--foreground, #1f2937);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Contenedor del contenido con ancho limitado */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2rem 1rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Grid para las tarjetas */
+.cardGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 32px;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Main title */
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--foreground, #1f2937);
+  margin-bottom: 2rem;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+.title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  margin: 0.5rem auto 0;
+  border-radius: var(--radius-sm);
+}
+
+/* Platforms list */
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  max-width: 64rem;
+}
+
+/* Platform section */
+.section {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+/* Platform title */
+.platformTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1rem;
+  text-align: center;
+  padding: 0.5rem;
+  background-color: #e5e7eb;
+  border-radius: 6px 6px 0 0;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+:global(html.dark-mode) .platformTitle,
+:global(html.dark-mode-override) .platformTitle {
+  color: #e5e7eb;
+  background-color: #374151;
+}
+
+/* Wrapper para tablas con scroll horizontal */
+.tableWrapper {
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}
+
+/* Table styles */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  table-layout: fixed; /* Fuerza a que se respeten los anchos de columna */
+}
+
+/* Tabla en modo oscuro */
+:global(html.dark-mode) .table,
+:global(html.dark-mode-override) .table {
+  background-color: #1e1e1e;
+  border: 1px solid #4b5563;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
+}
+
+.table th, .table td {
+  padding: 0.75rem;
+  text-align: left;
+  border: 1px solid #d1d5db;
+  transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+/* Asegurarse que las columnas tienen el mismo ancho en todas las tablas */
+.table th:nth-child(1),
+.table td:nth-child(1) {
+  width: 120px; /* Ancho para Code */
+}
+
+.table th:nth-child(2),
+.table td:nth-child(2) {
+  width: 40%; /* Description */
+}
+
+.table th:nth-child(3),
+.table td:nth-child(3) {
+  width: 35%; /* Topics */
+}
+
+.table th:nth-child(4),
+.table td:nth-child(4) {
+  width: 110px; /* Difficulty */
+}
+
+/* Para asegurar que el texto no se desborde */
+.table td {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+/* Celdas de tabla en modo oscuro */
+:global(html.dark-mode) .table th,
+:global(html.dark-mode) .table td,
+:global(html.dark-mode-override) .table th,
+:global(html.dark-mode-override) .table td {
+  border: 1px solid #4b5563;
+  color: #e5e7eb;
+}
+
+.table th {
+  background-color: #1f2937;
+  color: white;
+}
+
+/* Encabezados de tabla en modo oscuro */
+:global(html.dark-mode) .table th,
+:global(html.dark-mode-override) .table th {
+  background-color: #111827;
+  color: #f9fafb;
+}
+
+.table tr:hover {
+  background-color: #edf2f7;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover de filas en modo oscuro */
+:global(html.dark-mode) .table tr:hover,
+:global(html.dark-mode-override) .table tr:hover {
+  background-color: #2d3748;
+}
+
+/* Course code */
+.code {
+  font-family: monospace;
+  color: #4b5563;
+  transition: color 0.3s ease;
+  white-space: nowrap; /* Evitar que el código se divida en múltiples líneas */
+}
+
+/* Código en modo oscuro */
+:global(html.dark-mode) .code,
+:global(html.dark-mode-override) .code {
+  color: #9ca3af;
+}
+
+.link {
+  color: #2563eb;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+/* Enlaces en modo oscuro */
+:global(html.dark-mode) .link,
+:global(html.dark-mode-override) .link {
+  color: #60a5fa;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* Hover de enlaces en modo oscuro */
+:global(html.dark-mode) .link:hover,
+:global(html.dark-mode-override) .link:hover {
+  color: #93c5fd;
+}
+
+/* Empty certificate placeholder */
+.noCertificate {
+  color: #9ca3af;
+  font-style: italic;
+}
+
+/* Filtros y controles */
+.filterContainer {
+  display: flex;
+  margin-bottom: 2rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 800px;
+  justify-content: center;
+}
+
+.searchInput {
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  flex: 1;
+  min-width: 250px;
+  background-color: white;
+  color: #1f2937;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+}
+
+/* Entrada de búsqueda en modo oscuro */
+:global(html.dark-mode) .searchInput,
+:global(html.dark-mode-override) .searchInput {
+  background-color: #1e1e1e;
+  color: #e5e7eb;
+  border-color: #4b5563;
+}
+
+.filterSelect {
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  min-width: 180px;
+  background-color: white;
+  color: #1f2937;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.filterSelect:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+}
+
+/* Selector de filtro en modo oscuro */
+:global(html.dark-mode) .filterSelect,
+:global(html.dark-mode-override) .filterSelect {
+  background-color: #1e1e1e;
+  color: #e5e7eb;
+  border-color: #4b5563;
+}
+
+.resetButton {
+  padding: 0.75rem 1.25rem;
+  background-color: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #1f2937;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.resetButton:hover {
+  background-color: #e5e7eb;
+}
+
+/* Botón de reset en modo oscuro */
+:global(html.dark-mode) .resetButton,
+:global(html.dark-mode-override) .resetButton {
+  background-color: #374151;
+  color: #e5e7eb;
+  border-color: #4b5563;
+}
+
+:global(html.dark-mode) .resetButton:hover,
+:global(html.dark-mode-override) .resetButton:hover {
+  background-color: #4b5563;
+}
+
+/* Estadísticas */
+.statsContainer {
+  display: flex;
+  margin-bottom: 2.5rem;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.statItem {
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 12px;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  min-width: 150px;
+  transition: all 0.3s ease;
+  border: 1px solid #e5e7eb;
+}
+
+.statItem:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Elemento de estadísticas en modo oscuro */
+:global(html.dark-mode) .statItem,
+:global(html.dark-mode-override) .statItem {
+  background-color: #1e1e1e;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  border-color: #4b5563;
+}
+
+.statNumber {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #3b82f6;
+  transition: color 0.3s ease;
+  margin-bottom: 0.5rem;
+}
+
+/* Número de estadísticas en modo oscuro */
+:global(html.dark-mode) .statNumber,
+:global(html.dark-mode-override) .statNumber {
+  color: #60a5fa;
+}
+
+.statLabel {
+  font-size: 1rem;
+  color: #4b5563;
+  transition: color 0.3s ease;
+  font-weight: 500;
+}
+
+/* Etiqueta de estadísticas en modo oscuro */
+:global(html.dark-mode) .statLabel,
+:global(html.dark-mode-override) .statLabel {
+  color: #9ca3af;
+}
+
+/* Estilos para los encabezados ordenables */
+.sortableHeader {
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+.sortableHeader:hover {
+  background-color: #374151;
+}
+
+.sorted {
+  background-color: #111827;
+}
+
+.sortIndicator {
+  display: inline-block;
+  margin-left: 5px;
+}
+
+/* Información de la tabla */
+.tableInfo {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #666;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+/* Información de tabla en modo oscuro */
+:global(html.dark-mode) .tableInfo,
+:global(html.dark-mode-override) .tableInfo {
+  color: #9ca3af;
+}
+
+/* Estilos para dificultades - Base (modo claro) */
+.easy {
+  color: #22c55e !important; /* Verde para fácil */
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.medium {
+  color: #f59e0b !important; /* Amarillo/Naranja para medio */
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.hard {
+  color: #ef4444 !important; /* Rojo para difícil */
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+/* Dificultades en modo oscuro */
+:global(html.dark-mode) .easy,
+:global(html.dark-mode-override) .easy {
+  color: #4ade80 !important; /* Verde más brillante en modo oscuro */
+}
+
+:global(html.dark-mode) .medium,
+:global(html.dark-mode-override) .medium {
+  color: #fbbf24 !important; /* Amarillo más brillante en modo oscuro */
+}
+
+:global(html.dark-mode) .hard,
+:global(html.dark-mode-override) .hard {
+  color: #f87171 !important; /* Rojo más brillante en modo oscuro */
+}
+
+/* Estilos de paginación */
+.paginationControls {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
+  gap: 5px;
+}
+
+.paginationButton {
+  padding: 6px 12px;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.paginationButton:hover:not([disabled]) {
+  background-color: #e9ecef;
+}
+
+.paginationButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.currentPage {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.currentPage:hover {
+  background-color: #0069d9;
+}
+
+/* Estilos para paginación en modo oscuro */
+:global(html.dark-mode) .paginationButton,
+:global(html.dark-mode-override) .paginationButton {
+  background-color: #374151;
+  color: #e5e7eb;
+  border-color: #4b5563;
+}
+
+:global(html.dark-mode) .paginationButton:hover:not([disabled]),
+:global(html.dark-mode-override) .paginationButton:hover:not([disabled]) {
+  background-color: #4b5563;
+}
+
+:global(html.dark-mode) .currentPage,
+:global(html.dark-mode-override) .currentPage {
+  background-color: #3b82f6;
+  color: #f9fafb;
+  border-color: #2563eb;
+}
+
+:global(html.dark-mode) .currentPage:hover,
+:global(html.dark-mode-override) .currentPage:hover {
+  background-color: #2563eb;
+}
+
+/* Mensaje de no resultados */
+.noResults {
+  text-align: center;
+  color: #6b7280;
+  font-style: italic;
+  margin: 3rem 0;
+  font-size: 1.1rem;
+}
+
+:global(html.dark-mode) .noResults,
+:global(html.dark-mode-override) .noResults {
+  color: #9ca3af;
+}
+
+/* ===== ESTILOS PARA TARJETAS DE TÓPICOS ===== */
+
+/* Grid de tarjetas de tópicos */
+.topicGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+  margin-top: 1.5rem;
+  padding: 0 1rem;
+}
+
+/* Tarjetas de tópico */
+.topicCard {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 1.75rem;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+  height: 100%;
+  min-height: 200px;
+}
+
+.topicCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+  border-color: #d1d5db;
+}
+
+:global(html.dark-mode) .topicCard,
+:global(html.dark-mode-override) .topicCard {
+  background-color: #1e1e1e;
+  border-color: #4b5563;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+:global(html.dark-mode) .topicCard:hover,
+:global(html.dark-mode-override) .topicCard:hover {
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.35);
+  border-color: #6b7280;
+}
+
+/* Barra de color superior */
+.topicCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  transition: height 0.3s ease;
+}
+
+.topicCard:hover::before {
+  height: 6px;
+}
+
+/* Cabecera de la tarjeta */
+.topicHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+/* Icono del tópico */
+.topicIcon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.topicCard:hover .topicIcon {
+  transform: scale(1.1);
+}
+
+.topicIcon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Código del tópico */
+.topicCode {
+  font-family: monospace;
+  font-weight: 600;
+  color: #4b5563;
+  font-size: 0.95rem;
+  background-color: #f3f4f6;
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.topicCard:hover .topicCode {
+  background-color: #e5e7eb;
+}
+
+:global(html.dark-mode) .topicCode,
+:global(html.dark-mode-override) .topicCode {
+  background-color: #374151;
+  color: #e5e7eb;
+}
+
+:global(html.dark-mode) .topicCard:hover .topicCode,
+:global(html.dark-mode-override) .topicCard:hover .topicCode {
+  background-color: #4b5563;
+}
+
+/* Nombre del tópico */
+.topicName {
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin: 0.5rem 0 1rem;
+  color: #1f2937;
+  transition: color 0.3s ease;
+}
+
+:global(html.dark-mode) .topicName,
+:global(html.dark-mode-override) .topicName {
+  color: #f9fafb;
+}
+
+.topicName a {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+}
+
+.topicName a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--primary, #3b82f6);
+  transition: width 0.3s ease;
+}
+
+.topicName a:hover::after {
+  width: 100%;
+}
+
+/* Categoría del tópico */
+.topicCategory {
+  font-size: 0.85rem;
+  color: #6b7280;
+  background-color: #f3f4f6;
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  display: inline-block;
+  margin-top: 0.5rem;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+:global(html.dark-mode) .topicCategory,
+:global(html.dark-mode-override) .topicCategory {
+  background-color: #374151;
+  color: #d1d5db;
+}
+
+/* Botón de acción */
+.topicAction {
+  margin-top: auto;
+  padding-top: 1.5rem;
+}
+
+.viewButton {
+  display: inline-block;
+  background-color: #3b82f6;
+  color: white;
+  padding: 0.65rem 1.25rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.viewButton:hover {
+  background-color: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(37, 99, 235, 0.3);
+}
+
+:global(html.dark-mode) .viewButton:hover,
+:global(html.dark-mode-override) .viewButton:hover {
+  background-color: #2563eb;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .topicGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.75rem;
+  }
+  
+  .platformTitle {
+    font-size: 1.1rem;
+  }
+  
+  .table th,
+  .table td {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .table {
+    min-width: 650px; /* Ancho mínimo para asegurar que las columnas no se compriman demasiado */
+  }
+  
+  .filterContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .searchInput, 
+  .filterSelect, 
+  .resetButton {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .statsContainer {
+    gap: 1rem;
+  }
+  
+  .statItem {
+    min-width: 120px;
+    padding: 1rem;
+  }
+  
+  .statNumber {
+    font-size: 2rem;
+  }
+  
+  .topicGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .topicCard {
+    padding: 1.25rem;
+  }
+  
+  .paginationButton {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .topicGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .statsContainer {
+    gap: 1rem;
+  }
+  
+  .paginationControls {
+    flex-wrap: wrap;
+  }
+}

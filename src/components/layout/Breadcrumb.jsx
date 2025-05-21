@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
-import style from '../styles/Breadcrumb.module.css';
+import style from '@/styles/Breadcrumb.module.css';
 
 const Breadcrumb = () => {
   const pathname = usePathname();

@@ -1,6 +1,6 @@
 import React from 'react';
-import CustomLink from '@/components/CustomLink';
-import ExternalLink from '@/components/ExternalLink';
+import CustomLink from '@/components/ui/CustomLink';
+import ExternalLink from '@/components/ui/ExternalLink';
 
 const courseData = {
     courseCode: "MVFM01",

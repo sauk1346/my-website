@@ -3,6 +3,9 @@
 # public folder
 /public/
 
+# IDE
+. vscode/
+
 # dependencies
 /node_modules
 /.pnp

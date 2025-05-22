@@ -22,6 +22,18 @@ export default function Home() {
               link='/inacap'
             />
             <Card
+              title="CodeTraining"
+              description="Ejercicios"
+              image="/logos/codeTraining.png"
+              link='/training'
+            />
+            <Card
+              title="Algorithms"
+              description="Recopilación Algoritmos"
+              image="/logos/arsenal.jpg"
+              link='/algorithms'
+            />
+            <Card
               title="E-Learning"
               description="Plataformas"
               image="/logos/learnlogo.png"
@@ -33,12 +45,7 @@ export default function Home() {
               image="/logos/bootcamp.png"
               link='/bootcamps'
             />
-            <Card
-              title="CodeTraining"
-              description="Ejercicios"
-              image="/logos/codeTraining.png"
-              link='/training'
-            />
+            
           </div>
         </div>
       </section>

@@ -1,28 +1,6 @@
-# Big Countries
+# Países Grandes
 
-## SQL Schema
-
-```sql
-Create table If Not Exists World (name varchar(255), continent varchar(255), area int, population int, gdp bigint)
-Truncate table World
-insert into World (name, continent, area, population, gdp) values ('Afghanistan', 'Asia', '652230', '25500100', '20343000000')
-insert into World (name, continent, area, population, gdp) values ('Albania', 'Europe', '28748', '2831741', '12960000000')
-insert into World (name, continent, area, population, gdp) values ('Algeria', 'Africa', '2381741', '37100000', '188681000000')
-insert into World (name, continent, area, population, gdp) values ('Andorra', 'Europe', '468', '78115', '3712000000')
-insert into World (name, continent, area, population, gdp) values ('Angola', 'Africa', '1246700', '20609294', '100990000000')
-```
-
-## Pandas Schema
-
-```python
-data = [['Afghanistan', 'Asia', 652230, 25500100, 20343000000], ['Albania', 'Europe', 28748, 2831741, 12960000000], ['Algeria', 'Africa', 2381741, 37100000, 188681000000], ['Andorra', 'Europe', 468, 78115, 3712000000], ['Angola', 'Africa', 1246700, 20609294, 100990000000]]
-world = pd.DataFrame(data, columns=['name', 'continent', 'area', 'population', 'gdp']).astype({'name':'object', 'continent':'object', 'area':'Int64', 'population':'Int64', 'gdp':'Int64'})
-```
-
-
-## Table 
-
-`World`
+**Tabla:** `World`
 
 ```markdown
 +-------------+---------+
@@ -34,27 +12,21 @@ world = pd.DataFrame(data, columns=['name', 'continent', 'area', 'population', '
 | population  | int     |
 | gdp         | bigint  |
 +-------------+---------+
-name is the primary key (column with unique values) for this table.
-Each row of this table gives information about the name of a country,
-the continent to which it belongs, its area, the population, and its 
-GDP value.
+"name" es la clave primaria para esta tabla.
+Cada fila de esta tabla proporciona información sobre el nombre de
+un país, el continente al que pertenece, área, población y valor gdp (PIB)
 ```
 
-A country is **big** if:
+Un país es **grande** si:
 
-- it has an area of at least three million (i.e., `3000000 km²`), or
-- it has a population of at least twenty-five million (i.e., `25000000`)
+- tiene una área de al menos tres millones (`3000000 km²`) o,
+- tiene una población de al menos veinticinco millones (`25000000`)
 
-Write a solution to find the name, population, and area of the **big countries**
+Escribe una solución para encontrar el nombre, población y área de los **países grandes**
 
-Return the result table in **any order**
+Devuelve la tabla de resultados en **cualquier orden.**
 
-The result format is in the following example.
-
-
-## Examples
-
-**Example 1:**
+## Ejemplo
 
 ```markdown
 Input: 
@@ -68,6 +40,7 @@ World table:
 | Andorra     | Europe    | 468     | 78115      | 3712000000   |
 | Angola      | Africa    | 1246700 | 20609294   | 100990000000 |
 +-------------+-----------+---------+------------+--------------+
+
 Output: 
 +-------------+------------+---------+
 | name        | population | area    |

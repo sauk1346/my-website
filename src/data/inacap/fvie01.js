@@ -8,13 +8,13 @@ const courseData = {
     courseDescription: "Innovación y emprendimiento I es una asignatura de carácter práctico del Área de Formación para la Empleabilidad, dictada en modalidad presencial. Al finalizar, los estudiantes podrán aplicar el ciclo de innovación para el desarrollo de una solución que responda a las oportunidades del entorno y a las necesidades reales de usuarios/clientes, identificando la propuesta de valor y los pasos para proyectar y concretar dicha idea en una empresa.",
 
     professorData: {
-        name: "Paula Espinoza Miranda",
-        email: "paula.espinoza19@inacapmail.cl"
+        name: "Rafael Ernesto Contreras Valdebenito",
+        email: "rafael.contr@gmail.com"
     },
     unitsData: [
-        { unit: '1', description: '' },
-        { unit: '2', description: '' },
-        { unit: '3', description: '' },
+        { unit: '1', description: 'Dirección de Oportunidades e Ideación de Propuestas' },
+        { unit: '2', description: 'Modelo de Negocio y Experimentación' },
+        { unit: '3', description: 'Difusión y Formalización' },
     ],
     evaluationsData: [
         { 
@@ -47,7 +47,7 @@ const courseData = {
         }
     ],
     classData: [
-        { week: '01', class: '01', date: 'Jue 22, May 2025', description: '' },
+        { week: '01', class: '01', date: 'Jue 22, May 2025', description: <ExternalLink href='fvie01/clase01'>Introducción a I+E</ExternalLink> },
     ],
     lectureData: [
         { week: '01', lecture: '01', date: 'Sáb 24, May 2025', description: 'Entrevista a usuario' },

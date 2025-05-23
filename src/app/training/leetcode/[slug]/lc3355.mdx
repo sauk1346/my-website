@@ -1,44 +1,44 @@
-# Zero Array Transformation I
+# Transformación a Arreglo-Cero I
 
-You are given an integer array `nums` of length `n` and a 2D array  `queries`, where $queries[i] = [l_i, r_i]$
+Sea un arreglo de enteros `nums` de longitud `n` y un arreglo 2D `queries`, donde $queries[i] = [l_i, r_i]$
 
-For each `querires[i]` :
+Para cada `queries[i]` :
 
-- Select a subset of indices within the range $[l_i, r_i]$ in `nums`
-- Decrement the values at the selected indices by 1
+- Selecciona un subconjunto de índices dentro del rango $[l_i, r_i]$ en `nums` 
+- Decrementa los valores en los índices seleccionados en 1
 
-A **Zero Array** is an array where all elements are equal to 0.
+Un **arreglo-cero** es un arreglo donde todos los elementos son iguales a 0.
 
-Return `true` if it is *possible* to transform `nums` into **Zero Array** after processing all the queries sequentially, otherwise return `false`
+Devuelve `true` si es *posible* transformar `nums` a un **arreglo-cero** despues de procesar todas las consultas secuencialmente, de lo contrario devuelve `false`.
 
-## Examples
+## Ejemplos
 
-**Example 1:**
+**Ejemplo 1:**
 
 > **Input:** nums = [1,0,1], queries = [[0,2]]
 > **Output:** true
 ```markdown
-Explanation:
-    For i = 0:
-        Select the subset of indices as [0, 2] and decrement the values at these indices by 1.
-        The array will become [0, 0, 0], which is a Zero Array.
+Explicación:
+    Para i = 0:
+        Seleccionar el subconjunto de índices como [0, 2] y decrementar los valores de estos índices en 1. 
+        El arreglo se conviertes [0, 0, 0], que es un arreglo-cero.
 ```
 
-**Example 2:**
+**Ejemplo 2:**
 > **Input:** nums = [4,3,2,1], queries = [[1,3],[0,2]]
 > **Output:** false
 
 ```markdown
-Explanation:
-    For i = 0:
-        Select the subset of indices as [1, 2, 3] and decrement the values at these indices by 1.
-        The array will become [4, 2, 1, 0].
-    For i = 1:
-        Select the subset of indices as [0, 1, 2] and decrement the values at these indices by 1.
-        The array will become [3, 1, 0, 0], which is not a Zero Array.
+Explicación:
+    Para i = 0:
+        Seleccionar el subconjunto de índices como [1, 2, 3] y decrementar los valores en estos índices en 1.
+        El arreglo se convierte en [4, 2, 1, 0].
+    Para i = 1:
+        Seleccionar el subconjunto de índices como [0, 1, 2] y decrementar los valores en estos índices en 1.
+        El array se convierte en [3, 1, 0, 0], que no es un Array Cero.
 ``` 
 
-## Solutions
+## Soluciones
 
 <details>
     <summary>Python</summary>

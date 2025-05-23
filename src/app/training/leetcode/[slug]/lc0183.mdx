@@ -1,6 +1,6 @@
-# Customers Who Never Order
+# Clientes que Nunca Ordenan
 
-**Table:** `Customers`
+**Tabla:** `Customers`
 
 ```markdown
 +-------------+---------+
@@ -9,11 +9,11 @@
 | id          | int     |
 | name        | varchar |
 +-------------+---------+
-id is the primary key (column with unique values) for this table.
-Each row of this table indicates the ID and name of a customer.
+"id" es la clave primaria para esta tabla.
+Cada fila de esta tabla indica el ID y nombre y un cliente.
 ```
 
-**Table:** `Orders`
+**Tabla:** `Orders`
 
 ```markdown
 +-------------+------+
@@ -22,20 +22,16 @@ Each row of this table indicates the ID and name of a customer.
 | id          | int  |
 | customerId  | int  |
 +-------------+------+
-id is the primary key (column with unique values) for this table.
-customerId is a foreign key (reference columns) of the ID from the Customers table.
-Each row of this table indicates the ID of an order and the ID of the customer 
-who ordered it.
+"id" es la clave primaria de esta tabla.
+"customerId" es una clave foránea del ID de la tabla Customers.
+Cada fila de esta tabla indica el ID de un pedido y el ID del cliente que lo ordenó.
 ```
 
-Write a solution to find all customers who never order anything.
+Escribe una solución para encontrar todos los cliente que nunca ordenan nada.
 
-Return the result in **any order**.
+Devuelve el resultado en **cualquier orden.**
 
-The result formart is in the following Example
-
-
-## Example
+## Ejemplo
 
 **Input**
 ```markdown
@@ -67,7 +63,7 @@ Orders table:
 +-----------+
 ```
 
-## Solution
+## Soluciones
 
 <details>
     <summary>Python</summary>

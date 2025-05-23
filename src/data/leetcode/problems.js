@@ -6,43 +6,55 @@ export const problems = {
       categories: ["general"]
     },
     "LC0002": {
-      title: "Add Two Numbers",
+      title: "Suma de Dos Números",
       topics: ["Listas Enlazadas", "Matemáticas", "Recursion"],
       difficulty: "Medium",
       categories: ["general"]
     },
     "LC0009": {
-      title: "Palindrome Number",
+      title: "Número Palíndromo",
       topics: ["Matemáticas"],
       difficulty: "Easy",
       categories: ["general"]
     },
     "LC0075": {
-      title: "Sort Colors",
+      title: "Ordenar Colores",
       topics: ["Arreglos", "Punteros", "Ordenamiento"],
       difficulty: "Medium",
       categories: ["general"]
     },
+    "LC0176": {
+      title: "Segundo Salario más Alto",
+      topics: ["Base de Datos"],
+      difficulty: "Medium",
+      categories: ["pandas"]
+    },
+    "LC0177": {
+      title: "N-ésimo Salario más Alto",
+      topics: ["Base de Datos"],
+      difficulty: "Medium",
+      categories: ["pandas"]
+    },
     "LC0183": {
-      title: "Customer Who Never Order",
+      title: "Clientes que Nunca Ordenan",
       topics: ["Base de Datos"],
       difficulty: "Easy",
       categories: ["pandas"]
     },
     "LC0361": {
-      title: "Bomb Enemy",
+      title: "Bombardear Enemigos",
       topics: ["Arreglos", "Programación Dinámica", "Matriz"],
       difficulty: "Medium",
       categories: ["general"]
     },
     "LC0595": {
-      title: "Big Countries",
+      title: "Países Grandes",
       topics: ["Base de Datos"],
       difficulty: "Easy",
       categories: ["pandas"]
     },
     "LC1148": {
-      title: "Article Views I",
+      title: "Visitas de Artículos I",
       topics: ["Base de Datos"],
       difficulty: "Easy",
       categories: ["pandas"]
@@ -103,13 +115,13 @@ export const problems = {
     },
     "LC2900": {
       title: "Longest Unequal Adjacent Groups Subsequence I",
-      topics: ["Arreglos", "Cadena de Caracteres", "Programación Dinámica", "Greedy"],
+      topics: ["Arreglos", "Cadena de Caracteres", "Programación Dinámica", "Algoritmo Voraz"],
       difficulty: "Medium", 
       categories: ["general"]
     },
     "LC2901": {
       title: "Longest Unequal Adjacent Groups Subsequence II",
-      topics: ["Arreglos", "Cadena de Caracteres", "Programación Dinámica", "Greedy"],
+      topics: ["Arreglos", "Cadena de Caracteres", "Programación Dinámica", "Algoritmo Voraz"],
       difficulty: "Hard",
       categories: ["general"]
     },
@@ -132,8 +144,14 @@ export const problems = {
       categories: ["general"]
     },
     "LC3355": {
-      title: "Zero Arreglos Transformation I",
+      title: "Transformación a Arreglo-Cero I",
       topics: ["Arreglos", "Suma Acumulada"],
+      difficulty: "Medium",
+      categories: ["general"]
+    },
+    "LC3362": {
+      title: "Transformación a Arreglo-Cero III",
+      topics: ["Arreglos", "Algoritmo Voraz", "Ordenamiento", "Heap", "Suma Acumulada"],
       difficulty: "Medium",
       categories: ["general"]
     },

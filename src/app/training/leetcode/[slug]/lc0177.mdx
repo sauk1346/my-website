@@ -1,0 +1,80 @@
+# N-ésimo Salario más alto
+
+**Tabla:** `Employee`
+```markdown
++-------------+------+
+| Column Name | Type |
++-------------+------+
+| id          | int  |
+| salary      | int  |
++-------------+------+
+"id" es la clave primaria para esta tabla.
+Cada fila contiene información sobre el salario de un empleado
+```
+
+Escribe una solución para encontrar el $n^{ésimo}$ salario **distinto** más alto de la tabla `Employee`. Si hay menos de `n` salarios distintos, retorna `null`
+
+## Ejemplos
+
+**Ejemplo 1:**
+```markdown
+**Input:**
+Employee table:
++----+--------+
+| id | salary |
++----+--------+
+| 1  | 100    |
+| 2  | 200    |
+| 3  | 300    |
++----+--------+
+n = 2
+
+**Output:**
++------------------------+
+| getNthHighestSalary(2) |
++------------------------+
+| 200                    |
++------------------------+
+```
+
+**Ejemplo 2:**
+```markdown
+**Input:**
+Employee table:
++----+--------+
+| id | salary |
++----+--------+
+| 1  | 100    |
++----+--------+
+n = 2
+
+**Output:**
++------------------------+
+| getNthHighestSalary(2) |
++------------------------+
+| null                   |
++------------------------+
+```
+
+## Soluciones
+
+<details>
+    <summary>Python</summary>
+```python
+import pandas as pd
+
+def nth_highest_salary(employee: pd.DataFrame, N: int) -> pd.DataFrame:
+    
+    if N <= 0:
+        result = None
+    else:
+        unique_salaries = employee['salary'].drop_duplicates().sort_values(ascending=False)
+        
+        if len(unique_salaries) >= N:
+            result = unique_salaries.iloc[N-1]
+        else:
+            result = None
+        
+    return pd.DataFrame({f'getNthHighestSalary({N})': [result]})
+``` 
+</details>

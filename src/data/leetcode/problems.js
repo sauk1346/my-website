@@ -35,10 +35,22 @@ export const problems = {
       difficulty: "Medium",
       categories: ["pandas"]
     },
+    "LC0178": {
+      title: "Clasificar Puntajes",
+      topics: ["Base de Datos"],
+      difficulty: "Medium",
+      categories: ["pandas"]
+    },
     "LC0183": {
       title: "Clientes que Nunca Ordenan",
       topics: ["Base de Datos"],
       difficulty: "Easy",
+      categories: ["pandas"]
+    },
+    "LC0184": {
+      title: "Salario Más Alto por Departamento",
+      topics: ["Base de Datos"],
+      difficulty: "Medium",
       categories: ["pandas"]
     },
     "LC0361": {
@@ -60,7 +72,7 @@ export const problems = {
       categories: ["pandas"]
     },
     "LC1517": {
-      title: "Find Users With Valid E-mails",
+      title: "Usuarios con E-mails Válidos",
       topics: ["Base de Datos"],
       difficulty: "Easy",
       categories: ["pandas"]
@@ -125,10 +137,22 @@ export const problems = {
       difficulty: "Hard",
       categories: ["general"]
     },
+    "LC2942": {
+      title: "Encuentra Palabras con un Carácter Específico",
+      topics: ["Arreglos", "Cadena de Caracteres"],
+      difficulty: "Easy",
+      categories: ["general"]
+    },
     "LC3024": {
       title: "Type of Triangle",
       topics: ["Arreglos", "Matemáticas", "Ordenamiento"],
       difficulty: "Easy",
+      categories: ["general"]
+    },
+    "LC3068": {
+      title: "Encontrar la Suma Máxima de Valores de Nodos",
+      topics: ["Arreglos", "Programación Dinámica", "Algoritmo Voraz", "Manipulación de Bits", "Árbol", "Ordenamiento"],
+      difficulty: "Hard",
       categories: ["general"]
     },
     "LC3335": {

@@ -1,6 +1,6 @@
-# Find Users With Valid E-mails
+# Usuarios con E-mails Válidos
 
-**Table:** `Users`
+**Tabla:** `Users`
 
 ```markdown
 +---------------+---------+
@@ -10,23 +10,21 @@
 | name          | varchar |
 | mail          | varchar |
 +---------------+---------+
-user_id is the primary key (column with unique values) for this table.
-This table contains information of the users signed up in a 
-website. Some e-mails are invalid.
+"user_id" es la clave primaria para esta tabla.
+Esta tabla contiene información de los usuarios registrados en un 
+sitio web. Algunos e-mails son inválidos.
 ```
 
-Write a solution to find the users who have **valid emails**.
+Escribe una solución para encontrar los usuarios que tienen **e-mails válidos**
 
-A valid e-mail has a prefix name and a domain where:
+Un e-mail válido tiene un nombre de prefijo y un dominio donde:
 
-- **The prefix name** is a string that may contain letters (upper and lower case), digits, underscore `_` , period `.` , and/or dash `-` . The prefix name **must** start with a letter.
-- **The domain** is `@leetcode.com`
+- **El nombre de prefijo** es un string que puede contener letras (mayúsculas y minúsculas), dígitos, guión bajo `_` , punto `.` , y/o guión `-` . El nombre de prefijo **debe** comenzar con una letra.
+- **El dominio** es `@leetcode.com`
 
-Return the result in **any order**
+Devuelve el resultado en **cualquier orden**.
 
-The result format is in the following example
-
-## Example
+## Ejemplo
 
 **Input:** 
 ```markdown
@@ -55,13 +53,13 @@ Users table:
 +---------+-----------+-------------------------+
 ```
 
-**Explanation:**
-> The mail of user 2 does not have a domain.
-> The mail of user 5 has the # sign which is not allowed.
-> The mail of user 6 does not have the leetcode domain.
-> The mail of user 7 starts with a period.
+**Explicación:**
+> El e-mail del usuario 2 no tiene un dominio.
+> El e-mail del usuario 5 tiene el símbolo `#` que no está permitido.
+> El e-mail del usuario 6 no tiene el dominio leetcode.
+> El e-mail del usuario 7 comienza con un punto.
 
-## Solutions
+## Soluciones
 
 <details>
     <summary>Python</summary>

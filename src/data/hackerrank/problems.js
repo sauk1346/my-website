@@ -89,4 +89,22 @@ export const problems = {
     difficulty: "Easy",
     categories: ["sql"]
   },
+  "HR0016": {
+    title: "Suma Simple de Array",
+    topics: ["Introducción"],
+    difficulty: "Easy",
+    categories: ["algorithms"]
+  },
+  "HR0017": {
+    title: "Regresión Polinomial",
+    topics: ["Estadística"],
+    difficulty: "Easy",
+    categories: ["artificial-intelligence"]
+  },
+  "HR0018": {
+    title: "Jugando con Caracteres",
+    topics: ["Introducción"],
+    difficulty: "Easy",
+    categories: ["c"]
+  },
 };

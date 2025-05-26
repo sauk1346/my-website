@@ -53,6 +53,12 @@ export const problems = {
       difficulty: "Medium",
       categories: ["pandas"]
     },
+    "LC0196": {
+      title: "Eliminar Emails Duplicados",
+      topics: ["Base de Datos"],
+      difficulty: "Easy",
+      categories: ["pandas"]
+    },
     "LC0361": {
       title: "Bombardear Enemigos",
       topics: ["Arreglos", "Programación Dinámica", "Matriz"],
@@ -71,8 +77,20 @@ export const problems = {
       difficulty: "Easy",
       categories: ["pandas"]
     },
+    "LC1173": {
+      title: "Delivery de Comida Inmediato I",
+      topics: ["Base de Datos"],
+      difficulty: "Easy",
+      categories: ["pandas"]
+    },
+    "LC1429": {
+      title: "First Unique Number",
+      topics: ["Arreglos", "Tablas Hash", "Diseño", "Cola", "Fluyo de Datos"],
+      difficulty: "Medium",
+      categories: ["general"]
+    },
     "LC1517": {
-      title: "Usuarios con E-mails Válidos",
+      title: "Usuarios con Emails Válidos",
       topics: ["Base de Datos"],
       difficulty: "Easy",
       categories: ["pandas"]
@@ -84,7 +102,7 @@ export const problems = {
       categories: ["pandas"]
     },
     "LC1667": {
-      title: "Fix Names in a Table",
+      title: "Corregir Nombres en una Tabla",
       topics: ["Base de Datos"],
       difficulty: "Easy",
       categories: ["pandas"]
@@ -101,6 +119,18 @@ export const problems = {
       difficulty: "Easy",
       categories: ["pandas"]
     },
+    "LC1795": {
+      title: "Reordenar Tabla de Productos",
+      topics: ["Base de Datos"],
+      difficulty: "Easy",
+      categories: ["pandas"]
+    },
+    "LC1857": {
+      title: "Color de Mayor Valor en un Grafo Dirigido",
+      topics: ["Tablas Hash", "Programación Dinámica", "Grafos", "Ordenamiento Topológico", "Memorización", "Conteo"],
+      difficulty: "Hard",
+      categories: ["general"]
+    },
     "LC1873": {
       title: "Calculate Special Bonus",
       topics: ["Base de Datos"],
@@ -113,10 +143,22 @@ export const problems = {
       difficulty: "Hard",
       categories: ["general"]
     },
+    "LC2082": {
+      title: "Cantidad de Clientes Ricos",
+      topics: ["Base de Datos"],
+      difficulty: "Easy",
+      categories: ["pandas"]
+    },
     "LC2094": {
       title: "Finding 3-Digit Even Numbers",
       topics: ["Arreglos", "Tablas Hash", "Ordenamiento", "Enumeración"],
       difficulty: "Easy",
+      categories: ["general"]
+    },
+    "LC2131": {
+      title: "Palíndromo Más Largo Contatenando Palabras de Dos Letras",
+      topics: ["Arreglos", "Tablas Hash", "Cadena de Caracteres", "Algoritmo Voraz", "Conteo"],
+      difficulty: "Medium",
       categories: ["general"]
     },
     "LC2738": {

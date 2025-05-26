@@ -1,6 +1,6 @@
-# Fix Names in a Table
+# Corregir Nombres en una Tabla
 
-**Table:** `Users`
+**Tabla:** `Users`
 
 ```markdown
 +----------------+---------+
@@ -9,22 +9,19 @@
 | user_id        | int     |
 | name           | varchar |
 +----------------+---------+
-user_id is the primary key (column with unique values) for this table.
-This table contains the ID and the name of the user. The name consists 
-of only lowercase and uppercase characters.
+"user_id" es la clave primaria para esta tabla.
+Esta tabla contiene el ID y el nombre de usuario.
 ```
 
-Write a solution to fix the names so that only the first character is uppercase and the rest are lowercase.
+Escribe una solución para corregir los nombres de manera que solo el primer carácter esté en mayúscula (el resto en minúscula).
 
-Return the result table ordered by `user_id`
+Devuelve una tabla resultado ordenada por `user_id`.
 
-The result format is in the following example.
-
-## Example
+## Ejemplo
 
 **Input:**
 ```markdown
-Users table:
+tabla Users:
 +---------+-------+
 | user_id | name  |
 +---------+-------+
@@ -43,7 +40,7 @@ Users table:
 +---------+-------+
 ``` 
 
-## Solutions
+## Soluciones
 
 <details>
     <summary>Python</summary>

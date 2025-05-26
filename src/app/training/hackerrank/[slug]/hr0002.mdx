@@ -1,0 +1,188 @@
+# N Puzzle
+
+N Puzzle es un juego de bloques deslizantes que se desarrolla en tablero cuadrado de `k * k` con `(k * k) - 1` fichas numeradas del `1` al `N`.
+
+Reposiciona las fichas en su orden correcto.
+
+## Formato de Entrada
+La primera línea contiene un entero k, el tamaño del tablero cuadrado. 
+
+Le siguen `k * k` líneas, cada línea contiene un entero `I` en la ficha comenzando desde la esquina superior izquierda hasta la inferior derecha. 
+
+La celda vacía está representada por el número `0`.
+
+- `N = (k * k) - 1`
+- `0 <= I <= N`
+
+## Restricciones
+- `3 <= k <= 5`
+
+## Formato de Salida
+La primera línea contiene un entero `M`, el número de movimientos que el algoritmo ha tomado para resolver el N-Puzzle. 
+Le siguen `M` líneas. Cada línea indica el movimiento de la celda vacía (0).
+
+Un tablero cuadrado se considera resuelto si tiene la siguiente configuración:
+
+```markdown
+0 1 2
+3 4 5
+6 7 8
+```
+
+## Ejemplo
+
+> **Input**
+> 3
+> 0
+> 3
+> 8
+> 4
+> 1
+> 7
+> 2
+> 6
+> 5
+
+> **Output**
+> 70
+> RIGHT
+> DOWN
+> ...
+> ...
+> ...
+
+**Explicación**
+
+El tablero de entrada es:
+```markdown
+0 3 8
+4 1 7
+2 6 5
+``` 
+
+Después de `RIGHT` , la configuración del tablero es:
+```markdown
+3 0 8
+4 1 7
+2 6 5
+``` 
+
+## Tarea
+Imprime todos los movimientos realizados desde la configuración dada hasta la configuración final del tablero resuelto.
+
+## Soluciones
+
+<details>
+    <summary>Python</summary>
+```python
+import heapq
+def solve_npuzzle_astar():
+   # Leer entrada
+   k = int(input())
+   
+   # Crear matriz inicial
+   initial_state = []
+   for i in range(k):
+       row = []
+       for j in range(k):
+           row.append(int(input()))
+       initial_state.append(row)
+   
+   # Estado objetivo
+   goal_state = []
+   num = 0
+   for i in range(k):
+       row = []
+       for j in range(k):
+           row.append(num)
+           num += 1
+       goal_state.append(row)
+   
+   # Heurística: Distancia Manhattan
+   def manhattan_distance(state):
+       distance = 0
+       for i in range(k):
+           for j in range(k):
+               if state[i][j] != 0:
+                   value = state[i][j]
+                   goal_i = value // k
+                   goal_j = value % k
+                   distance += abs(i - goal_i) + abs(j - goal_j)
+       return distance
+   
+   # Encontrar posición del 0
+   def find_zero(state):
+       for i in range(k):
+           for j in range(k):
+               if state[i][j] == 0:
+                   return i, j
+       return -1, -1
+   
+   # Convertir estado a tupla
+   def state_to_tuple(state):
+       return tuple(tuple(row) for row in state)
+   
+   # Generar sucesores
+   def get_successors(state):
+       successors = []
+       zero_row, zero_col = find_zero(state)
+       
+       moves = [
+           (-1, 0, "UP"),
+           (1, 0, "DOWN"),
+           (0, -1, "LEFT"),
+           (0, 1, "RIGHT")
+       ]
+       
+       for dr, dc, move in moves:
+           new_row = zero_row + dr
+           new_col = zero_col + dc
+           
+           if 0 <= new_row < k and 0 <= new_col < k:
+               new_state = [row[:] for row in state]
+               new_state[zero_row][zero_col] = new_state[new_row][new_col]
+               new_state[new_row][new_col] = 0
+               
+               successors.append((new_state, move))
+       
+       return successors
+   
+   # Búsqueda A*
+   # heap: (f, g, state, path)
+   heap = [(manhattan_distance(initial_state), 0, initial_state, [])]
+   visited = set()
+   
+   while heap:
+       f, g, current_state, path = heapq.heappop(heap)
+       
+       # Convertir a tupla para verificar si ya fue visitado
+       state_tuple = state_to_tuple(current_state)
+       
+       if state_tuple in visited:
+           continue
+           
+       visited.add(state_tuple)
+       
+       # Verificar si llegamos al objetivo
+       if current_state == goal_state:
+           print(len(path))
+           for move in path:
+               print(move)
+           return
+       
+       # Generar sucesores
+       for next_state, move in get_successors(current_state):
+           next_tuple = state_to_tuple(next_state)
+           
+           if next_tuple not in visited:
+               new_g = g + 1  # El costo de cada movimiento es 1
+               new_h = manhattan_distance(next_state)
+               new_f = new_g + new_h
+               
+               heapq.heappush(heap, (new_f, new_g, next_state, path + [move]))
+   
+   print("No solution found")
+
+solve_npuzzle_astar()
+``` 
+</details>

@@ -6,17 +6,18 @@ import SortableHeader from '@/components/table/SortableHeader';
 import { usePagination } from '@/hooks/usePagination';
 import { useTableSort } from '@/hooks/useTableSort';
 
-const ProblemTable = ({ 
-  title, 
-  data, 
-  categoryId = null, 
+const ProblemTable = ({
+  title,
+  data,
+  categoryId = null,
   showAllProblems = false,
-  problemsPerPage = 10 
+  problemsPerPage = 10,
+  platform = 'leetcode' // Nueva prop con valor por defecto
 }) => {
   // Difficulty mapping
   const difficultyMap = {
     'Easy': 'Fácil',
-    'Medium': 'Medio', 
+    'Medium': 'Medio',
     'Hard': 'Difícil'
   };
 
@@ -35,7 +36,6 @@ const ProblemTable = ({
     if (showAllProblems || !categoryId) {
       return data;
     }
-    
     return data.filter(([id, problem]) => {
       return problem.categories?.includes(categoryId);
     });
@@ -71,27 +71,27 @@ const ProblemTable = ({
         <table className={styles.table}>
           <thead>
             <tr>
-              <SortableHeader 
-                column="id" 
-                label="Código" 
+              <SortableHeader
+                column="id"
+                label="Código"
                 sortConfig={sortConfig}
                 onSort={requestSort}
               />
-              <SortableHeader 
-                column="title" 
-                label="Descripción" 
+              <SortableHeader
+                column="title"
+                label="Descripción"
                 sortConfig={sortConfig}
                 onSort={requestSort}
               />
-              <SortableHeader 
-                column="topics" 
-                label="Temas" 
+              <SortableHeader
+                column="topics"
+                label="Temas"
                 sortConfig={sortConfig}
                 onSort={requestSort}
               />
-              <SortableHeader 
-                column="difficulty" 
-                label="Dificultad" 
+              <SortableHeader
+                column="difficulty"
+                label="Dificultad"
                 sortConfig={sortConfig}
                 onSort={requestSort}
               />
@@ -102,7 +102,7 @@ const ProblemTable = ({
               <tr key={id}>
                 <td className={styles.code}>{id}</td>
                 <td>
-                  <CustomLink href={`leetcode/${id.toLowerCase()}`}>
+                  <CustomLink href={`${platform}/${id.toLowerCase()}`}>
                     {problem.title}
                   </CustomLink>
                 </td>

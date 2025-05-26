@@ -1,142 +1,78 @@
-export const hackerRankCategories = {
-  "hr01": {
-    code: "HR01",
+// data/hackerrank/categories.js
+export const categories = {
+  "algorithms": {
     title: "Algorithms",
-    description: "Algorithm challenges for problem solving skills",
-    icon: "/logos/hackerrank/hr01.svg",
-    category: "Programming",
-    hasContent: false 
+    description: "Solve algorithmic challenges",
+    icon: "/logos/hackerrank/hr01.svg"
   },
-  "hr02": {
-    code: "HR02",
+  "artificial-intelligence": {
     title: "Artificial Intelligence",
-    description: "Challenges related to AI and machine learning concepts",
-    icon: "/logos/hackerrank/hr02.svg",
-    category: "Specialized",
-    hasContent: false
+    description: "AI and machine learning problems",
+    icon: "/logos/hackerrank/hr02.svg"
   },
-  "hr03": {
-    code: "HR03",
+  "c": {
     title: "C",
-    description: "Challenges for the C programming language",
-    icon: "/logos/hackerrank/hr03.svg",
-    category: "Languages",
-    hasContent: false
+    description: "C programming challenges",
+    icon: "/logos/hackerrank/hr03.svg"
   },
-  "hr04": {
-    code: "HR04",
+  "cpp": {
     title: "C++",
-    description: "Challenges for C++ programming language",
-    icon: "/logos/hackerrank/hr04.svg",
-    category: "Languages",
-    hasContent: false
+    description: "C++ programming challenges",
+    icon: "/logos/hackerrank/hr04.svg"
   },
-  "hr05": {
-    code: "HR05",
+  "data-structures": {
     title: "Data Structures",
-    description: "Challenges focused on data structures implementation",
-    icon: "/logos/hackerrank/hr05.svg",
-    category: "Programming",
-    hasContent: false
+    description: "Work with arrays, trees, graphs and more",
+    icon: "/logos/hackerrank/hr05.svg"
   },
-  "hr06": {
-    code: "HR06",
+  "databases": {
     title: "Databases",
-    description: "SQL and database management challenges",
-    icon: "/logos/hackerrank/hr06.svg",
-    category: "Specialized",
-    hasContent: false
+    description: "Database design and optimization",
+    icon: "/logos/hackerrank/hr06.svg"
   },
-  "hr07": {
-    code: "HR07",
+  "functional-programming": {
     title: "Functional Programming",
-    description: "Functional programming paradigm challenges",
-    icon: "/logos/hackerrank/hr07.svg",
-    category: "Programming",
-    hasContent: false
+    description: "Functional programming concepts",
+    icon: "/logos/hackerrank/hr07.svg"
   },
-  "hr08": {
-    code: "HR08",
+  "java": {
     title: "Java",
-    description: "Challenges for Java programming language",
-    icon: "/logos/hackerrank/hr08.svg",
-    category: "Languages",
-    hasContent: false
+    description: "Java programming challenges",
+    icon: "/logos/hackerrank/hr08.svg"
   },
-  "hr09": {
-    code: "HR09",
+  "linux-shell": {
     title: "Linux Shell",
-    description: "Shell scripting and Unix commands challenges",
-    icon: "/logos/hackerrank/hr09.svg",
-    category: "Specialized",
-    hasContent: false
+    description: "Bash and shell scripting",
+    icon: "/logos/hackerrank/hr09.svg"
   },
-  "hr10": {
-    code: "HR10",
-    title: "Mathematics",
-    description: "Math problems and numerical computation challenges",
-    icon: "/logos/hackerrank/hr10.svg",
-    category: "Specialized",
-    hasContent: false
+  "mathematics": {
+    title: "Mathematics", 
+    description: "Mathematical problems and number theory",
+    icon: "/logos/hackerrank/hr10.svg"
   },
-  "hr11": {
-    code: "HR11",
+  "python": {
     title: "Python",
-    description: "Challenges for Python programming language",
-    icon: "/logos/hackerrank/hr11.svg",
-    category: "Languages",
-    hasContent: true
+    description: "Python programming challenges",
+    icon: "/logos/hackerrank/hr11.svg"
   },
-  "hr12": {
-    code: "HR12",
+  "react": {
     title: "React",
-    description: "Frontend development challenges with React",
-    icon: "/logos/hackerrank/hr12.svg",
-    category: "Web",
-    hasContent: false
+    description: "React frontend development challenges",
+    icon: "/logos/hackerrank/hr12.svg"
   },
-  "hr13": {
-    code: "HR13",
+  "regex": {
     title: "Regex",
     description: "Regular expressions challenges",
-    icon: "/logos/hackerrank/hr13.svg",
-    category: "Programming",
-    hasContent: false
+    icon: "/logos/hackerrank/hr13.svg"
   },
-  "hr14": {
-    code: "HR14",
+  "ruby": {
     title: "Ruby",
-    description: "Challenges for Ruby programming language",
-    icon: "/logos/hackerrank/hr14.svg",
-    category: "Languages",
-    hasContent: false
+    description: "Ruby programming challenges",
+    icon: "/logos/hackerrank/hr14.svg"
   },
-  "hr15": {
-    code: "HR15",
+  "sql": {
     title: "SQL",
-    description: "SQL query challenges and database problems",
-    icon: "/logos/hackerrank/hr15.svg",
-    category: "Databases",
-    hasContent: false
-  }
-};
-
-// Helper functions
-export const getCategoryByCode = (code) => {
-  const lowerCode = code.toLowerCase();
-  return hackerRankCategories[lowerCode] || null;
-};
-
-export const getAllCategories = () => {
-  return Object.values(hackerRankCategories);
-};
-
-export const getCategoriesByType = (categoryType) => {
-  return Object.values(hackerRankCategories)
-    .filter(category => category.category === categoryType);
-};
-
-export const getCategoryTypes = () => {
-  const types = new Set(getAllCategories().map(cat => cat.category));
-  return Array.from(types);
+    description: "Database and SQL challenges",
+    icon: "/logos/hackerrank/hr15.svg"
+  },
 };

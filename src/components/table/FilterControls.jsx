@@ -8,10 +8,15 @@ const FilterControls = ({
   setTopicFilter,
   difficultyFilter,
   setDifficultyFilter,
+  categoryFilter,
+  setCategoryFilter,
   allTopics,
+  allCategories,
   hasActiveFilters,
   clearFilters,
-  searchPlaceholder = "Buscar problemas por título, código o tema..."
+  searchPlaceholder = "Buscar problemas por título, código o tema...",
+  showCategories = false, // Nuevo parámetro opcional
+  categories = {} // Datos de categorías para mostrar nombres legibles
 }) => {
   return (
     <div className={styles.filterContainer}>
@@ -22,8 +27,24 @@ const FilterControls = ({
         onChange={(e) => setSearchTerm(e.target.value)}
         className={styles.searchInput}
       />
-      
-      <select 
+
+      {/* Selector de categorías (opcional) */}
+      {showCategories && allCategories && allCategories.length > 0 && (
+        <select
+          value={categoryFilter}
+          onChange={(e) => setCategoryFilter(e.target.value)}
+          className={styles.filterSelect}
+        >
+          <option value="">Todas las Categorías</option>
+          {allCategories.map(categoryId => (
+            <option key={categoryId} value={categoryId}>
+              {categories[categoryId]?.title || categoryId}
+            </option>
+          ))}
+        </select>
+      )}
+
+      <select
         value={topicFilter}
         onChange={(e) => setTopicFilter(e.target.value)}
         className={styles.filterSelect}
@@ -33,8 +54,8 @@ const FilterControls = ({
           <option key={topic} value={topic}>{topic}</option>
         ))}
       </select>
-      
-      <select 
+
+      <select
         value={difficultyFilter}
         onChange={(e) => setDifficultyFilter(e.target.value)}
         className={styles.filterSelect}
@@ -44,9 +65,9 @@ const FilterControls = ({
         <option value="Medio">Medio</option>
         <option value="Difícil">Difícil</option>
       </select>
-      
+
       {hasActiveFilters && (
-        <button 
+        <button
           onClick={clearFilters}
           className={styles.resetButton}
         >

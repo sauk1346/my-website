@@ -1,10 +1,8 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 import Prism from "prismjs";
-// Importamos los temas de Prism que queremos usar (solo necesitamos importar uno
-// ya que ahora los colores los manejamos con CSS modules)
 import "prismjs/themes/prism.css";
-// Importamos los lenguajes necesarios
+
 import "prismjs/components/prism-json";
 import "prismjs/components/prism-javascript";
 import "prismjs/components/prism-css";
@@ -14,6 +12,8 @@ import "prismjs/components/prism-sql";
 import "prismjs/components/prism-java";
 import "prismjs/components/prism-c";
 import "prismjs/components/prism-cpp";
+import "prismjs/components/prism-haskell";
+import "prismjs/components/prism-bash";
 import styles from "@/styles/CodeBlock.module.css";
 
 export function CodeBlock({ children, language }) {

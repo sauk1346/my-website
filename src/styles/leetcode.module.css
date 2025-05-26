@@ -305,7 +305,7 @@
   background-color: #4b5563;
 }
 
-/* Estadísticas */
+/* Estadísticas mejoradas con gradientes */
 .statsContainer {
   display: flex;
   margin-bottom: 2rem;
@@ -316,45 +316,68 @@
 
 .statItem {
   text-align: center;
-  padding: 1rem;
-  border-radius: 8px;
-  background-color: white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  min-width: 120px;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  padding: 1.25rem;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  min-width: 130px;
+  transition: all 0.3s ease;
+  border: 1px solid #e2e8f0;
 }
 
 /* Elemento de estadísticas en modo oscuro */
 :global(html.dark-mode) .statItem,
 :global(html.dark-mode-override) .statItem {
-  background-color: #1e1e1e;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(135deg, #1e1e1e 0%, #2d3748 100%);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
+  border-color: #4a5568;
+}
+
+.statItem:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Hover de statItem en modo oscuro */
+:global(html.dark-mode) .statItem:hover,
+:global(html.dark-mode-override) .statItem:hover {
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
 }
 
 .statNumber {
   display: block;
-  font-size: 2rem;
-  font-weight: bold;
-  color: #333;
-  transition: color 0.3s ease;
+  font-size: 2.25rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.25rem;
+  transition: all 0.3s ease;
 }
 
 /* Número de estadísticas en modo oscuro */
 :global(html.dark-mode) .statNumber,
 :global(html.dark-mode-override) .statNumber {
-  color: #e5e7eb;
+  background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .statLabel {
-  font-size: 0.9rem;
-  color: #666;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
   transition: color 0.3s ease;
 }
 
 /* Etiqueta de estadísticas en modo oscuro */
 :global(html.dark-mode) .statLabel,
 :global(html.dark-mode-override) .statLabel {
-  color: #9ca3af;
+  color: #94a3b8;
 }
 
 /* Estilos para los encabezados ordenables */
@@ -560,12 +583,12 @@
   }
   
   .statItem {
-    min-width: 100px;
-    padding: 0.75rem;
+    min-width: 110px;
+    padding: 1rem;
   }
   
   .statNumber {
-    font-size: 1.5rem;
+    font-size: 1.875rem;
   }
   
   /* Ajustes de paginación para móviles */

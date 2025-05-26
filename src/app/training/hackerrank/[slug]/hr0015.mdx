@@ -1,0 +1,39 @@
+# Consulta Select I
+
+Consulta todas las columnas para todas las ciudades americanas en la tabla **CITY** con poblaciones mayores a `100000`. El código de país (CountryCode) para América es `USA`.
+
+La tabla **CITY** se describe de la siguiente manera:
+
+<img
+	src="/training/hackerrank/fig03.png"
+	style={{ display: 'block', margin: '0 auto', width:'40%'}}
+/>
+
+## Soluciones
+
+<details>
+    <summary>MySQL</summary>
+```sql
+SELECT *
+FROM CITY
+WHERE COUNTRYCODE = 'USA' AND POPULATION > 100000; 
+```
+</details>
+
+<details>
+    <summary>Oracle</summary>
+```sql
+SELECT *
+FROM CITY
+WHERE COUNTRYCODE = 'USA' AND POPULATION > 100000; 
+```
+</details>
+
+<details>
+    <summary>MS-SQL</summary>
+```sql
+SELECT *
+FROM CITY
+WHERE COUNTRYCODE = 'USA' AND POPULATION > 100000; 
+```
+</details>

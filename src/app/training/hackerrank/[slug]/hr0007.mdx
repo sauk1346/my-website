@@ -1,0 +1,27 @@
+# Resuélveme Primero - FP
+
+El propósito de este desafío es darte una plantilla de I/O (Entrada/Salida) funcional en tu lenguaje preferido. Incluye escanear 2 enteros desde `STDIN`, llamar a una función, devolver un valor, e imprimirlo a `STDOUT`.
+
+## Ejemplo
+
+> **Input**
+> 2
+> 3
+
+> **Output**
+> 5
+
+## Soluciones
+
+<details>
+    <summary>Haskell</summary>
+```haskell
+solveMeFirst a b = a + b
+
+main = do
+    val1 <- readLn
+    val2 <- readLn
+    let sum = solveMeFirst val1 val2
+    print sum
+``` 
+</details>

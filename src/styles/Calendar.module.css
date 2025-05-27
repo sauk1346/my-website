@@ -1,44 +1,30 @@
-/* Estilos para el calendario */
+/* Estilos para el calendario mejorado */
 .calendarioContainer {
-  max-width: 1000px;
+  max-width: 1200px;
   width: 100%;
   margin: 0 auto;
-  padding: 10px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  padding: 1rem;
+  font-family: var(--font-sans);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
 }
 
-/* En pantallas grandes, limitamos el ancho */
-@media (min-width: 1200px) {
+/* Layout lado a lado para pantallas grandes */
+@media (min-width: 1024px) {
   .calendarioContainer {
-    max-width: 1000px;
-  }
-}
-
-@media (min-width: 992px) and (max-width: 1199px) {
-  .calendarioContainer {
-    max-width: 900px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  .calendarioContainer {
-    max-width: 750px;
+    grid-template-columns: 2fr 1fr;
+    align-items: start;
   }
 }
 
 .calendario {
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background: var(--background);
+  border-radius: 12px;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-color);
   overflow: hidden;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Calendario en modo oscuro */
-:global(html.dark-mode) .calendario,
-:global(html.dark-mode-override) .calendario {
-  background-color: #1e1e1e;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
 }
 
 /* Cabecera del calendario */
@@ -46,54 +32,56 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px;
-  background-color: #2563eb;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
   color: white;
-  transition: background-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
-/* Cabecera en modo oscuro */
-:global(html.dark-mode) .calendarioHeader,
-:global(html.dark-mode-override) .calendarioHeader {
-  background-color: #1e40af;
+.calendarioHeader::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20"><defs><pattern id="grain" width="100" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="20" fill="url(%23grain)"/></svg>');
+  pointer-events: none;
 }
 
 .calendarioTitle {
-  font-size: 16px;
-  font-weight: bold;
+  font-size: 1.5rem;
+  font-weight: 700;
   margin: 0;
   text-align: center;
+  z-index: 1;
+  position: relative;
 }
 
 .calendarioNavButton {
-  background-color: #1e40af;
+  background: rgba(255, 255, 255, 0.2);
   border: none;
   color: white;
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   font-weight: bold;
-  transition: background-color 0.2s;
+  font-size: 1.2rem;
+  transition: all 0.2s;
   flex-shrink: 0;
-}
-
-/* Botón de navegación en modo oscuro */
-:global(html.dark-mode) .calendarioNavButton,
-:global(html.dark-mode-override) .calendarioNavButton {
-  background-color: #1e3a8a;
+  z-index: 1;
+  position: relative;
+  backdrop-filter: blur(10px);
 }
 
 .calendarioNavButton:hover {
-  background-color: #1e3a8a;
-}
-
-:global(html.dark-mode) .calendarioNavButton:hover,
-:global(html.dark-mode-override) .calendarioNavButton:hover {
-  background-color: #1e4ed8;
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
 }
 
 .calendarioNavButton:focus {
@@ -105,493 +93,442 @@
 .calendarioDaysOfWeek {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  background-color: #f3f4f6;
-  border-bottom: 1px solid #e5e7eb;
-  transition: background-color 0.3s ease, border-color 0.3s ease;
-}
-
-/* Días de la semana en modo oscuro */
-:global(html.dark-mode) .calendarioDaysOfWeek,
-:global(html.dark-mode-override) .calendarioDaysOfWeek {
-  background-color: #2d3748;
-  border-bottom: 1px solid #4b5563;
+  background: var(--card-bg);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .calendarioDayOfWeek {
-  padding: 8px 2px;
+  padding: 1rem 0.5rem;
   text-align: center;
   font-weight: 600;
-  font-size: 12px;
+  font-size: 0.875rem;
+  color: var(--secondary);
   transition: color 0.3s ease;
 }
 
-/* Día de la semana en modo oscuro */
-:global(html.dark-mode) .calendarioDayOfWeek,
-:global(html.dark-mode-override) .calendarioDayOfWeek {
-  color: #e5e7eb;
-}
-
-/* Días del mes */
+/* Grid de días del mes */
 .calendarioDaysGrid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
+  gap: 1px;
+  background: var(--border-color);
+  padding: 1px;
 }
 
 .calendarioDay {
-  aspect-ratio: 1/1;
-  border: 1px solid #e5e7eb;
-  padding: 4px;
+  aspect-ratio: 1;
+  background: var(--background);
+  padding: 0.75rem;
   cursor: pointer;
-  transition: background-color 0.2s, border-color 0.3s ease, color 0.3s ease;
+  transition: all 0.2s ease;
   position: relative;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-}
-
-/* Día del calendario en modo oscuro */
-:global(html.dark-mode) .calendarioDay,
-:global(html.dark-mode-override) .calendarioDay {
-  border: 1px solid #4b5563;
-  color: #e5e7eb;
+  min-height: 100px;
 }
 
 .calendarioDay:hover {
-  background-color: #f9fafb;
-}
-
-/* Hover de día en modo oscuro */
-:global(html.dark-mode) .calendarioDay:hover,
-:global(html.dark-mode-override) .calendarioDay:hover {
-  background-color: #2d3748;
+  background: var(--card-bg);
+  transform: scale(1.02);
+  z-index: 2;
+  box-shadow: var(--shadow-md);
 }
 
 .calendarioDayHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 4px;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
 }
 
 .currentMonth {
-  background-color: #ffffff;
-  transition: background-color 0.3s ease;
-}
-
-/* Mes actual en modo oscuro */
-:global(html.dark-mode) .currentMonth,
-:global(html.dark-mode-override) .currentMonth {
-  background-color: #1e1e1e;
+  color: var(--foreground);
 }
 
 .otherMonth {
-  background-color: #f9fafb;
-  color: #9ca3af;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  color: var(--secondary);
+  opacity: 0.5;
 }
 
-/* Otro mes en modo oscuro */
-:global(html.dark-mode) .otherMonth,
-:global(html.dark-mode-override) .otherMonth {
-  background-color: #2d3748;
-  color: #6b7280;
-}
-
+/* DÍA ACTUAL - Color azul/púrpura (original) */
 .today {
-  background-color: #eff6ff;
-  transition: background-color 0.3s ease;
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  color: white;
 }
 
-/* Hoy en modo oscuro */
-:global(html.dark-mode) .today,
-:global(html.dark-mode-override) .today {
-  background-color: #1e4ed8;
+.today .calendarioDayHeader,
+.today .calendarioEvents {
+  color: white;
 }
 
 .todayHeader {
   font-weight: bold;
-  color: #2563eb;
-  transition: color 0.3s ease;
 }
 
-/* Encabezado de hoy en modo oscuro */
-:global(html.dark-mode) .todayHeader,
-:global(html.dark-mode-override) .todayHeader {
-  color: #60a5fa;
+/* DÍA SELECCIONADO - Color verde/esmeralda (nuevo) */
+.selected {
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+  transform: scale(1.02);
+  z-index: 3;
+  box-shadow: var(--shadow-lg);
 }
 
-/* Eventos */
+.selected .calendarioDayHeader,
+.selected .calendarioEvents {
+  color: white;
+}
+
+.selected .calendarioEvent {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+/* CASO ESPECIAL: Si un día es HOY Y ESTÁ SELECCIONADO */
+.calendarioDay.today.selected {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  border: 2px solid #fbbf24;
+}
+
+/* Eventos en el calendario */
 .calendarioEvents {
   overflow-y: auto;
   flex-grow: 1;
-  font-size: 11px;
+  font-size: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 
 .calendarioEvent {
-  background-color: #dbeafe;
-  padding: 2px 4px;
-  margin-bottom: 2px;
-  border-radius: 3px;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  font-weight: 500;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
 }
 
-/* Evento en modo oscuro */
-:global(html.dark-mode) .calendarioEvent,
-:global(html.dark-mode-override) .calendarioEvent {
-  background-color: #1e4ed8;
-  color: #e5e7eb;
+.calendarioEvent:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
 .eventIndicator {
-  background-color: #2563eb;
-  width: 6px;
-  height: 6px;
+  background: var(--primary);
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   display: inline-block;
-  transition: background-color 0.3s ease;
+  animation: pulse 2s infinite;
 }
 
-/* Indicador de evento en modo oscuro */
-:global(html.dark-mode) .eventIndicator,
-:global(html.dark-mode-override) .eventIndicator {
-  background-color: #60a5fa;
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
 }
 
 .eventTime {
   font-weight: 600;
+  opacity: 0.9;
 }
 
-/* Detalles del día seleccionado */
+/* Panel de detalles del día - TAMAÑO FIJO */
 .dayDetails {
-  margin-top: 15px;
-  padding: 16px;
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  background: var(--background);
+  border-radius: 12px;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-color);
+  padding: 1.5rem;
+  position: sticky;
+  top: 1rem;
+  /* CLAVE: Altura fija para evitar cambio de layout */
+  height: fit-content;
+  min-height: 400px;
+  max-height: 600px;
+  overflow-y: auto;
 }
 
-/* Detalles del día en modo oscuro */
-:global(html.dark-mode) .dayDetails,
-:global(html.dark-mode-override) .dayDetails {
-  background-color: #1e1e1e;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  color: #e5e7eb;
-}
-
-/* En pantallas medianas y grandes, mostramos una vista optimizada cuando hay día seleccionado */
-@media (min-width: 768px) {
-  .hasSelectedDay {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 20px;
-    align-items: start;
-  }
-  
-  .hasSelectedDay .calendario {
-    flex: unset;
-  }
-  
-  .hasSelectedDay .dayDetails {
-    margin-top: 0;
-    position: sticky;
-    top: 20px;
+/* En mobile, ocultar detalles por defecto */
+@media (max-width: 1023px) {
+  .dayDetails {
+    display: none;
   }
 }
 
 .dayDetailsTitle {
-  font-size: 16px;
-  margin-top: 0;
-  margin-bottom: 16px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid #e5e7eb;
-  transition: border-color 0.3s ease;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--border-color);
+  color: var(--foreground);
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-/* Título de detalles del día en modo oscuro */
-:global(html.dark-mode) .dayDetailsTitle,
-:global(html.dark-mode-override) .dayDetailsTitle {
-  border-bottom: 1px solid #4b5563;
 }
 
 .closeDetailsButton {
   background: none;
   border: none;
   cursor: pointer;
-  color: #6b7280;
-  font-size: 20px;
-  display: none;
+  color: var(--secondary);
+  font-size: 1.5rem;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
 }
 
-:global(html.dark-mode) .closeDetailsButton,
-:global(html.dark-mode-override) .closeDetailsButton {
-  color: #9ca3af;
+.closeDetailsButton:hover {
+  background: var(--card-bg);
+  color: var(--foreground);
 }
 
 .eventsList {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 1rem;
 }
 
 .eventItem {
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-  background-color: #f3f4f6;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
+  background: var(--card-bg);
+  border-radius: 8px;
+  padding: 1rem;
+  border-left: 4px solid var(--primary);
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
 }
 
-/* Elemento de evento en modo oscuro */
-:global(html.dark-mode) .eventItem,
-:global(html.dark-mode-override) .eventItem {
-  background-color: #2d3748;
+.eventItem::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, transparent, rgba(var(--primary-rgb), 0.05));
+  pointer-events: none;
+}
+
+.eventItem:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-left-width: 6px;
 }
 
 .eventItemHeader {
   display: flex;
   align-items: center;
-  margin-bottom: 4px;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
 }
 
 .eventItemTime {
+  background: var(--primary);
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
   font-weight: 600;
-  margin-right: 8px;
-  min-width: 60px;
+  font-size: 0.75rem;
+  min-width: fit-content;
 }
 
 .eventItemTitle {
-  font-weight: 500;
+  font-weight: 600;
+  color: var(--foreground);
+  flex: 1;
 }
 
 .eventItemDescription {
-  margin-top: 4px;
-  font-size: 14px;
-  color: #4b5563;
-  line-height: 1.4;
-  padding-left: 2px;
-  transition: color 0.3s ease;
-}
-
-/* Descripción de evento en modo oscuro */
-:global(html.dark-mode) .eventItemDescription,
-:global(html.dark-mode-override) .eventItemDescription {
-  color: #9ca3af;
+  color: var(--secondary);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-top: 0.5rem;
 }
 
 .noEvents {
-  color: #6b7280;
+  text-align: center;
+  color: var(--secondary);
   font-style: italic;
-  transition: color 0.3s ease;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
 
-/* No hay eventos en modo oscuro */
-:global(html.dark-mode) .noEvents,
-:global(html.dark-mode-override) .noEvents {
-  color: #9ca3af;
+.noEvents::before {
+  content: '📅';
+  font-size: 3rem;
+  opacity: 0.5;
 }
 
-/* Vista móvil modal */
+/* Modal para móviles */
 .detailsModal {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 100;
-  display: none; /* Oculto por defecto */
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
 }
 
 .detailsModalActive .detailsModal {
-  display: flex; /* Se muestra cuando la clase está activa */
-  justify-content: center;
-  align-items: center;
+  opacity: 1;
+  visibility: visible;
 }
 
 .modalContent {
   width: 90%;
   max-width: 500px;
   max-height: 80vh;
-  background: white;
-  border-radius: 8px;
-  overflow-y: auto;
-  padding: 20px;
-  position: relative;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  background: var(--background);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-color);
+  animation: modalSlideIn 0.3s ease;
 }
 
-:global(html.dark-mode) .modalContent,
-:global(html.dark-mode-override) .modalContent {
-  background-color: #1e1e1e;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+@keyframes modalSlideIn {
+  from {
+    transform: translateY(50px) scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
 }
 
 .modalContent .dayDetails {
-  margin-top: 0;
-  padding: 0;
-  box-shadow: none;
-  background-color: transparent;
   display: block;
-}
-
-.modalContent .dayDetailsTitle {
-  margin-top: 10px;
+  margin: 0;
+  padding: 1.5rem;
+  box-shadow: none;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  position: static;
+  height: auto;
+  min-height: auto;
+  max-height: none;
 }
 
 .modalCloseButton {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  background: none;
+  top: 1rem;
+  right: 1rem;
+  background: var(--card-bg);
   border: none;
-  font-size: 24px;
+  font-size: 1.5rem;
   cursor: pointer;
-  color: #6b7280;
+  color: var(--secondary);
   width: 40px;
   height: 40px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
   z-index: 10;
+  transition: all 0.2s ease;
 }
 
 .modalCloseButton:hover {
-  background-color: rgba(0, 0, 0, 0.1);
+  background: var(--border-color);
+  color: var(--foreground);
+  transform: scale(1.1);
 }
 
-:global(html.dark-mode) .modalCloseButton,
-:global(html.dark-mode-override) .modalCloseButton {
-  color: #9ca3af;
-}
-
-:global(html.dark-mode) .modalCloseButton:hover,
-:global(html.dark-mode-override) .modalCloseButton:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-/* Orientación horizontal en dispositivos móviles */
-@media (max-height: 500px) and (orientation: landscape) {
-  .calendarioContainer {
-    display: flex;
-    gap: 10px;
-  }
-  
-  .calendario {
-    flex: 1.5;
-  }
-  
-  .dayDetails {
-    flex: 1;
-    margin-top: 0;
-    overflow-y: auto;
-    max-height: 80vh;
-    display: block; /* Asegurar que sea visible en landscape */
-  }
-  
-  /* Mostrar botón de cierre en landscape */
-  .closeDetailsButton {
-    display: block;
-    background: none;
-    border: none;
-    color: #6b7280;
-    font-size: 20px;
-    cursor: pointer;
-    margin-left: auto;
-  }
-  
-  :global(html.dark-mode) .closeDetailsButton,
-  :global(html.dark-mode-override) .closeDetailsButton {
-    color: #9ca3af;
-  }
-  
-  /* Ocultar el modal en landscape ya que usamos vista lateral */
-  .detailsModalActive .detailsModal {
-    display: none;
-  }
-}
-
-/* Media queries para dispositivos móviles */
+/* Responsive */
 @media (max-width: 768px) {
-  .calendarioDayOfWeek {
-    font-size: 10px;
-    padding: 5px 2px;
+  .calendarioContainer {
+    padding: 0.5rem;
   }
   
-  .calendarioEvent {
-    font-size: 10px;
-    padding: 1px 3px;
+  .calendarioHeader {
+    padding: 1rem;
   }
   
   .calendarioTitle {
-    font-size: 14px;
+    font-size: 1.25rem;
   }
   
-  .eventItemTime {
-    min-width: 50px;
-    font-size: 12px;
+  .calendarioNavButton {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+  
+  .calendarioDayOfWeek {
+    padding: 0.5rem;
+    font-size: 0.75rem;
+  }
+  
+  .calendarioDay {
+    min-height: 80px;
+    padding: 0.5rem;
+  }
+  
+  .calendarioEvent {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.4rem;
   }
 }
 
 @media (max-width: 480px) {
-  .calendarioContainer {
-    padding: 5px;
-  }
-  
-  .calendarioDayOfWeek {
-    font-size: 9px;
-    padding: 3px 1px;
-  }
-  
   .calendarioDay {
-    padding: 2px;
+    min-height: 60px;
+    padding: 0.25rem;
   }
   
-  /* Ocultar la vista normal de detalles en dispositivos móviles */
-  .dayDetails {
-    display: none;
+  .calendarioDayHeader {
+    margin-bottom: 0.25rem;
+    font-size: 0.875rem;
   }
   
-  /* Estilos específicos para el modal en dispositivos móviles */
+  .calendarioEvent {
+    font-size: 0.65rem;
+    padding: 0.15rem 0.3rem;
+  }
+  
   .modalContent {
     width: 95%;
-    padding: 15px;
-    max-height: 90vh;
-    margin: 20px 0;
+    margin: 1rem;
   }
-  
-  .modalContent .dayDetails {
-    display: block; /* Mostrar detalles dentro del modal */
-    margin: 0;
-    padding: 0;
-    box-shadow: none;
+}
+
+/* Animaciones de carga */
+.calendario {
+  animation: fadeInUp 0.5s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
-  .modalContent .dayDetailsTitle {
-    font-size: 16px;
-    margin-bottom: 12px;
-    padding-right: 30px; /* Espacio para el botón de cerrar */
-  }
-  
-  .eventItem {
-    padding: 8px;
-  }
-  
-  .eventItemHeader {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  .eventItemTime {
-    margin-bottom: 4px;
-    display: block;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

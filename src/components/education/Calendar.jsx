@@ -13,7 +13,7 @@ const Calendar = ({ eventos = [] }) => {
   // Efecto para detectar dispositivos móviles
   useEffect(() => {
     const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 480);
+      setIsMobile(window.innerWidth < 1024); // Cambié de 480 a 1024
     };
     
     checkMobile();
@@ -30,16 +30,13 @@ const Calendar = ({ eventos = [] }) => {
     const month = date.getMonth();
     const daysInMonth = new Date(year, month + 1, 0).getDate();
     
-    // Modificado para comenzar con lunes (1) en lugar de domingo (0)
     let firstDayOfMonth = new Date(year, month, 1).getDay();
-    // Convertir el día 0 (domingo) a 7 para que sea el último día
     firstDayOfMonth = firstDayOfMonth === 0 ? 7 : firstDayOfMonth;
-    // Restar 1 para que lunes sea 1, martes 2, etc.
     firstDayOfMonth -= 1;
     
     const days = [];
     
-    // Agregar días del mes anterior para llenar la primera semana
+    // Días del mes anterior
     const prevMonthDays = new Date(year, month, 0).getDate();
     for (let i = firstDayOfMonth - 1; i >= 0; i--) {
       days.push({
@@ -48,7 +45,7 @@ const Calendar = ({ eventos = [] }) => {
       });
     }
     
-    // Agregar días del mes actual
+    // Días del mes actual
     for (let i = 1; i <= daysInMonth; i++) {
       days.push({
         date: new Date(year, month, i),
@@ -56,8 +53,8 @@ const Calendar = ({ eventos = [] }) => {
       });
     }
     
-    // Agregar días del mes siguiente para completar la cuadrícula
-    const remainingDays = 42 - days.length; // 6 filas x 7 días = 42
+    // Días del mes siguiente
+    const remainingDays = 42 - days.length;
     for (let i = 1; i <= remainingDays; i++) {
       days.push({
         date: new Date(year, month + 1, i),
@@ -70,16 +67,13 @@ const Calendar = ({ eventos = [] }) => {
 
   const days = getDaysInMonth(currentDate);
   
-  // Nombres de los meses en español
   const monthNames = [
     'Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio',
     'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'
   ];
   
-  // Nombres de los días en español (reordenados para comenzar con lunes)
   const dayNames = ['L', 'M', 'X', 'J', 'V', 'S', 'D'];
 
-  // Cambiar al mes anterior
   const prevMonth = () => {
     setCurrentDate(new Date(currentDate.getFullYear(), currentDate.getMonth() - 1, 1));
     setSelectedDay(null);
@@ -87,7 +81,6 @@ const Calendar = ({ eventos = [] }) => {
     setShowModal(false);
   };
 
-  // Cambiar al mes siguiente
   const nextMonth = () => {
     setCurrentDate(new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 1));
     setSelectedDay(null);
@@ -95,12 +88,10 @@ const Calendar = ({ eventos = [] }) => {
     setShowModal(false);
   };
 
-  // Formatear fecha como string para usarla como clave en el objeto de eventos
   const formatDateKey = (date) => {
     return `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
   };
 
-  // Obtener eventos para un día específico
   const getEventosDelDia = (day) => {
     if (!day) return [];
     
@@ -108,12 +99,17 @@ const Calendar = ({ eventos = [] }) => {
     return eventos.filter(evento => evento.fecha === dateKey);
   };
 
-  // Seleccionar un día para ver sus eventos
   const selectDay = (day) => {
-    // Actualizar el día seleccionado
+    // Si es el mismo día, deseleccionar
+    if (selectedDay && 
+        selectedDay.date.getTime() === day.date.getTime()) {
+      setSelectedDay(null);
+      setSelectedDayEvents([]);
+      setShowModal(false);
+      return;
+    }
+
     setSelectedDay({...day});
-    
-    // IMPORTANTE: Actualizar explícitamente los eventos del día seleccionado
     const eventsForDay = getEventosDelDia(day);
     setSelectedDayEvents(eventsForDay);
     
@@ -122,39 +118,50 @@ const Calendar = ({ eventos = [] }) => {
     }
   };
 
-  // Verificar si un día tiene eventos
   const hasEvents = (day) => {
     return getEventosDelDia(day).length > 0;
   };
 
-  // Comprobar si una fecha es hoy
   const isToday = (date) => {
     const today = new Date();
     return date.getDate() === today.getDate() &&
            date.getMonth() === today.getMonth() &&
            date.getFullYear() === today.getFullYear();
   };
+
+  const isSelectedDay = (day) => {
+    return selectedDay && 
+           selectedDay.date.getTime() === day.date.getTime();
+  };
   
-  // Formatear fecha para la vista detallada
   const formatDetailDate = (date) => {
     const dayNames = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
     return `${dayNames[date.getDay()]}, ${date.getDate()} de ${monthNames[date.getMonth()]}`;
   };
   
-  // Cerrar el modal
+  // FUNCIÓN MODIFICADA: Ahora también deselecciona el día
   const closeModal = () => {
     setShowModal(false);
+    // CLAVE: También deseleccionar el día al cerrar el modal
+    setSelectedDay(null);
+    setSelectedDayEvents([]);
   };
 
-  // Cerrar los detalles del día
   const closeDetails = () => {
     setSelectedDay(null);
     setSelectedDayEvents([]);
   };
 
-  // Renderizar detalles del día 
   const renderDayDetails = () => {
-    if (!selectedDay) return null;
+    if (!selectedDay) {
+      return (
+        <div className={styles.dayDetails}>
+          <div className={styles.noEvents}>
+            Selecciona un día para ver sus eventos
+          </div>
+        </div>
+      );
+    }
     
     return (
       <div className={styles.dayDetails}>
@@ -186,14 +193,14 @@ const Calendar = ({ eventos = [] }) => {
             ))}
           </div>
         ) : (
-          <p className={styles.noEvents}>No hay eventos para este día.</p>
+          <div className={styles.noEvents}>No hay eventos para este día</div>
         )}
       </div>
     );
   };
 
   return (
-    <div className={`${styles.calendarioContainer} ${showModal ? styles.detailsModalActive : ''} ${selectedDay && !isMobile ? styles.hasSelectedDay : ''}`}>
+    <div className={`${styles.calendarioContainer} ${showModal ? styles.detailsModalActive : ''}`}>
       <div className={styles.calendario}>
         {/* Cabecera del calendario */}
         <div className={styles.calendarioHeader}>
@@ -202,7 +209,7 @@ const Calendar = ({ eventos = [] }) => {
             className={styles.calendarioNavButton}
             aria-label="Mes anterior"
           >
-            &lt;
+            ‹
           </button>
           <h2 className={styles.calendarioTitle}>
             {monthNames[currentDate.getMonth()]} {currentDate.getFullYear()}
@@ -212,7 +219,7 @@ const Calendar = ({ eventos = [] }) => {
             className={styles.calendarioNavButton}
             aria-label="Mes siguiente"
           >
-            &gt;
+            ›
           </button>
         </div>
         
@@ -230,13 +237,15 @@ const Calendar = ({ eventos = [] }) => {
           {days.map((day, index) => {
             const dayEvents = getEventosDelDia(day);
             const hasDay = hasEvents(day);
+            const isSelected = isSelectedDay(day);
             
             return (
               <div 
                 key={index} 
                 className={`${styles.calendarioDay} 
                   ${day.isCurrentMonth ? styles.currentMonth : styles.otherMonth} 
-                  ${isToday(day.date) ? styles.today : ''}`}
+                  ${isToday(day.date) ? styles.today : ''}
+                  ${isSelected ? styles.selected : ''}`}
                 onClick={() => selectDay(day)}
               >
                 <div className={`${styles.calendarioDayHeader} ${isToday(day.date) ? styles.todayHeader : ''}`}>
@@ -246,7 +255,6 @@ const Calendar = ({ eventos = [] }) => {
                   )}
                 </div>
                 <div className={styles.calendarioEvents}>
-                  {/* Mostrar solo los primeros eventos */}
                   {dayEvents.slice(0, 2).map(evento => (
                     <div key={evento.id} className={styles.calendarioEvent}>
                       {evento.hora && <span className={styles.eventTime}>{evento.hora}: </span>}
@@ -254,7 +262,6 @@ const Calendar = ({ eventos = [] }) => {
                     </div>
                   ))}
                   
-                  {/* Indicador de más eventos */}
                   {dayEvents.length > 2 && (
                     <div className={styles.calendarioEvent}>
                       +{dayEvents.length - 2} más
@@ -267,8 +274,8 @@ const Calendar = ({ eventos = [] }) => {
         </div>
       </div>
       
-      {/* Detalles del día (para vista desktop y orientación horizontal) */}
-      {selectedDay && renderDayDetails()}
+      {/* Panel de detalles - SIEMPRE VISIBLE en desktop */}
+      {!isMobile && renderDayDetails()}
       
       {/* Modal para dispositivos móviles */}
       {showModal && selectedDay && (
@@ -281,7 +288,6 @@ const Calendar = ({ eventos = [] }) => {
             >
               ×
             </button>
-            {/* Contenido del modal */}
             <div className={styles.dayDetails}>
               <h3 className={styles.dayDetailsTitle}>
                 {formatDetailDate(selectedDay.date)}
@@ -304,7 +310,7 @@ const Calendar = ({ eventos = [] }) => {
                   ))}
                 </div>
               ) : (
-                <p className={styles.noEvents}>No hay eventos para este día.</p>
+                <div className={styles.noEvents}>No hay eventos para este día</div>
               )}
             </div>
           </div>

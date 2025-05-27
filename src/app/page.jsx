@@ -30,7 +30,7 @@ export default function Home() {
             <Card
               title="Algorithms"
               description="Recopilación Algoritmos"
-              image="/logos/arsenal.jpg"
+              image="/logos/algorithms.jpg"
               link='/algorithms'
             />
             <Card

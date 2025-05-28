@@ -55,6 +55,8 @@ const courseData = {
         { week: '01', lecture: '01', date: 'Sáb 24, May 2025', description: <CustomLink href='fvie01/lectura01'>Entrevista a usuario</CustomLink> },
         { week: '', lecture: '02', date: 'Sáb 24, May 2025', description: 'Elaboración de cuestionarios' },
         { week: '', lecture: '03', date: 'Sáb 24, May 2025', description: 'Observación no participante' },
+        { week: '02', lecture: '04', date: 'Sáb 31, May 2025', description: 'Procesamiento de Hallazgos' },
+        { week: '', lecture: '05', date: 'Sáb 31, May 2025', description: 'Redefinición del desafío' },
     ],
 };
 export default courseData;

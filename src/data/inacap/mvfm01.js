@@ -77,8 +77,8 @@ const courseData = {
         { week: '', class: '12', date: 'Mié 25, Sep 2024', description: <CustomLink href='mvfm01/guia01'>- Guía Resumen Unidad 1</CustomLink> },
         { week: '08', class: '13', date: 'Lun 30, Sep 2024', description: <ExternalLink href='/inacap/mvfm01/docs/eval01.pdf'>- Evaluación 01</ExternalLink> },
         { week: '', class: '14', date: 'Mié 02, Oct 2024', description: <>
-            - Introducción a Trigonometría<br/>
-            - ARPA 1: La plaza de skate
+            <CustomLink href='mvfm01/intro-trig'>- Introducción a Trigonometría</CustomLink><br/>
+            <CustomLink href='mvfm01/arpa21'>- ARPA 1: La plaza de skate</CustomLink>
             </> },
         { week: '09', class: '15', date: 'Lun 07, Oct 2024', description: <CustomLink href='mvfm01/sm21'>- SM 1: La Rampa</CustomLink> },
         { week: '', class: '16', date: 'Mié 09, Oct 2024', description: <>

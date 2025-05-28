@@ -1,6 +1,6 @@
-# Invalid Tweets
+# Tweets No Válidos
 
-**Table:** `Tweets`
+**Tabla:** `Tweets`
 ```markdown
 +----------------+---------+
 | Column Name    | Type    |
@@ -8,24 +8,20 @@
 | tweet_id       | int     |
 | content        | varchar |
 +----------------+---------+
-tweet_id is the primary key (column with unique values) for this table.
-content consists of alphanumeric characters, '!', or ' ' and no other 
-special characters.
-This table contains all the tweets in a social media app.
-``
+"tweet_id" es la clave primaria para esta tabla.
+"content" consiste en caracteres alfanuméricos, '!', o ' ' y ningún otro carácter especial.
+Esta tabla contiene todos los tweets en una aplicación de redes sociales.
+```
 
-Write a solution fo find the IDs of the invalid tweets. The tweet is invalid if the number of characters used in the content of the tweet is **strictly greater** than 15.
+Escribe una solución para encontrar los IDs de los tweets inválidos. el tweet es inválido si el número de caracteres usados en el contenido del tweet es **estrictamente mayor** que 15.
 
-Return the result table in **any order**
+Devuelve la tabla de resultados en **cualquier orden**.
 
-The result format is in the following Example
-
-## Example
-
+## Ejemplo
 
 **Input:**
 ```markdown 
-Tweets table:
+tabla Tweets:
 +----------+-----------------------------------+
 | tweet_id | content                           |
 +----------+-----------------------------------+
@@ -41,12 +37,13 @@ Tweets table:
 +----------+
 | 2        |
 +----------+
-Explanation: 
-Tweet 1 has length = 11. It is a valid tweet.
-Tweet 2 has length = 33. It is an invalid tweet.
+
+Explicación:
+Tweet 1 tiene longitud = 11. Es un tweet válido.
+Tweet 2 tiene longitud = 33. Es un tweet inválido. 
 ```
 
-## Solutions
+## Soluciones
 
 <details>
     <summary>Python</summary>

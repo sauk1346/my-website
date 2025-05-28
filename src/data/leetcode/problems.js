@@ -78,13 +78,13 @@ export const problems = {
       categories: ["pandas"]
     },
     "LC1173": {
-      title: "Delivery de Comida Inmediato I",
+      title: "Delivery de Comida Inmediata I",
       topics: ["Base de Datos"],
       difficulty: "Easy",
       categories: ["pandas"]
     },
     "LC1429": {
-      title: "First Unique Number",
+      title: "Primer Número Único",
       topics: ["Arreglos", "Tablas Hash", "Diseño", "Cola", "Fluyo de Datos"],
       difficulty: "Medium",
       categories: ["general"]
@@ -108,7 +108,7 @@ export const problems = {
       categories: ["pandas"]
     },
     "LC1683": {
-      title: "Invalid Tweets",
+      title: "Tweets No Válidos",
       topics: ["Base de Datos"],
       difficulty: "Easy",
       categories: ["pandas"]
@@ -135,6 +135,12 @@ export const problems = {
       title: "Calculate Special Bonus",
       topics: ["Base de Datos"],
       difficulty: "Easy",
+      categories: ["pandas"]
+    },
+    "LC1907": {
+      title: "Categorías de Salario",
+      topics: ["Base de Datos"],
+      difficulty: "Medium",
       categories: ["pandas"]
     },
     "LC1931": {
@@ -166,6 +172,12 @@ export const problems = {
       topics: ["Base de Datos"],
       difficulty: "Medium",
       categories: ["pandas"]
+    },
+    "LC2894": {
+      title: "Diferencia de Sumas Divisibles y No Divisibles",
+      topics: ["Matemáticas"],
+      difficulty: "Easy",
+      categories: ["general"]
     },
     "LC2900": {
       title: "Longest Unequal Adjacent Groups Subsequence I",
@@ -218,6 +230,12 @@ export const problems = {
     "LC3362": {
       title: "Transformación a Arreglo-Cero III",
       topics: ["Arreglos", "Algoritmo Voraz", "Ordenamiento", "Heap", "Suma Acumulada"],
+      difficulty: "Medium",
+      categories: ["general"]
+    },
+    "LC3372": {
+      title: "Maximizar Cantidad de Nodos al Unir Árboles I",
+      topics: ["Árbol", "Búsqueda en Profundidad", "Búsqueda por Amplitud"],
       difficulty: "Medium",
       categories: ["general"]
     },

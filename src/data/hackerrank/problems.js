@@ -107,4 +107,40 @@ export const problems = {
     difficulty: "Easy",
     categories: ["c"]
   },
+  "HR0019": {
+    title: "Input y Output",
+    topics: ["Introducción"],
+    difficulty: "Easy",
+    categories: ["cpp"]
+  },
+  "HR0020": {
+    title: "Arreglo 2D",
+    topics: ["Introducción", "Arreglos"],
+    difficulty: "Easy", 
+    categories: ["data-structures"]
+  },
+  "HR0021": {
+    title: "Fundamentos de Conjuntos y Relaciones \#2",
+    topics: ["Matemáticas"],
+    difficulty: "Easy",
+    categories: ["databases"]
+  },
+  "HR0022": {
+    title: "Hola Mundo!",
+    topics: ["Introducción"],
+    difficulty: "Easy",
+    categories: ["functional-programming"]
+  },
+  "HR0023": {
+    title: "Stdin y Stdout en Java I",
+    topics: ["Introducción"],
+    difficulty: "Easy",
+    categories: ["java"]
+  },
+  "HR0024": {
+    title: "Bucles y Saltos",
+    topics: ["Bash"],
+    difficulty: "Easy",
+    categories: ["linux-shell"]
+  },
 };

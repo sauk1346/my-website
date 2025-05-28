@@ -1,0 +1,47 @@
+# Stdin y Stdout en Java I
+
+- **stdin:** *standard input*. Entrada estándar
+- **stdout:** *standard output*. Salida estándar
+
+Una forma popular de leer entrada desde stdin es usando la clase `Scanner`
+
+## Tarea
+
+Lee 3 enteros desde stdin y luego imprimelos a stdout. Cada entero debe ser impreso en una nueva línea.
+
+## Ejemplo
+
+> **Input**
+> 42
+> 100
+> 125
+
+> **Output**
+> 42
+> 100
+> 125
+
+## Soluciones
+
+<details>
+    <summary>Java</summary>
+```java
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        
+        Scanner scan = new Scanner(System.in);
+        
+        int num1 = scan.nextInt();
+        int num2 = scan.nextInt();
+        int num3 = scan.nextInt();
+        
+        System.out.println(num1);
+        System.out.println(num2);
+        System.out.println(num3);
+    }
+}
+```
+</details>

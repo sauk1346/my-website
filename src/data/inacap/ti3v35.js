@@ -19,28 +19,28 @@ const courseData = {
     evaluationsData: [
         { 
             evaluationNumber: 1,
-            date: 'Mié 28, May 2025',
+            date: 'Lun 02, Jun 2025',
             weighting: '15%',
             description: 'TCP/IP',
             quickGuide: ''
         },
         { 
             evaluationNumber: 2,
-            date: 'Lun 09, Jun 2025',
+            date: '',
             weighting: '30%',
             description: 'Windows Server',
             quickGuide: ''
         },
         { 
             evaluationNumber: 3,
-            date: 'Sáb 12, Jul 2025',
+            date: '',
             weighting: '30%',
             description: 'Linux Server',
             quickGuide: ''
         },
         { 
             evaluationNumber: 4,
-            date: 'Lun 21, Jul 2025',
+            date: '',
             weighting: '25%',
             description: 'Promedio Controles',
             quickGuide: ''
@@ -48,11 +48,15 @@ const courseData = {
     ],
     classData: [
         { week: '01', class: '01', date: 'Lun 19, May 2025', description: <CustomLink href="ti3v35/clase01">Introducción TCP/IP</CustomLink> },
-        { week: '', class: '02', date: 'Mar 20, May 2025', description: <del>Suspesión clases: pre-feriado</del> },
+        { week: '02', class: '02', date: 'Lun 26, May 2025', description: "VLSM (1)" },
+        { week: '', class: '03', date: 'Mié 28, May 2025', description: "VLSM (2)" },
     ],
     lectureData: [
-        { week: '01', lecture: '01', date: 'Sáb 24, May 2025', description: 'Direccionamiento de redes basada en protocolos TCP/IP' },
-        { week: '', lecture: '02', date: 'Sáb 24, May 2025', description: 'Interconexión de dispositivos y redes' },
+        { week: '01', lecture: '01', date: 'Sáb 24, May 2025', description: <ExternalLink href="/inacap/ti3v35/docs/lectura01.pdf" >Direccionamiento de redes basada en protocolos TCP/IP</ExternalLink> },
+        { week: '', lecture: '02', date: 'Sáb 24, May 2025', description: <CustomLink href="ti3v35/lectura02">Interconexión de dispositivos y redes</CustomLink> },
+        { week: '02', lecture: '03', date: 'Sáb 31, May 2025', description: 'Cálculo de clases de dirección' },
+        { week: '', lecture: '04', date: 'Sáb 31, May 2025', description: 'Técnicas de cálculo VLSM' },
+
     ],
 };
 export default courseData;

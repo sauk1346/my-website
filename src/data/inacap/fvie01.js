@@ -47,10 +47,12 @@ const courseData = {
         }
     ],
     classData: [
-        { week: '01', class: '01', date: 'Jue 22, May 2025', description: <ExternalLink href='fvie01/clase01'>Introducción a I+E</ExternalLink> },
+        { week: '01', class: '01', date: 'Jue 22, May 2025', description: <CustomLink href='fvie01/clase01'>Introducción a I+E</CustomLink> },
+        { week: '02', class: '02', date: 'Mar 27, May 2025', description: <CustomLink href='fvie01/clase02'>Tema de Proyecto</CustomLink> },
+        { week: '', class: '03', date: 'Jue 29, May 2025', description: "" },
     ],
     lectureData: [
-        { week: '01', lecture: '01', date: 'Sáb 24, May 2025', description: 'Entrevista a usuario' },
+        { week: '01', lecture: '01', date: 'Sáb 24, May 2025', description: <CustomLink href='fvie01/lectura01'>Entrevista a usuario</CustomLink> },
         { week: '', lecture: '02', date: 'Sáb 24, May 2025', description: 'Elaboración de cuestionarios' },
         { week: '', lecture: '03', date: 'Sáb 24, May 2025', description: 'Observación no participante' },
     ],

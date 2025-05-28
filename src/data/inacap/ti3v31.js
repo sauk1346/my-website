@@ -47,13 +47,14 @@ const courseData = {
         }
     ],
     classData: [
-        { week: '01', class: '01', date: 'Mar 20, May 2025', description: <del>Suspensión clases: pre-feriado</del> },
+        { week: '01', class: '01', date: 'Mié 28, May 2025', description: <del>Suspensión clases</del> },
+        { week: '02', class: '02', date: 'Mié 04, Jun 2025', description: ""},
     ],
     lectureData: [
-        { week: '01', lecture: '01', date: 'Sáb 24, May 2025', description: 'Unidad 1: Desarrollo de sitio web estático utilizando HTML5 y CSS3' },
-        { week: '', lecture: '02', date: 'Sáb 24, May 2025', description: 'Principios de diseño responsivo de Programación Front End' },
-        { week: '', lecture: '03', date: 'Sáb 24, May 2025', description: 'Tutorial Interactivo de HTML' },
-        { week: '', lecture: '04', date: 'Sáb 24, May 2025', description: 'Tutorial Práctico: convertir un diseño en HTML' },
+        { week: '01', lecture: '01', date: 'Sáb 31, May 2025', description: 'Unidad 1: Desarrollo de sitio web estático utilizando HTML5 y CSS3' },
+        { week: '', lecture: '02', date: 'Sáb 31, May 2025', description: 'Principios de diseño responsivo de Programación Front End' },
+        { week: '', lecture: '03', date: 'Sáb 31, May 2025', description: 'Tutorial Interactivo de HTML' },
+        { week: '', lecture: '04', date: 'Sáb 31, May 2025', description: 'Tutorial Práctico: convertir un diseño en HTML' },
     ],
 };
 export default courseData;

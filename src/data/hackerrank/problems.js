@@ -143,4 +143,22 @@ export const problems = {
     difficulty: "Easy",
     categories: ["linux-shell"]
   },
+  "HR0025": {
+    title: "Máximo de Extracciones",
+    topics: ["Matemáticas"],
+    difficulty: "Easy",
+    categories: ["mathematics"]
+  },
+  "HR0026": {
+    title: "If-Else",
+    topics: ["Introducción"],
+    difficulty: "Easy",
+    categories: ["python"]
+  },
+  "HR0027": {
+    title: "SlideShow",
+    topics: ["Componentes"],
+    difficulty: "Medium",
+    categories: ["react"]
+  },
 };

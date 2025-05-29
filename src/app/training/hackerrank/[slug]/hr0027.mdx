@@ -1,0 +1,110 @@
+# Slideshow
+
+Se te encarga crear una aplicación React simple llamada "Basic Slideshow" que muestre una serie de diapositivas y permita a los usuarios navegar a través de ellas. Los requisitos de la aplicación se detallan a continuación, y la aplicación terminada debe pasar todas las pruebas unitarias.
+
+## Detailed Requirements
+
+1. El componente Slides recibe un array de diapositivas como prop. Cada elemento de este array representa una sola diapositiva y es un objeto con dos propiedades: un string title y un string text.
+2. Cuando la aplicación se carga, la primera diapositiva debe ser renderizada.
+3. Hacer clic en el botón "Next" muestra la siguiente diapositiva. Este botón debe estar deshabilitado cuando la diapositiva actual es la última.
+4. Hacer clic en el botón "Prev" muestra la diapositiva anterior. Este botón debe estar deshabilitado cuando la diapositiva actual es la primera.
+5. Hacer clic en el botón "Restart" regresa a la primera diapositiva. Este botón debe estar deshabilitado cuando la diapositiva actual es la primera.
+6. Puedes asumir que el array de diapositivas pasado contiene al menos una diapositiva.
+
+
+## Interacción de ejemplo
+
+**Estado Inicial**
+- La primera diapositiva es mostrada.
+- Los botones "Prev" y "Restart" están deshabilitados.
+
+**Acción del Usuario 1**
+- El usuario hace clic en el botón "Next".
+- La siguiente diapositiva es mostrada.
+- Los botones "Prev" y "Restart" se habilitan.
+
+**Acción del Usuario 2**
+- El usuario hace clic en el botón "Prev".
+- La diapositiva anterior es mostrada.
+- El botón "Prev" se deshabilita si se muestra la primera diapositiva.
+
+**Acción del Usuario 3**
+- El usuario hace clic en el botón "Restart".
+- La primera diapositiva es mostrada.
+- Los botones "Prev" y "Restart" se deshabilitan.
+
+## Soluciones
+
+<details>
+    <summary>React</summary>
+```js
+import React, { useState } from "react";
+
+function Slides({ slides }) {
+  // Estado para rastrear el slide actual (índice)
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  // Funciones para manejar la navegación
+  const handleNext = () => {
+    if (currentSlide < slides.length - 1) {
+      setCurrentSlide(currentSlide + 1);
+    }
+  };
+
+  const handlePrev = () => {
+    if (currentSlide > 0) {
+      setCurrentSlide(currentSlide - 1);
+    }
+  };
+
+  const handleRestart = () => {
+    setCurrentSlide(0);
+  };
+
+  // Determinar si los botones deben estar deshabilitados
+  const isFirst = currentSlide === 0;
+  const isLast = currentSlide === slides.length - 1;
+
+  return (
+    <div>
+      <div id="navigation" className="text-center">
+        <button 
+          data-testid="button-restart" 
+          className="small outlined"
+          onClick={handleRestart}
+          disabled={isFirst}
+        >
+          Restart
+        </button>
+        
+        <button 
+          data-testid="button-prev" 
+          className="small"
+          onClick={handlePrev}
+          disabled={isFirst}
+        >
+          Prev
+        </button>
+        
+        <button 
+          data-testid="button-next" 
+          className="small"
+          onClick={handleNext}
+          disabled={isLast}
+        >
+          Next
+        </button>
+      </div>
+      
+      <div id="slide" className="card text-center">
+        <h1 data-testid="title">{slides[currentSlide].title}</h1>
+        <p data-testid="text">{slides[currentSlide].text}</p>
+      </div>
+    
+    </div>
+  );
+}
+
+export default Slides;
+```
+</details>

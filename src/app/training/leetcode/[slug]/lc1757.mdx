@@ -1,6 +1,6 @@
-# Recyclable and Low Fat Products
+# Productos Reciclables y Bajos en Grasa
 
-**Table:** `Products`
+**Tabla:** `Products`
 
 ```markdown
 +-------------+---------+
@@ -10,24 +10,25 @@
 | low_fats    | enum    |
 | recyclable  | enum    |
 +-------------+---------+
-product_id is the primary key (column with unique values) for this table.
-low_fats is an ENUM (category) of type ('Y', 'N') where 'Y' means this 
-product is low fat and 'N' means it is not.
-recyclable is an ENUM (category) of types ('Y', 'N') where 'Y' means 
-this product is recyclable and 'N' means it is not.
+"product_id" es la clave primaria para esta tabla.
+
+"low_fats" es un ENUM (categoría) de tipo ('Y', 'N') donde 'Y' significa 
+que es un producto bajo en grasas, y 'N' significa que no lo es.
+
+"recyclable" es un ENUM (categoría) de tipos ('Y', 'N') donde 'Y' significa
+que este producto es reciclable y 'N' significa que no lo es.
 ``` 
 
-Write a solution to find the ids of products that are both low fat and recyclable.
+Escribe una solución para encontrar los ids de productos que sean tanto bajos en grasa como reciclables.
 
-Return the result tabla in **any order**.
+Devuelve la tabla resultado en **cualquier orden**.
 
-## Examples
 
-**Example 1**
+## Ejemplos
 
-```markdown
-Input: 
-Products table:
+**Input:**
+```text
+Tabla Products:
 +-------------+----------+------------+
 | product_id  | low_fats | recyclable |
 +-------------+----------+------------+
@@ -37,19 +38,21 @@ Products table:
 | 3           | Y        | Y          |
 | 4           | N        | N          |
 +-------------+----------+------------+
-
-Output: 
+```
+**Output:**
+```text 
 +-------------+
 | product_id  |
 +-------------+
 | 1           |
 | 3           |
 +-------------+
-
-Explanation: Only products 1 and 3 are both low fat and recyclable.
 ```
 
-## Solution
+**Explicación:** solo los productos 1 y 3 son tanto bajos en grasa como reciclables.
+
+
+## Solución
 
 <details>
     <summary>Python</summary>

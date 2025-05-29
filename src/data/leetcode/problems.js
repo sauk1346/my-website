@@ -83,6 +83,12 @@ export const problems = {
       difficulty: "Easy",
       categories: ["pandas"]
     },
+    "LC1322": {
+      title: "Rendimiento de Anuncios",
+      topics: ["Base de Datos"],
+      difficulty: "Easy",
+      categories: ["pandas"]
+    },
     "LC1429": {
       title: "Primer Número Único",
       topics: ["Arreglos", "Tablas Hash", "Diseño", "Cola", "Fluyo de Datos"],
@@ -114,7 +120,7 @@ export const problems = {
       categories: ["pandas"]
     },
     "LC1757": {
-      title: "Recyclable and Low Fat Products",
+      title: "Productos Reciclables y Bajos en Grasa",
       topics: ["Base de Datos"],
       difficulty: "Easy",
       categories: ["pandas"]
@@ -234,9 +240,15 @@ export const problems = {
       categories: ["general"]
     },
     "LC3372": {
-      title: "Maximizar Cantidad de Nodos al Unir Árboles I",
+      title: "Maximizar Cantidad de Nodos Objetivos al Unir Árboles I",
       topics: ["Árbol", "Búsqueda en Profundidad", "Búsqueda por Amplitud"],
       difficulty: "Medium",
+      categories: ["general"]
+    },
+    "LC3373": {
+      title: "Maximizar Cantidad de Nodos Objetivos al Unir Árboles II",
+      topics: ["Árbol", "Búsqueda en Profundidad", "Búsqueda por Amplitud"],
+      difficulty: "Hard",
       categories: ["general"]
     },
   };

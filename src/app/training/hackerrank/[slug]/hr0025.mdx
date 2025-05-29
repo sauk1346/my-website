@@ -1,0 +1,80 @@
+# Máximo de Extracciones
+
+Una persona se está preparando para salir y necesita un par de calcetines que hagan juegol. Si hay $n$ colores de calcetines en el cajón. 
+
+¿Cuántos calcetines necesitan ser removidos para estar seguro de tener un par que haga juego?
+
+Devuelve el número mínimo de calcetines a remover para garantizar un par que haga juego.
+
+
+## Ejemplos
+
+**Ejemplo 1:**
+> n = 2
+> Hay 2 colores de calcetines en el cajón. Si remueven 2 calcetines, puede que no hagan juego. El número mínimo para asegurar el éxito es 3.
+
+**Example2**
+
+> **Input:**
+> 2
+> 1
+> 2
+
+> **Output**
+> 3
+> 2
+> 3
+
+> **Explicación:**
+> Caso 1 (n=2): 2 colores de calcetines están en el cajón. Los primeros dos removidos pueden no hacer juego. Se necesitan al menos 3 calcetines para garantizar el éxito.
+> Caso 2 (n=1): solo 1 color de calcetines está en el cajón. Cualquier 2 harán juego.
+> Caso 3 (n=2): 2 colores de calcetines están en el cajón. Los primeros dos removidos pueden no hacer juego. Se necesitan al menos 3 calcetines para garantizar el éxito.
+
+
+## Soluciones
+
+<details>
+    <summary>Matemáticas</summary>
+
+**Principio del Palomar**
+
+- Si se distribuyen $k$ objetos en $n$ contenedores donde $k > n$, entonces al menos un contenedor debe contener más de un objeto
+- Para garantizar que **al menos un contenedor tenga $m$ objetos, se necesitan:**
+
+$$
+\begin{aligned}
+    k = n \cdot (m -1) + 1 \quad [objetos]
+\end{aligned}
+$$
+
+Para el ejercicio:
+- $n$: colores de calcetines
+- $m$: 2 (par de calcetín)
+
+Esto es, porque llevando el principio a la práctica
+
+- principio: "Al menos un contenedor tenga m objetos"
+- ejercicio: "Al menos un color tenga m calcetines"
+
+Para m=2: "Al menos un color tenga 2 calcetines" = "Un par del mismo color"
+
+$$
+\begin{aligned}
+    k &= n \cdot (m -1) + 1 \\[10pt]
+      &= n \cdot (2 -1) + 1 \\[10pt]
+      &= n \cdot 1 + 1 \\[10pt]
+      &= n + 1
+\end{aligned}
+$$
+
+$\therefore$ La cantidad de calcetines a remover del cajón para garantizar un par del mismo color es $k = n + 1$ 
+
+</details>
+
+<details>
+    <summary>Python</summary>
+```python
+def maximumDraws(n):
+    return n+1
+```
+</details>

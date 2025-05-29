@@ -82,9 +82,9 @@ const courseData = {
             </> },
         { week: '09', class: '15', date: 'Lun 07, Oct 2024', description: <CustomLink href='mvfm01/sm21'>- SM 1: La Rampa</CustomLink> },
         { week: '', class: '16', date: 'Mié 09, Oct 2024', description: <>
-            - AFO 01<br/>
-            - AFO 02<br/>
-            - AFO 03
+            <CustomLink href='mvfm01/afo2-01'>- AFO 01</CustomLink><br/>
+            <CustomLink href='mvfm01/afo2-02'>- AFO 02</CustomLink><br/>
+            <CustomLink href='mvfm01/afo2-03'>- AFO 03</CustomLink>
         </> },
         { week: '10', class: '17', date: 'Lun 14, Oct 2024', description: <>
             - ARPA 2: Un terreno peligroso<br/>

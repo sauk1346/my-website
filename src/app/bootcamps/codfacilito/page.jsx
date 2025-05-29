@@ -22,7 +22,7 @@ const CodFacilito = () => {
                             <tbody>
                             <tr className={styles.tableRow}>
                                 <td className={styles.code}>CFT001</td>
-                                <td>Ciencia de Datos</td>
+                                <td><CustomLink href='codfacilito/cft001'>Ciencia de Datos</CustomLink></td>
                                 <td></td>
                             </tr>
                             <tr className={styles.tableRow}>

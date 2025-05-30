@@ -22,16 +22,16 @@ export default function Home() {
               link='/inacap'
             />
             <Card
-              title="CodeTraining"
-              description="Ejercicios"
+              title="LeetCode"
+              description="Ejercicios Programación"
               image="/logos/codeTraining.png"
-              link='/training'
+              link='/leetcode'
             />
             <Card
-              title="Algorithms"
-              description="Recopilación Algoritmos"
+              title="CodeVault"
+              description="Colección de Algoritmos"
               image="/logos/algorithms.jpg"
-              link='/algorithms'
+              link='/codevault'
             />
             <Card
               title="E-Learning"

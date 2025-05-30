@@ -2,7 +2,7 @@
 import AlgorithmsCollection from '@/components/AlgorithmsCollection';
 import { algorithmsData, categories } from '@/data/algorithms/algorithmsData';
 
-export default function AlgorithmsPage() {
+export default function CodeVault() {
   if (!algorithmsData || !categories) {
     return (
       <div style={{

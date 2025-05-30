@@ -1,6 +1,6 @@
-# Calculate Special Bonus
+# Calcular Bono Especial
 
-**Table:** `Employees`
+**Tabla:** `Employees`
 ```markdown
 +-------------+---------+
 | Column Name | Type    |
@@ -9,23 +9,19 @@
 | name        | varchar |
 | salary      | int     |
 +-------------+---------+
-employee_id is the primary key (column with unique values) for 
-this table.
-Each row of this table indicates the employee ID, employee name,
-and salary.
+"employee_id" es la clave primaria para esta tabla.
+Cada fila de esta tabla indica el ID del empleado, nombre del empleado y salario.
 ```
 
-Write a solution to calculate the bonus of each employee. The bonus of an employee is `100%` of their salary if the ID of the employee is **and odd number** and **the employee's name does not start with the character** `M`. The bonus of an employee is `0` otherwise.
+Escribe una solución para calcular el bono de cada empleado. El bono de un empleado es el `100%` de su salario si el ID del empleado es **un número impar** y **el nombre del empleado no comienza con el carácter `M`**. El bono de un empleado es `0` en caso contrario.
 
-Return the result table ordered by `employee_id`
+Devuelve la tabla de resultados ordenada por  `employee_ide`
 
-The result format is in the following example.
-
-## Example
+## Ejemplo
 
 **Input:**
 ```markdown
-Employees table:
+Tabla Employees:
 +-------------+---------+--------+
 | employee_id | name    | salary |
 +-------------+---------+--------+
@@ -49,12 +45,12 @@ Employees table:
 | 9           | 7700  |
 +-------------+-------+
 ```
-**Explanation:** 
-> The employees with IDs 2 and 8 get 0 bonus because they have an even employee_id.
-> The employee with ID 3 gets 0 bonus because their name starts with 'M'.
-> The rest of the employees get a 100% bonus.
+**Explicación:**
+> Los empleados con IDs 2 y 8 obtienen 0 de bono porque tienen un "employee_id" par.
+> El empleado con ID 3 obtiene 0 de bono porque su nombre comienza con 'M'.
+> El resto de los empleados obtienen un bono del 100%
 
-## Solution
+## Solución
 
 <details>
     <summary>Python</summary>

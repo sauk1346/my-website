@@ -138,7 +138,7 @@ export const problems = {
       categories: ["general"]
     },
     "LC1873": {
-      title: "Calculate Special Bonus",
+      title: "Calcular Bono Especial",
       topics: ["Base de Datos"],
       difficulty: "Easy",
       categories: ["pandas"]
@@ -170,6 +170,12 @@ export const problems = {
     "LC2131": {
       title: "Palíndromo Más Largo Contatenando Palabras de Dos Letras",
       topics: ["Arreglos", "Tablas Hash", "Cadena de Caracteres", "Algoritmo Voraz", "Conteo"],
+      difficulty: "Medium",
+      categories: ["general"]
+    },
+    "LC2359": {
+      title: "Find Closest Node to Given Two Nodes",
+      topics: ["Búsqueda en Profundidad","Grafos"],
       difficulty: "Medium",
       categories: ["general"]
     },

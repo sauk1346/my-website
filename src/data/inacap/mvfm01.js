@@ -35,14 +35,14 @@ const courseData = {
             evaluationNumber: 3, 
             date: 'Lun 09, Dic 2024', 
             weighting: '40%', 
-            description: 'Proyecto' , 
+            description: <CustomLink href='mvfm01/proyecto'>Proyecto: Trigonautas</CustomLink> , 
             quickGuide: ''
         },
         { 
             evaluationNumber: 4, 
             date: 'Mié 11, Dic 2024', 
             weighting: '10%', 
-            description: 'Promedio Controles' , 
+            description: <ExternalLink href='/inacap/mvfm01/docs/controles.pdf'>Promedio Controles</ExternalLink> , 
             quickGuide: ''
         }  
     ],
@@ -87,18 +87,18 @@ const courseData = {
             <CustomLink href='mvfm01/afo2-03'>- AFO 03</CustomLink>
         </> },
         { week: '10', class: '17', date: 'Lun 14, Oct 2024', description: <>
-            - ARPA 2: Un terreno peligroso<br/>
-            - AFO 04<br/>
-            - AFO 05<br/>
-            - AFO 06<br/>
-            - AFO 07
+            <CustomLink href='mvfm01/arpa22'>- ARPA 2: Un terreno peligroso</CustomLink><br/>
+            <CustomLink href='mvfm01/afo2-04'>- AFO 04</CustomLink><br/>
+            <CustomLink href='mvfm01/afo2-05'>- AFO 05</CustomLink><br/>
+            <CustomLink href='mvfm01/afo2-06'>- AFO 06</CustomLink><br/>
+            <CustomLink href='mvfm01/afo2-07'>- AFO 07</CustomLink>
         </> },
         { week: '', class: '18', date: 'Mié 16, Oct 2024', description: '- Ley de los Cosenos' },
-        { week: '11', class: '19', date: 'Lun 21, Oct 2024', description: '- SM 2: Viaje en globo aerostático' },
-        { week: '', class: '20', date: 'Mié 23, Oct 2024', description: '- SM 3: Análisis de ondas sonoras' },
+        { week: '11', class: '19', date: 'Lun 21, Oct 2024', description: <CustomLink href='mvfm01/sm22'>- SM 2: Viaje en globo aerostático</CustomLink> },
+        { week: '', class: '20', date: 'Mié 23, Oct 2024', description: <CustomLink href='mvfm01/sm23'>- SM 3: Análisis de ondas sonoras</CustomLink> },
         { week: '12', class: '21', date: 'Lun 28, Oct 2024', description: <>
-            - Temperatura de una tubería<br/>
-            - Ejercicios Trigonometría
+            <CustomLink href='mvfm01/trig01'>- Temperatura de una tubería</CustomLink><br/>
+            <CustomLink href='mvfm01/trig02'>- Ejercicios Trigonometría</CustomLink>
         </> },
         { week: '', class: '22', date: 'Mié 30, Oct 2024', description: <del>- Suspensión Clases</del> },
         { week: '13', class: '23', date: 'Lun 04, Nov 2024', description: <del>- Suspensión Clases</del> },
@@ -117,7 +117,7 @@ const courseData = {
         { week: '', class: '30', date: 'Mié 27, Nov 2024', description: '- Entrega Proyecto Etapa 01' },
         { week: '17', class: '31', date: 'Lun 02, Dic 2024', description: '- Feedback Proyecto Etapa 02' },
         { week: '', class: '32', date: 'Mié 04, Dic 2024', description: '- Feedback Informe' },
-        { week: '18', class: '33', date: 'Lun 09, Dic 2024', description: '- Entrega Proyecto' },
+        { week: '18', class: '33', date: 'Lun 09, Dic 2024', description: <CustomLink href='mvfm01/proyecto'>- Entrega Proyecto: Trigonautas</CustomLink> },
         { week: '', class: '34', date: 'Mié 11, Dic 2024', description: '- Cierre de Notas' },
     ],
 };

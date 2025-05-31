@@ -1,0 +1,149 @@
+# Demo Proyecto 01
+
+## Algoritmo de Sistema de Costos
+
+<img
+	src="/bootcamps/udd/udd01/images/banner.png"
+	style={{ display: 'block', margin: '0 auto', width:'100%'}}
+/>
+<br/>
+
+En este demo, encontrarás un ejemplo resuelto que te servirá como guía para abordar el proyecto principal. 
+
+El problema que resolveremos en el demo es el siguiente: **un sistema de calificaciones para una escuela.** 
+
+A continuación, te explicamos el planteamiento, los requerimientos y la solución paso a paso. 
+Usa esta demo para aplicar la misma estructura dentro de tu solución.
+
+Lo prioritario sobre estas demostraciones es reforzar todos los conceptos aprendidos anteriormente y puedas ejecutarlos en tus proyectos.
+
+## Planteamiento
+
+Una escuela necesita llevar un registro de las calificaciones de sus estudiantes en varias materias. El objetivo es calcular el promedio de calificaciones de cada estudiante y determinar si el estudiante ha aprobado o no cada materia.
+
+## Requerimientos
+
+- Leer el nombre del estudiante.
+- Leer las calificaciones de cada materia (por ejemplo, Matemáticas, Ciencias, Historia).
+- Calcular el promedio de calificaciones de cada estudiante.
+- Determinar si el estudiante ha aprobado cada materia (por ejemplo, con un mínimo de 6/10).
+- Mostrar los resultados, incluyendo el nombre del estudiante, las calificaciones de cada materia, el promedio y si ha aprobado o no.
+
+## Solución explicada paso a paso
+
+1. Primero, se declaran las variables que se utilizarán en el programa:
+- `nombre_estudiante` es una cadena que almacenará el nombre del estudiante.
+- `calificaciones` es un arreglo unidimensional de enteros que almacenará las calificaciones de las materias.
+- `resultados` es un arreglo unidimensional de cadenas que almacenará los resultados de las materias (aprobado o reprobado).
+- `i`, `suma` y `promedio` son enteros que se usarán para controlar los bucles y realizar cálculos.
+
+```scss
+definir nombre_estudiante como cadena
+definir calificaciones[3] como entero
+definir resultados[3] como cadena
+definir i, suma, promedio como entero
+```
+2. Se solicita al usuario que ingrese el nombre del estudiante:
+
+- Se muestra un mensaje en la pantalla pidiendo el nombre del estudiante.
+- El nombre del estudiante se lee y se guarda en la variable `nombre_estudiante`.
+
+```scss
+escribir "Introduce el nombre del estudiante: "
+leer nombre_estudiante
+```
+
+3. Se utiliza un bucle `Para` para leer las calificaciones de las materias:
+
+- El bucle se ejecuta 3 veces (desde `i = 0` hasta `i = 2`) para leer las calificaciones de las 3 materias.
+- En cada iteración del bucle, se solicita al usuario que ingrese la calificación de la materia actual (i + 1) y se guarda en el arreglo `calificaciones`.
+
+```scss
+para i desde 0 hasta 2 hacer
+    escribir "Introduce la calificación de la materia ", i + 1, ": "
+    leer calificaciones[i]
+fin para
+```
+
+4. Se realiza la suma de las calificaciones y se calcula el promedio:
+
+- Se inicializa la variable `suma` en 0.
+- Se utiliza otro bucle `Para` para recorrer el arreglo calificaciones y sumar sus elementos.
+- En cada iteración del bucle, se suma la calificación actual (`calificaciones[i]`) a la variable `suma`.
+- Después de recorrer el arreglo, se divide la suma entre 3 (el número de materias) y se guarda el resultado en la variable `promedio`.
+
+```scss
+suma <- 0
+para i desde 0 hasta 2 hacer
+    suma <- suma + calificaciones[i]
+fin para
+promedio <- suma / 3
+```
+
+5. Se determina si el estudiante ha aprobado o reprobado cada materia:
+
+- Se utiliza un bucle `Para` para recorrer el arreglo calificaciones y evaluar cada calificación.
+. En cada iteración del bucle, se utiliza una estructura de control Si para evaluar si la calificación actual (`calificaciones[i]`) es mayor o igual a 6.
+- Si la calificación es mayor o igual a 6, se guarda la cadena "Aprobado" en el arreglo resultados en la posición correspondiente.
+- Si la calificación es menor a 6, se guarda la cadena "Reprobado" en el arreglo resultados en la posición correspondiente.
+
+```scss
+para i desde 0 hasta 2 hacer
+    si (calificaciones[i] >= 6) entonces
+        resultados[i] <- "Aprobado"
+    sino
+        resultados[i] <- "Reprobado"
+    fin si
+fin para
+```
+
+6. Finalmente, se muestran los resultados:
+
+- Se escribe el nombre del estudiante en la pantalla.
+- Se utiliza un bucle `Para` para recorrer los arreglos calificaciones y resultados y mostrar la calificación - y el resultado de cada materia.
+- Se escribe el promedio del estudiante en la pantalla.
+
+```scss
+escribir "Nombre del estudiante: ", nombre_estudiante
+para i desde 0 hasta 2 hacer
+    escribir "Calificación de la materia ", i + 1, ": ", calificaciones[i], " - ", resultados[i]
+fin para
+escribir "Promedio: ", promedio
+```
+
+La solución en conjunto sería:
+
+```scss
+definir nombre_estudiante como cadena
+definir calificaciones[3] como entero
+definir resultados[3] como cadena
+definir i, suma, promedio como entero
+
+escribir "Introduce el nombre del estudiante: "
+leer nombre_estudiante
+
+para i desde 0 hasta 2 hacer
+    escribir "Introduce la calificación de la materia ", i + 1, ": "
+    leer calificaciones[i]
+fin para
+
+suma <- 0
+para i desde 0 hasta 2 hacer
+    suma <- suma + calificaciones[i]
+fin para
+promedio <- suma / 3
+
+para i desde 0 hasta 2 hacer
+    si (calificaciones[i] >= 6) entonces
+        resultados[i] <- "Aprobado"
+    sino
+        resultados[i] <- "Reprobado"
+    fin si
+fin para
+
+escribir "Nombre del estudiante: ", nombre_estudiante
+para i desde 0 hasta 2 hacer
+    escribir "Calificación de la materia ", i + 1, ": ", calificaciones[i], " - ", resultados[i]
+fin para
+escribir "Promedio: ", promedio
+```

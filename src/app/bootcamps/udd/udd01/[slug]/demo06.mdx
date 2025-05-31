@@ -1,0 +1,565 @@
+# Demo Proyecto 06
+
+## Plataforma de Comercio Electrónico
+
+<img
+	src="/bootcamps/udd/udd01/images/banner.png"
+	style={{ display: 'block', margin: '0 auto', width:'100%'}}
+/>
+<br/>
+
+En esta demo, se ha desarrollado una plataforma de comercio electrónico utilizando Node.js y Express en el backend, y Stripe para gestionar el pago.
+
+La plataforma permite a los usuarios realizar operaciones CRUD (Crear, Leer, Actualizar y Eliminar) en sus carritos de compras y gestionar el pago de sus productos.
+
+## Planteamiento
+
+El comercio electrónico ha crecido exponencialmente en la última década, y se necesita una plataforma sólida y confiable para administrar el proceso de pago de los productos.
+
+Por ello, la necesidad en esta industria con aplicaciones web es latente, y se requiere una infraestructura Backend sólida para manejar correctamente todos los movimientos del negocio, en particular, la gestión del carrito de compras y el proceso de pago.
+
+Estaremos desarrollando el `Backend` de una pizzeria que requiere que sus clientes puedan pagar en línea los diferentes productos.
+
+## Requerimientos
+
+- Utilizar Node.js y Express para el desarrollo del servidor.
+- Utilizar MongoDB a través de `mongoose` para el desarrollo de los modelos.
+- Contar con MongoDB Compass para observar los cambios de los documentos. https://www.mongodb.com/products/compass
+- Creación de cuenta en MongoDB Atlas, para contar con nuestra base de datos en producción. https://www.mongodb.com/atlas/database
+- Implementar `Stripe` (creación de cuenta, obtención de llaves, instalación de `Stripe CLI`) para gestionar el proceso de pago. https://stripe.com
+- Implementar los siguientes `endpoints`:
+
+### Checkout
+
+| Descripción                        | Método | Endpoint                              |
+| ---------------------------------- | ------ | ------------------------------------- |
+| Crear una sesión de pago en Stripe | GET    | /api/checkout/create-checkout-session |
+| Crear orden                        | POST   | /api/checkout/create-order            |
+| Crear carrito de compras           | POST   | /api/checkout/create-cart             |
+| Obtener carrito de compras         | GET    | /api/checkout/get-cart                |
+| Editar carrito de compras          | PUT    | /api/checkout/edit-cart               |
+
+### Pizzas
+
+| Descripción                | Método | Endpoint                   |
+| -------------------------- | ------ | -------------------------- |
+| Crea una nueva pizza       | POST   | /api/pizzas/create         |
+| Obtiene todas las pizzas   | GET    | /api/pizzas/readall        |
+| Obtiene una pizza por slug | GET    | /api/pizzas/readone/\{slug\} |
+
+### Users
+
+| Descripción                        | Método | Endpoint               |
+| ---------------------------------- | ------ | ---------------------- |
+| Crear un nuevo usuario             | POST   | /api/users/create      |
+| Iniciar sesión de usuario          | POST   | /api/users/login       |
+| Verificar token de usuario         | GET    | /api/users/verifytoken |
+| Actualizar información del usuario | PUT    | /api/users/update      |
+
+- Configurar el proyecto para el despliegue en render.com.
+
+## Instalación y configuración
+
+- Clona este repositorio: (https://github.com/UDDBootcamp/7M_FULLSTACK_M6_PROY)
+- Sitúate en la carpeta de "demo".
+
+```shell
+$ cd demo
+```
+
+- Instala las dependencias
+
+```shell
+$ npm install
+```
+
+- Asegúrate de tener un archivo `.env` con las variables de entorno. En este caso, configuraré de esta forma:
+
+```shell
+PORT=3005
+MONGODB_URI=mongodb://localhost:27017/ecommerce-pizzeria
+SECRET=HOLAMUNDO
+STRIPE_KEY={CUENTA_STRIPE}
+STRIPE_WH_SIGNING_SECRET={{CUENTA_STRIPE}}
+```
+
+- Levanta el proyecto:
+
+```shell
+$ npm run dev
+```
+
+### Integración con Stripe
+
+Con respecto a `Stripe`, es necesario crear una cuenta en www.stripe.com
+
+Activa posteriormente el modo de prueba para "Desarrolladores".
+
+Dentro, podrás obtener tus llaves en dos sitios:
+
+a) `STRIPE_KEY`. En el área de "Claves de API", usarás tu clave secreta. La clave secreta se usa del lado del servidor para confirmar que contamos con los permisos para realizar procesos API con Stripe, principalmente de autenticación. Jamás se comparte con ninguna persona o herramienta que no demos autorización.
+
+<img
+	src="/bootcamps/udd/udd01/images/stripe-keys-01.png"
+	style={{ display: 'block', margin: '0 auto', width:'100%'}}
+/>
+<br/>
+
+
+Puedes encontrar más información en la documentación: https://stripe.com/docs/keys?locale=es-419
+
+b) `STRIPE_WH_SIGNING_SECRET`. En el área de "Webhooks", dentro de "Desarrolladores, encontrarás la forma de trabajar con Stripe desde tu área local, a través de Stripe CLI. Sigue los pasos: https://dashboard.stripe.com/test/webhooks/create?endpoint_location=local
+
+<img
+	src="/bootcamps/udd/udd01/images/stripe-keys-02.png"
+	style={{ display: 'block', margin: '0 auto', width:'100%'}}
+/>
+<br/>
+
+Complementando al punto b), esta parte la hacemos porque para que el usuario pueda recibir y guardar su nota de pago, debemos de contar con `Stripe CLI`, el cual funcionará como un gestor en la integración con Stripe a través de la línea de comandos.
+
+Una vez que tengas instalado `Stripe CLI` y realices el proceso de login, deberás tener una segunda terminal corriendo este proceso:
+
+```shell
+$ stripe listen --forward-to localhost:3005/api/checkout/create-order --events=charge.succeeded
+```
+
+Este comando va a estar constantemente escuchando los eventos que tu usuario ejecute sobre todos los procesos de Stripe.
+
+Por ejemplo, tan pronto Stripe reciba el pago gracias el `endpoint` de "Crear una sesión de pago", Stripe, a través de un `webhook`, mandará una petición al `endpoint` de "Crear orden", el cual incluirá toda la información y de la misma, y nosotros podremos guardarla directamente en nuestro usuario.
+
+Puedes conocer más de la información de `Stripe CLI` en la documentación: https://stripe.com/docs/cli
+
+## Implementación de la solución
+
+Una vez que el proyecto haya cumplido con la instalación, abre en tu navegador `localhost:3005`
+
+### 1. Para el manejo de las pizzas:
+
+- Al momento de crear, recuerda pasar correctamente un JSON que cumpla con las propiedades especificadas en el modelo. A continuación, te doy un ejemplo:
+
+```json
+{
+  "name": "Pizza Hawaiana",
+  "currency": "USD",
+  "prices": [
+    {
+      "size": "Familiar",
+      "price": 18900,
+      "description": "incluye 12 rebanadas."
+    },
+    {
+      "size": "Individual",
+      "price": 9900,
+      "description": "incluye 6 rebanadas."
+    }
+  ],
+  "img": ["https://images.unsplash.com/photo-1661289898757-2849b9999de4"],
+  "description": "Deliciosa pizza de jamón y piña",
+  "slug": "pizza-hawaiana"
+}
+```
+
+El resultado deberá aparecerte de esta forma:
+
+<img
+	src="/bootcamps/udd/udd01/images/crear-pizza-01.png"
+	style={{ display: 'block', margin: '0 auto', width:'100%'}}
+/>
+<br/>
+
+
+```json
+{
+  "msg": "Pizza creada con éxito",
+  "data": {
+    "idProd": "prod_NqYKfoR4HOEg3Z",
+    "name": "Pizza Hawaiana",
+    "currency": "USD",
+    "prices": [
+      {
+        "id": "price_1N4rDXKgVjPXy1Bdysaf54sK",
+        "size": "Familiar",
+        "price": 18900,
+        "priceDescription": "incluye 12 rebanadas.",
+        "_id": "6456b0ef25e22ea7632950d6"
+      },
+      {
+        "id": "price_1N4rDXKgVjPXy1Bd7JqDQW8D",
+        "size": "Individual",
+        "price": 9900,
+        "priceDescription": "incluye 6 rebanadas.",
+        "_id": "6456b0ef25e22ea7632950d7"
+      }
+    ],
+    "img": ["https://images.unsplash.com/photo-1661289898757-2849b9999de4"],
+    "description": "Deliciosa pizza mexicana",
+    "slug": "pizza-hawaiana",
+    "_id": "6456b0ef25e22ea7632950d5",
+    "__v": 0
+  }
+}
+```
+
+Tan pronto la pizza se genere, hará una implementación en `Stripe` también. Por lo tanto, considera tener tus variables de entorno con tu llave privada.
+
+El resto de `endpoints` te permitirá leer todas las pizzas o una sola.
+
+### 2. Para el manejo de los usuarios:
+
+Al crear un usuario, es importante que envíes los siguientes propiedades. Adjuntamos un ejemplo:
+
+```json
+{
+  "name": "Mike",
+  "lastname": "Nieva",
+  "country": "Mexico",
+  "address": "123 Main St",
+  "zipcode": 12345,
+  "email": "mike@email.com",
+  "password": "password123",
+  "receipts": []
+}
+```
+
+Al momento de realizar este proceso de creación, tendrás una respuesta:
+
+<img
+	src="/bootcamps/udd/udd01/images/crear-usuario.png"
+	style={{ display: 'block', margin: '0 auto', width:'100%'}}
+/>
+<br/>
+
+
+Hacer el inicio de sesión, requiere que envíes esta información.
+
+```json
+{
+  "email": "mike@email.com",
+  "password": "password123"
+}
+```
+
+<img
+	src="/bootcamps/udd/udd01/images/iniciar-sesion.png"
+	style={{ display: 'block', margin: '0 auto', width:'100%'}}
+/>
+<br/>
+
+Profundizando, se te devolverá, en la propiedad "data", un `token`. Podrás pedirle este token a un usuario cada vez que acceda a una página privada de tu aplicación o pida realizar un proceso con tu API protegido, en caso de que sea necesario.
+
+Puedes probarla en el `endpoint` de `/api/users/verifytoken`, pasando este token. Ahora, este `token` no se pasa en la solicitud `body` como siempre lo hemos hecho, sino más bien, lo pasaremos en `headers` o cabeceras.
+
+Para agregar el `token`, puedes hacerlo en esta imagen de candado:
+
+<img
+	src="/bootcamps/udd/udd01/images/token-01.png"
+	style={{ display: 'block', margin: '0 auto', width:'100%'}}
+/>
+<br/>
+
+E inserta tu `token`, el cual es el mismo que obtuviste en `login`.
+
+<img
+	src="/bootcamps/udd/udd01/images/token-establish-02.png"
+	style={{ display: 'block', margin: '0 auto', width:'100%'}}
+/>
+<br/>
+
+Haz la petición, el cual es `GET`, es decir, no mandarás nada a través del `body`, y observa la respuesta.
+
+<img
+	src="/bootcamps/udd/udd01/images/token-res-03.png"
+	style={{ display: 'block', margin: '0 auto', width:'100%'}}
+/>
+<br/>
+
+Cuando realizas peticiones al servidor, a través de los `headers` puedes establecer esta clave única, tu `token`, para confirmar que eres tú y puedas realizar cualquier proceso que necesites.
+
+### 3. Para el manejo del carrito de compras y "checkout":
+
+El primer paso es revisar que el usuario autenticado (es decir, que ha realizado un inicio de sesión) tenga un carrito de compras, vacío inicialmente.
+
+Entonces, realizamos una petición al servicio `get-cart`, pasando por la imagen de candado nuestro `token`. Obtenemos este resultado:
+
+<img
+	src="/bootcamps/udd/udd01/images/obtener-carrito.png"
+	style={{ display: 'block', margin: '0 auto', width:'100%'}}
+/>
+<br/>
+
+Perfecto, confirmamos que tenemos un carrito de compras vacío. Ahora, vamos a llenarlo con un producto.
+
+Esta parte es de mucha atención.
+
+`Stripe` maneja sus productos a través de `prices`. Cada producto creado, puede tener diferentes variantes en tamaño, colores, complementos, etc. Por lo tanto, en este caso, podríamos decir que estamos adquiriendo una "Pizza Hawaiana", con un producto ID específico, pero, va a tener dos precios:
+
+- Precio de "Pizza Familiar" y
+- Precio de "Pizza Individual"
+
+Por lo tanto, aunque compras la misma pizza, para poder armar el carrito debemos enviar a Stripe los `prices ID`, no los `product ID`.
+
+Una vez esto claro, vamos primero a conseguir los `prices ID`.
+
+Nos vamos a nuestro servicio de `/api/pizzas/readall` para obtener todas las pizzas.
+
+<img
+	src="/bootcamps/udd/udd01/images/leer-pizzas.01.png"
+	style={{ display: 'block', margin: '0 auto', width:'100%'}}
+/>
+<br/>
+
+```json
+{
+  "msg": "Pizzas obtenidas con éxito.",
+  "data": [
+    {
+      "_id": "6456b0ef25e22ea7632950d5",
+      "idProd": "prod_NqYKfoR4HOEg3Z",
+      "name": "Pizza Hawaiana",
+      "currency": "USD",
+      "prices": [
+        {
+          "id": "price_1N4rDXKgVjPXy1Bdysaf54sK",
+          "size": "Familiar",
+          "price": 18900,
+          "priceDescription": "incluye 12 rebanadas.",
+          "_id": "6456b0ef25e22ea7632950d6"
+        },
+        {
+          "id": "price_1N4rDXKgVjPXy1Bd7JqDQW8D",
+          "size": "Individual",
+          "price": 9900,
+          "priceDescription": "incluye 6 rebanadas.",
+          "_id": "6456b0ef25e22ea7632950d7"
+        }
+      ],
+      "img": ["https://images.unsplash.com/photo-1661289898757-2849b9999de4"],
+      "description": "Deliciosa pizza mexicana",
+      "slug": "pizza-hawaiana",
+      "__v": 0
+    }
+  ]
+}
+```
+
+En este caso, nuestra última pizza es Hawaiana.
+
+Y observarás que ahora, tenemos los dos `price ID` que el producto "Pizza Hawaiana" tiene en la respuesta.
+
+Tomaremos el `id` de un elemento del arreglo de `prices`, en este caso `price_1N4rDXKgVjPXy1Bdysaf54sK`, y cargamos nuestro carrito en el servicio `/api/checkout/edit-cart`.
+
+Toma en consideración dos puntos:
+
+- Debes llenarlo con las propiedades solicitadas:
+
+```json
+{
+  "products": [
+    {
+      "quantity": 0,
+      "priceID": "",
+      "size": "",
+      "priceDescription": "",
+      "price": 0
+    }
+  ]
+}
+```
+
+- Debes contar con tu `token` en ese servicio activado.
+
+<img
+	src="/bootcamps/udd/udd01/images/edit-cart-successful.png"
+	style={{ display: 'block', margin: '0 auto', width:'100%'}}
+/>
+<br/>
+
+Finalmente, una vez que un usuario tiene un carrito listo para trabajar con `Stripe`, es momento de enviar los datos para realizar el proceso de transacción.
+
+Nos iremos al servicio `api/checkout/create-checkout-session` y, con el `token`, nos autenticamos y realizamos la petición directamente, obteniendo este resultado:
+
+<img
+	src="/bootcamps/udd/udd01/images/checkout-01.png"
+	style={{ display: 'block', margin: '0 auto', width:'100%'}}
+/>
+<br/>
+
+Observarás un JSON enorme, pero, la propiedad más importante es `url`, el cual está hasta el final de la información:
+
+```json
+{
+  // ...
+  "url": "https://checkout.stripe.com/c/pay/cs_test_a16fZn9w6UJIf2KF8ZbpOHFHk9Z571lfZc1cCuoD2q1vTBK7ocfpY2jpWE#fidkdWxOYHwnPyd1blpxYHZxWjA0SH9xbGhOYlNvVV18NEdhSkBcfzZTUUpzUFYyV2lEaklScE5WVUp0TlRLczJtYG59T1Fmcm9WUkBDVDU9Rn91fzZrY1VESTJ8bXJBXDNoS39%2FfzNgd0lfNTV8RHZDRkkyTCcpJ2N3amhWYHdzYHcnP3F3cGApJ2lkfGpwcVF8dWAnPyd2bGtiaWBabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl"
+}
+```
+
+Esta URL, si accedes, te llevará al Checkout de Stripe. Es temporal, por lo tanto, tendrás un límite de tiempo para acceder, o si no, expirará.
+
+<img
+	src="/bootcamps/udd/udd01/images/checkout-stripe.png"
+	style={{ display: 'block', margin: '0 auto', width:'100%'}}
+/>
+<br/>
+
+Puedes utilizar credenciales de pago falsas que te proporciona Stripe para realizar un pago ficticio. Puedes encontrarlas aqui: https://stripe.com/docs/testing
+
+Una vez que hagas el pago, recordaremos que tenemos encendido nuestra segunda terminal de Stripe, la cual, tratará de conectarse a uno de nuestros servicios `localhost:3005/api/checkout/create-order` con la información de compra del usuario, la cual la guardará en base de datos.
+
+Recuerda que puedes levantar esa terminal con este comando:
+
+```shell
+$ stripe listen --forward-to localhost:3005/api/checkout/create-order --events=charge.succeeded
+```
+
+Tan pronto tenga Stripe la respuesta, veremos un status 200, que indica que el proceso fue exitoso.
+
+<img
+	src="/bootcamps/udd/udd01/images/checkout-create-order.png"
+	style={{ display: 'block', margin: '0 auto', width:'100%'}}
+/>
+<br/>
+
+Terminando también con la información insertada en nuestra base de datos en `MongoDB`.
+
+<img
+	src="/bootcamps/udd/udd01/images/receipt.png"
+	style={{ display: 'block', margin: '0 auto', width:'100%'}}
+/>
+<br/>
+
+Si accedes a la URL generada, podrás ver el recibo: https://pay.stripe.com/receipts/payment/CAcaFwoVYWNjdF8xTXp0aW1LZ1ZqUFh5MUJkKJzy2qIGMgayXTdp-z86LBbi49PFryMX551NvQLlnsHTW0Cbcmc3PjY1ICAUUd-saiyEz7bQoJE-GUPP
+
+### Y te preguntarás, ¿esto lo hace el usuario en una aplicación web?
+
+No.
+
+Nosotros, de manera organizada en la interfaz, cuando estemos trabajando con `React`, vamos implementando el algoritmo. El usuario jamás se entera que hizo este proceso.
+
+Pero, de nuestra parte, nosotros desarrollamos un `Backend`, probamos los diferentes servicios y documentamos qué está pasando para personalizarlo tanto como queramos.
+
+## Despliegue
+
+Para el manejo del despliegue, es importante contar con MongoDB Atlas para nuestra base de datos en producción.
+
+1. Una vez creada tu cuenta MongoDB Atlas (https://www.mongodb.com/cloud/atlas/register), crea un proyecto y nómbralo.
+
+<img
+	src="/bootcamps/udd/udd01/images/atlas-01.png"
+	style={{ display: 'block', margin: '0 auto', width:'100%'}}
+/>
+<br/>
+
+2. Da aceptar. Te va a agregar como miembro único.
+
+<img
+	src="/bootcamps/udd/udd01/images/atlas-02.png"
+	style={{ display: 'block', margin: '0 auto', width:'100%'}}
+/>
+<br/>
+
+
+3. Crea una base de datos en "Build a database"
+
+<img
+	src="/bootcamps/udd/udd01/images/atlas-03.png"
+	style={{ display: 'block', margin: '0 auto', width:'100%'}}
+/>
+<br/>
+
+
+4. Escoge la versión gratuita.
+
+<img
+	src="/bootcamps/udd/udd01/images/atlas-04.png"
+	style={{ display: 'block', margin: '0 auto', width:'100%'}}
+/>
+<br/>
+
+
+5. Establece un usuario y contraseña para tu usuario administrador. Este será el que usaremos en nuestras variables de entorno más adelante. Elige con cuidado y guardando lo que elijas.
+
+<img
+	src="/bootcamps/udd/udd01/images/atlas-05.png"
+	style={{ display: 'block', margin: '0 auto', width:'100%'}}
+/>
+<br/>
+
+
+6. Da click en "Network Access" y luego en "Add IP Address"
+
+<img
+	src="/bootcamps/udd/udd01/images/atlas-06.png"
+	style={{ display: 'block', margin: '0 auto', width:'100%'}}
+/>
+<br/>
+
+
+7. Da click sobre "Allow access from anywhere"
+
+<img
+	src="/bootcamps/udd/udd01/images/atlas-07.png"
+	style={{ display: 'block', margin: '0 auto', width:'100%'}}
+/>
+<br/>
+
+
+8. Confirma que tienes 0.0.0.0 como IP.
+
+<img
+	src="/bootcamps/udd/udd01/images/atlas-08.png"
+	style={{ display: 'block', margin: '0 auto', width:'100%'}}
+/>
+<br/>
+
+
+9. Regresa a la sección de "Database" y da click en "Connect"
+
+<img
+	src="/bootcamps/udd/udd01/images/atlas-09.png"
+	style={{ display: 'block', margin: '0 auto', width:'100%'}}
+/>
+<br/>
+
+
+10. Selecciona "Compass".
+
+<img
+	src="/bootcamps/udd/udd01/images/atlas-10.png"
+	style={{ display: 'block', margin: '0 auto', width:'100%'}}
+/>
+<br/>
+
+
+11. Finalmente, selecciona "I have MongoDB Compass installed" y en la parte inferior verás un código que será tu conexión de texto. Ese lo incluirás dentro de tus archivo `.env`, en render.com
+
+<img
+	src="/bootcamps/udd/udd01/images/atlas-11.png"
+	style={{ display: 'block', margin: '0 auto', width:'100%'}}
+/>
+<br/>
+
+
+En render.com, al crear un nuevo proyecto, recuerda utilizar "Web Service", enlazar un repositorio, y, establecer las variables de entorno en la sección "Environment".
+
+La configuración y sus variables de entorno deberán ser colocadas de la siguiente forma:
+
+<img
+	src="/bootcamps/udd/udd01/images/render-03.png"
+	style={{ display: 'block', margin: '0 auto', width:'100%'}}
+/>
+<br/>
+
+- `SERVER_URL` es la URL de tu proyecto en producción, por lo tanto, cuando se ejecute por primera vez, extrae tu URL, en nuestro caso `https://sevenm-fullstack-m6-proy.onrender.com`, y colócala directamente ahí.
+
+- No necesitas por ahora `REACT_BASE_URL`, hasta que realicemos nuestro Frontend, el cual, por ahora, sale del enfoque del proyecto, pero, para considerarlo más adelante.
+
+<img
+	src="/bootcamps/udd/udd01/images/render-02.png"
+	style={{ display: 'block', margin: '0 auto', width:'100%'}}
+/>
+<br/>
+
+Con esto, tendrás tu propio link de producción, con un `Backend` con `OPEN API` integrado.
+
+Este debería ser tu resultado, solo que con URL distinta: https://sevenm-fullstack-m6-proy.onrender.com/

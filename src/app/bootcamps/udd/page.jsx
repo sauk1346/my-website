@@ -1,5 +1,6 @@
 import styles from '@/styles/elearning.module.css'
 import ExternalLink from '@/components/ui/ExternalLink';
+import CustomLink from '@/components/ui/CustomLink';
 
 const Udd = () => {
     return (
@@ -22,12 +23,12 @@ const Udd = () => {
                             <tbody>
                             <tr className={styles.tableRow}>
                                 <td className={styles.code}>UDD001</td>
-                                <td>Desarrollo Web Fullstack</td>
+                                <td><CustomLink href='udd/udd01'>Desarrollo Web Fullstack</CustomLink> </td>
                                 <td><ExternalLink href='/bootcamps/udd/docs/DWFS-Diploma.pdf'>Diploma</ExternalLink></td>
                             </tr>
                             <tr className={styles.tableRow}>
                                 <td className={styles.code}>UDD002</td>
-                                <td>Ciencia de Datos e Inteligencia Artificial</td>
+                                <td><CustomLink href='udd/udd02'>Ciencia de Datos e Inteligencia Artificial</CustomLink></td>
                                 <td><ExternalLink href='/bootcamps/udd/docs/DS-Diploma.pdf'>Diploma</ExternalLink></td>
                             </tr>
                             </tbody>

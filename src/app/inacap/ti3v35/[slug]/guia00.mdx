@@ -1,0 +1,265 @@
+# Guía Subnetting - FLSM y VLSM
+
+## 📋 CONCEPTOS FUNDAMENTALES
+
+### **Dirección IP**
+- **32 bits** divididos en 4 octetos
+- Formato: `192.168.1.1`
+- Cada octeto: 0-255 (8 bits)
+
+### **Máscara de Subred**
+- Separa la **parte de red** de la **parte de host**
+- Formato decimal: `255.255.255.0`
+- Formato CIDR: `/24`
+
+---
+
+## 🎯 **CLASES DE DIRECCIONES DE IP**
+
+| Clase | Rango | Red por Defecto | Hosts por Red | Uso |
+|-------|-------|-----------------|---------------|-----|
+| **A** | 1.0.0.0 - 126.255.255.255 | /8 (255.0.0.0) | 16,777,214 | Redes grandes |
+| **B** | 128.0.0.0 - 191.255.255.255 | /16 (255.255.0.0) | 65,534 | Redes medianas |
+| **C** | 192.0.0.0 - 223.255.255.255 | /24 (255.255.255.0) | 254 | Redes pequeñas |
+
+### **Direcciones Especiales**
+- **127.x.x.x**: Loopback
+- **169.254.x.x**: APIPA (Automatic Private IP)
+- **224-239.x.x.x**: Multicast
+
+---
+
+## 📊 **TABLA DE MÁSCARAS DE SUBRED**
+
+| CIDR | Máscara Decimal | Hosts Útiles | Subredes (desde /24) |
+|------|-----------------|--------------|---------------------|
+| /24 | 255.255.255.0 | 254 | 1 |
+| /25 | 255.255.255.128 | 126 | 2 |
+| /26 | 255.255.255.192 | 62 | 4 |
+| /27 | 255.255.255.224 | 30 | 8 |
+| /28 | 255.255.255.240 | 14 | 16 |
+| /29 | 255.255.255.248 | 6 | 32 |
+| /30 | 255.255.255.252 | 2 | 64 |
+| /31 | 255.255.255.254 | 2* | 128 |
+| /32 | 255.255.255.255 | 1* | 256 |
+
+**/31 y /32**: Usos especiales (enlaces punto a punto)
+
+---
+
+## 🔢 FÓRMULAS ESENCIALES
+
+### Fórmula 1: Número de Subredes
+
+$$
+Subredes = 2^n
+$$
+
+Donde $n = bits\, tomados\, de\, la\, porción\, del\, host$
+
+### Fórmula 2: Números de Hosts por Subred
+
+$$
+Hosts\, útiles = 2^h - 2
+$$
+
+Donde $h = bits\, restantes\, para\, hosts\, - 2$
+
+### Fórmula 3: Salto entre Subredes
+
+$$
+Salto = 256 - valor\, octeto\, subred
+$$
+
+### Fórmula 4: Bits necesarios para N subredes
+
+$$
+2^n ≥ número\, subredes\, deseadas
+$$
+### Fórmula 5: Bits necesarios para N hosts
+
+$$
+2^h - 2 ≥ número\, hosts\, deseados
+$$
+
+---
+
+## 🛠️ **FLSM (Fixed Length Subnet Mask)**
+
+### **Características**
+- **Máscara fija** para todas las subredes
+- **Mismo tamaño** para todas las subredes
+- Más **simple** de implementar
+- Puede **desperdiciar** direcciones
+
+### **Proceso FLSM**
+
+#### **Paso 1: Determinar bits necesarios**
+
+$$
+2^n ≥ número\, subredes\, deseadas
+$$
+
+#### **Paso 2: Calcular nueva máscara**
+
+$$
+Nueva\, máscara = máscara\, original + n\, bits
+$$
+
+#### **Paso 3: Calcular salto**
+
+$$
+Salto = 256 - valor\, octeto\, subred
+$$
+
+#### **Paso 4: Listar subredes**
+Incrementar en saltos desde la dirección base
+
+### **Ejemplo FLSM**
+**Red:** `192.168.1.0/24` → 4 subredes
+
+1. **Bits necesarios:** $2^n \ge 4 → n = 2$
+2. **Nueva máscara:** `/24 + 2 = /26` → `255.255.192.0` 
+3. **Salto:** `256 - 192 = 64`
+4. **Subredes:**
+   - 192.168.1.0/26 (0-63)
+   - 192.168.1.64/26 (64-127)
+   - 192.168.1.128/26 (128-191)
+   - 192.168.1.192/26 (192-255)
+
+---
+
+## 🔄 VLSM (Variable Length Subnet Mask)
+
+### Características
+- **Máscaras variables** según necesidades
+- **Tamaños diferentes** de subred
+- **Optimiza** el uso de direcciones
+- Más **complejo** de planificar
+
+### **Proceso VLSM**
+
+#### **Paso 1: Ordenar requisitos (mayor a menor)**
+
+1. Subred A: 100 hosts
+2. Subred B: 50 hosts
+3. Subred C: 10 hosts
+
+#### **Paso 2: Calcular bits por subred**
+
+Para cada subred: 
+$$
+2^h - 2 ≥ hosts\, requeridos
+$$
+
+#### **Paso 3: Determinar máscaras**
+
+$$
+Máscara = 32 - bits\, host
+$$
+
+#### **Paso 4: Asignar secuencialmente**
+- Empezar con la subred más grande
+- No superponer rangos
+- Usar la siguiente dirección disponible
+
+### **Ejemplo VLSM**
+**Red:** `192.168.1.0/24`
+
+| Subred | Hosts Req. | Bits Host | Máscara | Rango |
+|--------|------------|-----------|---------|-------|
+| A | 100 | 7 | /25 | 192.168.1.0-127 |
+| B | 50 | 6 | /26 | 192.168.1.128-191 |
+| C | 10 | 4 | /28 | 192.168.1.192-207 |
+
+---
+
+## 📝 **METODOLOGÍA DE RESOLUCIÓN**
+
+### **Para FLSM:**
+1. Identificar clase de red original
+2. Determinar número de subredes necesarias
+3. Calcular bits necesarios: `2^n ≥ subredes`
+4. Calcular nueva máscara
+5. Calcular salto
+6. Listar todas las subredes
+
+### **Para VLSM:**
+1. Listar todos los requisitos de hosts
+2. Ordenar de mayor a menor
+3. Calcular bits necesarios para cada uno
+4. Determinar máscara para cada subred
+5. Asignar direcciones secuencialmente
+6. Verificar que no hay superposición
+
+---
+
+## 🚨 **DIRECCIONES ESPECIALES**
+
+### **En cada subred:**
+- **Primera dirección**: Dirección de red
+- **Última dirección**: Broadcast
+- **Direcciones útiles**: Entre la primera y última
+
+### **Subnet Zero**
+- **Clásico**: Primera subred no utilizable
+- **Moderno**: Todas las subredes utilizables
+- **Pista**: Palabra "utilizable" en el problema
+
+---
+
+## 💡 **TIPS PRÁCTICOS**
+
+### **Conversión Rápida CIDR ↔ Decimal**
+
+```text
+/24 = 255.255.255.0
+/25 = 255.255.255.128
+/26 = 255.255.255.192
+/27 = 255.255.255.224
+/28 = 255.255.255.240
+/29 = 255.255.255.248
+/30 = 255.255.255.252
+```
+
+### **Potencias de 2 Comunes**
+
+```text
+2^1 = 2      2^5 = 32     2^9 = 512
+2^2 = 4      2^6 = 64     2^10 = 1024
+2^3 = 8      2^7 = 128    2^11 = 2048
+2^4 = 16     2^8 = 256    2^12 = 4096
+```
+
+### **Verificaciones Rápidas**
+- **FLSM**: Todas las subredes mismo tamaño
+- **VLSM**: Subredes de diferentes tamaños
+- **Hosts útiles**: Siempre = Total - 2
+- **Salto**: Diferencia entre direcciones de subred consecutivas
+
+---
+
+## 🔍 **ERRORES COMUNES**
+
+1. **Olvidar el "-2"** en cálculo de hosts útiles
+2. **Superponer subredes** en VLSM
+3. **No ordenar por tamaño** en VLSM
+4. **Confundir dirección de red con primera útil**
+5. **Mezclar notación CIDR con decimal**
+6. **No considerar subnet zero** cuando se requiere
+
+---
+
+## 📚 **EJERCICIOS TIPO**
+
+### **FLSM Básico**
+"Dividir 172.16.0.0/16 en 8 subredes"
+
+### **VLSM Básico**
+"Crear subredes para: 200 hosts, 100 hosts, 50 hosts"
+
+### **Identificación**
+"¿Cuál es la dirección de broadcast de 192.168.1.64/26?"
+
+### **Cálculo Inverso**
+"¿Cuántas subredes /27 caben en una red /24?"

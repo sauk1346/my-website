@@ -22,7 +22,10 @@ const courseData = {
             date: 'Lun 02, Jun 2025',
             weighting: '15%',
             description: 'TCP/IP',
-            quickGuide: <CustomLink href='ti3v35/guia01'>Guía 01</CustomLink>
+            quickGuide: <>
+                <CustomLink href='ti3v35/guia00'>- Guía 00: Conceptos</CustomLink><br/>
+                <CustomLink href='ti3v35/guia01'>- Guía 01</CustomLink>
+            </>
         },
         { 
             evaluationNumber: 2,

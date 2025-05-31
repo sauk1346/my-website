@@ -71,6 +71,12 @@ export const problems = {
       difficulty: "Easy",
       categories: ["pandas"]
     },
+    "LC0909": {
+      title: "Snakes and Ladders",
+      topics: ["Arreglos", "Búsqueda en Profundad", "Matriz"],
+      difficulty: "Medium",
+      categories: ["general"]
+    },
     "LC1148": {
       title: "Visitas de Artículos I",
       topics: ["Base de Datos"],
@@ -133,7 +139,7 @@ export const problems = {
     },
     "LC1857": {
       title: "Color de Mayor Valor en un Grafo Dirigido",
-      topics: ["Tablas Hash", "Programación Dinámica", "Grafos", "Ordenamiento Topológico", "Memorización", "Conteo"],
+      topics: ["Tablas Hash", "Programación Dinámica", "Grafos", "Ordenamiento Topológico", "Memoización", "Conteo"],
       difficulty: "Hard",
       categories: ["general"]
     },

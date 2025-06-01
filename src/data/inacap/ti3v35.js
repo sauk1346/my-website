@@ -24,7 +24,8 @@ const courseData = {
             description: 'TCP/IP',
             quickGuide: <>
                 <CustomLink href='ti3v35/guia00'>- Guía 00: Conceptos</CustomLink><br/>
-                <CustomLink href='ti3v35/guia01'>- Guía 01</CustomLink>
+                <CustomLink href='ti3v35/guia01'>- Guía 01: Ejercicio Base</CustomLink><br/>
+                <CustomLink href='ti3v35/guia02'>- Guía 02: PPT</CustomLink>
             </>
         },
         { 

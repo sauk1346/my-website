@@ -23,6 +23,12 @@ export const problems = {
       difficulty: "Medium",
       categories: ["general"]
     },
+    "LC0135": {
+      title: "Dulces",
+      topics: ["Arreglos", "Algoritmo Voraz"],
+      difficulty: "Hard",
+      categories: ["general"]
+    },
     "LC0176": {
       title: "Segundo Salario más Alto",
       topics: ["Base de Datos"],
@@ -207,6 +213,12 @@ export const problems = {
       title: "Longest Unequal Adjacent Groups Subsequence II",
       topics: ["Arreglos", "Cadena de Caracteres", "Programación Dinámica", "Algoritmo Voraz"],
       difficulty: "Hard",
+      categories: ["general"]
+    },
+    "LC2929": {
+      title: "Distribuir Dulces entre Niños II",
+      topics: ["Matemáticas", "Combinatoria", "Enumeración"],
+      difficulty: "Medium",
       categories: ["general"]
     },
     "LC2942": {

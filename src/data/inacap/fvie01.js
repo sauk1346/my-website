@@ -49,14 +49,20 @@ const courseData = {
     classData: [
         { week: '01', class: '01', date: 'Jue 22, May 2025', description: <CustomLink href='fvie01/clase01'>Introducción a I+E</CustomLink> },
         { week: '02', class: '02', date: 'Mar 27, May 2025', description: <CustomLink href='fvie01/clase02'>Tema de Proyecto</CustomLink> },
-        { week: '', class: '03', date: 'Jue 29, May 2025', description: "" },
+        { week: '', class: '03', date: 'Jue 29, May 2025', description: <CustomLink href='fvie01/clase03'>Objetivos General y Específicos</CustomLink> },
+        { week: '03', class: '04', date: 'Mar 03, Jun 2025', description: "" },
+        { week: '', class: '05', date: 'Jue 05, Jun 2025', description: "" },
     ],
     lectureData: [
         { week: '01', lecture: '01', date: 'Sáb 24, May 2025', description: <CustomLink href='fvie01/lectura01'>Entrevista a usuario</CustomLink> },
-        { week: '', lecture: '02', date: 'Sáb 24, May 2025', description: 'Elaboración de cuestionarios' },
-        { week: '', lecture: '03', date: 'Sáb 24, May 2025', description: 'Observación no participante' },
+        { week: '', lecture: '02', date: 'Sáb 24, May 2025', description: <CustomLink href='fvie01/lectura02'>Elaboración de cuestionarios</CustomLink> },
+        { week: '', lecture: '03', date: 'Sáb 24, May 2025', description: <CustomLink href='fvie01/lectura03'>Observación no participante</CustomLink> },
         { week: '02', lecture: '04', date: 'Sáb 31, May 2025', description: 'Procesamiento de Hallazgos' },
         { week: '', lecture: '05', date: 'Sáb 31, May 2025', description: 'Redefinición del desafío' },
+        { week: '03', lecture: '06', date: 'Sáb 07, Jun 2025', description: 'Estudio Comparativo Antecedentes' },
+        { week: '', lecture: '07', date: 'Sáb 07, Jun 2025', description: 'Formulario Requerimientos' },
+        { week: '', lecture: '08', date: 'Sáb 07, Jun 2025', description: 'Brainstorming' },
+
     ],
 };
 export default courseData;

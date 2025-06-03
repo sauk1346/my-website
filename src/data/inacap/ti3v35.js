@@ -21,11 +21,13 @@ const courseData = {
             evaluationNumber: 1,
             date: 'Lun 02, Jun 2025',
             weighting: '15%',
-            description: 'TCP/IP',
+            description: <>
+                <CustomLink href="ti3v35/eval01">- 1ra parte (FLSM)</CustomLink>
+            </>,
             quickGuide: <>
                 <CustomLink href='ti3v35/guia00'>- Guía 00: Conceptos</CustomLink><br/>
-                <CustomLink href='ti3v35/guia01'>- Guía 01: Ejercicio Base</CustomLink><br/>
-                <CustomLink href='ti3v35/guia02'>- Guía 02: PPT</CustomLink>
+                <CustomLink href='ti3v35/guia01'>- Guía 01: Ejercicio Base (FLSM)</CustomLink><br/>
+                <CustomLink href='ti3v35/guia02'>- Guía 02: PPT (FLSM)</CustomLink>
             </>
         },
         { 
@@ -51,15 +53,23 @@ const courseData = {
         }
     ],
     classData: [
-        { week: '01', class: '01', date: 'Lun 19, May 2025', description: <CustomLink href="ti3v35/clase01">Introducción TCP/IP</CustomLink> },
-        { week: '02', class: '02', date: 'Lun 26, May 2025', description: "FLSM (1)" },
-        { week: '', class: '03', date: 'Mié 28, May 2025', description: "FLSM (2)" },
+        { week: '01', class: '01', date: 'Lun 19, May 2025', description: <CustomLink href="ti3v35/clase01">- Introducción TCP/IP</CustomLink> },
+        { week: '02', class: '02', date: 'Lun 26, May 2025', description: "- FLSM (1)" },
+        { week: '', class: '03', date: 'Mié 28, May 2025', description: <ExternalLink href="/inacap/ti3v35/docs/subnetting.pdf">- FLSM (2)</ExternalLink> },
+        { 
+            week: '03', class: '04', date: 'Lun 02, Jun 2025', description: <>
+                <CustomLink href="ti3v35/eval01">- Evaluación 01</CustomLink><br/>
+                <CustomLink href="ti3v35/clase04">- VLSM (1)</CustomLink>
+            </>
+        },
+        { week: '', class: '05', date: 'Mié 04, Jun 2025', description: "" },
+
     ],
     lectureData: [
         { week: '01', lecture: '01', date: 'Sáb 24, May 2025', description: <ExternalLink href="/inacap/ti3v35/docs/lectura01.pdf" >Direccionamiento de redes basada en protocolos TCP/IP</ExternalLink> },
         { week: '', lecture: '02', date: 'Sáb 24, May 2025', description: <CustomLink href="ti3v35/lectura02">Interconexión de dispositivos y redes</CustomLink> },
         { week: '02', lecture: '03', date: 'Sáb 31, May 2025', description: <CustomLink href="ti3v35/lectura03">Cálculo de clases de dirección</CustomLink> },
-        { week: '', lecture: '04', date: 'Sáb 31, May 2025', description: <CustomLink href="ti3v35/lectura04">Técnicas de cálculo VLSM</CustomLink> },
+        { week: '03', lecture: '04', date: 'Sáb 07, Jun 2025', description: <CustomLink href="ti3v35/lectura04">Técnicas de cálculo VLSM</CustomLink> },
 
     ],
 };

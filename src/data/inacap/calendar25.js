@@ -164,7 +164,13 @@ export const calendar25 = [
   {
     id: 28,
     fecha: "2025-6-2",
-    titulo: "[TI3V35] Evaluación 01",
+    titulo: "[TI3V35] Evaluación 01 - parte I (FLSM)",
+    description: "Sistemas Operativos"
+  },
+  {
+    id: 29,
+    fecha: "2025-6-9",
+    titulo: "[TI3V35] Evaluación 01 - parte II (VLSM)",
     description: "Sistemas Operativos"
   },
 ];

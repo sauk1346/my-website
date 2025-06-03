@@ -51,10 +51,11 @@ const courseData = {
         { week: '02', class: '02', date: 'Mié 04, Jun 2025', description: ""},
     ],
     lectureData: [
-        { week: '01', lecture: '01', date: 'Sáb 31, May 2025', description: 'Unidad 1: Desarrollo de sitio web estático utilizando HTML5 y CSS3' },
-        { week: '', lecture: '02', date: 'Sáb 31, May 2025', description: 'Principios de diseño responsivo de Programación Front End' },
+        { week: '01', lecture: '01', date: 'Sáb 31, May 2025', description: <ExternalLink href='/inacap/ti3v31/docs/lectura01.pdf'>Unidad 1: Desarrollo de sitio web estático utilizando HTML5 y CSS3</ExternalLink> },
+        { week: '', lecture: '02', date: 'Sáb 31, May 2025', description: <CustomLink href='ti3v31/lectura02'>Principios de diseño responsivo de Programación Front End</CustomLink> },
         { week: '', lecture: '03', date: 'Sáb 31, May 2025', description: 'Tutorial Interactivo de HTML' },
         { week: '', lecture: '04', date: 'Sáb 31, May 2025', description: 'Tutorial Práctico: convertir un diseño en HTML' },
+        { week: '02', lecture: '05', date: 'Sáb 07, Jun 2025', description: 'Guía práctica de CSS3: aplicación de estilos según un diseño' },
     ],
 };
 export default courseData;

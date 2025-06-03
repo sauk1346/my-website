@@ -95,6 +95,12 @@ export const problems = {
       difficulty: "Easy",
       categories: ["pandas"]
     },
+    "LC1298": {
+      title: "Máximo de Dulces a Sacar por Cajas",
+      topics: ["Arreglos", "Búsqueda por Amplitud", "Grafos"],
+      difficulty: "Hard",
+      categories: ["General"]
+    },
     "LC1322": {
       title: "Rendimiento de Anuncios",
       topics: ["Base de Datos"],

@@ -2,10 +2,10 @@ import CustomLink from '@/components/ui/CustomLink';
 import styles from '@/styles/elearning.module.css'
 import Link from 'next/link';
 
-const En001 = () => {
+const En002 = () => {
     return (
         <div className={styles.container}>
-            <h1 style={{marginBottom:'30px'}}>The Pronunciation of American English</h1>
+            <h1 style={{marginBottom:'30px'}}>Vowels of American English Pronunciation</h1>
     
             <div className={styles.grid}>
                 {/* Tabla de Cursos */}
@@ -21,19 +21,19 @@ const En001 = () => {
                         <tbody>
                         <tr className={styles.tableRow}>
                             <td>01</td>
-                            <td><CustomLink href='en001/module01'>Consonant Directions, Voiced and Voiceless, Shadowing a Conversation</CustomLink></td>
+                            <td></td>
                         </tr>
                         <tr className={styles.tableRow}>
                             <td>02</td>
-                            <td><CustomLink href='en001/module02'>Consonants Sounds that Pop, Consonants Sounds that Hiss, Confusing Consonants Pairs</CustomLink></td>
+                            <td></td>
                         </tr>
                         <tr className={styles.tableRow}>
                             <td>03</td>
-                            <td><CustomLink href='en001/module03'>Consonant Sounds that Hum, Consonant Sounds that Flow, Confusing Consonant Pairs 2</CustomLink></td>
+                            <td></td>
                         </tr>
                         <tr className={styles.tableRow}>
                             <td>04</td>
-                            <td><CustomLink href='en001/module04'>Final Consonants and Consonant Clusters, Pronunciation of -s and -ed Endings, Variations of Some Consonant Sounds</CustomLink></td>
+                            <td></td>
                         </tr>
 
                         </tbody>
@@ -44,4 +44,4 @@ const En001 = () => {
         </div>
         );
 }
-export default En001;
+export default En002;

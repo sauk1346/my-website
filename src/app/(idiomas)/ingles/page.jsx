@@ -1,4 +1,5 @@
 import styles from '@/styles/elearning.module.css'
+import ExternalLink from '@/components/ui/ExternalLink';
 import Link from 'next/link';
 
 const Ingles = () => {
@@ -26,6 +27,15 @@ const Ingles = () => {
                                 <td className={styles.code}>EN001</td>
                                 <td>
                                 <Link href='ingles/en001' className={styles.link}>The Pronunciation of American English</Link>
+                                </td>
+                                <td>Coursera</td>
+                                <td>University of California, Irvine</td>
+                                <td><ExternalLink href='https://coursera.org/share/c92d6590395fbc5e305b1939b16963d2'>Diploma</ExternalLink></td>
+                            </tr>
+                            <tr className={styles.tableRow}>
+                                <td className={styles.code}>EN002</td>
+                                <td>
+                                <Link href='ingles/en002' className={styles.link}>Vowels of American English Pronunciation</Link>
                                 </td>
                                 <td>Coursera</td>
                                 <td>University of California, Irvine</td>

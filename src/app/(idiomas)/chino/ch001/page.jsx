@@ -32,7 +32,7 @@ const Ch001 = () => {
                         </tr>
                         <tr className={styles.tableRow}>
                             <td>04</td>
-                            <td>我的电话号码是... Wǒ de diànhuà hàomǎ shì... </td>
+                            <td><CustomLink href='ch001/lesson04'>我的电话号码是... Wǒ de diànhuà hàomǎ shì...</CustomLink> </td>
                         </tr>
                         <tr className={styles.tableRow}>
                             <td>05</td>

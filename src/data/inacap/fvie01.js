@@ -50,7 +50,7 @@ const courseData = {
         { week: '01', class: '01', date: 'Jue 22, May 2025', description: <CustomLink href='fvie01/clase01'>Introducción a I+E</CustomLink> },
         { week: '02', class: '02', date: 'Mar 27, May 2025', description: <CustomLink href='fvie01/clase02'>Tema de Proyecto</CustomLink> },
         { week: '', class: '03', date: 'Jue 29, May 2025', description: <CustomLink href='fvie01/clase03'>Objetivos General y Específicos</CustomLink> },
-        { week: '03', class: '04', date: 'Mar 03, Jun 2025', description: "" },
+        { week: '03', class: '04', date: 'Mar 03, Jun 2025', description: <CustomLink href='fvie01/clase04'>Planificación y Pauta</CustomLink> },
         { week: '', class: '05', date: 'Jue 05, Jun 2025', description: "" },
     ],
     lectureData: [

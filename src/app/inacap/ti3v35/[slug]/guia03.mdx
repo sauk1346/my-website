@@ -1,0 +1,486 @@
+import ExternalLink from '@/components/ui/ExternalLink';
+
+# Guía 03: VLSM
+
+- **Material:** <ExternalLink href='/inacap/ti3v35/docs/guia03.pdf'>guia03.pdf</ExternalLink>
+
+## Problema 01
+Partiendo de la red abajo indicada y aplicando subnetting VLSM (máscara de longitud variable), diseña el esquema de direccionamiento para cubrir las necesidades de las redes mostradas en la topología.
+
+<img
+	src="/inacap/ti3v35/images/fig03.png"
+	style={{ display: 'block', margin: '0 auto', width:'50%'}}
+/>
+<br/>
+- **IP de Red:** `192.168.1.0/24`
+- **Bits disponibles:** ________
+- **N° de IPs disponibles:** ________
+- **Subredes necesarias:** ________
+- **IPs necesarias por subred:** ________
+
+<details>
+    <summary>Solución</summary>
+
+- **IP de Red:** `192.168.1.0/24`
+- **Bits disponibles:** $32 - 24 = 8$
+- **N° de IPs disponibles:** $2^8 = 256$
+- **Subredes necesarias:** $3$
+- **IPs necesarias por subred:** LAN1: 120, LAN2: 64, LAN3: 30
+
+1. Se ordenan las subredes de mayor a menor:
+
+    - LAN 1: 120
+    - LAN 2: 64
+    - LAN 3: 30
+
+2. Se utiliza el método de cuadro con máscara inicial `/24`, hosts `256`.
+
+<img
+	src="/inacap/ti3v35/images/fig15.png"
+	style={{ display: 'block', margin: '0 auto', width:'50%'}}
+/>
+<br/>
+
+3. Se realiza una división de máscara:
+
+    - 1ra división: máscara `/25`, hosts `128`. Cumple para LAN1:120
+
+<img
+	src="/inacap/ti3v35/images/fig16.png"
+	style={{ display: 'block', margin: '0 auto', width:'50%'}}
+/>
+<br/>
+
+4. Se realiza otra división de máscara:
+
+    - 2da división: máscara `/26`, hosts `64`. Cumple para LAN2:64
+
+<img
+	src="/inacap/ti3v35/images/fig17.png"
+	style={{ display: 'block', margin: '0 auto', width:'50%'}}
+/>
+<br/>
+
+5. Se realiza otra división de máscara:
+
+    - 3ra división: máscara `/27`, hosts `32`. Cumple para LAN3:30
+
+<img
+	src="/inacap/ti3v35/images/fig18.png"
+	style={{ display: 'block', margin: '0 auto', width:'50%'}}
+/>
+<br/>
+
+6. Finalmente, se completa la tabla:
+
+|Red|IP de Red|Máscara|Última IP (difusión)|IPs Posibles|
+|---|---|---|---|---|
+|LAN 1|192.168.1.0|/25|192.168.1.127|192.168.1.1 - 192.168.1.126|
+|LAN 2|192.168.1.128|/26|192.168.1.191|192.168.1.129 - 192.168.1.190|
+|LAN 3|192.168.1.192|/27|192.168.1.223|192.168.1.193 - 192.168.1.222|
+
+</details><br/><br/>
+
+## Problema 02
+Partiendo de la red abajo indicada y aplicando subnetting VLSM (máscara de longitud variable), diseña el esquema de direccionamiento para cubrir las necesidades de las redes mostradas en la topología.
+
+<img
+	src="/inacap/ti3v35/images/fig04.png"
+	style={{ display: 'block', margin: '0 auto', width:'50%'}}
+/>
+<br/>
+- **IP de Red:** `10.3.7.0/24`
+- **Bits disponibles:** ________
+- **N° de IPs disponibles:** ________
+- **Subredes necesarias:** ________
+- **IPs necesarias por subred:** ________
+
+<details>
+    <summary>Solución</summary>
+
+- **IP de Red:** `10.3.7.0/24`
+- **Bits disponibles:** $32 - 24 = 8$
+- **N° de IPs disponibles:** $2^8 = 256$
+- **Subredes necesarias:** 4
+- **IPs necesarias por subred:** Laboratorio: 90 , Tecnología: 60, I+D: 20, R1-R2: 2
+
+1. Se ordenan las subredes de mayor a menor:
+
+    - Laboratorio: 90
+    - Tecnología: 60
+    - I+D: 20
+    - R1-R2: 2
+
+2. Se utiliza el método de cuadro con máscara inicial `/24`, hosts `256`
+
+<img
+	src="/inacap/ti3v35/images/fig15.png"
+	style={{ display: 'block', margin: '0 auto', width:'50%'}}
+/>
+<br/>
+
+3. Se realiza una división de máscara:
+
+    - 1ra división: máscara `/25`, hosts `128`. Cumple para Laboratorio:90
+    
+<img
+	src="/inacap/ti3v35/images/fig19.png"
+	style={{ display: 'block', margin: '0 auto', width:'50%'}}
+/>
+<br/>
+
+4. Se realiza otra división de máscara:
+
+    - 2da división: máscara `/26`, hosts `64`. Cumple para Tecnología:60
+
+<img
+	src="/inacap/ti3v35/images/fig20.png"
+	style={{ display: 'block', margin: '0 auto', width:'50%'}}
+/>
+<br/>
+
+5. Se realiza otra división de máscara:
+
+    - 3ra división: máscara `/27`, hosts `32`. Cumple para I+D:20
+
+<img
+	src="/inacap/ti3v35/images/fig21.png"
+	style={{ display: 'block', margin: '0 auto', width:'50%'}}
+/>
+
+5. Se realiza otra división de máscara:
+
+    - 4ta división: máscara `/28`, hosts `16`
+    - 5ta división: máscara `/29`, hosts `8`
+    - 6ta división: máscara `/30`, hosts `4`. Cumple para R1-R2, ya que necesito 2 host útiles además de los 2 dedicados (red y broadcast)
+
+<img
+	src="/inacap/ti3v35/images/fig22.png"
+	style={{ display: 'block', margin: '0 auto', width:'50%'}}
+/>
+
+6. Finalmente, se completa la tabla:
+
+|Red|IP de Red|Máscara|Última IP (difusión)|IPs Posibles|
+|---|---|---|---|---|
+|Laboratorio|10.3.7.0|/25|10.3.7.127|10.3.7.1 - 10.3.7.126|
+|Tecnología|10.3.7.128|/26|10.3.7.191|10.3.7.129 - 10.3.7.190|
+|I+D|10.3.7.192|/27|10.3.7.223|10.3.7.193 - 10.3.7.222|
+|R1-R2|10.3.7.224|/30|10.3.7.227|10.3.7.225 - 10.3.7.226|
+
+</details><br/><br/>
+
+## Problema 03
+Partiendo de la red abajo indicada y aplicando subnetting VLSM (máscara de longitud variable), diseña el esquema de direccionamiento para cubrir las necesidades de las redes mostradas en la topología.
+
+<img
+	src="/inacap/ti3v35/images/fig05.png"
+	style={{ display: 'block', margin: '0 auto', width:'50%'}}
+/>
+<br/>
+- **IP de Red:** `172.16.0.0/24`
+- **Bits disponibles:** ________
+- **N° de IPs disponibles:** ________
+- **Subredes necesarias:** ________
+- **IPs necesarias por subred:** ________
+
+<details>
+    <summary>Solución</summary>
+
+- **IP de Red:** `172.16.0.0/24`
+- **Bits disponibles:** $32 - 24 = 8$
+- **N° de IPs disponibles:** $2^8 = 256$
+- **Subredes necesarias:** 5
+- **IPs necesarias por subred:** Valencia: 70, Alicante: 30, Castellon: 20, R1-R2: 2, R1-R3: 2
+
+1. Se ordenan las subredes de mayor a menor:
+
+    - Valencia: 70
+    - Alicante: 30
+    - Castellon: 20
+    - R1-R2: 2
+    - R1-R3: 2
+
+2. Se utiliza el método de cuadro con máscara inicial `/24`, hosts `256`
+
+<img
+	src="/inacap/ti3v35/images/fig15.png"
+	style={{ display: 'block', margin: '0 auto', width:'50%'}}
+/>
+<br/>
+
+3. Se realiza una división de máscara:
+
+    - 1ra división: máscara `/25`, hosts `128`. Cumple para Valencia:70
+
+<img
+	src="/inacap/ti3v35/images/fig23.png"
+	style={{ display: 'block', margin: '0 auto', width:'50%'}}
+/>
+<br/>
+
+4. Se realiza otra división de máscara:
+
+    - 2da división: máscara `/26`, hosts `64`
+    - 3ra división: máscara `/27`, hosts `32`. Cumple para Alicante:30
+
+<img
+	src="/inacap/ti3v35/images/fig24.png"
+	style={{ display: 'block', margin: '0 auto', width:'50%'}}
+/>
+<br/>
+
+5. Para Castellón:20, se utiliza la mitad restante de la 3ra división de máscara realizada:
+
+<img
+	src="/inacap/ti3v35/images/fig25.png"
+	style={{ display: 'block', margin: '0 auto', width:'50%'}}
+/>
+<br/>
+
+6. Se realiza otra división de máscara:
+
+    - 4ta división: máscara `/28`, hosts `16`
+    - 5ta división: máscara `/29`, hosts `8`
+    - 6ta división: máscara `/30`, hosts `4`. Cumple para R1-R2:2, ya que necesito 2 host útiles además de los 2 dedicados (red y broadcast)
+
+<img
+	src="/inacap/ti3v35/images/fig26.png"
+	style={{ display: 'block', margin: '0 auto', width:'50%'}}
+/>
+<br/>
+
+7. Para R1-R3:2, utilizo la mitad restante de la 6ta división de máscara realizada
+
+<img
+	src="/inacap/ti3v35/images/fig27.png"
+	style={{ display: 'block', margin: '0 auto', width:'50%'}}
+/>
+<br/>
+
+7. Finalmente, se completa la tabla:
+
+|Red|IP de Red|Máscara|Última IP (difusión)|IPs Posibles|
+|---|---|---|---|---|
+|Valencia|172.16.0.0|/25|172.16.0.127|172.16.0.1 - 172.16.0.126|
+|Alicante|172.16.0.128|/27|172.16.0.159|172.16.0.129 - 172.16.0.158|
+|Castellón|172.16.0.160|/27|172.16.0.191|172.16.0.161 - 172.16.0.190|
+|R1-R2|172.16.0.192|/30|172.16.0.195|172.16.0.193 - 172.16.0.194|
+|R1-R3|172.16.0.196|/30|172.16.0.199|172.16.0.197 - 172.16.0.198|
+    
+</details><br/><br/>
+
+
+## Problema 04
+Partiendo de la red abajo indicada y aplicando subnetting VLSM (máscara de longitud variable), diseña el esquema de direccionamiento para cubrir las necesidades de las redes mostradas en la topología.
+
+<img
+	src="/inacap/ti3v35/images/fig06.png"
+	style={{ display: 'block', margin: '0 auto', width:'50%'}}
+/>
+<br/>
+- **IP de Red:** `192.168.0.0/24`
+- **Bits disponibles:** ________
+- **N° de IPs disponibles:** ________
+- **Subredes necesarias:** ________
+- **IPs necesarias por subred:** ________
+
+<details>
+    <summary>Solución</summary>
+
+- **IP de Red:** `192.168.0.0/24`
+- **Bits disponibles:** $32 - 24 = 8$
+- **N° de IPs disponibles:** $2^8 = 256$
+- **Subredes necesarias:** 5
+- **IPs necesarias por subred:** Administración: 60, Marketing: 36, Ventas: 50, Fábrica: 20, R1-R2:2
+
+1. Se ordenan las subredes de mayor a menor:
+
+    - Administración: 60
+    - Ventas: 50
+    - Marketing: 36 
+    - Fábrica: 20
+    - R1-R2:2
+
+2. Se utiliza el método de cuadro con máscara inicial `/24`, hosts `256`
+
+<img
+	src="/inacap/ti3v35/images/fig15.png"
+	style={{ display: 'block', margin: '0 auto', width:'50%'}}
+/>
+<br/>
+
+3. Se realiza una división de máscara:
+
+    - 1ra división: máscara `/25`, hosts `128`
+    - 2da división: máscara `/26`, hosts `64`. Cumple para Administración:60
+
+<img
+	src="/inacap/ti3v35/images/fig28.png"
+	style={{ display: 'block', margin: '0 auto', width:'50%'}}
+/>
+<br/>
+
+3. Para Ventas:50, utilizo la mitad restante de la 2da división de máscara realizada:
+
+<img
+	src="/inacap/ti3v35/images/fig29.png"
+	style={{ display: 'block', margin: '0 auto', width:'50%'}}
+/>
+<br/>
+
+4. Se realiza otra división de máscara:
+
+    - 3ra división: máscara `/26`, hosts `64`. Cumple para Marketing:36
+
+<img
+	src="/inacap/ti3v35/images/fig30.png"
+	style={{ display: 'block', margin: '0 auto', width:'50%'}}
+/>
+<br/>
+
+5. Se realiza otra división de máscara:
+
+    - 4ta división: máscara `/27`, hosts `32`. Cumple para Fábrica:20
+
+<img
+	src="/inacap/ti3v35/images/fig31.png"
+	style={{ display: 'block', margin: '0 auto', width:'50%'}}
+/>
+<br/>
+
+6. Se realiza otra división de máscara:
+
+    - 5ta división: máscara `/28`, hosts `16`
+    - 6ta división: máscara `/29`, hosts `8`
+    - 7ta división: máscara `/30`, hosts `4`. Cumple para R1-R2:2, ya que necesito 2 host útiles además de los 2 dedicados (red y broadcast)
+
+<img
+	src="/inacap/ti3v35/images/fig32.png"
+	style={{ display: 'block', margin: '0 auto', width:'50%'}}
+/>
+<br/>
+
+7. Finalmente, se completa la tabla:
+
+|Red|IP de Red|Máscara|Última IP (difusión)|IPs Posibles|
+|---|---|---|---|---|
+|Administración|192.168.0.0|/26|192.168.0.63|192.168.0.1 - 192.168.0.62|
+|Ventas|192.168.0.64|/26|192.168.0.127|192.168.0.65 - 192.168.0.126|
+|Marketing|192.168.0.128|/26|192.168.0.191|192.168.0.129 - 192.168.0.190|
+|Fábrica|192.168.0.192|/27|192.168.0.223|192.168.0.193 - 192.168.0.222|
+|R1-R2|192.168.0.224|/30|192.168.0.227|192.168.0.225 - 192.168.0.226|
+
+</details><br/><br/>
+
+## Problema 05
+Partiendo de la red abajo indicada y aplicando subnetting VLSM (máscara de longitud variable), diseña el esquema de direccionamiento para cubrir las necesidades de las redes mostradas en la topología.
+
+<img
+	src="/inacap/ti3v35/images/fig07.png"
+	style={{ display: 'block', margin: '0 auto', width:'50%'}}
+/>
+<br/>
+- **IP de Red:** `10.10.10.0/24`
+- **Bits disponibles:** ________
+- **N° de IPs disponibles:** ________
+- **Subredes necesarias:** ________
+- **IPs necesarias por subred:** ________
+
+## Problema 06
+Partiendo de la red abajo indicada y aplicando subnetting VLSM (máscara de longitud variable), diseña el esquema de direccionamiento para cubrir las necesidades de las redes mostradas en la topología.
+
+<img
+	src="/inacap/ti3v35/images/fig08.png"
+	style={{ display: 'block', margin: '0 auto', width:'50%'}}
+/>
+<br/>
+- **IP de Red:** `172.30.1.0/24`
+- **Bits disponibles:** ________
+- **N° de IPs disponibles:** ________
+- **Subredes necesarias:** ________
+- **IPs necesarias por subred:** ________
+
+## Problema 07
+Partiendo de la red abajo indicada y aplicando subnetting VLSM (máscara de longitud variable), diseña el esquema de direccionamiento para cubrir las necesidades de las redes mostradas en la topología.
+
+<img
+	src="/inacap/ti3v35/images/fig09.png"
+	style={{ display: 'block', margin: '0 auto', width:'50%'}}
+/>
+<br/>
+- **IP de Red:** `192.168.3.0/25`
+- **Bits disponibles:** ________
+- **N° de IPs disponibles:** ________
+- **Subredes necesarias:** ________
+- **IPs necesarias por subred:** ________
+
+## Problema 08
+Partiendo de la red abajo indicada y aplicando subnetting VLSM (máscara de longitud variable), diseña el esquema de direccionamiento para cubrir las necesidades de las redes mostradas en la topología.
+
+<img
+	src="/inacap/ti3v35/images/fig10.png"
+	style={{ display: 'block', margin: '0 auto', width:'50%'}}
+/>
+<br/>
+- **IP de Red:** `192.168.3.0/26`
+- **Bits disponibles:** ________
+- **N° de IPs disponibles:** ________
+- **Subredes necesarias:** ________
+- **IPs necesarias por subred:** ________
+
+## Problema 09
+Partiendo de la red abajo indicada y aplicando subnetting VLSM (máscara de longitud variable), diseña el esquema de direccionamiento para cubrir las necesidades de las redes mostradas en la topología.
+
+<img
+	src="/inacap/ti3v35/images/fig11.png"
+	style={{ display: 'block', margin: '0 auto', width:'50%'}}
+/>
+<br/>
+- **IP de Red:** `10.5.0.0/16`
+- **Bits disponibles:** ________
+- **N° de IPs disponibles:** ________
+- **Subredes necesarias:** ________
+- **IPs necesarias por subred:** ________
+
+## Problema 10
+Partiendo de la red abajo indicada y aplicando subnetting VLSM (máscara de longitud variable), diseña el esquema de direccionamiento para cubrir las necesidades de las redes mostradas en la topología.
+
+<img
+	src="/inacap/ti3v35/images/fig12.png"
+	style={{ display: 'block', margin: '0 auto', width:'50%'}}
+/>
+<br/>
+- **IP de Red:** `10.1.0.0/16`
+- **Bits disponibles:** ________
+- **N° de IPs disponibles:** ________
+- **Subredes necesarias:** ________
+- **IPs necesarias por subred:** ________
+
+## Problema 11
+Partiendo de la red abajo indicada y aplicando subnetting VLSM (máscara de longitud variable), diseña el esquema de direccionamiento para cubrir las necesidades de las redes mostradas en la topología.
+
+<img
+	src="/inacap/ti3v35/images/fig13.png"
+	style={{ display: 'block', margin: '0 auto', width:'50%'}}
+/>
+<br/>
+- **IP de Red:** `10.0.128.0/18`
+- **Bits disponibles:** ________
+- **N° de IPs disponibles:** ________
+- **Subredes necesarias:** ________
+- **IPs necesarias por subred:** ________
+
+## Problema 12
+Partiendo de la red abajo indicada y aplicando subnetting VLSM (máscara de longitud variable), diseña el esquema de direccionamiento para cubrir las necesidades de las redes mostradas en la topología.
+
+<img
+	src="/inacap/ti3v35/images/fig14.png"
+	style={{ display: 'block', margin: '0 auto', width:'50%'}}
+/>
+<br/>
+- **IP de Red:** `10.5.96.0/20`
+- **Bits disponibles:** ________
+- **N° de IPs disponibles:** ________
+- **Subredes necesarias:** ________
+- **IPs necesarias por subred:** ________

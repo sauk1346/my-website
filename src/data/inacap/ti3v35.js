@@ -62,7 +62,11 @@ const courseData = {
                 <CustomLink href="ti3v35/clase04">- VLSM (1)</CustomLink>
             </>
         },
-        { week: '', class: '05', date: 'Mié 04, Jun 2025', description: "" },
+        { week: '', class: '05', date: 'Mié 04, Jun 2025', description: <>
+            <CustomLink href='ti3v35/guia03'>- Guía 03: VLSM</CustomLink><br/>
+            - Guía 02: VLSM
+            </> 
+        },
 
     ],
     lectureData: [

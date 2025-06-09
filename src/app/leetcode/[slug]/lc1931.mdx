@@ -1,12 +1,11 @@
-# Painting a Grid With Three Different Colors
+# Pintando una Cuadrícula con Tres Colores Diferentes
 
-You are given two integers `m` and `n`. Consider an `m x n` grid where each cell is initially white. You can paint each cell **red**, **green**, or **blue**. All cell **must** be painted.
+Se te dan dos enteros `m` y `n`. Considera una cuadrícula de `m x n` donde cada celda es inicialmente blanca. Puedes pintar cada celda de **rojo**, **verde** o **azul**. Todas las celdas **deben** ser pintadas.
+Devuelve *el número de formas de colorear la cuadrícula sin que **dos celdas adyacentes tengan el mismo color**. Como la respuesta puede ser muy grande, devuélvela **módulo** `10⁹ + 7`.*
 
-Return *the number of ways to color the grid with **no two adjacent cells having the same color***. Since the answer can be very large, return it **modulo** `10⁹ + 7`.
+## Ejemplos
 
-## Examples
-
-**Example 1:**
+**Ejemplo 1:**
 <img
 	src="/leetcode/fig02.png"
 	style={{ display: 'block', margin: '0 auto', width:'40%'}}
@@ -14,9 +13,9 @@ Return *the number of ways to color the grid with **no two adjacent cells having
 <br/>
 > **Input: m = 1, n = 1**
 > **Output: 3**
-> **Explanation:** The three possible colorings are shown in the image above.
+> **Explicación:** Las tres posibles coloraciones se muestran en la imagen de arriba.
 
-**Example 2:**
+**Ejemplo 2:**
 <img
 	src="/leetcode/fig03.png"
 	style={{ display: 'block', margin: '0 auto', width:'40%'}}
@@ -24,14 +23,13 @@ Return *the number of ways to color the grid with **no two adjacent cells having
 <br/>
 > **Input:** m = 1, n = 2
 > **Output:** 6
-> **Explanation:** The six possible colorings are shown in the image above.
+> **Explicación:** Las seis posibles coloraciones se muestran en la imagen de arriba.
 
-**Example 3:**
-
+**Ejemplo 3:**
 > **Input:** m = 5, n = 5
 > **Output:** 580986
 
-## Solutions
+## Soluciones
 
 <details>
     <summary>Python</summary>

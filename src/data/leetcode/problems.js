@@ -1,7 +1,7 @@
 export const problems = {
     "LC0001": {
       title: "Suma de Dos",
-      topics: ["Arreglos", "Tablas Hash"],
+      topics: ["Array", "Hash Table"],
       difficulty: "Easy",
       categories: ["general"]
     },
@@ -65,9 +65,21 @@ export const problems = {
       difficulty: "Easy",
       categories: ["pandas"]
     },
+    "LC0255": {
+      title: "Verify Preorder Sequence in Binary Search Tree",
+      topics: ["Array", "Stack", "Tree", "Binary Search Tree", "Recursion", "Monotonic Stack", "Binary Tree"],
+      difficulty: "Medium",
+      categories: ["general"]
+    },
     "LC0361": {
       title: "Bombardear Enemigos",
       topics: ["Arreglos", "Programación Dinámica", "Matriz"],
+      difficulty: "Medium",
+      categories: ["general"]
+    },
+    "LC0386": {
+      title: "Números Lexicográficos",
+      topics: ["Búsqueda en Profundidad", "Árbol de prefijos"],
       difficulty: "Medium",
       categories: ["general"]
     },
@@ -78,8 +90,14 @@ export const problems = {
       categories: ["pandas"]
     },
     "LC0909": {
-      title: "Snakes and Ladders",
+      title: "Serpientes y Escaleras",
       topics: ["Arreglos", "Búsqueda en Profundad", "Matriz"],
+      difficulty: "Medium",
+      categories: ["general"]
+    },
+    "LC1061": {
+      title: "Cadena Equivalente Lexicográficamente más Pequeña",
+      topics: ["Arreglos", "Conjuntos Disjuntos"],
       difficulty: "Medium",
       categories: ["general"]
     },
@@ -168,7 +186,7 @@ export const problems = {
       categories: ["pandas"]
     },
     "LC1931": {
-      title: "Painting a Grid With Three Different Colors",
+      title: "Pintando una Cuadrícula con Tres Colores Diferentes",
       topics: ["Programación Dinámica"],
       difficulty: "Hard",
       categories: ["general"]
@@ -180,7 +198,7 @@ export const problems = {
       categories: ["pandas"]
     },
     "LC2094": {
-      title: "Finding 3-Digit Even Numbers",
+      title: "Encontrar Números Pares de 3 Dígitos",
       topics: ["Arreglos", "Tablas Hash", "Ordenamiento", "Enumeración"],
       difficulty: "Easy",
       categories: ["general"]
@@ -194,6 +212,12 @@ export const problems = {
     "LC2359": {
       title: "Find Closest Node to Given Two Nodes",
       topics: ["Búsqueda en Profundidad","Grafos"],
+      difficulty: "Medium",
+      categories: ["general"]
+    },
+    "LC2434": {
+      title: "Usando un Robot para Imprimir la Cadena Lexicográficamente más Pequeña",
+      topics: ["Tablas Hash", "Cadena de Caracteres", "Stack", "Algoritmo Voraz"],
       difficulty: "Medium",
       categories: ["general"]
     },
@@ -221,6 +245,12 @@ export const problems = {
       difficulty: "Hard",
       categories: ["general"]
     },
+    "LC2927": {
+      title: "Distribuir Dulces entre Niños III",
+      topics: ["Matemáticas", "Combinatoria"],
+      difficulty: "Hard",
+      categories: ["general"]
+    },
     "LC2929": {
       title: "Distribuir Dulces entre Niños II",
       topics: ["Matemáticas", "Combinatoria", "Enumeración"],
@@ -243,6 +273,12 @@ export const problems = {
       title: "Encontrar la Suma Máxima de Valores de Nodos",
       topics: ["Arreglos", "Programación Dinámica", "Algoritmo Voraz", "Manipulación de Bits", "Árbol", "Ordenamiento"],
       difficulty: "Hard",
+      categories: ["general"]
+    },
+    "LC3170": {
+      title: "Cadena Lexicográficamente Mínima después de Eliminar Estrellas",
+      topics: ["Tablas Hash", "Cadena de Caracteres", "Stack", "Algoritmo Voraz", "Heap"],
+      difficulty: "Medium",
       categories: ["general"]
     },
     "LC3335": {
@@ -279,6 +315,12 @@ export const problems = {
       title: "Maximizar Cantidad de Nodos Objetivos al Unir Árboles II",
       topics: ["Árbol", "Búsqueda en Profundidad", "Búsqueda por Amplitud"],
       difficulty: "Hard",
+      categories: ["general"]
+    },
+    "LC3403": {
+      title: "Encontrar la Cadena Lexicográficamente más Grande de la Caja I",
+      topics: ["Punteros", "Cadena de Caracteres", "Enumeración"],
+      difficulty: "Medium",
       categories: ["general"]
     },
   };

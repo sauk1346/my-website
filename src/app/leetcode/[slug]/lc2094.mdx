@@ -1,41 +1,35 @@
-# Finding 3-Digit Even Numbers
+# Encontrar Números Pares de 3 Dígitos
 
-You are given an integer array `digits`, where each element is a digit. The array may contain duplicates.
+Se te da un arreglo de enteros `digits`, donde cada elemento es un dígito. El arreglo puede contener duplicados.
 
-You need to find **all** the **unique** integers that follow the given requirements:
+Necesitas encontrar **todos** los enteros **únicos** que sigan los siguientes requisitos:
 
-- The integer consists of the **contatenation** of **three** elements from `digits` in **any** arbitrary order.
-- The integer does not have **leading zeros**.
-- The integer is **even**.
+- El entero consiste en la **concatenación** de **tres** elementos de `digits` en **cualquier** orden arbitrario.
+- El entero no tiene **ceros al inicio**.
+- El entero es **par**.
 
-For example, if the given `digits` were `[1,2,3]` integers `132` and `312` follow the requirements.
+Por ejemplo, si los `digits` dados fueran `[1,2,3]`, los enteros `132` y `312` cumplen los requisitos.
 
-Return *a **sorted** array of the unique integers.* 
+Devuelve *un arreglo **ordenado** de los enteros únicos.*
 
-### Constraints
+## Ejemplos
 
-- 3 $\le$ digits.length $\le$ 100
-- 0 $\le$ digits[i] $\le$ 9
-
-
-### Examples
-
-**Example 1:**
+**Ejemplo 1:**
 > **Input:** digits = [2, 1, 3, 0]
 > **Output:** [102, 120, 130, 132, 210, 230, 302, 310, 312, 320]
-> **Explanation:** All the possible integers that follow the requirements are in the output Array. Notice that there are no **odd** integers or integers with **leading zeros**.
+> **Explicación:** Todos los enteros posibles que siguen los requisitos están en el arreglo de salida. Nota que no hay enteros **impares** o enteros con **ceros al inicio**.
 
-**Example 2:**
+**Ejemplo 2:**
 > **Input:** digits = [2, 2, 8, 8, 2]
 > **Output:** [222, 228, 282, 288, 822, 828, 882]
-> **Explanation:** The same digit can be used as many times as it appears in digits. In this example, the digit 8 is used twice each time in 288, 828, and 882. 
+> **Explicación:** El mismo dígito se puede usar tantas veces como aparezca en digits. En este ejemplo, el dígito 8 se usa dos veces cada vez en 288, 828, y 882.
 
-**Example 3:**
+**Ejemplo 3:**
 > **Input:** digits = [3, 7, 5]
 > **Output:** []
-> **Explanation:** No even integers can be formed using the given digits.
+> **Explicación:** No se pueden formar enteros pares usando los dígitos dados.
 
-## Solutions
+## Soluciones
 
 <details>
     <summary>Python</summary>

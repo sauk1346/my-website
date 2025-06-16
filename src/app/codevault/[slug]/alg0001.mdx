@@ -1,0 +1,210 @@
+import ExternalLink from '@/components/ui/ExternalLink';
+
+# Binary Tree
+
+Fuente: <ExternalLink href='https://www.oscarblancarteblog.com/2014/08/22/estructura-de-datos-arboles/'>Oscar Blancarte</ExternalLink>
+
+
+*Árbol Binario*. Es una estructura de datos jerárquica no lineal donde cada nodo tiene como máximo 2 hijos
+
+<img
+	src="/codevault/alg0001/images/fig02.png"
+	style={{ display: 'block', margin: '0 auto', width:'60%'}}
+/>
+<br/>
+
+Es una de las estructuras de datos más importantes en ciencias de la computación debido a su eficiencia en operaciones de búsqueda, inserción y eliminación.
+
+## Ejemplo Estructura Básica
+```python
+class Nodo:
+    def __init__(self, valor):
+        self.valor = valor
+        self.izquierdo = None
+        self.derecho = None
+
+# Crear un árbol simple
+#       1
+#      / \
+#     2   3
+#    / \
+#   4   5
+
+raiz = Nodo(1)
+raiz.izquierdo = Nodo(2)
+raiz.derecho = Nodo(3)
+raiz.izquierdo.izquierdo = Nodo(4)
+raiz.izquierdo.derecho = Nodo(5)
+
+print(f"Raíz: {raiz.valor}")
+print(f"Hijo izquierdo: {raiz.izquierdo.valor}")
+print(f"Hijo derecho: {raiz.derecho.valor}")
+```
+
+## Características
+
+1. Cada nodo puede tener 0, 1 o 2 hijos
+2. Existe un nodo especial llamado **raíz** (root) que no tiene padre
+3. Los nodos sin hijos se llaman **hojas** (leaves)
+
+<img
+	src="/codevault/alg0001/images/fig01.png"
+	style={{ display: 'block', margin: '0 auto', width:'60%'}}
+/>
+<br/>
+
+
+### Altura
+Es el número máximo de niveles de un árbol
+
+<img
+	src="/codevault/alg0001/images/fig03.png"
+	style={{ display: 'block', margin: '0 auto', width:'60%'}}
+/>
+<br/>
+
+### Peso 
+Es el número de nodos que tiene un árbol. Se utiliza para darnos una idea del tamaño del árbol y el tamaño en memoria que nos puede ocupar en tiempo de ejecución.
+
+<img
+	src="/codevault/alg0001/images/fig04.png"
+	style={{ display: 'block', margin: '0 auto', width:'60%'}}
+/>
+<br/>
+
+# Binary Search Tree (BST)
+*Árbol Binario de Búsqueda*. Es un tipo especial de árbol binario que mantiene sus elementos ordenados siguiendo una propiedad fundamental: para cualquier nodo, todos los valores en el subárbol izquierdo son menores que el valor del nodo, y todos los valores en el subárbol derecho son mayores.
+
+## Ejemplo Estructura Básica BST
+
+```python
+class Nodo:
+    def __init__(self, valor):
+        self.valor = valor
+        self.izquierdo = None
+        self.derecho = None
+
+class BST:
+    def __init__(self):
+        self.raiz = None
+    
+    def esta_vacio(self):
+        return self.raiz is None
+    
+    def insertar(self, valor):
+        self.raiz = self._insertar_recursivo(self.raiz, valor)
+    
+    def _insertar_recursivo(self, nodo, valor):
+        # Caso base: encontramos el lugar para insertar
+        if nodo is None:
+            return Nodo(valor)
+        
+        # Insertar en subárbol izquierdo o derecho
+        if valor < nodo.valor:
+            nodo.izquierdo = self._insertar_recursivo(nodo.izquierdo, valor)
+        elif valor > nodo.valor:
+            nodo.derecho = self._insertar_recursivo(nodo.derecho, valor)
+        # Si valor == nodo.valor, no insertamos (no duplicados)
+        
+        return nodo
+
+# Ejemplo de uso básico
+bst = BST()
+valores = [50, 30, 70, 20, 40, 60, 80]
+
+print("Insertando valores:", valores)
+for valor in valores:
+    bst.insertar(valor)
+
+print("Árbol BST creado exitosamente!")
+```
+
+## Recorrido sobre Árboles
+Son algoritmos que permiten recorrer un árbol en un orden específico, los recorridos nos pueden ayudar a encontrar un nodo en el árbol, o buscar una posición determinada para insertar o eliminar un nodo.
+
+Existen 2 tipos:
+
+1. Busqueda en profundidad
+2. Búsquedda en amplitud
+
+### Búsqueda en profundidad
+
+**Recorrido Pre-orden:** El recorrido inicia en la Raíz y luego se recorre en pre-orden cada uno de los sub-árboles de izquierda a derecha.
+
+<img
+	src="/codevault/alg0001/images/fig05.png"
+	style={{ display: 'block', margin: '0 auto', width:'60%'}}
+/>
+<br/>
+
+```python
+def preorden_recursivo(self, nodo, resultado):
+    if nodo is not None:
+        resultado.append(nodo.valor)                        # 1. Raíz
+        self.preorden_recursivo(nodo.izquierdo, resultado)  # 2. Izquierdo
+        self.preorden_recursivo(nodo.derecho, resultado)    # 3. Derecho
+```
+
+**Recorrido Post-Orden:** Se recorre el pos-orden cada uno de los sub-árboles y al final se recorre la raíz.
+
+<img
+	src="/codevault/alg0001/images/fig06.png"
+	style={{ display: 'block', margin: '0 auto', width:'60%'}}
+/>
+<br/>
+
+```python
+def postorden_recursivo(self, nodo, resultado):
+    if nodo is not None:
+        self.postorden_recursivo(nodo.izquierdo, resultado) # 1. Izquierdo
+        self.postorden_recursivo(nodo.derecho, resultado)   # 2. Derecho
+        resultado.append(nodo.valor)                        # 3. Raíz
+```
+
+**Recorrido In-orden** Se recorre en in-orden el primer sub-árbol, luego se recorre la raíz y al final se recorre en in-orden los demas sub-árboles.
+
+<img
+	src="/codevault/alg0001/images/fig07.png"
+	style={{ display: 'block', margin: '0 auto', width:'60%'}}
+/>
+<br/>
+
+```python
+def inorden_recursivo(self, nodo, resultado):
+    if nodo is not None:
+        self.inorden_recursivo(nodo.izquierdo, resultado)   # 1. Izquierdo
+        resultado.append(nodo.valor)                        # 2. Raíz  
+        self.inorden_recursivo(nodo.derecho, resultado)     # 3. Derecho
+```
+
+### Búsqueda en Amplitud
+*Breadth-First Search (BFS)*. Es un algoritmo de recorrido que explora un grafo o árbol nivel por nivel, visitando todos los nodos a una distancia determinada antes de pasar al siguiente nivel. Es como explorar en "ondas" expandiéndose desde el punto de origen.
+
+Se recorre primero la raíz, luego se recorren los demas nodos ordenados por el nivel al que pertenecen en orden de Izquierda a derecha.
+
+Este tipo de búsqueda se caracteriza por que la búsqueda se hace nivel por nivel y de izquierda a derecha.
+
+<img
+	src="/codevault/alg0001/images/fig08.png"
+	style={{ display: 'block', margin: '0 auto', width:'60%'}}
+/>
+<br/>
+
+```python
+from collections import deque
+
+def bfs_arbol(raiz):
+    if not raiz:
+        return
+        
+    cola = deque([raiz])
+    
+    while cola:
+        nodo = cola.popleft()
+        print(nodo.valor)  # procesar nodo
+        
+        if nodo.izquierdo:
+            cola.append(nodo.izquierdo)
+        if nodo.derecho:
+            cola.append(nodo.derecho)
+```

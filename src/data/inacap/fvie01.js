@@ -50,8 +50,12 @@ const courseData = {
         { week: '01', class: '01', date: 'Jue 22, May 2025', description: <CustomLink href='fvie01/clase01'>Introducción a I+E</CustomLink> },
         { week: '02', class: '02', date: 'Mar 27, May 2025', description: <CustomLink href='fvie01/clase02'>Tema de Proyecto</CustomLink> },
         { week: '', class: '03', date: 'Jue 29, May 2025', description: <CustomLink href='fvie01/clase03'>Objetivos General y Específicos</CustomLink> },
-        { week: '03', class: '04', date: 'Mar 03, Jun 2025', description: <CustomLink href='fvie01/clase04'>Planificación y Pauta</CustomLink> },
-        { week: '', class: '05', date: 'Jue 05, Jun 2025', description: "" },
+        { week: '03', class: '04', date: 'Mar 03, Jun 2025', description: <CustomLink href='fvie01/clase04'>Planificación y Pauta (1)</CustomLink> },
+        { week: '', class: '05', date: 'Jue 05, Jun 2025', description: "Planificación y Pauta (2)" },
+        { week: '04', class: '06', date: 'Mar 10, Jun 2025', description: "Observación no Participante" },
+        { week: '', class: '07', date: 'Jue 12, Jun 2025', description: "No asistí" },
+        { week: '05', class: '08', date: 'Mar 17, Jun 2025', description: "" },
+        { week: '', class: '09', date: 'Jue 19, Jun 2025', description: "" },
     ],
     lectureData: [
         { week: '01', lecture: '01', date: 'Sáb 24, May 2025', description: <CustomLink href='fvie01/lectura01'>Entrevista a usuario</CustomLink> },
@@ -62,6 +66,9 @@ const courseData = {
         { week: '03', lecture: '06', date: 'Sáb 07, Jun 2025', description: 'Estudio Comparativo Antecedentes' },
         { week: '', lecture: '07', date: 'Sáb 07, Jun 2025', description: 'Formulario Requerimientos' },
         { week: '', lecture: '08', date: 'Sáb 07, Jun 2025', description: 'Brainstorming' },
+        { week: '04', lecture: '', date: '', description: '' },
+        { week: '05', lecture: '09', date: 'Sáb 21, Jun 2025', description: 'Modelo de negocio Business Canvas Model' },
+        { week: '', lecture: '10', date: 'Sáb 21, Jun 2025', description: 'Modelo de Negocio y Análisis de un BMC' },
 
     ],
 };

@@ -173,5 +173,25 @@ export const calendar25 = [
     titulo: "[TI3V35] Evaluación 01 - parte II (VLSM)",
     description: "Sistemas Operativos"
   },
+  {
+    id: 30,
+    fecha: "2025-6-16",
+    titulo: "[TI3V35] Control 01 Online",
+    description: "Sistemas Operativos"
+  },
+  {
+    id: 31,
+    fecha: "2025-6-23",
+    titulo: "[TI3V35] Evaluación 02: Windows Server",
+    description: "Sistemas Operativos"
+  },
+  {
+    id: 32,
+    fecha: "2025-6-25",
+    titulo: "[TI3V31] Entrega Evaluación 01",
+    description: "Programación Front End"
+  },
+
+
 ];
 export default calendar25;

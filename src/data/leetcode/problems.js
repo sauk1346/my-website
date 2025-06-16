@@ -66,7 +66,7 @@ export const problems = {
       categories: ["pandas"]
     },
     "LC0255": {
-      title: "Verify Preorder Sequence in Binary Search Tree",
+      title: "Verificar Secuencia de Preorden en Árbol de Búsqueda Binaria ",
       topics: ["Array", "Stack", "Tree", "Binary Search Tree", "Recursion", "Monotonic Stack", "Binary Tree"],
       difficulty: "Medium",
       categories: ["general"]
@@ -131,6 +131,12 @@ export const problems = {
       difficulty: "Medium",
       categories: ["general"]
     },
+    "LC1432": {
+      title: "Máxima Diferencia al Cambiar un Entero",
+      topics: ["Math", "Greedy"],
+      difficulty: "Medium",
+      categories: ["general"]
+    },
     "LC1517": {
       title: "Usuarios con Emails Válidos",
       topics: ["Database"],
@@ -191,6 +197,12 @@ export const problems = {
 Matrixdifficulty: "Hard",
       categories: ["general"]
     },
+    "LC2016": {
+      title: "Diferencia Máxima entre Elementos Crecientes",
+      topics: ["Array"],
+      difficulty: "Easy",
+      categories: ["general"]
+    },
     "LC2082": {
       title: "Cantidad de Clientes Ricos",
       topics: ["Database"],
@@ -221,6 +233,12 @@ Matrixdifficulty: "Hard",
       difficulty: "Medium",
       categories: ["general"]
     },
+    "LC2566": {
+      title: "Máxima Diferencia al Remapear un Dígito",
+      topics: ["Math", "Greedy"],
+      difficulty: "Easy",
+      categories: ["general"]
+    },
     "LC2616": {
       title: "Minimizar la Diferencia Máxima de Pares",
       topics: ["Array", "Binary Search", "Greedy"],
@@ -240,7 +258,7 @@ Matrixdifficulty: "Hard",
       categories: ["general"]
     },
     "LC2900": {
-      title: "Longest Unequal Adjacent Groups Subsequence I",
+      title: "Subsecuencia de Grupos Adyacentes Desiguales más Larga I",
       topics: ["Array", "String", "Dynamic Programming", "Matrix"],
       difficulty: "Medium", 
       categories: ["general"]

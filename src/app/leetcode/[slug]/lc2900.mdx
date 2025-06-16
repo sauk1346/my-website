@@ -1,31 +1,29 @@
-# Longest Unequal Adjacent Groups Subsequence I
+# Subsecuencia de Grupos Adyacentes Desiguales más Larga I
 
-You are given a string array `words` and a **binary** array `groups` both of length `n`
+Se te da un arreglo de cadenas `words` y un arreglo **binario** `groups`, ambos de longitud `n`.
 
-A subsequence of `words` is **alternating** it for any two *consecutive* strings in the sequence, their corresponding elements at the *same* indices in `groups` are **different** (that is, there *cannot* be consecutive 0 or 1).
+Una subsecuencia de `words` es **alternante** si para cualquier dos cadenas **consecutivas** en la secuencia, sus elementos correspondientes en los *mismos* índices en `groups` son **diferentes** (es decir, *no puede* haber 0 o 1 consecutivos).
 
-Your task is to select the **longest alternating**  subsequence from `words`
+Tu tarea es seleccionar la **subsecuencia alternante más larga** de `words`.
 
-Return *the selected subsequence. If there are multiple answers, return **any** of them*.
+Devuelve *la subsecuencia seleccionada. Si hay múltiples respuestas, devuelve **cualquiera** de ellas.**
 
-**Note:** The elements in `words` are distinct.
+Nota: Los elementos en `words` son distintos.
 
+## Ejemplos
 
-## Examples
-
-**Example 1:**
+**Ejemplo 1:**
 
 > **Input:** words = ["e","a","b"], groups = [0,0,1]
 > **Output:** ["e","b"]
-> **Explanation:** A subsequence that can be selected is ["e","b"] because groups[0] != groups[2]. Another subsequence that can be selected is ["a","b"] because groups[1] != groups[2]. It can be demonstrated that the length of the longest subsequence of indices that satisfies the condition is 2.
+> **Explicación:** Una subsecuencia que puede ser seleccionada es ["e","b"] porque groups[0] != groups[2]. Otra subsecuencia que puede ser seleccionada es ["a","b"] porque groups[1] != groups[2]. Se puede demostrar que la longitud de la subsecuencia más larga de índices que satisface la condición es 2.
 
-**Example 2:**
-
+**Ejemplo 2:**
 > **Input:** words = ["a","b","c","d"], groups = [1,0,1,1]
 > **Output:** ["a","b","c"]
-> **Explanation:** A subsequence that can be selected is ["a","b","c"] because groups[0] != groups[1] and groups[1] != groups[2]. Another subsequence that can be selected is ["a","b","d"] because groups[0] != groups[1] and groups[1] != groups[3]. It can be shown that the length of the longest subsequence of indices that satisfies the condition is 3.
+> **Explicación:** Una subsecuencia que puede ser seleccionada es ["a","b","c"] porque groups[0] != groups[1] y groups[1] != groups[2]. Otra subsecuencia que puede ser seleccionada es ["a","b","d"] porque groups[0] != groups[1] y groups[1] != groups[3]. Se puede mostrar que la longitud de la subsecuencia más larga de índices que satisface la condición es 3.
 
-## Solutions
+## Soluciones
 
 <details>
     <summary>Python</summary>

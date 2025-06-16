@@ -36,7 +36,7 @@ const Ch001 = () => {
                         </tr>
                         <tr className={styles.tableRow}>
                             <td>05</td>
-                            <td>谢谢 Xièxie! </td>
+                            <td><CustomLink href='ch001/lesson05'>谢谢 Xièxie!</CustomLink> </td>
                         </tr>
                         </tbody>
                     </table>

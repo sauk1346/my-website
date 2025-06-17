@@ -264,7 +264,7 @@ Matrixdifficulty: "Hard",
       categories: ["general"]
     },
     "LC2901": {
-      title: "Longest Unequal Adjacent Groups Subsequence II",
+      title: "Subsecuencia de Grupos Adyacentes Desiguales más Larga II",
       topics: ["Array", "String", "Dynamic Programming", "Matrix"],
       difficulty: "Hard",
       categories: ["general"]
@@ -345,6 +345,12 @@ Matrixdifficulty: "Hard",
       title: "Encontrar la Cadena Lexicográficamente más Grande de la Caja I",
       topics: ["Two Pointers", "String", "Enumeration"],
       difficulty: "Medium",
+      categories: ["general"]
+    },
+    "LC3405": {
+      title: "Contar el Número de Arreglos con K Elementos Adyacentes Coincidentes",
+      topics: ["Math", "Combinatorics"],
+      difficulty: "Hard",
       categories: ["general"]
     },
   };

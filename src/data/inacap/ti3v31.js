@@ -48,7 +48,7 @@ const courseData = {
     ],
     classData: [
         { week: '01', class: '01', date: 'Mié 28, May 2025', description: <del>Suspensión clases</del> },
-        { week: '02', class: '02', date: 'Mié 04, Jun 2025', description: "HTML5 y atributos"},
+        { week: '02', class: '02', date: 'Mié 04, Jun 2025', description: <CustomLink href='ti3v31/clase02'>HTML5 y atributos</CustomLink>},
         { week: '03', class: '03', date: 'Mié 11, Jun 2025', description: "CSS y Formularios"},
         { week: '04', class: '04', date: 'Mié 18, Jun 2025', description: ""},
     ],

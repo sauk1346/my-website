@@ -22,7 +22,8 @@ const courseData = {
             date: 'Lun 02, Jun 2025',
             weighting: '15%',
             description: <>
-                <CustomLink href="ti3v35/eval01">- 1ra parte (FLSM)</CustomLink>
+                <CustomLink href="ti3v35/eval01-1">- 1ra parte (FLSM)</CustomLink><br />
+                <CustomLink href="ti3v35/eval01-2">- 2da parte (VLSM)</CustomLink>
             </>,
             quickGuide: <>
                 <CustomLink href='ti3v35/guia00'>- Guía 00: Conceptos</CustomLink><br/>
@@ -58,16 +59,13 @@ const courseData = {
         { week: '', class: '03', date: 'Mié 28, May 2025', description: <ExternalLink href="/inacap/ti3v35/docs/subnetting.pdf">- FLSM (2)</ExternalLink> },
         { 
             week: '03', class: '04', date: 'Lun 02, Jun 2025', description: <>
-                <CustomLink href="ti3v35/eval01">- Evaluación 01 parte 1: FLSM</CustomLink><br/>
+                <CustomLink href="ti3v35/eval01-1">- Evaluación 01 parte 1: FLSM</CustomLink><br/>
                 <CustomLink href="ti3v35/clase04">- VLSM (1)</CustomLink>
             </>
         },
-        { week: '', class: '05', date: 'Mié 04, Jun 2025', description: <>
-            <CustomLink href='ti3v35/guia03'>- Guía 03: VLSM</CustomLink><br/>
-            </> 
-        },
-        { week: '04', class: '06', date: 'Lun 09, Jun 2025', description: "- Evaluación 01 parte 2: VLSM" },
-        { week: '', class: '07', date: 'Mié 11, Jun 2025', description: "- Windows Server (1)" },
+        { week: '', class: '05', date: 'Mié 04, Jun 2025', description: <CustomLink href='ti3v35/guia03'>- Guía 03: VLSM</CustomLink> },
+        { week: '04', class: '06', date: 'Lun 09, Jun 2025', description: <CustomLink href='ti3v35/eval01-2'>- Evaluación 01 parte 2: VLSM</CustomLink> },
+        { week: '', class: '07', date: 'Mié 11, Jun 2025', description: <ExternalLink href='/inacap/ti3v35/docs/clase07.pdf'>- Windows Server (1)</ExternalLink> },
         { 
             week: '05', class: '08', date: 'Lun 16, Jun 2025', description: <>
                 - Control 01 Online<br />

@@ -287,6 +287,12 @@ Matrixdifficulty: "Hard",
       difficulty: "Easy",
       categories: ["general"]
     },
+    "LC2966": {
+      title: "Dividir Array en Arrays con Diferencia Máxima",
+      topics: ["Array", "Greedy", "Sorting"],
+      difficulty: "Medium",
+      categories: ["general"]
+    },
     "LC3024": {
       title: "Type of Triangle",
       topics: ["Array", "Math", "Sorting"],

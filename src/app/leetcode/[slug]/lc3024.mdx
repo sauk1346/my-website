@@ -1,35 +1,33 @@
-# Type of Triangle
+# Tipo de Triángulo
 
-You are given a **0-indexed** integer array `nums` of size `3` which can form the sides of a triangle.
+Se te da un array de enteros **indexado en 0** `nums` de tamaño `3` que puede formar los lados de un triángulo.
 
-- A triangle is called **equilateral** if it has all sides of equal length.
-- A triangle is called **isosceles** if it has exactly two sides of equal length.
-- A triangle is called **scalene** if its sides are of different lenghts.
+- Un triángulo se llama **equilátero (equilateral)** si tiene todos los lados de igual longitud.
+- Un triángulo se llama **isósceles (isosceles)** si tiene exactamente dos lados de igual longitud.
+- Un triángulo se llama **escaleno (scalene)** si sus lados son de diferentes longitudes.
 
-Return *a string representing the type of triangle that can be formed or `none` if it **cannot** form a triangle*
+Devuelve *un string que represente el tipo de triángulo que se puede formar o `"none"` si **no puede** formar un triángulo*
 
-## Examples
+## Ejemplos
 
-**Example 1:**
-
+**Ejemplo 1:**
 > **Input:** nums = [3,3,3]
 > **Output:** "equilateral"
-> **Explanation:** Since all the sides are of equal length, therefore, it will form an equilateral triangle.
+> **Explicación:** Como todos los lados son de igual longitud, por lo tanto, formará un triángulo equilátero.
 
-**Example 2:**
-
+**Ejemplo 2:**
 > **Input:** nums = [3,4,5]
 > **Output:** "scalene"
-> **Explanation:** 
-> nums[0] + nums[1] = 3 + 4 = 7, which is greater than nums[2] = 5.
-> nums[0] + nums[2] = 3 + 5 = 8, which is greater than nums[1] = 4.
-> nums[1] + nums[2] = 4 + 5 = 9, which is greater than nums[0] = 3. 
-> Since the sum of the two sides is greater than the third side for
-> all three cases, therefore, it can form a triangle.
-> As all the sides are of different lengths, it will form a
-> scalene triangle.
+> **Explicación:**
+> nums[0] + nums[1] = 3 + 4 = 7, que es mayor que nums[2] = 5.
+> nums[0] + nums[2] = 3 + 5 = 8, que es mayor que nums[1] = 4.
+> nums[1] + nums[2] = 4 + 5 = 9, que es mayor que nums[0] = 3.
+> Como la suma de dos lados es mayor que el tercer lado para
+> los tres casos, por lo tanto, puede formar un triángulo.
+> Como todos los lados son de diferentes longitudes, formará un
+> triángulo escaleno.
 
-## Solutions
+## Soluciones
 
 <details>
     <summary>Python</summary>

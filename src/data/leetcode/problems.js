@@ -221,8 +221,14 @@ Matrixdifficulty: "Hard",
       difficulty: "Medium",
       categories: ["general"]
     },
+    "LC2294": {
+      title: "Particionar Array tal que la Diferencia Máxima sea K",
+      topics: ["Array","Greedy", "Sorting"],
+      difficulty: "Medium",
+      categories: ["general"]
+    },
     "LC2359": {
-      title: "Find Closest Node to Given Two Nodes",
+      title: "Encontrar el Nodo más Cercado a Dos Nodos",
       topics: ["Depth-First Search","Graph"],
       difficulty: "Medium",
       categories: ["general"]
@@ -294,7 +300,7 @@ Matrixdifficulty: "Hard",
       categories: ["general"]
     },
     "LC3024": {
-      title: "Type of Triangle",
+      title: "Tipo de Triángulo",
       topics: ["Array", "Math", "Sorting"],
       difficulty: "Easy",
       categories: ["general"]
@@ -357,6 +363,12 @@ Matrixdifficulty: "Hard",
       title: "Contar el Número de Arreglos con K Elementos Adyacentes Coincidentes",
       topics: ["Math", "Combinatorics"],
       difficulty: "Hard",
+      categories: ["general"]
+    },
+    "LC3443": {
+      title: "Máxima Distancia Manhattan después de K cambios",
+      topics: ["Hash Table", "Math", "String", "Counting"],
+      difficulty: "Medium",
       categories: ["general"]
     },
   };

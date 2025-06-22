@@ -54,8 +54,10 @@ const courseData = {
         { week: '', class: '05', date: 'Jue 05, Jun 2025', description: "Planificación y Pauta (2)" },
         { week: '04', class: '06', date: 'Mar 10, Jun 2025', description: "Observación no Participante" },
         { week: '', class: '07', date: 'Jue 12, Jun 2025', description: "No asistí" },
-        { week: '05', class: '08', date: 'Mar 17, Jun 2025', description: "" },
-        { week: '', class: '09', date: 'Jue 19, Jun 2025', description: "" },
+        { week: '05', class: '08', date: 'Mar 17, Jun 2025', description: "Feedback Cuestionario" },
+        { week: '', class: '09', date: 'Jue 19, Jun 2025', description: "No asistí" },
+        { week: '06', class: '10', date: 'Mar 24, Jun 2025', description: "" },
+        { week: '', class: '11', date: 'Jue 26, Jun 2025', description: "" },
     ],
     lectureData: [
         { week: '01', lecture: '01', date: 'Sáb 24, May 2025', description: <CustomLink href='fvie01/lectura01'>Entrevista a usuario</CustomLink> },

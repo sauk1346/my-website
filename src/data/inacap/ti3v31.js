@@ -50,18 +50,22 @@ const courseData = {
         { week: '01', class: '01', date: 'Mié 28, May 2025', description: <del>Suspensión clases</del> },
         { week: '02', class: '02', date: 'Mié 04, Jun 2025', description: <CustomLink href='ti3v31/clase02'>HTML5 y atributos</CustomLink>},
         { week: '03', class: '03', date: 'Mié 11, Jun 2025', description: "CSS y Formularios"},
-        { week: '04', class: '04', date: 'Mié 18, Jun 2025', description: ""},
+        { week: '04', class: '04', date: 'Mié 18, Jun 2025', description: <>
+            <ExternalLink href='/inacap/ti3v31/docs/proyecto01.pdf'>- Instrucciones Proyecto (Sprint 01)</ExternalLink><br/>
+            - CSS(2): Uso de selectores
+        </>},
     ],
     lectureData: [
         { week: '01', lecture: '01', date: 'Sáb 31, May 2025', description: <ExternalLink href='/inacap/ti3v31/docs/lectura01.pdf'>Unidad 1: Desarrollo de sitio web estático utilizando HTML5 y CSS3</ExternalLink> },
         { week: '', lecture: '02', date: 'Sáb 31, May 2025', description: <CustomLink href='ti3v31/lectura02'>Principios de diseño responsivo de Programación Front End</CustomLink> },
-        { week: '', lecture: '03', date: 'Sáb 31, May 2025', description: 'Tutorial Interactivo de HTML' },
-        { week: '', lecture: '04', date: 'Sáb 31, May 2025', description: 'Tutorial Práctico: convertir un diseño en HTML' },
+        { week: '', lecture: '03', date: 'Sáb 31, May 2025', description: <CustomLink href='ti3v31/lectura03'>Tutorial Interactivo de HTML</CustomLink> },
+        { week: '', lecture: '04', date: 'Sáb 31, May 2025', description: <CustomLink href='ti3v31/lectura04'>Tutorial Práctico: convertir un diseño en HTML</CustomLink> },
         { week: '02', lecture: '05', date: 'Sáb 07, Jun 2025', description: 'Guía práctica de CSS3: aplicación de estilos según un diseño' },
         { week: '03', lecture: '06', date: 'Sáb 14, Jun 2025', description: 'Guía de Git y GitHub para desarrolladores: implementación de políticas de respaldo' },
         { week: '04', lecture: '07', date: 'Sáb 21, Jun 2025', description: 'Unidad 2: Interacción con documentos HTML usando JavaScript' },
         { week: '', lecture: '08', date: 'Sáb 21, Jun 2025', description: 'Manipulación del DOM con JavaScript: guía paso a paso' },
         { week: '', lecture: '09', date: 'Sáb 21, Jun 2025', description: 'Validación y modularización de formularios y códigos en JavaScript: manual práctico' },
+        { week: '05', lecture: '09', date: 'Sáb 28, Jun 2025', description: 'Manejo de arreglos y objetos en JavaScript: ejercicios y ejemplos prácticos' },
     ],
 };
 export default courseData;

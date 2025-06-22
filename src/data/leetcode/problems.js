@@ -89,6 +89,12 @@ export const problems = {
       difficulty: "Easy",
       categories: ["pandas"]
     },
+    "LC0663": {
+      title: "Partición Igualitaria de Árbol",
+      topics: ["Tree", "Depth-First Search", "Binary Tree"],
+      difficulty: "Medium",
+      categories: ["general"]
+    },
     "LC0909": {
       title: "Serpientes y Escaleras",
       topics: ["Array", "Breadth-First Search", "Matrix"],
@@ -311,6 +317,12 @@ Matrixdifficulty: "Hard",
       difficulty: "Hard",
       categories: ["general"]
     },
+    "LC3085": {
+      title: "Eliminaciones Mínimas para hacer un String K-especial",
+      topics: ["Hash Table", "String", "Greedy", "Sorting", "Counting"],
+      difficulty: "Medium",
+      categories: ["general"]
+    },
     "LC3170": {
       title: "Cadena Lexicográficamente Mínima después de Eliminar Estrellas",
       topics: ["Hash Table", "String", "Stack", "Greedy", "Heap"],
@@ -318,13 +330,13 @@ Matrixdifficulty: "Hard",
       categories: ["general"]
     },
     "LC3335": {
-      title: "Total Characters in Strings After Transformations I",
+      title: "Total de Caracteres en String después de Transformaciones I",
       topics: ["Hash Table", "Math", "String", "Dynamic Programming", "Matrix"],
       difficulty: "Medium",
       categories: ["general"]
     },
     "LC3337": {
-      title: "Total Characters in Strings After Transformations II",
+      title: "Total de Caracteres en String después de Transformaciones II",
       topics: ["Hash Table", "Math", "String", "Dynamic Programming", "Matrix"],
       difficulty: "Hard",
       categories: ["general"]

@@ -33,7 +33,7 @@ const courseData = {
         },
         { 
             evaluationNumber: 2,
-            date: '',
+            date: 'Mié 25, Jun 2025',
             weighting: '30%',
             description: 'Windows Server',
             quickGuide: ''
@@ -66,13 +66,10 @@ const courseData = {
         { week: '', class: '05', date: 'Mié 04, Jun 2025', description: <CustomLink href='ti3v35/guia03'>- Guía 03: VLSM</CustomLink> },
         { week: '04', class: '06', date: 'Lun 09, Jun 2025', description: <CustomLink href='ti3v35/eval01-2'>- Evaluación 01 parte 2: VLSM</CustomLink> },
         { week: '', class: '07', date: 'Mié 11, Jun 2025', description: <ExternalLink href='/inacap/ti3v35/docs/clase07.pdf'>- Windows Server (1)</ExternalLink> },
-        { 
-            week: '05', class: '08', date: 'Lun 16, Jun 2025', description: <>
-                - Control 01 Online<br />
-                - Windows Server (2)
-            </>
-         },
-        { week: '', class: '09', date: 'Mié 18, Jun 2025', description: "" },
+        { week: '05', class: '08', date: 'Lun 16, Jun 2025', description: "- Windows Server (2)" },
+        { week: '', class: '09', date: 'Mié 18, Jun 2025', description: "- Windows Server (3)" },
+        { week: '06', class: '10', date: 'Lun 23, Jun 2025', description: "- Windows Server (4)" },
+        { week: '', class: '11', date: 'Mié 25, Jun 2025', description: "- Evaluación 02" },
         
     ],
     lectureData: [
@@ -81,8 +78,9 @@ const courseData = {
         { week: '02', lecture: '03', date: 'Sáb 31, May 2025', description: <CustomLink href="ti3v35/lectura03">Cálculo de clases de dirección</CustomLink> },
         { week: '03', lecture: '04', date: 'Sáb 07, Jun 2025', description: <CustomLink href="ti3v35/lectura04">Técnicas de cálculo VLSM</CustomLink> },
         { week: '04', lecture: '05', date: 'Sáb 14, Jun 2025', description: <ExternalLink href='/inacap/ti3v35/docs/lectura05.pdf'>Unidad 2: Sistema operativo Windows Server</ExternalLink> },
-        { week: '', lecture: '06', date: 'Sáb 14, Jun 2025', description: "Configuración básica en la instalación de un sistema operativo Windows Server" },    
-        { week: '05', lecture: '07', date: 'Sáb 21, Jun 2025', description: "Incorporación de la estación de trabajo en el dominio" },    
+        { week: '', lecture: '06', date: 'Sáb 14, Jun 2025', description: <CustomLink href="ti3v35/lectura06">Configuración básica en la instalación de un sistema operativo Windows Server</CustomLink> },    
+        { week: '05', lecture: '07', date: 'Sáb 21, Jun 2025', description: <CustomLink href="ti3v35/lectura07">Incorporación de la estación de trabajo en el dominio</CustomLink> },    
+        { week: '06', lecture: '08', date: 'Sáb 28, Jun 2025', description: <CustomLink href="ti3v35/lectura08">Políticas GPO en los objetos de dominio</CustomLink> },    
     ],
 };
 export default courseData;

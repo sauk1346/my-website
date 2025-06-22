@@ -1,0 +1,24 @@
+# Políticas GPO en los objetos de dominio
+
+## Profundización de Active Directory
+El elemento principal de AD es el directorio, que almacena información sobre los recursos de la red y los servicios que hacen disponible la información. Se denominan objetos a los recursos almacenados en el directorio, como:
+
+- Datos de usuario
+- Impresoras
+- Servidores
+- Bases de datos
+- Grupos
+- Computadoras
+- Políticas de sistema
+
+> AD organiza los objetos en dominios de manera jerárquica
+
+1. Un dominio es una agrupación lógica de servidores y otros recursos de red bajo un mismo nombre de dominio.
+2. Cada dominio incluye uno o más controladores de dominio (*domain controllers*), que son máquinas que almacenan una réplica de un directorio de dominio.
+3. Cada vez que se hace algún cambio en alguno de los controladores, el resto se actualiza automáticamente.
+
+### Unidades Organizaciones (UO)
+Son contenedores que se usan para reunir objetos de un dominio en grupos administrativos lógicos. Cada UO puede contener distintos objetos y cada dominio puede tener su propia lógica de agrupación en UOs.
+
+### Dominio
+La unidad central de la estructura lógica de AD es el dominio. Agrupando los objetos en uno o más dominios es posible representar la propia organización de la empresa. Todos los objetos de la red existen en un dominio. Es posible albergar millones de objetos.

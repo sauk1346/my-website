@@ -1,54 +1,62 @@
-# Total Character in String After Transformations II
+# Total de Caracteres en String después de Transformaciones II
 
-You are given a string `s` consisting of lowercase English letters, an integer `t` representing the number of **transformations** to perform, and an array `numbs` of size 26. In one **transformation**, every character in `s` is replaced according to the following rules:
+Se te da un string `s` que consiste en letras minúsculas del inglés, un entero `t` que representa el número de **transformaciones** a realizar, y un array `nums` de tamaño 26. En una **transformación**, cada carácter en `s` se reemplaza según las siguientes reglas:
 
-- Replace `s[i]` with the **next** `nums[s[i]-'a']` consecutive characters in the alphabet. For example, if `s[i] = 'a'` and `nums[0] = 3`, the character `'a'`  transforms into the next 3 consecutive characters ahead of it, which results in `"bcd"`.
-- The transformation **wraps** around the alphabet if it exceeds `z`. For example, if `s[i] = 'y'` and `nums[24] = 3`, the character `'y'` transforms into the next 3 consecutive characters ahead of it, which results in `"zab"`.
+- Reemplaza `s[i]` con los siguientes `nums[s[i]-'a']` caracteres consecutivos en el alfabeto. Por ejemplo, si `s[i] = 'a'` y `nums[0] = 3`, el carácter `'a'` se transforma en los siguientes 3 caracteres consecutivos después de él, lo que resulta en `"bcd"`.
+- La transformación **se reinicia** en el alfabeto si excede `z`. Por ejemplo, si `s[i] = 'y'` y `nums[24] = 3`, el carácter `'y'` se transforma en los siguientes 3 caracteres consecutivos después de él, lo que resulta en `"zab"`.
 
-Return the length of the resulting string after **exactly** `t` transformations.
+Devuelve la longitud de la cadena resultante después de **exactamente** `t` transformaciones.
 
-Since the answer may be very large, return it **modulo** `10⁹ + 7`
+Dado que la respuesta puede ser muy grande, devuélvela **módulo** `10⁹ + 7`
 
+## Ejemplos
 
-## Example 1
+**Ejemplo 1**
+```text
+Input: s = "abcyy", t = 2, nums = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2]
 
-- **Input:** s = "abcyy", t = 2, nums = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2]
-- **Output:** 7
-- **Explanation:**
+Output: 7
 
-    - **First Transformation (t = 1):**
-        - `'a'` becomes `'b'` as `nums[0] == 1`
-        - `'b'` becomes `'c'` as `nums[1] == 1`
-        - `'c'` becomes `'d'` as `nums[2] == 1`
-        - `'y'` becomes `'z'` as `nums[24] == 1`
-        - `'y'` becomes `'z'` as `nums[24] == 1`
-        - String after the first transformation: `"bcdzz"`
-    - **Second Transformation (t = 2):**
-        - `'b'` becomes `'c'` as `nums[1] == 1`
-        - `'c'` becomes `'d'` as `nums[2] == 1`
-        - `'d'` becomes `'e'` as `nums[3] == 1`
-        - `'z'` becomes `'ab'` as `nums[25] == 2`
-        - `'z'` becomes `'ab'` as `nums[25] == 2`
-        - String after the second transformation: `"cdeabab"`
+Explicación:
 
-    - Final Length of the string: The string is `"cdeabab"`, which has 7 characters.
+- Primera Transformación (t = 1):
+  - 'a' se convierte en 'b' ya que nums[0] == 1
+  - 'b' se convierte en 'c' ya que nums[1] == 1
+  - 'c' se convierte en 'd' ya que nums[2] == 1
+  - 'y' se convierte en 'z' ya que nums[24] == 1
+  - 'y' se convierte en 'z' ya que nums[24] == 1
+  - Cadena después de la primera transformación: "bcdzz"
 
-## Example 2
+- Segunda Transformación (t = 2):
+  - 'b' se convierte en 'c' ya que nums[1] == 1
+  - 'c' se convierte en 'd' ya que nums[2] == 1
+  - 'd' se convierte en 'e' ya que nums[3] == 1
+  - 'z' se convierte en 'ab' ya que nums[25] == 2
+  - 'z' se convierte en 'ab' ya que nums[25] == 2
+  - Cadena después de la segunda transformación: "cdeabab"
 
-- **Input:** s = "azbk", t = 1, nums = [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2]
-- **Output:** 8
-- **Explanation:**
+- Longitud Final de la cadena: La cadena es "cdeabab", que tiene 7 caracteres.
+```
 
-    - **First Transformation (t = 1):**
-        - `'a'` becomes `'bc'` as `nums[0] == 2`
-        - `'z'` becomes `'ab'` as `nums[25] == 2`
-        - `'b'` becomes `'cd'` as `nums[1] == 2`
-        - `'k'` becomes `'lm'` as `nums[10] == 2`
-        - String after the first transformation: `"bcabcdlm"`
+**Ejemplo 2**
+```text
+Input: s = "azbk", t = 1, nums = [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2]
 
-    - Final Length of the string: The string is `"bcabcdlm"`, which has 8 characters.
+Output: 8
 
-## Solutions
+Explicación:
+
+- Primera Transformación (t = 1):
+  - 'a' se convierte en 'bc' ya que nums[0] == 2
+  - 'z' se convierte en 'ab' ya que nums[25] == 2
+  - 'b' se convierte en 'cd' ya que nums[1] == 2
+  - 'k' se convierte en 'lm' ya que nums[10] == 2
+  - Cadena después de la primera transformación: "bcabcdlm"
+
+- Longitud Final de la cadena: La cadena es "bcabcdlm", que tiene 8 caracteres.
+```
+
+## Soluciones
 
 <details>
     <summary>Python</summary>

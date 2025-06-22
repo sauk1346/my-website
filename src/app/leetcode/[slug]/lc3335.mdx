@@ -1,57 +1,63 @@
-# Total Characters in String After Transformations I
+# Total de Caracteres en String después de Transformaciones I
 
-You are given a string `s`and an integer `t`, representing the number of **transformations** to perform. In one **transformation**, every character in `s`is replaces according to the following rules:
+Se te da un string `s` y un entero `t`, que representa el número de **transformaciones** a realizar. En una **transformación**, cada carácter en `s` se reemplaza según las siguientes reglas:
 
-- If the character is `z`, replace it with the string `"ab"`
-- Otherwise, replace it with the **next** character in the alphabet. For example, `'a'` is replaced with `'b'`, `'b'` is replaced with `'c'` and so on.
+- Si el carácter es `z`, reemplázalo con el string `"ab"`
+- De lo contrario, reemplázalo con el **siguiente** carácter en el alfabeto. Por ejemplo, `'a'` se reemplaza con `'b'`, `'b'` se reemplaza con `'c'` y así sucesivamente.
 
-Return the **length** of the resulting string after **exactly** `t` transformations.
+Devuelve la **longitud** del string resultante después de **exactamente** `t` transformaciones.
 
-Since the answer may be very larte, return it **modulo** `10⁹ + 7`
+Dado que la respuesta puede ser muy grande, devuélvela **módulo** `10⁹ + 7`
 
-## Examples
+## Ejemplos
 
-### Example 1
+**Ejemplo 1**
+```text
+Input: s = "abcyy", t = 2
 
-> **Input:** s = "abcyy", t = 2
-> **Output:** 7
+Output: 7
 
-**Explanation:**
-- **First Transformation (t=1)**:
-    - 'a' becomes 'b'
-    - 'b' becomes 'c'
-    - 'c' becomes 'd'
-    - 'y' becomes 'z'
-    - 'y' becomes 'z'
-    - String after the first transformation: "bcdzz"
+Explicación:
 
-- **Second Transformation (t = 2):**
-    - 'b' becomes 'c'
-    - 'c' becomes 'd'
-    - 'd' becomes 'e'
-    - 'z' becomes "ab"
-    - 'z' becomes "ab"
-    - String after the second transformation: "cdeabab"
+- Primera Transformación (t=1):
+  - 'a' se convierte en 'b'
+  - 'b' se convierte en 'c'
+  - 'c' se convierte en 'd'
+  - 'y' se convierte en 'z'
+  - 'y' se convierte en 'z'
+  - String después de la primera transformación: "bcdzz"
 
-- **Final Length of the string:** The string is "cdeabab", which has 7 characters.
+- Segunda Transformación (t = 2):
 
+  - 'b' se convierte en 'c'
+  - 'c' se convierte en 'd'
+  - 'd' se convierte en 'e'
+  - 'z' se convierte en "ab"
+  - 'z' se convierte en "ab"
+  - String después de la segunda transformación: "cdeabab"
 
-### Example 2
+Longitud Final del string: "cdeabab", que tiene 7 caracteres.
+```
 
-> **Input:** s = "azbk", t = 1
-> **Output:** 5
+**Ejemplo 2:**
+```text
+Input: s = "azbk", t = 1
 
-**Explanation:**
-- **First Transformation (t = 1)**:
-    - 'a' becomes 'b'
-    - 'z' becomes "ab"
-    - 'b' becomes 'c'
-    - 'k' becomes 'l'
-    - String after the first transformation: "babcl"
+Output: 5
 
-- **Final Length of the string:** The string is "babcl", which has 5 characters.
+Explicación:
 
-## Solutions
+- Primera Transformación (t = 1):
+  - 'a' se convierte en 'b'
+  - 'z' se convierte en "ab"
+  - 'b' se convierte en 'c'
+  - 'k' se convierte en 'l'
+  - Cadena después de la primera transformación: "babcl"
+
+- Longitud Final del string: "babcl", que tiene 5 caracteres.
+```
+
+## Soluciones
 
 <details>
     <summary>Python</summary>

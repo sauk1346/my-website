@@ -175,19 +175,67 @@ export const calendar25 = [
   },
   {
     id: 30,
-    fecha: "2025-6-16",
-    titulo: "[TI3V35] Control 01 Online",
-    description: "Sistemas Operativos"
-  },
-  {
-    id: 31,
-    fecha: "2025-6-23",
+    fecha: "2025-6-25",
     titulo: "[TI3V35] Evaluación 02: Windows Server",
     description: "Sistemas Operativos"
   },
   {
+    id: 31,
+    fecha: "2025-5-30",
+    titulo: "[TI3V31] Control 01",
+    description: "Programación Front End"
+  },
+  {
     id: 32,
-    fecha: "2025-6-25",
+    fecha: "2025-6-6",
+    titulo: "[TI3V31] Control 02",
+    description: "Programación Front End"
+  },
+  {
+    id: 33,
+    fecha: "2025-6-13",
+    titulo: "[TI3V31] Control 03",
+    description: "Programación Front End"
+  },
+  {
+    id: 34,
+    fecha: "2025-6-20",
+    titulo: "[TI3V31] Control 04",
+    description: "Programación Front End"
+  },
+  {
+    id: 35,
+    fecha: "2025-6-27",
+    titulo: "[TI3V31] Control 05",
+    description: "Programación Front End"
+  },
+  {
+    id: 36,
+    fecha: "2025-7-4",
+    titulo: "[TI3V31] Control 06",
+    description: "Programación Front End"
+  },
+  {
+    id: 37,
+    fecha: "2025-7-11",
+    titulo: "[TI3V31] Control 07",
+    description: "Programación Front End"
+  },
+  {
+    id: 38,
+    fecha: "2025-7-18",
+    titulo: "[TI3V31] Control 08",
+    description: "Programación Front End"
+  },
+  {
+    id: 39,
+    fecha: "2025-7-25",
+    titulo: "[TI3V31] Control 09",
+    description: "Programación Front End"
+  },
+  {
+    id: 40,
+    fecha: "2025-6-29",
     titulo: "[TI3V31] Entrega Evaluación 01",
     description: "Programación Front End"
   },

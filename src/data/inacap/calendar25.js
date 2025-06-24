@@ -175,7 +175,7 @@ export const calendar25 = [
   },
   {
     id: 30,
-    fecha: "2025-6-25",
+    fecha: "2025-6-30",
     titulo: "[TI3V35] Evaluación 02: Windows Server",
     description: "Sistemas Operativos"
   },

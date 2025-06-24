@@ -200,13 +200,19 @@ export const problems = {
     "LC1931": {
       title: "Pintando una Cuadrícula con Tres Colores Diferentes",
       topics: ["Dynamic Programming"],
-Matrixdifficulty: "Hard",
+      difficulty: "Hard",
       categories: ["general"]
     },
     "LC2016": {
       title: "Diferencia Máxima entre Elementos Crecientes",
       topics: ["Array"],
       difficulty: "Easy",
+      categories: ["general"]
+    },
+    "LC2081": {
+      title: "Suma de Números K-espejo",
+      topics: ["Math", "Enumeration"],
+      difficulty: "Hard",
       categories: ["general"]
     },
     "LC2082": {

@@ -33,7 +33,7 @@ const courseData = {
         },
         { 
             evaluationNumber: 2,
-            date: 'Mié 25, Jun 2025',
+            date: 'Lun 30, Jun 2025',
             weighting: '30%',
             description: 'Windows Server',
             quickGuide: ''
@@ -69,7 +69,7 @@ const courseData = {
         { week: '05', class: '08', date: 'Lun 16, Jun 2025', description: "- Windows Server (2)" },
         { week: '', class: '09', date: 'Mié 18, Jun 2025', description: "- Windows Server (3)" },
         { week: '06', class: '10', date: 'Lun 23, Jun 2025', description: "- Windows Server (4)" },
-        { week: '', class: '11', date: 'Mié 25, Jun 2025', description: "- Evaluación 02" },
+        { week: '', class: '11', date: 'Mié 25, Jun 2025', description: "- Windows Server (5)" },
         
     ],
     lectureData: [

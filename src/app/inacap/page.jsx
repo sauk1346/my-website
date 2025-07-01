@@ -83,32 +83,6 @@ const InacapImproved = () => {
         </div>
       </div>
 
-      {/* Header del semestre actual */}
-      {currentSemester && (
-        <div className={`${styles.currentSemesterHeader} ${styles[currentSemester.status]}`}>
-          <div className={styles.semesterHeaderContent}>
-            <div className={styles.semesterHeaderLeft}>
-              <div className={styles.semesterIcon}>📅</div>
-              <div className={styles.semesterHeaderInfo}>
-                <h2 className={styles.semesterHeaderTitle}>
-                  {selectedSemester}° Semestre {currentSemester.year}
-                </h2>
-                <p className={styles.semesterHeaderSubtitle}>
-                  {currentSemester.status === 'completed' ? 'Completado' : 
-                   currentSemester.status === 'current' ? 'En Curso' : 'Pendiente'} • {filteredSubjects.length} materias
-                </p>
-              </div>
-            </div>
-            <div className={styles.semesterHeaderRight}>
-              <div className={styles.semesterHeaderProgress}>
-                {Math.round((filteredSubjects.filter(s => s.status === 'completed').length / Math.max(filteredSubjects.length, 1)) * 100)}%
-              </div>
-              <div className={styles.semesterHeaderLabel}>Progreso</div>
-            </div>
-          </div>
-        </div>
-      )}
-
       {/* Contenido de materias */}
       {filteredSubjects.length === 0 ? (
         <div className={styles.noResults}>

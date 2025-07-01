@@ -21,7 +21,7 @@ const En002 = () => {
                         <tbody>
                         <tr className={styles.tableRow}>
                             <td>01</td>
-                            <td></td>
+                            <td><CustomLink href='en002/module01'>Pretest</CustomLink></td>
                         </tr>
                         <tr className={styles.tableRow}>
                             <td>02</td>

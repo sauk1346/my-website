@@ -20,23 +20,23 @@ const Ch001 = () => {
                         <tbody>
                         <tr className={styles.tableRow}>
                             <td>01</td>
-                            <td><CustomLink href='ch001/lesson01'>你好 Nǐ hǎo!</CustomLink></td>
+                            <td><CustomLink href='ch001/lesson11'>你好 Nǐ hǎo!</CustomLink></td>
                         </tr>
                         <tr className={styles.tableRow}>
                             <td>02</td>
-                            <td><CustomLink href='ch001/lesson02'>你是哪国人? Nǐ shì nǎ guó rén?</CustomLink></td>
+                            <td><CustomLink href='ch001/lesson12'>你是哪国人? Nǐ shì nǎ guó rén?</CustomLink></td>
                         </tr>
                         <tr className={styles.tableRow}>
                             <td>03</td>
-                            <td><CustomLink href='ch001/lesson03'>你多大了? Nǐ duō dà le?</CustomLink></td>
+                            <td><CustomLink href='ch001/lesson13'>你多大了? Nǐ duō dà le?</CustomLink></td>
                         </tr>
                         <tr className={styles.tableRow}>
                             <td>04</td>
-                            <td><CustomLink href='ch001/lesson04'>我的电话号码是... Wǒ de diànhuà hàomǎ shì...</CustomLink> </td>
+                            <td><CustomLink href='ch001/lesson14'>我的电话号码是... Wǒ de diànhuà hàomǎ shì...</CustomLink> </td>
                         </tr>
                         <tr className={styles.tableRow}>
                             <td>05</td>
-                            <td><CustomLink href='ch001/lesson05'>谢谢 Xièxie!</CustomLink> </td>
+                            <td><CustomLink href='ch001/lesson15'>谢谢 Xièxie!</CustomLink> </td>
                         </tr>
                         </tbody>
                     </table>
@@ -54,7 +54,7 @@ const Ch001 = () => {
                         <tbody>
                         <tr className={styles.tableRow}>
                             <td>01</td>
-                            <td>她是谁 Tā shì shéi?</td>
+                            <td><CustomLink href='ch001/lesson21'>她是谁 Tā shì shéi?</CustomLink></td>
                         </tr>
                         <tr className={styles.tableRow}>
                             <td>02</td>

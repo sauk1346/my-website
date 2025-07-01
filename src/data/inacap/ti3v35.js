@@ -70,6 +70,8 @@ const courseData = {
         { week: '', class: '09', date: 'Mié 18, Jun 2025', description: "- Windows Server (3)" },
         { week: '06', class: '10', date: 'Lun 23, Jun 2025', description: "- Windows Server (4)" },
         { week: '', class: '11', date: 'Mié 25, Jun 2025', description: "- Windows Server (5)" },
+        { week: '07', class: '12', date: 'Lun 30, Jun 2025', description: "- Evaluación 02: Windows Server" },
+        { week: '', class: '13', date: 'Mié 02, Jul 2025', description: "" },
         
     ],
     lectureData: [
@@ -81,6 +83,9 @@ const courseData = {
         { week: '', lecture: '06', date: 'Sáb 14, Jun 2025', description: <CustomLink href="ti3v35/lectura06">Configuración básica en la instalación de un sistema operativo Windows Server</CustomLink> },    
         { week: '05', lecture: '07', date: 'Sáb 21, Jun 2025', description: <CustomLink href="ti3v35/lectura07">Incorporación de la estación de trabajo en el dominio</CustomLink> },    
         { week: '06', lecture: '08', date: 'Sáb 28, Jun 2025', description: <CustomLink href="ti3v35/lectura08">Políticas GPO en los objetos de dominio</CustomLink> },    
+        { week: '07', lecture: '09', date: 'Sáb 05, Jul 2025', description: "Unidad 3: Sistema operativo Linux Server" },
+        { week: '07', lecture: '', date: 'Sáb 05, Jul 2025', description: "Licenciamiento de software" },
+
     ],
 };
 export default courseData;

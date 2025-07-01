@@ -335,6 +335,12 @@ export const problems = {
       difficulty: "Medium",
       categories: ["general"]
     },
+    "LC3330": {
+      title: "Encuentra el String Original Tecleado I",
+      topics: ["String"],
+      difficulty: "Easy",
+      categories: ["general"]
+    },
     "LC3335": {
       title: "Total de Caracteres en String después de Transformaciones I",
       topics: ["Hash Table", "Math", "String", "Dynamic Programming", "Matrix"],

@@ -54,8 +54,9 @@ const courseData = {
             <ExternalLink href='/inacap/ti3v31/docs/proyecto01.pdf'>- Instrucciones Proyecto (Sprint 01)</ExternalLink><br/>
             - CSS(2): Uso de selectores
         </>},
-        { week: '05', class: '05', date: 'Mié 25, Jun 2025', description: "- JavaScript (1)"},
-        { week: '06', class: '06', date: 'Mié 02, Jul 2025', description: ""},
+        { week: '05', class: '05', date: 'Mié 25, Jun 2025', description: "- JavaScript (1): Introducción sintaxis y funciones"},
+        { week: '06', class: '06', date: 'Mié 02, Jul 2025', description: "- JavaScript (2): Manipulación del DOM"},
+        { week: '07', class: '06', date: 'Mié 09, Jul 2025', description: ""},
 
     ],
     lectureData: [
@@ -72,7 +73,7 @@ const courseData = {
         { week: '06', lecture: '10', date: 'Sáb 05, Jul 2025', description: 'Unidad 3: Framework basado en JavaScript' },
         { week: '', lecture: '11', date: 'Sáb 05, Jul 2025', description: 'Evolución de los frameworks de JavaScript en el desarrollo web moderno' },
         { week: '', lecture: '12', date: 'Sáb 05, Jul 2025', description: 'Elementos esenciales de los frameworks de JavaScript' },
-
+        { week: '07', lecture: '13', date: 'Sáb 12, Jul 2025', description: 'Codificación de componenetes en JavaScript con componentes en React' },
 
     ],
 };

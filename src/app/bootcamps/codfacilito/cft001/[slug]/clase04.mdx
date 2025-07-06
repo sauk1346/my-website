@@ -1,0 +1,41 @@
+import ExternalLink from '@/components/ui/ExternalLink';
+
+# Clase 04: Estadística (2)
+
+## Población vs Muestra
+
+- **Población:** Todos los elementos de un espacio muestral ($N$)
+- **Muestra:** Solo algunos de los elementos de un espacio muestral ($n$)
+
+**Ejemplo:** ¿cómo probarías que una moneda tiene 50% de probabilidad de salir cara?
+
+- Gracias a la **ley de los grandes números**, basta con lanzarla una cantidad de veces suficientemente grande
+- Esto es, la media muestral se acerca a la media poblacional
+
+## Prueba de Hipótesis
+Es un procedimiento estadístico que permite tomar decisiones sobre parámetros poblacionales, basándose en información muestral.
+
+Consiste en contrastar dos afirmaciones mutuamente excluyentes sobre un parámetro poblacional para determinar cuál es más compatible con los datos observados
+
+- **Hipótesis Nula ($H_0$):** Afirmación que se asume verdadera hasta que se demuestre lo contrario. Generalmente representa "no hay efecto" o "no hay diferencia"
+- **Hipótesis Alternativa ($H_a$):** Afirmación que contradice a la hipótesis nula. Es lo que queremos demostrar.
+- **Nivel de significancia ($\alpha$):** Probabilidad de rechazar $H_0$ cuando es verdadera (Error tipo I). Valores comunes: 0.05, 0.01, 0.10.
+
+## Prueba Z
+$$
+\begin{aligned}
+    Z = \frac{\bar{x} - \mu_0}{\frac{\sigma}{\sqrt{n}}}
+\end{aligned}
+$$
+
+| Hipótesis Alternativa | Rechazar Hipótesis Nula Si: |
+|----------------------|------------------------------|
+| $\mu > \mu_0$ | $Z > z_\alpha$ |
+| $\mu < \mu_0$ | $Z < -z_\alpha$ |
+| $\mu \neq \mu_0$ | $\|Z\| > z_{\alpha/2}$ o bien $Z < -z_{\alpha/2}$ |
+
+- $\mu$: Media poblacional
+- $\mu_0$: Valor de la media bajo la hipótesis nula
+- $Z$: Estadístico de prueba calculado
+- $z_\alpha$: Valor crítico de la distribución normal estándar para nivel de significancia $\alpha$
+- $z_{\alpha/2}$: Valor crítico de la distribución normal estándar para nivel de significancia $\alpha/2$

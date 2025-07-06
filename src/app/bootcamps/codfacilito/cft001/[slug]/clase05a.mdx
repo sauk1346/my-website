@@ -1,0 +1,509 @@
+# Clase 05: Numpy
+
+```python
+import numpy as np
+```
+
+***¿Qué es una matriz?*** ⁉ ✋
+
+***¿Qué es un vector?*** ⁉ ✋
+
+## 1. Matriz:
+
+Una matriz multidimensional en NumPy es representada por el objeto ndarray.
+
+
+ Este es un conjunto de elementos (usualmente números), todos del mismo tipo, organizados en una cuadrícula de N dimensiones.
+
+
+ Cada elemento en el ndarray es identificado por una tupla de N índices, uno por cada dimensión de la matriz.
+
+
+```python
+# Crear una matriz 2D con NumPy
+matriz_2d = np.array([[1, 2, 3], [4, 5, 6]])
+```
+
+
+```python
+print(matriz_2d)
+```
+
+> [[1 2 3]
+> [4 5 6]]
+
+
+## 2. Array:
+
+Un array en NumPy, técnicamente es un ndarray, es simplemente un arreglo de elementos en N dimensiones.
+Puede ser 1D (una línea de elementos), 2D (una matriz de elementos), o incluso de mayor dimensionalidad.
+
+*En contextos de NumPy, "array" se refiere a ndarray a menos que se especifique lo contrario.*
+
+## 3. ¿Dónde esta el ♥ de NumPy?
+
+El objeto más importante de NumPy es el **ndarray**, que es un array n-dimensional.
+
+Es una tabla de elementos (usualmente números), todos del mismo tipo, indexados por una tupla de enteros positivos. En NumPy, las dimensiones se llaman ejes.
+
+Propiedades de ndarray:
+
+* *ndim*: el número de ejes (dimensiones) del array.
+* *shape*: una tupla de enteros indicando el tamaño del array en cada dimensión.
+* *size*: el número total de elementos del array.
+* *dtype*: un objeto que describe el tipo de los elementos en el array.
+* *itemsize*: el tamaño en bytes de cada elemento del array.
+* *data*: el buffer que contiene los elementos actuales del array.
+
+
+```python
+a = np.array([1, 2, 3, 4, 5])
+```
+
+
+```python
+a
+```
+
+> array([1, 2, 3, 4, 5])
+
+
+
+
+```python
+print("Array:", a)
+print("Número de dimensiones:", a.ndim)
+print("Forma del array:", a.shape)
+print("Tamaño del array:", a.size)
+print("Tipo de datos del array:", a.dtype)
+print("Tamaño en bytes de cada elemento:", a.itemsize)
+```
+
+> Array: [1 2 3 4 5]
+> Número de dimensiones: 1
+> Forma del array: (5,)
+> Tamaño del array: 5
+> Tipo de datos del array: int64
+> Tamaño en bytes de cada elemento: 8
+
+
+## 4. Tipos de Datos en NumPy:
+
+NumPy soporta una variedad de tipos numéricos que incluyen
+* **int** (enteros),
+* **float** (flotantes),
+* **complex** (complejos),
+* **bool** (booleanos), entre otros.
+
+Cuando creas un array, puedes especificar el tipo de datos utilizando el argumento dtype.
+
+
+```python
+# Creando arrays con diferentes tipos de datos
+b = np.array([1, 2, 3], dtype=np.float64)
+print("Array con tipo float64:", b)
+
+```
+
+> Array con tipo float64: [1. 2. 3.]
+
+
+
+```python
+c = np.array([.9, 2, 3], dtype=np.int64)
+print("Tipo de datos del array:", c.dtype)
+c
+```
+
+> Tipo de datos del array: int64
+> array([0, 2, 3])
+
+
+
+Existen varias formas para inicializar nuevos arrays en NumPy, como np.zeros, np.ones, np.empty, etc., cada una con diferentes propósitos.
+
+
+```python
+# Crear un array de ceros
+zeros_array = np.zeros((3,5))
+print("Array de ceros:\n", zeros_array)
+```
+
+> Array de ceros:
+>  [[0. 0. 0. 0. 0.]
+>  [0. 0. 0. 0. 0.]
+>  [0. 0. 0. 0. 0.]]
+
+
+
+```python
+# Crear un array de unos
+ones_array = np.ones((2,2))
+print("Array de unos:\n", ones_array)
+
+```
+
+> Array de unos:
+>  [[1. 1.]
+>  [1. 1.]]
+
+
+
+```python
+# Crear un array con un rango de valores
+range_array = np.arange(10)
+print("Array de rango 0 a 9:\n", range_array)
+```
+
+> Array de rango 0 a 9:
+>  [0 1 2 3 4 5 6 7 8 9]
+
+
+
+```python
+# Crear un array con valores espaciados uniformemente
+linspace_array = np.linspace(0, 1, 5)
+print("Array con linspace:\n", linspace_array)
+
+```
+
+> Array con linspace:
+>  [0. 0.25 0.5 0.75 1.  ]
+
+
+## 5. Operaciones Básicas
+NumPy permite realizar operaciones aritméticas elemento por elemento, incluyendo suma, resta, multiplicación, y división.
+
+
+```python
+z = 0
+y = 1
+```
+
+
+```python
+a = np.array([[1, 2, 3], [z, y, 2]])
+print(a)
+```
+
+> [[1 2 3]
+>  [0 1 2]]
+
+
+
+```python
+b = np.array([[4,2, 6],[3,2,0]])
+print(b)
+```
+
+> [[4 2 6]
+>  [3 2 0]]
+
+
+
+```python
+print("Suma:", a + b)
+```
+
+> Suma: [[5 4 9]
+>  [3 3 2]]
+
+
+
+```python
+print("Resta:", a - b)
+```
+
+> Resta: [[-3  0 -3]
+>  [-3 -1  2]]
+
+
+
+```python
+print("Multiplicación:", a * b)
+```
+
+> Multiplicación: [[ 4  4 18]
+>  [ 0  2  0]]
+
+
+
+```python
+# Suma, resta, multiplicación y división elemento por elemento
+print("División:", a / b)
+```
+
+> División: [[0.25 1.   0.5 ]
+>  [0.   0.5   inf]]
+
+> \<ipython-input-59-430dc1e9085f\>:3: RuntimeWarning: divide by zero encountered in divide
+>   print("División:", a / b)
+
+
+## 6. Manipulación de Arrays
+ NumPy permite manipular la forma y tamaño de los arrays de maneras muy flexibles.
+
+
+```python
+# Crear un array 3x3
+c = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+print(c)
+```
+
+> [[1 2 3]
+>  [4 5 6]
+>  [7 8 9]]
+
+
+
+```python
+# Cambiar la forma del array
+c_reshaped = c.reshape((9,1))
+print("Array reorganizado:\n", c_reshaped)
+```
+
+> Array reorganizado:
+>  [[1]
+>  [2]
+>  [3]
+>  [4]
+>  [5]
+>  [6]
+>  [7]
+>  [8]
+>  [9]]
+
+
+***¿A qué piensas que se pueda referir el concepto de aplanar array?*** ⁉ ✋
+
+
+```python
+# Aplanar el array
+c_flattened = c.flatten()
+print("Array aplanado:", c_flattened)
+```
+
+> Array aplanado: [1 2 3 4 5 6 7 8 9]
+
+
+***¿Qué es transponer un array?*** ⁉ ✋
+
+
+```python
+c
+```
+
+> array([[1, 2, 3],
+>        [4, 5, 6],
+>        [7, 8, 9]])
+
+```python
+# Transponer el array
+c_transposed = c.transpose()
+print("Array transpuesto:\n", c_transposed)
+```
+
+> Array transpuesto:
+>  [[1 4 7]
+>  [2 5 8]
+>  [3 6 9]]
+
+
+## 7. Álgebra Lineal
+NumPy tiene un submódulo llamado numpy.linalg que proporciona muchas funciones para realizar operaciones de álgebra lineal.
+
+```python
+# Crear una matriz
+A = np.array([[1, 2], [3, 4]])
+print(A)
+```
+
+> [[1 2]
+>  [3 4]]
+
+```python
+# Calcular el determinante
+det_A = np.linalg.det(A)
+print("Determinante de la matriz:", det_A)
+```
+
+> Determinante de la matriz: -2.0000000000000004
+
+
+```python
+# Calcular la inversa de la matriz
+inverse_A = np.linalg.inv(A)
+print("Inversa de la matriz:\n", inverse_A)
+```
+
+> Inversa de la matriz:
+>  [[-2.   1. ]
+>  [ 1.5 -0.5]]
+
+
+***¿Sabes qué es un eigenvalor y eigenvector?*** ⁉ ✋
+
+```python
+# Eigenvalores y eigenvectores
+eigenvalues, eigenvectors = np.linalg.eig(A)
+```
+
+```python
+print("Eigenvalores:", eigenvalues)
+```
+
+> Eigenvalores: [-0.37228132  5.37228132]
+
+```python
+print("Eigenvectores:\n", eigenvectors)
+```
+
+> Eigenvectores:
+>  [[-0.82456484 -0.41597356]
+>  [ 0.56576746 -0.90937671]]
+
+
+Un **eigenvalor** (o valor propio) es un número escalar que surge en el contexto del álgebra lineal cuando se trabaja con matrices y vectores. Específicamente, los eigenvalores están relacionados con las transformaciones lineales.
+
+Cuando un vector *v* es un eigenvector de una matriz
+*A*, significa que al aplicar la transformación *A* al vector *v*, el resultado es el mismo vector v, pero escalado por un factor λ. Este factor de escalado es el eigenvalor.
+
+Un **eigenvector** (o vector propio) es un vector no nulo que, cuando se le aplica una transformación lineal representada por una matriz, no cambia de dirección. Lo único que cambia es su magnitud, que se escala por un número llamado eigenvalor.
+
+Un eigenvector es un vector que no rota ni cambia de dirección cuando se le aplica una transformación (multiplicación por una matriz). Solo se estira o se comprime, según el eigenvalor
+λ.
+
+## 8. Funciones Estadísticas
+NumPy ofrece una amplia gama de funciones estadísticas para trabajar con datos.
+
+***¿Qué conceptos de estadística conoces?*** ⁉ ✋
+
+
+```python
+data = np.array([25,23,50,28,30,21,25,43,26,44,29,24])
+```
+
+
+```python
+# Media y mediana
+print("Media:", np.mean(data))
+print("Mediana:", np.median(data))
+```
+
+> Media: 30.666666666666668
+> Mediana: 27.0
+
+```python
+# Máximo y mínimo
+print("Máximo:", np.max(data))
+print("Mínimo:", np.min(data))
+```
+
+> Máximo: 50
+> Mínimo: 21
+
+```python
+# Desviación estándar y varianza
+print("Desviación estándar:", np.std(data))
+print("Varianza:", np.var(data))
+```
+
+> Desviación estándar: 9.11348207632821
+> Varianza: 83.05555555555556
+
+
+## 9. Matriz Enmascarada (Masked Array)
+Una matriz enmascarada es una matriz que incluye una máscara que indica si un valor debe ser considerado válido o no. Esto es útil en situaciones donde algunos datos pueden ser incorrectos o faltantes. En NumPy, esto se maneja con numpy.ma donde ma significa "masked array".
+
+
+```python
+masked_array = np.ma.array([1, 2, 3, 4], mask=[0, 1, 0, 1])
+masked_array
+```
+
+> masked_array(data=[1, --, 3, --],
+>              mask=[False,  True, False,  True],
+>        fill_value=999999)
+
+
+```python
+# Crear una matriz enmascarada
+masked_array = np.ma.array([1, 2, 3, 4], mask=[0, 1, 0, 1])
+print("Matriz enmascarada:", masked_array)
+print("Datos de la matriz:", masked_array.data)
+print("Máscara de la matriz:", masked_array.mask)
+
+```
+
+> Matriz enmascarada: [1 -- 3 --]
+> Datos de la matriz: [1 2 3 4]
+> Máscara de la matriz: [False  True False  True]
+
+
+***¿Para qué podría ser útil una matriz enmascarada?*** ⁉ ✋
+
+La **indexación** y el **rebanado** en NumPy son muy poderosos y permiten acceder y modificar partes de los arrays.
+
+
+```python
+A = np.array([[1, 2], [3, 4], [5,6]])
+```
+
+Acceder a elementos individuales
+
+
+```python
+print("Primer elemento de 'a':", a[0])
+```
+
+    Primer elemento de 'a': [1 2 3]
+
+
+
+```python
+print("Último elemento de 'a':", a[-1])
+```
+
+    Último elemento de 'a': [0 1 2]
+
+
+
+```python
+print("Último elemento de 'a' y último elemento de ese subarray:", a[-1][-1])
+```
+
+    Último elemento de 'a' y último elemento de ese subarray: 2
+
+
+
+```python
+sub_array = A[0:1]
+```
+
+
+```python
+sub_array
+```
+
+> array([[1, 2]])
+
+```python
+A
+```
+
+> array([[1, 2],
+>        [3, 4],
+>        [5, 6]])
+
+
+
+
+```python
+# Rebanar un array
+sub_array = A[1:2]
+print("Sub-array desde el índice 0 al 2:", sub_array)
+
+```
+
+> Sub-array desde el índice 0 al 2: [[3 4]]
+

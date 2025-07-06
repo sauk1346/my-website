@@ -1,0 +1,92 @@
+# Clase 08: EDA (1)
+
+*Exploratory Data Analysis*. Análisis exploratorio de datos. Es una etapa donde se examina y analiza un conjunto de datos para entender sus características principales, patrones, y estructuras antes de aplicar modelos más complejos.
+
+## Introducción
+
+### ¿Qué es el análisis inicial de datos?
+
+El análisis inicial de datos es la fase en la que se inspeccionan los datos crudos para entender su **estructura**, **calidad** y **contenido** antes de realizar un análisis más profundo.
+
+Esta fase incluye la revisión de la forma general del conjunto de datos, la identificación de posibles problemas (valores faltantes, duplicados, valores atípicos, inconsistencias), y la preparación de los datos para su uso en el análisis exploratorio y modelado.
+
+### Importancia de la fase preliminar en el ciclo de análisis de datos
+
+La fase preliminar es crucial porque asegura que los datos estén en condiciones adecuadas para análisis avanzados. Realizar un análisis exploratorio o modelado sin una revisión cuidadosa puede llevar a interpretaciones incorrectas y resultados sesgados.
+
+Algunos beneficios incluyen:
+
+- Identificación temprana de problemas que pueden afectar los resultados.-
+- Reducción de errores en los modelos posteriores.-
+- Optimización del rendimiento del análisis exploratorio y modelado.-
+- Ahorro de tiempo y recursos.
+
+### Diferencias entre Análisis Inicial y Análisis Exploratorio
+
+**Análisis Inicial**
+
+- Se enfoca en la revisión básica de la calidad, estructura y contenido de los datos.
+- Es un proceso más mecánico y tiene como objetivo asegurar que los datos estén listos para análisis más complejos.
+
+**Análisis Exploratorio**
+
+- Se centra en la comprensión más profunda de los patrones, relaciones y tendencias en los datos.
+- Involucra visualizaciones, estadísticas descriptivas avanzadas y modelos iniciales para descubrir información oculta en los dato
+
+---
+
+## Estructura
+
+Se busca detectar y subssanar problemas estructurales relacionados con el formato:
+
+- Demasiados campos
+- Campos faltantes
+- Falta de correspondencia entre valores y campos
+- Campos mal definidos
+
+---
+
+## Valores Atípicos
+Los valores atípicos (outliers) son observaciones que se desvían significativamente de otras observaciones en un conjunto de datos. Estas discrepancias pueden ser el resultado de errores en la medición, variaciones naturales o factores inusuales.
+
+### Tipos
+
+- **Univariados:** Valores atípicos en una única variable. Por ejemplo, una temperatura extremadamente alta en un conjunto de datos de temperatura.- 
+- **Multivariados:** Valores atípicos que dependen de la relación entre dos o más variables. Por ejemplo, un nivel de CO2 inusualmente alto en relación con la temperatura y la humedad.
+
+### Métodos de Detección
+
+1. Método de Rango Intercuartílico (IQR)
+2. Método de Desviación Estándar
+3. Visualización gráfica
+---
+
+## Comandos
+
+1. **info():** Permite visualizar información premilinar de los datos
+
+```python
+df.info()
+```
+
+2. **describe():** Similar a "info()"
+
+```python
+df.describe()
+```
+
+3. **Eliminar columnas:** hay 2 opciones
+
+```python
+# Elimino las 2 últimas columnas
+df = df.iloc[:, :-2] 
+
+# Otra forma
+df = df.drop(columns=["columna1: 15", "columna2: 16"])
+```
+
+4. **parquet:** Es un formato para guardar los datos, que no es *csv*. Es óptimo en comparación
+
+```python
+df.to_parquet("ruta")
+```

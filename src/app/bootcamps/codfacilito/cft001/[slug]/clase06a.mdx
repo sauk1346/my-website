@@ -1,0 +1,950 @@
+***¿Cómo estas hoy?*** ⁉ ✋
+
+# 1. Introducción a Pandas
+
+
+```python
+import pandas as pd
+print("Pandas version:", pd.__version__)
+```
+
+> Pandas version: 2.2.2
+
+
+```python
+import numpy as np
+```
+
+
+```python
+import pandas as pd
+import numpy as np
+import matplotlib as plt
+```
+
+# 2. Estructuras de Datos en Pandas
+
+**Series:**
+
+Una Serie en Pandas es una estructura de datos unidimensional que puede contener cualquier tipo de datos (enteros, cadenas, números de punto flotante, objetos de Python, etc.). Cada elemento de una Serie está asociado con un índice, que es una etiqueta que identifica cada elemento de la Serie.
+* Homogéneas: Todos los elementos de una Serie deben ser del mismo tipo de datos.
+* Etiquetadas: Cada elemento está indexado por una etiqueta única.
+
+
+
+```python
+s = pd.Series([1, 3, 5, np.nan, 6, 8])
+print(s)
+```
+
+> 0    1.0
+> 1    3.0
+> 2    5.0
+> 3    NaN
+> 4    6.0
+> 5    8.0
+> dtype: float64
+
+
+**Dataframe:**
+
+Un DataFrame es una estructura de datos bidimensional en Pandas, similar a una tabla de datos relacional, donde cada columna puede tener un tipo diferente (numérico, string, boolean, etc.). Es fundamentalmente una colección de Series que comparten el mismo índice.
+
+Características de los DataFrames:
+
+* Heterogéneas: Puede contener columnas de diferentes tipos de datos.
+* Mutables: Tamaño y contenido mutables (puede modificar columnas y filas después de la creación).
+* Etiquetados: Las filas y columnas tienen etiquetas.
+
+
+```python
+data = {'Nombres': ['Ana', 'Luis', 'Carmen'],
+        'Edad': [28, 34, 29],
+        'Ciudad': ['Madrid', 'Barcelona', 'Valencia']}
+df = pd.DataFrame(data)
+print(df)
+
+```
+
+>   Nombres  Edad     Ciudad
+> 0     Ana    28     Madrid
+> 1    Luis    34  Barcelona
+> 2  Carmen    29   Valencia
+
+```python
+data_dic = {'Nombres': ['Ana', 'Luis', 'Carmen'],
+        'Edad': [28, 34, 29],
+        'Ciudad': ['Madrid', 'Barcelona', 'Valencia']}
+
+print(data_dic)
+```
+
+> \{'Nombres': ['Ana', 'Luis', 'Carmen'], 'Edad': [28, 34, 29], 'Ciudad': ['Madrid', 'Barcelona', 'Valencia']\}
+
+
+# 3. Carga y Guardado de Datos
+
+
+```python
+df_csv = pd.read_csv("/content/Data - Hoja 1.csv")
+df_csv.head()
+```
+
+|   | Nombre                   | Género | Edad  | ¿Tienes mascotas? | Libro favorito           | Artista favorito  |
+|---|--------------------------|--------|-------|-------------------|--------------------------|-------------------|
+| 0 | Popeye                   | m      | 45.0  | no                | Espinaca                 | Loro loco         |
+| 1 | Goku                     | M      | 500.0 | Si                | Las esferas del dragon   | picoro            |
+| 2 | Alveiro                  | M      | 43.0  | Si                | Hábitos Atómicos         | Strauss           |
+| 3 | Jonathan Higueros Garrido| M      | 43.0  | Si                | Crimen y castigo         | Joaquín Sabina    |
+| 4 | Richard Quintana         | M      | 30.0  | No                | Don Quijote              | Metallica         |
+
+
+# 4. Inspección y Limpieza de Datos
+
+**Inspección:**
+
+La inspección de datos te ayuda a entender mejor la estructura y el contenido de tu DataFrame o Serie.
+
+
+```python
+df = df_csv
+print(df.head(1))
+```
+
+>    Nombre Género  Edad ¿Tienes mascotas? Libro favorito Artista favorito
+> 0  Popeye      m  45.0                no       Espinaca        Loro loco
+
+
+
+```python
+df.tail(3)  # Muestra las últimas 'n' filas del DataFrame
+```
+
+|    | Nombre   | Género | Edad | ¿Tienes mascotas? | Libro favorito | Artista favorito   |
+|----|----------|--------|------|-------------------|----------------|--------------------|
+| 31 | leandro  | m      | 37.0 | no                | el codigo      | bon jovi           |
+| 32 | David    | M      | 22.0 | si                | El Presidente  | The Rock Diamond   |
+| 33 | Mary     | f      | 34.0 | si                | El marido      | Epica              |
+
+
+```python
+df.shape  # Retorna una tupla con el número de filas y columnas
+```
+
+> (34, 6)
+
+
+```python
+df.dtypes  # Retorna los tipos de datos de cada columna
+```
+
+| Columna              | Tipo de dato |
+|----------------------|--------------|
+| Nombre               | object       |
+| Género               | object       |
+| Edad                 | float64      |
+| ¿Tienes mascotas?    | object       |
+| Libro favorito       | object       |
+| Artista favorito     | object       |
+
+> **dtype:** object
+
+
+```python
+df.describe()  # Proporciona un resumen estadístico de las columnas numéricas
+```
+
+| Estadística | Edad      |
+|-------------|-----------|
+| count       | 33.000000 |
+| mean        | 55.484848 |
+| std         | 92.808311 |
+| min         | 14.000000 |
+| 25%         | 26.000000 |
+| 50%         | 35.000000 |
+| 75%         | 43.000000 |
+| max         | 500.000000|
+ 
+
+```python
+df.count()  # Cuenta el número de valores no nulos en cada columna
+```
+
+| Columna              | Valores no nulos |
+|----------------------|------------------|
+| Nombre               | 34               |
+| Género               | 33               |
+| Edad                 | 33               |
+| ¿Tienes mascotas?    | 33               |
+| Libro favorito       | 31               |
+| Artista favorito     | 30               |
+
+> **dtype:** int64
+
+
+```python
+df.info()  # Proporciona un resumen conciso del DataFrame
+```
+
+> \<class 'pandas.core.frame.DataFrame'\>
+> RangeIndex: 34 entries, 0 to 33
+> Data columns (total 6 columns):
+>  \#   Column             Non-Null Count  Dtype  
+> \-\-\-  \-\-\-\-\-\-             \-\-\-\-\-\-\-\-\-\-\-\-\-\-  \-\-\-\-\-  
+>  0   Nombre             34 non-null     object 
+>  1   Género             33 non-null     object 
+>  2   Edad               33 non-null     float64
+>  3   ¿Tienes mascotas?  33 non-null     object 
+>  4   Libro favorito     31 non-null     object 
+>  5   Artista favorito   30 non-null     object 
+> dtypes: float64(1), object(5)
+> memory usage: 1.7+ KB
+
+
+```python
+df['Nombre'].unique()
+```
+
+> array(['Popeye', 'Goku', 'Alveiro', 'Jonathan Higueros Garrido',
+>        'Richard Quintana', 'Gon', 'Alejandro', 'Carina', 'Javier',
+>        'Elias', 'Guille', 'Christian', 'Pepa Pig', 'Fofo', 'Alexa',
+>        'Juan Peréz', 'Angel', 'Alberto', 'Wilmer', 'Adrian', 'Alejo',
+>        'lea', 'Franckie', 'Nieves ', 'Jose', 'Israel', 'Jaime',
+>        'el zorro', 'berlin beltran', 'Karina ', 'maginbu', 'leandro',
+>        'David', 'Mary'], dtype=object)
+
+
+```python
+df['Edad'].unique()  # Muestra los valores únicos en la columna especificada
+```
+
+> array([ 45., 500.,  43.,  30.,  14.,  36.,  22.,  39.,  28.,  35.,  25.,
+>         20.,  21.,  27.,  47.,  26.,  48.,  40.,  19.,  nan,  29.,  42.,
+>         50.,  32., 300.,  37.,  34.])
+
+
+
+**Limpieza:**
+
+La limpieza de datos implica modificar o remover datos incorrectos, incompletos, irrelevantes, duplicados o mal formateados de un dataset.
+
+
+```python
+df = df.dropna()  # Elimina filas con valores NaN
+#df2 = df.dropna(axis=1)  # Elimina columnas con valores NaN
+#df2
+```
+
+```python
+len(df_dropna)
+```
+> 30
+
+```python
+df_dropna.info()
+```
+
+> \<class 'pandas.core.frame.DataFrame'\>
+> Index: 30 entries, 0 to 33
+> Data columns (total 6 columns):
+>  \#   Column             Non-Null Count  Dtype  
+> \---  \------             \--------------  \-----  
+>  0   Nombre             30 non-null     object 
+>  1   Género             30 non-null     object 
+>  2   Edad               30 non-null     float64
+>  3   ¿Tienes mascotas?  30 non-null     object 
+>  4   Libro favorito     30 non-null     object 
+>  5   Artista favorito   30 non-null     object 
+> dtypes: float64(1), object(5)
+> memory usage: 1.6+ KB
+
+
+```python
+#df_dropna
+```
+
+|   | Nombre                       | Género | Edad  | ¿Tienes mascotas? | Libro favorito                        | Artista favorito       |
+|---|------------------------------|--------|-------|-------------------|---------------------------------------|------------------------|
+| 0 | Popeye                       | m      | 45.0  | no                | Espinaca                              | Loro loco              |
+| 1 | Goku                         | M      | 500.0 | Si                | Las esferas del dragon                | picoro                 |
+| 2 | Alveiro                      | M      | 43.0  | Si                | Hábitos Atómicos                      | Strauss                |
+| 3 | Jonathan Higueros Garrido    | M      | 43.0  | Si                | Crimen y castigo                      | Joaquín Sabina         |
+| 4 | Richard Quintana             | M      | 30.0  | No                | Don Quijote                           | Metallica              |
+| 5 | Gon                          | m      | 14.0  | no                | hunter x hunter                       | Togashi                |
+| 6 | Alejandro                    | M      | 36.0  | si                | El Alquimitas                         | Freddy Mercury         |
+| 7 | Carina                       | F      | 22.0  | si                | El Psicoanalista                      | Stray Kids             |
+| 8 | Javier                       | M      | 39.0  | si                | Demian                                | La santa Cecilia       |
+| 9 | Elias                        | M      | 28.0  | Sí                | Hábitos Atómicos                      | U2                     |
+| 11| Christian                    | M      | 25.0  | Si\|              | Cien Años de Soledad                  | The Strokes            |
+| 12| Pepa Pig                     | f      | 20.0  | si                | El viejo y el mar                     | Los huayras            |
+| 13| Fofo                         | Vazquez| 21.0  | Sí                | Padre rico, Padre pobre               | Arrolladora            |
+| 14| Alexa                        | F      | 27.0  | Si                | El Codigo DaVinci                     | Iron Maiden            |
+| 15| Juan Peréz                   | f      | 47.0  | no                | El Kybalion                           | Ratones Paranoicos     |
+| 16| Angel                        | M      | 26.0  | Si                | Como piensan los ricos                | ACDC                   |
+| 18| Wilmer                       | M      | 40.0  | No                | 48 leyes de poder                     | linkin park            |
+| 19| Adrian                       | M      | 19.0  | No                | La casa con un reloj entre sus paredes| Robert Downey Jr.      |
+| 20| Alejo                        | M      | 36.0  | No                | El club de las 5 am                   | Dying Fetus            |
+| 22| Franckie                     | M      | 36.0  | Sí                | Crónica de una muerte anunciada       | Luis Miguel            |
+| 23| Nieves                       | F      | 26.0  | Sí                | El amor, las mujeres y la vida        | Luis Miguel            |
+| 25| Israel                       | M      | 42.0  | Si                | Sinuhe el Egipcio                     | Bono                   |
+| 26| Jaime                        | M      | 50.0  | Si                | La rebelión de Atlas                  | Antony Hopkyns         |
+| 27| el zorro                     | m      | 50.0  | no                | cadenas de libertad                   | mozart                 |
+| 28| berlin beltran               | M      | 29.0  | no                | cristianismo caso resuelto            | Gerardo de Avila       |
+| 29| Karina                       | F      | 32.0  | No                | Rompe las barreras del no             | Morat                  |
+| 30| maginbu                      | m      | 300.0 | si                | rompe bodas                           | colacao                |
+| 31| leandro                      | m      | 37.0  | no                | el codigo                             | bon jovi               |
+| 32| David                        | M      | 22.0  | si                | El Presidente                         | The Rock Diamond       |
+| 33| Mary                         | f      | 34.0  | si                | El marido                             | Epica                  |
+
+
+```python
+df.drop_duplicates(inplace=True)  # Elimina filas duplicadas
+```
+
+> \<ipython-input-43-4da73085b867\>:1: SettingWithCopyWarning: 
+> A value is trying to be set on a copy of a slice from a DataFrame
+> See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+>   df.drop_duplicates(inplace=True)  # Elimina filas duplicadas
+
+
+```python
+len(df)
+```
+
+> 30
+
+```python
+value = 'si'
+df.fillna(value)  # Rellena los valores NaN con el 'value' especificado
+```
+
+|   | Nombre                       | Género | Edad  | ¿Tienes mascotas? | Libro favorito                        | Artista favorito       |
+|---|------------------------------|--------|-------|-------------------|---------------------------------------|------------------------|
+| 0 | Popeye                       | m      | 45.0  | no                | Espinaca                              | Loro loco              |
+| 1 | Goku                         | M      | 500.0 | Si                | Las esferas del dragon                | picoro                 |
+| 2 | Alveiro                      | M      | 43.0  | Si                | Hábitos Atómicos                      | Strauss                |
+| 3 | Jonathan Higueros Garrido    | M      | 43.0  | Si                | Crimen y castigo                      | Joaquín Sabina         |
+| 4 | Richard Quintana             | M      | 30.0  | No                | Don Quijote                           | Metallica              |
+| 5 | Gon                          | m      | 14.0  | no                | hunter x hunter                       | Togashi                |
+| 6 | Alejandro                    | M      | 36.0  | si                | El Alquimitas                         | Freddy Mercury         |
+| 7 | Carina                       | F      | 22.0  | si                | El Psicoanalista                      | Stray Kids             |
+| 8 | Javier                       | M      | 39.0  | si                | Demian                                | La santa Cecilia       |
+| 9 | Elias                        | M      | 28.0  | Sí                | Hábitos Atómicos                      | U2                     |
+| 11| Christian                    | M      | 25.0  | Si\|              | Cien Años de Soledad                  | The Strokes            |
+| 12| Pepa Pig                     | f      | 20.0  | si                | El viejo y el mar                     | Los huayras            |
+| 13| Fofo                         | Vazquez| 21.0  | Sí                | Padre rico, Padre pobre               | Arrolladora            |
+| 14| Alexa                        | F      | 27.0  | Si                | El Codigo DaVinci                     | Iron Maiden            |
+| 15| Juan Peréz                   | f      | 47.0  | no                | El Kybalion                           | Ratones Paranoicos     |
+| 16| Angel                        | M      | 26.0  | Si                | Como piensan los ricos                | ACDC                   |
+| 18| Wilmer                       | M      | 40.0  | No                | 48 leyes de poder                     | linkin park            |
+| 19| Adrian                       | M      | 19.0  | No                | La casa con un reloj entre sus paredes| Robert Downey Jr.      |
+| 20| Alejo                        | M      | 36.0  | No                | El club de las 5 am                   | Dying Fetus            |
+| 22| Franckie                     | M      | 36.0  | Sí                | Crónica de una muerte anunciada       | Luis Miguel            |
+| 23| Nieves                       | F      | 26.0  | Sí                | El amor, las mujeres y la vida        | Luis Miguel            |
+| 25| Israel                       | M      | 42.0  | Si                | Sinuhe el Egipcio                     | Bono                   |
+| 26| Jaime                        | M      | 50.0  | Si                | La rebelión de Atlas                  | Antony Hopkyns         |
+| 27| el zorro                     | m      | 50.0  | no                | cadenas de libertad                   | mozart                 |
+| 28| berlin beltran               | M      | 29.0  | no                | cristianismo caso resuelto            | Gerardo de Avila       |
+| 29| Karina                       | F      | 32.0  | No                | Rompe las barreras del no             | Morat                  |
+| 30| maginbu                      | m      | 300.0 | si                | rompe bodas                           | colacao                |
+| 31| leandro                      | m      | 37.0  | no                | el codigo                             | bon jovi               |
+| 32| David                        | M      | 22.0  | si                | El Presidente                         | The Rock Diamond       |
+| 33| Mary                         | f      | 34.0  | si                | El marido                             | Epica                  |
+
+
+```python
+df = df.apply(lambda x: x.str.lower() if x.dtype == "object" else x)
+df.rename(columns={'Nombre': 'Username'}, inplace=True)  # Renombra las columnas especificadas
+df.columns
+```
+
+> Index(['Username', 'Género', 'Edad', '¿Tienes mascotas?', 'Libro favorito',
+>        'Artista favorito'],
+>       dtype='object')
+
+
+```python
+df['Edad']= pd.to_numeric(df['Edad'], errors= 'coerce')
+df2 = df.copy()
+
+mediana = df2['Edad'].median()
+mediana
+```
+
+> 35.0
+
+
+```python
+#df2['Edad'].fillna(mediana, inplace = True)
+```
+
+```python
+df.dropna(subset=['Edad'],inplace=True)
+```
+
+```python
+df = df2
+df
+```
+
+|   | Nombre                       | Género | Edad | ¿Tienes mascotas? | Libro favorito                        | Artista favorito       |
+|---|------------------------------|--------|------|-------------------|---------------------------------------|------------------------|
+| 0 | popeye                       | m      | 45.0 | no                | espinaca                              | loro loco              |
+| 1 | goku                         | m      | m    | si                | las esferas del dragon                | picoro                 |
+| 2 | alveiro                      | m      | 43.0 | si                | hábitos atómicos                      | strauss                |
+| 3 | jonathan higueros garrido    | m      | 43.0 | si                | crimen y castigo                      | joaquín sabina         |
+| 4 | richard quintana             | m      | 30.0 | no                | don quijote                           | metallica              |
+| 5 | gon                          | m      | 14.0 | no                | hunter x hunter                       | togashi                |
+| 6 | alejandro                    | m      | 36.0 | si                | el alquimitas                         | freddy mercury         |
+| 7 | carina                       | f      | 22.0 | si                | el psicoanalista                      | stray kids             |
+| 8 | javier                       | m      | 39.0 | si                | demian                                | la santa cecilia       |
+| 9 | elias                        | m      | 28.0 | sí                | hábitos atómicos                      | u2                     |
+| 11| christian                    | m      | 25.0 | si\|              | cien años de soledad                  | the strokes            |
+| 12| pepa pig                     | f      | 20.0 | si                | el viejo y el mar                     | los huayras            |
+| 13| fofo                         | m      | 21.0 | sí                | padre rico, padre pobre               | arrolladora            |
+| 14| alexa                        | f      | 27.0 | si                | el codigo davinci                     | iron maiden            |
+| 15| juan peréz                   | f      | 47.0 | no                | el kybalion                           | ratones paranoicos     |
+| 16| angel                        | m      | 26.0 | si                | como piensan los ricos                | acdc                   |
+| 18| wilmer                       | m      | 40.0 | no                | 48 leyes de poder                     | linkin park            |
+| 19| adrian                       | m      | 19.0 | no                | la casa con un reloj entre sus paredes| robert downey jr.      |
+| 20| alejo                        | m      | 36.0 | no                | el club de las 5 am                   | dying fetus            |
+| 22| franckie                     | m      | 36.0 | sí                | crónica de una muerte anunciada       | luis miguel            |
+| 23| nieves                       | f      | 26.0 | sí                | el amor, las mujeres y la vida        | luis miguel            |
+| 25| israel                       | m      | 42.0 | si                | sinuhe el egipcio                     | bono                   |
+| 26| jaime                        | m      | 50.0 | si                | la rebelión de atlas                  | antony hopkyns         |
+| 27| el zorro                     | m      | 50.0 | no                | cadenas de libertad                   | mozart                 |
+| 28| berlin beltran               | m      | 29.0 | no                | cristianismo caso resuelto            | gerardo de avila       |
+| 29| karina                       | f      | 32.0 | no                | rompe las barreras del no             | morat                  |
+| 30| maginbu                      | m      | 35.0 | si                | rompe bodas                           | colacao                |
+| 31| leandro                      | m      | 37.0 | no                | el codigo                             | bon jovi               |
+| 32| david                        | m      | 22.0 | si                | el presidente                         | the rock diamond       |
+| 33| mary                         | f      | 34.0 | si                | el marido                             | epica                  |
+
+
+```python
+df['Edad'] = df['Edad'].astype(int, errors= 'coerce')
+```
+
+
+>  \---------------------------------------------------------------------------
+>  ValueError                                Traceback (most recent call last)
+>  \<ipython-input-116-a622f6b1fa7a> in \<cell line: 1\>()
+>  ----> 1 df['Edad'] = df['Edad'].astype(int, errors= 'coerce')
+>  /usr/local/lib/python3.10/dist-packages/pandas/core/generic.py in astype(self, dtype, copy, errors)
+>     6641         else:
+>     6642             # else, only a single dtype is given
+>  -> 6643             new_data = self._mgr.astype(dtype=dtype, copy=copy, errors=errors)
+>     6644             res = self._constructor_from_mgr(new_data, axes=new_data.axes)
+>     6645             return res.__finalize__(self, method="astype")
+>  /usr/local/lib/python3.10/dist-packages/pandas/core/internals/managers.py in astype(self, dtype, copy, errors)
+>      428             copy = False
+>      429 
+>  --> 430         return self.apply(
+>      431             "astype",
+>      432             dtype=dtype,
+>  /usr/local/lib/python3.10/dist-packages/pandas/core/internals/managers.py in apply(self, f, align_keys, **kwargs)
+>      361                 applied = b.apply(f, **kwargs)
+>      362             else:
+>  --> 363                 applied = getattr(b, f)(**kwargs)
+>      364             result_blocks = extend_blocks(applied, result_blocks)
+>      365 
+>  /usr/local/lib/python3.10/dist-packages/pandas/core/internals/blocks.py in astype(self, dtype, copy, errors, using_cow, squeeze)
+>      756             values = values[0, :]  # type: ignore[call-overload]
+>      757 
+>  --> 758         new_values = astype_array_safe(values, dtype, copy=copy, errors=errors)
+>      759 
+>      760         new_values = maybe_coerce_values(new_values)
+>  /usr/local/lib/python3.10/dist-packages/pandas/core/dtypes/astype.py in astype_array_safe(values, dtype, copy, errors)
+>      220             f"\{\list\(errors_legal_values\)\}. Supplied value is '\{errors\}'"
+>      221         )
+>  --> 222         raise ValueError(invalid_arg)
+>      223 
+>      224     if inspect.isclass(dtype) and issubclass(dtype, ExtensionDtype):
+>  ValueError: Expected value of kwarg 'errors' to be one of ['raise', 'ignore']. Supplied value is 'coerce'
+
+
+```python
+df.info()
+```
+
+> \<class 'pandas.core.frame.DataFrame'\>
+> Index: 30 entries, 0 to 33
+> Data columns (total 6 columns):
+>  \#   Column             Non-Null Count  Dtype  
+> \---  \------             \--------------  \-----  
+>  0   Username           30 non-null     object 
+>  1   Género             0 non-null      object 
+>  2   Edad               30 non-null     float64
+>  3   ¿Tienes mascotas?  30 non-null     object 
+>  4   Libro favorito     30 non-null     object 
+>  5   Artista favorito   30 non-null     object 
+> dtypes: float64(1), object(5)
+> memory usage: 2.7+ KB
+
+
+```python
+df["Género"].value_counts()
+```
+
+> | Género  | count |
+> |---------|-------|
+> | m       | 22    |
+> | f       | 7     |
+> | vazquez | 1     |
+> 
+> **dtype:** int64
+
+
+```python
+df = df2
+```
+
+```python
+to_replace = "vazquez"
+value = "m"
+df['Género'] = df['Género'].replace(to_replace, value)  # Reemplaza 'to_replace' por 'value' en la columna especificada
+
+```
+
+```python
+df
+```
+
+> |   | Username                     | Género | Edad  | ¿Tienes mascotas? | Libro favorito                        | Artista favorito       |
+> |---|------------------------------|--------|-------|-------------------|---------------------------------------|------------------------|
+> | 0 | popeye                       | None   | 45.0  | no                | espinaca                              | loro loco              |
+> | 1 | goku                         | None   | 500.0 | si                | las esferas del dragon                | picoro                 |
+> | 2 | alveiro                      | None   | 43.0  | si                | hábitos atómicos                      | strauss                |
+> | 3 | jonathan higueros garrido    | None   | 43.0  | si                | crimen y castigo                      | joaquín sabina         |
+> | 4 | richard quintana             | None   | 30.0  | no                | don quijote                           | metallica              |
+> | 5 | gon                          | None   | 14.0  | no                | hunter x hunter                       | togashi                |
+> | 6 | alejandro                    | None   | 36.0  | si                | el alquimitas                         | freddy mercury         |
+> | 7 | carina                       | None   | 22.0  | si                | el psicoanalista                      | stray kids             |
+> | 8 | javier                       | None   | 39.0  | si                | demian                                | la santa cecilia       |
+> | 9 | elias                        | None   | 28.0  | sí                | hábitos atómicos                      | u2                     |
+> | 11| christian                    | None   | 25.0  | si\|              | cien años de soledad                  | the strokes            |
+> | 12| pepa pig                     | None   | 20.0  | si                | el viejo y el mar                     | los huayras            |
+> | 13| fofo                         | None   | 21.0  | sí                | padre rico, padre pobre               | arrolladora            |
+> | 14| alexa                        | None   | 27.0  | si                | el codigo davinci                     | iron maiden            |
+> | 15| juan peréz                   | None   | 47.0  | no                | el kybalion                           | ratones paranoicos     |
+> | 16| angel                        | None   | 26.0  | si                | como piensan los ricos                | acdc                   |
+> | 18| wilmer                       | None   | 40.0  | no                | 48 leyes de poder                     | linkin park            |
+> | 19| adrian                       | None   | 19.0  | no                | la casa con un reloj entre sus paredes| robert downey jr.      |
+> | 20| alejo                        | None   | 36.0  | no                | el club de las 5 am                   | dying fetus            |
+> | 22| franckie                     | None   | 36.0  | sí                | crónica de una muerte anunciada       | luis miguel            |
+> | 23| nieves                       | None   | 26.0  | sí                | el amor, las mujeres y la vida        | luis miguel            |
+> | 25| israel                       | None   | 42.0  | si                | sinuhe el egipcio                     | bono                   |
+> | 26| jaime                        | None   | 50.0  | si                | la rebelión de atlas                  | antony hopkyns         |
+> | 27| el zorro                     | None   | 50.0  | no                | cadenas de libertad                   | mozart                 |
+> | 28| berlin beltran               | None   | 29.0  | no                | cristianismo caso resuelto            | gerardo de avila       |
+> | 29| karina                       | None   | 32.0  | no                | rompe las barreras del no             | morat                  |
+> | 30| maginbu                      | None   | 300.0 | si                | rompe bodas                           | colacao                |
+> | 31| leandro                      | None   | 37.0  | no                | el codigo                             | bon jovi               |
+> | 32| david                        | None   | 22.0  | si                | el presidente                         | the rock diamond       |
+> | 33| mary                         | None   | 34.0  | si                | el marido                             | epica                  |
+
+
+```python
+df["Género"].value_counts()
+```
+
+> | Género | count |
+> |--------|-------|
+> | m      | 23    |
+> | f      | 7     |
+> 
+> **dtype:** int64
+
+# 5. Manipulación de Datos
+
+Selección y filtrado:
+
+
+```python
+print(df['Nombre'])  # Selección de una columna
+```
+
+> 0                        popeye
+> 1                          goku
+> 2                       alveiro
+> 3     jonathan higueros garrido
+> 4              richard quintana
+> 5                           gon
+> 6                     alejandro
+> 7                        carina
+> 8                        javier
+> 9                         elias
+> 11                    christian
+> 12                     pepa pig
+> 13                         fofo
+> 14                        alexa
+> 15                   juan peréz
+> 16                        angel
+> 18                       wilmer
+> 19                       adrian
+> 20                        alejo
+> 22                     franckie
+> 23                      nieves 
+> 25                       israel
+> 26                        jaime
+> 27                     el zorro
+> 28               berlin beltran
+> 29                      karina 
+> 30                      maginbu
+> 31                      leandro
+> 32                        david
+> 33                         mary
+> Name: Nombre, dtype: object
+
+
+```python
+print(df[df['Edad'] <= 20])  # Filtrado por condición
+```
+
+>       Nombre Género  Edad ¿Tienes mascotas?  \
+> 5        gon      m  14.0                no   
+> 12  pepa pig      f  20.0                si   
+> 19    adrian      m  19.0                no   
+> 
+>                             Libro favorito   Artista favorito  
+> 5                          hunter x hunter            togashi  
+> 12                       el viejo y el mar        los huayras  
+> 19  la casa con un reloj entre sus paredes  robert downey jr.  
+
+
+
+```python
+#df2[['Edad',"Libro favorito"]]  # Retorna un DataFrame con las columnas especificadas
+```
+
+
+```python
+mean = df["Edad"].mean()
+print(mean)
+```
+
+> 57.3
+
+```python
+mediana = df["Edad"].median()
+print(mediana)
+```
+
+> 35.0
+
+
+
+```python
+to_replace = 500
+df2['Edad'] = df2['Edad'].replace(to_replace,mean )
+```
+
+
+```python
+to_replace = 300
+df2['Edad'] = df2['Edad'].replace(to_replace,mediana )
+```
+
+
+```python
+to_replace = "m"
+df2['Edad'] = df2['Edad'].replace(to_replace,mediana )
+```
+
+> \<ipython-input-117-25795c05c2b3\>:2: FutureWarning: Downcasting behavior in `replace` is deprecated and will be removed in a future version. To retain the old behavior, explicitly call `result.infer_objects(copy=False)`. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+>   df2['Edad'] = df2['Edad'].replace(to_replace,mediana )
+
+
+```python
+df2['Edad'].describe()
+```
+
+> | Estadística | Edad      |
+> |-------------|-----------|
+> | count       | 30.000000 |
+> | mean        | 32.966667 |
+> | std         | 9.643591  |
+> | min         | 14.000000 |
+> | 25%         | 26.000000 |
+> | 50%         | 34.500000 |
+> | 75%         | 39.750000 |
+> | max         | 50.000000 |
+> 
+> **dtype:** float64
+
+```python
+valor1 = 20
+valor2 = 30
+#df[df['Edad'] > valor]  # Retorna filas donde la columna es mayor que 'valor'
+df[(df['Edad'] > valor1) & (df['Edad'] < valor2)]  # Condiciones múltiples
+```
+
+> |   | Nombre         | Género | Edad | ¿Tienes mascotas? | Libro favorito                 | Artista favorito |
+> |---|----------------|--------|------|-------------------|---------------------------------|------------------|
+> | 7 | carina         | f      | 22.0 | si                | el psicoanalista                | stray kids       |
+> | 9 | elias          | m      | 28.0 | sí                | hábitos atómicos                | u2               |
+> | 11| christian      | m      | 25.0 | si\|              | cien años de soledad            | the strokes      |
+> | 13| fofo           | m      | 21.0 | sí                | padre rico, padre pobre         | arrolladora      |
+> | 14| alexa          | f      | 27.0 | si                | el codigo davinci               | iron maiden      |
+> | 16| angel          | m      | 26.0 | si                | como piensan los ricos          | acdc             |
+> | 23| nieves         | f      | 26.0 | sí                | el amor, las mujeres y la vida  | luis miguel      |
+> | 28| berlin beltran | m      | 29.0 | no                | cristianismo caso resuelto      | gerardo de avila |
+> | 32| david          | m      | 22.0 | si                | el presidente                   | the rock diamond |
+
+
+```python
+fila = 110
+df.loc[fila, 'Edad']  # Retorna el valor en la fila y columna especificada
+```
+
+> 22.0
+
+
+```python
+df.loc[df["Edad"] == 22, ['Edad', 'Género']]  # Filtrar filas con condición y seleccionar columnas
+```
+
+> |   | Edad | Género |
+> |---|------|--------|
+> | 7 | 22.0 | f      |
+> | 32| 22.0 | m      |
+
+
+```python
+fila_idx = 1
+col_idx = 2
+df.iloc[fila_idx, col_idx]  # Retorna el valor en la posición de fila y columna índices
+```
+
+> 'Comodoro Rivadavia'
+
+
+
+Agrupación y agregación:
+
+
+```python
+print(df.groupby('¿Tienes mascotas?').count())  # Agrupación por ciudad y cálculo de la media de edad
+
+```
+
+>                    Nombre  Género  Edad  Libro favorito  Artista favorito
+> ¿Tienes mascotas?                                                        
+> no                     11      11    11              11                11
+> si                     14      14    14              14                14
+> si|                     1       1     1               1                 1
+> sí                      4       4     4               4                 4
+
+
+```python
+df2.groupby("Edad").count()
+```
+
+> | Edad | Nombre | Género | ¿Tienes mascotas? | Libro favorito | Artista favorito |
+> |------|--------|--------|-------------------|----------------|------------------|
+> | 14.0 | 1      | 1      | 1                 | 1              | 1                |
+> | 19.0 | 1      | 1      | 1                 | 1              | 1                |
+> | 20.0 | 1      | 1      | 1                 | 1              | 1                |
+> | 21.0 | 1      | 1      | 1                 | 1              | 1                |
+> | 22.0 | 2      | 2      | 2                 | 2              | 2                |
+> | 25.0 | 1      | 1      | 1                 | 1              | 1                |
+> | 26.0 | 2      | 2      | 2                 | 2              | 2                |
+> | 27.0 | 1      | 1      | 1                 | 1              | 1                |
+> | 28.0 | 1      | 1      | 1                 | 1              | 1                |
+> | 29.0 | 1      | 1      | 1                 | 1              | 1                |
+> | 30.0 | 1      | 1      | 1                 | 1              | 1                |
+> | 32.0 | 1      | 1      | 1                 | 1              | 1                |
+> | 34.0 | 1      | 1      | 1                 | 1              | 1                |
+> | 35.0 | 2      | 2      | 2                 | 2              | 2                |
+> | 36.0 | 3      | 3      | 3                 | 3              | 3                |
+> | 37.0 | 1      | 1      | 1                 | 1              | 1                |
+> | 39.0 | 1      | 1      | 1                 | 1              | 1                |
+> | 40.0 | 1      | 1      | 1                 | 1              | 1                |
+> | 42.0 | 1      | 1      | 1                 | 1              | 1                |
+> | 43.0 | 2      | 2      | 2                 | 2              | 2                |
+> | 45.0 | 1      | 1      | 1                 | 1              | 1                |
+> | 47.0 | 1      | 1      | 1                 | 1              | 1                |
+> | 50.0 | 2      | 2      | 2                 | 2              | 2                |
+
+
+
+```python
+#df.groupby('Edad').sum()  # Suma de grupos
+#df2.groupby('Edad').mean()  # Media de grupos
+#df.groupby('Ciudad').agg({'Edad': 'sum'})  # Agregaciones múltiples
+```
+
+# 6. Fusión y Unión de Datos
+
+***¿Conoces los conceptos merge y join? ¿sabes cuál es la diferencia?*** ⁉ ✋
+
+Uso de merge & join:
+
+**Merge:**
+El método merge es más flexible y potente para combinar DataFrames o Series. Es muy similar a las operaciones de unión en bases de datos SQL.
+
+`pd.merge(left, right, on='key', how='join_type')`
+
+
+Características:
+
+* on: Especifica la columna o columnas que deben coincidir en ambos DataFrames. Si no se especifica, Pandas intentará unir las tablas basándose en las columnas que tengan nombres en común.
+* how: Define el tipo de unión: 'left', 'right', 'outer', 'inner'. Estos determinan qué registros se incluyen en el DataFrame resultante.
+* Puede unir DataFrames basándose en índices o en una combinación de índices y columnas.
+* Permite especificar múltiples claves de unión mediante una lista en el argumento on.
+
+
+```python
+df1 = pd.DataFrame({'key': ['A', 'B', 'C'], 'value': [1, 2, 3]})
+df1
+```
+
+> |   | key | value |
+> |---|-----|-------|
+> | 0 | A   | 1     |
+> | 1 | B   | 2     |
+> | 2 | C   | 3     |
+
+
+```python
+df2 = pd.DataFrame({'key': ['A', 'B', 'D'], 'value': [4, 5, 6]})
+df2
+```
+
+> |   | key | value |
+> |---|-----|-------|
+> | 0 | A   | 4     |
+> | 1 | B   | 5     |
+> | 2 | D   | 6     |
+
+
+```python
+merged_df = pd.merge(df1, df2, on='key', how='inner')
+print(merged_df)
+```
+
+>   key  value_x  value_y
+> 0   A        1        4
+> 1   B        2        5
+
+
+```python
+merged_df = pd.merge(df1, df2, on='key', how='left')
+print(merged_df)
+```
+
+>   key  value_x  value_y
+> 0   A        1      4.0
+> 1   B        2      5.0
+> 2   C        3      NaN
+
+
+**Join:**
+
+El método join es una forma más conveniente y menos flexible de combinar DataFrames, ideal para unir DataFrames basándose en sus índices o en una clave de unión en particular.
+
+`df1.join(df2, on='key', how='join_type')`
+
+Características:
+
+* Se utiliza principalmente para unir DataFrames basándose en índices o en una columna de unión específica (usando el argumento on).
+* El argumento how también acepta 'left', 'right', 'outer', 'inner', similar a merge.
+* Por defecto, join realiza una unión izquierda (left join) y está basado en índices.
+* Menos flexible en términos de las claves de unión en comparación con merge, ya que join solo permite especificar una sola clave.
+
+
+```python
+df1 = pd.DataFrame({'value': [1, 2, 3]}, index=['A', 'B', 'C'])
+df2 = pd.DataFrame({'value': [4, 5, 6]}, index=['A', 'B', 'D'])
+```
+
+```python
+df1
+```
+
+> |   | value |
+> |---|-------|
+> | A | 1     |
+> | B | 2     |
+> | C | 3     |
+
+```python
+df2
+```
+
+> |   | value |
+> |---|-------|
+> | A | 4     |
+> | B | 5     |
+> | D | 6     |
+
+
+```python
+joined_df = df1.join(df2, lsuffix='_df1', rsuffix='_df2', how='outer')
+joined_df2 = df1.join(df2,lsuffix='_df1', rsuffix='_df2', how='inner')
+print(joined_df2)
+```
+
+>    value_df1  value_df2
+> A          1          4
+> B          2          5
+
+
+```python
+joined_df = df1.join(df2, lsuffix='_df1', rsuffix='_df2', how='outer')
+joined_df
+```
+
+> |   | value_df1 | value_df2 |
+> |---|-----------|-----------|
+> | A | 1.0       | 4.0       |
+> | B | 2.0       | 5.0       |
+> | C | 3.0       | NaN       |
+> | D | NaN       | 6.0       |
+
+
+# 7. Visualización de Datos con Pandas
+
+```python
+df
+```
+
+> |   | Nombre                       | Género | Edad | ¿Tienes mascotas? | Libro favorito                        | Artista favorito       |
+> |---|------------------------------|--------|------|-------------------|---------------------------------------|------------------------|
+> | 0 | popeye                       | m      | 45.0 | no                | espinaca                              | loro loco              |
+> | 1 | goku                         | m      | 35.0 | si                | las esferas del dragon                | picoro                 |
+> | 2 | alveiro                      | m      | 43.0 | si                | hábitos atómicos                      | strauss                |
+> | 3 | jonathan higueros garrido    | m      | 43.0 | si                | crimen y castigo                      | joaquín sabina         |
+> | 4 | richard quintana             | m      | 30.0 | no                | don quijote                           | metallica              |
+> | 5 | gon                          | m      | 14.0 | no                | hunter x hunter                       | togashi                |
+> | 6 | alejandro                    | m      | 36.0 | si                | el alquimitas                         | freddy mercury         |
+> | 7 | carina                       | f      | 22.0 | si                | el psicoanalista                      | stray kids             |
+> | 8 | javier                       | m      | 39.0 | si                | demian                                | la santa cecilia       |
+> | 9 | elias                        | m      | 28.0 | sí                | hábitos atómicos                      | u2                     |
+> | 11| christian                    | m      | 25.0 | si\|              | cien años de soledad                  | the strokes            |
+> | 12| pepa pig                     | f      | 20.0 | si                | el viejo y el mar                     | los huayras            |
+> | 13| fofo                         | m      | 21.0 | sí                | padre rico, padre pobre               | arrolladora            |
+> | 14| alexa                        | f      | 27.0 | si                | el codigo davinci                     | iron maiden            |
+> | 15| juan peréz                   | f      | 47.0 | no                | el kybalion                           | ratones paranoicos     |
+> | 16| angel                        | m      | 26.0 | si                | como piensan los ricos                | acdc                   |
+> | 18| wilmer                       | m      | 40.0 | no                | 48 leyes de poder                     | linkin park            |
+> | 19| adrian                       | m      | 19.0 | no                | la casa con un reloj entre sus paredes| robert downey jr.      |
+> | 20| alejo                        | m      | 36.0 | no                | el club de las 5 am                   | dying fetus            |
+> | 22| franckie                     | m      | 36.0 | sí                | crónica de una muerte anunciada       | luis miguel            |
+> | 23| nieves                       | f      | 26.0 | sí                | el amor, las mujeres y la vida        | luis miguel            |
+> | 25| israel                       | m      | 42.0 | si                | sinuhe el egipcio                     | bono                   |
+> | 26| jaime                        | m      | 50.0 | si                | la rebelión de atlas                  | antony hopkyns         |
+> | 27| el zorro                     | m      | 50.0 | no                | cadenas de libertad                   | mozart                 |
+> | 28| berlin beltran               | m      | 29.0 | no                | cristianismo caso resuelto            | gerardo de avila       |
+> | 29| karina                       | f      | 32.0 | no                | rompe las barreras del no             | morat                  |
+> | 30| maginbu                      | m      | 35.0 | si                | rompe bodas                           | colacao                |
+> | 31| leandro                      | m      | 37.0 | no                | el codigo                             | bon jovi               |
+> | 32| david                        | m      | 22.0 | si                | el presidente                         | the rock diamond       |
+> | 33| mary                         | f      | 34.0 | si                | el marido                             | epica                  |
+
+
+```python
+df['Edad'].plot(kind='hist')
+```
+
+> \<Axes: ylabel='Frequency'\>

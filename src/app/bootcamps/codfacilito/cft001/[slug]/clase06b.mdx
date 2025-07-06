@@ -1,0 +1,144 @@
+**Los siguientes ejercicios ofrecen una visualización rápida y comparativa sobre la eficacia de Pandas**
+
+*Recuerda siempre generar tu propia copia de este archivo en colab o bien descargar para ejecutar en jupyter notebooks, etc*
+
+
+```python
+import pandas as pd
+```
+
+# Ejercicio 1: Creación de DataFrame/Lista de Diccionarios
+Crea una estructura de datos que contenga información sobre estudiantes (nombre,
+edad y calificación).
+
+
+```python
+# Python puro
+students = [
+{"name": "Alice", "age": 20, "grade": 85},
+{"name": "Bob", "age": 21, "grade": 90},
+{"name": "Charlie", "age": 19, "grade": 95}
+]
+
+for student in students:
+print(student)
+```
+
+
+```python
+# Pandas
+data = {
+"name": ["Alice", "Bob", "Charlie"],
+"age": [20, 21, 19],
+"grade": [85, 90, 95]
+}
+
+df = pd.DataFrame(data)
+```
+
+# Ejercicio 2: Selección de Columnas
+Selecciona la columna de calificaciones.
+
+
+```python
+# Python puro
+grades = [student["grade"] for student in students]
+print(grades)
+```
+
+
+```python
+# Pandas
+grades = df["grade"]
+print(grades)
+```
+
+# Ejercicio 3: Filtrar Datos
+Filtra los estudiantes con una calificación mayor a 85.
+
+
+```python
+# Python puro
+filtered_students = [student for student in
+students if student["grade"] > 85]
+print(filtered_students)
+```
+
+
+```python
+# Pandas
+filtered_df = df[df["grade"] > 85]
+print(filtered_df)
+```
+
+# Ejercicio 4: Ordenar Datos
+Ordena los estudiantes por edad.
+
+
+```python
+# Python puro
+sorted_students = sorted(students, key=lambda x: x["age"])
+print(sorted_students)
+```
+
+
+```python
+# Pandas
+sorted_df = df.sort_values(by="age")
+print(sorted_df)
+```
+
+# Ejercicio 5: Agregar Nueva Columna
+Agrega una nueva columna que indique si el estudiante aprobó (calificación >= 60).
+
+
+```python
+# Python puro
+for student in students:
+student["passed"] = student["grade"] >= 60
+```
+
+
+```python
+# Pandas
+df["passed"] = df["grade"] >= 60
+```
+
+# **RETO FINAL**
+
+*En esta ocasión me gustaría compartir con ustedes un pequeño reto para comenzar a hacer analisis de datos a partir del uso de numpy, pandas y sus clases teoricas de estadística.*
+
+*Este reto es opcional, pero sirve para poner en práctica lo aprendido. Tal véz hay cosas que a estas alturas aún te generan dudas, pero ¡no te preocupes! seguro al final de este bootcamp sabras dar solución a todo lo aquí planteado.*
+
+*Por último, me gustaría recordarte que aunque las matematicas son exactas, no existe una unica respuesta valida. **Ser cientifico de datos, implica ser curioso**\.*
+
+# Reto: Análisis de Datos de Ventas de Videojuegos
+## Objetivo:
+Realizar un análisis exploratorio de un conjunto de datos sobre ventas de videojuegos a nivel mundial para responder preguntas específicas y extraer insights valiosos sobre las tendencias de la industria.
+
+# Tareas:
+**1. Carga y limpieza de datos:**
+* Descarga el archivo videojuegos.csv desde este drive ( https://drive.google.com/file/d/1ekND7Q0N6p09_QiM64m43cVwVhmn3-aX/view?usp=share_link).
+* Cargar el conjunto de datos desde el archivo videojuegos.csv. (Así aprenderas a usar colab)
+* Verificar y manejar valores faltantes en las columnas críticas.
+* Asegurarse de que el año de lanzamiento esté en formato adecuado.
+
+**2. Análisis exploratorio:**
+* Calcular el número total de juegos lanzados por año.
+* Identificar las 10 plataformas con más títulos lanzados.
+* Determinar los 5 géneros más populares en términos de cantidad de juegos.
+
+**3. Análisis de ventas:**
+* Calcular las ventas totales por región y compararlas.
+* Encontrar el videojuego más vendido de cada género.
+* Analizar las tendencias de ventas de los videojuegos a lo largo de los años.
+
+**4. Visualización de datos:**
+* Crear gráficos para visualizar el número de juegos lanzados cada año.
+* Graficar las ventas globales por género.
+* Realizar un gráfico de barras que muestre las ventas por plataforma.
+
+**5. Insights y conclusiones:**
+* Extraer al menos tres insights interesantes del análisis.
+* Escribir conclusiones sobre las tendencias en la industria de videojuegos basadas en el análisis.
+

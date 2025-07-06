@@ -14,66 +14,78 @@ const Cft001 = () => {
                         <table className={styles.table}>
                             <thead>
                             <tr>
-                                <th>Módulo</th>
-                                <th>Descripción</th>
+                                <th>Módulos</th>
+                                <th>Clases</th>
                             </tr>
                             </thead>
                             <tbody>
                             <tr className={styles.tableRow}>
-                                <td>01</td>
-                                <td>Inauguración y Bienvenida</td>
+                                <td>01 Bases y Conceptos de la Ciencia de Datos</td>
+                                <td>
+                                    <ul style={{listStyle:'none'}}>
+                                        <li><CustomLink href='cft001/clase01'>- Clase 01: ¿Qué hace un científico de datos?</CustomLink></li>
+                                        <li><CustomLink href='cft001/clase02'>- Clase 02: Conoce tus herramientas de ciencia de datos</CustomLink></li>
+                                    </ul>
+                                </td>
                             </tr>
                             <tr className={styles.tableRow}>
-                                <td>02</td>
-                                <td><CustomLink href='cft001/mod02'>Bases y Conceptos de la Ciencia de Datos</CustomLink> </td>
+                                <td>02 Estadística</td>
+                                <td>
+                                    <ul style={{listStyle:'none'}}>
+                                        <li><CustomLink href='cft001/clase03'>- Clase 03: Estadística (1)</CustomLink></li>
+                                        <li><CustomLink href='cft001/clase04'>- Clase 04: Estadística (2)</CustomLink></li>
+                                    </ul>
+                                </td>
+
                             </tr>
                             <tr className={styles.tableRow}>
-                                <td>03</td>
-                                <td>Asesoría 1 - Bases y conceptos</td>
+                                <td>03 Python para ciencia de datos</td>
+                                <td>
+                                    <ul style={{listStyle:'none'}}>
+                                        <li><CustomLink href='cft001/clase05a'>- Clase 05: Numpy</CustomLink>, <CustomLink href='cft001/clase05b'>Ejercicios Numpy</CustomLink></li>
+                                        <li><CustomLink href='cft001/clase06a'>- Clase 06: Pandas</CustomLink>, <CustomLink href='cft001/clase06b'>Ejercicios Pandas</CustomLink></li>
+                                        <li>- Clase 07: Polars</li>
+                                    </ul>
+                                </td>
                             </tr>
                             <tr className={styles.tableRow}>
-                                <td>04</td>
-                                <td>Estadística</td>
+                                <td>04 Análisis exploratorio de datos (EDA)</td>
+                                <td>
+                                    <ul style={{listStyle:'none'}}>
+                                        <li><CustomLink href='cft001/clase08'>- Clase 08: EDA (1)</CustomLink></li>
+                                        <li>- Clase 09: EDA (2) </li>
+                                    </ul>
+                                </td>
                             </tr>
                             <tr className={styles.tableRow}>
-                                <td>05</td>
-                                <td>Asesoría 2 - Estadística</td>
+                                <td>05 Visualización efectiva de datos</td>
+                                <td></td>
+
                             </tr>
                             <tr className={styles.tableRow}>
-                                <td>06</td>
-                                <td>Python para ciencia de datos</td>
+                                <td>06 Generar Dashboards</td>
+                                <td></td>
                             </tr>
                             <tr className={styles.tableRow}>
-                                <td>07</td>
-                                <td>Asesoría 3 - Python para ciencia de datos</td>
+                                <td>07 Ética</td>
+                                <td></td>
+
                             </tr>
                             <tr className={styles.tableRow}>
-                                <td>08</td>
-                                <td>Análisis exploratorio de datos (EDA)</td>
+                                <td>08 Git</td>
+                                <td></td>
                             </tr>
                             <tr className={styles.tableRow}>
-                                <td>09</td>
-                                <td>Asesoría 4 - Análisis exploratorio de datos (EDA)</td>
+                                <td>09 Machine Learning</td>
+                                <td></td>
                             </tr>
                             <tr className={styles.tableRow}>
-                                <td>10</td>
-                                <td>Visualización efectiva de datos</td>
+                                <td>10 Deep Learning</td>
+                                <td></td>
                             </tr>
                             <tr className={styles.tableRow}>
-                                <td>11</td>
-                                <td>Asesoría 5 - Visualización efectiva de datos</td>
-                            </tr>
-                            <tr className={styles.tableRow}>
-                                <td>12</td>
-                                <td>Generar Dashboards</td>
-                            </tr>
-                            <tr className={styles.tableRow}>
-                                <td>13</td>
-                                <td>Ética</td>
-                            </tr>
-                            <tr className={styles.tableRow}>
-                                <td>14</td>
-                                <td>Git</td>
+                                <td>11 Portafolio</td>
+                                <td></td>
                             </tr>
                             
                             </tbody>

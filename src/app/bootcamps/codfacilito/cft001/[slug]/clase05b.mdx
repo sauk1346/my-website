@@ -1,0 +1,138 @@
+# Ejercicios Numpy
+
+**Los siguientes ejercicios ofrecen una visualización rápida y comparativa sobre la eficacia de NumPy.**
+
+```python
+import numpy as np
+```
+
+## Ejercicio 1: Suma de Elementos
+Dada una lista/array de números, encuentra la suma de todos sus elementos.
+
+Solución python puro:
+
+
+```python
+numbers = [1, 2, 3, 4, 5]
+result = sum(numbers)
+print(result)
+```
+
+> 15
+
+
+Solución numpy:
+
+
+```python
+arr = np.array([1, 2, 3, 4, 5])
+total_sum = np.sum(arr)
+print(total_sum)
+```
+
+> 15
+
+
+## Ejercicio 2: Promedio de Elementos
+Calcula el promedio de una lista/array de números.
+
+
+```python
+# Python puro
+lst = [1, 2, 3, 4, 5]
+average = sum(lst) / len(lst)
+print(average)
+```
+
+> 3.0
+
+
+
+```python
+# NumPy
+arr = np.array([1, 2, 3, 4, 5])
+average = np.mean(arr)
+print(average)
+```
+
+> 3.0
+
+
+## Ejercicio 3: Multiplicación Elemento a Elemento
+Multiplica cada elemento de una lista/array por 2.
+
+
+```python
+# Python puro
+lst = [1, 2, 3, 4, 5]
+doubled_lst = [x * 2 for x in lst]
+print(doubled_lst)
+```
+
+> [2, 4, 6, 8, 10]
+
+
+
+```python
+# NumPy
+arr = np.array([1, 2, 3, 4, 5])
+doubled_arr = arr * 2
+print(doubled_arr)
+```
+
+> [ 2  4  6  8 10]
+
+
+## Ejercicio 4: Filtrar Números Pares
+Filtra los números pares de una lista/array.
+
+
+```python
+# Python puro
+lst = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+even_lst = [x for x in lst if x % 2 == 0]
+print(even_lst)
+```
+
+> [2, 4, 6, 8, 10]
+
+
+
+```python
+# NumPy
+arr = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+even_arr = arr[arr % 2 == 0]
+print(even_arr)
+```
+
+> [ 2  4  6  8 10]
+
+
+## Ejercicio 5: Suma Acumulativa
+Calcula la suma acumulativa de una lista/array.
+
+
+```python
+# Python puro
+lst = [1, 2, 3, 4, 5]
+cumulative_sum = []
+current_sum = 0
+for x in lst:
+  current_sum += x
+  cumulative_sum.append(current_sum)
+print(cumulative_sum)
+```
+
+> [1, 3, 6, 10, 15]
+
+
+
+```python
+# NumPy
+arr = np.array([1, 2, 3, 4, 5])
+cumulative_sum = np.cumsum(arr)
+print(cumulative_sum)
+```
+
+> [ 1  3  6 10 15]
+

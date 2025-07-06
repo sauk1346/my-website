@@ -1,0 +1,74 @@
+import ExternalLink from '@/components/ui/ExternalLink';
+
+# Clase 03: Estadística (1)
+
+## Material Clase 03
+- <ExternalLink href='/bootcamps/codfacilito/cft001/docs/slide03.pdf'>slide03.pdf</ExternalLink>
+
+
+## ¿Qué es la estadística?
+Es la ciencia que nos permite encontrar patrones y sacar concluciones a partir de números y datos, ya sea para entender tendencias, hacer predicciones o comparar diferentes grupos o situaciones.
+
+- **Evento:** subconjunto del espacio muestral
+    - Ej1: que salga un 4 al tirar dados
+    - Ej2: que salga un As de la baraja
+
+- **Eventos mutuamente excluyentes:** que no tienen elementos en común
+
+## Variables aleatorias
+
+Pueden ser **discretas** o **continuas**
+
+- **Discretas:** algo contable (entero). Como un naipe dentro de un mazo o una cara de un dado.
+- **Contable:** algo no contable (flotante). Como la altura de una persona o la temperatura de un espacio.
+
+## Distribución de Probabilidad
+Se utiliza para variables aleatorias **discretas**. Describe cómo se distribuyen las probabilidades entre todos los posibles valores de una variable aleatoria.
+
+**Ejemplos**
+
+- Bernoulli
+- Binomial
+- Uniforme discreta
+- Poisson
+
+## Densidad de Probabilidad
+Se utiliza para variables aleatorias **continuas**.
+
+## Medidas de Tendencia Central
+Nos dice alrededor de dónde están los datos.
+
+- **Media:** es la media aritmética.
+- **Mediana:** el valo que queda justo en el medio.
+- **Moda:** el valor que más se repite.
+
+## Medidas de Dispersión
+Nos dice que tan separados están los datos entre sí.
+
+- **Rango**
+$$
+\begin{aligned}
+    R = x_{max} - x_{min}
+\end{aligned}
+$$
+
+- **Rango Intercuartil**
+$$
+\begin{aligned}
+    IQR = perc.\,75\% - perc.\,25\%
+\end{aligned}
+$$
+
+- **Varianza**
+$$
+\begin{aligned}
+    \sigma^2 = \frac{1}{N} \sum_{i=1}^{N} (x_i - \mu)^2
+\end{aligned}
+$$
+
+- **Desviación estándar**
+$$
+\begin{aligned}
+    \sigma = \sqrt{\frac{1}{N} \sum_{i=1}^{N} (x_i - \mu)^2}
+\end{aligned}
+$$

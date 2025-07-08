@@ -53,39 +53,72 @@ const Cft001 = () => {
                                 <td>
                                     <ul style={{listStyle:'none'}}>
                                         <li><CustomLink href='cft001/clase08'>- Clase 08: EDA (1)</CustomLink></li>
-                                        <li>- Clase 09: EDA (2) </li>
+                                        <li><CustomLink href='cft001/clase09'>- Clase 09: EDA (2)</CustomLink></li>
                                     </ul>
                                 </td>
                             </tr>
                             <tr className={styles.tableRow}>
                                 <td>05 Visualización efectiva de datos</td>
-                                <td></td>
+                                <td>
+                                    <ul style={{listStyle:'none'}}>
+                                        <li><CustomLink href='cft001/clase10'>- Clase 10: ¿Qué es la visualización?</CustomLink></li>
+                                        <li><CustomLink href='cft001/clase11'>- Clase 11: Gráficos Básicos</CustomLink></li>
+                                        <li>- Clase 12: Gráficos Avanzados</li>
+                                    </ul>
+                                </td>
 
                             </tr>
                             <tr className={styles.tableRow}>
                                 <td>06 Generar Dashboards</td>
-                                <td></td>
+                                <td>
+                                    <ul style={{listStyle:'none'}}>
+                                        <li>- Clase 13: Generar Dashboards</li>
+                                    </ul>
+                                </td>
                             </tr>
                             <tr className={styles.tableRow}>
                                 <td>07 Ética</td>
-                                <td></td>
+                                <td>
+                                    <ul style={{listStyle:'none'}}>
+                                        <li>- Clase 14: Uso ético de datos</li>
+                                    </ul>
+                                </td>
 
                             </tr>
                             <tr className={styles.tableRow}>
                                 <td>08 Git</td>
-                                <td></td>
+                                <td>
+                                    <ul style={{listStyle:'none'}}>
+                                        <li>- Clase 15: Git para Ciencia de Datos</li>
+                                    </ul>
+                                </td>
                             </tr>
                             <tr className={styles.tableRow}>
                                 <td>09 Machine Learning</td>
-                                <td></td>
+                                <td>
+                                    <ul style={{listStyle:'none'}}>
+                                        <li>- Clase 16: Introducción a Machine Learning</li>
+                                        <li>- Clase 17: Resolviendo problemas prácticos (1)</li>
+                                        <li>- Clase 18: Resolviendo problemas prácticos (2)</li>
+                                    </ul>
+                                </td>
                             </tr>
                             <tr className={styles.tableRow}>
                                 <td>10 Deep Learning</td>
-                                <td></td>
+                                <td>
+                                    <ul style={{listStyle:'none'}}>
+                                        <li>- Clase 19: Introducción a la Redes Neuronales</li>
+                                        <li>- Clase 20: Redes Neuronales Convolucionales</li>
+                                    </ul>
+                                </td>
                             </tr>
                             <tr className={styles.tableRow}>
                                 <td>11 Portafolio</td>
-                                <td></td>
+                                <td>
+                                    <ul style={{listStyle:'none'}}>
+                                        <li>- Clase 21: Crear un portafolio para un Científico de Datos</li>
+                                    </ul>
+                                </td>
                             </tr>
                             
                             </tbody>

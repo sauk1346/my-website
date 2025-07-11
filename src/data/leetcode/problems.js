@@ -23,6 +23,12 @@ export const problems = {
       difficulty: "Medium",
       categories: ["general"]
     },
+    "LC0110": {
+      title: "Árbol Binario Balanceado",
+      topics: ["Tree", "Depth-First Search", "Binary Tree"],
+      difficulty: "Easy",
+      categories: ["general"]
+    },
     "LC0135": {
       title: "Dulces",
       topics: ["Array", "Greedy"],

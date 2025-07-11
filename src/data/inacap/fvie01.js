@@ -68,7 +68,7 @@ const courseData = {
         { week: '01', lecture: '02', date: 'Sáb 24, May 2025', description: <CustomLink href='fvie01/lectura02'>Entrevista a usuario</CustomLink> },
         { week: '', lecture: '03', date: 'Sáb 24, May 2025', description: <CustomLink href='fvie01/lectura03'>Elaboración de cuestionarios</CustomLink> },
         { week: '', lecture: '04', date: 'Sáb 24, May 2025', description: <CustomLink href='fvie01/lectura04'>Observación no participante</CustomLink> },
-        { week: '02', lecture: '05', date: 'Sáb 31, May 2025', description: 'Procesamiento de Hallazgos' },
+        { week: '02', lecture: '05', date: 'Sáb 31, May 2025', description: <CustomLink href='fvie01/lectura05'>Procesamiento de Hallazgos</CustomLink> },
         { week: '', lecture: '06', date: 'Sáb 31, May 2025', description: 'Redefinición del desafío' },
         { week: '03', lecture: '07', date: 'Sáb 07, Jun 2025', description: 'Estudio Comparativo Antecedentes' },
         { week: '', lecture: '08', date: 'Sáb 07, Jun 2025', description: 'Formulario Requerimientos' },

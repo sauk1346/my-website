@@ -27,6 +27,12 @@ const Udemy = () => {
                                 <td>Angela Yu</td>
                                 <td></td>
                             </tr>
+                            <tr className={styles.tableRow}>
+                                <td className={styles.code}>UDM002</td>
+                                <td><CustomLink href="udemy/udm002">Master the Coding Interview: Data Structures + Algorithms</CustomLink></td>
+                                <td>Andrei Neagoie</td>
+                                <td></td>
+                            </tr>
                             </tbody>
                         </table>
                     </div>

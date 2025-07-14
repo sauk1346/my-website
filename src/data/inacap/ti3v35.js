@@ -72,8 +72,10 @@ const courseData = {
         { week: '', class: '11', date: 'Mié 25, Jun 2025', description: "- Windows Server (5)" },
         { week: '07', class: '12', date: 'Lun 30, Jun 2025', description: "- Evaluación 02: Windows Server" },
         { week: '', class: '13', date: 'Mié 02, Jul 2025', description: "- Introducción Linux" },
-        { week: '08', class: '14', date: 'Lun 07, Jul 2025', description: "" },
-        { week: '', class: '15', date: 'Mié 09, Jul 2025', description: "" },
+        { week: '08', class: '14', date: 'Lun 07, Jul 2025', description: "Linux Server (1)" },
+        { week: '', class: '15', date: 'Mié 09, Jul 2025', description: "Linux Server (2)" },
+        { week: '09', class: '16', date: 'Lun 14, Jul 2025', description: "" },
+        { week: '', class: '17', date: 'Mié 16, Jul 2025', description: "" },
         
     ],
     lectureData: [

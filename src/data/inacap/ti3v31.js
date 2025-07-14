@@ -56,7 +56,10 @@ const courseData = {
         </>},
         { week: '05', class: '05', date: 'Mié 25, Jun 2025', description: "- JavaScript (1): Introducción sintaxis y funciones"},
         { week: '06', class: '06', date: 'Mié 02, Jul 2025', description: "- JavaScript (2): Manipulación del DOM"},
-        { week: '07', class: '06', date: 'Mié 09, Jul 2025', description: ""},
+        { week: '07', class: '07', date: 'Mié 09, Jul 2025', description: "- JavaScript (3): Framework JQuery"},
+        { week: '08', class: '08', date: 'Mié 16, Jul 2025', description: <del>- Suspensión Clases: Feriado</del>},
+        { week: '09', class: '09', date: 'Mar 22 , Jul 2025', description: "" },
+        { week: '', class: '10', date: 'Mié 23, Jul 2025', description: ""},
 
     ],
     lectureData: [

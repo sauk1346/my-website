@@ -60,8 +60,10 @@ const courseData = {
         { week: '', class: '11', date: 'Jue 26, Jun 2025', description: "Matriz de Antecedentes (1)" },
         { week: '07', class: '12', date: 'Mar 01, Jul 2025', description: "Matriz de Antecedentes (2)" },
         { week: '', class: '13', date: 'Jue 03, Jul 2025', description: "No asistí" },
-        { week: '08', class: '14', date: 'Mar 08, Jul 2025', description: "" },
-        { week: '', class: '15', date: 'Jue 10, Jul 2025', description: "" },
+        { week: '08', class: '14', date: 'Mar 08, Jul 2025', description: "Consultas" },
+        { week: '', class: '15', date: 'Jue 10, Jul 2025', description: "Consultas" },
+        { week: '09', class: '16', date: 'Mar 15, Jul 2025', description: <del>Suspensión Clases: pre-feriado</del> },
+        { week: '', class: '17', date: 'Jue 17, Jul 2025', description: "" },
     ],
     lectureData: [
         { week: '01', lecture: '01', date: 'Sáb 24, May 2025', description: <ExternalLink href="/inacap/fvie01/docs/manual01.pdf">Manual Estudiante Unidad 01</ExternalLink> },

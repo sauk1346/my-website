@@ -23,7 +23,7 @@ const Udemy = () => {
                             <tbody>
                             <tr className={styles.tableRow}>
                                 <td className={styles.code}>UDM001</td>
-                                <td>100 Days of Code - The complete Python Pro Bootcamp</td>
+                                <td><CustomLink href="udemy/udm001">100 Days of Code - The complete Python Pro Bootcamp</CustomLink></td>
                                 <td>Angela Yu</td>
                                 <td></td>
                             </tr>

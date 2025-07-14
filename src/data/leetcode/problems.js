@@ -275,6 +275,18 @@ export const problems = {
       difficulty: "Medium",
       categories: ["pandas"]
     },
+    "LC2877": {
+      title: "Crear un DataFrame desde una Lista",
+      topics: ["Database"],
+      difficulty: "Easy",
+      categories: ["pandas"]
+    },
+    "LC2878": {
+      title: "Obtener el Tamaño de un DataFrame",
+      topics: ["Database"],
+      difficulty: "Easy",
+      categories: ["pandas"]
+    },
     "LC2894": {
       title: "Diferencia de Sumas Divisibles y No Divisibles",
       topics: ["Math"],

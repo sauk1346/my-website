@@ -21,11 +21,11 @@ const En002 = () => {
                         <tbody>
                         <tr className={styles.tableRow}>
                             <td>01</td>
-                            <td><CustomLink href='en002/module01'>Pretest</CustomLink></td>
+                            <td><CustomLink href='en002/module01'>Rounded and Unrounded Vowels</CustomLink></td>
                         </tr>
                         <tr className={styles.tableRow}>
                             <td>02</td>
-                            <td></td>
+                            <td><CustomLink href='en002/module02'>Front Vowels</CustomLink></td>
                         </tr>
                         <tr className={styles.tableRow}>
                             <td>03</td>

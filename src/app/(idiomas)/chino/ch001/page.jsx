@@ -58,7 +58,7 @@ const Ch001 = () => {
                         </tr>
                         <tr className={styles.tableRow}>
                             <td>02</td>
-                            <td>我有一只大狗 Wǒ yǒu yī zhī dà gǒu</td>
+                            <td><CustomLink href='ch001/lesson22'>我有一只大狗 Wǒ yǒu yī zhī dà gǒu</CustomLink></td>
                         </tr>
                         <tr className={styles.tableRow}>
                             <td>03</td>

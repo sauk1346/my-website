@@ -19,16 +19,16 @@ const courseData = {
     evaluationsData: [
         { 
             evaluationNumber: 1,
-            date: 'Dom 28, Jun 2025',
+            date: 'Dom 29, Jun 2025',
             weighting: '20%',
             description: 'Evaluación 01: HTML y CSS',
             quickGuide: ''
         },
         { 
             evaluationNumber: 2,
-            date: 'Mié 18, Jun 2025',
+            date: 'Dom 13, Jul 2025',
             weighting: '25%',
-            description: 'Evaluación 02',
+            description: 'Evaluación 02: JavaScript',
             quickGuide: ''
         },
         { 
@@ -76,7 +76,9 @@ const courseData = {
         { week: '06', lecture: '10', date: 'Sáb 05, Jul 2025', description: 'Unidad 3: Framework basado en JavaScript' },
         { week: '', lecture: '11', date: 'Sáb 05, Jul 2025', description: 'Evolución de los frameworks de JavaScript en el desarrollo web moderno' },
         { week: '', lecture: '12', date: 'Sáb 05, Jul 2025', description: 'Elementos esenciales de los frameworks de JavaScript' },
-        { week: '07', lecture: '13', date: 'Sáb 12, Jul 2025', description: 'Codificación de componenetes en JavaScript con componentes en React' },
+        { week: '07', lecture: '13', date: 'Sáb 12, Jul 2025', description: 'Codificación de componentes en JavaScript con componentes en React' },
+        { week: '08', lecture: '14', date: 'Sáb 19, Jul 2025', description: 'Implementación de CRUD con local storage en JavaScript' },
+        { week: '', lecture: '15', date: 'Sáb 19, Jul 2025', description: 'Acceso a datos externos con Fetch y Axios en JavaScript' },
 
     ],
 };

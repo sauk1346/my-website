@@ -1,0 +1,135 @@
+# Sección 03: Big O
+
+## ¿Qué es un Buen Código?
+- Un código que complete la tarea asignada, pero que también sea **eficiente**.
+- Esto significa que importa cuánto tiempo se demora un algoritmo en resolver un problema.
+
+
+**Ejemplo**
+
+```js
+const everyone = ['dory', 'bruce', 'marlin', 'nemo', 'gill', 'bloat', 'nigel', 'squirt', 'darla', 'hank'];
+
+function findNemo(array) {
+    let t0 = performance.now();
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] === 'nemo') {
+            console.log('NEMO ENCONTRADO!');
+        }
+    }
+    let t1 = performance.now();
+    console.log('Encontrar a Nemo tomó: ' + (t1-t0) + ' milisegundos')
+}
+
+findNemo(everyone);
+```
+
+> Encontrar a Nemo tomó: 5.1937229999999985 milisegundos
+
+## Big O
+Permite medir que tanto demorará la ejecución del código, independiente de los componentes del dispositivo (CPU, RAM, etc)
+
+<img
+	src="/elearning/udm002/images/fig01.png"
+	style={{ display: 'block', margin: '0 auto', width:'80%'}}
+/>
+<br/>
+
+
+### O(n)
+En el ejemplo de "encontrar a nemo" su tiempo de ejecución es `O(n)`. Esto se debe a que:
+- Si el arreglo fuese de 2 elementos, tardaría 2 operaciones en el peor caso. (último elemento)
+- Si el arreglo fuese de 3 elementos, tardaría 3 operaciones en el peor caso. (último elemento)
+- ...
+- Si el arreglo fuese de `n` elementos, tardaría `n` operaciones en el peor caso. (último elemento)
+
+### O(1)
+Es un tiempo de ejecución constante, que no depende de la cantidad de operaciones
+
+**Ejemplo 1**
+
+```js
+// O(1)
+console.log("hola mundo!");
+```
+
+## Ejercicio 01
+Calcular Big O
+
+```js
+function funChallenge(input) {
+    let a = 10;
+    a = 50 + 3;
+
+    for (let i = 0; i < input.length; i++) {
+        anotherFunction();
+        let stranger = true;
+        a++;
+    }
+    return a;
+}
+```
+
+<details>
+    <summary>Solución</summary>
+```js
+function funChallenge(input) {
+    let a = 10; // O(1)
+    a = 50 + 3; // O(1)
+
+    for (let i = 0; i < input.length; i++) {
+        anotherFunction(); // O(n)
+        let stranger = true; // O(n)
+        a++; // O(n)
+    }
+    return a; // O(1)
+}
+
+// O(1+1+1+n+n+n+n) = O(3+3n) = O(n) 
+```
+</details>
+
+## Ejercicio 02
+Calcular Big O
+
+```js
+function anotherFunChallenge(input) {
+    let a = 5;
+    let b = 10;
+    let c = 50;
+    for (let i = 0; i < input; i++) {
+        let x = i + 1;
+        let y = i + 2;
+        let z = i + 3;
+    }
+    for (let j = 0; j < input; j++) {
+        let p = j * 2;
+        let q = j * 2;
+    }
+    let whoAmI = "I don't know";
+}
+```
+
+<details>
+    <summary>Solución</summary>
+```js
+function anotherFunChallenge(input) {
+    let a = 5;  // O(1)
+    let b = 10; // O(1)
+    let c = 50; // O(1)
+    for (let i = 0; i < input; i++) {
+        let x = i + 1; // O(n)
+        let y = i + 2; // O(n)
+        let z = i + 3; // O(n)
+    }
+    for (let j = 0; j < input; j++) {
+        let p = j * 2; // O(n)
+        let q = j * 2; // O(n)
+    }
+    let whoAmI = "I don't know"; // O(1)
+}
+
+// O(4+5n) = O(n)
+```
+</details>
+

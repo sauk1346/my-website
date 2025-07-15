@@ -29,7 +29,7 @@ const Udm002 = () => {
                             </tr>
                             <tr className={styles.tableRow}>
                                 <td>03</td>
-                                <td>Big O</td>
+                                <td><CustomLink href='udm002/section03'>Big O</CustomLink></td>
                             </tr>
                             <tr className={styles.tableRow}>
                                 <td>04</td>

@@ -84,6 +84,7 @@ chmod 511 respaldo.sh
 - para eliminar permiso, con signo `-`
 
 |Actual|chmod|Resultado|Descripción|
+|---|---|---|---|
 |rw-------|a+x|rwx--x--x|Agregar a todos (all) permisos de escritura|
 |rwx--x--x|go-x|rwx------|Se eliminan permiso de ejecución para grupo y otros|
 |rwxr-xr-x|u-x,go-r|rw---x--x|Al usuario se le quita ejecución, al grupo y otros se le quita lectura|

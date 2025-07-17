@@ -71,7 +71,7 @@ const courseData = {
         { week: '04', lecture: '', date: '', description: '' },
         { week: '05', lecture: '10', date: 'Sáb 21, Jun 2025', description: <ExternalLink href="/inacap/fvie01/docs/manual02.pdf">Manual Estudiante Unidad 02</ExternalLink> },
         { week: '05', lecture: '11', date: 'Sáb 21, Jun 2025', description: <CustomLink href='fvie01/lectura11'>Modelo de negocio Business Canvas Model</CustomLink> },
-        { week: '', lecture: '12', date: 'Sáb 21, Jun 2025', description: 'Métodos de experimentación cliente/usuario' },
+        { week: '', lecture: '12', date: 'Sáb 21, Jun 2025', description: <CustomLink href='fvie01/lectura12'>Métodos de experimentación cliente/usuario</CustomLink> },
         { week: '06', lecture: '13', date: 'Sáb 28, Jun 2025', description: 'Desarrollo de la experimentación y ajuste del modelo de negocio' },
         { week: '07', lecture: '', date: '', description: '' },
         { week: '08', lecture: '14', date: 'Sáb 12, Jul 2025', description: <ExternalLink href="/inacap/fvie01/docs/manual03.pdf">Manual Estudiante Unidad 3</ExternalLink> },

@@ -53,7 +53,7 @@ Es un tiempo de ejecución constante, que no depende de la cantidad de operacion
 console.log("hola mundo!");
 ```
 
-## Ejercicio 01
+### Ejercicio 01
 Calcular Big O
 
 ```js
@@ -89,7 +89,7 @@ function funChallenge(input) {
 ```
 </details>
 
-## Ejercicio 02
+### Ejercicio 02
 Calcular Big O
 
 ```js
@@ -132,4 +132,32 @@ function anotherFunChallenge(input) {
 // O(4+5n) = O(n)
 ```
 </details>
+
+### O(n²)
+
+```js
+const boxes = [1,2,3,4,5];
+
+function logAllPairsOfArray(array) {
+    for (let i = 0; i < array.length; i++) {
+        for (let j = 0; j < array.length; j++) {
+            console.log(array[i], array[j])
+        }
+    }
+}
+logAllPairsOfArray(boxes);
+
+// O(n * n) = O(n²)
+// debido a que hay 2 "for" anidados
+```
+
+### Reglas de BigO
+
+1. **Considerar el peor escenario:** Analizar la complejidad en el caso más desfavorable
+2. **Remover constantes:** Eliminar factores constantes (ej: `O(2n) → O(n)`)
+3. **Términos diferentes para entradas diferentes:** Usar variables distintas para entradas de diferente tamaño (ej: `O(m + n)` para dos arrays de entrada)
+4. **Eliminar términos no dominantes:** Conservar solo el término de mayor crecimiento (ej: `O(n² + n) → O(n²)`)
+
+### O(n!)
+Ineficiente, se genera cuando se utiliza un loop por cada elemento
 

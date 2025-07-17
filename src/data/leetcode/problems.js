@@ -293,6 +293,12 @@ export const problems = {
       difficulty: "Easy",
       categories: ["pandas"]
     },
+    "LC2880": {
+      title: "Seleccionar Datos",
+      topics: ["Database"],
+      difficulty: "Easy",
+      categories: ["pandas"]
+    },
     "LC2894": {
       title: "Diferencia de Sumas Divisibles y No Divisibles",
       topics: ["Math"],

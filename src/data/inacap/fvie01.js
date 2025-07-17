@@ -70,7 +70,7 @@ const courseData = {
         { week: '', lecture: '09', date: 'Sáb 07, Jun 2025', description: <CustomLink href='fvie01/lectura09'>Brainstorming</CustomLink> },
         { week: '04', lecture: '', date: '', description: '' },
         { week: '05', lecture: '10', date: 'Sáb 21, Jun 2025', description: <ExternalLink href="/inacap/fvie01/docs/manual02.pdf">Manual Estudiante Unidad 02</ExternalLink> },
-        { week: '05', lecture: '11', date: 'Sáb 21, Jun 2025', description: 'Modelo de negocio Business Canvas Model' },
+        { week: '05', lecture: '11', date: 'Sáb 21, Jun 2025', description: <CustomLink href='fvie01/lectura11'>Modelo de negocio Business Canvas Model</CustomLink> },
         { week: '', lecture: '12', date: 'Sáb 21, Jun 2025', description: 'Métodos de experimentación cliente/usuario' },
         { week: '06', lecture: '13', date: 'Sáb 28, Jun 2025', description: 'Desarrollo de la experimentación y ajuste del modelo de negocio' },
         { week: '07', lecture: '', date: '', description: '' },

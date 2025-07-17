@@ -181,7 +181,7 @@ export const calendar25 = [
   },
   {
     id: 31,
-    fecha: "2025-7-21",
+    fecha: "2025-7-18",
     titulo: "[TI3V35] Evaluación 03: Linux Server",
     description: "Sistemas Operativos"
   },
@@ -253,23 +253,27 @@ export const calendar25 = [
   },
   {
     id: 43,
+    fecha: "2025-7-27",
+    titulo: "[TI3V31] Evaluación 03: React",
+    description: "Programación Front End"
+  },
+  {
+    id: 44,
     fecha: "2025-7-10",
     titulo: "[FVIE01] Evaluación 01: Informe 1",
     description: "Innovación y Emprendimiento I"
   },
   {
-    id: 44,
+    id: 45,
     fecha: "2025-7-21",
     titulo: "[FVIE01] Evaluación 02: Informe 2",
     description: "Innovación y Emprendimiento I"
   },
   {
-    id: 45,
+    id: 46,
     fecha: "2025-7-24",
     titulo: "[FVIE01] Evaluación 03: Informe 3",
     description: "Innovación y Emprendimiento I"
   },
-
-
 ];
 export default calendar25;

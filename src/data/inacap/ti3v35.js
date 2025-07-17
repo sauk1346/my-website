@@ -35,7 +35,7 @@ const courseData = {
             evaluationNumber: 2,
             date: 'Lun 30, Jun 2025',
             weighting: '30%',
-            description: <CustomLink href="ti3v35/eval02">Windows Server</CustomLink>,
+            description: <CustomLink href='ti3v35/eval02'>Windows Server</CustomLink>,
             quickGuide: ''
         },
         { 
@@ -70,7 +70,7 @@ const courseData = {
         { week: '', class: '09', date: 'Mié 18, Jun 2025', description: "- Windows Server (3)" },
         { week: '06', class: '10', date: 'Lun 23, Jun 2025', description: "- Windows Server (4)" },
         { week: '', class: '11', date: 'Mié 25, Jun 2025', description: "- Windows Server (5)" },
-        { week: '07', class: '12', date: 'Lun 30, Jun 2025', description: <CustomLink href="ti3v35/eval02">"- Evaluación 02: Windows Server"</CustomLink> },
+        { week: '07', class: '12', date: 'Lun 30, Jun 2025', description: <CustomLink href='ti3v35/eval02'>- Evaluación 02: Windows Server</CustomLink> },
         { week: '', class: '13', date: 'Mié 02, Jul 2025', description: "- Introducción Linux" },
         { week: '08', class: '14', date: 'Lun 07, Jul 2025', description: "- Linux Server (1)" },
         { week: '', class: '15', date: 'Mié 09, Jul 2025', description: "- Linux Server (2)" },

@@ -21,7 +21,7 @@ const courseData = {
             evaluationNumber: 1,
             date: 'Dom 29, Jun 2025',
             weighting: '20%',
-            description: 'Evaluación 01: HTML y CSS',
+            description: <CustomLink href='ti3v31/eval01'>Evaluación 01: HTML y CSS</CustomLink>,
             quickGuide: ''
         },
         { 
@@ -42,7 +42,7 @@ const courseData = {
             evaluationNumber: 4,
             date: 'Lun 21, Jul 2025',
             weighting: '15%',
-            description: 'Promedio Controles',
+            description: <CustomLink href='ti3v31/controles'>Promedio Controles</CustomLink>,
             quickGuide: ''
         }
     ],

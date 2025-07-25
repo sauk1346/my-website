@@ -28,14 +28,14 @@ const courseData = {
             evaluationNumber: 2,
             date: 'Lun 21, Jul 2025',
             weighting: '35%',
-            description: 'Informe 02',
+            description: <ExternalLink href='/inacap/fvie01/docs/informe02.pdf'>Informe 02</ExternalLink>,
             quickGuide: ''
         },
         { 
             evaluationNumber: 3,
             date: 'Jue 24, Jul 2025',
             weighting: '35%',
-            description: 'Informe 03',
+            description: <ExternalLink href='/inacap/fvie01/docs/presentacion.pdf'>Presentación Proyecto</ExternalLink>,
             quickGuide: ''
         },
     ],
@@ -56,7 +56,7 @@ const courseData = {
         { week: '08', class: '14', date: 'Mar 08, Jul 2025', description: "Consultas Informe 01" },
         { week: '', class: '15', date: 'Jue 10, Jul 2025', description: "Consultas Informe 01" },
         { week: '09', class: '16', date: 'Mar 15, Jul 2025', description: <del>Suspensión Clases: pre-feriado</del> },
-        { week: '', class: '17', date: 'Jue 17, Jul 2025', description: "" },
+        { week: '', class: '17', date: 'Jue 17, Jul 2025', description: "Consultas Informe 02" },
     ],
     lectureData: [
         { week: '01', lecture: '01', date: 'Sáb 24, May 2025', description: <ExternalLink href="/inacap/fvie01/docs/manual01.pdf">Manual Estudiante Unidad 01</ExternalLink> },

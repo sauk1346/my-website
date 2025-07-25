@@ -40,16 +40,16 @@ const courseData = {
         },
         { 
             evaluationNumber: 3,
-            date: '',
+            date: 'Vie 18, Jul 2025',
             weighting: '30%',
-            description: 'Linux Server',
+            description: <CustomLink href='ti3v35/eval03'>Linux Server</CustomLink>,
             quickGuide: ''
         },
         { 
             evaluationNumber: 4,
-            date: '',
+            date: 'Mié 23, Jul 2025',
             weighting: '25%',
-            description: 'Promedio Controles',
+            description: <ExternalLink href='/inacap/ti3v35/docs/informe01.pdf'>Informe: Comandos Linux</ExternalLink>,
             quickGuide: ''
         }
     ],
@@ -72,9 +72,9 @@ const courseData = {
         { week: '', class: '11', date: 'Mié 25, Jun 2025', description: "- Windows Server (5)" },
         { week: '07', class: '12', date: 'Lun 30, Jun 2025', description: <CustomLink href='ti3v35/eval02'>- Evaluación 02: Windows Server</CustomLink> },
         { week: '', class: '13', date: 'Mié 02, Jul 2025', description: "- Introducción Linux" },
-        { week: '08', class: '14', date: 'Lun 07, Jul 2025', description: "- Linux Server (1)" },
-        { week: '', class: '15', date: 'Mié 09, Jul 2025', description: "- Linux Server (2)" },
-        { week: '09', class: '16', date: 'Lun 14, Jul 2025', description: "- Linux Server (3)" },
+        { week: '08', class: '14', date: 'Lun 07, Jul 2025', description: <ExternalLink href='/inacap/ti3v35/docs/clase14.pdf'>- Linux Server: Configuración Repositorios</ExternalLink> },
+        { week: '', class: '15', date: 'Mié 09, Jul 2025', description: <ExternalLink href='/inacap/ti3v35/docs/clase15.pdf'>- Linux Server: Herramientas Principales (1)</ExternalLink> },
+        { week: '09', class: '16', date: 'Lun 14, Jul 2025', description: <ExternalLink href='/inacap/ti3v35/docs/clase15.pdf'>- Linux Server: Herramientas Principales (2)</ExternalLink> },
         { week: '', class: '17', date: 'Mié 16, Jul 2025', description: <del>- Suspensión Clases: Feriado</del> },
         
     ],
@@ -91,7 +91,6 @@ const courseData = {
         { week: '07', lecture: '10', date: 'Sáb 05, Jul 2025', description: <CustomLink href="ti3v35/lectura10">Licenciamiento de software</CustomLink> },
         { week: '08', lecture: '11', date: 'Sáb 12, Jul 2025', description: <CustomLink href="ti3v35/lectura11">Gestión de archivos y directorios en Linux</CustomLink> },
         { week: '09', lecture: '12', date: 'Sáb 19, Jul 2025', description: <CustomLink href="ti3v35/lectura12">Recurso Integrativo de la Unidad</CustomLink> },
-
     ],
 };
 export default courseData;

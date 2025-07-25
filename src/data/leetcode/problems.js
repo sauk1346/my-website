@@ -299,6 +299,18 @@ export const problems = {
       difficulty: "Easy",
       categories: ["pandas"]
     },
+    "LC2881": {
+      title: "Crear una Nueva Columna",
+      topics: ["Database"],
+      difficulty: "Easy",
+      categories: ["pandas"]
+    },
+    "LC2882": {
+      title: "Eliminar Filas Duplicadas",
+      topics: ["Database"],
+      difficulty: "Easy",
+      categories: ["pandas"]
+    },
     "LC2894": {
       title: "Diferencia de Sumas Divisibles y No Divisibles",
       topics: ["Math"],

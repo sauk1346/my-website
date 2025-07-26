@@ -20,7 +20,7 @@ export const subjects = [
     { code: 'TI3V35', name: 'Sistemas Operativos', semester: 3, year: 2025, category: 'systems', status: 'current', href: '/inacap/ti3v35' },
     { code: 'TI3V34', name: 'Fundamentos de Seguridad de la Información', semester: 3, year: 2025, category: 'security', status: 'completed', href: '/inacap/ti3v34' },
     { code: 'TILV01', name: '(Electivo I) Plan de Pruebas de Software', semester: 3, year: 2025, category: 'programming', status: 'completed', href: '/inacap/tilv21' },
-    { code: 'FVIE01', name: 'Innovación y Emprendimiento I', semester: 3, year: 2025, category: 'business', status: 'current', href: '/inacap/fvie01' },
+    { code: 'FVIE01', name: 'Innovación y Emprendimiento I', semester: 3, year: 2025, category: 'business', status: 'completed', href: '/inacap/fvie01' },
   
     // Semestre 4 - 2025
     { code: 'TI3V41', name: 'Programación Back End', semester: 4, year: 2025, category: 'programming', status: 'pending' },

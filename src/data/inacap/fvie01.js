@@ -72,13 +72,12 @@ const courseData = {
         { week: '05', lecture: '10', date: 'Sáb 21, Jun 2025', description: <ExternalLink href="/inacap/fvie01/docs/manual02.pdf">Manual Estudiante Unidad 02</ExternalLink> },
         { week: '05', lecture: '11', date: 'Sáb 21, Jun 2025', description: <CustomLink href='fvie01/lectura11'>Modelo de negocio Business Canvas Model</CustomLink> },
         { week: '', lecture: '12', date: 'Sáb 21, Jun 2025', description: <CustomLink href='fvie01/lectura12'>Métodos de experimentación cliente/usuario</CustomLink> },
-        { week: '06', lecture: '13', date: 'Sáb 28, Jun 2025', description: 'Desarrollo de la experimentación y ajuste del modelo de negocio' },
+        { week: '06', lecture: '13', date: 'Sáb 28, Jun 2025', description: <CustomLink href='fvie01/lectura13'>Desarrollo de la experimentación y ajuste del modelo de negocio</CustomLink> },
         { week: '07', lecture: '', date: '', description: '' },
         { week: '08', lecture: '14', date: 'Sáb 12, Jul 2025', description: <ExternalLink href="/inacap/fvie01/docs/manual03.pdf">Manual Estudiante Unidad 3</ExternalLink> },
-        { week: '', lecture: '15', date: 'Sáb 12, Jul 2025', description: 'Procesos de formalización empresarial y creación de emprendimientos' },
-        { week: '', lecture: '16', date: 'Sáb 12, Jul 2025', description: 'Fase de Propuesta de Valor INACAP' },
-        { week: '', lecture: '17', date: 'Sáb 12, Jul 2025', description: 'Crear una Empresa en Chile' },
-        { week: '09', lecture: '18', date: 'Sáb 19, Jul 2025', description: 'Pitch de Negocio' },
+        { week: '', lecture: '15', date: 'Sáb 12, Jul 2025', description: <CustomLink href='fvie01/lectura15'>Fase de Propuesta de Valor INACAP</CustomLink> },
+        { week: '', lecture: '16', date: 'Sáb 12, Jul 2025', description: <CustomLink href='fvie01/lectura16'>Crear una Empresa en Chile</CustomLink> },
+        { week: '09', lecture: '17', date: 'Sáb 19, Jul 2025', description: <CustomLink href='fvie01/lectura17'>Pitch de Negocio</CustomLink> },
 
     ],
 };

@@ -33,7 +33,7 @@ const courseData = {
         },
         { 
             evaluationNumber: 3,
-            date: 'Mié 23, Jul 2025',
+            date: 'Dom 27, Jul 2025',
             weighting: '40%',
             description: 'Evaluación 03: React',
             quickGuide: ''
@@ -54,12 +54,12 @@ const courseData = {
             <ExternalLink href='/inacap/ti3v31/docs/proyecto01.pdf'>- Instrucciones Proyecto (Sprint 01)</ExternalLink><br/>
             - CSS(2): Uso de selectores
         </>},
-        { week: '05', class: '05', date: 'Mié 25, Jun 2025', description: "- JavaScript (1): Introducción sintaxis y funciones"},
-        { week: '06', class: '06', date: 'Mié 02, Jul 2025', description: "- JavaScript (2): Manipulación del DOM"},
-        { week: '07', class: '07', date: 'Mié 09, Jul 2025', description: "- JavaScript (3): Framework JQuery"},
+        { week: '05', class: '05', date: 'Mié 25, Jun 2025', description: "- JavaScript(1): Introducción sintaxis y funciones"},
+        { week: '06', class: '06', date: 'Mié 02, Jul 2025', description: "- JavaScript(2): Manipulación del DOM"},
+        { week: '07', class: '07', date: 'Mié 09, Jul 2025', description: "- JavaScript(3): Framework JQuery"},
         { week: '08', class: '08', date: 'Mié 16, Jul 2025', description: <del>- Suspensión Clases: Feriado</del>},
-        { week: '09', class: '09', date: 'Mar 22 , Jul 2025', description: "" },
-        { week: '', class: '10', date: 'Mié 23, Jul 2025', description: ""},
+        { week: '09', class: '09', date: 'Mar 22 , Jul 2025', description: "- React(1): Instalación y Herramientas" },
+        { week: '', class: '10', date: 'Mié 23, Jul 2025', description: "- React(2): Componentes, Hooks, Props"},
 
     ],
     lectureData: [

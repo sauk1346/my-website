@@ -241,42 +241,36 @@ export const calendar25 = [
   },
   {
     id: 41,
-    fecha: "2025-7-25",
-    titulo: "[TI3V31] Control 09",
-    description: "Programación Front End"
-  },
-  {
-    id: 42,
     fecha: "2025-6-29",
     titulo: "[TI3V31] Evaluación 01: HTML y CSS",
     description: "Programación Front End"
   },
   {
-    id: 43,
+    id: 42,
     fecha: "2025-7-13",
     titulo: "[TI3V31] Evaluación 02: JavaScript",
     description: "Programación Front End"
   },
   {
-    id: 44,
+    id: 43,
     fecha: "2025-7-27",
     titulo: "[TI3V31] Evaluación 03: React",
     description: "Programación Front End"
   },
   {
-    id: 45,
+    id: 44,
     fecha: "2025-7-10",
     titulo: "[FVIE01] Evaluación 01: Informe 1",
     description: "Innovación y Emprendimiento I"
   },
   {
-    id: 46,
+    id: 45,
     fecha: "2025-7-21",
     titulo: "[FVIE01] Evaluación 02: Informe 2",
     description: "Innovación y Emprendimiento I"
   },
   {
-    id: 47,
+    id: 46,
     fecha: "2025-7-24",
     titulo: "[FVIE01] Evaluación 03: Presentación Proyecto",
     description: "Innovación y Emprendimiento I"

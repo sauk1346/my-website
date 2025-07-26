@@ -70,17 +70,16 @@ const courseData = {
         { week: '02', lecture: '05', date: 'Sáb 07, Jun 2025', description: <CustomLink href='ti3v31/lectura05'>CSS3: aplicación de estilos según un diseño</CustomLink> },
         { week: '03', lecture: '06', date: 'Sáb 14, Jun 2025', description: <CustomLink href='ti3v31/lectura06'>Git y GitHub: implementación de políticas de respaldo</CustomLink> },
         { week: '04', lecture: '07', date: 'Sáb 21, Jun 2025', description: <ExternalLink href='/inacap/ti3v31/docs/lectura07.pdf'>Unidad 2: Interacción con documentos HTML usando JavaScript</ExternalLink> },
-        { week: '', lecture: '08', date: 'Sáb 21, Jun 2025', description: 'Manipulación del DOM con JavaScript: guía paso a paso' },
-        { week: '', lecture: '09', date: 'Sáb 21, Jun 2025', description: 'Validación y modularización de formularios y códigos en JavaScript: manual práctico' },
-        { week: '05', lecture: '09', date: 'Sáb 28, Jun 2025', description: 'Manejo de arreglos y objetos en JavaScript: ejercicios y ejemplos prácticos' },
-        { week: '06', lecture: '10', date: 'Sáb 05, Jul 2025', description: 'Unidad 3: Framework basado en JavaScript' },
-        { week: '', lecture: '11', date: 'Sáb 05, Jul 2025', description: 'Evolución de los frameworks de JavaScript en el desarrollo web moderno' },
-        { week: '', lecture: '12', date: 'Sáb 05, Jul 2025', description: 'Elementos esenciales de los frameworks de JavaScript' },
-        { week: '07', lecture: '13', date: 'Sáb 12, Jul 2025', description: 'Codificación de componentes en JavaScript con componentes en React' },
-        { week: '08', lecture: '14', date: 'Sáb 19, Jul 2025', description: 'Implementación de CRUD con local storage en JavaScript' },
-        { week: '', lecture: '15', date: 'Sáb 19, Jul 2025', description: 'Acceso a datos externos con Fetch y Axios en JavaScript' },
+        { week: '', lecture: '08', date: 'Sáb 21, Jun 2025', description: <CustomLink href='ti3v31/lectura08'>Manipulación del DOM con JavaScript</CustomLink> },
+        { week: '', lecture: '09', date: 'Sáb 21, Jun 2025', description: <CustomLink href='ti3v31/lectura09'>Validación y modularización de formularios y códigos en JS</CustomLink> },
+        { week: '05', lecture: '10', date: 'Sáb 28, Jun 2025', description: 'Manejo de arreglos y objetos en JS: ejercicios y ejemplos prácticos' },
+        { week: '06', lecture: '11', date: 'Sáb 05, Jul 2025', description: 'Unidad 3: Framework basado en JS' },
+        { week: '', lecture: '12', date: 'Sáb 05, Jul 2025', description: 'Evolución de los frameworks de JS en el desarrollo web moderno' },
+        { week: '', lecture: '13', date: 'Sáb 05, Jul 2025', description: 'Elementos esenciales de los frameworks de JS' },
+        { week: '07', lecture: '14', date: 'Sáb 12, Jul 2025', description: 'Codificación de componentes en JavaScript con componentes en React' },
+        { week: '08', lecture: '15', date: 'Sáb 19, Jul 2025', description: 'Implementación de CRUD con local storage en JS' },
+        { week: '', lecture: '16', date: 'Sáb 19, Jul 2025', description: 'Acceso a datos externos con Fetch y Axios en JS' },
 
     ],
 };
 export default courseData;
-    

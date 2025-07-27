@@ -35,6 +35,7 @@
   font-size: 0.9rem;
   color: var(--foreground, #111111);
   transition: color 0.3s ease;
+  white-space: pre-wrap; /* Preserva espacios y saltos de línea */
 }
 
 /* Mantener esta clase para compatibilidad, pero no se usará para el texto */
@@ -79,6 +80,7 @@
 
 .optionText {
   flex: 1;
+  white-space: pre-wrap; /* Preserva espacios y saltos de línea */
 }
 
 .optionButton:hover {

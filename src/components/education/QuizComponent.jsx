@@ -9,11 +9,12 @@ export const QuizQuestion = ({ question, options, correctIndex, questionNumber }
   
   // Efecto para cargar la librería canvas-confetti
   useEffect(() => {
-    // Importar canvas-confetti dinámicamente (solo en el cliente)
     if (typeof window !== 'undefined' && !window.confettiLoaded) {
       import('canvas-confetti').then(module => {
         window.confetti = module.default;
         window.confettiLoaded = true;
+      }).catch(error => {
+        console.warn('Error al cargar canvas-confetti:', error);
       });
     }
   }, []);
@@ -28,37 +29,41 @@ export const QuizQuestion = ({ question, options, correctIndex, questionNumber }
   // Función para disparar el confeti usando canvas-confetti
   const triggerConfetti = () => {
     if (typeof window !== 'undefined' && window.confetti) {
-      const myConfetti = window.confetti.create(confettiCanvasRef.current, {
-        resize: true,
-        useWorker: true
-      });
-      
-      // Dispara confeti desde el centro
-      myConfetti({
-        particleCount: 150,
-        spread: 70,
-        origin: { y: 0.6 }
-      });
-      
-      // Dispara desde la izquierda
-      setTimeout(() => {
-        myConfetti({
-          particleCount: 100,
-          angle: 60,
-          spread: 55,
-          origin: { x: 0 }
+      try {
+        const myConfetti = window.confetti.create(confettiCanvasRef.current, {
+          resize: true,
+          useWorker: true
         });
-      }, 250);
-      
-      // Dispara desde la derecha
-      setTimeout(() => {
+        
+        // Dispara confeti desde el centro
         myConfetti({
-          particleCount: 100,
-          angle: 120,
-          spread: 55,
-          origin: { x: 1 }
+          particleCount: 150,
+          spread: 70,
+          origin: { y: 0.6 }
         });
-      }, 400);
+        
+        // Dispara desde la izquierda
+        setTimeout(() => {
+          myConfetti({
+            particleCount: 100,
+            angle: 60,
+            spread: 55,
+            origin: { x: 0 }
+          });
+        }, 250);
+        
+        // Dispara desde la derecha
+        setTimeout(() => {
+          myConfetti({
+            particleCount: 100,
+            angle: 120,
+            spread: 55,
+            origin: { x: 1 }
+          });
+        }, 400);
+      } catch (error) {
+        console.warn('Error al disparar confetti:', error);
+      }
     }
   };
 

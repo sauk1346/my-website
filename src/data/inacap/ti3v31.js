@@ -35,7 +35,7 @@ const courseData = {
             evaluationNumber: 3,
             date: 'Dom 27, Jul 2025',
             weighting: '40%',
-            description: 'Evaluación 03: React',
+            description: <CustomLink href='ti3v31/eval03'>Evaluación 03: React</CustomLink>,
             quickGuide: ''
         },
         { 

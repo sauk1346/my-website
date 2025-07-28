@@ -15,9 +15,9 @@ export const subjects = [
     { code: 'MVFM01', name: 'Funciones y Matrices', semester: 2, year: 2024, category: 'math', status: 'completed', href: '/inacap/mvfm01' },
     
     // Semestre 3 - 2025
-    { code: 'TI3V31', name: 'Programación Front End', semester: 3, year: 2025, category: 'programming', status: 'current', href: '/inacap/ti3v31' },
+    { code: 'TI3V31', name: 'Programación Front End', semester: 3, year: 2025, category: 'programming', status: 'completed', href: '/inacap/ti3v31' },
     { code: 'TI3V32', name: 'Bases de Datos No Estructuradas', semester: 3, year: 2025, category: 'database', status: 'completed', href: '/inacap/ti3v32' },
-    { code: 'TI3V35', name: 'Sistemas Operativos', semester: 3, year: 2025, category: 'systems', status: 'current', href: '/inacap/ti3v35' },
+    { code: 'TI3V35', name: 'Sistemas Operativos', semester: 3, year: 2025, category: 'systems', status: 'completed', href: '/inacap/ti3v35' },
     { code: 'TI3V34', name: 'Fundamentos de Seguridad de la Información', semester: 3, year: 2025, category: 'security', status: 'completed', href: '/inacap/ti3v34' },
     { code: 'TILV01', name: '(Electivo I) Plan de Pruebas de Software', semester: 3, year: 2025, category: 'programming', status: 'completed', href: '/inacap/tilv21' },
     { code: 'FVIE01', name: 'Innovación y Emprendimiento I', semester: 3, year: 2025, category: 'business', status: 'completed', href: '/inacap/fvie01' },
@@ -83,8 +83,8 @@ export const subjects = [
   export const semesters = [
     { number: 1, year: 2024, status: 'completed' },
     { number: 2, year: 2024, status: 'completed' },
-    { number: 3, year: 2025, status: 'current' },
-    { number: 4, year: 2025, status: 'pending' },
+    { number: 3, year: 2025, status: 'completed' },
+    { number: 4, year: 2025, status: 'current' },
     { number: 5, year: 2026, status: 'pending' },
     { number: 6, year: 2026, status: 'pending' },
     { number: 7, year: 2027, status: 'pending' },

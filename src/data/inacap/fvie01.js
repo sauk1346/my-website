@@ -9,7 +9,7 @@ const courseData = {
 
     professorData: {
         name: "Rafael Ernesto Contreras Valdebenito",
-        email: "rafael.contr@gmail.com"
+        email: "rafael.contreras02@inacapmail.cl"
     },
     unitsData: [
         { unit: '1', description: 'Dirección de Oportunidades e Ideación de Propuestas' },
@@ -59,7 +59,7 @@ const courseData = {
         { week: '', class: '17', date: 'Jue 17, Jul 2025', description: "Consultas Informe 02" },
     ],
     lectureData: [
-        { week: '01', lecture: '01', date: 'Sáb 24, May 2025', description: <ExternalLink href="/inacap/fvie01/docs/manual01.pdf">Manual Estudiante Unidad 01</ExternalLink> },
+        { week: '01', lecture: '01', date: 'Sáb 24, May 2025', description: <ExternalLink href="/inacap/fvie01/docs/manual01.pdf">Manual Estudiante <b>Unidad 01</b></ExternalLink> },
         { week: '01', lecture: '02', date: 'Sáb 24, May 2025', description: <CustomLink href='fvie01/lectura02'>Entrevista a usuario</CustomLink> },
         { week: '', lecture: '03', date: 'Sáb 24, May 2025', description: <CustomLink href='fvie01/lectura03'>Elaboración de cuestionarios</CustomLink> },
         { week: '', lecture: '04', date: 'Sáb 24, May 2025', description: <CustomLink href='fvie01/lectura04'>Observación no participante</CustomLink> },
@@ -69,12 +69,12 @@ const courseData = {
         { week: '', lecture: '08', date: 'Sáb 07, Jun 2025', description: <CustomLink href='fvie01/lectura08'>Formulario Requerimientos</CustomLink> },
         { week: '', lecture: '09', date: 'Sáb 07, Jun 2025', description: <CustomLink href='fvie01/lectura09'>Brainstorming</CustomLink> },
         { week: '04', lecture: '', date: '', description: '' },
-        { week: '05', lecture: '10', date: 'Sáb 21, Jun 2025', description: <ExternalLink href="/inacap/fvie01/docs/manual02.pdf">Manual Estudiante Unidad 02</ExternalLink> },
+        { week: '05', lecture: '10', date: 'Sáb 21, Jun 2025', description: <ExternalLink href="/inacap/fvie01/docs/manual02.pdf">Manual Estudiante <b>Unidad 02</b></ExternalLink> },
         { week: '05', lecture: '11', date: 'Sáb 21, Jun 2025', description: <CustomLink href='fvie01/lectura11'>Modelo de negocio Business Canvas Model</CustomLink> },
         { week: '', lecture: '12', date: 'Sáb 21, Jun 2025', description: <CustomLink href='fvie01/lectura12'>Métodos de experimentación cliente/usuario</CustomLink> },
         { week: '06', lecture: '13', date: 'Sáb 28, Jun 2025', description: <CustomLink href='fvie01/lectura13'>Desarrollo de la experimentación y ajuste del modelo de negocio</CustomLink> },
         { week: '07', lecture: '', date: '', description: '' },
-        { week: '08', lecture: '14', date: 'Sáb 12, Jul 2025', description: <ExternalLink href="/inacap/fvie01/docs/manual03.pdf">Manual Estudiante Unidad 3</ExternalLink> },
+        { week: '08', lecture: '14', date: 'Sáb 12, Jul 2025', description: <ExternalLink href="/inacap/fvie01/docs/manual03.pdf">Manual Estudiante <b>Unidad 03</b></ExternalLink> },
         { week: '', lecture: '15', date: 'Sáb 12, Jul 2025', description: <CustomLink href='fvie01/lectura15'>Fase de Propuesta de Valor INACAP</CustomLink> },
         { week: '', lecture: '16', date: 'Sáb 12, Jul 2025', description: <CustomLink href='fvie01/lectura16'>Crear una Empresa en Chile</CustomLink> },
         { week: '09', lecture: '17', date: 'Sáb 19, Jul 2025', description: <CustomLink href='fvie01/lectura17'>Pitch de Negocio</CustomLink> },

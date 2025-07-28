@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useEffect, useState } from 'react';
-import ProfessorCard from '@/components/education/ProfessorCard';
+import ProfessorCard from '@/components/features/inacap/ProfessorCard';
 import styles from'@/styles/Asignature.module.css';
 import ExternalLink from '@/components/ui/ExternalLink';
 import CustomLink from '@/components/ui/CustomLink';

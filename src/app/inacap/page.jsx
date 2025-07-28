@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import styles from '@/styles/Inacap.module.css';
 import { subjects, categories, statusConfig, semesters } from '@/data/inacap/inacapData';
-import Calendar from '@/components/education/Calendar';
+import Calendar from '@/components/features/inacap/Calendar';
 import calendar25 from '@/data/inacap/calendar25.js';
 
 const InacapImproved = () => {

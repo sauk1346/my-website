@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react';
-import CourseDetails from '@/components/education/CourseDetails';
+import CourseDetails from '@/components/features/inacap/CourseDetails';
 import courseData from '@/data/inacap/avan01';
 
 export default function Avan01Page() {

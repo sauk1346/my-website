@@ -1,7 +1,7 @@
 import React from 'react';
 import { notFound } from 'next/navigation';
 import dynamic from 'next/dynamic';
-import { CustomMDXProvider } from '@/components/CustomMDXProvider';
+import { CustomMDXProvider } from '@/components/providers/CustomMDXProvider';
 
 export default async function Page({ params }) {
   // Usar async/await para obtener los parámetros

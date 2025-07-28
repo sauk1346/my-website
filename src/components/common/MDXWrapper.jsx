@@ -1,6 +1,6 @@
 "use client"
 import React from 'react';
-import TableOfContents from './education/TableOfContents';
+import TableOfContents from './TableOfContents';
 import styles from '@/styles/MDXWrapper.module.css';
 
 const MDXWrapper = ({ children }) => {

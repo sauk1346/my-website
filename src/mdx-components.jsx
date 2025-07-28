@@ -1,8 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
 import styles from './styles/clases.module.css';
-import { CodeBlock } from "./components/education/CodeBlock";
-import MDXWrapper from './components/MDXWrapper';
+import { CodeBlock } from "./components/ui/CodeBlock";
+import MDXWrapper from './components/common/MDXWrapper';
 import 'katex/dist/katex.min.css'; // Importar estilos de KaTeX
 import { InlineMath, BlockMath } from 'react-katex'; // Importar componentes de react-katex
 

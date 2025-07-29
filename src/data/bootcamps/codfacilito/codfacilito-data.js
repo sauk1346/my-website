@@ -14,13 +14,13 @@ export const codfacilitoData = {
           {
             code: "CFT002", 
             name: "DevOps",
-            link: null,
+            link: "codfacilito/cft002",
             certificate: ""
           },
           {
             code: "CFT003",
             name: "Python", 
-            link: null,
+            link: "codfacilito/cft003",
             certificate: ""
           }
         ]

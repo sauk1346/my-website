@@ -1,0 +1,155 @@
+# Introducción a Python
+
+## 1. Comentarios
+Existen 2 formas
+
+- Utilizando el númeral (\#)
+- Utilizando triple comillas (\"\"\")
+
+```python
+# Esta línea es un comentario
+print("¡Hola mundo")
+
+"""
+Este es un comentario
+con múltiples
+saltos de línea
+"""
+```
+
+## 2. Variables
+- Estructura base: `<variable> = <valor>`
+- No es necesario definir el tipo de dato de la variable
+
+```python
+name = "código facilito"
+age = 25
+```
+
+## 3. Tipos de Datos
+- strings
+- integers
+- floats
+- booleans
+
+```python
+primer_nombre= "Juan"
+edad = 27
+saldo = 1_000_000
+peso = 80.5
+soltero = False
+
+print(type(primer_nombre))
+print(type(edad))
+print(type(saldo))
+print(type(peso))
+print(type(soltero))
+```
+> \<class 'str'\>
+> \<class 'int'\>
+> \<class 'int'\>
+> \<class 'float'\>
+> \<class 'bool'\>
+
+## 4. Constantes
+- En python **no existe** el concepto de constante.
+- Se puede "recrear" utilizando una nomenclatura diferente (utilizar mayusculas)
+
+```python
+VERSION = 3.14
+
+print(VERSION)
+```
+
+## 5. Números
+
+```python
+number = 11            
+result_1 = number + 10   # entero
+result_2 = number / 10   # flotante
+result_3 = number // 10  # entero
+
+print("primer resultado:", result_1)
+print("segundo resultado:", result_2)
+print("tercer resultado:", result_3)
+```
+> primer resultado: 21
+> segundo resultado: 1.1
+> tercer resultado: 1
+
+## 6. Operadores Relacionales
+Los operadores relacionales siempre darán como resultado un valor de tipo booleano.
+
+|Operadores||
+|---|---|
+|`==`|igual a|
+|`>`|mayor a|
+|`>=`|mayor o igual a|
+|`<`|menor a|
+|`<=`|menor o igual a|
+|`!=`|distinto a|
+
+```python
+number_one = 10
+number_two = 20
+
+result = number_one == number_two
+print(result)
+```
+> False
+
+## 7. Operadores Lógicos
+
+- Son 3: `and`, `or`, `not`
+- Al utilizarlos, siempre tendremos un valor booleano
+
+```python
+number_one = 10
+number_two = 20
+
+result_1 = True and True
+result_2 = True and True and number_one == number_two
+result_3 = number_one != number_two
+
+print(result_1)
+print(result_2)
+print(result_3)
+```
+> True
+> False
+> True
+
+## 8. Pedir Valores por Teclado
+Se utiliza la función `input()` 
+
+```python
+name = input("Ingrese su nombre: ")
+
+print(name)
+```
+
+## 9. Generar Nuevos Tipos de Datos
+- `input()` siempre trabaja con datos string
+- Sin embargo, a veces es necesario trabajar con distintos tipos de datos
+
+
+```python
+first_name = input("Ingresa tu nombre: ")
+age = int(input("Ingresa tu edad: "))
+height = float(input("Ingresa tu altura: "))
+status = input("Tu usuario se encuentra activo? (s/n)") == "s"
+```
+
+## 10. Múltiples Variables
+Es posible crear múltiples variables en una sola línea de código
+
+```python
+first_name, age, is_active = "Cody", 13, True
+
+print(first_name)
+print(age)
+print(is_active)
+```
+> Cody
+> 13
+> True

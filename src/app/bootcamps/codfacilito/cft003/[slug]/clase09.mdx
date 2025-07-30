@@ -1,0 +1,110 @@
+# Diccionarios
+- Nomenclatura: `dic = {clave_1:valor_1, clave_2:valor_2}`
+- Son **mutables**
+
+```python
+user = {
+    'name': 'User1',
+    'age': 10,
+    'active': True,
+    'courses': ['Python', 'Django,', 'Redis'],
+    'settings': (123,True)
+}
+
+print(user)
+```
+> \{'name': 'User1', 'age': 10, 'active': True, 'courses': \['Python', 'Django,', 'Redis'\], 'settings': (123, True)\}
+
+## 1. LLaves de diccionarios
+Las llaves por lo general serán strings, pero es posible utilizar otros objetos inmutables como llave.
+
+```python
+user = {
+    10: 'Eduardo',
+    3.14: 'Ismael',
+    True: False,
+    (1, 2, 3): 'Tupla'
+}
+
+print(user)
+``` 
+
+> \{10: 'Eduardo', 3.14: 'Ismael', True: False, (1, 2, 3): 'Tupla'\}
+
+Si bien es posible de esta forma, no se recomienda ya que es poco legible.
+
+## 2. Obtener Elementos
+
+```python
+user = {
+    'name': 'Cody',
+    'age': 10,
+    'active': True,
+    'courses': ['Python', 'Django,', 'Redis'],
+    'settings': (123,True)
+}
+
+# método 1
+print(user['name'])
+
+# método 2
+print(user.get('name'))
+print(user.get('password'))
+```
+> Cody
+> Cody
+> None
+
+## 3. Claves, Valores, Pares
+
+|Método||
+|---|---|
+|`keys()`|Obtiene todas las claves del diccionario|
+|`values()`|Obtiene todos los valores del diccionario|
+|`items()`|Obtiene todos los pares clave-valor del diccionario|
+
+```python
+user = {
+    'name': 'Cody',
+    'age': 10,
+    'active': True,
+    'courses': ['Python', 'Django,', 'Redis'],
+    'settings': (123,True)
+}
+
+print(f'las claves son: {list(user.keys())}')
+print(f'las valores son: {list(user.values())}')
+print(f'los pares clave-valor son: {list(user.items())}')
+```
+
+> las claves son: \['name', 'age', 'active', 'courses', 'settings'\]
+> las valores son: \['Cody', 10, True, \['Python', 'Django,', 'Redis'\], (123, True)\]
+> los pares clave-valor son: \[('name', 'Cody'), ('age', 10), ('active', True), ('courses', \['Python', 'Django,', 'Redis'\]), ('settings', (123, True))\]
+
+## 4. Actualizar Diccionarios
+
+```python
+user = {
+    'name': 'Cody',
+    'age': 10,
+    'active': True,
+    'courses': ['Python', 'Django,', 'Redis'],
+    'settings': (123,True)
+}
+
+# actualiza una clave
+user['name'] = 'Código'
+
+# agrega una nueva clave
+user['last_name'] = 'Fácilito'
+
+## método 2
+user.update({
+    'name': "Hackerrank",
+    'last_name': 'Python Course'
+})
+
+print(user)
+```
+> \{'name': 'Hackerrank', 'age': 10, 'active': True, 'courses': \['Python', 'Django,', 'Redis'\], 'settings': (123, True), 'last_name': 'Python Course'\}
+

@@ -8,7 +8,7 @@ export const cft002Data = {
         classes: [
           {
             name: "Clase 01: Definición de DevOps y Principios Básicos",
-            link: null
+            link: "cft002/clase01"
           },
           {
             name: "Clase 02: Cultura de Colaboración y Automatización", 

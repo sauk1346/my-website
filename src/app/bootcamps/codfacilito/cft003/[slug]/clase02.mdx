@@ -1,0 +1,132 @@
+# Instalación y configuración Python
+
+## Sistema Operativo
+
+### 1. Windows
+
+1. Ir al link: https://www.python.org/downloads/
+2. En instalación, agregar "Add Python to PATH"
+
+### 2. Linux/MacOS
+
+- En Linux generalmente ya viene instalado
+- Los pasos son similares a windows, descargar e instalar
+
+En estos sistemas se hace diferencia entre python 2 y python 3
+
+```sh
+# ejecuta script utilizando python 3 (reciente)
+python3 mi-script.py
+
+# ejecuta script utilizando python 2 (antiguo)
+python my-script.py
+```
+
+## Editor de Texto
+
+### 1. Visual Studio Code
+
+- Link: https://code.visualstudio.com/
+
+### 2. Extensiones VS Code
+Herramientas adicionales que facilitan la creación de código. Son opcionales
+
+- **Python:** Highlight y completado de código python
+- **Docstring:** documentar de forma correcta en python
+- **Material Icon Theme:** Iconos extras para archivos y carpetas
+
+### 3. Comandos VS Code
+
+|Comando|Descripción|
+|---|---|
+|`ctrl + b`|Colapsa la ventana de la derecha|
+|`ctrl + o`|Permite abrir un archivo|
+|`ctrl + s`|Guarda los cambios realizados|
+|`ctrl + l`|Selecciona la línea donde está el cursor|
+|`ctrl + d`|Selecciona todas las coincidencias de la selección actual|
+|`ctrl + f`|Busca un caracter o string dentro del archivo|
+
+## Guía de Estilos para Python
+
+A modo de buenas prácticas, se utiliza la nomenclatura **PEP-8**: https://peps.python.org/pep-0008/
+
+### 1. Variables
+
+- Se utiliza `snake_case`
+- Se utiliza espacios al asignar valores
+
+```python
+cody_user = User('Cody')
+```
+
+### 2. Clases
+
+- Se utiliza `CamelCase`
+
+```python
+class UserAdmin():
+    ...
+    ...
+    ...
+```
+
+### 3. Identación
+
+- **No** se utilizan tabs.
+- Se utilizan 4 espacios. 
+
+
+## Entornos de Desarrollo
+- Mecanismo para gestionar dependencias.
+- Creación de espacios aislados para cada proyecto.
+- Permite evitar errores en cuanto a las dependencias instaladas.
+
+### Ejemplo 1
+
+Nos encontramos trabajando con un equipo que utiliza Djando v2.1
+
+```python
+pip install Django==2.1
+```
+
+Sin embargo, esto no es muy buena idea, ya que el día de mañana podríamos tener que trabajar con distintos equipos de trabajo, que utilizan distintas versiones de Django.
+
+### Ejemplo 2: creción entorno
+
+1. crear proyecto
+
+```sh
+mkdir mi-proyecto
+cd mi-proyecto
+```
+
+2. crear entorno "env"
+
+```sh
+python -m venv env
+```
+
+3. activar entorno
+
+```sh
+env\Scripts\activate
+```
+
+## Listado de dependencias
+Permite ver todas las dependencias instaladas
+
+```sh
+pip freeze
+```
+
+Una buena práctica, es guardar esta lista en un "requirements.txt"
+
+```sh
+pip freeze > requirements.txt
+```
+
+Esto nos facilita el migrar nuestro proyecto entre distintos sistemas operativos (windows, macOS, linux)
+
+```sh
+pip install -r requirements.txt
+```

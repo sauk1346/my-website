@@ -1,0 +1,94 @@
+# Listas
+
+- Nomenclatura: `<variable> = []`
+- Son objetos **mutables**, se puede cambiar su longitud.
+- Es buena práctica trabajar con listas de un solo tipo de datos.
+
+```python
+my_list = ["String", 10, 3.14, True, [1, 2, 3]]
+
+print(my_list)
+print(type(my_list))
+```
+> \['String', 10, 3.14, True, \[1, 2, 3\]\]
+> \<class 'list'\>
+
+## 1. Índices
+
+Indica la posición de un elemento de la lista.
+
+```python
+courses = ["Python", "Django", "Flask", "Ruby", "MongoDB"]
+
+value_1 = courses[2]   # elemento en el índice 2
+value_2 = courses[-1]  # elemento en el último índice
+
+print(value_1)
+print(value_2)
+```
+> Flask
+> MongoDB
+
+## 2. Sublistas
+- Nomenclatura: `list = [start:end:skip]`
+- Se utiliza el concepto de *slicing*.
+- Todas las técnicas slicing crean una copia, no modifican la lista original.
+
+```python
+courses = ["Python", "Django", "Flask", "Ruby", "MongoDB"]
+
+new_list_1 = courses[:3]   # sublista desde índice 0 a 3 (no inclusivo)
+new_list_2 = courses[2:]   # sublista desde índice 2 a último
+new_list_3 = courses[:]    # copia (sublista con todos los elementos)
+new_list_4 = courses[::2]  # saltos de 2 en 2
+new_list_5 = courses[::-1] # copia invertida de la lista
+
+print(new_list_1)
+print(new_list_2)
+print(new_list_3)
+print(new_list_4)
+print(new_list_5)
+```
+> \['Python', 'Django', 'Flask'\]
+> \['Flask', 'Ruby', 'MongoDB'\]
+> \['Python', 'Django', 'Flask', 'Ruby', 'MongoDB'\]
+> \['Python', 'Flask', 'MongoDB'\]
+> \['MongoDB', 'Ruby', 'Flask', 'Django', 'Python'\]
+
+## 3. Métodos
+
+|Método|Descripción|
+|---|---|
+|`append(i)`|Agrega un **elemento-i** al final de la **lista base**|
+|`insert(i,j)`|Agrega un **elemento-j** en el **índice-i**|
+|`extend(i)`|Agrega la **lista-i** al final de la **lista base**|
+|`in`|Booleano. Permite **buscar** un **elemento** en la **lista**|
+|`index(i)`|Devuelve el **índice** del **elemento-i**|
+|`remove(i)`|Elimina el **elemento-i** de la **lista base**|
+|`pop(i)`|**Devuelve y elimina** el **elemento-i** de la **lista base**|
+|`clear()`|Elimina **todos los elementos** de la **lista base**|
+|`copy()`|Crea una copia de la **lista base**|
+|`reverse()`|Invierte la posición de los elementos de la **lista base**|
+|`sort()`|Ordena la lista de forma **ascendente por default**|
+
+
+## 4. Matrices
+Son listas que almacenan sublistas
+
+```python
+# matriz 3x3
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+print(matrix)
+print(matrix[0][0]) # primer elemento
+print(matrix[2][2]) # último elemento
+print(matrix[1][1]) # elemento del centro
+```
+> \[\[1, 2, 3\], \[4, 5, 6\], \[7, 8, 9\]\]
+> 1
+> 9
+> 5

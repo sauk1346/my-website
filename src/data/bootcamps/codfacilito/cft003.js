@@ -12,7 +12,7 @@ export const cft003Data = {
           },
           {
             name: "Clase 02: Instalación y configuración de Python", 
-            link: null
+            link: "cft003/clase02"
           },
         ]
       },
@@ -21,12 +21,32 @@ export const cft003Data = {
         name: "Fundamentos de programación en Python",
         classes: [
           {
-            name: "Clase 03: Condiciones",
+            name: "Clase 03: Introducción a Python",
+            link: "cft003/clase03"
+          },
+          {
+            name: "Clase 04: Condiciones", 
             link: null
           },
           {
-            name: "Clase 04: Ciclos", 
+            name: "Clase 05: Ciclos", 
             link: null
+          },
+          {
+            name: "Clase 06: Strings",
+            link: "cft003/clase06"
+          },
+          {
+            name: "Clase 07: Listas",
+            link: "cft003/clase07"
+          },
+          {
+            name: "Clase 08: Tuplas",
+            link: "cft003/clase08"
+          },
+          {
+            name: "Clase 09: Diccionarios",
+            link: "cft003/clase09"
           },
         ]
       },
@@ -35,19 +55,11 @@ export const cft003Data = {
         name: "Programación funcional en Python",
         classes: [
           {
-            name: "Clase 05: Listas",
+            name: "Clase 10: Funciones",
             link: null
           },
           {
-            name: "Clase 06: Tuplas",
-            link: null
-          },
-          {
-            name: "Clase 07: Funciones",
-            link: null
-          },
-          {
-            name: "Clase 08: Programación Funcional",
+            name: "Clase 11: Programación Funcional",
             link: null
           },
         ]
@@ -57,11 +69,11 @@ export const cft003Data = {
         name: "Programación Orientada a Objetos en Python",
         classes: [
           {
-            name: "Clase 09: Clases",
+            name: "Clase 12: Clases",
             link: null
           },
           {
-            name: "Clase 10: Objetos",
+            name: "Clase 13: Objetos",
             link: null
           },
         ]
@@ -71,11 +83,11 @@ export const cft003Data = {
         name: "Organización del código y modularización",
         classes: [
           {
-            name: "Clase 11: Módulos y Paquetes",
+            name: "Clase 14: Módulos y Paquetes",
             link: null
           },
           {
-            name: "Clase 12: Documentación de Proyectos",
+            name: "Clase 15: Documentación de Proyectos",
             link: null
           },
         ]
@@ -85,15 +97,11 @@ export const cft003Data = {
         name: "Novedades del lenguaje Python",
         classes: [
           {
-            name: "Clase 13: Strings",
+            name: "Clase 16: Anotaciones y type hints",
             link: null
           },
           {
-            name: "Clase 14: Anotaciones y type hints",
-            link: null
-          },
-          {
-            name: "Clase 15: Manejo de Excepciones",
+            name: "Clase 17: Manejo de Excepciones",
             link: null
           },
         ]
@@ -103,11 +111,11 @@ export const cft003Data = {
         name: "Uso del ecosistema Python", 
         classes: [
           {
-            name: "Clase 16: Paquetes que deberías conocer",
+            name: "Clase 18: Paquetes que deberías conocer",
             link: null
           },
           {
-            name: "Clase 17: Manejo de tiempo",
+            name: "Clase 19: Manejo de tiempo",
             link: null
           },
         ]
@@ -117,11 +125,11 @@ export const cft003Data = {
         name: "Conocimientos intermedio/avanzados",
         classes: [
           {
-            name: "Clase 18: Threads y procesos",
+            name: "Clase 20: Threads y procesos",
             link: null
           },
           {
-            name: "Clase 19: Proyecto con Decoradores",
+            name: "Clase 21: Proyecto con Decoradores",
             link: null
           },
         ]

@@ -1,9 +1,9 @@
 'use client';
 
 import styles from '@/styles/leetcode.module.css';
-import FilterControls from '@/components/table/FilterControls';
-import ProblemStats from '@/components/table/ProblemStats';
-import ProblemTable from '@/components//table/ProblemTable';
+import FilterControls from '@/components/common/table/FilterControls';
+import ProblemStats from '@/components/features/leetcode/ProblemStats';
+import ProblemTable from '@/components/features/leetcode/ProblemTable';
 import { useFilters } from '@/hooks/useFilters';
 import { problems } from '@/data/leetcode/problems';
 import { categories } from '@/data/leetcode/categories';

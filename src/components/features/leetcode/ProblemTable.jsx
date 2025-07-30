@@ -1,8 +1,8 @@
 import { useMemo } from 'react';
 import styles from '@/styles/leetcode.module.css';
 import CustomLink from '@/components/ui/CustomLink';
-import PaginationControls from '@/components/table/PaginationControls';
-import SortableHeader from '@/components/table/SortableHeader';
+import PaginationControls from '@/components/common/table/PaginationControls';
+import SortableHeader from '@/components/common/table/SortableHeader';
 import { usePagination } from '@/hooks/usePagination';
 import { useTableSort } from '@/hooks/useTableSort';
 

@@ -323,6 +323,12 @@ export const problems = {
       difficulty: "Easy",
       categories: ["pandas"]
     },
+    "LC2885": {
+      title: "Renombrar Columnas",
+      topics: ["Database"],
+      difficulty: "Easy",
+      categories: ["pandas"]
+    },
     "LC2894": {
       title: "Diferencia de Sumas Divisibles y No Divisibles",
       topics: ["Math"],

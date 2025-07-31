@@ -1,0 +1,83 @@
+# Cómo Resolver Problemas de Programación
+
+## Qué buscan las empresas
+
+- **Habilidades analíticas:** Capacidad para descomponer problemas complejos, identificar patrones, analizar datos y encontrar soluciones eficientes mediante razonamiento lógico y pensamiento crítico.
+- **Habilidades de Programación:** Dominio de lenguajes de programación, capacidad para escribir código limpio y eficiente, comprensión de algoritmos y estructuras de datos, y habilidad para implementar soluciones técnicas.
+- **Habilidades técnicas:** Conocimiento de herramientas, frameworks, bases de datos, sistemas operativos y tecnologías relevantes para el puesto, así como la capacidad de adaptarse a nuevas tecnologías.
+- **Habilidades de comunicación:** Capacidad para explicar conceptos técnicos de manera clara, colaborar efectivamente en equipos, presentar ideas, escribir documentación comprensible y facilitar el intercambio de conocimientos.
+
+## Estructura de Datos
+- Arrays
+- Stacks
+- Queues
+- Linked Lists
+- Trees
+- Tries
+- Graphs
+- Hash Tables
+
+## Algoritmos
+- Sorting
+- Dynamic Programming
+- BFS + DFS (Searching)
+- Recursion
+
+## Ejercicios
+
+Dados 2 arrays, crea una función que permita a un usuario saber (true/false) si esos 2 arrays contienen algún elemento en común.
+
+**Ejemplo**
+
+```js
+const array1 = ['a','b','c','x'];
+const array2 = ['z','y','i'];
+//retorna false
+```
+
+```js
+const array1 = ['a','b','c','x'];
+const array2 = ['z','y','x'];
+//retorna true
+```
+
+<details>
+    <summary>Solución</summary>
+```js
+// Sol1: O(n*m)
+const findCommonElement = (arr1, arr2) => {
+    
+    for (let i=0; i < arr1.length; i++) {
+        for (let j=0; j < arr2.length; j++) {
+            if (arr1[i] == arr2[j]) {
+                return true;
+            }
+        }
+    }
+    return false;
+}
+``` 
+
+```js
+//Sol2: O(n+m) 
+const findCommonElement2 = (arr1, arr2) => {
+    let map = {};
+    for (let i=0; i< arr1.length; i++) {
+        if(!map[i]) {
+            const item = arr1[i];
+            map[item] = true;
+        }
+    }
+
+    for (let j=0; j< arr2.length; j++) {
+        if (map[arr2[j]]) {
+            return true;
+        }
+    } 
+    return false;
+}
+```
+
+</details>
+
+

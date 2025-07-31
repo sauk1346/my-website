@@ -33,7 +33,7 @@ const Udm002 = () => {
                             </tr>
                             <tr className={styles.tableRow}>
                                 <td>04</td>
-                                <td>Cómo Resolver Problemas de Programación</td>
+                                <td><CustomLink href='udm002/section04'>Cómo Resolver Problemas de Programación</CustomLink></td>
                             </tr>
                             <tr className={styles.tableRow}>
                                 <td>05</td>

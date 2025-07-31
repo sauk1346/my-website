@@ -7,7 +7,7 @@ import Calendar from '@/components/features/inacap/Calendar';
 import calendar25 from '@/data/inacap/calendar25.js';
 
 const InacapImproved = () => {
-  const [selectedSemester, setSelectedSemester] = useState(3);
+  const [selectedSemester, setSelectedSemester] = useState(4);
 
   // Filtrado de materias (solo por semestre)
   const filteredSubjects = subjects.filter(subject => {

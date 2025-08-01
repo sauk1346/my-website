@@ -1,0 +1,170 @@
+/* COURSETABLE.MODULE.CSS - SOLO ESTILOS DE TABLAS DE CURSOS */
+
+/* Platform section */
+.section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    align-items: center;
+  }
+  
+  /* Platform title */
+  .platformTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 0;
+    text-align: center;
+    padding: 0.5rem;
+    background-color: #e5e7eb;
+    border-radius: 6px 6px 0 0;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    width: 100%;
+    max-width: 800px;
+  }
+  
+  :global(html.dark-mode) .platformTitle,
+  :global(html.dark-mode-override) .platformTitle {
+    color: #e5e7eb;
+    background-color: #374151;
+  }
+  
+  /* Table styles */
+  .table {
+    width: 100%;
+    max-width: 800px;
+    margin: 0;
+    table-layout: fixed;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 8px 8px;
+    border: 1px solid #d1d5db;
+    border-top: none;
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Tabla en modo oscuro */
+  :global(html.dark-mode) .table,
+  :global(html.dark-mode-override) .table {
+    background-color: #1e1e1e;
+    border: 1px solid #4b5563;
+    border-top: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
+  }
+  
+  .table th, .table td {
+    padding: 0.75rem;
+    text-align: left;
+    border: 1px solid #d1d5db;
+    transition: border-color 0.3s ease, color 0.3s ease;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  /* Anchos fijos para las columnas */
+  .table th:first-child,
+  .table td:first-child {
+    width: 100px;
+    min-width: 100px;
+  }
+  
+  .table th:nth-child(2),
+  .table td:nth-child(2) {
+    width: auto;
+    min-width: 200px;
+  }
+  
+  .table th:last-child,
+  .table td:last-child {
+    width: 150px;
+    min-width: 150px;
+  }
+  
+  /* Celdas de tabla en modo oscuro */
+  :global(html.dark-mode) .table th,
+  :global(html.dark-mode) .table td,
+  :global(html.dark-mode-override) .table th,
+  :global(html.dark-mode-override) .table td {
+    border: 1px solid #4b5563;
+    color: #e5e7eb;
+  }
+  
+  .table th {
+    background-color: #1f2937;
+    color: white;
+  }
+  
+  /* Encabezados de tabla en modo oscuro */
+  :global(html.dark-mode) .table th,
+  :global(html.dark-mode-override) .table th {
+    background-color: #111827;
+    color: #f9fafb;
+  }
+  
+  .table tr:hover {
+    background-color: #edf2f7;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Hover de filas en modo oscuro */
+  :global(html.dark-mode) .table tr:hover,
+  :global(html.dark-mode-override) .table tr:hover {
+    background-color: #2d3748;
+  }
+  
+  /* Course code */
+  .code {
+    font-family: monospace;
+    color: #4b5563;
+    transition: color 0.3s ease;
+  }
+  
+  /* Código en modo oscuro */
+  :global(html.dark-mode) .code,
+  :global(html.dark-mode-override) .code {
+    color: #9ca3af;
+  }
+  
+  /* Links in table */
+  .link {
+    color: #2563eb;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  /* Enlaces en modo oscuro */
+  :global(html.dark-mode) .link,
+  :global(html.dark-mode-override) .link {
+    color: #60a5fa;
+  }
+  
+  .link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Hover de enlaces en modo oscuro */
+  :global(html.dark-mode) .link:hover,
+  :global(html.dark-mode-override) .link:hover {
+    color: #93c5fd;
+  }
+  
+  /* Empty certificate placeholder */
+  .noCertificate {
+    color: #9ca3af;
+    font-style: italic;
+  }
+  
+  /* Responsive para las tablas */
+  @media (max-width: 768px) {
+    .platformTitle {
+      font-size: 1.1rem;
+    }
+    
+    .table th,
+    .table td {
+      padding: 0.5rem;
+      font-size: 0.9rem;
+    }
+  }

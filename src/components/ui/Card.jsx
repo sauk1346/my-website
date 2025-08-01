@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import styles from '@/shared/CardSystem.module.css';
+import styles from './Card.module.css';
 
 export function Card({ title, description, image, link, onClick, className }) {
   // Contenido común de la card

@@ -1,10 +1,10 @@
 import { useMemo } from 'react';
-import styles from '@/shared/leetcode.module.css';
+import { usePagination } from '@/hooks/usePagination';
+import { useTableSort } from '@/hooks/useTableSort';
 import CustomLink from '@/components/ui/CustomLink';
 import PaginationControls from '@/components/common/table/PaginationControls';
 import SortableHeader from '@/components/common/table/SortableHeader';
-import { usePagination } from '@/hooks/usePagination';
-import { useTableSort } from '@/hooks/useTableSort';
+import styles from './ProblemTable.module.css';
 
 const ProblemTable = ({
   title,

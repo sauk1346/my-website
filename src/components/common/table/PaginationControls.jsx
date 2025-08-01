@@ -1,4 +1,4 @@
-import styles from '@/shared/leetcode.module.css';
+import styles from './PaginationControls.module.css';
 
 const PaginationControls = ({ 
   pagination,

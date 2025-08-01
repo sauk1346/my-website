@@ -1,12 +1,12 @@
 'use client';
 
-import styles from '@/shared/leetcode.module.css';
 import FilterControls from '@/components/common/table/FilterControls';
 import ProblemStats from '@/components/features/leetcode/ProblemStats';
 import ProblemTable from '@/components/features/leetcode/ProblemTable';
 import { useFilters } from '@/hooks/useFilters';
 import { problems } from '@/data/leetcode/problems';
 import { categories } from '@/data/leetcode/categories';
+import styles from './leetcode.module.css';
 
 export default function LeetCode() {
   // Use custom filters hook

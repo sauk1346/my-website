@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Calendar, Book, CheckSquare, User, Grid3x3, Monitor, FileText, Clock, Percent } from 'lucide-react';
-import styles from '@/shared/Asignature.module.css';
+import styles from './CourseDetails.module.css';
 
 const CourseDetails = ({ 
   courseCode,

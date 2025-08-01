@@ -2,11 +2,11 @@
 
 import { Geist, Geist_Mono } from "next/font/google";
 import { useEffect } from "react";
-import "./globals.css";
 import Navbar from '@/components/layout/Navbar';
 import Breadcrumb from '@/components/layout/Breadcrumb';
-import "@/shared/override.css";
 import Footer from '@/components/layout/Footer';
+import "./globals.css";
+import "@/shared/override.css";
 import 'katex/dist/katex.min.css';
 
 const geistSans = Geist({

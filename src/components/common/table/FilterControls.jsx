@@ -1,5 +1,5 @@
 // components/FilterControls.jsx
-import styles from '@/styles/leetcode.module.css';
+import styles from '@/shared/leetcode.module.css';
 
 const FilterControls = ({
   searchTerm,

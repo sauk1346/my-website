@@ -1,4 +1,4 @@
-import styles from '@/styles/leetcode.module.css';
+import styles from '@/shared/leetcode.module.css';
 
 const SortableHeader = ({ column, label, sortConfig, onSort }) => {
   const isSorted = sortConfig.key === column;

@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import "./globals.css";
 import Navbar from '@/components/layout/Navbar';
 import Breadcrumb from '@/components/layout/Breadcrumb';
-import "@/styles/override.css";
+import "@/shared/override.css";
 import Footer from '@/components/layout/Footer';
 import 'katex/dist/katex.min.css';
 

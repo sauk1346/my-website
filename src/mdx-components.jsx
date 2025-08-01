@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import styles from './styles/clases.module.css';
+import styles from './shared/clases.module.css';
 import { CodeBlock } from "./components/ui/CodeBlock";
 import MDXWrapper from './components/common/MDXWrapper';
 import 'katex/dist/katex.min.css'; // Importar estilos de KaTeX

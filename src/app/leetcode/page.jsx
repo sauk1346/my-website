@@ -1,6 +1,6 @@
 'use client';
 
-import styles from '@/styles/leetcode.module.css';
+import styles from '@/shared/leetcode.module.css';
 import FilterControls from '@/components/common/table/FilterControls';
 import ProblemStats from '@/components/features/leetcode/ProblemStats';
 import ProblemTable from '@/components/features/leetcode/ProblemTable';

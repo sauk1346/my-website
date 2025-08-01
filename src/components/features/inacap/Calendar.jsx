@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import styles from '@/styles/Calendar.module.css';
+import styles from './Calendar.module.css';
 
 const Calendar = ({ eventos = [] }) => {
   const [currentDate, setCurrentDate] = useState(new Date());

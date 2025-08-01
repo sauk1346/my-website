@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Card } from "@/components/ui/Card";
-import styles from '@/styles/Home.module.css';
+import styles from '@/shared/Home.module.css';
 
 export default function Home() {
   return (

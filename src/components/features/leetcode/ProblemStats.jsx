@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import styles from '@/styles/leetcode.module.css';
+import styles from '@/shared/leetcode.module.css';
 
 const ProblemStats = ({ problems }) => {
   const stats = useMemo(() => {

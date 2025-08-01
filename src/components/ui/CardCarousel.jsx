@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Card } from "@/components/ui/Card";
-import styles from '@/styles/CardCarousel.module.css';
+import styles from './CardCarousel.module.css';
 
 export const CardCarousel = ({ platforms, platformsData, selectedPlatform, onCardClick }) => {
   const [currentIndex, setCurrentIndex] = useState(0);

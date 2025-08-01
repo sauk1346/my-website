@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import styles from '@/styles/CardSystem.module.css'
+import styles from '@/shared/CardSystem.module.css'
 const ProfessorCard = ({ professorData }) => {
   return (
     <div className={`${styles.card} ${styles.mediumSmallWidth} ${styles.extraPadding} ${styles.centered}`}>

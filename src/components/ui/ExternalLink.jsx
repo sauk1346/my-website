@@ -1,6 +1,6 @@
 // components/ExternalLink.jsx
 import React from 'react';
-import styles from '@/styles/ExternalLink.module.css'; // Opcional si prefieres CSS Modules
+import styles from './ExternalLink.module.css'; // Opcional si prefieres CSS Modules
 
 const ExternalLink = ({ href, children, newTab = true, ...props }) => {
   return (

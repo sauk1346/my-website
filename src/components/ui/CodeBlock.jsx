@@ -15,7 +15,7 @@ import "prismjs/components/prism-cpp";
 import "prismjs/components/prism-haskell";
 import "prismjs/components/prism-bash";
 import 'prismjs/components/prism-ruby';
-import styles from "@/styles/CodeBlock.module.css";
+import styles from "@/shared/CodeBlock.module.css";
 
 export function CodeBlock({ children, language }) {
   const codeRef = useRef(null);

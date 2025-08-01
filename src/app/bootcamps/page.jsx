@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card } from "@/components/ui/Card";
-import styles from '@/styles/elearning.module.css';
+import styles from '@/shared/elearning.module.css';
 
 export default function Bootcamps() {
   return (

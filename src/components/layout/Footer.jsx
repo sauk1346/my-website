@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { useRouter, usePathname } from 'next/navigation';
-import styles from '@/styles/Footer.module.css';
+import styles from './Footer.module.css';
 
 const Footer = () => {
   const router = useRouter();

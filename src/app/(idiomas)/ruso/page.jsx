@@ -1,5 +1,4 @@
-import styles from '@/styles/elearning.module.css'
-import Link from 'next/link';
+import styles from '@/shared/elearning.module.css'
 
 const Ruso = () => {
     return (

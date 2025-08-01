@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import styles from '@/styles/leetcode.module.css';
+import styles from '@/shared/leetcode.module.css';
 import CustomLink from '@/components/ui/CustomLink';
 import PaginationControls from '@/components/common/table/PaginationControls';
 import SortableHeader from '@/components/common/table/SortableHeader';

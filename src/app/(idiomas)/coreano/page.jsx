@@ -1,4 +1,4 @@
-import styles from '@/styles/elearning.module.css'
+import styles from '@/shared/elearning.module.css'
 import Link from 'next/link';
 
 const Coreano = () => {

@@ -1,6 +1,6 @@
 "use client"
 import React, { useEffect, useState, useCallback, useRef } from 'react';
-import styles from '@/styles/TableOfContents.module.css';
+import styles from './TableOfContents.module.css';
 
 const TableOfContents = () => {
   const [headings, setHeadings] = useState([]);

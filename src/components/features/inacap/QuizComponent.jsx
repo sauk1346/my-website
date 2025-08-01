@@ -1,6 +1,6 @@
 'use client'
 import React, { useState, useEffect, useRef } from 'react';
-import styles from '@/styles/QuizComponent.module.css';
+import styles from './QuizComponent.module.css';
 
 export const QuizQuestion = ({ question, options, correctIndex, questionNumber }) => {
   const [selectedOption, setSelectedOption] = useState(null);

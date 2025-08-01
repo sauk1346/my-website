@@ -1,4 +1,4 @@
-import styles from '@/styles/elearning.module.css'
+import styles from '@/shared/elearning.module.css'
 import CustomLink from '@/components/ui/CustomLink';
 import { codfacilitoData } from '@/data/bootcamps/codfacilito/codfacilito-data';
 

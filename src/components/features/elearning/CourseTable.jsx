@@ -1,6 +1,6 @@
 // CourseTable.jsx - Tabla con código como primera columna
 import React from 'react';
-import styles from '@/shared/CourseTable.module.css';
+import styles from './CourseTable.module.css';
 
 export const CourseTable = ({ courses, platformName }) => {
   return (

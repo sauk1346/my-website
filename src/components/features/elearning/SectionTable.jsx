@@ -1,5 +1,5 @@
-import styles from '@/shared/elearning.module.css'
 import CustomLink from '@/components/ui/CustomLink';
+import styles from './SectionTable.module.css';
 
 const SectionTable = ({ title, sections }) => {
   return (

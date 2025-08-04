@@ -1,117 +1,132 @@
 /* CAROUSEL.MODULE.CSS */
-
 .carouselContainer {
-    width: 100%;
-    margin: 2rem 0;
-  }
-  
+  width: 100%;
+  margin: 2rem 0;
+}
+
+.carouselWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.carouselContent {
+  flex: 1;
+  max-width: 1000px;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+.carouselTrack {
+  display: flex;
+  transition: transform 0.3s ease;
+  gap: 1rem;
+}
+
+/* Cuando es una sola card, centra todo el track */
+.carouselContainer.singleCard .carouselContent {
+  display: flex;
+  justify-content: center;
+}
+
+.carouselContainer.singleCard .carouselTrack {
+  width: auto;
+  justify-content: center;
+}
+
+.carouselSlide {
+  flex-shrink: 0;
+}
+
+.carouselButton {
+  background: #007bff;
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3);
+}
+
+.carouselButton:hover:not(:disabled) {
+  background: #0056b3;
+  transform: scale(1.1);
+}
+
+.carouselButton:disabled {
+  background: #6c757d;
+  cursor: not-allowed;
+  opacity: 0.5;
+  transform: none;
+}
+
+/* Oculta botones cuando hay una sola card */
+.carouselContainer.singleCard .carouselButton {
+  visibility: hidden;
+}
+
+.carouselDots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.carouselDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: #dee2e6;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.carouselDot:hover {
+  background: #adb5bd;
+}
+
+.activeDot {
+  background: #007bff;
+  transform: scale(1.2);
+}
+
+.clickableCard {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.clickableCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.selectedCard {
+  border: 2px solid #007bff;
+  box-shadow: 0 8px 25px rgba(0, 123, 255, 0.3);
+}
+
+@media (max-width: 768px) {
   .carouselWrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
-  }
-  
-  .carouselContent {
-    flex: 1;
-    max-width: 1000px;
-    overflow: hidden;
-    border-radius: 0.5rem;
-  }
-  
-  .carouselTrack {
-    display: flex;
-    transition: transform 0.3s ease;
-    gap: 1rem;
-  }
-  
-  .carouselSlide {
-    flex-shrink: 0;
+    gap: 0.5rem;
   }
   
   .carouselButton {
-    background: #007bff;
-    color: white;
-    border: none;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    font-size: 1.5rem;
-    font-weight: bold;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3);
+    width: 35px;
+    height: 35px;
+    font-size: 1.2rem;
   }
   
-  .carouselButton:hover:not(:disabled) {
-    background: #0056b3;
-    transform: scale(1.1);
-  }
-  
-  .carouselButton:disabled {
-    background: #6c757d;
-    cursor: not-allowed;
-    opacity: 0.5;
-    transform: none;
-  }
-  
-  .carouselDots {
-    display: flex;
-    justify-content: center;
+  .carouselTrack {
     gap: 0.5rem;
-    margin-top: 1rem;
   }
-  
-  .carouselDot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    border: none;
-    background: #dee2e6;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  
-  .carouselDot:hover {
-    background: #adb5bd;
-  }
-  
-  .activeDot {
-    background: #007bff;
-    transform: scale(1.2);
-  }
-  
-  .clickableCard {
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  
-  .clickableCard:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-  }
-  
-  .selectedCard {
-    border: 2px solid #007bff;
-    box-shadow: 0 8px 25px rgba(0, 123, 255, 0.3);
-  }
-  
-  @media (max-width: 768px) {
-    .carouselWrapper {
-      gap: 0.5rem;
-    }
-    
-    .carouselButton {
-      width: 35px;
-      height: 35px;
-      font-size: 1.2rem;
-    }
-    
-    .carouselTrack {
-      gap: 0.5rem;
-    }
-  }
+}

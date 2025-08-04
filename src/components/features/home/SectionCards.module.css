@@ -1,0 +1,58 @@
+   .sectionContainer {
+    width: 100%;
+    animation: fadeIn 0.3s ease-out;
+  }
+  
+  .sectionTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--foreground, #1f2937);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    transition: color 0.3s ease;
+  }
+  
+  .cardsGrid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    width: 100%;
+  }
+  
+  /* Animación de aparición */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Modo oscuro */
+  :global(html.dark-mode) .sectionTitle,
+  :global(html.dark-mode-override) .sectionTitle {
+    color: var(--foreground, #f1f5f9);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .cardsGrid {
+      gap: 1rem;
+    }
+    
+    .sectionTitle {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .cardsGrid {
+      flex-direction: column;
+      align-items: center;
+    }
+  }

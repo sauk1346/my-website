@@ -1,0 +1,170 @@
+/* Layout principal de la página */
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--background, #ffffff);
+  color: var(--foreground, #1f2937);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Cada sección individual */
+.section {
+  width: 100%;
+  padding: 3rem 1rem;
+  border-bottom: 1px solid var(--border, #e5e7eb);
+  transition: border-color 0.3s ease;
+}
+
+.section:last-child {
+  border-bottom: none;
+}
+
+/* Contenido de cada sección */
+.sectionContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 1rem;
+}
+
+/* Título de cada sección */
+.sectionTitle {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  color: var(--foreground, #1f2937);
+  text-align: center;
+  transition: color 0.3s ease;
+  position: relative;
+  margin-bottom: 0;
+}
+
+/* Línea decorativa bajo cada título de sección */
+.sectionTitle::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary, #3b82f6), var(--accent, #8b5cf6));
+  margin: 0.5rem auto 0;
+  border-radius: var(--radius-sm, 4px);
+  transition: width 0.3s ease;
+}
+
+.sectionTitle:hover::after {
+  width: 80px;
+}
+
+/* Descripción de cada sección */
+.description {
+  font-size: 1rem;
+  color: var(--muted-foreground, #6b7280);
+  text-align: center;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+/* ======================== NUEVO ======================== */
+/* Contenedor para el CardCarousel - evita que las cards se estiren */
+.carouselWrapper {
+  width: 100%;
+  max-width: 900px; /* Limita el ancho máximo del carousel */
+  margin: 0 auto;
+}
+
+/* Estilos específicos para cards dentro del Home */
+.sectionContent :global(.card) {
+  min-width: 280px !important;
+  max-width: 320px !important;
+  flex-shrink: 0;
+}
+
+/* En móvil, permite que las cards sean más pequeñas */
+@media (max-width: 640px) {
+  .sectionContent :global(.card) {
+    min-width: 240px !important;
+    max-width: 280px !important;
+  }
+}
+/* ====================================================== */
+
+/* =================================================================
+   MODO OSCURO
+   ================================================================= */
+
+:global(html.dark-mode) .mainContainer,
+:global(html.dark-mode-override) .mainContainer {
+  background-color: var(--background, #0f172a);
+  color: var(--foreground, #f1f5f9);
+}
+
+:global(html.dark-mode) .section,
+:global(html.dark-mode-override) .section {
+  border-bottom-color: var(--border, #374151);
+}
+
+:global(html.dark-mode) .sectionTitle,
+:global(html.dark-mode-override) .sectionTitle {
+  color: var(--foreground, #f1f5f9);
+}
+
+:global(html.dark-mode) .description,
+:global(html.dark-mode-override) .description {
+  color: var(--muted-foreground, #9ca3af);
+}
+
+/* =================================================================
+   RESPONSIVE DESIGN
+   ================================================================= */
+
+/* Tablets y pantallas medianas */
+@media (max-width: 768px) {
+  .section {
+    padding: 2rem 1rem;
+  }
+  
+  .description {
+    font-size: 0.875rem;
+  }
+  
+  .carouselWrapper {
+    max-width: 700px;
+  }
+}
+
+/* Móviles */
+@media (max-width: 640px) {
+  .section {
+    padding: 1.5rem 0.75rem;
+  }
+  
+  .sectionTitle::after {
+    width: 40px;
+    height: 2px;
+  }
+  
+  .sectionTitle:hover::after {
+    width: 60px;
+  }
+  
+  .description {
+    font-size: 0.8rem;
+  }
+  
+  .carouselWrapper {
+    max-width: 100%;
+  }
+}
+
+/* Pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .section {
+    padding: 1rem 0.5rem;
+  }
+}

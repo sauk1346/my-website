@@ -1,0 +1,184 @@
+/* Layout principal de la página */
+.pageContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    width: 100%;
+    background-color: var(--background, #ffffff);
+    color: var(--foreground, #1f2937);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Contenedor principal con máximo ancho */
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 2rem 1rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem; /* Espaciado entre título y grid */
+  }
+  
+  /* Título principal de la página */
+  .title {
+    font-size: clamp(1.75rem, 4vw, 2rem);
+    font-weight: 700;
+    color: var(--foreground, #1f2937);
+    text-align: center;
+    transition: color 0.3s ease;
+    position: relative;
+    margin-bottom: 0; /* Removemos margin ya que usamos gap */
+  }
+  
+  /* Línea decorativa bajo el título - tema bootcamps */
+  .title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary, #f59e0b), var(--accent, #ef4444));
+    margin: 0.5rem auto 0;
+    border-radius: var(--radius-sm, 4px);
+    transition: all 0.3s ease;
+  }
+  
+  .title:hover::after {
+    width: 100px;
+    background: linear-gradient(90deg, var(--accent, #ef4444), var(--primary, #f59e0b));
+  }
+  
+  /* Grid de cards para bootcamps */
+  .cardGrid {
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+    padding: 0;
+    justify-content: center;
+    animation: fadeInUp 0.6s ease-out;
+  }
+  
+  /* Animación de aparición */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Estilo adicional para las cards dentro del grid */
+  .cardGrid > * {
+    animation: fadeInCard 0.6s ease-out backwards;
+  }
+  
+  .cardGrid > *:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  
+  .cardGrid > *:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  
+  .cardGrid > *:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+  
+  .cardGrid > *:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+  
+  @keyframes fadeInCard {
+    from {
+      opacity: 0;
+      transform: translateY(20px) scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+  
+  /* =================================================================
+     MODO OSCURO
+     ================================================================= */
+  
+  :global(html.dark-mode) .pageContainer,
+  :global(html.dark-mode-override) .pageContainer {
+    background-color: var(--background, #0f172a);
+    color: var(--foreground, #f1f5f9);
+  }
+  
+  :global(html.dark-mode) .title,
+  :global(html.dark-mode-override) .title {
+    color: var(--foreground, #f1f5f9);
+  }
+  
+  /* Gradiente diferente para modo oscuro */
+  :global(html.dark-mode) .title::after,
+  :global(html.dark-mode-override) .title::after {
+    background: linear-gradient(90deg, var(--primary, #fbbf24), var(--accent, #f87171));
+  }
+  
+  :global(html.dark-mode) .title:hover::after,
+  :global(html.dark-mode-override) .title:hover::after {
+    background: linear-gradient(90deg, var(--accent, #f87171), var(--primary, #fbbf24));
+  }
+  
+  /* =================================================================
+     RESPONSIVE DESIGN
+     ================================================================= */
+  
+  /* Tablets y pantallas medianas */
+  @media (max-width: 768px) {
+    .container {
+      padding: 1.5rem 1rem;
+      gap: 1.5rem;
+    }
+    
+    .cardGrid {
+      grid-template-columns: repeat(auto-fit, minmax(250px, max-content));
+      gap: 1.5rem;
+      justify-content: center;
+    }
+  }
+  
+  /* Móviles */
+  @media (max-width: 640px) {
+    .container {
+      padding: 1rem 0.75rem;
+      gap: 1.25rem;
+    }
+    
+    .cardGrid {
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+    }
+    
+    .title::after {
+      width: 60px;
+      height: 3px;
+    }
+    
+    .title:hover::after {
+      width: 80px;
+    }
+  }
+  
+  /* Pantallas muy pequeñas */
+  @media (max-width: 480px) {
+    .container {
+      padding: 0.75rem 0.5rem;
+    }
+    
+    .cardGrid {
+      gap: 1rem;
+    }
+  }

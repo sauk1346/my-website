@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '@/shared/elearning.module.css';
+import styles from './ElearningTable.module.css';
 
 const ElearningTable = ({ courses }) => {
   return (

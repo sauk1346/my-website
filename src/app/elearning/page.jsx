@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { CardCarousel } from '@/components/ui/CardCarousel';
 import { CourseTable } from '@/components/features/elearning/CourseTable';
 import { platformsData } from '@/data/elearning/platforms-data';
-import styles from '@/shared/elearning.module.css';
+import styles from './Elearning.module.css';
 
 export default function ELearning() {
   const [selectedPlatform, setSelectedPlatform] = useState(null);

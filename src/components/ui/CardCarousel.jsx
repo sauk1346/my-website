@@ -2,11 +2,20 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Card } from "@/components/ui/Card";
 import styles from './CardCarousel.module.css';
 
-export const CardCarousel = ({ platforms, platformsData, selectedPlatform, onCardClick }) => {
+export const CardCarousel = ({ 
+  platforms, 
+  platformsData, 
+  selectedPlatform, 
+  onCardClick,
+  defaultDescription = "Apuntes",
+  imageField = "logo"
+}) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [visibleCards, setVisibleCards] = useState(3);
   const carouselRef = useRef(null);
   const trackRef = useRef(null);
+
+  const isSingleCard = platforms.length === 1;
 
   const calculateVisibleCards = () => {
     if (!carouselRef.current || !trackRef.current) return 3;
@@ -64,6 +73,8 @@ export const CardCarousel = ({ platforms, platformsData, selectedPlatform, onCar
   };
 
   const calculateTransform = () => {
+    if (isSingleCard) return 0;
+    
     if (!trackRef.current) return 0;
     
     const firstCard = trackRef.current.querySelector('.card-item');
@@ -77,7 +88,7 @@ export const CardCarousel = ({ platforms, platformsData, selectedPlatform, onCar
   };
 
   return (
-    <div className={styles.carouselContainer}>
+    <div className={`${styles.carouselContainer} ${isSingleCard ? styles.singleCard : ''}`}>
       <div className={styles.carouselWrapper}>
         <button
           className={styles.carouselButton}
@@ -99,6 +110,10 @@ export const CardCarousel = ({ platforms, platformsData, selectedPlatform, onCar
               const platform = platformsData[platformKey];
               const isSelected = selectedPlatform === platformKey;
               
+              // Lógica genérica para obtener imagen y descripción
+              const image = platform[imageField] || platform.image || platform.logo;
+              const description = platform.description || defaultDescription;
+              
               return (
                 <div
                   key={platformKey}
@@ -106,8 +121,8 @@ export const CardCarousel = ({ platforms, platformsData, selectedPlatform, onCar
                 >
                   <Card
                     title={platform.name}
-                    description="Apuntes"
-                    image={platform.logo}
+                    description={description}
+                    image={image}
                     onClick={() => onCardClick(platformKey)}
                     className={`${styles.clickableCard} ${isSelected ? styles.selectedCard : ''}`}
                   />

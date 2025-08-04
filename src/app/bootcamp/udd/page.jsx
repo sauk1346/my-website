@@ -1,6 +1,6 @@
-import styles from '@/styles/elearning.module.css'
 import ExternalLink from '@/components/ui/ExternalLink';
 import CustomLink from '@/components/ui/CustomLink';
+import styles from '../Bootcamp.module.css'
 
 const Udd = () => {
     return (
@@ -11,7 +11,7 @@ const Udd = () => {
                 <div className={styles.grid}>
                     {/* Tabla de Cursos */}
                     <div>
-                        <h2 className={styles.platformTitle}>Bootcamps</h2>
+                        <h2 className={styles.platformTitle}>Bootcamp</h2>
                         <table className={styles.table}>
                             <thead>
                             <tr>

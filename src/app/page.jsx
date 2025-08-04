@@ -1,120 +1,44 @@
 'use client';
-
 import React from 'react';
-import { Card } from "@/components/ui/Card";
-import styles from '@/shared/Home.module.css';
+import { useRouter } from 'next/navigation';
+import { CardCarousel } from '@/components/ui/CardCarousel';
+import { sectionsOrder } from '@/data/homeData';
+import styles from './Home.module.css';
 
 export default function Home() {
+  const router = useRouter();
+
+  const handleCardClick = (sectionId, cardKey) => {
+    // Buscar la card en la sección correspondiente
+    const section = sectionsOrder.find(s => s.id === sectionId);
+    const card = section?.cardsData[cardKey];
+    
+    if (card?.link) {
+      // Navegar directamente al link
+      router.push(card.link);
+    }
+  };
+
   return (
     <div className={styles.mainContainer}>
-      {/* Sección: Programación */}
-      <section id="programacion" className={styles.section}>
-        <div className={styles.sectionContent}>
-          <h1 className={styles.sectionTitle}>Programación</h1>
-          <p className={styles.description}>
-            Apuntes y recursos de aprendizaje
-          </p>
-          <div className={styles.cardContainer}>
-            <Card
-              title="Ingeniería Informática"
-              description="Semestres"
-              image="/logos/inacap_logo.png"
-              link='/inacap'
-            />
-            <Card
-              title="LeetCode"
-              description="Ejercicios Programación"
-              image="/logos/codeTraining.png"
-              link='/leetcode'
-            />
-            <Card
-              title="CodeVault"
-              description="Colección de Algoritmos"
-              image="/logos/algorithms.jpg"
-              link='/codevault'
-            />
-            <Card
-              title="E-Learning"
-              description="Plataformas"
-              image="/logos/learnlogo.png"
-              link='/elearning'
-            />
-            <Card
-              title="Bootcamps"
-              description="Academias"
-              image="/logos/bootcamp.png"
-              link='/bootcamps'
-            />
+      {sectionsOrder.map((section) => (
+        <section key={section.id} id={section.id} className={styles.section}>
+          <div className={styles.sectionContent}>
+            <h1 className={styles.sectionTitle}>{section.title}</h1>
+            <p className={styles.description}>{section.description}</p>
             
+            {/* Wrapper para controlar el ancho del carousel */}
+            <div className={styles.carouselWrapper}>
+              <CardCarousel
+                platforms={Object.keys(section.cardsData)}
+                platformsData={section.cardsData}
+                selectedPlatform={null} // ← No necesitamos selección en Home
+                onCardClick={(cardKey) => handleCardClick(section.id, cardKey)}
+              />
+            </div>
           </div>
-        </div>
-      </section>
-      
-      {/* Sección: Idiomas */}
-      <section id="idiomas" className={styles.section}>
-        <div className={styles.sectionContent}>
-          <h1 className={styles.sectionTitle}>Idiomas</h1>
-          <p className={styles.description}>
-            Apuntes Idiomas de interés
-          </p>
-          <div className={styles.cardContainer}>
-            <Card
-              title="Alemán"
-              description="Lerne Deutsch"
-              image="https://kapowaz.github.io/square-flags/flags/de.svg"
-              link='aleman'
-            />
-            <Card
-              title="Coreano"
-              description="한국어를 배우세요"
-              image="https://kapowaz.github.io/square-flags/flags/kr.svg"
-              link='coreano'
-            />
-            <Card
-              title="Chino Mandarín"
-              description="学习普通话"
-              image="https://kapowaz.github.io/square-flags/flags/cn.svg"
-              link='chino'
-            />
-            <Card
-              title="Inglés"
-              description="Learn English"
-              image="https://kapowaz.github.io/square-flags/flags/us.svg"
-              link='ingles'
-            />
-            <Card
-              title="Japonés"
-              description="日本語を勉強して "
-              image="https://kapowaz.github.io/square-flags/flags/jp.svg"
-              link='japones'
-            />
-            <Card
-              title="Ruso"
-              description="Учи русский"
-              image="https://kapowaz.github.io/square-flags/flags/ru.svg"
-              link='ruso'
-            />
-          </div>
-        </div>
-      </section>
-      
-      {/* Sección: Sobre mí */}
-      <section id="sobre-mi" className={styles.section}>
-        <div className={styles.sectionContent}>
-          <h1 className={styles.sectionTitle}>Sobre mí</h1>
-          <p className={styles.description}>
-            Información profesional y proyectos
-          </p>
-          <div className={styles.cardContainer}>
-            <Card
-              title="Portfolio"
-              description="Desarrollos"
-              image="/logos/portfolio.png"
-              link='/portfolio'
-            />
-          </div>
-        </div>
-      </section>
+        </section>
+      ))}
     </div>
   );
 }

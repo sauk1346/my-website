@@ -1,0 +1,171 @@
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: var(--radius-md, 8px);
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 
+                0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    background-color: var(--card, white);
+    transition: background-color 0.3s ease;
+  }
+  
+  .table thead {
+    background: linear-gradient(135deg, var(--primary, #3b82f6), var(--accent, #8b5cf6));
+    color: white;
+  }
+  
+  .table thead th {
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border: none;
+  }
+  
+  .table tbody tr {
+    border-bottom: 1px solid var(--border, #e5e7eb);
+    transition: background-color 0.2s ease;
+  }
+  
+  .table tbody tr:hover {
+    background-color: var(--muted, #f9fafb);
+  }
+  
+  .table tbody tr:last-child {
+    border-bottom: none;
+  }
+  
+  .table tbody td {
+    padding: 1rem;
+    font-size: 0.875rem;
+    color: var(--foreground, #374151);
+    transition: color 0.3s ease;
+  }
+  
+  /* Estilo específico para la columna de código/sigla */
+  .code {
+    font-family: 'Courier New', monospace;
+    font-weight: 600;
+    background-color: var(--secondary, #f1f5f9);
+    color: var(--secondary-foreground, #0f172a);
+    padding: 0.25rem 0.5rem !important;
+    border-radius: var(--radius-sm, 4px);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    transition: all 0.3s ease;
+  }
+  
+  /* Estilo para cuando no hay certificado */
+  .noCertificate {
+    color: var(--muted-foreground, #6b7280);
+    font-style: italic;
+    opacity: 0.7;
+  }
+  
+  /* Modo oscuro */
+  :global(html.dark-mode) .table,
+  :global(html.dark-mode-override) .table {
+    background-color: var(--card, #1f2937);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 
+                0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  }
+  
+  :global(html.dark-mode) .table tbody tr,
+  :global(html.dark-mode-override) .table tbody tr {
+    border-bottom-color: var(--border, #374151);
+  }
+  
+  :global(html.dark-mode) .table tbody tr:hover,
+  :global(html.dark-mode-override) .table tbody tr:hover {
+    background-color: var(--muted, #374151);
+  }
+  
+  :global(html.dark-mode) .table tbody td,
+  :global(html.dark-mode-override) .table tbody td {
+    color: var(--foreground, #f3f4f6);
+  }
+  
+  :global(html.dark-mode) .code,
+  :global(html.dark-mode-override) .code {
+    background-color: var(--secondary, #374151);
+    color: var(--secondary-foreground, #f3f4f6);
+  }
+  
+  :global(html.dark-mode) .noCertificate,
+  :global(html.dark-mode-override) .noCertificate {
+    color: var(--muted-foreground, #9ca3af);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .table {
+      font-size: 0.75rem;
+    }
+    
+    .table thead th,
+    .table tbody td {
+      padding: 0.75rem 0.5rem;
+    }
+    
+    .table thead th {
+      font-size: 0.75rem;
+    }
+    
+    .code {
+      font-size: 0.625rem;
+      padding: 0.125rem 0.375rem !important;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .table {
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
+    
+    .table thead,
+    .table tbody,
+    .table th,
+    .table td,
+    .table tr {
+      display: block;
+    }
+    
+    .table thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+    
+    .table tbody tr {
+      border: 1px solid var(--border, #e5e7eb);
+      border-radius: var(--radius-sm, 4px);
+      margin-bottom: 0.5rem;
+      padding: 0.5rem;
+      position: relative;
+      white-space: normal;
+    }
+    
+    .table tbody td {
+      border: none;
+      padding: 0.5rem 0;
+      position: relative;
+      padding-left: 30% !important;
+    }
+    
+    .table tbody td:before {
+      content: attr(data-label) ": ";
+      position: absolute;
+      left: 6px;
+      width: 25%;
+      padding-right: 10px;
+      white-space: nowrap;
+      font-weight: 600;
+      color: var(--primary, #3b82f6);
+    }
+  }

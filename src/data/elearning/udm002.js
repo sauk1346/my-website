@@ -1,36 +1,40 @@
+// udm002.data.js - Master the Coding Interview: Data Structures + Algorithms
 export const udm002Data = {
-    title: "UDM002",
-    sections: [
-      {
-        id: "01",
-        description: "Introducción"
-      },
-      {
-        id: "02",
-        description: "Conseguir más Entrevistas"
-      },
-      {
-        id: "03",
-        description: "Big O",
-        href: "udm002/section03"
-      },
-      {
-        id: "04",
-        description: "Cómo Resolver Problemas de Programación",
-        href: "udm002/section04"
-      },
-      {
-        id: "05",
-        description: "Estructuras de Datos: Introducción",
-        href: "udm002/section05"
-      },
-      {
-        id: "06",
-        description: "Estructuras de Datos: Arreglos"
-      },
-      {
-        id: "07",
-        description: "Estructuras de Datos: Tablas Hash"
-      }
-    ]
-  };
+  courseId: "UDM002",
+  courseName: "Master the Coding Interview: Data Structures + Algorithms",
+  basePath: "udm002",
+  sections: [
+    { 
+      id: "01", 
+      title: "Introducción"
+    },
+    { 
+      id: "02", 
+      title: "Conseguir más Entrevistas"
+    },
+    { 
+      id: "03", 
+      title: "Big O",
+      link: "section03"
+    },
+    { 
+      id: "04", 
+      title: "Cómo Resolver Problemas de Programación",
+      link: "section04"
+    },
+    { 
+      id: "05", 
+      title: "Estructuras de Datos: Introducción",
+      link: "section05"
+    },
+    { 
+      id: "06", 
+      title: "Estructuras de Datos: Arreglos"
+    },
+    { 
+      id: "07", 
+      title: "Estructuras de Datos: Tablas Hash"
+    }
+  ]
+};
+export default udm002Data;

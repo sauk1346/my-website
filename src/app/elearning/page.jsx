@@ -1,9 +1,9 @@
 'use client'
 import React, { useState } from 'react';
 import { CardCarousel } from '@/components/ui/CardCarousel';
-import { CourseTable } from '@/components/features/elearning/CourseTable';
-import { platformsData } from '@/data/elearning/platforms-data';
+import { platformsData } from '@/data/elearning/elearningData';
 import styles from './Elearning.module.css';
+import { CourseTable } from '@/components/features/elearning/CourseTable';
 
 export default function ELearning() {
   const [selectedPlatform, setSelectedPlatform] = useState(null);

@@ -58,8 +58,6 @@ const SubjectsGrid = ({
               <a 
                 href={subject.href} 
                 className={styles.link}
-                target="_blank"
-                rel="noopener noreferrer"
               >
                 {subject.name}
               </a>

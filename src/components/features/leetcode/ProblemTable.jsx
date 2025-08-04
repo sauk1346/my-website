@@ -57,7 +57,7 @@ const ProblemTable = ({
 
   if (sortedData.length === 0) {
     return (
-      <div className={styles.tableContainer}>
+      <div className={`${styles.tableContainer} ${styles.problems}`}>
         <h2 className={styles.platformTitle}>{title}</h2>
         <p>No se encontraron problemas con esos filtros.</p>
       </div>
@@ -65,8 +65,9 @@ const ProblemTable = ({
   }
 
   return (
-    <div className={styles.tableContainer}>
+    <div className={`${styles.tableContainer} ${styles.problems}`}>
       <h2 className={styles.platformTitle}>{title}</h2>
+      
       <div className={styles.tableWrapper}>
         <table className={styles.table}>
           <thead>
@@ -76,38 +77,55 @@ const ProblemTable = ({
                 label="Código"
                 sortConfig={sortConfig}
                 onSort={requestSort}
+                className={styles.sortableHeader}
               />
               <SortableHeader
                 column="title"
                 label="Descripción"
                 sortConfig={sortConfig}
                 onSort={requestSort}
+                className={styles.sortableHeader}
               />
               <SortableHeader
                 column="topics"
                 label="Temas"
                 sortConfig={sortConfig}
                 onSort={requestSort}
+                className={styles.sortableHeader}
               />
               <SortableHeader
                 column="difficulty"
-                label="Dificultad"
+                label="Nivel"
                 sortConfig={sortConfig}
                 onSort={requestSort}
+                className={styles.sortableHeader}
               />
             </tr>
           </thead>
           <tbody>
             {pagination.paginatedData.map(([id, problem]) => (
               <tr key={id}>
-                <td className={styles.code}>{id}</td>
-                <td>
-                  <CustomLink href={`${platform}/${id.toLowerCase()}`}>
+                <td 
+                  className={styles.code}
+                  data-label="Código"
+                >
+                  {id}
+                </td>
+                <td data-label="Descripción">
+                  <CustomLink 
+                    href={`${platform}/${id.toLowerCase()}`}
+                    className={styles.link}
+                  >
                     {problem.title}
                   </CustomLink>
                 </td>
-                <td>{problem.topics?.join(", ") || ''}</td>
-                <td className={getDifficultyClass(problem.difficulty)}>
+                <td data-label="Temas">
+                  {problem.topics?.join(", ") || ''}
+                </td>
+                <td 
+                  className={getDifficultyClass(problem.difficulty)}
+                  data-label="Dificultad"
+                >
                   {getDifficultyLabel(problem.difficulty) || 'Desconocido'}
                 </td>
               </tr>
@@ -115,7 +133,16 @@ const ProblemTable = ({
           </tbody>
         </table>
       </div>
-      <PaginationControls pagination={pagination} />
+      
+      <div className={styles.tableFooter}>
+        <div className={styles.tableInfo}>
+          Mostrando {pagination.startIndex + 1} - {pagination.endIndex} de {pagination.totalItems} problemas
+        </div>
+        <PaginationControls 
+          pagination={pagination}
+          className={styles.paginationControls}
+        />
+      </div>
     </div>
   );
 };

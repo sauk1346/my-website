@@ -1,170 +1,302 @@
-/* COURSETABLE.MODULE.CSS - SOLO ESTILOS DE TABLAS DE CURSOS */
+/* =================================================================
+   COURSE TABLE COMPONENT - ESTILOS MODULARES REUTILIZABLES
+   ================================================================= */
 
-/* Platform section */
-.section {
+/* ================================
+   SECCIÓN DE TABLA
+   ================================ */
+   .section {
     display: flex;
     flex-direction: column;
     margin-bottom: 2rem;
     align-items: center;
   }
   
-  /* Platform title */
+  .tableContainer {
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 1rem;
+  }
+  
   .platformTitle {
     font-size: 1.25rem;
     font-weight: 600;
-    color: #1f2937;
-    margin-bottom: 0;
+    color: var(--foreground, #1f2937);
+    margin-bottom: 1rem;
     text-align: center;
-    padding: 0.5rem;
-    background-color: #e5e7eb;
-    border-radius: 6px 6px 0 0;
-    transition: color 0.3s ease, background-color 0.3s ease;
-    width: 100%;
-    max-width: 800px;
+    transition: color 0.3s ease;
+    position: relative;
   }
   
-  :global(html.dark-mode) .platformTitle,
-  :global(html.dark-mode-override) .platformTitle {
-    color: #e5e7eb;
-    background-color: #374151;
+  .platformTitle::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 2px;
+    background: var(--primary, #f59e0b);
+    margin: 0.25rem auto 0;
+    border-radius: var(--radius-sm, 2px);
+    transition: all 0.3s ease;
   }
   
-  /* Table styles */
+  /* ================================
+     CONTENEDOR DE TABLA
+     ================================ */
+  .tableWrapper {
+    overflow-x: auto;
+  }
+  
+  /* Estilos base de la tabla */
   .table {
     width: 100%;
-    max-width: 800px;
-    margin: 0;
-    table-layout: fixed;
     border-collapse: collapse;
-    background-color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 0 0 8px 8px;
-    border: 1px solid #d1d5db;
-    border-top: none;
+    border-radius: var(--radius-md, 8px);
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 
+                0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    background-color: var(--card, white);
     transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    table-layout: fixed;
   }
   
-  /* Tabla en modo oscuro */
-  :global(html.dark-mode) .table,
-  :global(html.dark-mode-override) .table {
-    background-color: #1e1e1e;
-    border: 1px solid #4b5563;
-    border-top: none;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
+  .table thead {
+    background: linear-gradient(135deg, var(--primary, #f59e0b), var(--accent, #ef4444));
+    color: white;
   }
   
-  .table th, .table td {
-    padding: 0.75rem;
+  .table thead th {
+    padding: 1rem;
     text-align: left;
-    border: 1px solid #d1d5db;
-    transition: border-color 0.3s ease, color 0.3s ease;
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border: none;
     overflow: hidden;
     text-overflow: ellipsis;
   }
   
-  /* Anchos fijos para las columnas */
-  .table th:first-child,
-  .table td:first-child {
-    width: 100px;
+  /* Anchos de columnas */
+  .table th:nth-child(1),
+  .table td:nth-child(1) {
+    width: 100px; /* Código */
     min-width: 100px;
   }
   
   .table th:nth-child(2),
   .table td:nth-child(2) {
-    width: auto;
+    width: auto; /* Curso */
     min-width: 200px;
   }
   
-  .table th:last-child,
-  .table td:last-child {
-    width: 150px;
+  .table th:nth-child(3),
+  .table td:nth-child(3) {
+    width: 150px; /* Instructor */
     min-width: 150px;
   }
   
-  /* Celdas de tabla en modo oscuro */
-  :global(html.dark-mode) .table th,
-  :global(html.dark-mode) .table td,
-  :global(html.dark-mode-override) .table th,
-  :global(html.dark-mode-override) .table td {
-    border: 1px solid #4b5563;
-    color: #e5e7eb;
+  .table tbody tr {
+    border-bottom: 1px solid var(--border, #e5e7eb);
+    transition: background-color 0.2s ease;
   }
   
-  .table th {
-    background-color: #1f2937;
-    color: white;
-  }
-  
-  /* Encabezados de tabla en modo oscuro */
-  :global(html.dark-mode) .table th,
-  :global(html.dark-mode-override) .table th {
-    background-color: #111827;
-    color: #f9fafb;
-  }
-  
-  .table tr:hover {
-    background-color: #edf2f7;
+  .table tbody tr:hover {
+    background-color: var(--muted, #f9fafb);
     cursor: pointer;
-    transition: background-color 0.3s ease;
   }
   
-  /* Hover de filas en modo oscuro */
-  :global(html.dark-mode) .table tr:hover,
-  :global(html.dark-mode-override) .table tr:hover {
-    background-color: #2d3748;
+  .table tbody tr:last-child {
+    border-bottom: none;
   }
   
-  /* Course code */
+  .table tbody td {
+    padding: 0.875rem 1rem;
+    font-size: 0.875rem;
+    color: var(--foreground, #374151);
+    transition: color 0.3s ease, border-color 0.3s ease;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  /* ================================
+     ELEMENTOS ESPECÍFICOS
+     ================================ */
   .code {
-    font-family: monospace;
-    color: #4b5563;
+    font-family: 'Fira Code', 'Monaco', 'Cascadia Code', 'Roboto Mono', monospace;
+    font-weight: 500;
+    color: var(--primary, #f59e0b);
     transition: color 0.3s ease;
+    white-space: nowrap;
   }
   
-  /* Código en modo oscuro */
-  :global(html.dark-mode) .code,
-  :global(html.dark-mode-override) .code {
-    color: #9ca3af;
-  }
-  
-  /* Links in table */
   .link {
     color: #2563eb;
     text-decoration: none;
     transition: color 0.2s ease;
-  }
-  
-  /* Enlaces en modo oscuro */
-  :global(html.dark-mode) .link,
-  :global(html.dark-mode-override) .link {
-    color: #60a5fa;
+    font-weight: 500;
   }
   
   .link:hover {
     text-decoration: underline;
+    color: #1d4ed8;
   }
   
-  /* Hover de enlaces en modo oscuro */
-  :global(html.dark-mode) .link:hover,
-  :global(html.dark-mode-override) .link:hover {
-    color: #93c5fd;
-  }
-  
-  /* Empty certificate placeholder */
   .noCertificate {
     color: #9ca3af;
     font-style: italic;
   }
   
-  /* Responsive para las tablas */
+  /* =================================================================
+     VARIANTE PARA CURSOS - Esquema de color naranja/rojo
+     ================================================================= */
+  .courses {
+    --primary: #f59e0b;
+    --accent: #ef4444;
+  }
+  
+  .courses .platformTitle::after {
+    background: linear-gradient(90deg, #f59e0b, #ef4444);
+  }
+  
+  .courses .table thead {
+    background: linear-gradient(135deg, #f59e0b, #ef4444);
+  }
+  
+  .courses .code {
+    color: var(--primary, #f59e0b);
+  }
+  
+  /* =================================================================
+     MODO OSCURO
+     ================================================================= */
+  :global(html.dark-mode) .platformTitle,
+  :global(html.dark-mode-override) .platformTitle {
+    color: var(--foreground, #f1f5f9);
+  }
+  
+  :global(html.dark-mode) .table,
+  :global(html.dark-mode-override) .table {
+    background-color: var(--card, #1f2937);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 
+                0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  }
+  
+  :global(html.dark-mode) .table tbody tr,
+  :global(html.dark-mode-override) .table tbody tr {
+    border-bottom-color: var(--border, #374151);
+  }
+  
+  :global(html.dark-mode) .table tbody tr:hover,
+  :global(html.dark-mode-override) .table tbody tr:hover {
+    background-color: var(--muted, #374151);
+  }
+  
+  :global(html.dark-mode) .table tbody td,
+  :global(html.dark-mode-override) .table tbody td {
+    color: var(--foreground, #f3f4f6);
+  }
+  
+  :global(html.dark-mode) .code,
+  :global(html.dark-mode-override) .code {
+    color: #fbbf24; /* Naranja más suave para modo oscuro */
+  }
+  
+  :global(html.dark-mode) .link,
+  :global(html.dark-mode-override) .link {
+    color: #60a5fa;
+  }
+  
+  :global(html.dark-mode) .link:hover,
+  :global(html.dark-mode-override) .link:hover {
+    color: #93c5fd;
+  }
+  
+  /* =================================================================
+     RESPONSIVE DESIGN
+     ================================================================= */
+  
+  /* Tablets y pantallas medianas */
   @media (max-width: 768px) {
     .platformTitle {
       font-size: 1.1rem;
     }
     
+    .table thead th,
+    .table tbody td {
+      padding: 0.75rem 0.5rem;
+    }
+    
+    .table {
+      font-size: 0.8rem;
+    }
+  }
+  
+  /* Móviles */
+  @media (max-width: 640px) {
+    .table thead th,
+    .table tbody td {
+      padding: 0.5rem 0.375rem;
+    }
+    
+    .table thead th {
+      font-size: 0.75rem;
+    }
+    
+    .platformTitle {
+      font-size: 1.125rem;
+    }
+  }
+  
+  /* Pantallas muy pequeñas - Layout de cards */
+  @media (max-width: 480px) {
+    .table,
+    .table thead,
+    .table tbody,
     .table th,
-    .table td {
+    .table td,
+    .table tr {
+      display: block;
+    }
+    
+    .table thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+    
+    .table tbody tr {
+      border: 1px solid var(--border, #e5e7eb);
+      border-radius: var(--radius-sm, 4px);
+      margin-bottom: 0.5rem;
       padding: 0.5rem;
-      font-size: 0.9rem;
+      position: relative;
+    }
+    
+    :global(html.dark-mode) .table tbody tr,
+    :global(html.dark-mode-override) .table tbody tr {
+      border-color: var(--border, #374151);
+    }
+    
+    .table tbody td {
+      border: none;
+      padding: 0.5rem 0;
+      position: relative;
+      padding-left: 30% !important;
+    }
+    
+    .table tbody td:before {
+      content: attr(data-label) ": ";
+      position: absolute;
+      left: 6px;
+      width: 25%;
+      padding-right: 10px;
+      white-space: nowrap;
+      font-weight: 600;
+      color: var(--primary, #f59e0b);
+    }
+    
+    :global(html.dark-mode) .table tbody td:before,
+    :global(html.dark-mode-override) .table tbody td:before {
+      color: #fbbf24;
     }
   }

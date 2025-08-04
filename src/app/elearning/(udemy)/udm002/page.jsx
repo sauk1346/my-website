@@ -3,11 +3,14 @@ import { udm002Data } from '@/data/elearning/udm002';
 
 const Udm002 = () => {
   return (
-    <SectionTable 
-      title={udm002Data.title}
+    <SectionTable
+      courseId={udm002Data.courseId}
+      courseName={udm002Data.courseName}
       sections={udm002Data.sections}
+      basePath={udm002Data.basePath}
+      showDescription={false}
     />
   );
-}
+};
 
 export default Udm002;

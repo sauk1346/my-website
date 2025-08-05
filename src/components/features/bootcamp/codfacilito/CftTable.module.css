@@ -1,0 +1,445 @@
+   .pageContainer {
+    min-height: 100vh;
+    padding: 2rem 1rem;
+    background: var(--background, #ffffff);
+    transition: background-color 0.3s ease;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--foreground, #1f2937);
+    text-align: center;
+    margin-bottom: 2rem;
+    transition: color 0.3s ease;
+    position: relative;
+  }
+  
+  .title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #059669, #10b981);
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+  
+  .grid {
+    display: grid;
+    gap: 2rem;
+    justify-items: center;
+  }
+  
+  .tableContainer {
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 1rem;
+  }
+  
+  .platformTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--foreground, #1f2937);
+    margin-bottom: 1rem;
+    text-align: center;
+    transition: color 0.3s ease;
+    position: relative;
+  }
+  
+  .platformTitle::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(90deg, #059669, #10b981);
+    margin: 0.25rem auto 0;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+  
+  /* ================================
+     CONTENEDOR DE TABLA
+     ================================ */
+  .tableWrapper {
+    overflow-x: auto;
+  }
+  
+  /* Estilos base de la tabla */
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 
+                0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    background-color: var(--card, white);
+    transition: background-color 0.3s ease;
+  }
+  
+  .table thead {
+    background: linear-gradient(135deg, #059669, #10b981);
+    color: white;
+  }
+  
+  .table thead th {
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border: none;
+  }
+  
+  /* Anchos de columnas para CftTable con 3 columnas */
+  .table th:nth-child(1),
+  .table td:nth-child(1) {
+    width: 80px; /* # */
+  }
+  
+  .table th:nth-child(2),
+  .table td:nth-child(2) {
+    width: 250px; /* Módulo */
+  }
+  
+  .table th:nth-child(3),
+  .table td:nth-child(3) {
+    width: auto; /* Clases */
+  }
+  
+  .table tbody tr {
+    border-bottom: 1px solid var(--border, #e5e7eb);
+    transition: background-color 0.2s ease;
+  }
+  
+  .tableRow {
+    transition: background-color 0.2s ease, transform 0.1s ease;
+  }
+  
+  .tableRow:hover {
+    background-color: #ecfdf5;
+    transform: translateY(-1px);
+    cursor: pointer;
+  }
+  
+  .table tbody tr:last-child {
+    border-bottom: none;
+  }
+  
+  .table tbody td {
+    padding: 0.875rem 1rem;
+    font-size: 0.875rem;
+    color: var(--foreground, #374151);
+    transition: color 0.3s ease;
+    vertical-align: top;
+  }
+  
+  /* ================================
+     ELEMENTOS ESPECÍFICOS
+     ================================ */
+  
+  /* Estilo para el número de módulo */
+  .sectionNumber {
+    font-family: 'Fira Code', 'Monaco', 'Cascadia Code', 'Roboto Mono', monospace;
+    font-weight: 700;
+    background-color: #d1fae5;
+    color: #064e3b;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    text-align: center;
+    min-width: 32px;
+    display: inline-block;
+    transition: all 0.3s ease;
+  }
+  
+  /* Título del módulo en su propia columna */
+  .moduleTitle {
+    font-weight: 500;
+    color: var(--foreground, #374151);
+    line-height: 1.4;
+  }
+  
+  /* Lista de clases */
+  .classList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+  }
+  
+  .classItem {
+    margin-bottom: 0.5rem;
+    color: var(--foreground, #4a5568);
+    font-size: 0.875rem;
+  }
+  
+  .classItem:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* Estilo para enlaces de clase */
+  .sectionLink {
+    color: #059669;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+    position: relative;
+  }
+  
+  .sectionLink:hover {
+    color: #10b981;
+    text-decoration: underline;
+  }
+  
+  .sectionLink::before {
+    content: '→';
+    margin-right: 0.5rem;
+    opacity: 0;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    transform: translateX(-5px);
+  }
+  
+  .sectionLink:hover::before {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  /* Estilo para títulos de clase sin enlace */
+  .sectionTitle {
+    color: var(--foreground, #374151);
+    font-weight: 500;
+    opacity: 0.8;
+  }
+  
+  /* Mensaje cuando no hay datos */
+  .noSections {
+    text-align: center;
+    padding: 2rem;
+    color: var(--muted-foreground, #6b7280);
+    font-style: italic;
+  }
+  
+  /* =================================================================
+     MODO OSCURO
+     ================================================================= */
+  :global(html.dark-mode) .pageContainer,
+  :global(html.dark-mode-override) .pageContainer {
+    background: var(--background, #0f172a);
+  }
+  
+  :global(html.dark-mode) .title,
+  :global(html.dark-mode-override) .title {
+    color: var(--foreground, #f1f5f9);
+  }
+  
+  :global(html.dark-mode) .platformTitle,
+  :global(html.dark-mode-override) .platformTitle {
+    color: var(--foreground, #f1f5f9);
+  }
+  
+  :global(html.dark-mode) .table,
+  :global(html.dark-mode-override) .table {
+    background-color: var(--card, #1f2937);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 
+                0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  }
+  
+  :global(html.dark-mode) .table tbody tr,
+  :global(html.dark-mode-override) .table tbody tr {
+    border-bottom-color: var(--border, #374151);
+  }
+  
+  :global(html.dark-mode) .tableRow:hover,
+  :global(html.dark-mode-override) .tableRow:hover {
+    background-color: #022c22;
+  }
+  
+  :global(html.dark-mode) .table tbody td,
+  :global(html.dark-mode-override) .table tbody td {
+    color: var(--foreground, #f3f4f6);
+  }
+  
+  :global(html.dark-mode) .sectionNumber,
+  :global(html.dark-mode-override) .sectionNumber {
+    background-color: #064e3b;
+    color: #a7f3d0;
+  }
+  
+  :global(html.dark-mode) .moduleTitle,
+  :global(html.dark-mode-override) .moduleTitle {
+    color: var(--foreground, #f3f4f6);
+  }
+  
+  :global(html.dark-mode) .classItem,
+  :global(html.dark-mode-override) .classItem {
+    color: var(--foreground, #d1d5db);
+  }
+  
+  :global(html.dark-mode) .sectionLink,
+  :global(html.dark-mode-override) .sectionLink {
+    color: #34d399;
+  }
+  
+  :global(html.dark-mode) .sectionLink:hover,
+  :global(html.dark-mode-override) .sectionLink:hover {
+    color: #6ee7b7;
+  }
+  
+  :global(html.dark-mode) .sectionTitle,
+  :global(html.dark-mode-override) .sectionTitle {
+    color: var(--foreground, #f3f4f6);
+  }
+  
+  :global(html.dark-mode) .noSections,
+  :global(html.dark-mode-override) .noSections {
+    color: var(--muted-foreground, #9ca3af);
+  }
+  
+  /* =================================================================
+     RESPONSIVE DESIGN
+     ================================================================= */
+  
+  /* Tablets y pantallas medianas */
+  @media (max-width: 768px) {
+    .pageContainer {
+      padding: 1.5rem 1rem;
+    }
+    
+    .title {
+      font-size: 2rem;
+    }
+    
+    .table {
+      font-size: 0.8rem;
+    }
+    
+    .table thead th,
+    .table tbody td {
+      padding: 0.75rem 0.5rem;
+    }
+    
+    .table thead th {
+      font-size: 0.75rem;
+    }
+    
+    .sectionNumber {
+      font-size: 0.675rem;
+      padding: 0.125rem 0.375rem;
+    }
+    
+    .moduleTitle {
+      font-size: 0.8rem;
+    }
+    
+    .classItem {
+      font-size: 0.8rem;
+    }
+  }
+  
+  /* Móviles */
+  @media (max-width: 640px) {
+    .pageContainer {
+      padding: 1rem 0.5rem;
+    }
+    
+    .title {
+      font-size: 1.75rem;
+    }
+    
+    .table thead th,
+    .table tbody td {
+      padding: 0.5rem 0.375rem;
+    }
+    
+    .table thead th {
+      font-size: 0.75rem;
+    }
+    
+    .platformTitle {
+      font-size: 1.125rem;
+    }
+  }
+  
+  /* Pantallas muy pequeñas - Layout de cards */
+  @media (max-width: 480px) {
+    .table,
+    .table thead,
+    .table tbody,
+    .table th,
+    .table td,
+    .table tr {
+      display: block;
+    }
+    
+    .table thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+    
+    .table tbody tr {
+      border: 1px solid var(--border, #e5e7eb);
+      border-radius: 4px;
+      margin-bottom: 0.5rem;
+      padding: 0.5rem;
+      position: relative;
+    }
+    
+    :global(html.dark-mode) .table tbody tr,
+    :global(html.dark-mode-override) .table tbody tr {
+      border-color: var(--border, #374151);
+    }
+    
+    .table tbody td {
+      border: none;
+      padding: 0.5rem 0;
+      position: relative;
+      padding-left: 30% !important;
+    }
+    
+    .table tbody td:before {
+      content: attr(data-label) ": ";
+      position: absolute;
+      left: 6px;
+      width: 25%;
+      padding-right: 10px;
+      white-space: nowrap;
+      font-weight: 600;
+      color: #059669;
+    }
+    
+    :global(html.dark-mode) .table tbody td:before,
+    :global(html.dark-mode-override) .table tbody td:before {
+      color: #34d399;
+    }
+    
+    .classList {
+      padding-left: 0;
+    }
+    
+    .moduleTitle {
+      font-size: 0.75rem;
+    }
+    
+    .classItem {
+      font-size: 0.75rem;
+      margin-bottom: 0.375rem;
+    }
+    
+    .sectionNumber {
+      display: inline-block;
+      margin-left: 0;
+    }
+    
+    .sectionLink::before {
+      display: none;
+    }
+  }

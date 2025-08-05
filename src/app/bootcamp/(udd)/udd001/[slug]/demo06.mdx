@@ -3,7 +3,7 @@
 ## Plataforma de Comercio Electrónico
 
 <img
-	src="/bootcamps/udd/udd01/images/banner.png"
+	src="/bootcamp/udd001/images/banner.png"
 	style={{ display: 'block', margin: '0 auto', width:'100%'}}
 />
 <br/>
@@ -100,7 +100,7 @@ Dentro, podrás obtener tus llaves en dos sitios:
 a) `STRIPE_KEY`. En el área de "Claves de API", usarás tu clave secreta. La clave secreta se usa del lado del servidor para confirmar que contamos con los permisos para realizar procesos API con Stripe, principalmente de autenticación. Jamás se comparte con ninguna persona o herramienta que no demos autorización.
 
 <img
-	src="/bootcamps/udd/udd01/images/stripe-keys-01.png"
+	src="/bootcamp/udd001/images/stripe-keys-01.png"
 	style={{ display: 'block', margin: '0 auto', width:'100%'}}
 />
 <br/>
@@ -111,7 +111,7 @@ Puedes encontrar más información en la documentación: https://stripe.com/docs
 b) `STRIPE_WH_SIGNING_SECRET`. En el área de "Webhooks", dentro de "Desarrolladores, encontrarás la forma de trabajar con Stripe desde tu área local, a través de Stripe CLI. Sigue los pasos: https://dashboard.stripe.com/test/webhooks/create?endpoint_location=local
 
 <img
-	src="/bootcamps/udd/udd01/images/stripe-keys-02.png"
+	src="/bootcamp/udd001/images/stripe-keys-02.png"
 	style={{ display: 'block', margin: '0 auto', width:'100%'}}
 />
 <br/>
@@ -163,7 +163,7 @@ Una vez que el proyecto haya cumplido con la instalación, abre en tu navegador 
 El resultado deberá aparecerte de esta forma:
 
 <img
-	src="/bootcamps/udd/udd01/images/crear-pizza-01.png"
+	src="/bootcamp/udd001/images/crear-pizza-01.png"
 	style={{ display: 'block', margin: '0 auto', width:'100%'}}
 />
 <br/>
@@ -225,7 +225,7 @@ Al crear un usuario, es importante que envíes los siguientes propiedades. Adjun
 Al momento de realizar este proceso de creación, tendrás una respuesta:
 
 <img
-	src="/bootcamps/udd/udd01/images/crear-usuario.png"
+	src="/bootcamp/udd001/images/crear-usuario.png"
 	style={{ display: 'block', margin: '0 auto', width:'100%'}}
 />
 <br/>
@@ -241,7 +241,7 @@ Hacer el inicio de sesión, requiere que envíes esta información.
 ```
 
 <img
-	src="/bootcamps/udd/udd01/images/iniciar-sesion.png"
+	src="/bootcamp/udd001/images/iniciar-sesion.png"
 	style={{ display: 'block', margin: '0 auto', width:'100%'}}
 />
 <br/>
@@ -253,7 +253,7 @@ Puedes probarla en el `endpoint` de `/api/users/verifytoken`, pasando este token
 Para agregar el `token`, puedes hacerlo en esta imagen de candado:
 
 <img
-	src="/bootcamps/udd/udd01/images/token-01.png"
+	src="/bootcamp/udd001/images/token-01.png"
 	style={{ display: 'block', margin: '0 auto', width:'100%'}}
 />
 <br/>
@@ -261,7 +261,7 @@ Para agregar el `token`, puedes hacerlo en esta imagen de candado:
 E inserta tu `token`, el cual es el mismo que obtuviste en `login`.
 
 <img
-	src="/bootcamps/udd/udd01/images/token-establish-02.png"
+	src="/bootcamp/udd001/images/token-establish-02.png"
 	style={{ display: 'block', margin: '0 auto', width:'100%'}}
 />
 <br/>
@@ -269,7 +269,7 @@ E inserta tu `token`, el cual es el mismo que obtuviste en `login`.
 Haz la petición, el cual es `GET`, es decir, no mandarás nada a través del `body`, y observa la respuesta.
 
 <img
-	src="/bootcamps/udd/udd01/images/token-res-03.png"
+	src="/bootcamp/udd001/images/token-res-03.png"
 	style={{ display: 'block', margin: '0 auto', width:'100%'}}
 />
 <br/>
@@ -283,7 +283,7 @@ El primer paso es revisar que el usuario autenticado (es decir, que ha realizado
 Entonces, realizamos una petición al servicio `get-cart`, pasando por la imagen de candado nuestro `token`. Obtenemos este resultado:
 
 <img
-	src="/bootcamps/udd/udd01/images/obtener-carrito.png"
+	src="/bootcamp/udd001/images/obtener-carrito.png"
 	style={{ display: 'block', margin: '0 auto', width:'100%'}}
 />
 <br/>
@@ -304,7 +304,7 @@ Una vez esto claro, vamos primero a conseguir los `prices ID`.
 Nos vamos a nuestro servicio de `/api/pizzas/readall` para obtener todas las pizzas.
 
 <img
-	src="/bootcamps/udd/udd01/images/leer-pizzas.01.png"
+	src="/bootcamp/udd001/images/leer-pizzas.01.png"
 	style={{ display: 'block', margin: '0 auto', width:'100%'}}
 />
 <br/>
@@ -370,7 +370,7 @@ Toma en consideración dos puntos:
 - Debes contar con tu `token` en ese servicio activado.
 
 <img
-	src="/bootcamps/udd/udd01/images/edit-cart-successful.png"
+	src="/bootcamp/udd001/images/edit-cart-successful.png"
 	style={{ display: 'block', margin: '0 auto', width:'100%'}}
 />
 <br/>
@@ -380,7 +380,7 @@ Finalmente, una vez que un usuario tiene un carrito listo para trabajar con `Str
 Nos iremos al servicio `api/checkout/create-checkout-session` y, con el `token`, nos autenticamos y realizamos la petición directamente, obteniendo este resultado:
 
 <img
-	src="/bootcamps/udd/udd01/images/checkout-01.png"
+	src="/bootcamp/udd001/images/checkout-01.png"
 	style={{ display: 'block', margin: '0 auto', width:'100%'}}
 />
 <br/>
@@ -397,7 +397,7 @@ Observarás un JSON enorme, pero, la propiedad más importante es `url`, el cual
 Esta URL, si accedes, te llevará al Checkout de Stripe. Es temporal, por lo tanto, tendrás un límite de tiempo para acceder, o si no, expirará.
 
 <img
-	src="/bootcamps/udd/udd01/images/checkout-stripe.png"
+	src="/bootcamp/udd001/images/checkout-stripe.png"
 	style={{ display: 'block', margin: '0 auto', width:'100%'}}
 />
 <br/>
@@ -415,7 +415,7 @@ $ stripe listen --forward-to localhost:3005/api/checkout/create-order --events=c
 Tan pronto tenga Stripe la respuesta, veremos un status 200, que indica que el proceso fue exitoso.
 
 <img
-	src="/bootcamps/udd/udd01/images/checkout-create-order.png"
+	src="/bootcamp/udd001/images/checkout-create-order.png"
 	style={{ display: 'block', margin: '0 auto', width:'100%'}}
 />
 <br/>
@@ -423,7 +423,7 @@ Tan pronto tenga Stripe la respuesta, veremos un status 200, que indica que el p
 Terminando también con la información insertada en nuestra base de datos en `MongoDB`.
 
 <img
-	src="/bootcamps/udd/udd01/images/receipt.png"
+	src="/bootcamp/udd001/images/receipt.png"
 	style={{ display: 'block', margin: '0 auto', width:'100%'}}
 />
 <br/>
@@ -445,7 +445,7 @@ Para el manejo del despliegue, es importante contar con MongoDB Atlas para nuest
 1. Una vez creada tu cuenta MongoDB Atlas (https://www.mongodb.com/cloud/atlas/register), crea un proyecto y nómbralo.
 
 <img
-	src="/bootcamps/udd/udd01/images/atlas-01.png"
+	src="/bootcamp/udd001/images/atlas-01.png"
 	style={{ display: 'block', margin: '0 auto', width:'100%'}}
 />
 <br/>
@@ -453,7 +453,7 @@ Para el manejo del despliegue, es importante contar con MongoDB Atlas para nuest
 2. Da aceptar. Te va a agregar como miembro único.
 
 <img
-	src="/bootcamps/udd/udd01/images/atlas-02.png"
+	src="/bootcamp/udd001/images/atlas-02.png"
 	style={{ display: 'block', margin: '0 auto', width:'100%'}}
 />
 <br/>
@@ -462,7 +462,7 @@ Para el manejo del despliegue, es importante contar con MongoDB Atlas para nuest
 3. Crea una base de datos en "Build a database"
 
 <img
-	src="/bootcamps/udd/udd01/images/atlas-03.png"
+	src="/bootcamp/udd001/images/atlas-03.png"
 	style={{ display: 'block', margin: '0 auto', width:'100%'}}
 />
 <br/>
@@ -471,7 +471,7 @@ Para el manejo del despliegue, es importante contar con MongoDB Atlas para nuest
 4. Escoge la versión gratuita.
 
 <img
-	src="/bootcamps/udd/udd01/images/atlas-04.png"
+	src="/bootcamp/udd001/images/atlas-04.png"
 	style={{ display: 'block', margin: '0 auto', width:'100%'}}
 />
 <br/>
@@ -480,7 +480,7 @@ Para el manejo del despliegue, es importante contar con MongoDB Atlas para nuest
 5. Establece un usuario y contraseña para tu usuario administrador. Este será el que usaremos en nuestras variables de entorno más adelante. Elige con cuidado y guardando lo que elijas.
 
 <img
-	src="/bootcamps/udd/udd01/images/atlas-05.png"
+	src="/bootcamp/udd001/images/atlas-05.png"
 	style={{ display: 'block', margin: '0 auto', width:'100%'}}
 />
 <br/>
@@ -489,7 +489,7 @@ Para el manejo del despliegue, es importante contar con MongoDB Atlas para nuest
 6. Da click en "Network Access" y luego en "Add IP Address"
 
 <img
-	src="/bootcamps/udd/udd01/images/atlas-06.png"
+	src="/bootcamp/udd001/images/atlas-06.png"
 	style={{ display: 'block', margin: '0 auto', width:'100%'}}
 />
 <br/>
@@ -498,7 +498,7 @@ Para el manejo del despliegue, es importante contar con MongoDB Atlas para nuest
 7. Da click sobre "Allow access from anywhere"
 
 <img
-	src="/bootcamps/udd/udd01/images/atlas-07.png"
+	src="/bootcamp/udd001/images/atlas-07.png"
 	style={{ display: 'block', margin: '0 auto', width:'100%'}}
 />
 <br/>
@@ -507,7 +507,7 @@ Para el manejo del despliegue, es importante contar con MongoDB Atlas para nuest
 8. Confirma que tienes 0.0.0.0 como IP.
 
 <img
-	src="/bootcamps/udd/udd01/images/atlas-08.png"
+	src="/bootcamp/udd001/images/atlas-08.png"
 	style={{ display: 'block', margin: '0 auto', width:'100%'}}
 />
 <br/>
@@ -516,7 +516,7 @@ Para el manejo del despliegue, es importante contar con MongoDB Atlas para nuest
 9. Regresa a la sección de "Database" y da click en "Connect"
 
 <img
-	src="/bootcamps/udd/udd01/images/atlas-09.png"
+	src="/bootcamp/udd001/images/atlas-09.png"
 	style={{ display: 'block', margin: '0 auto', width:'100%'}}
 />
 <br/>
@@ -525,7 +525,7 @@ Para el manejo del despliegue, es importante contar con MongoDB Atlas para nuest
 10. Selecciona "Compass".
 
 <img
-	src="/bootcamps/udd/udd01/images/atlas-10.png"
+	src="/bootcamp/udd001/images/atlas-10.png"
 	style={{ display: 'block', margin: '0 auto', width:'100%'}}
 />
 <br/>
@@ -534,7 +534,7 @@ Para el manejo del despliegue, es importante contar con MongoDB Atlas para nuest
 11. Finalmente, selecciona "I have MongoDB Compass installed" y en la parte inferior verás un código que será tu conexión de texto. Ese lo incluirás dentro de tus archivo `.env`, en render.com
 
 <img
-	src="/bootcamps/udd/udd01/images/atlas-11.png"
+	src="/bootcamp/udd001/images/atlas-11.png"
 	style={{ display: 'block', margin: '0 auto', width:'100%'}}
 />
 <br/>
@@ -545,7 +545,7 @@ En render.com, al crear un nuevo proyecto, recuerda utilizar "Web Service", enla
 La configuración y sus variables de entorno deberán ser colocadas de la siguiente forma:
 
 <img
-	src="/bootcamps/udd/udd01/images/render-03.png"
+	src="/bootcamp/udd001/images/render-03.png"
 	style={{ display: 'block', margin: '0 auto', width:'100%'}}
 />
 <br/>
@@ -555,7 +555,7 @@ La configuración y sus variables de entorno deberán ser colocadas de la siguie
 - No necesitas por ahora `REACT_BASE_URL`, hasta que realicemos nuestro Frontend, el cual, por ahora, sale del enfoque del proyecto, pero, para considerarlo más adelante.
 
 <img
-	src="/bootcamps/udd/udd01/images/render-02.png"
+	src="/bootcamp/udd001/images/render-02.png"
 	style={{ display: 'block', margin: '0 auto', width:'100%'}}
 />
 <br/>

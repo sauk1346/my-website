@@ -1,0 +1,257 @@
+   .tableSection {
+    background: var(--card, white);
+    border-radius: var(--radius-lg, 12px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 
+                0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .sectionTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--foreground, #1f2937);
+    padding: 1.5rem 1.5rem 1rem;
+    margin: 0;
+    background: linear-gradient(135deg, #f59e0b, #ef4444);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: color 0.3s ease;
+  }
+  
+  .tableWrapper {
+    overflow-x: auto;
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+    background-color: transparent;
+  }
+  
+  .table thead {
+    background: linear-gradient(135deg, #f59e0b, #ef4444);
+    color: white;
+  }
+  
+  .table th {
+    padding: 1rem 0.75rem;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border: none;
+  }
+  
+  /* Anchos específicos para columnas de proyectos */
+  .numberColumn { width: 60px; min-width: 60px; }
+  .dateColumn { width: 140px; min-width: 140px; }
+  .projectColumn { width: auto; min-width: 250px; }
+  .demoColumn { width: 100px; min-width: 100px; }
+  .deliveryColumn { width: 120px; min-width: 120px; }
+  
+  .tableRow {
+    border-bottom: 1px solid var(--border, #e5e7eb);
+    transition: background-color 0.2s ease;
+  }
+  
+  .tableRow:hover {
+    background-color: var(--muted, #f9fafb);
+  }
+  
+  .tableRow:last-child {
+    border-bottom: none;
+  }
+  
+  .table td {
+    padding: 1rem 0.75rem;
+    color: var(--foreground, #374151);
+    transition: color 0.3s ease;
+    vertical-align: middle;
+  }
+  
+  /* Estilos específicos para cada tipo de celda */
+  .numberCell {
+    font-family: 'Fira Code', 'Monaco', 'Cascadia Code', 'Roboto Mono', monospace;
+    font-weight: 600;
+    color: var(--primary, #f59e0b);
+    text-align: center;
+  }
+  
+  .dateCell {
+    font-weight: 500;
+    color: var(--muted-foreground, #6b7280);
+    white-space: nowrap;
+  }
+  
+  .projectCell {
+    font-weight: 500;
+  }
+  
+  .demoCell,
+  .deliveryCell {
+    text-align: center;
+  }
+  
+  /* =================================================================
+     MODO OSCURO
+     ================================================================= */
+  
+  :global(html.dark-mode) .tableSection,
+  :global(html.dark-mode-override) .tableSection {
+    background: var(--card, #1f2937);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 
+                0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  }
+  
+  :global(html.dark-mode) .sectionTitle,
+  :global(html.dark-mode-override) .sectionTitle {
+    color: var(--foreground, #f1f5f9);
+    background: linear-gradient(135deg, #fbbf24, #f87171);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  :global(html.dark-mode) .tableRow,
+  :global(html.dark-mode-override) .tableRow {
+    border-bottom-color: var(--border, #374151);
+  }
+  
+  :global(html.dark-mode) .tableRow:hover,
+  :global(html.dark-mode-override) .tableRow:hover {
+    background-color: var(--muted, #374151);
+  }
+  
+  :global(html.dark-mode) .table td,
+  :global(html.dark-mode-override) .table td {
+    color: var(--foreground, #f3f4f6);
+  }
+  
+  :global(html.dark-mode) .numberCell,
+  :global(html.dark-mode-override) .numberCell {
+    color: #fbbf24;
+  }
+  
+  :global(html.dark-mode) .dateCell,
+  :global(html.dark-mode-override) .dateCell {
+    color: var(--muted-foreground, #9ca3af);
+  }
+  
+  /* =================================================================
+     RESPONSIVE DESIGN
+     ================================================================= */
+  
+  /* Tablets */
+  @media (max-width: 768px) {
+    .sectionTitle {
+      padding: 1.25rem 1rem 0.75rem;
+      font-size: 1.125rem;
+    }
+  
+    .table th,
+    .table td {
+      padding: 0.75rem 0.5rem;
+    }
+  
+    .table {
+      font-size: 0.8rem;
+    }
+  
+    .dateColumn { width: 120px; min-width: 120px; }
+    .projectColumn { min-width: 200px; }
+  }
+  
+  /* Móviles */
+  @media (max-width: 640px) {
+    .tableSection {
+      border-radius: 0;
+      margin: 0 -0.5rem;
+    }
+  
+    .sectionTitle {
+      padding: 1rem 0.75rem 0.5rem;
+      font-size: 1rem;
+    }
+  
+    .table th,
+    .table td {
+      padding: 0.5rem 0.375rem;
+    }
+  
+    .table th {
+      font-size: 0.7rem;
+    }
+  
+    .table {
+      font-size: 0.75rem;
+    }
+  
+    .numberColumn { width: 40px; min-width: 40px; }
+    .dateColumn { width: 100px; min-width: 100px; }
+    .demoColumn { width: 80px; min-width: 80px; }
+    .deliveryColumn { width: 90px; min-width: 90px; }
+  }
+  
+  /* Pantallas muy pequeñas - Layout de cards */
+  @media (max-width: 480px) {
+    .table,
+    .table thead,
+    .table tbody,
+    .table th,
+    .table td,
+    .table tr {
+      display: block;
+    }
+  
+    .table thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+  
+    .tableRow {
+      border: 1px solid var(--border, #e5e7eb);
+      border-radius: var(--radius-sm, 6px);
+      margin-bottom: 0.75rem;
+      padding: 0.75rem;
+      position: relative;
+    }
+  
+    :global(html.dark-mode) .tableRow,
+    :global(html.dark-mode-override) .tableRow {
+      border-color: var(--border, #374151);
+    }
+  
+    .table td {
+      border: none;
+      padding: 0.5rem 0;
+      position: relative;
+      padding-left: 35% !important;
+    }
+  
+    .table td:before {
+      position: absolute;
+      left: 6px;
+      width: 30%;
+      padding-right: 10px;
+      white-space: nowrap;
+      font-weight: 600;
+      color: var(--primary, #f59e0b);
+      font-size: 0.75rem;
+    }
+  
+    .numberCell:before { content: "#: "; }
+    .dateCell:before { content: "Fecha: "; }
+    .projectCell:before { content: "Proyecto: "; }
+    .demoCell:before { content: "Demo: "; }
+    .deliveryCell:before { content: "Entrega: "; }
+  
+    :global(html.dark-mode) .table td:before,
+    :global(html.dark-mode-override) .table td:before {
+      color: #fbbf24;
+    }
+  }

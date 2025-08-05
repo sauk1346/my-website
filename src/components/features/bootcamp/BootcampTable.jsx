@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './BootcampTable.module.css';
+import CustomLink from '@/components/ui/CustomLink';
 
 const BootcampTable = ({ courses }) => {
   return (
@@ -18,16 +19,24 @@ const BootcampTable = ({ courses }) => {
               <td data-label="Sigla">
                 <span className={styles.code}>{course.code}</span>
               </td>
-              <td data-label="Nombre">{course.title}</td>
+              <td data-label="Nombre">
+                {course.titleUrl ? (
+                  <CustomLink href={course.titleUrl} className={styles.titleLink}>
+                    {course.title}
+                  </CustomLink>
+                ) : (
+                  <span>{course.title}</span>
+                )}
+              </td>
               <td data-label="Certificado">
                 {course.certificateUrl ? (
-                  <a 
-                    href={course.certificateUrl} 
-                    target="_blank" 
+                  <a
+                    href={course.certificateUrl}
+                    target="_blank"
                     rel="noopener noreferrer"
                     className={styles.certificateLink}
                   >
-                    Ver Diploma
+                    Diploma
                   </a>
                 ) : (
                   <span className={styles.noCertificate}>-</span>

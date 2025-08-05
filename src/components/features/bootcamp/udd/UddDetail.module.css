@@ -1,0 +1,141 @@
+   .pageContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    width: 100%;
+    background-color: var(--background, #ffffff);
+    color: var(--foreground, #1f2937);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 2rem 0;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 1rem;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  .title {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 700;
+    color: var(--foreground, #1f2937);
+    margin-bottom: 3rem;
+    text-align: center;
+    transition: color 0.3s ease;
+    position: relative;
+  }
+  
+  .title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary, #f59e0b), var(--accent, #ef4444));
+    margin: 0.75rem auto 0;
+    border-radius: var(--radius-sm, 4px);
+    transition: all 0.3s ease;
+  }
+  
+  .title:hover::after {
+    width: 100px;
+    background: linear-gradient(90deg, var(--accent, #ef4444), var(--primary, #f59e0b));
+  }
+  
+  /* Grid responsivo para las tablas */
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  /* =================================================================
+     MODO OSCURO
+     ================================================================= */
+  
+  :global(html.dark-mode) .pageContainer,
+  :global(html.dark-mode-override) .pageContainer {
+    background-color: var(--background, #0f172a);
+    color: var(--foreground, #f1f5f9);
+  }
+  
+  :global(html.dark-mode) .title,
+  :global(html.dark-mode-override) .title {
+    color: var(--foreground, #f1f5f9);
+  }
+  
+  :global(html.dark-mode) .title::after,
+  :global(html.dark-mode-override) .title::after {
+    background: linear-gradient(90deg, var(--primary, #fbbf24), var(--accent, #f87171));
+  }
+  
+  :global(html.dark-mode) .title:hover::after,
+  :global(html.dark-mode-override) .title:hover::after {
+    background: linear-gradient(90deg, var(--accent, #f87171), var(--primary, #fbbf24));
+  }
+  
+  /* =================================================================
+     RESPONSIVE DESIGN
+     ================================================================= */
+  
+  /* Tablets y pantallas medianas */
+  @media (max-width: 768px) {
+    .pageContainer {
+      padding: 1.5rem 0;
+    }
+    
+    .container {
+      padding: 0 0.75rem;
+    }
+  
+    .title {
+      margin-bottom: 2rem;
+    }
+  
+    .grid {
+      gap: 2rem;
+    }
+  }
+  
+  /* Móviles */
+  @media (max-width: 640px) {
+    .pageContainer {
+      padding: 1rem 0;
+    }
+    
+    .container {
+      padding: 0 0.5rem;
+    }
+  
+    .title {
+      margin-bottom: 1.5rem;
+    }
+  
+    .title::after {
+      width: 60px;
+      height: 3px;
+    }
+  
+    .title:hover::after {
+      width: 80px;
+    }
+  
+    .grid {
+      gap: 1.5rem;
+    }
+  }
+  
+  /* Pantallas muy pequeñas */
+  @media (max-width: 480px) {
+    .grid {
+      gap: 1.25rem;
+    }
+  }

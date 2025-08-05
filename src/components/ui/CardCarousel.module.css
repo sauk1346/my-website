@@ -36,6 +36,18 @@
   justify-content: center;
 }
 
+/* Nueva clase para centrar cuando las cartas caben todas */
+.carouselContainer.centeredCards .carouselContent {
+  display: flex;
+  justify-content: center;
+}
+
+.carouselContainer.centeredCards .carouselTrack {
+  justify-content: center;
+  width: auto;
+  transform: none !important; /* Anula cualquier transform */
+}
+
 .carouselSlide {
   flex-shrink: 0;
 }
@@ -69,8 +81,9 @@
   transform: none;
 }
 
-/* Oculta botones cuando hay una sola card */
-.carouselContainer.singleCard .carouselButton {
+/* Oculta botones cuando hay una sola card o cuando están centradas */
+.carouselContainer.singleCard .carouselButton,
+.carouselContainer.centeredCards .carouselButton {
   visibility: hidden;
 }
 

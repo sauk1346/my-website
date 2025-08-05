@@ -16,6 +16,8 @@ export const CardCarousel = ({
   const trackRef = useRef(null);
 
   const isSingleCard = platforms.length === 1;
+  // Nueva condición: cuando las cartas caben todas sin carrusel
+  const shouldCenter = platforms.length <= visibleCards;
 
   const calculateVisibleCards = () => {
     if (!carouselRef.current || !trackRef.current) return 3;
@@ -73,7 +75,8 @@ export const CardCarousel = ({
   };
 
   const calculateTransform = () => {
-    if (isSingleCard) return 0;
+    // Si las cartas caben todas, no aplicar transform
+    if (shouldCenter) return 0;
     
     if (!trackRef.current) return 0;
     
@@ -88,12 +91,13 @@ export const CardCarousel = ({
   };
 
   return (
-    <div className={`${styles.carouselContainer} ${isSingleCard ? styles.singleCard : ''}`}>
+    <div className={`${styles.carouselContainer} ${shouldCenter ? styles.centeredCards : ''}`}>
       <div className={styles.carouselWrapper}>
         <button
           className={styles.carouselButton}
           onClick={prevSlide}
           disabled={currentIndex === 0}
+          style={{ visibility: shouldCenter ? 'hidden' : 'visible' }}
         >
           ‹
         </button>
@@ -104,6 +108,7 @@ export const CardCarousel = ({
             ref={trackRef}
             style={{
               transform: `translateX(-${calculateTransform()}px)`,
+              justifyContent: shouldCenter ? 'center' : 'flex-start'
             }}
           >
             {platforms.map((platformKey, index) => {
@@ -136,12 +141,14 @@ export const CardCarousel = ({
           className={styles.carouselButton}
           onClick={nextSlide}
           disabled={currentIndex >= maxIndex}
+          style={{ visibility: shouldCenter ? 'hidden' : 'visible' }}
         >
           ›
         </button>
       </div>
 
-      {maxIndex > 0 && (
+      {/* Solo mostrar dots si hay navegación necesaria */}
+      {maxIndex > 0 && !shouldCenter && (
         <div className={styles.carouselDots}>
           {Array.from({ length: maxIndex + 1 }, (_, index) => (
             <button

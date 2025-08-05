@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import styles from '@/shared/clases.module.css'; // O donde tengas tus estilos
+import styles from './CustomLink.module.css';
 
 const CustomLink = ({ href, children, className, ...props }) => {
   // Combina styles.link con cualquier otra clase que se pase como prop

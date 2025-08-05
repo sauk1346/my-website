@@ -1,5 +1,5 @@
 import CftTable from '@/components/features/bootcamp/codfacilito/CftTable';
-import { cft002Data } from '@/data/bootcamps/codfacilito/cft002';
+import { cft002Data } from '@/data/bootcamp/codfacilito/cft002';
 
 const Cft002 = () => {
     return <CftTable courseData={cft002Data} />;

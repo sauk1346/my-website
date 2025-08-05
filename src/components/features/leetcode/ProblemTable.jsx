@@ -112,10 +112,7 @@ const ProblemTable = ({
                   {id}
                 </td>
                 <td data-label="Descripción">
-                  <CustomLink 
-                    href={`${platform}/${id.toLowerCase()}`}
-                    className={styles.link}
-                  >
+                  <CustomLink href={`${platform}/${id.toLowerCase()}`}>
                     {problem.title}
                   </CustomLink>
                 </td>

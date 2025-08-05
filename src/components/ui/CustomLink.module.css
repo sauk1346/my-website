@@ -1,0 +1,43 @@
+/* =================================================================
+   CUSTOM LINK COMPONENT - ESTILOS MODULARES SIMPLES
+   ================================================================= */
+
+   .link {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease, border-bottom 0.2s ease;
+    border-bottom: 1px solid transparent;
+    cursor: pointer;
+  }
+  
+  .link:hover {
+    color: #1d4ed8;
+    border-bottom: 1px solid #2563eb;
+  }
+  
+  .link:focus {
+    outline: 2px solid #2563eb;
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+  
+  /* =================================================================
+     MODO OSCURO
+     ================================================================= */
+  
+  :global(html.dark-mode) .link,
+  :global(html.dark-mode-override) .link {
+    color: #60a5fa;
+  }
+  
+  :global(html.dark-mode) .link:hover,
+  :global(html.dark-mode-override) .link:hover {
+    color: #93c5fd;
+    border-bottom-color: #60a5fa;
+  }
+  
+  :global(html.dark-mode) .link:focus,
+  :global(html.dark-mode-override) .link:focus {
+    outline-color: #60a5fa;
+  }

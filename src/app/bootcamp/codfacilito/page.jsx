@@ -1,6 +1,6 @@
 import styles from '@/shared/elearning.module.css'
 import CustomLink from '@/components/ui/CustomLink';
-import { codfacilitoData } from '@/data/bootcamps/codfacilito/codfacilito-data';
+import { codfacilitoData } from '@/data/bootcamp/codfacilito/codfacilito-data';
 
 const CodFacilito = () => {
   return (

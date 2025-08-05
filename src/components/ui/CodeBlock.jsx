@@ -2,7 +2,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import Prism from "prismjs";
 import "prismjs/themes/prism.css";
-
 import "prismjs/components/prism-json";
 import "prismjs/components/prism-javascript";
 import "prismjs/components/prism-css";
@@ -15,7 +14,7 @@ import "prismjs/components/prism-cpp";
 import "prismjs/components/prism-haskell";
 import "prismjs/components/prism-bash";
 import 'prismjs/components/prism-ruby';
-import styles from "@/shared/CodeBlock.module.css";
+import styles from "./CodeBlock.module.css";
 
 export function CodeBlock({ children, language }) {
   const codeRef = useRef(null);

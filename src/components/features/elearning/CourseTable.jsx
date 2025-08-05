@@ -30,8 +30,6 @@ export const CourseTable = ({ courses, platformName }) => {
                       <a 
                         href={course.link} 
                         className={styles.link} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
                       >
                         {course.title}
                       </a>

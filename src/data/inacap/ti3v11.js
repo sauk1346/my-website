@@ -7,33 +7,41 @@ const courseData = {
         email: "luyanez.profesor@gmail.com"
     },    
     unitsData: [
-        { unit: '1', description: 'Problemas y Representación de Soluciones' },
-        { unit: '2', description: 'Estructuras de Decisión. Bucles y funciones de lenguaje Python' },
-        { unit: '3', description: 'Colecciones y librerías en Python' },
-        { unit: '4', description: 'Metodologías de Desarrollo Seguro, considerando SAMM y SDL' }
+        { 
+            unit: '1',
+            description: 'Problemas y Representación de Soluciones'
+        },
+        { 
+            unit: '2',
+            description: 'Estructuras de Decisión. Bucles y funciones de lenguaje Python'
+        },
+        { 
+            unit: '3',
+            description: 'Colecciones y librerías en Python'
+        },
+        { 
+            unit: '4',
+            description: 'Metodologías de Desarrollo Seguro, considerando SAMM y SDL'
+        }
     ],
     evaluationsData: [
         { 
             evaluationNumber: 1,
             date: 'Jue 06, Jun 2024', 
             weighting: '20%', 
-            description: [
-                {
-                    text: 'Evaluación 01',
-                    href: 'ti3v11/eval01'
-                }
-            ]
+            description: {
+                text: 'Evaluación 01',
+                href: 'ti3v11/eval01'
+            }
         },
         { 
             evaluationNumber: 2, 
             date: 'Mié 10, Jul 2024', 
             weighting: '35%', 
-            description: [
-                {
-                    text: 'Evaluación 02',
-                    href: 'ti3v11/eval02'
-                }
-            ],
+            description: {
+                text: 'Evaluación 02',
+                href: 'ti3v11/eval02'
+            },
             quickGuide: [
                 {
                     text: 'guía 01',
@@ -49,24 +57,20 @@ const courseData = {
             evaluationNumber: 3, 
             date: 'Mar 23, Jul 2024', 
             weighting: '35%', 
-            description: [
-                {
-                    text: 'Informe SAMM y SDL',
-                    href: '/inacap/ti3v11/docs/eval03_sol.pdf',
-                    external: true
-                }
-            ]
+            description: {
+                text: 'Informe SAMM y SDL',
+                href: '/inacap/ti3v11/docs/eval03_sol.pdf',
+                external: true
+            }
         },
         { 
             evaluationNumber: 4, 
             date: 'Jue 25, Jul 2024', 
             weighting: '10%', 
-            description: [
-                {
-                    text: 'Promedio Controles',
-                    href: 'ti3v11/controles'
-                }
-            ]
+            description: {
+                text: 'Promedio Controles',
+                href: 'ti3v11/controles'
+            }
         }
     ],
     classData: [

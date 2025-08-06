@@ -1,34 +1,210 @@
 export const subjects = [
     // Semestre 1 - 2024
-    { code: 'TI3V11', name: 'Introducción a la Programación Segura', semester: 1, year: 2024, category: 'programming', status: 'completed', href: '/inacap/ti3v11' },
-    { code: 'TI3V12', name: 'Fundamentos de Base de Datos', semester: 1, year: 2024, category: 'database', status: 'completed', href: '/inacap/ti3v12' },
-    { code: 'TI3V13', name: 'Fundamentos de Hardware y Software', semester: 1, year: 2024, category: 'systems', status: 'completed', href: '/inacap/ti3v13' },
-    { code: 'FVFC03', name: 'Formación Ciudadana', semester: 1, year: 2024, category: 'general', status: 'completed' },
-    { code: 'MVAE02', name: 'Resolución de Problemas en Álgebra', semester: 1, year: 2024, category: 'math', status: 'completed' },
+    { 
+      code: 'TI3V11',
+      name: 'Introducción a la Programación Segura',
+      semester: 1,
+      year: 2024,
+      category: 'programming',
+      status: 'completed',
+      href: '/inacap/ti3v11'
+    },
+    { 
+      code: 'TI3V12',
+      name: 'Fundamentos de Base de Datos',
+      semester: 1,
+      year: 2024,
+      category: 'database',
+      status: 'completed',
+      href: '/inacap/ti3v12'
+    },
+    { 
+      code: 'TI3V13',
+      name: 'Fundamentos de Hardware y Software',
+      semester: 1,
+      year: 2024,
+      category: 'systems',
+      status: 'completed',
+      href: '/inacap/ti3v13'
+    },
+    { 
+      code: 'FVFC03',
+      name: 'Formación Ciudadana',
+      semester: 1,
+      year: 2024,
+      category: 'general',
+      status: 'completed'
+    },
+    { 
+      code: 'MVAE02',
+      name: 'Resolución de Problemas en Álgebra',
+      semester: 1,
+      year: 2024,
+      category: 'math',
+      status: 'completed'
+    },
     
     // Semestre 2 - 2024
-    { code: 'TI3V21', name: 'Programación Orientada a Objeto Seguro', semester: 2, year: 2024, category: 'programming', status: 'completed', href: '/inacap/ti3v21' },
-    { code: 'TI3V22', name: 'Bases de Datos Estructuradas', semester: 2, year: 2024, category: 'database', status: 'completed', href: '/inacap/ti3v22' },
-    { code: 'TI3V23', name: 'Metodología de Desarrollo Ágil', semester: 2, year: 2024, category: 'methodology', status: 'completed', href: '/inacap/ti3v23' },
-    { code: 'TI3V25', name: 'Modelamiento de Soluciones Informáticas', semester: 2, year: 2024, category: 'systems', status: 'completed', href: '/inacap/ti3v25' },
-    { code: 'AVAN01', name: 'Administración', semester: 2, year: 2024, category: 'business', status: 'completed', href: '/inacap/avan01' },
-    { code: 'MVFM01', name: 'Funciones y Matrices', semester: 2, year: 2024, category: 'math', status: 'completed', href: '/inacap/mvfm01' },
+    { 
+      code: 'TI3V21', 
+      name: 'Programación Orientada a Objeto Seguro',
+      semester: 2,
+      year: 2024,
+      category: 'programming',
+      status: 'completed',
+      href: '/inacap/ti3v21'
+    },
+    { 
+      code: 'TI3V22', 
+      name: 'Bases de Datos Estructuradas',
+      semester: 2,
+      year: 2024,
+      category: 'database',
+      status: 'completed',
+      href: '/inacap/ti3v22'
+    },
+    { 
+      code: 'TI3V23', 
+      name: 'Metodología de Desarrollo Ágil',
+      semester: 2,
+      year: 2024,
+      category: 'methodology',
+      status: 'completed',
+      href: '/inacap/ti3v23'
+    },
+    { 
+      code: 'TI3V25', 
+      name: 'Modelamiento de Soluciones Informáticas',
+      semester: 2,
+      year: 2024,
+      category: 'systems',
+      status: 'completed',
+      href: '/inacap/ti3v25'
+    },
+    { 
+      code: 'AVAN01', 
+      name: 'Administración',
+      semester: 2,
+      year: 2024,
+      category: 'business',
+      status: 'completed',
+      href: '/inacap/avan01'
+    },
+    { 
+      code: 'MVFM01', 
+      name: 'Funciones y Matrices',
+      semester: 2,
+      year: 2024,
+      category: 'math',
+      status: 'completed',
+      href: '/inacap/mvfm01'
+    },
     
     // Semestre 3 - 2025
-    { code: 'TI3V31', name: 'Programación Front End', semester: 3, year: 2025, category: 'programming', status: 'completed', href: '/inacap/ti3v31' },
-    { code: 'TI3V32', name: 'Bases de Datos No Estructuradas', semester: 3, year: 2025, category: 'database', status: 'completed', href: '/inacap/ti3v32' },
-    { code: 'TI3V35', name: 'Sistemas Operativos', semester: 3, year: 2025, category: 'systems', status: 'completed', href: '/inacap/ti3v35' },
-    { code: 'TI3V34', name: 'Fundamentos de Seguridad de la Información', semester: 3, year: 2025, category: 'security', status: 'completed', href: '/inacap/ti3v34' },
-    { code: 'TILV01', name: '(Electivo I) Plan de Pruebas de Software', semester: 3, year: 2025, category: 'programming', status: 'completed', href: '/inacap/tilv21' },
-    { code: 'FVIE01', name: 'Innovación y Emprendimiento I', semester: 3, year: 2025, category: 'business', status: 'completed', href: '/inacap/fvie01' },
+    { 
+      code: 'TI3V31',
+      name: 'Programación Front End',
+      semester: 3,
+      year: 2025,
+      category: 'programming',
+      status: 'completed',
+      href: '/inacap/ti3v31'
+    },
+    { 
+      code: 'TI3V32',
+      name: 'Bases de Datos No Estructuradas',
+      semester: 3,
+      year: 2025,
+      category: 'database',
+      status: 'completed',
+      href: '/inacap/ti3v32'
+    },
+    { 
+      code: 'TI3V34',
+      name: 'Fundamentos de Seguridad de la Información',
+      semester: 3,
+      year: 2025,
+      category: 'security',
+      status: 'completed',
+      href: '/inacap/ti3v34'
+    },
+    { 
+      code: 'TI3V35',
+      name: 'Sistemas Operativos',
+      semester: 3,
+      year: 2025,
+      category: 'systems',
+      status: 'completed',
+      href: '/inacap/ti3v35'
+    },
+    { 
+      code: 'TILV01',
+      name: '(Electivo I) Plan de Pruebas de Software',
+      semester: 3,
+      year: 2025,
+      category: 'programming',
+      status: 'completed',
+      href: '/inacap/tilv01'
+    },
+    { 
+      code: 'FVIE01',
+      name: 'Innovación y Emprendimiento I',
+      semester: 3,
+      year: 2025,
+      category: 'business',
+      status: 'completed',
+      href: '/inacap/fvie01'
+    },
   
     // Semestre 4 - 2025
-    { code: 'TI3V41', name: 'Programación Back End', semester: 4, year: 2025, category: 'programming', status: 'pending' },
-    { code: 'TI3V42', name: 'Aplicaciones Móviles para IoT', semester: 4, year: 2025, category: 'programming', status: 'pending' },
-    { code: 'TI3V43', name: 'Ingeniería de Software', semester: 4, year: 2025, category: 'methodology', status: 'pending' },
-    { code: 'TIHV43', name: 'Proyecto Integrado', semester: 4, year: 2025, category: 'methodology', status: 'pending' },
-    { code: 'TILV02', name: '(Electivo II)', semester: 4, year: 2025, category: 'general', status: 'pending' },
-    { code: 'FVES01', name: 'Inglés Inicial', semester: 4, year: 2025, category: 'general', status: 'pending' },
+    { 
+      code: 'TI3V41',
+      name: 'Programación Back End',
+      semester: 4,
+      year: 2025,
+      category: 'programming',
+      status: 'pending'
+    },
+    { 
+      code: 'TI3V42',
+      name: 'Aplicaciones Móviles para IoT',
+      semester: 4,
+      year: 2025,
+      category: 'programming',
+      status: 'pending'
+    },
+    { 
+      code: 'TI3V43',
+      name: 'Ingeniería de Software',
+      semester: 4,
+      year: 2025,
+      category: 'methodology',
+      status: 'pending'
+    },
+    { 
+      code: 'TIHV43',
+      name: 'Proyecto Integrado',
+      semester: 4,
+      year: 2025,
+      category: 'methodology',
+      status: 'pending'
+    },
+    { 
+      code: 'TILV02',
+      name: '(Electivo II) Desarrollo de Videojuegos',
+      semester: 4,
+      year: 2025,
+      category: 'general',
+      status: 'pending'
+    },
+    { 
+      code: 'FVES01',
+      name: 'Inglés Inicial',
+      semester: 4,
+      year: 2025,
+      category: 'general',
+      status: 'pending'
+    },
   
     // Semestre 5 - 2026
     { code: 'TI3V51', name: 'Arquitectura y Almacenamiento de Datos', semester: 5, year: 2026, category: 'database', status: 'pending' },

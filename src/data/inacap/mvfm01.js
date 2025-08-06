@@ -7,9 +7,18 @@ const courseData = {
         email: "francisco.gonzales143@inacapmail.cl"
     },
     unitsData: [
-        { unit: '1', description: 'Funciones Polinómicas, Exponencial y Logarítmica' },
-        { unit: '2', description: 'Trigonometría' },
-        { unit: '3', description: 'Sucesiones, Sumatorias, Vectores y Matrices' },
+        { 
+            unit: '1',
+            description: 'Funciones Polinómicas, Exponencial y Logarítmica'
+        },
+        { 
+            unit: '2',
+            description: 'Trigonometría'
+        },
+        { 
+            unit: '3',
+            description: 'Sucesiones, Sumatorias, Vectores y Matrices'
+        },
     ],   
     evaluationsData: [
         { 
@@ -20,7 +29,7 @@ const courseData = {
                 text: 'Evaluación 01',
                 href: '/inacap/mvfm01/docs/eval01.pdf',
                 external: true
-            }, 
+            }
         },
         { 
             evaluationNumber: 2, 
@@ -28,7 +37,7 @@ const courseData = {
             weighting: '25%', 
             description: {
                 text: 'Evaluación 02'
-            }, 
+            }
         },
         { 
             evaluationNumber: 3, 
@@ -37,7 +46,7 @@ const courseData = {
             description: {
                 text: 'Proyecto: Trigonautas',
                 href: 'mvfm01/proyecto'
-            }, 
+            }
         },
         { 
             evaluationNumber: 4, 
@@ -47,10 +56,9 @@ const courseData = {
                 text: 'Promedio Controles',
                 href: '/inacap/mvfm01/docs/controles.pdf',
                 external: true
-            }, 
-        }  
+            }
+        }
     ],
-    
     classData: [
         { 
             week: '01', 
@@ -362,7 +370,7 @@ const courseData = {
             date: 'Mié 06, Nov 2024', 
             description: [
                 {
-                    text: '- Suspensión Clases',
+                    text: 'Suspensión Clases',
                     strikethrough: true
                 }
             ]
@@ -475,7 +483,7 @@ const courseData = {
                 }
             ]
         }
-    ],    
+    ]
 };
 
 export default courseData;

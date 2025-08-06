@@ -2,6 +2,8 @@
 
 import React, { useState, useEffect } from 'react';
 import { Calendar, Book, CheckSquare, User, Grid3x3, Monitor, FileText, Clock, Percent } from 'lucide-react';
+import CustomLink from '@/components/ui/CustomLink';
+import ExternalLink from '@/components/ui/ExternalLink';
 import styles from './CourseDetails.module.css';
 
 const CourseDetails = ({ 
@@ -11,9 +13,80 @@ const CourseDetails = ({
   professorData,
   unitsData,
   evaluationsData,
-  classData = [], // Valor predeterminado de array vacío
-  lectureData = [] // Valor predeterminado de array vacío
+  classData = [],
+  lectureData = []
 }) => {
+  
+  // Helper function para renderizar un elemento individual de contenido
+  const renderContentItem = (item, index) => {
+    if (!item) return null;
+    
+    const key = `content-${index}`;
+    
+    // Agregar viñeta automáticamente - siempre uniforme
+    const displayText = !item.text.startsWith('-') && !item.text.startsWith('•') && !item.text.startsWith('*')
+      ? `- ${item.text}` 
+      : item.text;
+    
+    // Inferir el tipo basado en la presencia de href
+    if (item.href) {
+      // Es un link
+      const LinkComponent = item.external === true ? ExternalLink : CustomLink;
+      const linkContent = <LinkComponent href={item.href}>{displayText}</LinkComponent>;
+      return (
+        <div key={key} className={styles.contentItem}>
+          {item.strikethrough ? <del>{linkContent}</del> : linkContent}
+        </div>
+      );
+    } else {
+      // Es texto simple
+      const textContent = <span>{displayText}</span>;
+      return (
+        <div key={key} className={styles.contentItem}>
+          {item.strikethrough ? <del>{textContent}</del> : textContent}
+        </div>
+      );
+    }
+  };
+
+  // Helper function principal para renderizar cualquier tipo de contenido
+  const renderContent = (content) => {
+    if (!content) return '';
+    
+    // Si es un string simple (retrocompatibilidad)
+    if (typeof content === 'string') {
+      return <span>{content}</span>;
+    }
+    
+    // Si es un objeto individual con la estructura esperada {text, href, external}
+    if (typeof content === 'object' && !Array.isArray(content) && content.text !== undefined) {
+      return (
+        <div className={styles.contentList}>
+          {renderContentItem(content, 0)}
+        </div>
+      );
+    }
+    
+    // Description y quickGuide son SIEMPRE arrays
+    if (Array.isArray(content)) {
+      return (
+        <div className={styles.contentList}>
+          {content.map((item, index) => renderContentItem(item, index))}
+        </div>
+      );
+    }
+    
+    // Fallback para JSX directo (retrocompatibilidad)
+    // Solo si es un elemento React válido
+    if (React.isValidElement(content)) {
+      return content;
+    }
+    
+    // Si llegamos aquí, probablemente es un objeto que no podemos renderizar
+    console.warn('Contenido no válido para renderizar:', content);
+    return <span>Contenido no disponible</span>;
+  };
+
   // Determinamos qué pestañas están disponibles
   const hasClasses = Array.isArray(classData) && classData.length > 0;
   const hasLectures = Array.isArray(lectureData) && lectureData.length > 0;
@@ -33,33 +106,29 @@ const CourseDetails = ({
 
   // Agrupamos clases por semana (solo si hay clases)
   const classesByWeek = hasClasses 
-  ? classData.reduce((acc, classItem, index) => {
-      // Si tiene semana definida, se crea/utiliza esa semana
-      if (classItem.week) {
-        if (!acc[classItem.week]) {
-          acc[classItem.week] = [];
-        }
-        acc[classItem.week].push(classItem);
-      } else {
-        // Para clases sin semana, buscamos la semana anterior en los datos
-        // en lugar de usar la última añadida al objeto acc
-        let weekToUse = '';
-        // Retrocedemos en el array hasta encontrar una clase con semana definida
-        for (let i = index - 1; i >= 0; i--) {
-          if (classData[i].week) {
-            weekToUse = classData[i].week;
-            break;
+    ? classData.reduce((acc, classItem, index) => {
+        if (classItem.week) {
+          if (!acc[classItem.week]) {
+            acc[classItem.week] = [];
+          }
+          acc[classItem.week].push(classItem);
+        } else {
+          // Buscar la semana anterior
+          let weekToUse = '';
+          for (let i = index - 1; i >= 0; i--) {
+            if (classData[i].week) {
+              weekToUse = classData[i].week;
+              break;
+            }
+          }
+          
+          if (weekToUse && acc[weekToUse]) {
+            acc[weekToUse].push(classItem);
           }
         }
-        
-        // Solo añadimos si encontramos una semana válida
-        if (weekToUse && acc[weekToUse]) {
-          acc[weekToUse].push(classItem);
-        }
-      }
-      return acc;
-    }, {})
-  : {};
+        return acc;
+      }, {})
+    : {};
 
   // Agrupamos lecturas por semana (solo si hay lecturas)
   const lecturesByWeek = hasLectures
@@ -106,7 +175,6 @@ const CourseDetails = ({
             <span>Evaluaciones</span>
           </button>
           
-          {/* Solo mostramos la pestaña de clases si hay datos de clases */}
           {hasClasses && (
             <button 
               className={`${styles.tabButton} ${activeTab === 'clases' ? styles.activeTab : ''}`}
@@ -117,7 +185,6 @@ const CourseDetails = ({
             </button>
           )}
           
-          {/* Solo mostramos la pestaña de lecturas si hay datos de lecturas */}
           {hasLectures && (
             <button 
               className={`${styles.tabButton} ${activeTab === 'lecturas' ? styles.activeTab : ''}`}
@@ -184,13 +251,11 @@ const CourseDetails = ({
           <div className={styles.tabContent}>
             <h2 className={styles.sectionTitle}>Evaluaciones</h2>
             
-            {/* Grid de tarjetas de evaluación */}
             <div className={styles.evaluationGrid}>
               {evaluationsData.map((evaluation, index) => {
-                // Convertir el peso a número para la barra de progreso
-                // Si el peso tiene formato "X% * Y%" tomamos sólo X
+                // Calcular porcentaje para la barra visual
                 let weightStr = evaluation.weighting.split('*')[0].trim();
-                const weightValue = parseInt(weightStr.replace('%', ''));
+                const weightValue = parseInt(weightStr.replace('%', '')) || 0;
                 
                 return (
                   <div key={index} className={styles.evaluationCard}>
@@ -212,14 +277,14 @@ const CourseDetails = ({
                     <div className={styles.evaluationBody}>
                       <div className={styles.evaluationDescription}>
                         <FileText size={16} />
-                        <div>{evaluation.description}</div>
+                        <div>{renderContent(evaluation.description)}</div>
                       </div>
                       
                       {evaluation.quickGuide && (
                         <div className={styles.evaluationGuides}>
                           <h4 className={styles.guidesTitle}>Guías de estudio:</h4>
                           <div className={styles.guidesList}>
-                            {evaluation.quickGuide}
+                            {renderContent(evaluation.quickGuide)}
                           </div>
                         </div>
                       )}
@@ -250,7 +315,7 @@ const CourseDetails = ({
             <h2 className={styles.sectionTitle}>Calendario de clases</h2>
             <div className={styles.twoColumnContainer}>
               {Object.entries(classesByWeek)
-                .sort(([weekA], [weekB]) => parseInt(weekA) - parseInt(weekB)) // Ordenar numéricamente
+                .sort(([weekA], [weekB]) => parseInt(weekA) - parseInt(weekB))
                 .map(([week, classes]) => (
                   <div key={week} className={styles.card}>
                     <div className={styles.cardHeader}>
@@ -273,7 +338,7 @@ const CourseDetails = ({
                               </div>
                             </div>
                             <div className={styles.classDescription}>
-                              {classItem.description}
+                              {renderContent(classItem.description)}
                             </div>
                           </div>
                         ))}
@@ -291,7 +356,7 @@ const CourseDetails = ({
             <h2 className={styles.sectionTitle}>Calendario de lecturas</h2>
             <div className={styles.twoColumnContainer}>
               {Object.entries(lecturesByWeek)
-                .sort(([weekA], [weekB]) => parseInt(weekA) - parseInt(weekB)) // Ordenar numéricamente
+                .sort(([weekA], [weekB]) => parseInt(weekA) - parseInt(weekB))
                 .map(([week, lectures]) => (
                   <div key={week} className={styles.card}>
                     <div className={styles.cardHeader}>
@@ -314,7 +379,7 @@ const CourseDetails = ({
                               </div>
                             </div>
                             <div className={styles.lectureDescription}>
-                              {lecture.description}
+                              {renderContent(lecture.description)}
                             </div>
                           </div>
                         ))}

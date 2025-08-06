@@ -1,4 +1,4 @@
-/* Estilos principales */
+/* ==================== ESTILOS PRINCIPALES ==================== */
 .container {
   display: flex;
   flex-direction: column;
@@ -313,6 +313,85 @@
 :global(html.dark-mode) .unitLink,
 :global(html.dark-mode-override) .unitLink {
   background-color: #172554;
+}
+
+/* ==================== ESTILOS PARA CONTENIDO ESTRUCTURADO ==================== */
+
+/* Contenedor para listas de contenido múltiple */
+.contentList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+/* Elemento individual de contenido */
+.contentItem {
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
+/* Estilo mejorado para elementos tachados */
+.contentItem del {
+  color: #666;
+  opacity: 0.7;
+  text-decoration-color: #999;
+}
+
+/* Modo oscuro para elementos tachados */
+:global(html.dark-mode) .contentItem del,
+:global(html.dark-mode-override) .contentItem del {
+  color: #aaa;
+}
+
+/* Hover states para links */
+.contentItem a {
+  transition: all 0.2s ease;
+}
+
+.contentItem a:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+/* Espaciado específico por sección */
+.evaluationDescription .contentList {
+  gap: 0.5rem;
+}
+
+.guidesList .contentList {
+  gap: 0.25rem;
+}
+
+.classDescription .contentList {
+  gap: 0.125rem;
+}
+
+.lectureDescription .contentList {
+  gap: 0.125rem;
+}
+
+/* Mejoras visuales para links externos vs internos */
+.contentItem a[href^="http"]:after,
+.contentItem a[href^="/"]:after {
+  content: " ↗";
+  font-size: 0.8em;
+  color: #666;
+  margin-left: 2px;
+}
+
+/* Modo oscuro para indicadores de links externos */
+:global(html.dark-mode) .contentItem a[href^="http"]:after,
+:global(html.dark-mode-override) .contentItem a[href^="http"]:after,
+:global(html.dark-mode) .contentItem a[href^="/"]:after,
+:global(html.dark-mode-override) .contentItem a[href^="/"]:after {
+  color: #888;
+}
+
+/* Estados de enfoque para accesibilidad */
+.contentItem a:focus {
+  outline: 2px solid #007acc;
+  outline-offset: 2px;
+  border-radius: 2px;
 }
 
 /* ==================== ESTILOS PARA LISTA DE CLASES ==================== */
@@ -691,6 +770,15 @@
   .card {
     max-width: 100%;
     width: 100%;
+  }
+  
+  /* Responsive adjustments para contenido estructurado */
+  .contentList {
+    gap: 0.375rem;
+  }
+  
+  .contentItem {
+    font-size: 0.95em;
   }
 }
 

@@ -1,0 +1,278 @@
+/* Contenedor principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    transition: color 0.3s ease;
+  }
+  
+  /* Contenedor en modo oscuro */
+  :global(html.dark-mode) .container,
+  :global(html.dark-mode-override) .container {
+    color: #d1d5db;
+  }
+  
+  /* Título principal */
+  .title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #1f2937;
+    text-align: center;
+    transition: color 0.3s ease;
+  }
+  
+  /* Título en modo oscuro */
+  :global(html.dark-mode) .title,
+  :global(html.dark-mode-override) .title {
+    color: #f3f4f6;
+  }
+  
+  /* Subtítulo */
+  .subheading {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #4a4a4a;
+    text-align: center;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: color 0.3s ease;
+  }
+  
+  /* Subtítulo en modo oscuro */
+  :global(html.dark-mode) .subheading,
+  :global(html.dark-mode-override) .subheading {
+    color: #d1d5db;
+  }
+  
+  /* Contenedor de tarjetas */
+  .cardContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* Tarjeta base */
+  .card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+  }
+  
+  /* Tarjeta en modo oscuro */
+  :global(html.dark-mode) .card,
+  :global(html.dark-mode-override) .card {
+    background-color: #1e1e1e;
+    border-color: #374151;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.18);
+  }
+  
+  .card:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    transform: translateY(-2px);
+  }
+  
+  /* Hover en modo oscuro */
+  :global(html.dark-mode) .card:hover,
+  :global(html.dark-mode-override) .card:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.25);
+  }
+  
+  /* Tarjeta de ancho completo */
+  .fullWidth {
+    width: 100%;
+  }
+  
+  /* Títulos de sección */
+  .sectionTitle {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 0.5rem;
+    transition: color 0.3s ease, border-color 0.3s ease;
+  }
+  
+  /* Títulos de sección en modo oscuro */
+  :global(html.dark-mode) .sectionTitle,
+  :global(html.dark-mode-override) .sectionTitle {
+    color: #f3f4f6;
+    border-bottom-color: #374151;
+  }
+  
+  /* Lista de archivos en grid */
+  .fileGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 0;
+    list-style: none;
+    margin: 1rem 0;
+  }
+  
+  .fileGrid li {
+    background: #f8fafc;
+    border-radius: 8px;
+    padding: 1rem;
+    border: 1px solid #e2e8f0;
+    transition: all 0.2s ease;
+  }
+  
+  /* Grid items en modo oscuro */
+  :global(html.dark-mode) .fileGrid li,
+  :global(html.dark-mode-override) .fileGrid li {
+    background: #1e293b;
+    border-color: #374151;
+  }
+  
+  .fileGrid li:hover {
+    background: #edf2f7;
+    border-color: #cbd5e0;
+    transform: translateY(-1px);
+  }
+  
+  /* Hover en modo oscuro */
+  :global(html.dark-mode) .fileGrid li:hover,
+  :global(html.dark-mode-override) .fileGrid li:hover {
+    background: #334155;
+    border-color: #475569;
+  }
+  
+  /* Lista simple */
+  .simpleList {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+  }
+  
+  .simpleList li {
+    background: #f8fafc;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid #e2e8f0;
+    transition: all 0.2s ease;
+  }
+  
+  /* Lista simple en modo oscuro */
+  :global(html.dark-mode) .simpleList li,
+  :global(html.dark-mode-override) .simpleList li {
+    background: #1e293b;
+    border-color: #374151;
+  }
+  
+  .simpleList li:hover {
+    background: #edf2f7;
+    border-color: #cbd5e0;
+  }
+  
+  /* Hover en modo oscuro */
+  :global(html.dark-mode) .simpleList li:hover,
+  :global(html.dark-mode-override) .simpleList li:hover {
+    background: #334155;
+    border-color: #475569;
+  }
+  
+  /* Enlaces en las listas */
+  .fileGrid a,
+  .simpleList a {
+    color: #2563eb;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.3s ease;
+  }
+  
+  /* Enlaces en modo oscuro */
+  :global(html.dark-mode) .fileGrid a,
+  :global(html.dark-mode-override) .fileGrid a,
+  :global(html.dark-mode) .simpleList a,
+  :global(html.dark-mode-override) .simpleList a {
+    color: #60a5fa;
+  }
+  
+  .fileGrid a:hover,
+  .simpleList a:hover {
+    color: #1d4ed8;
+  }
+  
+  /* Hover en modo oscuro */
+  :global(html.dark-mode) .fileGrid a:hover,
+  :global(html.dark-mode-override) .fileGrid a:hover,
+  :global(html.dark-mode) .simpleList a:hover,
+  :global(html.dark-mode-override) .simpleList a:hover {
+    color: #93c5fd;
+  }
+  
+  /* Iconos para diferentes tipos de archivo */
+  .fileGrid a::before,
+  .simpleList a::before {
+    content: "📄";
+    font-size: 1.2rem;
+  }
+  
+  /* Estados de enfoque para accesibilidad */
+  .fileGrid a:focus,
+  .simpleList a:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+  
+  /* Enfoque en modo oscuro */
+  :global(html.dark-mode) .fileGrid a:focus,
+  :global(html.dark-mode-override) .fileGrid a:focus,
+  :global(html.dark-mode) .simpleList a:focus,
+  :global(html.dark-mode-override) .simpleList a:focus {
+    outline-color: #60a5fa;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .container {
+      padding: 1rem;
+    }
+    
+    .title {
+      font-size: 2rem;
+    }
+    
+    .subheading {
+      font-size: 1.1rem;
+    }
+    
+    .fileGrid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+    
+    .card {
+      padding: 1rem;
+    }
+    
+    .sectionTitle {
+      font-size: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .title {
+      font-size: 1.75rem;
+    }
+    
+    .fileGrid li,
+    .simpleList li {
+      padding: 0.75rem;
+    }
+  }

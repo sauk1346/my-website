@@ -86,79 +86,79 @@ export const calendar25 = [
   {
     id: 15,
     fecha: "2025-4-9",
-    titulo: "[TILV21] Evaluación 01",
+    titulo: "[TILV01] Evaluación 01",
     description: "Plan de Pruebas de Software"
   },
   {
     id: 16,
     fecha: "2025-4-30",
-    titulo: "[TILV21] Informe 01",
+    titulo: "[TILV01] Informe 01",
     description: "Plan de Pruebas de Software"
   },
   {
     id: 17,
     fecha: "2025-5-8",
-    titulo: "[TILV21] Informe 02",
+    titulo: "[TILV01] Informe 02",
     description: "Plan de Pruebas de Software"
   },
   {
     id: 18,
     fecha: "2025-5-16",
-    titulo: "[TILV21] Examen",
+    titulo: "[TILV01] Examen",
     description: "Plan de Pruebas de Software"
   },
   {
     id: 19,
     fecha: "2025-3-21",
-    titulo: "[TILV21] Control 01",
+    titulo: "[TILV01] Control 01",
     description: "Plan de Pruebas de Software"
   },
   {
     id: 20,
     fecha: "2025-3-28",
-    titulo: "[TILV21] Control 02",
+    titulo: "[TILV01] Control 02",
     description: "Plan de Pruebas de Software"
   },
   {
     id: 21,
     fecha: "2025-4-4",
-    titulo: "[TILV21] Control 03",
+    titulo: "[TILV01] Control 03",
     description: "Plan de Pruebas de Software"
   },
   {
     id: 22,
     fecha: "2025-4-11",
-    titulo: "[TILV21] Control 04",
+    titulo: "[TILV01] Control 04",
     description: "Plan de Pruebas de Software"
   },
   {
     id: 23,
     fecha: "2025-4-18",
-    titulo: "[TILV21] Control 05",
+    titulo: "[TILV01] Control 05",
     description: "Plan de Pruebas de Software"
   },
   {
     id: 24,
     fecha: "2025-4-25",
-    titulo: "[TILV21] Control 06",
+    titulo: "[TILV01] Control 06",
     description: "Plan de Pruebas de Software"
   },
   {
     id: 25,
     fecha: "2025-5-2",
-    titulo: "[TILV21] Control 07",
+    titulo: "[TILV01] Control 07",
     description: "Plan de Pruebas de Software"
   },
   {
     id: 26,
     fecha: "2025-5-8",
-    titulo: "[TILV21] Control 08",
+    titulo: "[TILV01] Control 08",
     description: "Plan de Pruebas de Software"
   },
   {
     id: 27,
     fecha: "2025-5-8",
-    titulo: "[TILV21] Control 09",
+    titulo: "[TILV01] Control 09",
     description: "Plan de Pruebas de Software"
   },
   {

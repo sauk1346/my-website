@@ -16,11 +16,21 @@
   width: 100%;
   padding: 3rem 1rem;
   border-bottom: 1px solid var(--border, #e5e7eb);
-  transition: border-color 0.3s ease;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
 .section:last-child {
   border-bottom: none;
+}
+
+/* ======================== ALTERNANCIA DE COLORES ======================== */
+/* Alternancia de colores de fondo para diferenciar secciones */
+.section:nth-child(odd) {
+  background-color: var(--background);
+}
+
+.section:nth-child(even) {
+  background-color: var(--card-bg);
 }
 
 /* Contenido de cada sección */
@@ -70,7 +80,7 @@
   transition: color 0.3s ease;
 }
 
-/* ======================== NUEVO ======================== */
+/* ======================== CAROUSEL WRAPPER ======================== */
 /* Contenedor para el CardCarousel - evita que las cards se estiren */
 .carouselWrapper {
   width: 100%;
@@ -92,12 +102,10 @@
     max-width: 280px !important;
   }
 }
-/* ====================================================== */
 
 /* =================================================================
    MODO OSCURO
    ================================================================= */
-
 :global(html.dark-mode) .mainContainer,
 :global(html.dark-mode-override) .mainContainer {
   background-color: var(--background, #0f172a);
@@ -107,6 +115,17 @@
 :global(html.dark-mode) .section,
 :global(html.dark-mode-override) .section {
   border-bottom-color: var(--border, #374151);
+}
+
+/* Alternancia de colores en modo oscuro */
+:global(html.dark-mode) .section:nth-child(odd),
+:global(html.dark-mode-override) .section:nth-child(odd) {
+  background-color: var(--background);
+}
+
+:global(html.dark-mode) .section:nth-child(even),
+:global(html.dark-mode-override) .section:nth-child(even) {
+  background-color: var(--card-bg);
 }
 
 :global(html.dark-mode) .sectionTitle,
@@ -122,7 +141,6 @@
 /* =================================================================
    RESPONSIVE DESIGN
    ================================================================= */
-
 /* Tablets y pantallas medianas */
 @media (max-width: 768px) {
   .section {

@@ -1,3 +1,4 @@
+/* Layout principal de la página */
 .pageContainer {
   display: flex;
   flex-direction: column;
@@ -34,7 +35,7 @@
   position: relative;
 }
 
-/* Línea decorativa bajo el título - tema bootcamps */
+/* Línea decorativa bajo el título */
 .title::after {
   content: '';
   display: block;
@@ -48,6 +49,16 @@
 
 .title:hover::after {
   width: 80px;
+}
+
+/* Subtítulo explicativo */
+.subtitle {
+  font-size: 1.1rem;
+  color: var(--secondary, #64748b);
+  text-align: center;
+  margin-bottom: 1rem;
+  font-weight: 400;
+  transition: color 0.3s ease;
 }
 
 /* Sección de la tabla - aparece cuando hay selección */
@@ -73,9 +84,8 @@
 }
 
 /* =================================================================
-   MODO OSCURO
-   ================================================================= */
-
+ MODO OSCURO
+ ================================================================= */
 :global(html.dark-mode) .pageContainer,
 :global(html.dark-mode-override) .pageContainer {
   background-color: var(--background, #0f172a);
@@ -87,25 +97,19 @@
   color: var(--foreground, #f1f5f9);
 }
 
+:global(html.dark-mode) .subtitle,
+:global(html.dark-mode-override) .subtitle {
+  color: var(--secondary, #94a3b8);
+}
+
 :global(html.dark-mode) .tableSection,
 :global(html.dark-mode-override) .tableSection {
   border-top-color: var(--border, #374151);
 }
 
-/* Gradiente diferente para modo oscuro */
-:global(html.dark-mode) .title::after,
-:global(html.dark-mode-override) .title::after {
-  background: linear-gradient(90deg, var(--primary, #fbbf24), var(--accent, #f87171));
-}
-
-:global(html.dark-mode) .title:hover::after,
-:global(html.dark-mode-override) .title:hover::after {
-  background: linear-gradient(90deg, var(--accent, #f87171), var(--primary, #fbbf24));
-}
-
 /* =================================================================
-   RESPONSIVE DESIGN
-   ================================================================= */
+ RESPONSIVE DESIGN
+ ================================================================= */
 
 /* Tablets y pantallas medianas */
 @media (max-width: 768px) {
@@ -116,6 +120,11 @@
   
   .title {
     margin-bottom: 1.5rem;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
   }
   
   .tableSection {
@@ -141,6 +150,10 @@
   
   .title:hover::after {
     width: 50px;
+  }
+  
+  .subtitle {
+    font-size: 0.9rem;
   }
   
   .tableSection {

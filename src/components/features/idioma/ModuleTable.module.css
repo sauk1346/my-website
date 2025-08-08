@@ -1,301 +1,301 @@
 /* Contenedor principal de la página */
 .pageContainer {
-    min-height: 100vh;
-    background: linear-gradient(135deg, #2563eb 0%, #1f2937 100%);
-    padding: 2rem 1rem;
-    transition: background 0.3s ease;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #2563eb 0%, #1f2937 100%);
+  padding: 2rem 1rem;
+  transition: background 0.3s ease;
+}
+
+/* Fondo en modo oscuro */
+:global(html.dark-mode) .pageContainer,
+:global(html.dark-mode-override) .pageContainer {
+  background: linear-gradient(135deg, #1e1e1e 0%, #111827 100%);
+}
+
+/* Contenedor del contenido */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  padding: 2.5rem;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Contenedor en modo oscuro */
+:global(html.dark-mode) .container,
+:global(html.dark-mode-override) .container {
+  background-color: #1e1e1e;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* Título principal */
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  background: linear-gradient(135deg, #2563eb 0%, #1f2937 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  transition: background 0.3s ease;
+}
+
+/* Título en modo oscuro */
+:global(html.dark-mode) .title,
+:global(html.dark-mode-override) .title {
+  background: linear-gradient(135deg, #60a5fa 0%, #e5e7eb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Grid para los módulos */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+
+/* Títulos de los módulos */
+.platformTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid #2563eb;
+  position: relative;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Títulos en modo oscuro */
+:global(html.dark-mode) .platformTitle,
+:global(html.dark-mode-override) .platformTitle {
+  color: #e5e7eb;
+  border-bottom-color: #60a5fa;
+}
+
+.platformTitle::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: #60a5fa;
+  transition: background 0.3s ease;
+}
+
+/* Línea decorativa en modo oscuro */
+:global(html.dark-mode) .platformTitle::after,
+:global(html.dark-mode-override) .platformTitle::after {
+  background: #93c5fd;
+}
+
+/* Estilos de las tablas */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Tabla en modo oscuro */
+:global(html.dark-mode) .table,
+:global(html.dark-mode-override) .table {
+  background-color: #1e1e1e;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
+}
+
+.table thead {
+  background: linear-gradient(135deg, #2563eb 0%, #1f2937 100%);
+}
+
+/* Encabezados en modo oscuro */
+:global(html.dark-mode) .table thead,
+:global(html.dark-mode-override) .table thead {
+  background: linear-gradient(135deg, #374151 0%, #111827 100%);
+}
+
+.table th, .table td {
+  padding: 1rem 0.75rem;
+  text-align: left;
+  border: 1px solid white;
+  transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+/* Bordes del mismo color que el fondo para que no se vean */
+:global(html.dark-mode) .table th,
+:global(html.dark-mode) .table td,
+:global(html.dark-mode-override) .table th,
+:global(html.dark-mode-override) .table td {
+  border-color: #1e1e1e;
+}
+
+.table thead th {
+  font-weight: 600;
+  color: white;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-color: transparent;
+}
+
+/* Encabezados de tabla en modo oscuro */
+:global(html.dark-mode) .table thead th,
+:global(html.dark-mode-override) .table thead th {
+  color: #f9fafb;
+  border-color: transparent;
+}
+
+.table tbody td {
+  color: #1f2937;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  border-color: white;
+}
+
+/* Celdas de tabla en modo oscuro */
+:global(html.dark-mode) .table tbody td,
+:global(html.dark-mode-override) .table tbody td {
+  color: #e5e7eb;
+  border-color: #1e1e1e;
+}
+
+/* Efecto hover para las filas */
+.table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.table tbody tr:hover {
+  background-color: #edf2f7;
+}
+
+/* Hover de filas en modo oscuro */
+:global(html.dark-mode) .table tbody tr:hover,
+:global(html.dark-mode-override) .table tbody tr:hover {
+  background-color: #2d3748;
+}
+
+/* Estilo específico para las filas de la tabla */
+.tableRow {
+  transition: background-color 0.2s ease;
+}
+
+.tableRow:hover {
+  background-color: #edf2f7;
+}
+
+/* Hover específico en modo oscuro */
+:global(html.dark-mode) .tableRow:hover,
+:global(html.dark-mode-override) .tableRow:hover {
+  background-color: #2d3748;
+}
+
+/* Estilo para los números de lección */
+.lessonNumber {
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-weight: 600;
+  color: #2563eb;
+  background-color: #f3f4f6;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.8rem;
+  text-align: center;
+  min-width: 3rem;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Número de lección en modo oscuro */
+:global(html.dark-mode) .lessonNumber,
+:global(html.dark-mode-override) .lessonNumber {
+  color: #60a5fa;
+  background-color: #374151;
+}
+
+/* Estilos para enlaces de descripción */
+.courseLink {
+  color: #2563eb;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+/* Enlaces en modo oscuro */
+:global(html.dark-mode) .courseLink,
+:global(html.dark-mode-override) .courseLink {
+  color: #60a5fa;
+}
+
+.courseLink:hover {
+  text-decoration: underline;
+}
+
+/* Hover de enlaces en modo oscuro */
+:global(html.dark-mode) .courseLink:hover,
+:global(html.dark-mode-override) .courseLink:hover {
+  color: #93c5fd;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .pageContainer {
+    padding: 1rem 0.5rem;
   }
   
-  /* Fondo en modo oscuro */
-  :global(html.dark-mode) .pageContainer,
-  :global(html.dark-mode-override) .pageContainer {
-    background: linear-gradient(135deg, #1e1e1e 0%, #111827 100%);
-  }
-  
-  /* Contenedor del contenido */
   .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    background: white;
-    border-radius: 16px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-    padding: 2.5rem;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    padding: 1.5rem;
   }
   
-  /* Contenedor en modo oscuro */
-  :global(html.dark-mode) .container,
-  :global(html.dark-mode-override) .container {
-    background-color: #1e1e1e;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
-  }
-  
-  /* Título principal */
   .title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 2.5rem;
-    background: linear-gradient(135deg, #2563eb 0%, #1f2937 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
-    transition: background 0.3s ease;
-  }
-  
-  /* Título en modo oscuro */
-  :global(html.dark-mode) .title,
-  :global(html.dark-mode-override) .title {
-    background: linear-gradient(135deg, #60a5fa 0%, #e5e7eb 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
-  }
-  
-  /* Grid para los módulos */
-  .grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2.5rem;
-    margin-top: 2rem;
-  }
-  
-  /* Títulos de los módulos */
-  .platformTitle {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #1f2937;
+    font-size: 2rem;
     margin-bottom: 1.5rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 3px solid #2563eb;
-    position: relative;
-    transition: color 0.3s ease, border-color 0.3s ease;
   }
   
-  /* Títulos en modo oscuro */
-  :global(html.dark-mode) .platformTitle,
-  :global(html.dark-mode-override) .platformTitle {
-    color: #e5e7eb;
-    border-bottom-color: #60a5fa;
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
   
-  .platformTitle::after {
-    content: '';
-    position: absolute;
-    bottom: -3px;
-    left: 0;
-    width: 50px;
-    height: 3px;
-    background: #60a5fa;
-    transition: background 0.3s ease;
-  }
-  
-  /* Línea decorativa en modo oscuro */
-  :global(html.dark-mode) .platformTitle::after,
-  :global(html.dark-mode-override) .platformTitle::after {
-    background: #93c5fd;
-  }
-  
-  /* Estilos de las tablas */
   .table {
-    width: 100%;
-    border-collapse: collapse;
-    background: white;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  /* Tabla en modo oscuro */
-  :global(html.dark-mode) .table,
-  :global(html.dark-mode-override) .table {
-    background-color: #1e1e1e;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
-  }
-  
-  .table thead {
-    background: linear-gradient(135deg, #2563eb 0%, #1f2937 100%);
-  }
-  
-  /* Encabezados en modo oscuro */
-  :global(html.dark-mode) .table thead,
-  :global(html.dark-mode-override) .table thead {
-    background: linear-gradient(135deg, #374151 0%, #111827 100%);
-  }
-  
-  .table th, .table td {
-    padding: 1rem 0.75rem;
-    text-align: left;
-    border: 1px solid white;
-    transition: border-color 0.3s ease, color 0.3s ease;
-  }
-  
-  /* Bordes del mismo color que el fondo para que no se vean */
-  :global(html.dark-mode) .table th,
-  :global(html.dark-mode) .table td,
-  :global(html.dark-mode-override) .table th,
-  :global(html.dark-mode-override) .table td {
-    border-color: #1e1e1e;
-  }
-  
-  .table thead th {
-    font-weight: 600;
-    color: white;
-    font-size: 0.875rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    border-color: transparent;
-  }
-  
-  /* Encabezados de tabla en modo oscuro */
-  :global(html.dark-mode) .table thead th,
-  :global(html.dark-mode-override) .table thead th {
-    color: #f9fafb;
-    border-color: transparent;
-  }
-  
-  .table tbody td {
-    color: #1f2937;
-    font-size: 0.875rem;
-    line-height: 1.5;
-    border-color: white;
-  }
-  
-  /* Celdas de tabla en modo oscuro */
-  :global(html.dark-mode) .table tbody td,
-  :global(html.dark-mode-override) .table tbody td {
-    color: #e5e7eb;
-    border-color: #1e1e1e;
-  }
-  
-  /* Efecto hover para las filas */
-  .table tbody tr {
-    transition: background-color 0.2s ease;
-  }
-  
-  .table tbody tr:hover {
-    background-color: #edf2f7;
-  }
-  
-  /* Hover de filas en modo oscuro */
-  :global(html.dark-mode) .table tbody tr:hover,
-  :global(html.dark-mode-override) .table tbody tr:hover {
-    background-color: #2d3748;
-  }
-  
-  /* Estilo específico para las filas de la tabla */
-  .tableRow {
-    transition: background-color 0.2s ease;
-  }
-  
-  .tableRow:hover {
-    background-color: #edf2f7;
-  }
-  
-  /* Hover específico en modo oscuro */
-  :global(html.dark-mode) .tableRow:hover,
-  :global(html.dark-mode-override) .tableRow:hover {
-    background-color: #2d3748;
-  }
-  
-  /* Estilo para los números de lección */
-  .lessonNumber {
-    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
-    font-weight: 600;
-    color: #2563eb;
-    background-color: #f3f4f6;
-    padding: 0.25rem 0.5rem;
     font-size: 0.8rem;
-    text-align: center;
-    min-width: 3rem;
-    transition: color 0.3s ease, background-color 0.3s ease;
   }
   
-  /* Número de lección en modo oscuro */
-  :global(html.dark-mode) .lessonNumber,
-  :global(html.dark-mode-override) .lessonNumber {
-    color: #60a5fa;
-    background-color: #374151;
+  .table thead th,
+  .table tbody td {
+    padding: 0.75rem 0.5rem;
   }
   
-  /* Estilos para enlaces */
-  .table a {
-    color: #2563eb;
-    text-decoration: none;
-    transition: color 0.2s ease;
+  .platformTitle {
+    font-size: 1.25rem;
+  }
+
+  .lessonNumber {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .table thead th,
+  .table tbody td {
+    padding: 0.5rem 0.25rem;
+    font-size: 0.75rem;
   }
   
-  /* Enlaces en modo oscuro */
-  :global(html.dark-mode) .table a,
-  :global(html.dark-mode-override) .table a {
-    color: #60a5fa;
+  .title {
+    font-size: 1.75rem;
   }
-  
-  .table a:hover {
-    text-decoration: underline;
+
+  .lessonNumber {
+    font-size: 0.7rem;
+    padding: 0.15rem 0.3rem;
   }
-  
-  /* Hover de enlaces en modo oscuro */
-  :global(html.dark-mode) .table a:hover,
-  :global(html.dark-mode-override) .table a:hover {
-    color: #93c5fd;
-  }
-  
-  /* Responsive design */
-  @media (max-width: 768px) {
-    .pageContainer {
-      padding: 1rem 0.5rem;
-    }
-    
-    .container {
-      padding: 1.5rem;
-    }
-    
-    .title {
-      font-size: 2rem;
-      margin-bottom: 1.5rem;
-    }
-    
-    .grid {
-      grid-template-columns: 1fr;
-      gap: 2rem;
-    }
-    
-    .table {
-      font-size: 0.8rem;
-    }
-    
-    .table thead th,
-    .table tbody td {
-      padding: 0.75rem 0.5rem;
-    }
-    
-    .platformTitle {
-      font-size: 1.25rem;
-    }
-  
-    .lessonNumber {
-      font-size: 0.75rem;
-      padding: 0.2rem 0.4rem;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .table thead th,
-    .table tbody td {
-      padding: 0.5rem 0.25rem;
-      font-size: 0.75rem;
-    }
-    
-    .title {
-      font-size: 1.75rem;
-    }
-  
-    .lessonNumber {
-      font-size: 0.7rem;
-      padding: 0.15rem 0.3rem;
-    }
-  }
+}

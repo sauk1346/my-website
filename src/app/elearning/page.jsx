@@ -1,32 +1,37 @@
 'use client'
 import React, { useState } from 'react';
-import { CardCarousel } from '@/components/ui/CardCarousel';
+import { CompactPlatformGrid } from '@/components/ui/CompactPlatformGrid';
 import { platformsData } from '@/data/elearning/elearningData';
 import styles from './Elearning.module.css';
 import { CourseTable } from '@/components/features/elearning/CourseTable';
 
 export default function ELearning() {
   const [selectedPlatform, setSelectedPlatform] = useState(null);
-
-  const handleCardClick = (platformKey) => {
+  
+  const handlePlatformClick = (platformKey) => {
     setSelectedPlatform(platformKey === selectedPlatform ? null : platformKey);
   };
-
+  
   const platforms = Object.keys(platformsData);
-
+  
   return (
     <div className={styles.pageContainer}>
       <div className={styles.container}>
         <h1 className={styles.title}>E-Learning</h1>
         
-        {/* Carrusel de plataformas - ahora con estilos separados */}
-        <CardCarousel
+        {/* Subtitle opcional para explicar la interacción */}
+        <p className={styles.subtitle}>
+          Selecciona una plataforma para ver los cursos disponibles
+        </p>
+        
+        {/* Grid de plataformas compactas */}
+        <CompactPlatformGrid
           platforms={platforms}
           platformsData={platformsData}
           selectedPlatform={selectedPlatform}
-          onCardClick={handleCardClick}
+          onPlatformClick={handlePlatformClick}
         />
-
+        
         {/* Vista de tabla de cursos - aparece debajo cuando hay selección */}
         {selectedPlatform && (
           <div className={styles.tableSection}>

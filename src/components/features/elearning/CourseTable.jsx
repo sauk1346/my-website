@@ -1,5 +1,7 @@
 import React from 'react';
+import Link from 'next/link';
 import styles from './CourseTable.module.css';
+
 
 export const CourseTable = ({ courses, platformName }) => {
   return (
@@ -27,12 +29,12 @@ export const CourseTable = ({ courses, platformName }) => {
                   </td>
                   <td data-label="Curso">
                     {course.link ? (
-                      <a 
+                      <Link
                         href={course.link} 
-                        className={styles.link} 
+                        className={styles.courseLink} 
                       >
                         {course.title}
-                      </a>
+                      </Link>
                     ) : (
                       course.title
                     )}

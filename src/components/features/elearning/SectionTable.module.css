@@ -1,11 +1,7 @@
-/* =================================================================
-   SECTION TABLE COMPONENT - ESTILOS MODULARES REUTILIZABLES
-   ================================================================= */
-
    .pageContainer {
     min-height: 100vh;
     padding: 2rem 1rem;
-    background: var(--background, #ffffff);
+    background: white;
     transition: background-color 0.3s ease;
   }
   
@@ -17,17 +13,22 @@
   .title {
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--foreground, #1f2937);
+    color: #1f2937;
     text-align: center;
     margin-bottom: 2rem;
     transition: color 0.3s ease;
     position: relative;
+    background: linear-gradient(135deg, #2563eb 0%, #1f2937 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
   }
   
   .courseName {
     font-size: 1.5rem;
     font-weight: 400;
-    color: var(--muted-foreground, #6b7280);
+    color: #6b7280;
     display: block;
     margin-top: 0.5rem;
   }
@@ -37,9 +38,9 @@
     display: block;
     width: 60px;
     height: 3px;
-    background: linear-gradient(90deg, var(--primary, #0891b2), var(--accent, #3b82f6));
+    background: linear-gradient(90deg, #2563eb, #60a5fa);
     margin: 0.5rem auto 0;
-    border-radius: var(--radius-sm, 2px);
+    border-radius: 2px;
     transition: all 0.3s ease;
   }
   
@@ -56,24 +57,27 @@
   }
   
   .platformTitle {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: 600;
-    color: var(--foreground, #1f2937);
-    margin-bottom: 1rem;
-    text-align: center;
-    transition: color 0.3s ease;
+    color: #1f2937;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid #2563eb;
     position: relative;
+    text-align: center;
+    transition: color 0.3s ease, border-color 0.3s ease;
   }
   
   .platformTitle::after {
     content: '';
-    display: block;
-    width: 40px;
-    height: 2px;
-    background: var(--primary, #0891b2);
-    margin: 0.25rem auto 0;
-    border-radius: var(--radius-sm, 2px);
-    transition: all 0.3s ease;
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: #60a5fa;
+    transition: background 0.3s ease;
   }
   
   /* ================================
@@ -87,27 +91,31 @@
   .table {
     width: 100%;
     border-collapse: collapse;
-    border-radius: var(--radius-md, 8px);
+    background: white;
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 
-                0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    background-color: var(--card, white);
-    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
   }
   
   .table thead {
-    background: linear-gradient(135deg, var(--primary, #0891b2), var(--accent, #3b82f6));
-    color: white;
+    background: linear-gradient(135deg, #2563eb 0%, #1f2937 100%);
   }
   
   .table thead th {
     padding: 1rem;
     text-align: left;
     font-weight: 600;
+    color: white;
     font-size: 0.875rem;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
-    border: none;
+    letter-spacing: 0.5px;
+    border-color: transparent;
+    background: transparent !important;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    transition: border-color 0.3s ease, color 0.3s ease;
   }
   
   /* Anchos de columnas para SectionTable */
@@ -122,30 +130,37 @@
   }
   
   .table tbody tr {
-    border-bottom: 1px solid var(--border, #e5e7eb);
     transition: background-color 0.2s ease;
   }
   
   .tableRow {
-    transition: background-color 0.2s ease, transform 0.1s ease;
+    transition: background-color 0.2s ease;
   }
   
   .tableRow:hover {
-    background-color: var(--muted, #f0f9ff);
-    transform: translateY(-1px);
+    background-color: #edf2f7;
     cursor: pointer;
   }
   
-  .table tbody tr:last-child {
-    border-bottom: none;
+  .table tbody td {
+    padding: 1rem 0.75rem;
+    text-align: left;
+    border: 1px solid white;
+    color: #1f2937;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    border-color: white;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    transition: color 0.3s ease, border-color 0.3s ease;
+    vertical-align: middle;
   }
   
-  .table tbody td {
-    padding: 0.875rem 1rem;
-    font-size: 0.875rem;
-    color: var(--foreground, #374151);
-    transition: color 0.3s ease;
-    vertical-align: middle;
+  /* Celda de código completamente pintada */
+  .table td:first-child {
+    background-color: #f3f4f6;
+    transition: background-color 0.3s ease;
   }
   
   /* ================================
@@ -154,56 +169,45 @@
   
   /* Estilo para el número de sección */
   .sectionNumber {
-    font-family: 'Fira Code', 'Monaco', 'Cascadia Code', 'Roboto Mono', monospace;
-    font-weight: 700;
-    background-color: var(--secondary, #e0f2fe);
-    color: var(--secondary-foreground, #0c4a6e);
-    padding: 0.25rem 0.5rem;
-    border-radius: var(--radius-sm, 4px);
-    font-size: 0.75rem;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    font-weight: 600;
+    color: #2563eb;
+    font-size: 0.8rem;
     text-align: center;
     min-width: 32px;
     display: inline-block;
-    transition: all 0.3s ease;
+    transition: color 0.3s ease;
   }
   
   /* Estilo para enlaces de sección */
   .sectionLink {
-    color: var(--primary, #0891b2);
+    color: #2563eb;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.2s ease;
-    position: relative;
   }
   
   .sectionLink:hover {
-    color: var(--accent, #3b82f6);
+    color: #1d4ed8;
     text-decoration: underline;
   }
   
-  .sectionLink::before {
-    content: '→';
-    margin-right: 0.5rem;
-    opacity: 0;
-    transition: opacity 0.2s ease, transform 0.2s ease;
-    transform: translateX(-5px);
-  }
-  
-  .sectionLink:hover::before {
-    opacity: 1;
-    transform: translateX(0);
+  /* Eliminar outline azul en enlaces */
+  .sectionLink:focus,
+  .sectionLink:active {
+    outline: none;
   }
   
   /* Estilo para títulos de sección sin enlace */
   .sectionTitle {
-    color: var(--foreground, #374151);
+    color: #374151;
     font-weight: 500;
     opacity: 0.8;
   }
   
   /* Estilo para descripción adicional de sección */
   .sectionDescription {
-    color: var(--muted-foreground, #6b7280);
+    color: #6b7280;
     font-size: 0.8rem;
     font-style: italic;
   }
@@ -212,7 +216,7 @@
   .noSections {
     text-align: center;
     padding: 2rem;
-    color: var(--muted-foreground, #6b7280);
+    color: #6b7280;
     font-style: italic;
   }
   
@@ -223,110 +227,108 @@
   }
   
   /* =================================================================
-     VARIANTE PARA SECCIONES - Esquema de color azul/cyan
-     ================================================================= */
-  .sections {
-    --primary: #0891b2;
-    --accent: #3b82f6;
-    --secondary: #e0f2fe;
-    --secondary-foreground: #0c4a6e;
-  }
-  
-  .sections .title::after {
-    background: linear-gradient(90deg, #0891b2, #3b82f6);
-  }
-  
-  .sections .platformTitle::after {
-    background: linear-gradient(90deg, #0891b2, #3b82f6);
-  }
-  
-  .sections .table thead {
-    background: linear-gradient(135deg, #0891b2, #3b82f6);
-  }
-  
-  .sections .sectionNumber {
-    background-color: var(--secondary, #e0f2fe);
-    color: var(--secondary-foreground, #0c4a6e);
-  }
-  
-  .sections .tableRow:hover {
-    background-color: #f0f9ff;
-  }
-  
-  /* =================================================================
      MODO OSCURO
      ================================================================= */
   :global(html.dark-mode) .pageContainer,
   :global(html.dark-mode-override) .pageContainer {
-    background: var(--background, #0f172a);
+    background: #1a1a1a;
   }
   
   :global(html.dark-mode) .title,
   :global(html.dark-mode-override) .title {
-    color: var(--foreground, #f1f5f9);
+    background: linear-gradient(135deg, #60a5fa 0%, #e5e7eb 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
   }
   
   :global(html.dark-mode) .courseName,
   :global(html.dark-mode-override) .courseName {
-    color: var(--muted-foreground, #9ca3af);
+    color: #9ca3af;
   }
   
   :global(html.dark-mode) .platformTitle,
   :global(html.dark-mode-override) .platformTitle {
-    color: var(--foreground, #f1f5f9);
+    color: #e5e7eb;
+    border-bottom-color: #60a5fa;
+  }
+  
+  :global(html.dark-mode) .platformTitle::after,
+  :global(html.dark-mode-override) .platformTitle::after {
+    background: #93c5fd;
   }
   
   :global(html.dark-mode) .table,
   :global(html.dark-mode-override) .table {
-    background-color: var(--card, #1f2937);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 
-                0 2px 4px -1px rgba(0, 0, 0, 0.2);
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
   }
   
-  :global(html.dark-mode) .table tbody tr,
-  :global(html.dark-mode-override) .table tbody tr {
-    border-bottom-color: var(--border, #374151);
+  :global(html.dark-mode) .table thead,
+  :global(html.dark-mode-override) .table thead {
+    background: linear-gradient(135deg, #374151 0%, #111827 100%);
+  }
+  
+  :global(html.dark-mode) .table th,
+  :global(html.dark-mode) .table td,
+  :global(html.dark-mode-override) .table th,
+  :global(html.dark-mode-override) .table td {
+    border-color: #1e1e1e;
+  }
+  
+  :global(html.dark-mode) .table thead th,
+  :global(html.dark-mode-override) .table thead th {
+    color: #f9fafb;
+    border-color: transparent;
+    background: transparent !important;
   }
   
   :global(html.dark-mode) .tableRow:hover,
   :global(html.dark-mode-override) .tableRow:hover {
-    background-color: var(--muted, #1e3a8a);
+    background-color: #2d3748;
   }
   
   :global(html.dark-mode) .table tbody td,
   :global(html.dark-mode-override) .table tbody td {
-    color: var(--foreground, #f3f4f6);
+    color: #e5e7eb;
+    border-color: #1e1e1e;
+  }
+  
+  /* Celda de número de sección en modo oscuro */
+  :global(html.dark-mode) .table td:first-child,
+  :global(html.dark-mode-override) .table td:first-child {
+    background-color: #374151;
   }
   
   :global(html.dark-mode) .sectionNumber,
   :global(html.dark-mode-override) .sectionNumber {
-    background-color: var(--secondary, #1e3a8a);
-    color: var(--secondary-foreground, #bfdbfe);
+    color: #60a5fa;
   }
   
   :global(html.dark-mode) .sectionLink,
   :global(html.dark-mode-override) .sectionLink {
-    color: #0ea5e9;
+    color: #60a5fa;
   }
   
   :global(html.dark-mode) .sectionLink:hover,
   :global(html.dark-mode-override) .sectionLink:hover {
-    color: #38bdf8;
+    color: #93c5fd;
   }
   
   :global(html.dark-mode) .sectionTitle,
   :global(html.dark-mode-override) .sectionTitle {
-    color: var(--foreground, #f3f4f6);
+    color: #f3f4f6;
   }
   
   :global(html.dark-mode) .sectionDescription,
   :global(html.dark-mode-override) .sectionDescription {
-    color: var(--muted-foreground, #9ca3af);
+    color: #9ca3af;
   }
   
   :global(html.dark-mode) .noSections,
   :global(html.dark-mode-override) .noSections {
-    color: var(--muted-foreground, #9ca3af);
+    color: #9ca3af;
   }
   
   /* =================================================================
@@ -341,6 +343,10 @@
     
     .title {
       font-size: 2rem;
+    }
+    
+    .platformTitle {
+      font-size: 1.25rem;
     }
     
     .table {
@@ -358,7 +364,6 @@
     
     .sectionNumber {
       font-size: 0.675rem;
-      padding: 0.125rem 0.375rem;
     }
   }
   
@@ -404,16 +409,18 @@
     }
     
     .table tbody tr {
-      border: 1px solid var(--border, #e5e7eb);
-      border-radius: var(--radius-sm, 4px);
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
       margin-bottom: 0.5rem;
       padding: 0.5rem;
       position: relative;
+      background: white;
     }
     
     :global(html.dark-mode) .table tbody tr,
     :global(html.dark-mode-override) .table tbody tr {
-      border-color: var(--border, #374151);
+      border-color: #374151;
+      background: #1e1e1e;
     }
     
     .table tbody td {
@@ -421,6 +428,16 @@
       padding: 0.5rem 0;
       position: relative;
       padding-left: 30% !important;
+      background: transparent !important;
+    }
+    
+    .table tbody td:first-child {
+      background: #f3f4f6 !important;
+    }
+    
+    :global(html.dark-mode) .table tbody td:first-child,
+    :global(html.dark-mode-override) .table tbody td:first-child {
+      background: #374151 !important;
     }
     
     .table tbody td:before {
@@ -431,20 +448,16 @@
       padding-right: 10px;
       white-space: nowrap;
       font-weight: 600;
-      color: var(--primary, #0891b2);
+      color: #2563eb;
     }
     
     :global(html.dark-mode) .table tbody td:before,
     :global(html.dark-mode-override) .table tbody td:before {
-      color: #0ea5e9;
+      color: #60a5fa;
     }
     
     .sectionNumber {
       display: inline-block;
       margin-left: 0;
-    }
-    
-    .sectionLink::before {
-      display: none;
     }
   }

@@ -1,6 +1,3 @@
-/* ================================
-   ENCABEZADO ORDENABLE
-   ================================ */
    .sortableHeader {
     cursor: pointer;
     user-select: none;
@@ -9,13 +6,13 @@
     padding: 0.75rem;
     font-weight: 600;
     text-align: left;
-    background-color: #1f2937;
+    background: transparent !important;
     color: white;
-    border: 1px solid #374151;
+    border: none;
   }
   
   .sortableHeader:hover {
-    background-color: #374151;
+    background: rgba(255, 255, 255, 0.1) !important;
     transform: translateY(-1px);
   }
   
@@ -27,14 +24,14 @@
      ESTADO ORDENADO
      ================================ */
   .sorted {
-    background-color: #111827;
+    background: rgba(255, 255, 255, 0.15) !important;
     color: #f9fafb;
     font-weight: 700;
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
   .sorted:hover {
-    background-color: #1f2937;
+    background: rgba(255, 255, 255, 0.2) !important;
   }
   
   /* ================================
@@ -45,12 +42,12 @@
     margin-left: 5px;
     font-size: 0.8em;
     transition: all 0.2s ease;
-    color: #60a5fa;
+    color: #93c5fd;
     font-weight: bold;
   }
   
   .sorted .sortIndicator {
-    color: #93c5fd;
+    color: #bfdbfe;
     transform: scale(1.1);
   }
   
@@ -58,17 +55,16 @@
      VARIANTES DE ESTILO
      ================================ */
   .light {
-    background-color: #f8fafc;
+    background: transparent !important;
     color: #1f2937;
-    border-color: #e2e8f0;
   }
   
   .light:hover {
-    background-color: #f1f5f9;
+    background: rgba(0, 0, 0, 0.05) !important;
   }
   
   .light.sorted {
-    background-color: #e2e8f0;
+    background: rgba(0, 0, 0, 0.1) !important;
     color: #1e293b;
   }
   
@@ -142,11 +138,11 @@
   .sortableHeader[aria-disabled="true"] {
     cursor: not-allowed;
     opacity: 0.6;
-    background-color: #6b7280;
+    background: rgba(107, 114, 128, 0.8) !important;
   }
   
   .sortableHeader[aria-disabled="true"]:hover {
-    background-color: #6b7280;
+    background: rgba(107, 114, 128, 0.8) !important;
     transform: none;
   }
   
@@ -155,52 +151,50 @@
      ================================ */
   :global(html.dark-mode) .sortableHeader,
   :global(html.dark-mode-override) .sortableHeader {
-    background-color: #111827;
+    background: transparent !important;
     color: #f9fafb;
-    border-color: #374151;
   }
   
   :global(html.dark-mode) .sortableHeader:hover,
   :global(html.dark-mode-override) .sortableHeader:hover {
-    background-color: #1f2937;
+    background: rgba(255, 255, 255, 0.1) !important;
   }
   
   :global(html.dark-mode) .sorted,
   :global(html.dark-mode-override) .sorted {
-    background-color: #0f172a;
+    background: rgba(255, 255, 255, 0.15) !important;
     color: #f8fafc;
   }
   
   :global(html.dark-mode) .sorted:hover,
   :global(html.dark-mode-override) .sorted:hover {
-    background-color: #111827;
+    background: rgba(255, 255, 255, 0.2) !important;
   }
   
   :global(html.dark-mode) .sortIndicator,
   :global(html.dark-mode-override) .sortIndicator {
-    color: #60a5fa;
+    color: #93c5fd;
   }
   
   :global(html.dark-mode) .sorted .sortIndicator,
   :global(html.dark-mode-override) .sorted .sortIndicator {
-    color: #93c5fd;
+    color: #bfdbfe;
   }
   
   :global(html.dark-mode) .light,
   :global(html.dark-mode-override) .light {
-    background-color: #374151;
+    background: transparent !important;
     color: #e5e7eb;
-    border-color: #4b5563;
   }
   
   :global(html.dark-mode) .light:hover,
   :global(html.dark-mode-override) .light:hover {
-    background-color: #4b5563;
+    background: rgba(255, 255, 255, 0.05) !important;
   }
   
   :global(html.dark-mode) .light.sorted,
   :global(html.dark-mode-override) .light.sorted {
-    background-color: #4b5563;
+    background: rgba(255, 255, 255, 0.1) !important;
     color: #f3f4f6;
   }
   

@@ -1,141 +1,172 @@
-   .pageContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    min-height: 100vh;
-    width: 100%;
-    background-color: var(--background, #ffffff);
-    color: var(--foreground, #1f2937);
-    transition: background-color 0.3s ease, color 0.3s ease;
-    padding: 2rem 0;
+/* Contenedor principal de la página */
+.pageContainer {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #2563eb 0%, #1f2937 100%);
+  padding: 2rem 1rem;
+  transition: background 0.3s ease;
+}
+
+/* Fondo en modo oscuro */
+:global(html.dark-mode) .pageContainer,
+:global(html.dark-mode-override) .pageContainer {
+  background: linear-gradient(135deg, #1e1e1e 0%, #111827 100%);
+}
+
+/* Contenedor del contenido */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  padding: 2.5rem;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Contenedor en modo oscuro */
+:global(html.dark-mode) .container,
+:global(html.dark-mode-override) .container {
+  background-color: #1e1e1e;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* Título principal */
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  background: linear-gradient(135deg, #2563eb 0%, #1f2937 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  transition: background 0.3s ease;
+  position: relative;
+}
+
+/* Título en modo oscuro */
+:global(html.dark-mode) .title,
+:global(html.dark-mode-override) .title {
+  background: linear-gradient(135deg, #60a5fa 0%, #e5e7eb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #2563eb, #60a5fa);
+  margin: 0.75rem auto 0;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.title:hover::after {
+  width: 100px;
+  background: linear-gradient(90deg, #60a5fa, #2563eb);
+}
+
+/* Sección de proyectos centrada */
+.projectsSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3rem;
+  width: 100%;
+}
+
+/* Grid para los módulos */
+.modulesGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  width: 100%;
+}
+
+/* =================================================================
+   MODO OSCURO
+   ================================================================= */
+
+:global(html.dark-mode) .title::after,
+:global(html.dark-mode-override) .title::after {
+  background: linear-gradient(90deg, #60a5fa, #93c5fd);
+}
+
+:global(html.dark-mode) .title:hover::after,
+:global(html.dark-mode-override) .title:hover::after {
+  background: linear-gradient(90deg, #93c5fd, #60a5fa);
+}
+
+/* =================================================================
+   RESPONSIVE DESIGN
+   ================================================================= */
+
+/* Tablets y pantallas medianas */
+@media (max-width: 768px) {
+  .pageContainer {
+    padding: 1.5rem 1rem;
   }
   
   .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 0 1rem;
-    width: 100%;
-    max-width: 1400px;
-    margin: 0 auto;
+    padding: 1.5rem;
   }
   
   .title {
-    font-size: clamp(1.75rem, 4vw, 2.5rem);
-    font-weight: 700;
-    color: var(--foreground, #1f2937);
-    margin-bottom: 3rem;
-    text-align: center;
-    transition: color 0.3s ease;
-    position: relative;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .projectsSection {
+    margin-bottom: 2.5rem;
+  }
+  
+  .modulesGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+/* Móviles */
+@media (max-width: 640px) {
+  .pageContainer {
+    padding: 1rem 0.5rem;
+  }
+  
+  .container {
+    padding: 1rem;
+  }
+  
+  .title {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
   }
   
   .title::after {
-    content: '';
-    display: block;
-    width: 80px;
-    height: 4px;
-    background: linear-gradient(90deg, var(--primary, #f59e0b), var(--accent, #ef4444));
-    margin: 0.75rem auto 0;
-    border-radius: var(--radius-sm, 4px);
-    transition: all 0.3s ease;
+    width: 60px;
+    height: 3px;
   }
   
   .title:hover::after {
-    width: 100px;
-    background: linear-gradient(90deg, var(--accent, #ef4444), var(--primary, #f59e0b));
+    width: 80px;
   }
   
-  /* Grid responsivo para las tablas */
-  .grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-    width: 100%;
-    max-width: 1200px;
+  .projectsSection {
+    margin-bottom: 2rem;
   }
   
-  /* =================================================================
-     MODO OSCURO
-     ================================================================= */
-  
-  :global(html.dark-mode) .pageContainer,
-  :global(html.dark-mode-override) .pageContainer {
-    background-color: var(--background, #0f172a);
-    color: var(--foreground, #f1f5f9);
+  .modulesGrid {
+    gap: 1.5rem;
   }
-  
-  :global(html.dark-mode) .title,
-  :global(html.dark-mode-override) .title {
-    color: var(--foreground, #f1f5f9);
+}
+
+/* Pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .modulesGrid {
+    gap: 1.25rem;
   }
-  
-  :global(html.dark-mode) .title::after,
-  :global(html.dark-mode-override) .title::after {
-    background: linear-gradient(90deg, var(--primary, #fbbf24), var(--accent, #f87171));
-  }
-  
-  :global(html.dark-mode) .title:hover::after,
-  :global(html.dark-mode-override) .title:hover::after {
-    background: linear-gradient(90deg, var(--accent, #f87171), var(--primary, #fbbf24));
-  }
-  
-  /* =================================================================
-     RESPONSIVE DESIGN
-     ================================================================= */
-  
-  /* Tablets y pantallas medianas */
-  @media (max-width: 768px) {
-    .pageContainer {
-      padding: 1.5rem 0;
-    }
-    
-    .container {
-      padding: 0 0.75rem;
-    }
-  
-    .title {
-      margin-bottom: 2rem;
-    }
-  
-    .grid {
-      gap: 2rem;
-    }
-  }
-  
-  /* Móviles */
-  @media (max-width: 640px) {
-    .pageContainer {
-      padding: 1rem 0;
-    }
-    
-    .container {
-      padding: 0 0.5rem;
-    }
-  
-    .title {
-      margin-bottom: 1.5rem;
-    }
-  
-    .title::after {
-      width: 60px;
-      height: 3px;
-    }
-  
-    .title:hover::after {
-      width: 80px;
-    }
-  
-    .grid {
-      gap: 1.5rem;
-    }
-  }
-  
-  /* Pantallas muy pequeñas */
-  @media (max-width: 480px) {
-    .grid {
-      gap: 1.25rem;
-    }
-  }
+}

@@ -6,19 +6,21 @@ import styles from './UddDetail.module.css';
 
 const UddDetail = ({ bootcampData = udd01Data }) => {
   const { title, projects, modules } = bootcampData;
-
+  
   return (
     <div className={styles.pageContainer}>
       <div className={styles.container}>
         <h1 className={styles.title}>{title}</h1>
         
-        <div className={styles.grid}>
-          {/* Tabla de Proyectos */}
+        {/* Sección de Proyectos - Centrada */}
+        <div className={styles.projectsSection}>
           <ProjectTable projects={projects} />
-          
-          {/* Tablas de Módulos */}
+        </div>
+        
+        {/* Sección de Módulos - Grid 2 columnas */}
+        <div className={styles.modulesGrid}>
           {modules.map((module, index) => (
-            <ModuleTable 
+            <ModuleTable
               key={index}
               title={module.title}
               sessions={module.sessions}

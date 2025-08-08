@@ -1,10 +1,10 @@
 import CustomLink from '@/components/ui/CustomLink';
 import styles from './SectionTable.module.css';
 
-const SectionTable = ({ 
-  courseId, 
+const SectionTable = ({
+  courseId,
   courseName = null,
-  sections = [], 
+  sections = [],
   basePath = '',
   showDescription = true,
   className = ''
@@ -12,13 +12,13 @@ const SectionTable = ({
   return (
     <div className={styles.pageContainer}>
       <div className={styles.container}>
-        <h1 className={`${styles.title} ${styles.sections} ${className}`}>
+        <h1 className={`${styles.title} ${className}`}>
           {courseId}
-          {courseName && <span className={styles.courseName}> {courseName}</span>}
+          {courseName && <span className={styles.courseName}>{courseName}</span>}
         </h1>
         
         <div className={styles.grid}>
-          <div className={`${styles.tableContainer} ${styles.sections}`}>
+          <div className={styles.tableContainer}>
             <h2 className={styles.platformTitle}>Secciones</h2>
             
             <div className={styles.tableWrapper}>
@@ -42,7 +42,7 @@ const SectionTable = ({
                       </td>
                       <td data-label="Descripción">
                         {section.link ? (
-                          <CustomLink 
+                          <CustomLink
                             href={basePath ? `${basePath}/${section.link}` : section.link}
                             className={styles.sectionLink}
                           >

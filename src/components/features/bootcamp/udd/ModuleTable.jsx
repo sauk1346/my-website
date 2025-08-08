@@ -9,7 +9,7 @@ const ModuleTable = ({ title, sessions }) => {
         <table className={styles.table}>
           <thead>
             <tr>
-              <th className={styles.numberColumn}></th>
+              <th className={styles.numberColumn}>Clase</th>
               <th className={styles.dateColumn}>Fecha</th>
               <th className={styles.contentColumn}>Prework</th>
             </tr>

@@ -57,7 +57,7 @@ const ProblemTable = ({
 
   if (sortedData.length === 0) {
     return (
-      <div className={`${styles.tableContainer} ${styles.problems}`}>
+      <div className={styles.tableContainer}>
         <h2 className={styles.platformTitle}>{title}</h2>
         <p>No se encontraron problemas con esos filtros.</p>
       </div>
@@ -65,7 +65,7 @@ const ProblemTable = ({
   }
 
   return (
-    <div className={`${styles.tableContainer} ${styles.problems}`}>
+    <div className={styles.tableContainer}>
       <h2 className={styles.platformTitle}>{title}</h2>
       
       <div className={styles.tableWrapper}>
@@ -112,7 +112,10 @@ const ProblemTable = ({
                   {id}
                 </td>
                 <td data-label="Descripción">
-                  <CustomLink href={`${platform}/${id.toLowerCase()}`}>
+                  <CustomLink 
+                    href={`${platform}/${id.toLowerCase()}`}
+                    className={styles.problemLink}
+                  >
                     {problem.title}
                   </CustomLink>
                 </td>

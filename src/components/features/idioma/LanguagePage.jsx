@@ -1,5 +1,6 @@
 import CustomLink from '@/components/ui/CustomLink';
 import styles from './LanguagePage.module.css';
+import Link from 'next/link';
 
 const LanguagePage = ({ data }) => {
   const { title, courses, topics } = data;
@@ -27,11 +28,24 @@ const LanguagePage = ({ data }) => {
                   <tr key={course.code || index} className={styles.tableRow}>
                     <td className={styles.code}>{course.code}</td>
                     <td>
-                      <CustomLink href={course.href}>{course.name}</CustomLink>
+                      <Link href={course.href} className={styles.courseLink}>{course.name}</Link>
                     </td>
                     <td>{course.platform}</td>
                     <td>{course.professor}</td>
-                    <td>{course.certificate}</td>
+                    <td>
+                      {course.certificateHref ? (
+                        <Link
+                          href={course.certificateHref}
+                          className={styles.certificateLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {course.certificate}
+                        </Link>
+                      ) : (
+                        course.certificate || ""
+                      )}
+                    </td>
                   </tr>
                 ))}
               </tbody>
@@ -51,7 +65,7 @@ const LanguagePage = ({ data }) => {
               <tbody>
                 {topics.map((topic, index) => (
                   <tr key={topic.item || index}>
-                    <td>{topic.item}</td>
+                    <td className={styles.code}>{topic.item}</td>
                     <td>{topic.description}</td>
                   </tr>
                 ))}

@@ -1,35 +1,229 @@
-/* Listas no ordenadas mejoradas */
+/* ==================== LISTAS NO ORDENADAS ==================== */
+
+/* Lista principal (nivel 1) - Círculo relleno */
 .list {
-    list-style-type: disc;
-    padding-left: 2rem;
-    margin-bottom: 1.75rem;
-  }
-  
-  /* Listas ordenadas con mejor espaciado */
+  list-style-type: disc;
+  padding-left: 2rem;
+  margin-bottom: 1.75rem;
+  color: #374151;
+  transition: color 0.3s ease;
+}
+
+/* Modo oscuro para listas principales */
+:global(html.dark-mode) .list,
+:global(html.dark-mode-override) .list {
+  color: #d1d5db;
+}
+
+/* Lista anidada nivel 2 - Círculo vacío */
+.list .list {
+  list-style-type: circle;
+  margin-top: 0.5rem;
+  margin-bottom: 0.75rem;
+  padding-left: 1.75rem;
+  color: #4b5563;
+}
+
+/* Modo oscuro para listas nivel 2 */
+:global(html.dark-mode) .list .list,
+:global(html.dark-mode-override) .list .list {
+  color: #9ca3af;
+}
+
+/* Lista anidada nivel 3 - Cuadrado */
+.list .list .list {
+  list-style-type: square;
+  margin-top: 0.25rem;
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  color: #6b7280;
+}
+
+/* Modo oscuro para listas nivel 3 */
+:global(html.dark-mode) .list .list .list,
+:global(html.dark-mode-override) .list .list .list {
+  color: #6b7280;
+}
+
+/* Lista anidada nivel 4+ - Guión personalizado */
+.list .list .list .list {
+  list-style-type: none;
+  padding-left: 1.25rem;
+  color: #9ca3af;
+}
+
+/* Pseudo-elemento para crear guión personalizado en nivel 4+ */
+.list .list .list .list .listItem::before {
+  content: "–";
+  color: #d1d5db;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+  font-size: 1.1em;
+}
+
+/* Modo oscuro para guiones nivel 4+ */
+:global(html.dark-mode) .list .list .list .list .listItem::before,
+:global(html.dark-mode-override) .list .list .list .list .listItem::before {
+  color: #4b5563;
+}
+
+/* ==================== LISTAS ORDENADAS MEJORADAS ==================== */
+
+/* Lista ordenada principal */
+.orderedList {
+  list-style-type: decimal;
+  padding-left: 2rem;
+  margin-bottom: 1.75rem;
+  color: #374151;
+  transition: color 0.3s ease;
+}
+
+/* Modo oscuro para listas ordenadas */
+:global(html.dark-mode) .orderedList,
+:global(html.dark-mode-override) .orderedList {
+  color: #d1d5db;
+}
+
+/* Listas ordenadas anidadas nivel 2 */
+.orderedList .orderedList {
+  list-style-type: lower-alpha;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  padding-left: 1.75rem;
+  color: #4b5563;
+}
+
+/* Modo oscuro para listas ordenadas nivel 2 */
+:global(html.dark-mode) .orderedList .orderedList,
+:global(html.dark-mode-override) .orderedList .orderedList {
+  color: #9ca3af;
+}
+
+/* Listas ordenadas anidadas nivel 3 */
+.orderedList .orderedList .orderedList {
+  list-style-type: lower-roman;
+  padding-left: 1.5rem;
+  color: #6b7280;
+}
+
+/* Modo oscuro para listas ordenadas nivel 3 */
+:global(html.dark-mode) .orderedList .orderedList .orderedList,
+:global(html.dark-mode-override) .orderedList .orderedList .orderedList {
+  color: #6b7280;
+}
+
+/* Listas ordenadas anidadas nivel 4+ */
+.orderedList .orderedList .orderedList .orderedList {
+  list-style-type: upper-alpha;
+  padding-left: 1.25rem;
+  color: #9ca3af;
+}
+
+/* ==================== ELEMENTOS DE LISTA ==================== */
+
+/* Elementos de lista base */
+.listItem {
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+/* Espaciado adicional para listas ordenadas */
+.orderedList > .listItem {
+  padding-left: 0.5rem;
+}
+
+/* Elementos de lista anidados - reducir espaciado */
+.list .list .listItem,
+.orderedList .orderedList .listItem {
+  margin-bottom: 0.5rem;
+  font-size: 0.95em;
+}
+
+/* Elementos de lista muy anidados - espaciado mínimo */
+.list .list .list .listItem,
+.orderedList .orderedList .orderedList .listItem {
+  margin-bottom: 0.25rem;
+  font-size: 0.9em;
+}
+
+/* ==================== MEJORAS VISUALES ADICIONALES ==================== */
+
+/* Separador sutil entre grupos de listas */
+.list + .list,
+.orderedList + .orderedList {
+  border-top: 1px solid #f3f4f6;
+  padding-top: 1rem;
+  margin-top: 2rem;
+}
+
+/* Modo oscuro para separadores */
+:global(html.dark-mode) .list + .list,
+:global(html.dark-mode-override) .list + .list,
+:global(html.dark-mode) .orderedList + .orderedList,
+:global(html.dark-mode-override) .orderedList + .orderedList {
+  border-top: 1px solid #374151;
+}
+
+
+
+/* Modo oscuro para hover */
+:global(html.dark-mode) .listItem:hover,
+:global(html.dark-mode-override) .listItem:hover {
+  color: #f3f4f6;
+}
+
+/* ==================== ESTILOS PARA LISTAS MIXTAS ==================== */
+
+/* Cuando hay listas ordenadas dentro de no ordenadas */
+.list .orderedList {
+  margin-top: 0.5rem;
+  margin-bottom: 0.75rem;
+  padding-left: 1.75rem;
+}
+
+/* Cuando hay listas no ordenadas dentro de ordenadas */
+.orderedList .list {
+  margin-top: 0.5rem;
+  margin-bottom: 0.75rem;
+  padding-left: 1.75rem;
+}
+
+/* ==================== RESPONSIVO ==================== */
+
+@media (max-width: 768px) {
+  .list,
   .orderedList {
-    list-style-type: decimal;
-    padding-left: 2rem;
-    margin-bottom: 1.75rem;
+    padding-left: 1.5rem;
   }
   
-  /* Estilos para listas ordenadas anidadas */
+  .list .list,
   .orderedList .orderedList {
-    list-style-type: lower-alpha;
-    margin-top: 0.75rem;
-    margin-bottom: 0.75rem;
+    padding-left: 1.25rem;
   }
   
+  .list .list .list,
   .orderedList .orderedList .orderedList {
-    list-style-type: lower-roman;
+    padding-left: 1rem;
   }
   
-  /* Elementos de lista con mejor espaciado */
   .listItem {
-    margin-bottom: 0.75rem;
-    line-height: 1.6;
-    transition: color 0.3s ease;
+    font-size: 0.95em;
+  }
+}
+
+@media (max-width: 480px) {
+  .list,
+  .orderedList {
+    padding-left: 1.25rem;
+    margin-bottom: 1.25rem;
   }
   
-  .orderedList > .listItem {
-    padding-left: 0.5rem;
+  .listItem {
+    margin-bottom: 0.5rem;
+    font-size: 0.9em;
   }
+}

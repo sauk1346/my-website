@@ -126,7 +126,8 @@
   color: #60a5fa;
 }
 
-.link:hover {
+/* FIXED: Solo aplicar hover a links que NO están dentro de contentItem (esos ya los manejan CustomLink/ExternalLink) */
+.link:not(.contentItem *):hover {
   text-decoration: underline;
 }
 
@@ -343,14 +344,10 @@
   color: #aaa;
 }
 
-/* Hover states para links */
+/* FIXED: Removemos hover styles - los componentes CustomLink y ExternalLink ya los manejan */
 .contentItem a {
   transition: all 0.2s ease;
-}
-
-.contentItem a:hover {
-  text-decoration: underline;
-  opacity: 0.8;
+  /* Los componentes se encargan del underline, no agregamos estilos duplicados */
 }
 
 /* Espaciado específico por sección */
@@ -370,22 +367,7 @@
   gap: 0.125rem;
 }
 
-/* Mejoras visuales para links externos vs internos */
-.contentItem a[href^="http"]:after,
-.contentItem a[href^="/"]:after {
-  content: " ↗";
-  font-size: 0.8em;
-  color: #666;
-  margin-left: 2px;
-}
-
-/* Modo oscuro para indicadores de links externos */
-:global(html.dark-mode) .contentItem a[href^="http"]:after,
-:global(html.dark-mode-override) .contentItem a[href^="http"]:after,
-:global(html.dark-mode) .contentItem a[href^="/"]:after,
-:global(html.dark-mode-override) .contentItem a[href^="/"]:after {
-  color: #888;
-}
+/* Los indicadores de links externos los manejan los componentes CustomLink/ExternalLink */
 
 /* Estados de enfoque para accesibilidad */
 .contentItem a:focus {

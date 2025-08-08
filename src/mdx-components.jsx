@@ -9,9 +9,10 @@ import {
   Container,
   Table, TableHead, TableBody, TableRow, TableHeader, TableCell,
   Blockquote,
+  Solution, // ✨ AGREGAR ESTA LÍNEA
   // Code components
   PreBlock, Code,
-  TerminalOutput, // Agregar esta línea
+  TerminalOutput,
   // Media components
   CustomLink,
   CustomIframe,
@@ -23,6 +24,7 @@ export function useMDXComponents(components) {
   return {
     // Layout
     wrapper: Container,
+    
     // Text elements
     h1: H1,
     h2: H2,
@@ -32,6 +34,7 @@ export function useMDXComponents(components) {
     ol: OrderedList,
     li: ListItem,
     blockquote: Blockquote,
+    
     // Table elements
     table: Table,
     thead: TableHead,
@@ -39,17 +42,25 @@ export function useMDXComponents(components) {
     tr: TableRow,
     th: TableHeader,
     td: TableCell,
+    
     // Code elements
     pre: PreBlock,
     code: Code,
+    
     // Terminal component
-    TerminalOutput, // Agregar esta línea
+    TerminalOutput,
+    
     // Media elements
     a: CustomLink,
     iframe: CustomIframe,
+    
     // Math elements
     math: MathBlock,
     inlineMath: InlineMathComponent,
+    
+    // COMPONENTES PERSONALIZADOS
+    Solution,
+    
     // Permitir componentes personalizados adicionales
     ...components,
   };

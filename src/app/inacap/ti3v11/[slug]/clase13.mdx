@@ -97,9 +97,7 @@ edades[3:5]
 edades.index(3) 
 ```
 
-<details>
-    <summary>Solución</summary>
-<br/>
+<Solution>
 |Código|Descripción|
 |---|---|
 |`len(edades) = 5`|Cuenta la cantidad de elementos de la lista "edades"|
@@ -107,7 +105,7 @@ edades.index(3)
 |`nombres[1:2] = [2]`|Entrega los elementos desde la posición 1 (inclusivo) hasta la posición 2 (no inclusivo) de la secuencia "nombres"|
 |`edades:[3:5] = [4, '5']`|Entrega los elementos desde la posición 3 (inclusivo) hasta la posición 5 (no inclusivo) de la secuencia "edades"|
 |`edades.index(3) = 2`|Entrega la posición del elemento con valor "3" de la secuencia "edades"|
-</details>
+</Solution>
 
 ## Ejercicio 02
 Analizar qué hacen las siguientes instrucciones:
@@ -122,69 +120,82 @@ edades = [1,2,3,4,"5"]
 nombre = ["luis",2,"ana"]
 ```
 
-<details>
-    <summary>Solución</summary>
-<br/>
+<Solution>
 |Código|Descripción|
 |---|---|
 |`3 in edades`|Condición. Evalúa si existe el elemento con valor `3` en la secuencia `edades`|
 |`9 in edades`|Condición. Evalúa si existe el elemento con valor `9` en la secuencia `edades`|
 
-</details>
+</Solution>
 
 ## Ejercicio 03
 
 Recorrer la lista `edades = [1,2,3,4,"5"]` utilizando `for()`.
 
-<details>
-    <summary>Solución</summary>
-<br/>
+<Solution>
 ```python
 edades = [1,2,3,4,"5"]
 for i in edades:
 	print(f'número: {i}')
 ```
-</details>
+<TerminalOutput withBg>
+{`número: 1
+número: 2
+número: 3
+número: 4
+número: 5`}
+</TerminalOutput>
+</Solution>
 
 ## Ejercicio 04
 
 Buscar el valor mayor de la lista numérica `edades = [1,7,3,4,9]`.
 
-<details>
-    <summary>Solución</summary>
-<br/>
+<Solution>
 ```python
 edades = [1,7,3,4,9]
 print(f'valor mayor: {max(edades)}')
 ```
-</details>
+<TerminalOutput withBg>
+{`valor mayor: 9`}
+</TerminalOutput>
+</Solution>
 
 ## Ejercicio 05
 
 Ordenar de menor a mayor la lista numérica `edades = [1,7,3,4,9]` y recorrer la lista ordenada.
 
-<details>
-    <summary>Solución</summary>
-<br/>
+<Solution>
 ```python
 edades = [1,7,3,4,9]
 edades.sort()
 for i in edades:
 	print(f'número: {i}')
 ```
-</details>
+<TerminalOutput withBg>
+{`número: 1
+número: 3
+número: 4
+número: 7
+número: 9`}
+</TerminalOutput>
+</Solution>
 
 ## Ejercicio 06
 
 Recorrer la lista `edades = [1,2,"3",4,"5",6]` e imprimir solo los elementos de tipo numérico
 
-<details>
-    <summary>Solución</summary>
-<br/>
+<Solution>
 ```python
 edades = [1,2,"3",4,"5",6]
 for i in edades:
 	if type(i) == int:
 		print(f'número: {i}')
 ```
-</details>
+<TerminalOutput withBg>
+{`número: 1
+número: 2
+número: 4
+número: 6`}
+</TerminalOutput>
+</Solution>

@@ -7,6 +7,7 @@ export { UnorderedList, OrderedList, ListItem } from './text/Lists';
 export { Container } from './layout/Container';
 export { Table, TableHead, TableBody, TableRow, TableHeader, TableCell } from './layout/Tables';
 export { Blockquote } from './layout/Blockquote';
+export { default as Solution } from './layout/Solution';
 
 // Code components
 export { PreBlock, Code } from './code/CodeComponents';

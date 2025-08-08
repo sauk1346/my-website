@@ -2,11 +2,11 @@
 import React from "react";
 import styles from "./TerminalOutput.module.css";
 
-export function TerminalOutput({ children, withBackground = false, className = "" }) {
-  const terminalClass = withBackground 
-    ? `${styles.terminal} ${styles.terminalWithBg}` 
+export function TerminalOutput({ children, withBg = false, className = "" }) {
+  const terminalClass = withBg
+    ? styles.terminalWithBg
     : styles.terminal;
-    
+
   return (
     <pre className={`${terminalClass} ${className}`}>
       {children}

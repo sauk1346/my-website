@@ -84,89 +84,48 @@
   word-break: normal;
 }
 
-/* Tema claro (por defecto de Prism) - ORIGINAL */
-.lightTheme {
-  background-color: #f5f7ff !important;
-  border: 1px solid #e2e8f0 !important;
-}
-
-/* Barra de scroll para tema claro */
-.lightTheme::-webkit-scrollbar-thumb {
-  background-color: rgba(107, 114, 128, 0.4);
-}
-
-.lightTheme::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(107, 114, 128, 0.6);
-}
-
-/* Tema oscuro (tomorrow night) - CORREGIDO CON BORDE VISIBLE */
+/* Tema único - SIEMPRE OSCURO para ambos modos */
+.lightTheme,
 .darkTheme {
   background-color: #2d2d2d !important;
   border: 1px solid #4b5563 !important;
-  /* Eliminar explícitamente cualquier sombra de texto */
+  color: #ccc !important;
   text-shadow: none !important;
 }
 
-/* Barra de scroll para tema oscuro */
+/* Barra de scroll - IGUAL PARA AMBOS MODOS */
+.lightTheme::-webkit-scrollbar-thumb,
 .darkTheme::-webkit-scrollbar-thumb {
   background-color: rgba(229, 231, 235, 0.3);
 }
 
+.lightTheme::-webkit-scrollbar-thumb:hover,
 .darkTheme::-webkit-scrollbar-thumb:hover {
   background-color: rgba(229, 231, 235, 0.5);
 }
 
-/* Esto también eliminará sombras de todos los elementos dentro del tema oscuro */
+/* Eliminar sombras de todos los elementos */
+.lightTheme :global(*),
 .darkTheme :global(*) {
   text-shadow: none !important;
 }
 
-/* Asegurar que los tokens dentro del tema oscuro tampoco tengan sombra */
+/* Tokens sin sombra con transiciones */
+.lightTheme :global(.token),
 .darkTheme :global(.token) {
   text-shadow: none !important;
   transition: color 0.3s ease, background-color 0.3s ease !important;
 }
 
-/* Modo claro: Revertir cualquier color del tema oscuro para asegurar tema claro */
+/* ============================================================
+   TEMA ÚNICO OSCURO - APLICADO A AMBOS MODOS
+   ============================================================ */
+
 .lightTheme :global(.token.comment),
+.lightTheme :global(.token.block-comment),
 .lightTheme :global(.token.prolog),
 .lightTheme :global(.token.doctype),
-.lightTheme :global(.token.cdata) {
-  color: slategray;
-}
-
-.lightTheme :global(.token.punctuation) {
-  color: #999;
-}
-
-.lightTheme :global(.token.namespace) {
-  opacity: 0.7;
-}
-
-.lightTheme :global(.token.property),
-.lightTheme :global(.token.tag),
-.lightTheme :global(.token.boolean),
-.lightTheme :global(.token.number),
-.lightTheme :global(.token.constant),
-.lightTheme :global(.token.symbol),
-.lightTheme :global(.token.deleted) {
-  color: #905;
-}
-
-.lightTheme :global(.token.selector),
-.lightTheme :global(.token.attr-name),
-.lightTheme :global(.token.string),
-.lightTheme :global(.token.char),
-.lightTheme :global(.token.builtin),
-.lightTheme :global(.token.inserted) {
-  color: #690;
-}
-
-/* Modo oscuro: Sobreescribir colores para tema Tomorrow Night */
-.darkTheme {
-  color: #ccc !important;
-}
-
+.lightTheme :global(.token.cdata),
 .darkTheme :global(.token.comment),
 .darkTheme :global(.token.block-comment),
 .darkTheme :global(.token.prolog),
@@ -175,10 +134,15 @@
   color: #999 !important;
 }
 
+.lightTheme :global(.token.punctuation),
 .darkTheme :global(.token.punctuation) {
   color: #ccc !important;
 }
 
+.lightTheme :global(.token.tag),
+.lightTheme :global(.token.attr-name),
+.lightTheme :global(.token.namespace),
+.lightTheme :global(.token.deleted),
 .darkTheme :global(.token.tag),
 .darkTheme :global(.token.attr-name),
 .darkTheme :global(.token.namespace),
@@ -186,16 +150,24 @@
   color: #e2777a !important;
 }
 
+.lightTheme :global(.token.function-name),
 .darkTheme :global(.token.function-name) {
   color: #6196cc !important;
 }
 
+.lightTheme :global(.token.boolean),
+.lightTheme :global(.token.number),
+.lightTheme :global(.token.function),
 .darkTheme :global(.token.boolean),
 .darkTheme :global(.token.number),
 .darkTheme :global(.token.function) {
   color: #f08d49 !important;
 }
 
+.lightTheme :global(.token.property),
+.lightTheme :global(.token.class-name),
+.lightTheme :global(.token.constant),
+.lightTheme :global(.token.symbol),
 .darkTheme :global(.token.property),
 .darkTheme :global(.token.class-name),
 .darkTheme :global(.token.constant),
@@ -203,6 +175,11 @@
   color: #f8c555 !important;
 }
 
+.lightTheme :global(.token.selector),
+.lightTheme :global(.token.important),
+.lightTheme :global(.token.atrule),
+.lightTheme :global(.token.keyword),
+.lightTheme :global(.token.builtin),
 .darkTheme :global(.token.selector),
 .darkTheme :global(.token.important),
 .darkTheme :global(.token.atrule),
@@ -211,6 +188,11 @@
   color: #cc99cd !important;
 }
 
+.lightTheme :global(.token.string),
+.lightTheme :global(.token.char),
+.lightTheme :global(.token.attr-value),
+.lightTheme :global(.token.regex),
+.lightTheme :global(.token.variable),
 .darkTheme :global(.token.string),
 .darkTheme :global(.token.char),
 .darkTheme :global(.token.attr-value),
@@ -219,6 +201,9 @@
   color: #7ec699 !important;
 }
 
+.lightTheme :global(.token.operator),
+.lightTheme :global(.token.entity),
+.lightTheme :global(.token.url),
 .darkTheme :global(.token.operator),
 .darkTheme :global(.token.entity),
 .darkTheme :global(.token.url) {

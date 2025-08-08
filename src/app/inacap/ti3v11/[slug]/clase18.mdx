@@ -17,6 +17,10 @@ print(f'la suma es: {sum}')
 sum = miSuma(15,15)
 print(f'ahora la suma es: {sum}')
 ```
+<TerminalOutput withBg>
+{`la suma es: 3
+ahora la suma es: 30`}
+</TerminalOutput>
 
 ## Características
 1. Al crear una función, inicia con la palabra `def`.
@@ -48,6 +52,11 @@ from saludos import *
 imprimeHola()
 imprimeChao()
 ```
+<TerminalOutput withBg>
+{`HOLA
+CHAO`}
+</TerminalOutput>
+
 
 - **saludos.py:** contiene las funciones `imprimeHola()` y `imprimeChao()`
 - **main.py:**: ejecuta las funciones del archivo `saludos.py`. Para esto, primero importa todas las funciones (*) del archivo 'saludos' (`from saludos import *`)
@@ -68,6 +77,10 @@ def miSuma(*args):
 resultado = miSuma(1,2,3,4,5,6,7,8,9,10)
 print(f'La suma es: {resultado}')
 ```
+<TerminalOutput withBg>
+{`La suma es: 55`}
+</TerminalOutput>
+
 
 - `*args`: representa el nombre de la lista de elementos variables. Puede llamarse de cualquier otra forma, pero por convención se deja como `args` (arguments). Lo importante es el `*`. Este comodín indica que el argumento (parámetro) es una lista de elementos variables
 
@@ -83,6 +96,9 @@ def miMultiplicacion(*saukCode):
 result = miMultiplicacion(1,2,3,4,5)
 print(f'la multiplicación es: {result}')
 ```
+<TerminalOutput withBg>
+{`la multiplicación es: 120`}
+</TerminalOutput>
 
 # Ejercicios
 
@@ -97,7 +113,7 @@ print(f'la multiplicación es: {result}')
 
 <details>
 	<summary>Solución</summary>
-
+<br/>
 ```python
 #operaciones.py
 def suma(n1,n2):
@@ -137,7 +153,7 @@ print(f'Suma +5: {suma(num,5)}')
 
 <details>
 	<summary>Solución</summary>
-
+<br/>
 ```python
 #media.py
 def calcularMedia(*args):

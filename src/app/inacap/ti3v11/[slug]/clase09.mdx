@@ -48,6 +48,10 @@ mi_cadena = "Hola Mundo!"
 print(mi_cadena)
 ```
 
+<TerminalOutput withBg>
+{`Hola Mundo!`}
+</TerminalOutput>
+
 **Ejemplo 02:** salida de datos multilínea
 
 ```python
@@ -58,12 +62,22 @@ de varias líneas
 print(mi_cadena_multilinea)
 ```
 
+<TerminalOutput withBg>
+{`Esta es una cadena
+de varias líneas`}
+</TerminalOutput>
+
 **Ejemplo 03:** entrada de cadena de texto
 
 ```python
-cadena = input('Introduce una cadena de texto: ')
+cadena = input('Introduce una cadena de texto: ') # ==SaukCode==
 print('La cadena que ingresó es:\n', cadena)
 ```
+
+<TerminalOutput withBg>
+{`La cadena que ingresó es: 
+==SaukCode==`}
+</TerminalOutput>
 
 ## Entrada de números reales y flotantes
 - La función input sólo captura cadenas de texto.
@@ -73,15 +87,26 @@ print('La cadena que ingresó es:\n', cadena)
 
 ```python
 # int(): convierte input a entero
-numero = int( input("Introduce un número: ") )
+numero = int( input("Introduce un número: ") ) # 5
 print("El número que ingresó es:\n", numero)
 ```
+<TerminalOutput withBg>
+{`El número que ingresó es:
+5`}
+</TerminalOutput>
+
+
 
 **Ejemplo 02:** leer un número flotante (decimal)
 ```python
-numero = float( input("Introduce un número: ") )
+numero = float( input("Introduce un número: ") ) #3.14
 print("El número que ingresó es:\n", numero)
 ```
+<TerminalOutput withBg>
+{`El número que ingresó es:
+3.14`}
+</TerminalOutput>
+
 
 ## Operadores
 
@@ -104,6 +129,7 @@ Realice un algoritmo para sumar 3 números que se ingresan por teclado y mostrar
 
 <details>
     <summary>Solución</summary>
+<br/>
 ```python
 # función float(): convierte input a núm decimales
 num1 = float( input("Ingrese el primer número: ") )
@@ -119,6 +145,7 @@ Realice un algoritmo para calcular el área de un triángulo.
 
 <details>
     <summary>Solución</summary>
+<br/>
 ```python
 base = float( input("Ingrese base: ") )
 altura = float( input("Ingrese altura: ") )
@@ -132,6 +159,7 @@ Realice un algoritmo para promediar 3 números ingresados
 
 <details>
     <summary>Solución</summary>
+<br/>
 ```python
 num1 = float( input("Ingrese el primer número: ") )
 num2 = float( input("Ingrese el segundo número: ") )

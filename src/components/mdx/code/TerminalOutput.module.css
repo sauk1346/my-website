@@ -1,0 +1,81 @@
+/* TerminalOutput.module.css */
+.terminal {
+    font-family: "Menlo", "Monaco", "Courier New", "Consolas", monospace;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0;
+    padding: 1rem 0;
+    background: transparent;
+    border: none;
+    color: #334155;
+    white-space: pre;
+    overflow-x: auto;
+    overflow-y: hidden;
+    word-wrap: normal;
+    word-break: normal;
+    transition: color 0.3s ease;
+    scrollbar-width: thin;
+  }
+  
+  /* Variante con fondo (opcional) */
+  .terminalWithBg {
+    background-color: #1a1a1a !important;
+    color: #00ff00 !important;
+    border: 1px solid #333;
+    border-radius: 0.375rem;
+    padding: 1rem !important;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Modo oscuro */
+  :global(html.dark-mode) .terminal,
+  :global(html.dark-mode-override) .terminal {
+    color: #e5e7eb;
+  }
+  
+  /* En modo oscuro, la variante con fondo mantiene sus colores */
+  :global(html.dark-mode) .terminalWithBg,
+  :global(html.dark-mode-override) .terminalWithBg {
+    background-color: #0d0d0d !important;
+    color: #00ff00 !important;
+    border-color: #444;
+  }
+  
+  /* Estilos para la barra de desplazamiento */
+  .terminal::-webkit-scrollbar {
+    height: 6px;
+  }
+  
+  .terminal::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .terminal::-webkit-scrollbar-thumb {
+    background-color: rgba(156, 163, 175, 0.3);
+    border-radius: 3px;
+  }
+  
+  .terminal::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(156, 163, 175, 0.5);
+  }
+  
+  /* Barra de scroll para variante con fondo */
+  .terminalWithBg::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 255, 0, 0.3);
+  }
+  
+  .terminalWithBg::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 255, 0, 0.5);
+  }
+  
+  /* Barra de scroll para modo oscuro */
+  :global(html.dark-mode) .terminal::-webkit-scrollbar-thumb,
+  :global(html.dark-mode-override) .terminal::-webkit-scrollbar-thumb {
+    background-color: rgba(229, 231, 235, 0.2);
+  }
+  
+  :global(html.dark-mode) .terminal::-webkit-scrollbar-thumb:hover,
+  :global(html.dark-mode-override) .terminal::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(229, 231, 235, 0.4);
+  }

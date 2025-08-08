@@ -2,6 +2,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import Prism from "prismjs";
 import "prismjs/themes/prism.css";
+import "prismjs/themes/prism-tomorrow.css";
 import "prismjs/components/prism-json";
 import "prismjs/components/prism-javascript";
 import "prismjs/components/prism-css";
@@ -24,29 +25,24 @@ export function CodeBlock({ children, language }) {
 
   // Detectar el modo oscuro
   useEffect(() => {
-    // Función para verificar si está en modo oscuro
     const checkDarkMode = () => {
-      const isDark = 
-        document.documentElement.classList.contains('dark-mode') || 
+      const isDark =
+        document.documentElement.classList.contains('dark-mode') ||
         document.documentElement.classList.contains('dark-mode-override');
       setIsDarkMode(isDark);
     };
-    
-    // Verificar el modo actual
+
     checkDarkMode();
-    
-    // Configurar un observador para detectar cambios en las clases
     const observer = new MutationObserver(checkDarkMode);
-    
-    observer.observe(document.documentElement, { 
+    observer.observe(document.documentElement, {
       attributes: true,
-      attributeFilter: ['class'] 
+      attributeFilter: ['class']
     });
-    
+
     return () => observer.disconnect();
   }, []);
 
-  // Resaltado de sintaxis solo en el cliente después del primer renderizado
+  // Resaltado de sintaxis
   useEffect(() => {
     if (codeRef.current && !highlighted) {
       Prism.highlightElement(codeRef.current);
@@ -81,15 +77,14 @@ export function CodeBlock({ children, language }) {
 
   return (
     <div className={styles.codeBlockContainer}>
-      {/* Añadimos las clases locales styles.pre y styles.code */}
+      <button
+        onClick={copyToClipboard}
+        className={`${styles.copyButton} ${buttonClass}`}
+        aria-label="Copiar código"
+      >
+        {copied ? "✓ Copiado" : "Copiar"}
+      </button>
       <pre className={`language-${language} ${styles.relative} ${styles.pre} ${themeClass}`}>
-        <button
-          onClick={copyToClipboard}
-          className={`${styles.copyButton} ${buttonClass}`}
-          aria-label="Copiar código"
-        >
-          {copied ? "✓ Copiado" : "Copiar"}
-        </button>
         <code
           ref={codeRef}
           className={`language-${language} ${styles.code}`}

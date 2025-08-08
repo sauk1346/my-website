@@ -1,0 +1,54 @@
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.75rem;
+    border: 1px solid #e2e8f0;
+    transition: border-color 0.3s ease;
+  }
+  
+  :global(html.dark-mode) .table,
+  :global(html.dark-mode-override) .table {
+    border-color: #4b5563;
+  }
+  
+  .th {
+    background-color: #0e559c;
+    padding: 0.75rem 1rem;
+    text-align: left;
+    font-weight: 600;
+    color: #ffffff;
+    border-bottom: 2px solid #e2e8f0;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+  
+  :global(html.dark-mode) .th,
+  :global(html.dark-mode-override) .th {
+    background-color: #1e40af;
+    border-bottom-color: #4b5563;
+  }
+  
+  .td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #e2e8f0;
+    transition: border-color 0.3s ease;
+  }
+  
+  :global(html.dark-mode) .td,
+  :global(html.dark-mode-override) .td {
+    border-bottom-color: #4b5563;
+  }
+  
+  .tr:nth-child(even) {
+    background-color: #f8fafc;
+    transition: background-color 0.3s ease;
+  }
+  
+  :global(html.dark-mode) .tr:nth-child(even),
+  :global(html.dark-mode-override) .tr:nth-child(even) {
+    background-color: #1e293b;
+  }
+  
+  :global(html.dark-mode) .tr:nth-child(odd),
+  :global(html.dark-mode-override) .tr:nth-child(odd) {
+    background-color: #111827;
+  }

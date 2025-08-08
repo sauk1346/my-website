@@ -1,0 +1,35 @@
+/* Listas no ordenadas mejoradas */
+.list {
+    list-style-type: disc;
+    padding-left: 2rem;
+    margin-bottom: 1.75rem;
+  }
+  
+  /* Listas ordenadas con mejor espaciado */
+  .orderedList {
+    list-style-type: decimal;
+    padding-left: 2rem;
+    margin-bottom: 1.75rem;
+  }
+  
+  /* Estilos para listas ordenadas anidadas */
+  .orderedList .orderedList {
+    list-style-type: lower-alpha;
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .orderedList .orderedList .orderedList {
+    list-style-type: lower-roman;
+  }
+  
+  /* Elementos de lista con mejor espaciado */
+  .listItem {
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+    transition: color 0.3s ease;
+  }
+  
+  .orderedList > .listItem {
+    padding-left: 0.5rem;
+  }

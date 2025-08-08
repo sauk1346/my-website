@@ -1,165 +1,56 @@
 import React from 'react';
-import Link from 'next/link';
-import styles from './shared/clases.module.css';
-import { CodeBlock } from "./components/ui/CodeBlock";
-import MDXWrapper from './components/common/MDXWrapper';
-import 'katex/dist/katex.min.css'; // Importar estilos de KaTeX
-import { InlineMath, BlockMath } from 'react-katex'; // Importar componentes de react-katex
-
-// Función para generar IDs de encabezados
-function getSlug(text) {
-  if (typeof text !== 'string' && typeof text !== 'object') {
-    return '';
-  }
-  let textContent = '';
-  if (typeof text === 'string') {
-    textContent = text;
-  } else if (Array.isArray(text)) {
-    textContent = text.map(item => {
-      if (typeof item === 'string') return item;
-      if (item && item.props && item.props.children) {
-        return typeof item.props.children === 'string'
-          ? item.props.children
-          : '';
-      }
-      return '';
-    }).join('');
-  } else if (text && text.props && text.props.children) {
-    textContent = typeof text.props.children === 'string'
-      ? text.props.children
-      : '';
-  }
-  return textContent
-    .toLowerCase()
-    .replace(/\s+/g, '-')
-    .replace(/[^\w\-]+/g, '')
-    .replace(/\-\-+/g, '-')
-    .replace(/^-+/, '')
-    .replace(/-+$/, '');
-}
+import 'katex/dist/katex.min.css';
+import {
+  // Text components
+  H1, H2, H3,
+  Paragraph,
+  UnorderedList, OrderedList, ListItem,
+  // Layout components
+  Container,
+  Table, TableHead, TableBody, TableRow, TableHeader, TableCell,
+  Blockquote,
+  // Code components
+  PreBlock, Code,
+  TerminalOutput, // Agregar esta línea
+  // Media components
+  CustomLink,
+  CustomIframe,
+  // Math components
+  MathBlock, InlineMathComponent
+} from './components/mdx';
 
 export function useMDXComponents(components) {
   return {
-    // Contenedor principal - con envoltura en MDXWrapper
-    wrapper: ({ children }) => (
-      <MDXWrapper>
-        <div className={styles.container}>
-          {children}
-        </div>
-      </MDXWrapper>
-    ),
-    // Definir los encabezados con IDs para la tabla de contenidos
-    h1: ({ children, ...props }) => (
-      <h1 id={props.id || getSlug(children)} className={styles.title} {...props}>{children}</h1>
-    ),
-    h2: ({ children, ...props }) => (
-      <h2 id={props.id || getSlug(children)} className={styles.subtitle} {...props}>{children}</h2>
-    ),
-    h3: ({ children, ...props }) => (
-      <h3 id={props.id || getSlug(children)} className={styles.subsubtitle || ''} {...props}>{children}</h3>
-    ),
-    // Resto de componentes igual que antes
-    p: ({ children, ...props }) => (
-      <p className={styles.paragraph} {...props}>{children}</p>
-    ),
-    ul: ({ children, ...props }) => (
-      <ul className={styles.list} {...props}>{children}</ul>
-    ),
-    li: ({ children, ...props }) => (
-      <li className={styles.listItem} {...props}>{children}</li>
-    ),
-    // Agregar componente para citas blockquote
-    blockquote: ({ children, ...props }) => (
-      <blockquote className={styles.blockquote || ''} {...props}>{children}</blockquote>
-    ),
-    // Agregar componentes para tablas usando los estilos existentes
-    table: ({ children, ...props }) => (
-      <table className={styles.table} {...props}>{children}</table>
-    ),
-    thead: ({ children, ...props }) => (
-      <thead {...props}>{children}</thead>
-    ),
-    tbody: ({ children, ...props }) => (
-      <tbody {...props}>{children}</tbody>
-    ),
-    tr: ({ children, ...props }) => (
-      <tr {...props}>{children}</tr>
-    ),
-    th: ({ children, ...props }) => (
-      <th {...props}>{children}</th>
-    ),
-    td: ({ children, ...props }) => (
-      <td {...props}>{children}</td>
-    ),
-    // Componente personalizado para enlaces
-    a: ({ href, children, ...props }) => {
-      const isExternal = href && (
-        href.startsWith('http') ||
-        href.startsWith('mailto:') ||
-        href.startsWith('tel:')
-      );
-      const isFileLink = href && (
-        href.endsWith('.csv') ||
-        href.endsWith('.pdf') ||
-        href.endsWith('.xlsx') ||
-        href.endsWith('.docx')
-      );
-      const linkClass = `${styles.link || ''}`;
-      if (isExternal || isFileLink) {
-        return (
-          <a
-            href={href}
-            className={linkClass}
-            target={isExternal ? "_blank" : undefined}
-            rel={isExternal ? "noopener noreferrer" : undefined}
-            {...props}
-          >
-            {children}
-          </a>
-        );
-      }
-      return (
-        <Link
-          href={href}
-          className={linkClass}
-          {...props}
-        >
-          {children}
-        </Link>
-      );
-    },
-    // Manejo del código
-    pre: ({ children }) => children,
-    code: ({ children, className, ...props }) => {
-      const match = /language-(\w+)/.exec(className || '');
-      const lang = match ? match[1] : '';
-      if (lang) {
-        return (
-          <pre className={`language-${lang}`}>
-            <CodeBlock language={lang} {...props}>
-              {children}
-            </CodeBlock>
-          </pre>
-        );
-      }
-      return <code className={styles.inlineCode} {...props}>{children}</code>;
-    },
-    // Componente personalizado para iframe
-    iframe: (props) => (
-      <iframe
-        width="100%"
-        height="440px"
-        style={{ border: "none" }}
-        {...props}
-      />
-    ),
-    // Añadir componentes para LaTeX
-    math: ({ children, ...props }) => {
-      return <BlockMath math={children.toString()} {...props} />;
-    },
-    inlineMath: ({ children, ...props }) => {
-      return <InlineMath math={children.toString()} {...props} />;
-    },
+    // Layout
+    wrapper: Container,
+    // Text elements
+    h1: H1,
+    h2: H2,
+    h3: H3,
+    p: Paragraph,
+    ul: UnorderedList,
+    ol: OrderedList,
+    li: ListItem,
+    blockquote: Blockquote,
+    // Table elements
+    table: Table,
+    thead: TableHead,
+    tbody: TableBody,
+    tr: TableRow,
+    th: TableHeader,
+    td: TableCell,
+    // Code elements
+    pre: PreBlock,
+    code: Code,
+    // Terminal component
+    TerminalOutput, // Agregar esta línea
+    // Media elements
+    a: CustomLink,
+    iframe: CustomIframe,
+    // Math elements
+    math: MathBlock,
+    inlineMath: InlineMathComponent,
+    // Permitir componentes personalizados adicionales
     ...components,
   };
 }

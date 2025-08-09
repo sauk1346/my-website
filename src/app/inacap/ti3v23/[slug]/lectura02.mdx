@@ -1,17 +1,15 @@
-import { Quiz } from '@/components/features/inacap/QuizComponent';
-
 # Aplicaciones de las Metodologías Ágiles
 
 ## Métodologías Ágiles
 
-||Tipo|Descripción|
-|---|---|---|
-|01|SCRUM|Organiza el desarrollo en iteraciones llamadas sprints, fomenta la colaboración y adaptación continua mediante roles y reuniones estructuradas|
-|02|Kanban|Sistema visual de gestión de trabajo. Limita el trabajo en curso y mejora la eficiencia mediante la optimización continua|
-|03|XP|Comunicación cercana, pruebas unitarias constantes, desarrollo incremental y simplicidad en el diseño para mejorar la calidad del software|
-|04|Lean|Inspirado en el sistema de producción de Toyota, busca eliminar el desperdicio, optimizar el flujo de trabajo y mejorar la entrega de valor de manera continua|
-|05|Crystal|Tien enfoques específicos, como *Crystal Clear* para equipos pequeños y *Crystal Orange* para equipos más grandes|
-|06|FDD|Se centra en la construcción de características específicas, empleando modelado y diseño, con énfasis en entregas incrementales y desarrollo guiado por funcionalidades|
+|Tipo|Descripción|
+|---|---|
+|SCRUM|Organiza el desarrollo en iteraciones llamadas sprints, fomenta la colaboración y adaptación continua mediante roles y reuniones estructuradas|
+|Kanban|Sistema visual de gestión de trabajo. Limita el trabajo en curso y mejora la eficiencia mediante la optimización continua|
+|XP|Comunicación cercana, pruebas unitarias constantes, desarrollo incremental y simplicidad en el diseño para mejorar la calidad del software|
+|Lean|Inspirado en el sistema de producción de Toyota, busca eliminar el desperdicio, optimizar el flujo de trabajo y mejorar la entrega de valor de manera continua|
+|Crystal|Tien enfoques específicos, como *Crystal Clear* para equipos pequeños y *Crystal Orange* para equipos más grandes|
+|FDD|Se centra en la construcción de características específicas, empleando modelado y diseño, con énfasis en entregas incrementales y desarrollo guiado por funcionalidades|
 
 ### SCRUM
 - Ejemplo de uso: "Desarrollo de una aplicación móvil para la gestión de tareas y colaboración en equipos"
@@ -41,53 +39,37 @@ import { Quiz } from '@/components/features/inacap/QuizComponent';
 ## Metología SCRUM
 Se centra en la flexibilidad y la adaptabilidad para abordar proyectos complejos de desarrollo de software y productos
 
-||Características|Descripción|
-|---|---|---|
-|01|Iterativo e Incremental|Divide el proyecto en ciclos de desarrollo (sprints), de 2 a 4 semanas, donde se entregan incrementos de funcionalidades|
-|02|Roles Definidos|Product Owner, Scrum Master y Equipo de Desarrollo|
-|03|Priorización de Product Backlog|Permite priorizar y gestionar las funcionalidades deseadas. Permite al Product Owner tomar decisiones informadas sobre qué trabajar a continuación|
-|04|Reuniones Ceremoniales|Sprint Planning, Daily Scrum, Sprint Review y Sprint Restrospective. Garantizan transparencia y colaboración|
-|05|Enfoque en la Colaboración|Colaboración activa entre equipo de desarrollo, Product Owner y los stakeholders para garantizar un entendimiento común de los objetivos y requisitos|
+|Características|Descripción|
+|---|---|
+|Iterativo e Incremental|Divide el proyecto en ciclos de desarrollo (sprints), de 2 a 4 semanas, donde se entregan incrementos de funcionalidades|
+|Roles Definidos|Product Owner, Scrum Master y Equipo de Desarrollo|
+|Priorización de Product Backlog|Permite priorizar y gestionar las funcionalidades deseadas. Permite al Product Owner tomar decisiones informadas sobre qué trabajar a continuación|
+|Reuniones Ceremoniales|Sprint Planning, Daily Scrum, Sprint Review y Sprint Restrospective. Garantizan transparencia y colaboración|
+|Enfoque en la Colaboración|Colaboración activa entre equipo de desarrollo, Product Owner y los stakeholders para garantizar un entendimiento común de los objetivos y requisitos|
 
 ### Roles
 
-<table>
-	<thead>
-		<tr>
-			<th>Roles</th>
-			<th>Descripción</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Product Owner</td>
-			<td>
-                <ul>
-                    <li>Representa al cliente. Responsable de definir y priorizar las funcionalidades del producto</li>
-                    <li>Toma decisiones sobre qué se debe incluir en cada iteración</li>
-                </ul>
-            </td>
-		</tr>
-        <tr>
-			<td>Scrum Master</td>
-			<td>
-                <ul>
-                    <li>Facilita el proceso Scrum</li>
-                    <li>Elimina obstáculos para el equipo</li>
-                    <li>Garantiza el cumplimiento de las prácticas y valores de Scrum</li>
-                </ul>
-            </td>
-		</tr>
-        <tr>
-			<td>Equipo de Desarrollo</td>
-			<td>
-                <ul>
-                    <li>Encargados de llevar a cabo el trabajo para entregar las funcionalidades del producto</li>
-                </ul>
-            </td>
-		</tr>
-	</tbody>
-</table>
+<SmartTable lists={{
+  PO: [
+    "Representa al cliente. Responsable de definir y priorizar las funcionalidades del producto",
+    "Toma decisiones sobre qué se debe incluir en cada iteración"
+  ],
+  SC: [
+    "Facilita el proceso Scrum",
+    "Elimina obstáculos para el equipo",
+    "Garantiza el cumplimiento de las prácticas y valores de Scrum"
+  ],
+  DT: [
+    "Encargados de llevar a cabo el trabajo para entregar las funcionalidades del producto"
+  ]
+}}>
+
+|Rol|Descripción|
+|---|---|
+|Product Owner|@PO|
+|Scrum Master|@SC|
+|Equipo de Desarrollo|@DT|
+</SmartTable>
 
 # Actividad de Práctica 02
 

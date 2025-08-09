@@ -6,6 +6,7 @@ export { UnorderedList, OrderedList, ListItem } from './text/Lists';
 // Layout components
 export { Container } from './layout/Container';
 export { Table, TableHead, TableBody, TableRow, TableHeader, TableCell } from './layout/Tables';
+export { default as SmartTable } from './layout/SmartTable'; // ← AGREGAR AQUÍ
 export { Blockquote } from './layout/Blockquote';
 export { default as Solution } from './layout/Solution';
 export { Quiz, QuizQuestion } from './layout/QuizComponent';

@@ -8,6 +8,7 @@ import {
   // Layout components
   Container,
   Table, TableHead, TableBody, TableRow, TableHeader, TableCell,
+  SmartTable, // ← AGREGAR AQUÍ
   Blockquote,
   Solution,
   Quiz, QuizQuestion,
@@ -50,14 +51,15 @@ export function useMDXComponents(components) {
     TerminalOutput,
     
     // Media elements
-    a: SmartLink,     // ✨ Todos los enlaces [texto](url) usan SmartLink automáticamente
+    a: SmartLink,
     iframe: CustomIframe,
     
     // COMPONENTES PERSONALIZADOS
     Solution,
     Quiz,
     QuizQuestion,
-    SmartLink,        // ✨ También disponible manualmente como <SmartLink>
+    SmartTable, 
+    SmartLink,
     
     // Permitir componentes personalizados adicionales
     ...components,

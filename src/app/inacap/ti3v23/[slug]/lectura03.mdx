@@ -1,105 +1,59 @@
-import { Quiz } from '@/components/features/inacap/QuizComponent';
-
 # Selección de Metodologías Ágiles
 
 ## ¿Cómo elegir la Métodología Ágil?
 
 Depende de distintos recursos disponibles:
 
-<table>
-	<thead>
-		<tr>
-			<th></th>
-            <th>Recursos</th>
-			<th>Descripción</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>01</td>
-			<td>Recursos Humanos</td>
-			<td>
-                <ul>
-                    <li>Habilidades y competencias del equipo</li>
-                    <li>Tamaño y composición del equipo</li>
-                    <li>Disponibilidad y dedicación de los miembros del equipo</li>
-                    <li>Roles y responsabilidades claramente definidos</li>
-                </ul>
-            </td>
-		</tr>
-        <tr>
-			<td>02</td>
-			<td>Recursos Tecnológicos</td>
-			<td>
-                <ul>
-                    <li>Herramientas y tecnologías utilizadas en el desarrollo</li>
-                    <li>Infraestructura de hardware y software</li>
-                    <li>Acceso a entornos de prueba y producción</li>
-                </ul>
-            </td>
-		</tr>
-        <tr>
-			<td>03</td>
-			<td>Recursos Financieros</td>
-			<td>
-                <ul>
-                    <li>Presupuesto asignado para el proyecto</li>
-                    <li>Costos asociados con herramientas y licencias</li>
-                </ul>
-            </td>
-		</tr>
-        <tr>
-			<td>04</td>
-			<td>Tiempo</td>
-			<td>
-                <ul>
-                    <li>Plazos de entrega y fechas límite</li>
-                    <li>Flexibilidad en el cronograma</li>
-                </ul>
-            </td>
-		</tr>
-        <tr>
-			<td>05</td>
-			<td>Comunicación</td>
-			<td>
-                <ul>
-                    <li>Canales y frecuencia de comunicación entre el tiempo y las partes interesadas</li>
-                    <li>Transparencia en la información compartida</li>
-                </ul>
-            </td>
-		</tr>
-        <tr>
-			<td>06</td>
-			<td>Partes Interesadas (Stakeholders)</td>
-			<td>
-                <ul>
-                    <li>Identificación y compresión de las expectativas de los stakeholders</li>
-                    <li>Niveles de participación y toma de decisiones</li>
-                </ul>
-            </td>
-		</tr>
-        <tr>
-			<td>07</td>
-			<td>Requerimientos del cliente</td>
-			<td>
-                <ul>
-                    <li>Claridad en los requisitos del cliente</li>
-                    <li>Capacidad para gestionar cambios en los requisitos</li>
-                </ul>
-            </td>
-		</tr>
-        <tr>
-			<td>08</td>
-			<td>Complejidad del proyecto</td>
-			<td>
-                <ul>
-                    <li>Naturaleza y nivel de complejidad del proyecto</li>
-                    <li>Requerimientos de adaptabilidad y flexibilidad</li>
-                </ul>
-            </td>
-		</tr>
-	</tbody>
-</table>
+<SmartTable lists={{
+  R01: [
+    "Habilidades y competencias del equipo",
+    "Tamaño y composición del equipo",
+    "Disponibilidad y dedicación de los miembros del equipo",
+    "Roles y responsabilidades claramente definidos"
+  ],
+  R02: [
+    "Herramientas y tecnologías utilizadas en el desarrollo",
+    "Infraestructura de hardware y software",
+    "Acceso a entornos de prueba y producción"
+  ],
+  R03: [
+    "Presupuesto asignado para el proyecto",
+    "Costos adicionales con herramientas y licencias" 
+  ],
+  R04: [
+    "Plazos de entrega y fechas límite",
+    "Flexibilidad en el cronograma"
+  ],
+  R05: [
+    "Canales y frecuencia de comunicación entre el tiempo y las partes interesadas",
+    "Transparencia en la información compartida"
+  ],
+  R06: [
+    "Identificación y comprensión de las expectativas de los stakeholders",
+    "Niveles de participación y toma de decisiones"
+  ],
+  R07: [
+    "Claridad en los requisitos del cliente",
+    "Capacidad para gestionar cambios en los requisitos"
+  ],
+  R08: [
+    "Naturaleza y nivel de complejidad del proyecto",
+    "Requerimientos de adaptabilidad y flexibilidad"
+  ]
+}}>
+
+|Recursos|Descripción|
+|---|---|
+|Recursos Humanos|@R01|
+|Recursos Tecnológicos|@R02|
+|Recursos Financieros|@R03|
+|Tiempo|@R04|
+|Comunicación|@R05|
+|Partes Interesadas (Stakeholders)|@R06|
+|Requerimientos del cliente|@R07|
+|Complejidad del proyecto|@R08|
+
+</SmartTable>
 
 ## Carta Gantt
 

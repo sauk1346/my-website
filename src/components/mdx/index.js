@@ -15,7 +15,7 @@ export { PreBlock, Code } from './code/CodeComponents';
 export { TerminalOutput } from './code/TerminalOutput';
 
 // Media components
-export { SmartLink } from './media/SmartLink'; // ✨ SOLO SmartLink - sin aliases
+export { SmartLink } from '../ui/SmartLink';
 export { CustomIframe } from './media/Iframe';
 
 // Math components

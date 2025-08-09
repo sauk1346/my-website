@@ -2,8 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Calendar, Book, CheckSquare, User, Grid3x3, Monitor, FileText, Clock, Percent } from 'lucide-react';
-import CustomLink from '@/components/ui/CustomLink';
-import ExternalLink from '@/components/ui/ExternalLink';
+import { SmartLink } from '@/components/ui/SmartLink'; // ✨ CORRECTO: Importar desde UI (ubicación arquitecturalmente correcta)
 import styles from './CourseDetails.module.css';
 
 const CourseDetails = ({ 
@@ -30,9 +29,8 @@ const CourseDetails = ({
     
     // Inferir el tipo basado en la presencia de href
     if (item.href) {
-      // Es un link
-      const LinkComponent = item.external === true ? ExternalLink : CustomLink;
-      const linkContent = <LinkComponent href={item.href}>{displayText}</LinkComponent>;
+      // ✨ SIMPLIFICADO: SmartLink maneja automáticamente interno vs externo
+      const linkContent = <SmartLink href={item.href}>{displayText}</SmartLink>;
       return (
         <div key={key} className={styles.contentItem}>
           {item.strikethrough ? <del>{linkContent}</del> : linkContent}
@@ -216,9 +214,9 @@ const CourseDetails = ({
                   </div>
                   <div className={styles.infoItem}>
                     <span className={styles.infoLabel}>Email:</span>
-                    <a href={`mailto:${professorData.email}`} className={styles.link}>
+                    <SmartLink href={`mailto:${professorData.email}`}>
                       {professorData.email}
-                    </a>
+                    </SmartLink>
                   </div>
                 </div>
               </div>

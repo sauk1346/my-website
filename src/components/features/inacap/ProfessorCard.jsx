@@ -1,6 +1,7 @@
 import React from 'react';
-import Link from 'next/link';
-import styles from './ProfessorCard.module.css'
+import { SmartLink } from '@/components/ui/SmartLink';
+import styles from './ProfessorCard.module.css';
+
 const ProfessorCard = ({ professorData }) => {
   return (
     <div className={`${styles.card} ${styles.mediumSmallWidth} ${styles.extraPadding} ${styles.centered}`}>
@@ -15,9 +16,9 @@ const ProfessorCard = ({ professorData }) => {
         <div className={styles.infoItem}>
           <p className={styles.label}>Correo:</p>
           <p>
-            <Link href={`mailto:${professorData.email}`} className="email-link">
+            <SmartLink href={`mailto:${professorData.email}`}>
               {professorData.email}
-            </Link>
+            </SmartLink>
           </p>
         </div>
       </div>

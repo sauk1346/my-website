@@ -114,22 +114,8 @@
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.18);
 }
 
-.link {
-  color: #2563eb;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-/* Enlaces en modo oscuro */
-:global(html.dark-mode) .link,
-:global(html.dark-mode-override) .link {
-  color: #60a5fa;
-}
-
-/* FIXED: Solo aplicar hover a links que NO están dentro de contentItem (esos ya los manejan CustomLink/ExternalLink) */
-.link:not(.contentItem *):hover {
-  text-decoration: underline;
-}
+/* ❌ ELIMINADO: Selectores .link obsoletos */
+/* Ya no se necesitan porque SmartLink maneja todos los enlaces */
 
 /* ==================== ESTILOS PARA NAVEGACIÓN POR PESTAÑAS ==================== */
 
@@ -344,11 +330,8 @@
   color: #aaa;
 }
 
-/* FIXED: Removemos hover styles - los componentes CustomLink y ExternalLink ya los manejan */
-.contentItem a {
-  transition: all 0.2s ease;
-  /* Los componentes se encargan del underline, no agregamos estilos duplicados */
-}
+/* ❌ ELIMINADO: Estilos para enlaces en contentItem */
+/* SmartLink maneja todos los estilos de enlaces ahora */
 
 /* Espaciado específico por sección */
 .evaluationDescription .contentList {
@@ -367,14 +350,7 @@
   gap: 0.125rem;
 }
 
-/* Los indicadores de links externos los manejan los componentes CustomLink/ExternalLink */
-
-/* Estados de enfoque para accesibilidad */
-.contentItem a:focus {
-  outline: 2px solid #007acc;
-  outline-offset: 2px;
-  border-radius: 2px;
-}
+/* Estados de enfoque para accesibilidad - SmartLink los maneja */
 
 /* ==================== ESTILOS PARA LISTA DE CLASES ==================== */
 

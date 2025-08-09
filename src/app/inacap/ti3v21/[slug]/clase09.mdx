@@ -7,9 +7,7 @@ Crear una clase `Persona`, con atributos:
 - nombre
 - edad (privada)
 
-<details>
-	<summary>Solución</summary>
-
+<Solution>
 ```python
 class Persona:
     def __init__(self, rut, nombre, edad):
@@ -38,14 +36,18 @@ print(f"Edad: {persona1.edad}")
 persona1.edad = 35
 print(f"Nueva Edad: {persona1.edad}")
 ```
-</details>
+<TerminalOutput withBg>
+{`Nombre: AAA
+Rut: 123-4
+Edad: 25
+Nueva Edad: 35`}
+</TerminalOutput>
+</Solution>
 
 ## Ejercicio 02
 Crear un método `mostrarDatos()` que muestre el rut, nombre y edad de la persona
 
-<details>
-	<summary>Solución</summary>
-
+<Solution>
 ```python
 class Persona:
     def __init__(self, rut, nombre, edad):
@@ -71,16 +73,17 @@ class Persona:
 persona1 = Persona("123-4", "AAA", 35)
 print(persona1.mostrarDatos())
 ```
-</details>
+<TerminalOutput withBg>
+{`Rut: 123-4, Nombre: AAA, Edad: 35`}
+</TerminalOutput>
+</Solution>
 
 ## Ejercicio 03
 - Crear una clase `Correo` con atributos `tipo` y `correo`
 - Agregar el atributo privado `correos` a la clase `Persona`
 - Crear métodos `agregarCorreo()` y `mostrarCorreos()` en la clase `Persona`
 
-<details>
-	<summary>Solución</summary>
-
+<Solution>
 ```python
 class Correo:
     def __init__(self, tipo, correo):
@@ -125,7 +128,12 @@ persona1.agregarCorreo("personal", "personal@gmail.com")
 for i in persona1.mostrarCorreos():
     print(f"Tipo correo: {i.tipo}, Dirección: {i.correo}")
 ```
-</details>
+<TerminalOutput withBg>
+{`Rut: 123-4, Nombre: AAA, Edad: 35
+Tipo correo: trabajo, Dirección: trabajo@gmail.com
+Tipo correo: personal, Dirección: personal@gmail.com`}
+</TerminalOutput>
+</Solution>
 
 
 ## Ejercicio 04
@@ -137,9 +145,7 @@ for i in persona1.mostrarCorreos():
 	- Elimina un correo ingresado
 	- Retorna `True` si elimina el correo, y `False` en caso contrario
 
-<details>
-	<summary>Solución</summary>
-
+<Solution>
 ```python
 class Correo:
     def __init__(self, tipo, direccion):
@@ -206,5 +212,19 @@ persona1.eliminarCorreo("personal@gmail.com")
 for i in persona1.mostrarCorreos():
     print(f"Tipo correo: {i.tipo}, Dirección: {i.direccion}")
 ```
-</details>
+<TerminalOutput withBg>
+{`Rut: 123-4, Nombre: AAA, Edad: 35
+Tipo correo: trabajo, Dirección: trabajo@gmail.com
+Tipo correo: personal, Dirección: personal@gmail.com
+
+--agrega nuevo correo--
+Tipo correo: trabajo, Dirección: trabajo@gmail.com
+Tipo correo: personal, Dirección: personal@gmail.com
+Tipo correo: trabajo2, Dirección: nuevo@gmail.com
+
+--elimina un correo--
+Tipo correo: trabajo, Dirección: trabajo@gmail.com
+Tipo correo: trabajo2, Dirección: nuevo@gmail.com`}
+</TerminalOutput>
+</Solution>
 

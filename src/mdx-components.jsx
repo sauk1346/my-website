@@ -9,12 +9,13 @@ import {
   Container,
   Table, TableHead, TableBody, TableRow, TableHeader, TableCell,
   Blockquote,
-  Solution, // ✨ AGREGAR ESTA LÍNEA
+  Solution,
+  Quiz, QuizQuestion,
   // Code components
   PreBlock, Code,
   TerminalOutput,
   // Media components
-  CustomLink,
+  SmartLink,
   CustomIframe,
   // Math components
   MathBlock, InlineMathComponent
@@ -51,7 +52,7 @@ export function useMDXComponents(components) {
     TerminalOutput,
     
     // Media elements
-    a: CustomLink,
+    a: SmartLink,     // ✨ Todos los enlaces [texto](url) usan SmartLink automáticamente
     iframe: CustomIframe,
     
     // Math elements
@@ -60,6 +61,9 @@ export function useMDXComponents(components) {
     
     // COMPONENTES PERSONALIZADOS
     Solution,
+    Quiz,
+    QuizQuestion,
+    SmartLink,        // ✨ También disponible manualmente como <SmartLink>
     
     // Permitir componentes personalizados adicionales
     ...components,

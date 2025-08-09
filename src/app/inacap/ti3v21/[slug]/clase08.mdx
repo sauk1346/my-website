@@ -112,9 +112,7 @@ Crea una clase `Persona`, con atributos:
 
 Agrega métodos "set" y "get" para acceder al atributo `edad`
 
-<details>
-	<summary>Solución</summary>
-
+<Solution>
 ```python
 class Persona:
     # clase constructor
@@ -149,15 +147,13 @@ per1.edad = -10
 print(per1.edad)
 print(per2.edad)
 ```
-</details>
+</Solution>
 
 
 ## Ejercicio 02
 Crea un método para mostrar el nombre y rut de la persona
 
-<details>
-	<summary>Solución</summary>
-
+<Solution>
 ```python
 class Persona:
     def __init__(self, rut, nombre, edad):
@@ -182,7 +178,7 @@ class Persona:
 
     # método solicitado
     def mostrarDatos(self):
-        datos = self.rut + "," + self.nombre + "," + str(self._edad)
+        datos = self.rut + ", " + self.nombre + ", " + str(self._edad)
         return datos
 
 per1 = Persona("1-9", "Juan", 10)
@@ -190,7 +186,10 @@ per2 = Persona("2-7", "Maria", 46)
 
 print(per1.mostrarDatos())
 ```
-</details>
+<TerminalOutput withBg>
+{`1-9, Juan, 10`}
+</TerminalOutput>
+</Solution>
 
 
 ## Ejercicio 03
@@ -208,9 +207,7 @@ print(per1.mostrarDatos())
 		- disminuye de 10 en 10 la velocidad
 		- límite para frenar(), no puede ser 0
 
-<details>
-	<summary>Solución</summary>
-
+<Solution>
 ```python
 class Auto:
     def __init__(self, chasis, marca, modelo, cilindrada, velocidad, anio):
@@ -270,4 +267,49 @@ while auto1.acelerar():
 while auto1.frenar():
     print(f"Frenar: velocidad = {auto1.velocidad}")
 ```
-</details>
+<TerminalOutput withBg>
+{`Atributos:
+Chasis: XYZ123456
+Marca: Toyota
+Modelo: Corolla
+Cilindrada: 1600
+Velocidad: 0
+Año: 2020
+Acelerar: velocidad = 10
+Acelerar: velocidad = 20
+Acelerar: velocidad = 30
+Acelerar: velocidad = 40
+Acelerar: velocidad = 50
+Acelerar: velocidad = 60
+Acelerar: velocidad = 70
+Acelerar: velocidad = 80
+Acelerar: velocidad = 90
+Acelerar: velocidad = 100
+Acelerar: velocidad = 110
+Acelerar: velocidad = 120
+Acelerar: velocidad = 130
+Acelerar: velocidad = 140
+Acelerar: velocidad = 150
+Acelerar: velocidad = 160
+Acelerar: velocidad = 170
+Acelerar: velocidad = 180
+Frenar: velocidad = 170
+Frenar: velocidad = 160
+Frenar: velocidad = 150
+Frenar: velocidad = 140
+Frenar: velocidad = 130
+Frenar: velocidad = 120
+Frenar: velocidad = 110
+Frenar: velocidad = 100
+Frenar: velocidad = 90
+Frenar: velocidad = 80
+Frenar: velocidad = 70
+Frenar: velocidad = 60
+Frenar: velocidad = 50
+Frenar: velocidad = 40
+Frenar: velocidad = 30
+Frenar: velocidad = 20
+Frenar: velocidad = 10
+Frenar: velocidad = 0`}
+</TerminalOutput>
+</Solution>

@@ -6,9 +6,7 @@ Realice un programa para saber si un número es primo. Utilizar bucle "while"
 - **Número Primo:** Un número es primo si solo se divide por 1 y por él mismo (solo tiene 2 divisores)
 - Ejemplo: 2 es primo, solo se divide por 1 y por 2
 
-<details>
-	<summary>Solución</summary>
-<br/>
+<Solution>
 ```python
 num = 0
 contDiv = 0
@@ -26,7 +24,7 @@ if contDiv == 2:
 else:
     print("No es primo")
 ```
-</details>
+</Solution>
 
 ## Ejercicio 02
 Calcular si un número es perfecto. Utilizar bucle "for"
@@ -34,9 +32,7 @@ Calcular si un número es perfecto. Utilizar bucle "for"
 - **Número perfecto:** Un número es perfecto si la suma de sus divisores da el mismo número
 - Ejemplo: 6 es un número perfecto, sus divisores son 1, 2 y 3. La suma de sus divisores da 6
 
-<details>
-	<summary>Solución</summary>
-<br/>
+<Solution>
 ```python
 num = 0
 sumaDiv = 0
@@ -52,7 +48,7 @@ if sumaDiv == num:
 else:
 	print("No es perfecto")
 ```
-</details>
+</Solution>
 
 ## Ejercicio 03
 Modificar el Ejercicio 02:
@@ -60,9 +56,7 @@ Modificar el Ejercicio 02:
 - Debe ser una función llamada `es_perfecto()`
 - Debe retornar un valor booleano
 
-<details>
-	<summary>Solución</summary>
-<br/>
+<Solution>
 ```python
 def es_perfecto(numero):
 	sumaDiv = 0
@@ -72,14 +66,12 @@ def es_perfecto(numero):
 	
 	return sumaDiv == numero
 ```
-</details>
+</Solution>
 
 ## Ejercicio 04
 Utilice la función `es_perfecto()` del Ejercicio 03 para encontrar números perfectos desde el 1 al 10000
 
-<details>
-	<summary>Solución</summary>
-<br/>
+<Solution>
 ```python
 def es_perfecto(numero):
 	sumaDiv = 0
@@ -93,7 +85,13 @@ for i in range(1, 10000+1):
 	if(es_perfecto(i)):
 		print(i)
 ```
-</details>
+<TerminalOutput withBg>
+{`6
+28
+496
+8128`}
+</TerminalOutput>
+</Solution>
 
 ## Ejercicio 05
 Desarrolle una función que:
@@ -102,9 +100,7 @@ Desarrolle una función que:
 - Reciba un parámetro numérico, si es primo retorne verdadero, sino retorne falso
 - La función se debe llamar `es_primo()`
 
-<details>
-	<summary>Solución</summary>
-<br/>
+<Solution>
 ```python
 def es_primo(num):
 	contDiv = 0
@@ -116,4 +112,7 @@ def es_primo(num):
 #prueba
 print(es_primo(11))
 ```
-</details>
+<TerminalOutput withBg>
+{`True`}
+</TerminalOutput>
+</Solution>

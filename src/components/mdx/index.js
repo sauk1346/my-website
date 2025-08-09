@@ -8,13 +8,14 @@ export { Container } from './layout/Container';
 export { Table, TableHead, TableBody, TableRow, TableHeader, TableCell } from './layout/Tables';
 export { Blockquote } from './layout/Blockquote';
 export { default as Solution } from './layout/Solution';
+export { Quiz, QuizQuestion } from './layout/QuizComponent';
 
 // Code components
 export { PreBlock, Code } from './code/CodeComponents';
-export { TerminalOutput } from './code/TerminalOutput'; // Agregar esta línea
+export { TerminalOutput } from './code/TerminalOutput';
 
 // Media components
-export { CustomLink } from './media/Links';
+export { SmartLink } from './media/SmartLink'; // ✨ SOLO SmartLink - sin aliases
 export { CustomIframe } from './media/Iframe';
 
 // Math components

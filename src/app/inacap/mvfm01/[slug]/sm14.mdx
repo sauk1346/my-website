@@ -1,9 +1,7 @@
-import ExternalLink from '@/components/ui/ExternalLink';
-
 # Situación de Modelación 04: Crecimiento de Bacterias
 
 ## Material
-- <ExternalLink href='/inacap/mvfm01/docs/sm14.pdf'>sm14.pdf</ExternalLink>
+- [sm14.pdf](/inacap/mvfm01/docs/sm14.pdf)
 
 ## Actividad 01
 La persona que lleva a cabo el experimento registra, en cada una de las primeras cinco horas, el número de bacterias existentes en la placa Petri. Al revisar los valores, se percata de que la tasa de crecimiento es de 20% respecto de la cantidad de bacterias en la hora anterior.
@@ -19,9 +17,7 @@ La persona que lleva a cabo el experimento registra, en cada una de las primeras
 |4||
 |5||
 
-<details>
-    <summary>Solución</summary>
-
+<Solution>
 |Hora|Número de bacterias|
 |---|---|
 |0|100|
@@ -30,15 +26,12 @@ La persona que lleva a cabo el experimento registra, en cada una de las primeras
 |3|172.8|
 |4|207.36|
 |5|248.83|
-</details><br/><br/>
-
+</Solution>
 ## Actividad 02
 
 1. **¿Cuál es la expresión algebraica que modela el número de bacterias en la placa Petri en función del tiempo? ¿Existe una única expresión?**
 
-<details>
-    <summary>Solución</summary>
-
+<Solution>
 La expresión del modelo es:
 
 $$
@@ -56,7 +49,7 @@ No es la única expresión. Es posible expresar el modelo utilizando la constant
 
 $$
 \begin{aligned}
-    b = e^{\{ln}(b)}
+    b = e^{\ln(b)}
 \end{aligned}
 $$
 
@@ -79,12 +72,11 @@ Donde:
 	style={{ display: 'block', margin: '0 auto', width:'60%'}}
 />
 <br/>
-</details><br/><br/>
+</Solution>
 
 2. **En la representación gráfica de la función en GeoGebra, identifica e interpreta cada una de las constantes en la expresión.**
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 <br/>
 <img
 	src="/inacap/mvfm01/images/fig45.svg"
@@ -102,15 +94,14 @@ $$
 |---|---|
 |100|población inicial de bacterias|
 |1,2|factor de crecimiento|
-</details><br/><br/>
+</Solution>
 
 ## Actividad 03
 Considera la función planteada en la actividad anterior cuya forma es $f(x)=a \cdot b^x$
 
 1. **¿Cuál será la población de bacterias después de ocho horas?**
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 <br/>
 <img
 	src="/inacap/mvfm01/images/fig46.png"
@@ -119,12 +110,11 @@ Considera la función planteada en la actividad anterior cuya forma es $f(x)=a \
 <br/>
 
 $\therefore$ Luego de 8 horas, la población de bacterias es alrededor de 430.
-</details><br/><br/>
+</Solution>
 
 2. **¿A qué hora la población como mínimo será de 2800 bacterias?**
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 <br/>
 <img
 	src="/inacap/mvfm01/images/fig47.png"
@@ -133,24 +123,20 @@ $\therefore$ Luego de 8 horas, la población de bacterias es alrededor de 430.
 <br/>
 
 $\therefore$ La población será como mínimo de 2800 bacterias luego de 18,28 horas.
-</details><br/><br/>
+</Solution>
 
 3. **¿Existe algún instante de tiempo específico en el que se alcance exactamente dicha cantidad de bacterias?**
 
-<details>
-    <summary>Solución</summary>
-
+<Solution>
 No, debido a que el tiempo encontrado $t \approx 18,28$ es una aproximación de un número irracional. Por lo que no es un tiempo exacto.
-</details><br/><br/>
+</Solution>
 
 ## Actividad 04
 Si en el laboratorio desearan una población de 5000 bacterias en 10 horas, responde cada una de las siguientes preguntas de manera independiente:
 
 1. **¿Cuál tendría que ser la población inicial de bacterias?**
 
-<details>
-    <summary>Solución</summary>
-
+<Solution>
 - Se desea una población de 5000 bacterias en 10 horas: $f(10) = 5000$
 - El modelo que describe la tasa de crecimiento de bacterias es: $f(t) = a \cdot 1,2^t$ 
 
@@ -161,13 +147,11 @@ Si en el laboratorio desearan una población de 5000 bacterias en 10 horas, resp
 <br/>
 
 $\therefore$ La población inicial de bacterias debe ser $a \approx 807,53$
-</details><br/><br/>
+</Solution>
 
 2. **¿Cuál tendría que ser la tasa de crecimiento óptima de las bacterias?**
 
-<details>
-    <summary>Solución</summary>
-
+<Solution>
 - Se utiliza la población inicial de bacterias de Actividad 1: $100$
 - Se desea una población de 5000 bacterias en 10 horas: $f(10) = 5000$
 - El modelo que describe la tasa de crecimiento de bacterias es: $f(t) = 100 \cdot b^t$
@@ -179,7 +163,7 @@ $\therefore$ La población inicial de bacterias debe ser $a \approx 807,53$
 <br/>
 
 $\therefore$ La tasa de crecimiento óptima de las bacterias es $1,48$
-</details><br/><br/>
+</Solution>
 
 ## Actividad 05
 El crecimiento exponencial puede ocurrir durante un tiempo, si hay pocos individuos y muchos recursos. Cuando el número de individuos es lo suficientemente grande, los recursos empiezan a agotarse, haciendo que se desacelere la tasa de crecimiento y provocando, por lo tanto, que el tamaño de la población se nivele o se estabilice.
@@ -204,32 +188,29 @@ Considera los mismo valores de la población inicial y tasa de crecimiento del m
 
 1. **¿Cuál es la expresión algebraica que modela el número de bacterias en la placa Petri en función del tiempo?**
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 <br/>
 <img
 	src="/inacap/mvfm01/images/fig50.png"
 	style={{ display: 'block', margin: '0 auto', width:'40%'}}
 />
 <br/>
-</details><br/><br/>
+</Solution>
 
 2. **Representa gráficamente la función en GeoGebra.**
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 <br/>
 <img
 	src="/inacap/mvfm01/images/fig51.svg"
 	style={{ display: 'block', margin: '0 auto', width:'100%'}}
 />
 <br/>
-</details><br/><br/>
+</Solution>
 
 3. **¿Cuál será la población de bacterias transcurridas ocho horas? ¿Y transcurridas 40 horas?Compara el modelo con el de la Actividad 03.**
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 <br/>
 <img
 	src="/inacap/mvfm01/images/fig52.png"
@@ -243,12 +224,11 @@ Considera los mismo valores de la población inicial y tasa de crecimiento del m
 |40|146977,16|100000|
 
 $\therefore$ El modelo $P(t)$ es mucho más rápido, pero el modelo $f(t)$ no tiene limite de crecimiento.
-</details><br/><br/>
+</Solution>
 
 4. **¿En qué tiempo aproximadamente se podría alcanzar la capacidad de resistencia de la población?**
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 <br/>
 <img
 	src="/inacap/mvfm01/images/fig53.png"
@@ -258,4 +238,4 @@ $\therefore$ El modelo $P(t)$ es mucho más rápido, pero el modelo $f(t)$ no ti
 
 - La población alcanza un valor cercano a $10000$ luego de $17,27$ horas.
 - El modelo nunca llega a un valor exacto de $10000$. Sin embargo, tiende a ese valor para $t \rightarrow \infty$
-</details><br/><br/>
+</Solution>

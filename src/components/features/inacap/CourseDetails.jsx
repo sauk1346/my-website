@@ -2,7 +2,8 @@
 
 import React, { useState, useEffect } from 'react';
 import { Calendar, Book, CheckSquare, User, Grid3x3, Monitor, FileText, Clock, Percent } from 'lucide-react';
-import { SmartLink } from '@/components/ui/SmartLink'; // ✨ CORRECTO: Importar desde UI (ubicación arquitecturalmente correcta)
+import { SmartLink } from '@/components/ui/SmartLink'; 
+import ProfessorCard from './ProfessorCard';
 import styles from './CourseDetails.module.css';
 
 const CourseDetails = ({ 
@@ -200,26 +201,7 @@ const CourseDetails = ({
             <h2 className={styles.sectionTitle}>Información General</h2>
             <div className={styles.cardGroup}>
               {/* Profesor */}
-              <div className={styles.card}>
-                <div className={styles.cardHeader}>
-                  <h2 className={styles.cardTitle}>
-                    <User size={20} />
-                    Profesor
-                  </h2>
-                </div>
-                <div className={styles.cardBody}>
-                  <div className={styles.infoItem}>
-                    <span className={styles.infoLabel}>Nombre:</span>
-                    <span>{professorData.name}</span>
-                  </div>
-                  <div className={styles.infoItem}>
-                    <span className={styles.infoLabel}>Email:</span>
-                    <SmartLink href={`mailto:${professorData.email}`}>
-                      {professorData.email}
-                    </SmartLink>
-                  </div>
-                </div>
-              </div>
+              <ProfessorCard professorData={professorData} />
               
               {/* Vista general de unidades */}
               <div className={styles.card}>

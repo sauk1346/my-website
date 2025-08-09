@@ -1,106 +1,125 @@
-/* Contenedor base de la tarjeta del profesor */
+/* Tarjeta base - extraído de CourseDetails */
 .card {
-  background-color: var(--card-bg, white);
-  box-shadow: var(--shadow-md, 0 4px 6px rgba(0, 0, 0, 0.1));
-  border-radius: var(--radius-md, 8px);
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  transition: background-color 0.3s ease;
+  
+  /* ✨ PERSONALIZADO: Sizing para ProfessorCard */
   width: 100%;
   max-width: 400px;
-  padding: 1.5rem;
   margin-left: auto;
   margin-right: auto;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease, border-color 0.3s ease;
 }
 
-/* Título principal */
-.title {
-  font-size: var(--text-xl, 1.5rem);
-  font-weight: bold;
-  color: var(--foreground, #2d3748);
-  margin-bottom: 1rem;
-  text-align: center;
-  transition: color 0.3s ease;
-}
-
-/* Contenedor de información del profesor */
-.info {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.infoItem {
-  display: flex;
-  gap: 0.5rem;
-}
-
-/* Etiquetas de información */
-.label {
-  font-weight: 600;
-  color: var(--foreground, #2d3748);
-  transition: color 0.3s ease;
-  min-width: fit-content;
-}
-
-/* Valores de información */
-.value {
-  color: var(--foreground, #2d3748);
-  transition: color 0.3s ease;
-  margin: 0;
-}
-
-/* Variante para información en columnas en pantallas más grandes */
-.infoGrid {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 0.5rem 1rem;
-  align-items: center;
-}
-
-.infoGrid .infoItem {
-  display: contents;
-}
-
-/* Dark mode para ProfessorCard */
+/* Modo oscuro para tarjeta */
 :global(html.dark-mode) .card,
 :global(html.dark-mode-override) .card {
-  background-color: var(--card-bg, #1e1e1e);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  background-color: #1e1e1e;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.18);
 }
 
-:global(html.dark-mode) .title,
-:global(html.dark-mode) .label,
-:global(html.dark-mode) .value,
-:global(html.dark-mode-override) .title,
-:global(html.dark-mode-override) .label,
-:global(html.dark-mode-override) .value {
-  color: var(--foreground, #e5e7eb);
+/* Header de tarjeta - extraído de CourseDetails */
+.cardHeader {
+  padding: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+  background-color: #f8fafc;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
-/* Responsive para ProfessorCard */
+/* Modo oscuro para header */
+:global(html.dark-mode) .cardHeader,
+:global(html.dark-mode-override) .cardHeader {
+  background-color: #1e293b;
+  border-bottom: 1px solid #374151;
+}
+
+/* Título de tarjeta con icono - extraído de CourseDetails */
+.cardTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #1f2937;
+  transition: color 0.3s ease;
+  margin: 0; /* Reset margin */
+}
+
+/* Modo oscuro para título */
+:global(html.dark-mode) .cardTitle,
+:global(html.dark-mode-override) .cardTitle {
+  color: #f3f4f6;
+}
+
+/* Cuerpo de tarjeta - extraído de CourseDetails */
+.cardBody {
+  padding: 1rem;
+}
+
+/* Items de información - extraído de CourseDetails */
+.infoItem {
+  margin-bottom: 0.75rem;
+}
+
+.infoItem:last-child {
+  margin-bottom: 0; /* Sin margin en el último item */
+}
+
+/* Etiquetas de información - extraído de CourseDetails */
+.infoLabel {
+  display: block;
+  font-weight: 500;
+  color: #64748b;
+  margin-bottom: 0.25rem;
+  transition: color 0.3s ease;
+}
+
+/* Modo oscuro para etiquetas */
+:global(html.dark-mode) .infoLabel,
+:global(html.dark-mode-override) .infoLabel {
+  color: #94a3b8;
+}
+
+/* ===================================================================
+ RESPONSIVE DESIGN
+ =================================================================== */
+
 @media (max-width: 768px) {
   .card {
+    max-width: 100%;
+    margin: 0; /* Sin auto-centering en móvil */
+  }
+  
+  .cardHeader {
     padding: 0.75rem;
   }
   
-  .infoItem {
-    flex-direction: column;
-    gap: 0.25rem;
+  .cardBody {
+    padding: 0.75rem;
   }
   
-  .label {
+  .cardTitle {
+    font-size: 1.125rem;
+  }
+  
+  .infoItem {
+    margin-bottom: 0.5rem;
+  }
+  
+  .infoLabel {
     font-size: 0.875rem;
   }
-  
-  /* En móvil, mantener el layout en columna */
-  .infoGrid {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+}
+
+@media (max-width: 480px) {
+  .cardTitle {
+    font-size: 1rem;
   }
   
-  .infoGrid .infoItem {
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
+  .cardHeader,
+  .cardBody {
+    padding: 0.5rem;
   }
 }

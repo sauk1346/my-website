@@ -1,13 +1,10 @@
-import ExternalLink from '@/components/ui/ExternalLink';
-
 # Ejercicios
-**Material Clase:** <ExternalLink href='/inacap/ti3v22/docs/clase11.pdf'>clase11.pdf</ExternalLink>
+**Material Clase:** [clase11.pdf](/inacap/ti3v22/docs/clase11.pdf)
 
 ## Ejercicio 01
 **Procedimiento Almacenado para Actualizar el Precio de un Producto:** Crea un procedimiento almacenado llamado `sp_ActualizarPrecioProducto` que tome como parámetros el ID del producto y el nuevo precio, y actualice el precio en la tabla `Products`. Luego, verifique si el nuevo precio es mayor que el precio promedio de todos los productos. Si es así, el procedimiento debe retomar un mensaje indicando que el precio es superior al promedio.
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```sql
 CREATE OR REPLACE PROCEDURE sp_ActualizarPrecioProducto (
     p_ProductoID NUMBER,
@@ -31,13 +28,12 @@ BEGIN
     END IF;
 END;
 ```
-</details>
+</Solution>
 
 ## Ejercicio 02
 **Consulta con INNER JOIN para listar Venta y Detalles de Clientes:** Escribe una consulta que use INNER JOIN para mostrar todas las ventas con los detalles de los clientes que realizaron cada venta, incluyendo el nombre del cliente, apellido, fecha de la venta, y el total de la venta.
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```sql
 SELECT
     c.Nombre,
@@ -47,13 +43,12 @@ SELECT
 FROM Ventas v
 INNER JOIN Clientes c ON v.ClienteID = c.ClienteID;
 ```
-</details>
+</Solution>
 
 ## Ejercicio 03
 **Consulta con LEFT JOIN para Mostrar Todos los Clientes y sus Ventas (si las hay):** Escribe una consulta que use `LEFT JOIN` para mostrar todos los clientes incluyendo aquellos que no han realizado ninguna venta. La consulta debe incluir el nombre del cliente, apellido, fecha de la venta (si existe), y el total de la venta (si existe).
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```sql
 SELECT
     c.Nombre,
@@ -63,13 +58,12 @@ SELECT
 FROM Clientes c
 LEFT JOIN Ventas v ON c.ClienteID = v.ClienteID;
 ```
-</details>
+</Solution>
 
 ## Ejercicio 04
 **Consulta con RIGHT JOIN para Mostrar Todas las Ventas y Clientes (Si existen):** Escribe una consulta que use `RIGHT JOIN` para mostrar todas las ventas, incluyendo aquellas que podrían no tener un cliente asociado (en caso de que los datos se eliminen accidentalmente). La consulta debe incluir el nombre del cliente, apellido, fecha de la venta, y el total de la venta.
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```sql
 SELECT
     c.Nombre,
@@ -79,13 +73,12 @@ SELECT
 FROM Ventas v
 RIGHT JOIN Clientes c ON c.ClienteID = v.ClienteID;
 ```
-</details>
+</Solution>
 
 ## Ejercicio 05
 **Trigger para Prevenir Eliminaciones de Clientes con Ventas Asociadas:** Crea un trigger llamado `trg_PrevenirEliminacionCliente` que se active antes que un cliente sea eliminado de la tata `Clientes`. El trigger debe verificar si el cliente tiene ventas asiciadas en la tabla `Ventas`. Si el cliente tiene ventas, el trigger deber prevenir la eliminación y mostrar un mensaje.
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```sql
 CREATE OR REPLACE TRIGGER trg_PrevenirEliminacionCliente
 BEFORE DELETE ON Clientes
@@ -103,13 +96,12 @@ BEGIN
     END IF;
 END;
 ```
-</details>
+</Solution>
 
 ## Ejercicio 06
 **Subconsulta para Encontrar Productos con Precio Superior al Promedio:** Escribe una consulta que use una subconsulta para encontrar todos los productos cuyo precio es superior al precio promedio de todos los productos en la tabla `Productos`.
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```sql
 SELECT NombreProducto, Precio
 FROM Productos
@@ -118,13 +110,12 @@ WHERE Precio > (
     FROM Productos
 );
 ```
-</details>
+</Solution>
 
 ## Ejercicio 07
 **Subconsulta de Varias Filas para Encontrar Clientes con Ventas Superiores a las Ventas de un Clientes Específico:** Escribe una consulta que use una subconsulta de varias filas para encontrar todos los clientes que han realizado ventas superiores al total de ventas realizadas por un cliente específico (por ejemplo, el cliente con `ClienteID` = 2).
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```sql
 SELECT Nombre, Apellido
 FROM Clientes c
@@ -137,9 +128,8 @@ WHERE (
     FROM Ventas
     WHERE ClienteID = 2
 );
-
 ```
-</details>
+</Solution>
 
 
 

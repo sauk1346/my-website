@@ -1,5 +1,3 @@
-import { Quiz } from '@/components/features/inacap/QuizComponent';
-
 # Evaluación 03-B
 
 ## Sección 1: Selección Múltiple (30 puntos)
@@ -171,13 +169,11 @@ CALL sp_CalcularSalarioAnual(1500);
 ```
 Ejemplo de Salida Esperada:
 
-```default
-El salario anual es: 18000
-```
+<TerminalOutput withBg>
+{`El salario anual es: 18000`}
+</TerminalOutput>
 
-<details>
-	<summary>Solución</summary>
-
+<Solution>
 ```sql
 CREATE OR REPLACE PROCEDURE sp_CalcularSalarioAnual(
     p_salario_mensual IN NUMBER
@@ -191,8 +187,7 @@ BEGIN
     DBMS_OUTPUT.PUT_LINE('El salario anual es: ' || v_salario_anual);
 END;
 ```
-</details>
-
+</Solution>
 
 ### Ejercicio 2
 **Verificar Si un Número es Par o Impar** (25 puntos)
@@ -210,13 +205,11 @@ END;
 ```
 Ejemplo de Salida Esperada:
 
-```default
-Es par
-```
+<TerminalOutput withBg>
+{`Es par`}
+</TerminalOutput>
 
-<details>
-	<summary>Solución</summary>
-
+<Solution>
 ```sql
 DECLARE
     v_numero NUMBER := 8;
@@ -228,7 +221,7 @@ BEGIN
     END IF;
 END;
 ```
-</details>
+</Solution>
 
 ### Ejercicio 3
 **Actualizar el Stock de un Producto** (25 puntos)
@@ -241,13 +234,11 @@ CALL sp_ActualizarStockProducto(101, 3);
 ```
 Ejemplo de Salida Esperada:
 
-```default
-El stock del producto con ID 101 es: 7
-```
+<TerminalOutput withBg>
+{`El stock del producto con ID 101 es: 7`}
+</TerminalOutput>
 
-<details>
-	<summary>Solución</summary>
-
+<Solution>
 ```sql
 CREATE OR REPLACE PROCEDURE sp_ActualizarStockProducto(
 	p_ProductoID IN NUMBER,
@@ -273,4 +264,4 @@ BEGIN
   DBMS_OUTPUT.PUT_LINE('El stock del producto con ID ' || p_ProductoID || ' es: ' || v_stock_actual);
 END;
 ```
-</details>
+</Solution>

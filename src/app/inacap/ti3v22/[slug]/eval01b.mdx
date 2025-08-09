@@ -1,5 +1,3 @@
-import { Quiz } from '@/components/features/inacap/QuizComponent';
-
 # Evaluación 01-B
 
 ## Sección 1: Selección Múltiple (40 ptos.)
@@ -118,9 +116,7 @@ import { Quiz } from '@/components/features/inacap/QuizComponent';
 - `CustomerID`: Número entero, debe referencias a `CustomerID` en una tabla `Customers`.
 - `TotalAmount`: Decimal con dos decimales.
 
-<details>
-	<summary>Solución</summary>
-
+<Solution>
 ```sql
 CREATE DATABASE EVAL01B;
 
@@ -142,43 +138,37 @@ CREATE TABLE Orders (
 	FOREIGN KEY(CustomerID) REFERENCES Customers(CustomerID)
 );
 ```
-</details>
+</Solution>
 
 ### Ejercicio 2: Creación de Vistas
 
 **Enunciado:** Crea una vista llamada `VistaOrdenesRecientes` que muestre el ID de la orden, la fecha de la orden, y el total de la orden para aquellas órdenes realizadas en el último mes.
 
-<details>
-	<summary>Solución</summary>
-
+<Solution>
 ```sql
 CREATE VIEW VistaOrdenesRecientes AS
 	SELECT OrderID, OrderDate, TotalAmount
 	FROM Orders
 	WHERE OrderDate BETWEEN DATEADD(MONTH, -1, GETDATE()) AND GETDATE();
 ```
-</details>
+</Solution>
 
 ### Ejercicio 3: Creación de Índices
 
 **Enunciado:** Crea un índice en la columna `OrderDate` de la tabla `Orders` para optimizar las consultas que buscan órdenes por fecha.
 
-<details>
-	<summary>Solución</summary>
-
+<Solution>
 ```sql
 CREATE INDEX idx_OrderDate
 ON Orders(OrderDate);
 ```
-</details>
+</Solution>
 
 ### Ejercicio 4: Procedimientos Almacenados
 
 **Enunciado:** Crea un procedimiento almacenado `sp_EliminarOrden` que elimine una orden dado su ID.
 
-<details>
-	<summary>Solución</summary>
-
+<Solution>
 ```sql
 CREATE PROCEDURE sp_EliminarOrden
 	@OrdenID INT
@@ -188,4 +178,4 @@ BEGIN
 	WHERE OrderID = @OrdenID;
 END;
 ```
-</details>
+</Solution>

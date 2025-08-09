@@ -1,8 +1,5 @@
-import ExternalLink from '@/components/ui/ExternalLink'
-
 # Funciones y Procedimientos
-- **Github TI3V22:** <ExternalLink href='https://github.com/ebravo930/Inacap_2024_Bases-de-Datos-Estructuradas'>LINK</ExternalLink>
-
+- [Github TI3V22](https://github.com/ebravo930/Inacap_2024_Bases-de-Datos-Estructuradas)
 
 ## Funciones
 Existen 2 tipos de funciones: Escalares y con valores de tabla.
@@ -175,8 +172,7 @@ INSERT INTO Estudiantes (Nombre, Edad, FechaIngreso) VALUES
 ## Ejercicio 01
 **Creación de una función:** Crea una función `fn_CantidadEstudiantes` que devuelva el número total de estudiantes.
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```sql
 CREATE FUNCTION fn_CantidadEstudiantes()
 RETURNS INT
@@ -187,23 +183,21 @@ BEGIN
 	RETURN @numEstudiantes;
 END;
 ```
-</details>
+</Solution>
 
 ## Ejercicio 02
 **Uso de la función:** Utiliza la función creada para mostrar el total de estudiantes.
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```sql
 SELECT dbo.fn_CantidadEstudiantes() AS TotalEstudiantes;
 ```
-</details>
+</Solution>
 
 ## Ejercicio 03
 **Creación de un procedimiento almacenado para actualizar edad:** Crea un procedimiento almacenado `sp_ActualizarEdad` que permita actualizar la edad de un estudiante dado su ID.
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```sql
 CREATE PROCEDURE sp_ActualizarEdad
 	@EstudianteID INT, 
@@ -215,72 +209,66 @@ BEGIN
 	WHERE ID = @EstudianteID;
 END;
 ```
-</details>
+</Solution>
 
 ## Ejercicio 04
 **Uso del procedicimiento almacenado para actualizar edad:** Actualiza la edad del estudiante con ID 1, a 22 años usando el procedimiento `sp_ActualizarEdad`.
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```sql
 EXEC sp_ActualizarEdad 
 	@EstudianteID = 1,
 	@NuevaEdad = 22;
 ```
-</details>
+</Solution>
 
 ## Ejercicio 05
 **Creación de índices sobre múltiples columnas:** Crea un índice compuesto en las columnas `Nombre` y `FechaIngreso` para optimizar las consultas que usan estos campos.
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```sql
 CREATE NONCLUSTERED INDEX ix_NombreFechaIngreso
 ON Estudiantes(Nombre, FechaIngreso);
 ```
-</details>
+</Solution>
 
 ## Ejercicio 06
 **Consulta avanzada de estudiantes:** Escribe una consulta SQL que liste todos los estudiantes menores de 25 años, ordenados por fecha de ingreso de manera ascendente.
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```sql
 SELECT *
 FROM Estudiantes
 WHERE Edad < 25
 ORDER BY FechaIngreso ASC;
 ```
-</details>
+</Solution>
 
 ## Ejercicio 07
 **Actualización de información:** Actualiza el registro de los estudiantes para incrementar su edad en un año si han ingresado antes del año 2023.
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```sql
 UPDATE Estudiantes
 SET Edad = Edad + 1
 WHERE YEAR(FechaIngreso) < 2023;
 ```
-</details>
+</Solution>
 
 ## Ejercicio 08
 **Eliminar estudiantes:** Elimina de la tabla `Estudiantes` aquellos que tienen más de 30 años.
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```sql
 DELETE FROM Estudiantes
 WHERE Edad > 30;
 ```
-</details>
+</Solution>
 
 ## Ejercicio 09
 **Creación de vistas complejas:** Crea una vista llamada `VistaEstudiantesActivos` que muestre solamente los estudiantes que tienen menos de 30 años y ordena los resultados por edad de manera descendente.
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```sql
 CREATE VIEW VistaEstudiantesActivos AS
 	SELECT *
@@ -291,13 +279,12 @@ SELECT *
 FROM VistaEstudiantesActivos
 ORDER BY Edad DESC;
 ```
-</details>
+</Solution>
 
 ## Ejercicio 10
 **Función para calcular la edad mínima:** Desarrolla una función llamada `fn_EdadMinimaEstudiantes` que devuelva la edad mínima de los estudiantes.
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```sql
 CREATE FUNCTION fn_EdadMinimaEstudiantes()
 RETURNS INT
@@ -308,4 +295,4 @@ BEGIN
 	RETURN @minEdad;
 END;
 ```
-</details>
+</Solution>

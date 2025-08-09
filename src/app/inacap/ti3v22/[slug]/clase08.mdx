@@ -13,8 +13,7 @@ Crea una tabla llamada `Productos` que contenga las siguientes columnas:
 	- `Precio` (DECIMAL(10,2))
 	- `Stock` (INT)
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```sql
 CREATE DATABASE Tienda;
 
@@ -34,13 +33,12 @@ CREATE TABLE Productos(
 	PRIMARY KEY(ProductoID)
 );
 ```
-</details>
+</Solution>
 
 ### Inserción de Datos
 Inserta al menos 5 productos con datos ficticios en la tabla `Productos`.
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```sql
 INSERT INTO Productos(NombreProducto,Categoria,Precio,Stock)
 VALUES
@@ -50,15 +48,14 @@ VALUES
 ('cableUSB','electronica',500,5),
 ('papel higienico','limpieza',3000,8);
 ```
-</details>
+</Solution>
 
 ### Consultas SQL
 
 - Escribe una consulta para listar todos los productos cuyo stock sea menor a 10 unidades.
 - Escribe una consulta que calcule el valor total del inventario por categoría (precio * stock).
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```sql
 SELECT *
 FROM Productos
@@ -70,7 +67,7 @@ SELECT Categoria, SUM(Precio * Stock) AS ValorTotalInventario
 FROM Productos
 GROUP BY Categoria;
 ```
-</details>
+</Solution>
 
 ### Prodecimiento Almacenado
 Crea un procedimiento almacenado llamado `sp_ActualizarStock` que reciba como parámetros el `ProductoID` y la cantidad a añadir al stock. El procedimiento debe:
@@ -79,8 +76,7 @@ Crea un procedimiento almacenado llamado `sp_ActualizarStock` que reciba como pa
 - Si existe, aumentar la cantidad al `Stock` actual.
 - Si no existe, retornar un mensaje de error.
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```sql
 CREATE PROCEDURE sp_ActualizarStock
 	@ProductoID INT,
@@ -99,5 +95,5 @@ BEGIN
 		END;
 END;
 ```
-</details>
+</Solution>
 

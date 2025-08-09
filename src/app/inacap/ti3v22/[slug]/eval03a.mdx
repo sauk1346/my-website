@@ -1,5 +1,3 @@
-import { Quiz } from '@/components/features/inacap/QuizComponent';
-
 # Evaluación 03-A
 
 ## Sección 1: Selección Múltiple (30 puntos)
@@ -177,13 +175,11 @@ END;
 ```
 Ejemplo de Salida Esperada:
 
-```default
-Es par
-```
+<TerminalOutput withBg>
+{`Es par`}
+</TerminalOutput>
 
-<details>
-	<summary>Solución</summary>
-
+<Solution>
 ```sql
 DECLARE
     v_numero NUMBER := 8;
@@ -195,7 +191,7 @@ BEGIN
     END IF;
 END;
 ```
-</details>
+</Solution>
 
 ### Ejercicio 3
 **Actualizar el Precio de un Producto** (25 puntos)
@@ -209,13 +205,11 @@ CALL sp_ActualizarPrecioProducto(101, 10);
 
 Ejemplo de Salida Esperada:
 
-```default
-El nuevo precio del producto con ID 101 es: 550
-```
+<TerminalOutput withBg>
+{`El nuevo precio del producto con ID 101 es: 550`}
+</TerminalOutput>
 
-<details>
-	<summary>Solución</summary>
-
+<Solution>
 ```sql
 CREATE OR REPLACE PROCEDURE sp_ActualizarPrecioProducto(
     p_ProductoID IN NUMBER,
@@ -242,4 +236,4 @@ BEGIN
     
 END;
 ```
-</details>
+</Solution>

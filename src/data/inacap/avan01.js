@@ -44,11 +44,18 @@ const courseData = {
             evaluationNumber: 3,
             date: 'Vie 11, Oct 2024',
             weighting: '30% * 75%', 
-            description: {
-                text: 'Informe Pitch',
-                href: '/inacap/avan01/docs/informe02.pdf',
-                external: true
-            }
+            description: [
+                {
+                    text: 'Informe Pitch',
+                    href: '/inacap/avan01/docs/informe02.pdf',
+                    external: true
+                },
+                {
+                    text: 'slide.pdf',
+                    href: '/inacap/avan01/docs/slide.pdf',
+                    external: true
+                },
+            ]
         },
         { 
             evaluationNumber: 4,

@@ -5,20 +5,20 @@ Es una herramienta de simulación de redes. Permite crear, configurar y simular 
 
 ## Conexión inalámbrica
 
-1. Agregar 3 laptops
-```default
-[End devices] > Laptop-PT
-```
+1. Agregar 3 laptops 
+    <TerminalOutput>
+        {`[End devices] > Laptop-PT`}
+    </TerminalOutput>
 
 2. Agregar 1 router
-```default
-[Network devices] > [Wireless devices] > HomeRouter-PT-AC
-```
+    <TerminalOutput>
+        {`[Network devices] > [Wireless devices] > HomeRouter-PT-AC`}
+    </TerminalOutput>
 
 3. Establecer conexión entre dispositivos
-```default
-[Connections] > Automatically Choose Connection Type
-```
+    <TerminalOutput>
+        {`[Connections] > Automatically Choose Connection Type`}
+    </TerminalOutput>
 
 <img 
     src="/inacap/ti3v13/images/fig08.png"
@@ -32,13 +32,15 @@ Es una herramienta de simulación de redes. Permite crear, configurar y simular 
     style={{ display: 'block', margin: '0 auto', width:'100%' }} 
 />
 <br/>
+
 5. Configurar router
-```default
-router > GUI > Setup
-```
-- IP address
-- Start IP address
-- Maximun number of users
+
+    <TerminalOutput>
+        {`router > GUI > Setup`}
+    </TerminalOutput>
+    1. IP address
+    2. Start IP address
+    3. Maximun number of users
 
 <img 
     src="/inacap/ti3v13/images/fig10.png"
@@ -46,10 +48,11 @@ router > GUI > Setup
 />
 <br/>
 6. Verificar conexión entre dispositivos mediante instrucción `ping`
-```default
-laptop > desktop > Command Prompt
-```
 
+    <TerminalOutput>
+        {`laptop > desktop > Command Prompt`}
+    </TerminalOutput>
+    
 ```sh
 ping <device_ip_address>
 ```

@@ -18,8 +18,5 @@ export { TerminalOutput } from './code/TerminalOutput';
 export { SmartLink } from '../ui/SmartLink';
 export { CustomIframe } from './media/Iframe';
 
-// Math components
-export { MathBlock, InlineMathComponent } from './math/MathComponents';
-
 // Utils
 export { getSlug } from './utils/slugify';

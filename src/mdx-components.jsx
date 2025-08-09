@@ -17,8 +17,6 @@ import {
   // Media components
   SmartLink,
   CustomIframe,
-  // Math components
-  MathBlock, InlineMathComponent
 } from './components/mdx';
 
 export function useMDXComponents(components) {
@@ -54,10 +52,6 @@ export function useMDXComponents(components) {
     // Media elements
     a: SmartLink,     // ✨ Todos los enlaces [texto](url) usan SmartLink automáticamente
     iframe: CustomIframe,
-    
-    // Math elements
-    math: MathBlock,
-    inlineMath: InlineMathComponent,
     
     // COMPONENTES PERSONALIZADOS
     Solution,

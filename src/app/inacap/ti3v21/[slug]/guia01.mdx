@@ -1,8 +1,5 @@
-import ExternalLink from '@/components/ui/ExternalLink'
-import MathDisplay from '@/components/ui/MathDisplay'
-
 # Ejercicios Propuestos
-- **Guía:** <ExternalLink href="/inacap/ti3v21/docs/ej_propuestos.pdf">ej_propuestos.pdf</ExternalLink>
+- **Guía:** [ej_propuestos.pdf](/inacap/ti3v21/docs/ej_propuestos.pdf)
 
 ## Ejercicios Básicos
 
@@ -35,9 +32,11 @@ Supongamos que el IPC de los meses de Febrero y Marzo fueron 0.3% y 0.6% respect
 <Solution>
 El valor actualizado $(V)$ de un producto $(P)$ en función del IPC $(IPC\%)$ es:
 
-<MathDisplay formula = 
-    "V = P \cdot \left(1 + \frac{IPC\%}{100}\right)"
-/>
+$$
+\begin{aligned}
+    V = P \cdot \left(1 + \frac{IPC\%}{100}\right)
+\end{aligned}
+$$
 
 ```python
 def validar_precio():
@@ -79,9 +78,11 @@ Confeccione un algoritmo en diagrama de flujo que al leer el neto de una factura
 <Solution>
 El calculo del IVA de un producto base $(P)$, según una tasa $(t)$ es:
 
-<MathDisplay formula = 
-    "IVA = P \cdot t"
-/>
+$$
+\begin{aligned} 
+    IVA = P \cdot t
+\end{aligned}
+$$
 
 Donde t = 0.19 en Chile
 

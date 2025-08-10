@@ -3,9 +3,15 @@
 
 ## Revisión Tarea
 
-<center>
-  <img src="/inacap/ti3v11/images/fig07.png" width="30%" />
-</center>
+<SmartFigure
+	id="ej03"
+	src="/inacap/ti3v11/images/fig07.png"
+	alt="Validar rut"
+	caption="Validar rut"
+	autoNumber={true}
+	center={true}
+	size="small"
+/>
 
 ```python
 rut = '10066612-k'
@@ -64,17 +70,21 @@ edades = [1,2,3,4,"5"] # lista con elementos tipo int y string
 nombres = ["luis",2,"ana"] # lista con elementos tipo int y string
 ```
 
-|Operación|Resultado|
-|---|---|
-|`x in s`|indica si variable `x` se encuentra en `s`|
-|`s + t`|concatena las secuencias `s` y `t`|
-|`s * n`|contatena *n* copias de `s`|
-|`s[i]`|elemento `i` de `s`, empezando por `0`|
-|`s[i:j]`|Porción de la secuencia `s` desde `i` hasta `j` (no inclusivo)|
-|`s[i:j:k]`|Porción de la secuencia `s` desde `i` hasta `j` (no inclusivo) con paso `k`
-|`len(s)`|cantidad de elementos de la secuencia `s`|
-|`min(s)`|mínimo elemento de la secuencia `s`|
-|`max(s)`|máximo elemento de la secuencia `s`|
+<SmartTable
+	tableLayout="auto"
+	headers={["Operación","Resultado"]}
+	rows={[
+		["`x in s`","indica si variable `x` se encuentra en `s`"],
+		["`s + t`","concatena las secuencias `s` y `t`"],
+		["`s * n`","contatena *n* copias de `s`"],
+		["`s[i]`","elemento `i` de `s`, empezando por `0`"],
+		["`s[i:j]`","Porción de la secuencia `s` desde `i` hasta `j` (no inclusivo)"],
+		["`s[i:j:k]`","Porción de la secuencia `s` desde `i` hasta `j` (no inclusivo) con paso `k`"],
+		["`len(s)`","cantidad de elementos de la secuencia `s`"],
+		["`min(s)`","mínimo elemento de la secuencia `s`"],
+		["`max(s)`","máximo elemento de la secuencia `s`"],
+		]}
+/>
 
 # Ejercicios
 
@@ -96,13 +106,17 @@ edades.index(3)
 ```
 
 <Solution>
-|Código|Descripción|
-|---|---|
-|`len(edades) = 5`|Cuenta la cantidad de elementos de la lista "edades"|
-|`len(nombres) = 3`|Cuenta la cantidad de elementos de la lista "nombres"|
-|`nombres[1:2] = [2]`|Entrega los elementos desde la posición 1 (inclusivo) hasta la posición 2 (no inclusivo) de la secuencia "nombres"|
-|`edades:[3:5] = [4, '5']`|Entrega los elementos desde la posición 3 (inclusivo) hasta la posición 5 (no inclusivo) de la secuencia "edades"|
-|`edades.index(3) = 2`|Entrega la posición del elemento con valor "3" de la secuencia "edades"|
+<SmartTable
+	tableLayout="auto"
+	headers={['Código', 'Valor', 'Descripción']}
+	rows={[
+		["`len(edades)`"    , "`5`"       , "Cuenta la cantidad de elementos de la lista `edades`"],
+		["`len(nombres)`"   , "`3`"       , "Cuenta la cantidad de elementos de la lista `nombres`"],
+		["`nombres[1:2]`"   , "`[2]`"     , "Entrega los elementos desde la posición 1 (inclusivo) hasta la posición 2 (no inclusivo) de la secuencia `nombres`"],
+		["`edades:[3:5]`"   , "`[4, '5']`", "Entrega los elementos desde la posición `3` (inclusivo) hasta la posición `5` (no inclusivo) de la secuencia `edades`"],
+		["`edades.index(3)`", "`2`"       , "Entrega la posición del elemento con valor `3` de la secuencia `edades`"],
+	]}
+/>
 </Solution>
 
 ## Ejercicio 02
@@ -119,11 +133,14 @@ nombre = ["luis",2,"ana"]
 ```
 
 <Solution>
-|Código|Descripción|
-|---|---|
-|`3 in edades`|Condición. Evalúa si existe el elemento con valor `3` en la secuencia `edades`|
-|`9 in edades`|Condición. Evalúa si existe el elemento con valor `9` en la secuencia `edades`|
-
+<SmartTable
+	tableLayout="auto"
+	headers={['Código', 'Descripción']}
+	rows={[
+		["`3 in edades`", "Condición. Evalúa si existe el elemento con valor `3` en la secuencia `edades`"],
+		["`9 in edades`", "Condición. Evalúa si existe el elemento con valor `9` en la secuencia `edades`"],
+	]}
+/>
 </Solution>
 
 ## Ejercicio 03

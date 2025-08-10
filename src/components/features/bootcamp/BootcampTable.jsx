@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './BootcampTable.module.css';
-import CustomLink from '@/components/ui/CustomLink';
+import { SmartLink } from '@/components/mdx';
 
 const BootcampTable = ({ courses, platformName }) => { // ✅ Ahora recibe platformName
   return (
@@ -29,9 +29,9 @@ const BootcampTable = ({ courses, platformName }) => { // ✅ Ahora recibe platf
               </td>
               <td data-label="Nombre">
                 {course.titleUrl ? (
-                  <CustomLink href={course.titleUrl} className={styles.titleLink}>
+                  <SmartLink href={course.titleUrl} className={styles.titleLink}>
                     {course.title}
-                  </CustomLink>
+                  </SmartLink>
                 ) : (
                   <span>{course.title}</span>
                 )}

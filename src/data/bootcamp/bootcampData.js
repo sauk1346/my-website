@@ -1,5 +1,3 @@
-import CustomLink from "@/components/ui/CustomLink";
-
 export const bootcampsData = {
   udd: {
     name: "UDD",

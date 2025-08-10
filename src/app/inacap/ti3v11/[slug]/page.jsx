@@ -2,6 +2,7 @@ import React from 'react';
 import { notFound } from 'next/navigation';
 import dynamic from 'next/dynamic';
 import { CustomMDXProvider } from '@/components/providers/CustomMDXProvider'; // Importa el componente del cliente
+import { FigureProvider } from '@/components/mdx';
 
 export default async function Page({ params }) {
   // Usar async/await para obtener los parámetros
@@ -21,7 +22,9 @@ export default async function Page({ params }) {
   // Envolver el componente MDX con el proveedor personalizado
   return (
     <CustomMDXProvider>
-      <MDXComponent />
+      <FigureProvider>
+        <MDXComponent />
+      </FigureProvider>
     </CustomMDXProvider>
   );
 }

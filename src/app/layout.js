@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import Navbar from '@/components/layout/Navbar';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 import Footer from '@/components/layout/Footer';
+import Script from "next/script";
 import "./globals.css";
 import "@/shared/override.css";
 import 'katex/dist/katex.min.css';
@@ -51,6 +52,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        <Script
+          src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"
+          strategy="lazyOnload"
+          onLoad={() => {
+            console.log('✅ KaTeX JavaScript cargado');
+          }}
+        />
+        
         <Navbar />
         <Breadcrumb />
         {children}

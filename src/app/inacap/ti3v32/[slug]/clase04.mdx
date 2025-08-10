@@ -1,7 +1,5 @@
-import ExternalLink from '@/components/ui/ExternalLink'
-
 # Ejercicios CRUD (2)
-**Material Clase:** <ExternalLink href='/inacap/ti3v32/docs/clase03.pdf'>clase03.pdf</ExternalLink>
+**Material Clase:** [clase03.pdf](/inacap/ti3v32/docs/clase03.pdf)
 
 ## Diferencia SQL y NoSql
 
@@ -28,12 +26,13 @@ En las BD NoSql existe una **pseudo-relación**, es decir, si bien no existe una
 ]
 ```
 <br/>
+
 # Ejercicios
 Cargar los siguientes archivos a la Base de Datos:
 
-- <ExternalLink href='/inacap/ti3v32/data/productos.csv'>productos.csv</ExternalLink>
-- <ExternalLink href='/inacap/ti3v32/data/docentes.csv'>docentes.csv</ExternalLink>
-- <ExternalLink href='/inacap/ti3v32/data/alumnos.csv'>alumnos.csv</ExternalLink>
+- [productos.csv](/inacap/ti3v32/data/productos.csv)
+- [docentes.csv](/inacap/ti3v32/data/docentes.csv)
+- [alumnos.csv](/inacap/ti3v32/data/alumnos.csv)
 
 **Pasos:**
 
@@ -45,10 +44,7 @@ Cargar los siguientes archivos a la Base de Datos:
 
 **Insertar un nuevo estudiante**
 
-<details>
-    <summary>Solución</summary>
-
-<br/>
+<Solution>
 - Seleccionar colección `alumnos`
 - `Add Data` > `Insert Document`
 
@@ -63,13 +59,12 @@ Cargar los siguientes archivos a la Base de Datos:
   "notas": [3, 2, 5]
 }
 ```
-</details>
+</Solution>
 
 ## Ejercicio 02
 **Insertar múltiple docentes**
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 
 <br/>
 - Seleccionar colección `docentes`
@@ -97,13 +92,12 @@ Cargar los siguientes archivos a la Base de Datos:
     }
 ]
 ```
-</details>
+</Solution>
 
 ## Ejercicio 03
 **Filtrar estudiantes por carrera**. Encuentra a los alumnos que estudien Ingeniería informática
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 
 <br/>
 - Seleccionar colección `alumnos`
@@ -115,13 +109,12 @@ Cargar los siguientes archivos a la Base de Datos:
 - Presionar botón `find`
 
 
-</details>
+</Solution>
 
 ## Ejercicio 04
 Buscar docentes que enseñan Bases de datos
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 
 <br/>
 - Seleccionar colección `docentes`
@@ -132,13 +125,12 @@ Buscar docentes que enseñan Bases de datos
 ```
 - Presionar botón `find`
 
-</details>
+</Solution>
 
 ## Ejercicio 05
 **Buscar estudiantes con notas mayores a 6.0**. Encuentra alumnos que tengan al menos una asignatura con una nota superior a 6.0
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 
 <br/>
 - Seleccionar colección `alumnos`
@@ -150,14 +142,13 @@ Buscar docentes que enseñan Bases de datos
 - Presionar botón `find`
 
 
-</details>
+</Solution>
 
 
 ## Ejercicio 06
 **Filtrar docentes mayores de 40 años**. Encuentra docentes cuya edad sea mayor a 40
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 
 <br/>
 - Seleccionar colección `docentes`
@@ -168,14 +159,13 @@ Buscar docentes que enseñan Bases de datos
 ```
 - Presionar botón `find`
 
-</details>
+</Solution>
 
 
 ## Ejercicio 07
 **Actualizar el correo de un estudiante**. El alumnos Juan Pérez ha cambiado su correo. Ahora es juan.perez2025ejemplo.com
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 
 <br/>
 - Seleccionar colección `alumnos`
@@ -192,14 +182,13 @@ Buscar docentes que enseñan Bases de datos
 ```
 - Presionar `refresh`
 
-</details>
+</Solution>
 
 
 ## Ejercicio 08
 **Aumentar la edad de un docente.** El docente Roberto Morales ha cumplido años. Debemos aumentar su edad en 1
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 
 <br/>
 - Seleccionar colección `docentes`
@@ -216,13 +205,12 @@ Buscar docentes que enseñan Bases de datos
 ```
 - Presionar `refresh`
 
-</details>
+</Solution>
 
 ## Ejercicio 09
 **Agregar una nueva asignatura a un docente**. El docente Lucía Torres ahora impartirá la asignatura Cloud Computing
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 
 <br/>
 - Seleccionar colección `docentes`
@@ -239,13 +227,12 @@ Buscar docentes que enseñan Bases de datos
 ```
 - Presionar `refresh`
 
-</details>
+</Solution>
 
 ## Ejercicio 10
 **Eliminar una asignatura específica de un docente**. El docente Andrés Sánchez ya no enseña Ingeniería de Software
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 
 <br/>
 - Seleccionar colección `docentes`
@@ -262,13 +249,12 @@ Buscar docentes que enseñan Bases de datos
 ```
 - Presionar `refresh`
 
-</details>
+</Solution>
 
 ## Ejercicio 11
 Eliminar a un alumno que se retiró
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 
 <br/>
 - Seleccionar colección `alumnos`
@@ -280,4 +266,4 @@ Eliminar a un alumno que se retiró
 - Presionar botón `find`
 - Presionar botón `delete`
 
-</details>
+</Solution>

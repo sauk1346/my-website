@@ -4,9 +4,12 @@
 
 Imagina que estás diseñando un Sistema de Gestión de Biblioteca y necesitas modelar la estructura y las interacciones entre las entidades principales. Para abordar esta problemática, utilizarás un diagrama de clases (DDC) UML, siguiendo los pasos que muestra la figura
 
-<img 
-    src="/inacap/ti3v21/images/fig24.png"
-    style={{ display: 'block', margin: '0 auto', width:'70%' }} 
+<SmartFigure
+	id="pasos-uml"
+	src="/inacap/ti3v21/images/fig24.png"
+	alt="Pasos para utilizar un Diagrama de Clases UML"
+	caption="Pasos para utilizar un Diagrama de Clases UML"
+	size="large"
 />
 
 ## Contexto
@@ -27,61 +30,83 @@ La biblioteca cuenta con diferentes tipos de usuarios: estudiantes, profesores y
 8. **DVD:** Clase derivada que hereda de la clase `MaterialBibliografico`
 9. **Prestamo:** Clase para registrar la información sobre los préstamos
 
-<img 
-    src="/inacap/ti3v21/images/fig25.png"
-    style={{ display: 'block', margin: '0 auto', width:'70%' }} 
+
+<SmartFigure
+	id="identificar-clases"
+	src="/inacap/ti3v21/images/fig25.png"
+	alt="Identificar Clases"
+	caption="Identificar Clases"
+	size="large"
 />
 
 ### Identificar Relaciones
 
 1. **Usuarios-Prestamo:** qué usuarios han realizado préstamos
 
-<img 
-    src="/inacap/ti3v21/images/fig26.png"
-    style={{ display: 'block', margin: '0 auto', width:'70%' }} 
+<SmartFigure
+	id="identificar-relaciones-1"
+	src="/inacap/ti3v21/images/fig26.png"
+	alt="Identificar Relaciones (1)"
+	caption="Identificar Relaciones (1)"
+	size="large"
 />
-<br/>
+
 2. **MaterialBibliografico-Prestamo:** qué materiales han sido prestados
 
-<img 
-    src="/inacap/ti3v21/images/fig27.png"
-    style={{ display: 'block', margin: '0 auto', width:'70%' }} 
+<SmartFigure
+	id="identificar-relaciones-2"
+	src="/inacap/ti3v21/images/fig27.png"
+	alt="Identificar Relaciones (2)"
+	caption="Identificar Relaciones (2)"
+	size="large"
 />
 
 ### Herencia
 
 1. **Usuario:** sus clases derivadas son `Estudiante`, `Profesor`, `PersonalAdministrativo`
 
-<img 
-    src="/inacap/ti3v21/images/fig28.png"
-    style={{ display: 'block', margin: '0 auto', width:'70%' }} 
+<SmartFigure
+	id="identificar-herencias-1"
+	src="/inacap/ti3v21/images/fig28.png"
+	alt="Identificar Herencias (1)"
+	caption="Identificar Herencias (1)"
+	size="large"
 />
-<br/>
+
 2. **MaterialBibliografico:** sus clases derivadas son `Libro`, `Revista`, `DVD`
 
-<img 
-    src="/inacap/ti3v21/images/fig29.png"
-    style={{ display: 'block', margin: '0 auto', width:'70%' }} 
+<SmartFigure
+	id="identificar-herencias-2"
+	src="/inacap/ti3v21/images/fig29.png"
+	alt="Identificar Herencias (2)"
+	caption="Identificar Herencias (2)"
+	size="large"
 />
 
 ### Multiplicidad
 Relación de cantidad entre las distintas asociaciones de clases
 
-<img 
-    src="/inacap/ti3v21/images/fig30.png"
-    style={{ display: 'block', margin: '0 auto', width:'70%' }} 
+<SmartFigure
+	id="identificar-multiplicidad"
+	src="/inacap/ti3v21/images/fig30.png"
+	alt="Identificar Multiplicidad"
+	caption="Identificar Multiplicidad"
+	size="large"
 />
-<br/>
+
 - **Un** *usuario* puede realizar **ningún o muchos** *préstamos*
 - Se pueden realizar **ningún o muchos** *préstamos*. *Éstos*, pueden contener **1 o muchos** *materiales bibliográficos* 
 
 ### Solución Propuesta
 
-<img 
-    src="/inacap/ti3v21/images/fig31.png"
-    style={{ display: 'block', margin: '0 auto', width:'70%' }} 
+<SmartFigure
+	id="solucion-diagrama-clases-uml"
+	src="/inacap/ti3v21/images/fig31.png"
+	alt="Solución Diagrama de Clases UML"
+	caption="Solución Diagrama de Clases UML"
+  lightbox={true}
+	size="large"
 />
-<br/>
 
 # Actividad de Práctica 04
 

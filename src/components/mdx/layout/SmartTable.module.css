@@ -97,12 +97,34 @@
     background-color: #f1f5f9;
   }
   
-  /* Fórmulas KaTeX */
-  .katexFormula {
-    display: inline-block;
-    font-size: 1rem;
-    color: #1f2937;
-    margin: 0.125rem 0;
+  /* ================================
+     FÓRMULAS KATEX - COMPATIBLES CON MDX
+     ================================ */
+  
+  /* Permitir que KaTeX use sus estilos nativos */
+  .table td .katex-wrapper,
+  .table th .katex-wrapper {
+    font-size: 1.2em !important;
+    line-height: 1.2 !important;
+    vertical-align: baseline !important;
+    display: inline-block !important;
+  }
+  
+  /* NO interferir con las clases nativas de KaTeX */
+  .table td .katex,
+  .table th .katex {
+    /* Permitir que KaTeX controle su propio estilo */
+    font-family: KaTeX_Main, "Times New Roman", serif !important;
+  }
+  
+  /* Asegurar que los elementos matemáticos no hereden estilos de tabla */
+  .table td .katex .mord,
+  .table th .katex .mord,
+  .table td .katex .mrel,
+  .table th .katex .mrel,
+  .table td .katex .mop,
+  .table th .katex .mop {
+    font-family: inherit !important;
   }
   
   .code {
@@ -250,9 +272,13 @@
     background-color: #334155;
   }
   
-  :global(html.dark-mode) .katexFormula,
-  :global(html.dark-mode-override) .katexFormula {
-    color: #e5e7eb;
+  /* Modo oscuro - permitir que KaTeX maneje sus propios colores */
+  :global(html.dark-mode) .table td .katex-wrapper,
+  :global(html.dark-mode) .table th .katex-wrapper,
+  :global(html.dark-mode-override) .table td .katex-wrapper,
+  :global(html.dark-mode-override) .table th .katex-wrapper {
+    font-size: 1.2em !important;
+    /* Permitir que KaTeX use sus colores nativos para modo oscuro */
   }
   
   :global(html.dark-mode) .titleLink,

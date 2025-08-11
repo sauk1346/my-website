@@ -19,29 +19,41 @@ const SmartTable = ({
     const text = content.trim();
     
     // ========================================
-    // KATEX: Detectar fórmulas matemáticas $formula$
+    // KATEX: Detectar fórmulas matemáticas $formula$ (solo si es todo el contenido)
     // ========================================
     const katexMatch = text.match(/^\$([^$]+)\$/);
     if (katexMatch) {
       const formula = katexMatch[1];
       return (
         <span 
-          className={styles.katexFormula}
+          className="katex-wrapper"
+          style={{
+            fontSize: '1.2em',
+            lineHeight: '1.2',
+            verticalAlign: 'baseline',
+            display: 'inline-block'
+          }}
           dangerouslySetInnerHTML={{
             __html: typeof window !== 'undefined' && window.katex ? 
-              window.katex.renderToString(formula, { throwOnError: false }) : 
-              `<em>${formula}$</em>`
+              window.katex.renderToString(formula, { 
+                throwOnError: false,
+                displayMode: false,
+                output: 'htmlAndMathml',  // Mismo output que rehype-katex
+                trust: true,
+                strict: false
+              }) : 
+              `<em style="font-size: 1.2em;">${formula}</em>`
           }}
         />
       );
     }
     
     // ========================================
-    // MARKDOWN CODE: Detectar código inline `code`
+    // MARKDOWN CODE: Detectar código inline `code` (solo si es todo el contenido)
     // ========================================
-    const codeMatch = text.match(/^`([^`]+)`$/);
-    if (codeMatch) {
-      const code = codeMatch[1];
+    const fullCodeMatch = text.match(/^`([^`]+)`$/);
+    if (fullCodeMatch) {
+      const code = fullCodeMatch[1];
       return (
         <code className={styles.inlineCode}>
           {code}
@@ -143,7 +155,88 @@ const SmartTable = ({
       }
     }
     
-    // Texto normal
+    // ========================================
+    // CONTENIDO MIXTO: Detectar código inline `code` y fórmulas KaTeX $formula$ dentro de texto largo
+    // ========================================
+    if (text.includes('`') || text.includes('$')) {
+      const parts = [];
+      let lastIndex = 0;
+      
+      // Regex combinado para detectar tanto código como fórmulas KaTeX
+      const mixedRegex = /(`([^`]+)`)|(\$([^$]+)\$)/g;
+      let match;
+      
+      while ((match = mixedRegex.exec(text)) !== null) {
+        // Agregar texto antes del elemento encontrado
+        if (match.index > lastIndex) {
+          const beforeText = text.slice(lastIndex, match.index);
+          if (beforeText) {
+            parts.push(
+              <span key={`text-${lastIndex}`}>
+                {beforeText}
+              </span>
+            );
+          }
+        }
+        
+        // Determinar si es código o fórmula KaTeX
+        if (match[1]) {
+          // Es código inline: `code`
+          parts.push(
+            <code key={`code-${match.index}`} className={styles.inlineCode}>
+              {match[2]}
+            </code>
+          );
+        } else if (match[3]) {
+          // Es fórmula KaTeX: $formula$
+          const formula = match[4];
+          parts.push(
+            <span 
+              key={`katex-${match.index}`}
+              className="katex-wrapper"
+              style={{
+                fontSize: '1.2em',
+                lineHeight: '1.2',
+                verticalAlign: 'baseline',
+                display: 'inline-block'
+              }}
+              dangerouslySetInnerHTML={{
+                __html: typeof window !== 'undefined' && window.katex ? 
+                  window.katex.renderToString(formula, { 
+                    throwOnError: false,
+                    displayMode: false,
+                    output: 'htmlAndMathml',  // Mismo output que rehype-katex
+                    trust: true,
+                    strict: false
+                  }) : 
+                  `<em style="font-size: 1.2em;">${formula}</em>`
+              }}
+            />
+          );
+        }
+        
+        lastIndex = match.index + match[0].length;
+      }
+      
+      // Agregar texto después del último elemento
+      if (lastIndex < text.length) {
+        const afterText = text.slice(lastIndex);
+        if (afterText) {
+          parts.push(
+            <span key={`text-${lastIndex}`}>
+              {afterText}
+            </span>
+          );
+        }
+      }
+      
+      // Si encontramos partes mixtas, devolver el resultado combinado
+      if (parts.length > 0) {
+        return <span>{parts}</span>;
+      }
+    }
+    
+    // Texto normal sin código inline ni fórmulas
     return content;
   };
 

@@ -13,7 +13,13 @@ datos = {"nombre": "Armando", "edad": 24, "ciudad": "La Serena"}
 cadena_json = json.dumps(datos, indent=4)
 print(cadena_json)
 ```
-
+<TerminalOutput withBg>
+{`{
+    "nombre": "Armando",
+    "edad": 24,
+    "ciudad": "La Serena"
+}`}
+</TerminalOutput>
 
 ## json.loads()
 Toma una cadena de texto JSON y lo convierte en un objeto Python
@@ -25,6 +31,10 @@ cadena_json = '{"nombre": "Armando", "edad": 24, "ciudad": "La Serena"}'
 datos = json.loads(cadena_json)
 print(datos)
 ```
+<TerminalOutput withBg>
+{`{'nombre': 'Armando', 'edad': 24, 'ciudad': 'La Serena'}`}
+</TerminalOutput>
+
 
 ## json.dump()
 Similar a `json.dumps()`. Pero además permite guardar la conversión en un archivo

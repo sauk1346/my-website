@@ -2,12 +2,15 @@
 
 ## Principios de POO
 
-|Principios|Descripción|
-|---|---|
-|Encapsulamiento|Protege los datos de la clase. Ayuda a evitar la modificación no controlada.|
-|Polimorfismo|Permite que diferentes clases utilicen métodos con el mismo nombre, adaptándolos a su comportamiento específico.|
-|Herencia|Permite que clases hijas, hereden atributos y métodos de la clase padre.|
-
+<SmartTable
+ layoutTable="auto"
+ headers={["Principios","Descripción"]}
+ rows={[
+ ["Encapsulamiento","Protege los datos de la clase. Ayuda a evitar la modificación no controlada."],
+ ["Polimorfismo","Permite que diferentes clases utilicen métodos con el mismo nombre, adaptándolos a su comportamiento específico."],
+ ["Herencia","Permite que clases hijas, hereden atributos y métodos de la clase padre."],
+ ]}
+/>
 
 ## Componentes Fundamentales
 
@@ -34,10 +37,14 @@ Permiten modelar entidades del mundo real como objetos en el código
 
 ## Diagramas de Clases
 
-<img 
-    src="/inacap/ti3v21/images/fig01.svg"
-    style={{ display: 'block', margin: '0 auto', width:'30%' }} 
+<SmartFigure
+	id="ejemplo-diagrama-clases"
+	src="/inacap/ti3v21/images/fig01.svg"
+	alt="Ejemplo Diagrama de Clases"
+	caption="Ejemplo Diagrama de Clases"
+	size="large"
 />
+
 <br/>
 - Se representa por un rectángulo
 - Esta compuesto por: Nombre de la clase, conjunto de atributos, conjunto de métodos

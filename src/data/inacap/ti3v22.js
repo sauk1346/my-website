@@ -25,10 +25,16 @@ const courseData = {
             evaluationNumber: 1,
             date: 'Lun 26, Ago 2024',
             weighting: '20%',
-            description: {
-                text: 'Evaluación 01',
-                href: 'ti3v22/eval01a'
-            },
+            description: [
+                {
+                    text: 'Evaluación 01-A',
+                    href: 'ti3v22/eval01a'    
+                },
+                {
+                    text: 'Evaluación 01-B',
+                    href: 'ti3v22/eval01b'    
+                },
+            ],
             quickGuide: [
                 {
                     text: 'Guía 01',
@@ -40,19 +46,31 @@ const courseData = {
             evaluationNumber: 2, 
             date: 'Lun 23, Sep 2024', 
             weighting: '30%', 
-            description: {
-                text: 'Evaluación 02',
-                href: 'ti3v22/eval02a'
-            }
+            description: [
+                {
+                    text: 'Evaluación 02-A',
+                    href: 'ti3v22/eval02a'    
+                },
+                {
+                    text: 'Evaluación 02-B',
+                    href: 'ti3v22/eval02b'    
+                },
+            ],
         },
         { 
             evaluationNumber: 3, 
             date: 'Mar 08, Oct 2024', 
-            weighting: '40%', 
-            description: {
-                text: 'Evaluación 03',
-                href: 'ti3v22/eval03a'
-            },
+            weighting: '40%',
+            description: [
+                {
+                    text: 'Evaluación 03-A',
+                    href: 'ti3v22/eval03a'    
+                },
+                {
+                    text: 'Evaluación 03-B',
+                    href: 'ti3v22/eval03b'    
+                },
+            ],
             quickGuide: [
                 {
                     text: 'Guía 01',

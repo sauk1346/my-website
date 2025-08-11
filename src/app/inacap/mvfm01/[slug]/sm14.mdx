@@ -8,24 +8,34 @@ La persona que lleva a cabo el experimento registra, en cada una de las primeras
 
 **Completa la siguiente tabla, a partir de la información entregada:**
 
-|Hora|Número de bacterias|
-|---|---|
-|0|100|
-|1||
-|2||
-|3||
-|4||
-|5||
+<SmartTable
+  tableLayout="auto"
+  headers={["Hora","Número de bacterias"]}
+  rows={[
+    ["0","100"],
+    ["1",""],
+    ["2",""],
+    ["3",""],
+    ["4",""],
+    ["5",""]
+  ]}
+/>
 
 <Solution>
-|Hora|Número de bacterias|
-|---|---|
-|0|100|
-|1|120|
-|2|133|
-|3|172.8|
-|4|207.36|
-|5|248.83|
+
+<SmartTable
+  tableLayout="auto"
+  headers={["Hora","Número de bacterias"]}
+  rows={[
+    ["0","100"],
+    ["1","120"],
+    ["2","133"],
+    ["3","172.8"],
+    ["4","207.36"],
+    ["5","248.83"]
+  ]}
+/>
+
 </Solution>
 ## Actividad 02
 
@@ -67,22 +77,25 @@ Donde:
 - $t$: es el tiempo (horas)
 - $g(t)$: es el número de bacterias
 
-<img
+<SmartFigure
 	src="/inacap/mvfm01/images/fig44.png"
-	style={{ display: 'block', margin: '0 auto', width:'60%'}}
+	alt="Comprobación modelo exponencial g(t)"
+	caption="Comprobación modelo exponencial g(t)"
+	size="large"
 />
-<br/>
 </Solution>
 
 2. **En la representación gráfica de la función en GeoGebra, identifica e interpreta cada una de las constantes en la expresión.**
 
 <Solution>
-<br/>
-<img
+
+<SmartFigure
 	src="/inacap/mvfm01/images/fig45.svg"
-	style={{ display: 'block', margin: '0 auto', width:'100%'}}
+	alt="Gráfica de modelo exponencial g(t) (ahora f(t))"
+	caption="Gráfica de modelo exponencial g(t) (ahora f(t))"
+	lightbox={true}
+	size="large"
 />
-<br/>
 
 $$
 \begin{aligned}
@@ -90,10 +103,14 @@ $$
 \end{aligned}
 $$ 
 
-|Constante|Descripción|
-|---|---|
-|100|población inicial de bacterias|
-|1,2|factor de crecimiento|
+<SmartTable
+  tableLayout="auto"
+  headers={["Constante","Descripción"]}
+  rows={[
+    ["100","población inicial de bacterias"],
+    ["1,2","factor de crecimiento"]
+  ]}
+/>
 </Solution>
 
 ## Actividad 03
@@ -102,33 +119,35 @@ Considera la función planteada en la actividad anterior cuya forma es $f(x)=a \
 1. **¿Cuál será la población de bacterias después de ocho horas?**
 
 <Solution>
-<br/>
-<img
-	src="/inacap/mvfm01/images/fig46.png"
-	style={{ display: 'block', margin: '0 auto', width:'40%'}}
-/>
-<br/>
 
-$\therefore$ Luego de 8 horas, la población de bacterias es alrededor de 430.
+<SmartFigure
+	src="/inacap/mvfm01/images/fig46.png"
+	alt="Población bacterias en 8 horas"
+	caption="Población bacterias en 8 horas"
+	size="large"
+/>
+
+$\therefore$ Luego de `8` horas, la población de bacterias es alrededor de `430`.
 </Solution>
 
 2. **¿A qué hora la población como mínimo será de 2800 bacterias?**
 
 <Solution>
-<br/>
-<img
-	src="/inacap/mvfm01/images/fig47.png"
-	style={{ display: 'block', margin: '0 auto', width:'40%'}}
-/>
-<br/>
 
-$\therefore$ La población será como mínimo de 2800 bacterias luego de 18,28 horas.
+<SmartFigure
+	src="/inacap/mvfm01/images/fig47.png"
+	alt="Tiempo mínimo para una población de 2800 bacterias"
+	caption="Tiempo mínimo para una población de 2800 bacterias"
+	size="large"
+/>
+
+$\therefore$ La población será como mínimo de `2800` bacterias luego de `18.28` horas.
 </Solution>
 
 3. **¿Existe algún instante de tiempo específico en el que se alcance exactamente dicha cantidad de bacterias?**
 
 <Solution>
-No, debido a que el tiempo encontrado $t \approx 18,28$ es una aproximación de un número irracional. Por lo que no es un tiempo exacto.
+No, debido a que el tiempo encontrado $t \approx$ `18.28` es una aproximación de un número irracional. Por lo que no es un tiempo exacto.
 </Solution>
 
 ## Actividad 04
@@ -140,13 +159,14 @@ Si en el laboratorio desearan una población de 5000 bacterias en 10 horas, resp
 - Se desea una población de 5000 bacterias en 10 horas: $f(10) = 5000$
 - El modelo que describe la tasa de crecimiento de bacterias es: $f(t) = a \cdot 1,2^t$ 
 
-<img
+<SmartFigure
 	src="/inacap/mvfm01/images/fig48.png"
-	style={{ display: 'block', margin: '0 auto', width:'40%'}}
+	alt="Cálculo de población inicial"
+	caption="Cálculo de población inicial"
+	size="large"
 />
-<br/>
 
-$\therefore$ La población inicial de bacterias debe ser $a \approx 807,53$
+$\therefore$ La población inicial de bacterias debe ser $a \approx$ `807.53`
 </Solution>
 
 2. **¿Cuál tendría que ser la tasa de crecimiento óptima de las bacterias?**
@@ -156,13 +176,14 @@ $\therefore$ La población inicial de bacterias debe ser $a \approx 807,53$
 - Se desea una población de 5000 bacterias en 10 horas: $f(10) = 5000$
 - El modelo que describe la tasa de crecimiento de bacterias es: $f(t) = 100 \cdot b^t$
 
-<img
+<SmartFigure
 	src="/inacap/mvfm01/images/fig49.png"
-	style={{ display: 'block', margin: '0 auto', width:'60%'}}
+	alt="Cálculo de tasa de crecimiento"
+	caption="Cálculo de tasa de crecimiento"
+	size="large"
 />
-<br/>
 
-$\therefore$ La tasa de crecimiento óptima de las bacterias es $1,48$
+$\therefore$ La tasa de crecimiento óptima de las bacterias es $\approx$ `1.48`.
 </Solution>
 
 ## Actividad 05
@@ -189,53 +210,62 @@ Considera los mismo valores de la población inicial y tasa de crecimiento del m
 1. **¿Cuál es la expresión algebraica que modela el número de bacterias en la placa Petri en función del tiempo?**
 
 <Solution>
-<br/>
-<img
+
+<SmartFigure
 	src="/inacap/mvfm01/images/fig50.png"
-	style={{ display: 'block', margin: '0 auto', width:'40%'}}
+	alt="Modelo exponencial P(t) con población inicial y tasa de crecimiento"
+	caption="Modelo exponencial P(t) con población inicial y tasa de crecimiento"
+	size="large"
 />
-<br/>
 </Solution>
 
 2. **Representa gráficamente la función en GeoGebra.**
 
 <Solution>
-<br/>
-<img
+
+<SmartFigure
 	src="/inacap/mvfm01/images/fig51.svg"
-	style={{ display: 'block', margin: '0 auto', width:'100%'}}
+	alt="Gráfica de modelo exponencial P(t)"
+	caption="Gráfica de modelo exponencial P(t)"
+	lightbox={true}
+	size="large"
 />
-<br/>
 </Solution>
 
 3. **¿Cuál será la población de bacterias transcurridas ocho horas? ¿Y transcurridas 40 horas?Compara el modelo con el de la Actividad 03.**
 
 <Solution>
-<br/>
-<img
+
+<SmartFigure
 	src="/inacap/mvfm01/images/fig52.png"
-	style={{ display: 'block', margin: '0 auto', width:'40%'}}
+	alt="Comparación modelos P(t) y f(t)"
+	caption="Comparación modelos P(t) y f(t)"
+	size="large"
 />
-<br/>
 
-|$t$|$f(t)$|$P(t)$|
-|---|---|---|
-|8|429,98|93650,81|
-|40|146977,16|100000|
+<SmartTable
+  tableLayout="auto"
+  headers={["$t$","$f(t)$","$P(t)$"]}
+  rows={[
+    ["`8`","`429.98`","`93650.81`"],
+    ["`40`","`146977.16`","`100000`"]
+  ]}
+/>
 
-$\therefore$ El modelo $P(t)$ es mucho más rápido, pero el modelo $f(t)$ no tiene limite de crecimiento.
+$\therefore$ El modelo $P(t)$ es mucho más rápido, pero el modelo $f(t)$ no tiene límite de crecimiento.
 </Solution>
 
 4. **¿En qué tiempo aproximadamente se podría alcanzar la capacidad de resistencia de la población?**
 
 <Solution>
-<br/>
-<img
-	src="/inacap/mvfm01/images/fig53.png"
-	style={{ display: 'block', margin: '0 auto', width:'40%'}}
-/>
-<br/>
 
-- La población alcanza un valor cercano a $10000$ luego de $17,27$ horas.
-- El modelo nunca llega a un valor exacto de $10000$. Sin embargo, tiende a ese valor para $t \rightarrow \infty$
+<SmartFigure
+	src="/inacap/mvfm01/images/fig53.png"
+	alt="Tiempo en que la población llega al límite"
+	caption="Tiempo en que la población llega al límite"
+	size="large"
+/>
+
+- La población alcanza un valor cercano a `10000` luego de `17.27` horas.
+- El modelo nunca llega a un valor exacto de `10000`. Sin embargo, tiende a ese valor para $t \rightarrow \infty$
 </Solution>

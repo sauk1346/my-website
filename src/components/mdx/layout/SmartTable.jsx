@@ -1,4 +1,6 @@
 import React from 'react';
+import katex from 'katex';
+import 'katex/dist/katex.min.css';
 import styles from './SmartTable.module.css';
 
 const SmartTable = ({ 
@@ -24,28 +26,35 @@ const SmartTable = ({
     const katexMatch = text.match(/^\$([^$]+)\$/);
     if (katexMatch) {
       const formula = katexMatch[1];
-      return (
-        <span 
-          className="katex-wrapper"
-          style={{
-            fontSize: '1.2em',
-            lineHeight: '1.2',
-            verticalAlign: 'baseline',
-            display: 'inline-block'
-          }}
-          dangerouslySetInnerHTML={{
-            __html: typeof window !== 'undefined' && window.katex ? 
-              window.katex.renderToString(formula, { 
-                throwOnError: false,
-                displayMode: false,
-                output: 'htmlAndMathml',
-                trust: true,
-                strict: false
-              }) : 
-              `<em style="font-size: 1.2em;">${formula}</em>`
-          }}
-        />
-      );
+      try {
+        const renderedFormula = katex.renderToString(formula, { 
+          throwOnError: false,
+          displayMode: false,
+          output: 'htmlAndMathml',
+          trust: true,
+          strict: false
+        });
+        
+        return (
+          <span 
+            className="katex-wrapper"
+            style={{
+              fontSize: '1.2em',
+              lineHeight: '1.2',
+              verticalAlign: 'baseline',
+              display: 'inline-block'
+            }}
+            dangerouslySetInnerHTML={{ __html: renderedFormula }}
+          />
+        );
+      } catch (error) {
+        console.error('Error rendering KaTeX formula:', error);
+        return (
+          <span style={{ color: '#dc2626', fontStyle: 'italic' }}>
+            [Error rendering: {formula}]
+          </span>
+        );
+      }
     }
     
     // ========================================
@@ -217,29 +226,36 @@ const SmartTable = ({
         } else if (match[3]) {
           // Es fórmula KaTeX: $formula$
           const formula = match[4];
-          parts.push(
-            <span 
-              key={`katex-${match.index}`}
-              className="katex-wrapper"
-              style={{
-                fontSize: '1.2em',
-                lineHeight: '1.2',
-                verticalAlign: 'baseline',
-                display: 'inline-block'
-              }}
-              dangerouslySetInnerHTML={{
-                __html: typeof window !== 'undefined' && window.katex ? 
-                  window.katex.renderToString(formula, { 
-                    throwOnError: false,
-                    displayMode: false,
-                    output: 'htmlAndMathml',
-                    trust: true,
-                    strict: false
-                  }) : 
-                  `<em style="font-size: 1.2em;">${formula}</em>`
-              }}
-            />
-          );
+          try {
+            const renderedFormula = katex.renderToString(formula, { 
+              throwOnError: false,
+              displayMode: false,
+              output: 'htmlAndMathml',
+              trust: true,
+              strict: false
+            });
+            
+            parts.push(
+              <span 
+                key={`katex-${match.index}`}
+                className="katex-wrapper"
+                style={{
+                  fontSize: '1.2em',
+                  lineHeight: '1.2',
+                  verticalAlign: 'baseline',
+                  display: 'inline-block'
+                }}
+                dangerouslySetInnerHTML={{ __html: renderedFormula }}
+              />
+            );
+          } catch (error) {
+            console.error('Error rendering KaTeX formula:', error);
+            parts.push(
+              <span key={`katex-error-${match.index}`} style={{ color: '#dc2626', fontStyle: 'italic' }}>
+                [Error: {formula}]
+              </span>
+            );
+          }
         } else if (match[5]) {
           // Es texto bold: **texto**
           const boldText = match[6];

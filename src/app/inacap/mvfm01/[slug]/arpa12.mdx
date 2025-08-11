@@ -8,25 +8,30 @@
 ## Ejercicio 01
 Una piedra es lanzada hacia arriba desde una azotea que se encuentra a 40 metros de altura. Llega a un punto máximo de altura y cae al suelo. Algunos de los tiempos y sus respectivas alturas se muestran a continuación.
 
-|Tiempo(s)|Altura(m)|
-|---|---|
-|0|40|
-|1|60|
-|2|70|
-|3|70|
-|4|60|
-|5|40|
-|6|10|
+<SmartTable
+  tableLayout="auto"
+  headers={["Tiempo(s)","Altura(m)"]}
+  rows={[
+    ["0","40"],
+    ["1","60"],
+    ["2","70"],
+    ["3","70"],
+    ["4","60"],
+    ["5","40"],
+    ["6","10"]
+  ]}
+/>
 
 **¿Cuál fue la altura máxima aproximada que alcanzó la piedra y en qué tiempo ocurrió?**
 
 <Solution>
-<br/>
-<img
+
+<SmartFigure
 	src="/inacap/mvfm01/images/fig23.png"
-	style={{ display: 'block', margin: '0 auto', width:'60%'}}
+	alt="Función cuadrada f(x)"
+	caption="Función cuadrada f(x)"
+	size="large"
 />
-<br/>
 
 Se obtiene el modelo:
 
@@ -40,19 +45,22 @@ Donde $x$ es el tiempo (s) y $f(t)$ es la altura (m) alcanzada por la piedra.
 
 - Se calcula el vértice utilizando el comando `Extremo(f)`
 
-<img
+<SmartFigure
 	src="/inacap/mvfm01/images/fig24.png"
-	style={{ display: 'block', margin: '0 auto', width:'40%'}}
+	alt="Cálculo vértice de f(x)"
+	caption="Cálculo vértice de f(x)"
+	size="large"
 />
-<br/>
 
-<img
+<SmartFigure
 	src="/inacap/mvfm01/images/fig25.svg"
-	style={{ display: 'block', margin: '0 auto', width:'100%'}}
+	alt="Gráfica función cuadrada f(x)"
+	caption="Gráfica función cuadrada f(x)"
+	lightbox={true}
+	size="large"
 />
-<br/>
 
-$\therefore$ La altura máxima que alcanzó la piedra fue de $71,25$ metros, a los $2,5$ segundos después de haberla lanzado.
+$\therefore$ La altura máxima que alcanzó la piedra fue de `71.25` metros, a los `2.5` segundos después de haberla lanzado.
 </Solution>
 
 ## Ejercicio 02
@@ -84,46 +92,61 @@ $$
 
 En el contexto del un **lanzamiento vertical de un objeto** bajo la influencia de la gravedad, las variables y constantes se pueden interpretar de la siguiente manera:
 
-|Variable|Significado en el lanzamiento del objeto|
-|---|---|
-|$f(x)$| altura del objeto en un tiempo $x$|
-|$x$|tiempo transcurrido desde el lanzamiento|
-|$a$|factor relacionado con la aceleración|
-|$b$|velocidad inicial del objeto|
-|$c$|altura inicial del objeto|
+<SmartTable
+  tableLayout="auto"
+  headers={["Variable","Significado en el lanzamiento del objeto"]}
+  rows={[
+    ["$f(x)$","altura del objeto en un tiempo $x$"],
+    ["$x$","tiempo transcurrido desde el lanzamiento"],
+    ["$a$","factor relacionado con la aceleración"],
+    ["$b$","velocidad inicial del objeto"],
+    ["$c$","altura inicial del objeto"]
+  ]}
+/>
 
 Se comparan los 2 modelos:
 
-|Ejercicio|Modelo|
-|---|---|
-|01|$f(t) = -5 \cdot t^2 + 25 \cdot t + 40$|
-|02|$h(t) = -5 \cdot t^2 + 30 \cdot t + 40$|
+<SmartTable
+  tableLayout="auto"
+  headers={["Ejercicio", "Modelo"]}
+  rows={[
+    ["01", "$f(t) = -5 \\cdot t^2 + 25 \\cdot t + 40$"],
+    ["02", "$h(t) = -5 \\cdot t^2 + 30 \\cdot t + 40$"]
+  ]}
+/>
 
-<img
+<SmartFigure
 	src="/inacap/mvfm01/images/fig26.png"
-	style={{ display: 'block', margin: '0 auto', width:'50%'}}
+	alt="Modelos cuadráticos f(x) y h(x), sus vertices y raíces"
+	caption="Modelos cuadráticos f(x) y h(x), sus vertices y raíces"
+	size="medium"
 />
-<br/>
 
-<img
+<SmartFigure
 	src="/inacap/mvfm01/images/fig27.svg"
-	style={{ display: 'block', margin: '0 auto', width:'100%'}}
+	alt="Gráficas modelos cuadráticos f(x) y h(x)"
+	caption="Gráficas modelos cuadráticos f(x) y h(x)"
+	lightbox={true}
+	size="large"
 />
-<br/>
 
-|Modelo|altura inicial \[m\]|altura máx \[m\]|Altura [m] a los 5seg|velocidad incial \[m/s\]|tiempo de vuelo \[s\]|
-|---|---|---|---|---|---|
-|$f(t)$|40|71,25|40|25|6,27|
-|$h(t)$|40|85   |65|30|7,12|
+<SmartTable
+  tableLayout="auto"
+  headers={["Modelo","altura inicial [m]","altura máx [m]","Altura [m] a los 5seg","velocidad inicial [m/s]","tiempo de vuelo [s]"]}
+  rows={[
+    ["$f(t)$","`40`","`71.25`","`40`","`25`","`6.27`"],
+    ["$h(t)$","`40`","`85`","`65`","`30`","`7.12`"]
+  ]}
+/>
 
-- Ambas piedras se lanzan desde la **misma altura**: 40 \[m\].
+- Ambas piedras se lanzan desde la **misma altura**: `40`\[m\].
 - La **altura máxima** alcanzada por las 2 piedras es **distinta**:
-	- $f(t)$: 71,25\[m\], a los 2,5\[s\] después del lanzamiento.
-	- $h(t)$: 85[m], a los 3\[s\] después del lanzamiento.
-- La **altura** de las piedras a los **5 segundos** después del lanzamiento es:
-	- $f(t)$: 40\[m\] a los 5\[s\] después del lanzamiento.
-	- $h(t)$: 65\[m\] a los 5\[s\] después del lanzamiento.
-- Ambas piedras tienen una altura 0 transcurrido su **tiempo de vuelo**:
-	- $f(t)$: tiempo de vuelo 6,27\[s\].
-	- $h(t)$: tiempo de vuelo 7,12\[s\].
+	- $f(t)$:  `71.25`\[m\], a los `2.5`\[s\] después del lanzamiento.
+	- $h(t)$: `85`[m], a los `3`\[s\] después del lanzamiento.
+- La **altura** de las piedras a los **`5` segundos** después del lanzamiento es:
+	- $f(t)$: `40`\[m\] a los `5`\[s\] después del lanzamiento.
+	- $h(t)$: `65`\[m\] a los `5`\[s\] después del lanzamiento.
+- Ambas piedras tienen una altura `0` transcurrido su **tiempo de vuelo**:
+	- $f(t)$: tiempo de vuelo `6.27`\[s\].
+	- $h(t)$: tiempo de vuelo `7.12`\[s\].
 </Solution>

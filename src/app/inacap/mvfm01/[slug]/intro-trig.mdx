@@ -6,69 +6,87 @@
 
 ## Tipos de Ángulos
 
-|Ángulo|Descripción|
-|---|---|
-|agudo|menor a 90°|
-|recto|igual a 90°|
-|obtuso|mayor a 90°|
-|extendido|igual a 180°|
+<SmartTable
+  tableLayout="fixed"
+  headers={["Ángulo","Descripción"]}
+  rows={[
+    ["**agudo**","menor a 90°"],
+    ["**recto**","igual a 90°"],
+    ["**obtuso**","mayor a 90°"],
+    ["**extendido**","igual a 180°"]
+  ]}
+/>
 
 ## Sistema y Medidas Angulares
 
 - **Sexagesimal:** Se utilizan grados, minutos, segundos
 - **Circular:** Se utilizan radianes
 
-|Grados|Radianes|
-|---|---|
-|90|$\frac{\pi}{2}$|
-|180|$\pi$|
-|270|$3\frac{\pi}{2}$|
-|360|$2\pi$|
+<SmartTable
+  tableLayout="fixed"
+  headers={["Grados","Radianes"]}
+  rows={[
+    ["90","$\\frac{\\pi}{2}$"],
+    ["180","$\\pi$"],
+    ["270","$\\frac{3\\pi}{2}$"],
+    ["360","$2\\pi$"]
+  ]}
+/>
 
 ## Razones Trigonométricas
 
-<img
+<SmartFigure
+	id="razon-trigonometrica"
 	src="/inacap/mvfm01/images/fig135.png"
-	style={{ display: 'block', margin: '0 auto', width:'40%'}}
+	alt="Razones trigonométricas"
+	caption="Razones trigonométricas"
+	size="large"
 />
-<br/>
 
-||Descripción|
-|---|---|
-|$seno(\alpha)$|$\frac{cateto\;opuesto}{hipotenusa}$|
-|$coseno(\alpha)$|$\frac{cateto\;adyacente}{hipotenusa}$|
-|$tangente(\alpha)$|$\frac{cateto\;opuesto}{cateto\;adyacente}$|
-|$cosecante(\alpha)$|$\frac{1}{seno(\alpha)}$|
-|$secante(\alpha)$|$\frac{1}{coseno(\alpha)}$|
-|$cotangente(\alpha)$|$\frac{1}{tangente(\alpha)}$|
+<SmartTable
+  tableLayout="fixed"
+  headers={["","Descripción"]}
+  rows={[
+    ["$seno(\\alpha)$","$\\frac{cateto\\;opuesto}{hipotenusa}$"],
+    ["$coseno(\\alpha)$","$\\frac{cateto\\;adyacente}{hipotenusa}$"],
+    ["$tangente(\\alpha)$","$\\frac{cateto\\;opuesto}{cateto\\;adyacente}$"],
+    ["$cosecante(\\alpha)$","$\\frac{1}{seno(\\alpha)}$"],
+    ["$secante(\\alpha)$","$\\frac{1}{coseno(\\alpha)}$"],
+    ["$cotangente(\\alpha)$","$\\frac{1}{tangente(\\alpha)}$"]
+  ]}
+/>
 
 ## Ángulo de elevación y Ángulo de depresión
 
 **Angulo de elevación:** Se forma entre la horizontal del observador y el lugar observado, cuando éste está situado arriba del observador
 
-<img
+<SmartFigure
+	id="turista-torre"
 	src="/inacap/mvfm01/images/fig136.png"
-	style={{ display: 'block', margin: '0 auto', width:'60%'}}
+	alt="El turísta observa la torre con un ángulo de elevación"
+	caption="El turísta observa la torre con un ángulo de elevación"
+	size="large"
 />
-<br/>
-- El turísta observa la torre con un áng. de elevación
 
 **Ángulo de depresión:** Cuando el observador está más alto lo llamaremos ángulo de depresión
 
-<img
+<SmartFigure
+	id="torre-turista"
 	src="/inacap/mvfm01/images/fig137.png"
-	style={{ display: 'block', margin: '0 auto', width:'60%'}}
+	alt="La torre observa al turísta con un ángulo de depresión"
+	caption="La torre observa al turísta con un ángulo de depresión"
+	size="large"
 />
-<br/>
-- La torre 'observa' al turísta con un áng. de depresión
 
 ## Teorema del Seno y Coseno
 
-<img
+<SmartFigure
+	id="lagos-angulos"
 	src="/inacap/mvfm01/images/fig138.png"
-	style={{ display: 'block', margin: '0 auto', width:'40%'}}
+	alt="Lados y ángulos de un triángulo"
+	caption="Lados y ángulos de un triángulo"
+	size="large"
 />
-<br/>
 
 ### Ley de los Senos
 
@@ -96,11 +114,13 @@ $$
 \end{aligned}
 $$
 
-<img
+<SmartFigure
+	id="funcion-seno"
 	src="/inacap/mvfm01/images/fig139.png"
-	style={{ display: 'block', margin: '0 auto', width:'90%'}}
+	alt="Función Seno"
+	caption="Función Seno"
+	size="large"
 />
-<br/>
 
 - Las imágenes de la función $f(x) = \sin(x)$ están en el intervalo $[-1,1]$
 - El máximo de $\sin(x)$ se alcanza cuando $x = \frac{\pi}{2} + 2k\pi$, con $k \in \mathbb{Z}$
@@ -111,11 +131,13 @@ $$
 
 ## Función Coseno
 
-<img
+<SmartFigure
+	id="funcion-coseno"
 	src="/inacap/mvfm01/images/fig140.png"
-	style={{ display: 'block', margin: '0 auto', width:'90%'}}
+	alt="Función Coseno"
+	caption="Función Coseno"
+	size="large"
 />
-<br/>
 
 - Las imágenes de la función $f(x) = \cos(x)$ están en el intervalo $[-1,1]$
 - El máximo de $\cos(x)$ se alcanza cuando $x = 2k\pi$, con $k \in \mathbb{Z}$
@@ -147,17 +169,21 @@ $$
 
 ## Traslación
 
-<img
+<SmartFigure
+	id="traslacion-coseno"
 	src="/inacap/mvfm01/images/fig141.png"
-	style={{ display: 'block', margin: '0 auto', width:'30%'}}
+	alt="Traslación Función Coseno"
+	caption="Traslación Función Coseno"
+	size="large"
 />
-<br/>
 
-<img
+<SmartFigure
+	id="grafica-traslacion-coseno"
 	src="/inacap/mvfm01/images/fig142.svg"
-	style={{ display: 'block', margin: '0 auto', width:'100%'}}
+	alt="Gráfica Traslación Función Coseno"
+	caption="Gráfica Traslación Función Coseno"
+	size="large"
 />
-<br/>
 
 - $g(x)$ es idéntica a $f(x)$, pero trasladada $\frac{\pi}{2}$ unidades a la izquierda.
 - $h(x)$ es idéntica a $f(x)$, pero trasladada $\pi$ unidades a la derecha.

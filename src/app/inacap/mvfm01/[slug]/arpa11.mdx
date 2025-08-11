@@ -8,31 +8,40 @@
 ## Ejercicio 01
 Considera la siguiente infografía del valor total a pagar en un mes determinado según el consumo de energía:
 
-<img
+<SmartFigure
+	id="ejercicio-01"
 	src="/inacap/mvfm01/images/fig01.png"
-	style={{ display: 'block', margin: '0 auto', width:'60%'}}
+	alt="Consumo de energía"
+	caption="Consumo de energía"
+	size="medium"
 />
-<br/>
 
 **¿Cuántos Kwh de energía consumió un cliente si el valor total a pagar fue $8300?**
 
 <Solution>
 1. Se convierte el infograma a tabla, y se determinan los puntos a graficar.
 
-|Cantidad Kwh|Costo mensual|Coordenadas|
-|---|---|---|
-|1|1100|A = (1, 1100)|
-|2|1300|B = (2, 1300)|
-|3|1500|C = (3, 1500)|
+<SmartTable
+  tableLayout="auto"
+  headers={["Cantidad Kwh","Costo mensual","Coordenadas"]}
+  rows={[
+    ["1","1100","A = (1, 1100)"],
+    ["2","1300","B = (2, 1300)"],
+    ["3","1500","C = (3, 1500)"]
+  ]}
+/>
 
 2. Se genera la función $f(x)$ mediante el comando `AjustePolinómico(l1,n)`
 3. Se encuentra el valor de $x$ para $f(x) = 8300$ mediante el comando `Resuelve(f(x) = a)`
 
-<img
+<SmartFigure
 	src="/inacap/mvfm01/images/fig03.png"
-	style={{ display: 'block', margin: '0 auto', width:'100%'}}
+	alt="Gráfica consumo de energia"
+	caption="Gráfica consumo de energia"
+	lightbox={true}
+	size="large"
 />
-<br/>
+
 
 $\therefore$ Si el valor total a pagar fue de \$$8300$ , el cliente consumió $37$ Kwh.
 </Solution>
@@ -40,30 +49,37 @@ $\therefore$ Si el valor total a pagar fue de \$$8300$ , el cliente consumió $3
 ## Ejercicio 02
 Considera la siguiente infografía del valor total a pagar en un mes determinado según el consumo de energía:
 
-<img
+<SmartFigure
+	id="ejercicio-02"
 	src="/inacap/mvfm01/images/fig02.png"
-	style={{ display: 'block', margin: '0 auto', width:'60%'}}
+	alt="Consumo de energía"
+	caption="Consumo de energía"
+	size="large"
 />
-<br/>
 
 **De acuerdo a esta información, y considerando una regularidad lineal, ¿cuál es la expresión algebraica que permite escribir el valor total a pagar en función de los Kwh de energía consumidos?**
 
 <Solution>
 1. Se convierte el infograma a tabla, y se determinan los puntos a graficar.
 
-|Cantidad Kwh|Costo mensual|Coordenadas|
-|---|---|---|
-|2|1400|A = (2, 1400)|
-|5|1800|B = (5, 1800)|
-
+<SmartTable
+  tableLayout="auto"
+  headers={["Cantidad Kwh","Costo mensual","Coordenadas"]}
+  rows={[
+    ["2","1400","A = (2, 1400)"],
+    ["5","1800","B = (5, 1800)"]
+  ]}
+/>
 
 2. Se genera la función $f(x)$ mediante el comando `AjustePolinómico(l1,n)`
 
-<img
+<SmartFigure
 	src="/inacap/mvfm01/images/fig04.png"
-	style={{ display: 'block', margin: '0 auto', width:'100%'}}
+	alt="Gráfica consumo de energía"
+	caption="Gráfica consumo de energía"
+	lightbox={true}
+	size="large"
 />
-<br/>
 
 $\therefore$ La expresión algebraica que permite escribir el valor total a pagar en función de los Kwh consumidos es:
 

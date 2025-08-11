@@ -13,8 +13,8 @@ Se sabe que por cada grado que aumenta la magnitud del sismo, la amplitud de és
 **¿Cuál sería la amplitud que tuvo el terremoto del año 2010 en Chile cuya magnitud fue de 8.8 en la escala de Richter?**
 
 <Solution>
-- 1ro: ocurre tamaño del epicentro $\rightarrow$ Amplitud
-- 2do: en base a eso se mide $\rightarrow$ Magnitud
+- **1ro:** ocurre tamaño del epicentro $\rightarrow$ Amplitud
+- **2do:** en base a eso se mide $\rightarrow$ Magnitud
 
 Entonces:
 
@@ -29,19 +29,23 @@ Nos dan la siguiente información:
 
 Con esta información podemos generar una tabla
 
-|x: Amplitud (mm)|f(x): Magnitud (grados)|
-|---|---|
-|100|5|
-|1000|6|
-
-<br/>
-<img
-	src="/inacap/mvfm01/images/fig54.png"
-	style={{ display: 'block', margin: '0 auto', width:'40%'}}
+<SmartTable
+  tableLayout="auto"
+  headers={["x: Amplitud (mm)","f(x): Magnitud (grados)"]}
+  rows={[
+    ["100","5"],
+    ["1000","6"]
+  ]}
 />
-<br/>
 
-$\therefore$ La amplitud, cuya magnitud fue de $8.8$[grados] fue de $630957.34$[mm]
+<SmartFigure
+	src="/inacap/mvfm01/images/fig54.png"
+	alt="Modelo logarítmico f(x)"
+	caption="Modelo logarítmico f(x)"
+	size="large"
+/>
+
+$\therefore$ La amplitud, cuya **magnitud** fue de `8.8`[grados], tuvo una **amplitud** de `630957.34`[mm]
 </Solution>
 
 ## Ejercicio 02
@@ -59,27 +63,30 @@ De acuerdo con esta información, y considerando que la bomba atómica lanzada e
 <Solution>
 Se calcula la energía liberada del terremoto con magnitud 8.8[grados]
 
-<img
+<SmartFigure
 	src="/inacap/mvfm01/images/fig55.png"
-	style={{ display: 'block', margin: '0 auto', width:'50%'}}
+	alt="Cálculo de energía liberada"
+	caption="Cálculo de energía liberada"
+	size="large"
 />
-<br/>
 
 La energía liberada en el terremoto fue de $1 \cdot 10^{25}$[ergios]
 
-Se hace una tabla de comparación
-
-|Caso|Energía liberada [ergios]|
-|---|---|
-|Terremoto Chile 2010|$1 \cdot 10^{25}$|
-|Bomba atómica Hiroshima|$8.9 \cdot 10^{20}$|
-
-<br/>
-<img
-	src="/inacap/mvfm01/images/fig56.png"
-	style={{ display: 'block', margin: '0 auto', width:'40%'}}
+<SmartTable
+  tableLayout="auto"
+  headers={["Caso","Energía liberada [ergios]"]}
+  rows={[
+    ["Terremoto Chile 2010","$1 \\cdot 10^{25}$"],
+    ["Bomba atómica Hiroshima","$8.9 \\cdot 10^{20}$"]
+  ]}
 />
-<br/>
 
-$\therefore$ La energía liberada en el terremoto de Chile en 2010 fue $11235,96$ veces mayor que la energía liberada por la bomba atómica en Hiroshima.
+<SmartFigure
+	src="/inacap/mvfm01/images/fig56.png"
+	alt="Cálculo de razón de energía liberadas por los terremotos"
+	caption="Cálculo de razón de energía liberada por los terremotos"
+	size="large"
+/>
+
+$\therefore$ La energía liberada en el terremoto de Chile en 2010 fue `11235.96` veces mayor que la energía liberada por la bomba atómica en Hiroshima.
 </Solution>

@@ -19,12 +19,16 @@ $$
 \end{aligned}
 $$
 
-|Variables|Descripción|
-|---|---|
-|$t$|tiempo (horas)|
-|$f_0$|dosis (mg) analgésico inicial|
-|$k$|constante de decaimiento|
-|$f(x)$|dosis (mg) analgésico restante|
+<SmartTable
+  tableLayout="auto"
+  headers={["Variables","Descripción"]}
+  rows={[
+    ["$t$","tiempo (horas)"],
+    ["$f_0$","dosis (mg) analgésico inicial"],
+    ["$k$","constante de decaimiento"],
+    ["$f(x)$","dosis (mg) analgésico restante"]
+  ]}
+/>
 
 El modelo a utilizar es el siguiente:
 
@@ -41,11 +45,12 @@ Donde:
 
 Se desea encontrar el tiempo donde la dosis inicial se reduce a la mitad
 
-<img
+<SmartFigure
 	src="/inacap/mvfm01/images/fig32.png"
-	style={{ display: 'block', margin: '0 auto', width:'40%'}}
+	alt="tiempo donde la dosis baja a la mitad"
+	caption="tiempo donde la dosis baja a la mitad"
+	size="large"
 />
-<br/>
 
 Sea $t = t_h:t:m:t_s = 6,58$
 
@@ -83,5 +88,5 @@ Finalmente, la dosis inicial se reduce a la mitad transcurrido un tiempo $t = 06
 
 <Solution>
 - La razón de cambio (o factor de decaimiento) es el factor por el cual se multiplica la cantidad actual en cada intervalo de tiempo.
-- El factor de cambio en la situación propuesta es $0,9$. Esto es, por cada unidad de tiempo $t$ la cantidad $f(t)$ se reduce al 90% de su valor anterior.
+- El factor de cambio en la situación propuesta es `0.9`. Esto es, por cada unidad de tiempo $t$ la cantidad $f(t)$ se reduce al 90% de su valor anterior.
 </Solution>

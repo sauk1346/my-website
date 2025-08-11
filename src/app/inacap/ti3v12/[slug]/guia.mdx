@@ -460,13 +460,13 @@ ORDER BY Apellido ASC, FechaContrato DESC;
 - Sean los atributos *Nombre*, *Descripción*, *Pedido_ID*, *Cliente_ID* y *Fecha* pertenecientes a la tabla *Pedidos*.
 - Mostrar todos los pedidos con la información del cliente que realizó cada pedido.
 
-<div style={{textAlign: 'center'}}>
-  <img 
-    src="/inacap/ti3v12/images/fig01.png" 
-    alt="Diagrama 1" 
-    style={{width: '60%'}} 
-  />
-</div>
+<SmartFigure
+	id="inner-join"
+	src="/inacap/ti3v12/images/fig01.png"
+	alt="Diagrama Inner Join"
+	caption="Diagrama Inner Join"
+	size="medium"
+/>
 
 ```sql
 SELECT p.Nombre AS NombrePedido, p.Descripcion, p.Fecha AS FechaPedido, c.Nombre AS NombreCliente
@@ -489,13 +489,13 @@ JOIN Clientes c ON p.Cliente_ID = c.ID;
 - Mostrar todos los pedidos con la información del cliente que realizó cada pedido.
 - Si hay pedidos sin un cliente asociado, aún así se deben mostrar esos pedidos (para investigar si existen fallas en el sistema).
 
-<div style={{textAlign: 'center'}}>
-  <img 
-    src="/inacap/ti3v12/images/fig02.png" 
-    alt="Diagrama 1" 
-    style={{width: '60%'}} 
-  />
-</div>
+<SmartFigure
+	id="left-join"
+	src="/inacap/ti3v12/images/fig02.png"
+	alt="Diagrama Left Join"
+	caption="Diagrama Left Join"
+	size="medium"
+/>
 
 ```sql
 SELECT p.Nombre AS NombrePedido, p.Descripcion, p.Fecha AS FechaPedido, c.Nombre AS NombreCliente
@@ -515,13 +515,13 @@ LEFT JOIN Clientes c ON p.Cliente_ID = c.ID;
 - Mostrar todos los clientes con la información de los pedidos que hayan realizado.
 - Si un cliente no ha realizado ningun pedido (nuevo, con deuda, vetado), aún así se debe mostrar la información del cliente.
 
-<div style={{textAlign: 'center'}}>
-  <img 
-    src="/inacap/ti3v12/images/fig03.png" 
-    alt="Diagrama 1" 
-    style={{width: '60%'}} 
-  />
-</div>
+<SmartFigure
+	id="right-join"
+	src="/inacap/ti3v12/images/fig03.png"
+	alt="Diagrama Right Join"
+	caption="Diagrama Right Join"
+	size="medium"
+/>
 
 ```sql
 SELECT c.ID, c.Nombre AS NombreCliente, p.Nombre AS NombrePedido, p.Descripcion, p.Fecha AS FechaPedido
@@ -557,15 +557,19 @@ FROM Clientes;
 
 Sean los atributos *Producto*, *Cantidad*, *PrecioUnidad*, *Fecha* pertenecientes a la tabla *Ventas*.
 
-|Producto|Cantidad|PrecioUnidad|Fecha|
-|---|---|---|---|
-|A|10|5|2024-07-15|
-|B|15|3|2024-07-20|
-|A|5|5|2024-07-23|
-|A|8|5|2024-07-23|
-|C|7|8|2024-08-05|
-|B|10|3|2024-08-10|
-|A|8|5|2024-08-12|
+<SmartTable
+ layoutTable="auto"
+ headers={["Producto","Cantidad","PrecioUnidad","Fecha"]}
+ rows={[
+ ["A","10","5","2024-07-15"],
+ ["B","15","3","2024-07-20"],
+ ["A","5","5","2024-07-23"],
+ ["A","8","5","2024-07-23"],
+ ["C","7","8","2024-08-05"],
+ ["B","10","3","2024-08-10"],
+ ["A","8","5","2024-08-12"],
+ ]}
+/>
 
 **Ejemplo 1:** Mostrar el total de ventas para cada producto.
 
@@ -589,13 +593,17 @@ GROUP BY Producto, Fecha
 ORDER BY Producto, Fecha;
 ```
 
-| Producto | Fecha       | TotalVentas |
-|----------|-------------|-------------|
-| A        | 2024-07-15  | 50          |
-| A        | 2024-07-23  | 65          |
-| B        | 2024-07-20  | 45          |
-| B        | 2024-07-25  | 30          |
-| C        | 2024-07-24  | 56          |
+<SmartTable
+ layoutTable="auto"
+ headers={["Producto","Fecha","TotalVentas"]}
+ rows={[
+ ["A","2024-07-15","50"],
+ ["A","2024-07-23","65"],
+ ["B","2024-07-20","45"],
+ ["B","2024-07-25","30"],
+ ["C","2024-07-24","56"],
+ ]}
+/>
 
 - Para el ejemplo 2, se agrega el comando `ORDER BY` para garantizar que los atributos *Producto* y *Fecha* se ordenen de forma ascendente.
 

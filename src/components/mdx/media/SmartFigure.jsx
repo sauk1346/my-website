@@ -41,11 +41,11 @@ export default function SmartFigure({
   id, 
   width,
   height,
-  center = false,
+  center = true,
   lightbox = false,
   className = '',
   size = 'auto', // 'small', 'medium', 'large', 'auto'
-  autoNumber = false,
+  autoNumber = true,
   ...props 
 }) {
   const [isLightboxOpen, setIsLightboxOpen] = useState(false)

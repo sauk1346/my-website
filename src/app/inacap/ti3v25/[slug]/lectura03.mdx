@@ -26,11 +26,25 @@ Además de los escenarios, un caso de uso puede incluir otros elementos:
 
 ## Notaciones de los casos de Uso
 
-<img
+<SmartFigure
+	id="notacion-casos-uso"
 	src="/inacap/ti3v25/images/fig03.png"
-	style={{ display: 'block', margin: '0 auto', width:'70%'}}
+	alt="Notación Casos de Uso"
+	caption="Notación Casos de Uso"
+	size="large"
 />
-<br/>
+
+<SmartTable
+  tableLayout="auto"
+  headers={["Notación","Descripción"]}
+  rows={[
+    ["**Actor**","Los roles de que los usuarios juegan con respecto al sistema. Pueden ser: personas, sistemas o dispositivos externos"],
+    ["**Caso de Uso**","Describen las interacciones entre los actores y el sistema. Cada caso de uso describe una tarea o función específica que el sistema puede realizar"],
+    ["**Límite del Sistema**","Frontera entre el sistema y su entorno"],
+    ["**Extensión**","Es un caso de uso, que puede agregar a otro caso de uso"],
+    ["**Inclusión**","Es un caso de uso que se incluye en otro caso de uso"]
+  ]}
+/>
 
 |Notación|Descripción|
 |---|---|
@@ -44,11 +58,13 @@ Además de los escenarios, un caso de uso puede incluir otros elementos:
 
 Un usuario inicia el caso de uso Abrir archivo. El sistema de gestión de archivos responde mostrando una lista de archivos. El usuario selecciona el archivo que desea abrir y el sistema de gestión de archivos abre el archivo. El sistema de gestión de archivos muestra el contenido del archivo y el usuario finaliza el caso de uso.
 
-<img
+<SmartFigure
+	id="ejemplo01"
 	src="/inacap/ti3v25/images/fig04.png"
-	style={{ display: 'block', margin: '0 auto', width:'70%'}}
+	alt="Caso de Uso para Sistema de Almacenamiento de Archivos"
+	caption="Caso de Uso para Sistema de Almacenamiento de Archivos"
+	size="large"
 />
-
 
 ## Niveles de Casos de Uso
 

@@ -38,7 +38,7 @@ const SmartTable = ({
               window.katex.renderToString(formula, { 
                 throwOnError: false,
                 displayMode: false,
-                output: 'htmlAndMathml',  // Mismo output que rehype-katex
+                output: 'htmlAndMathml',
                 trust: true,
                 strict: false
               }) : 
@@ -58,6 +58,32 @@ const SmartTable = ({
         <code className={styles.inlineCode}>
           {code}
         </code>
+      );
+    }
+    
+    // ========================================
+    // MARKDOWN BOLD: Detectar texto bold **texto** (solo si es todo el contenido)
+    // ========================================
+    const fullBoldMatch = text.match(/^\*\*([^*]+)\*\*$/);
+    if (fullBoldMatch) {
+      const boldText = fullBoldMatch[1];
+      return (
+        <strong className={styles.boldText}>
+          {boldText}
+        </strong>
+      );
+    }
+    
+    // ========================================
+    // MARKDOWN ITALIC: Detectar texto cursiva *texto* (solo si es todo el contenido)
+    // ========================================
+    const fullItalicMatch = text.match(/^\*([^*]+)\*$/);
+    if (fullItalicMatch) {
+      const italicText = fullItalicMatch[1];
+      return (
+        <em className={styles.italicText}>
+          {italicText}
+        </em>
       );
     }
     
@@ -156,14 +182,15 @@ const SmartTable = ({
     }
     
     // ========================================
-    // CONTENIDO MIXTO: Detectar código inline `code` y fórmulas KaTeX $formula$ dentro de texto largo
+    // CONTENIDO MIXTO: Detectar código inline `code`, fórmulas KaTeX $formula$, texto bold **texto** y cursiva *texto* dentro de texto largo
     // ========================================
-    if (text.includes('`') || text.includes('$')) {
+    if (text.includes('`') || text.includes('$') || text.includes('*')) {
       const parts = [];
       let lastIndex = 0;
       
-      // Regex combinado para detectar tanto código como fórmulas KaTeX
-      const mixedRegex = /(`([^`]+)`)|(\$([^$]+)\$)/g;
+      // Regex combinado para detectar código, fórmulas KaTeX, texto bold y cursiva
+      // IMPORTANTE: Bold (**) debe ir antes que italic (*) para evitar conflictos
+      const mixedRegex = /(`([^`]+)`)|(\$([^$]+)\$)|(\*\*([^*]+)\*\*)|(\*([^*]+)\*)/g;
       let match;
       
       while ((match = mixedRegex.exec(text)) !== null) {
@@ -179,7 +206,7 @@ const SmartTable = ({
           }
         }
         
-        // Determinar si es código o fórmula KaTeX
+        // Determinar si es código, fórmula KaTeX, texto bold o cursiva
         if (match[1]) {
           // Es código inline: `code`
           parts.push(
@@ -205,13 +232,29 @@ const SmartTable = ({
                   window.katex.renderToString(formula, { 
                     throwOnError: false,
                     displayMode: false,
-                    output: 'htmlAndMathml',  // Mismo output que rehype-katex
+                    output: 'htmlAndMathml',
                     trust: true,
                     strict: false
                   }) : 
                   `<em style="font-size: 1.2em;">${formula}</em>`
               }}
             />
+          );
+        } else if (match[5]) {
+          // Es texto bold: **texto**
+          const boldText = match[6];
+          parts.push(
+            <strong key={`bold-${match.index}`} className={styles.boldText}>
+              {boldText}
+            </strong>
+          );
+        } else if (match[7]) {
+          // Es texto cursiva: *texto*
+          const italicText = match[8];
+          parts.push(
+            <em key={`italic-${match.index}`} className={styles.italicText}>
+              {italicText}
+            </em>
           );
         }
         
@@ -236,7 +279,7 @@ const SmartTable = ({
       }
     }
     
-    // Texto normal sin código inline ni fórmulas
+    // Texto normal sin código inline, fórmulas, bold o cursiva
     return content;
   };
 

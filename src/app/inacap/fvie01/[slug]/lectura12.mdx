@@ -1,5 +1,3 @@
-import { Quiz } from '@/components/features/inacap/QuizComponent';
-
 # Métodos de experimentación cliente/usuario
 
 El objetivo central de esta fase es validar las suposiciones claves del modelo de negocio preliminar que cada equipo ha desarrollado hasta este punto.
@@ -31,36 +29,60 @@ En la tabla siguiente, se presentan los principales **objetivos de validación**
 
 <img
 	src="/inacap/fvie01/images/fig03.png"
-	style={{ display: 'block', margin: '0 auto', width:'100%'}}
+	style={{ display: 'block', margin: '0 auto', width:'90%'}}
 />
 <br/>
 
 Lo que estamos validando realmente son 3 aspectos principales:
 
-|Validación|Descripción|
-|---|---|
-|Factibilidad|Trata de las suposiciones hechas en la elección de los **elementos operacionales** y si ellos son adecuados para ejecutar bien el **modelo de negocio**. En otras palabras, si es posible hacerlo bien o si existe el **riesgo** de tener una mala o pobre ejecución.|
-|Deseabilidad|Se refiere a las **suposiciones** respecto a que realmente se **creará valor para el cliente**. Su consecuencia será que exista una demanda para este producto, dado que el producto es adecuado para un **segmento de clientes** y viceversa. De no validar este punto, se **corre el riesgo** de estar presentando una solución para un asunto irrelevante para ellos.|
-|Viabilidad|Se relaciona con las **suposiciones financieras** que permiten ganar más dinero del que gastas. Si se está en presencia de un modelo que permite ganar dinero con esta idea, o bien, se corre el riesgo que el **modelo de negocio sea defectuoso**.|
+<SmartTable
+	tableLayout="auto"
+	headers={['Validación', 'Descripción']}
+	rows={[
+		[
+			'**Factibilidad**',
+			'Trata de las suposiciones hechas en la elección de los elementos operacionales y si ellos son adecuados para ejecutar bien el modelo de negocio. En otras palabras, si es posible hacerlo bien o si existe el riesgo de tener una mala o pobre ejecución'
+		],
+		[
+			'**Deseabilidad**',
+			'Se refiere a las suposiciones respecto a que realmente se creará valor para el cliente. Su consecuencia será que exista una demanda para este producto, dado que el producto es adecuado para un segmento de clientes y viceversa. De no validar este punto, se corre el riesgo de estar presentando una solución para un asunto irrelevante para ellos'
+		],
+		[
+			'**Viabilidad**',
+			'Se relaciona con las suposiciones financieras que permiten ganar más dinero del que gastas. Si se está en presencia de un modelo que permite ganar dinero con esta idea, o bien, se corre el riesgo que el modelo de negocio sea defectuoso'
+		]
+	]}
+/>
 
 En la siguiente gráfica se ilustra la relación entre estos 3 conceptos y el lienzo de modelos de negocio
 
 <img
 	src="/inacap/fvie01/images/fig04.jpg"
-	style={{ display: 'block', margin: '0 auto', width:'100%'}}
+	style={{ display: 'block', margin: '0 auto', width:'90%'}}
 />
 <br/>
-
 
 ## Características de la formulación de una hipótesis
 Necesitamos formular las hipótesis de manera sólida, de modo que sean **comprobables**, **precisas** y **discretas**.
 
-
-|Hipótesis|Descripción|
-|---|---|
-|Comprobable|Por **comprobable**, entenderemos que es lo que posible **demostrar**, a través de la evidencia que genera un experimento, que es verdadera (validada) o falsa (invalidada).|
-|Precisa|No debe haber ambigüedad en los términos usados en su redacción y se debe ser clara respecto a lo que esperamos que suceda si es verdadera (**qué debería suceder**, **e idealmente, a quiénes y cuándo**).|
-|Discreta|Se enfoca en elementos claros y bien precisados, de modo que haya claridad también en el resultado obtenido.|
+<SmartTable
+	tableLayout="auto"
+	headers={['Hipótesis', 'Descripción']}
+	rows={[
+		[
+			'**Comprobable**',
+			'Por comprobable, entenderemos que es lo que posible demostrar, a través de la evidencia que genera un experimento, que es verdadera (validada) o falsa (invalidada)'
+		],
+		[
+			'**Precisa**',
+			'No debe haber ambigüedad en los términos usados en su redacción y se debe ser clara respecto a lo que esperamos que suceda si es verdadera (qué debería suceder, e idealmente, a quiénes y cuándo)'
+		],
+		[
+			'**Discreta**',
+			'Se enfoca en elementos claros y bien precisados, de modo que haya claridad también en el resultado obtenido'
+		]
+	]}
+/>
 
 **Ejemplo 1:**
 

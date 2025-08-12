@@ -1,5 +1,3 @@
-import { Quiz } from '@/components/features/inacap/QuizComponent';
-
 # Interconexión de dispositivos y redes
 
 ## Protocolo TCP/IP (stack)
@@ -10,29 +8,41 @@ En la práctica, TCP/IP **no es un único protocolo**, sino que es un stack (un 
 ### Capas
 El protocolo TCP/IP, se divide en 4 capas. Cada capa soluciona un problema en la comunicación y tiene asociado uno o varios protocolos para ello.
 
-<img
+<SmartFigure
+	id="capas-tcp-ip"
 	src="/inacap/ti3v35/images/fig01.png"
-	style={{ display: 'block', margin: '0 auto', width:'30%'}}
+	alt="Capas del Protocolo TCP/IP"
+	caption="Capas del Protocolo TCP/IP"
+	size="large"
 />
-<br/>
 
-1. **Aplicación:** Incluidos los protocolos destinados a proporcionar servicios
-    - **FTP** (transferencia de ficheros)
-    - **HTTP** (navegación en internet)
-    - **SMTP** (correo electrónico)
-    - **SSH** (conexión segura)
-2. **Transporte:** Proporciona el transporte de los datos con fibilidad suficiente
-    - **TCP** (*transfer control protocol*)
-    - **UDP** (*user datagram protocol*)
-    - **TLS** (*transport layer security*)
-3. **Red:** Se encarga de enviar cada paquete a su destino (enrutar datos)
-    - **IP** (*internet protocol*)
-    - **ICMP** (*internet control message protocol*)
-    - **IGMP** (*internet group management protocol*)
-    - **ARP** (*address resolution protocol*)
-    - **RARP** (*reverse address resolution protocol*)
-4. **Enlace:** Se encarga de la transmisión a través del medio físico. También presenta algoritmos de control y correción de errores.
-
+<SmartTable
+	tableLayout="mixed"
+	columnWidths={['100px','auto','auto']}
+	headers={['Capa', 'Función', 'Protocolos']}
+	rows={[
+		[
+			'**Aplicación**',
+			'Incluidos los protocolos destinados a proporcionar servicios',
+			'[FTP (transferencia de ficheros),HTTP (navegación en internet),SMTP (correo electrónico),SSH (conexión segura)]'
+		],
+		[
+			'**Transporte**',
+			'Proporciona el transporte de los datos con fiabilidad suficiente',
+			'[TCP (transfer control protocol),UDP (user datagram protocol),TLS (transport layer security)]'
+		],
+		[
+			'**Red**',
+			'Se encarga de enviar cada paquete a su destino (enrutar datos)',
+			'[IP (internet protocol),ICMP (internet control message protocol),IGMP (internet group management protocol),ARP (address resolution protocol),RARP (reverse address resolution protocol)]'
+		],
+		[
+			'**Enlace**',
+			'Se encarga de la transmisión a través del medio físico. También presenta algoritmos de control y corrección de errores',
+			''
+		]
+	]}
+/>
 
 ## Protocolo TCP
 Es un protocolo de control de transmisión de la **capa de transporte**.
@@ -51,24 +61,32 @@ Es un protocolo de control de transmisión de la **capa de transporte**.
 - **TCP** asigna los números de puerto "bien conocidos" para aplicaciones servidoras (que ofrecen servicios). 
 - El resto de los números disponibles se asignan a las aplicaciones cliente (que solicitan servicios)
 
-|Puerto|Aplicación|
-|---|----|
-|0 - 255|Aplicaciones públicas|
-|255 - 1023|Aplicaciones comerciales|
-|1023 - adelante|No están reguladas|
+<SmartTable
+	tableLayout="fixed"
+	headers={['Puerto', 'Aplicación']}
+	rows={[
+		['0 - 255', 'Aplicaciones públicas'],
+		['255 - 1023', 'Aplicaciones comerciales'],
+		['1023 - adelante', 'No están reguladas']
+	]}
+/>
 
 Los siguientes puertos son controlados y asignados por IANA (*Internet Assigned Numbers Authority*)
 
-| Protocolo | Puerto | Tipo | Descripción |
-|-----------|--------|------|-------------|
-| echo | 7 | TCP/UDP | Eco (devuelve lo que recibe) |
-| daytime | 13 | TCP/UDP | Fecha y hora |
-| ftp | 21 | TCP | Protocolo de Transferencia de Ficheros |
-| telnet | 23 | TCP | Terminal remoto |
-| smtp | 25 | TCP | Protocolo de correo simple |
-| domain (DNS) | 53 | TCP/UDP | Servidor de nombres de dominio |
-| www-http | 80 | TCP | World Wide Web HTTP (páginas web) |
-| pop3 | 110 | TCP | Post Office Protocol - Versión 3 (recibir correo) |
+<SmartTable
+	tableLayout="auto"
+	headers={['Protocolo', 'Puerto', 'Tipo', 'Descripción']}
+	rows={[
+		['**echo**', '7', 'TCP/UDP', 'Eco (devuelve lo que recibe)'],
+		['**daytime**', '13', 'TCP/UDP', 'Fecha y hora'],
+		['**ftp**', '21', 'TCP', 'Protocolo de Transferencia de Ficheros'],
+		['**telnet**', '23', 'TCP', 'Terminal remoto'],
+		['**smtp**', '25', 'TCP', 'Protocolo de correo simple'],
+		['**domain (DNS)**', '53', 'TCP/UDP', 'Servidor de nombres de dominio'],
+		['**www-http**', '80', 'TCP', 'World Wide Web HTTP (páginas web)'],
+		['**pop3**', '110', 'TCP', 'Post Office Protocol - Versión 3 (recibir correo)']
+	]}
+/>
 
 ## Protocolo UDP
 *User Datagram Protocol*. Proporciona una comunicación sencilla entre dos hosts y que no consume muchos recursos. 
@@ -89,11 +107,14 @@ Para poder identificar una máquina en internet, cada una debe tener una direcci
 
 Las IP son un **dígito binario de 32 bits**, representadas en decimales de 4 octetos (A.B.C.D)
 
-|Notación|A|B|C|D|
-|---|---|---|---|---|
-|Binaria|00000001|11111110|11000000|11110000|
-|Decimal|1|254|192|240|
-
+<SmartTable
+	tableLayout="fixed"
+	headers={['Notación', 'A', 'B', 'C', 'D']}
+	rows={[
+		['Binaria', '00000001', '11111110', '11000000', '11110000'],
+		['Decimal', '1', '254', '192', '240']
+	]}
+/>
 
 Todas las direcciones IP de un host tienen 2 partes:
 

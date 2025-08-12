@@ -1,5 +1,3 @@
-import { Quiz } from '@/components/features/inacap/QuizComponent';
-
 # Calculo de clases de dirección
 
 El objetivo principal de la utilización de diversas técnicas de gestión es **maximizar el uso de los recursos de red**.
@@ -8,11 +6,15 @@ El objetivo principal de la utilización de diversas técnicas de gestión es **
 
 Existe una diferencia en nombre de host, direcciones IP y rutas de redes
 
-|Términos|Descripción|
-|---|---|
-|Nombre de Host|Indica un nombre lógico de un host dentro de la red|
-|Dirección|Indica dónde se encuentra ubicado el host|
-|Ruta|Indica cómo es posible llegar a acceder al host|
+<SmartTable
+	tableLayout="fixed"
+	headers={['Términos', 'Descripción']}
+	rows={[
+		['Nombre de Host', 'Indica un nombre lógico de un host dentro de la red'],
+		['Dirección', 'Indica dónde se encuentra ubicado el host'],
+		['Ruta', 'Indica cómo es posible llegar a acceder al host']
+	]}
+/>
 
 - El **protocolo IP** solo administra las direcciones IP, lo que corresponde a **Dirección**. Hacer corresponder **Nombres** es función de los protocolos de mayor nivel.
 
@@ -21,11 +23,14 @@ Existe una diferencia en nombre de host, direcciones IP y rutas de redes
 1. Permite **identificar la red** en la que se encuentra el host.
 2. Permite **ubicar la posición** del host dentro de la red.
 
-La dirección IP consiste en un **dígito binario** de 32 bits, que se pueden abrebiar como 4 octetos o 4 Bytes
+La dirección IP consiste en un **dígito binario** de 32 bits, que se pueden abreviar como 4 octetos o 4 Bytes
 
-<img
+<SmartFigure
+	id="direccion-ip-en-bits-y-bytes"
 	src="/inacap/ti3v35/images/fig02.png"
-	style={{ display: 'block', margin: '0 auto', width:'60%'}}
+	alt="Dirección IP en bits y bytes"
+	caption="Dirección IP en bits y bytes"
+	size="medium"
 />
 
 ## Subredes y Máscaras de subred
@@ -58,11 +63,15 @@ Parte de la técnica de subnetting. Indica a los dispositivos qué parte de la d
 
 ## Tipos de Redes
 
-|Clase|Máscara|Binario|
-|---|---|---|
-|A|255.0.0.0|11111111.00000000.00000000.00000000|
-|B|255.255.0.0|11111111.11111111.00000000.00000000|
-|C|255.255.255.0|11111111.11111111.11111111.00000000|
+<SmartTable
+	tableLayout="auto"
+	headers={['Clase', 'Máscara', 'Binario']}
+	rows={[
+		['A', '255.0.0.0', '11111111.00000000.00000000.00000000'],
+		['B', '255.255.0.0', '11111111.11111111.00000000.00000000'],
+		['C', '255.255.255.0', '11111111.11111111.11111111.00000000']
+	]}
+/>
 
 - Si tomamos una dirección IP clase "B" y queremos dividirla en subredes, tomaremos los 16 bits de la parte local y pondremos en estado "1" la parte que queremos represente a las subredes.
 - Por ejemplo, si queremos 8 subredes 

@@ -47,6 +47,10 @@ const courseData = {
                 {
                     text: 'Guía 02: PPT (FLSM)',
                     href: 'ti3v35/guia02'
+                },
+                                {
+                    text: 'Guía 03: VLSM',
+                    href: 'ti3v35/guia03'
                 }
             ]
         },

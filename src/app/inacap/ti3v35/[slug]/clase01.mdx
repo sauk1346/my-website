@@ -15,61 +15,55 @@
 
 # Introducción TCP/IP
 
-- **Dirección MAC:** Es un identificador único asignado a la interfaz de red de un dispositivo para comunicaciones en una red física. También conocida como dirección de hardware (ej: `00:1A:2B:3C:4D:5E`)
-- **Dirección IPV4:** Es una dirección de 32 bits dividia en 4 octetos (grupos de 8 bits cada uno), que se representan como números decimales separados por puntos (ej: `192.168.1.1`)
-- **FLSM (Fixed Length Subnet Mask):** es un método de subneteo (división de redes IP) donde todas las subredes tienen el mismo tamaño y usan la misma máscara de subred.
-- **VLSM (Variable Length Subnet Mask):** es una técnica de subneteo que permite crear subredes de diferentes tamaños según las necesidades de cada segmento de red.
-- **DHCP (Dynamic Host Configuration Protocol):** es un protocolo de red que asigna direcciones IP automáticamente a los dispositivos dentro de una red. Esto significa que cuando un dispositivo se conecta a una red (como tu computadora, teléfono o impresora), no necesita configurar manualmente su dirección IP, ya que el servidor DHCP lo hace por él.
+<SmartTable
+	tableLayout="auto"
+	headers={['Término', 'Definición']}
+	rows={[
+		[
+			'**Dirección MAC**',
+			'Es un identificador único asignado a la interfaz de red de un dispositivo para comunicaciones en una red física. También conocida como dirección de hardware (ej: `00:1A:2B:3C:4D:5E`)'
+		],
+		[
+			'**Dirección IPv4**',
+			'Es una dirección de 32 bits dividida en 4 octetos (grupos de 8 bits cada uno), que se representan como números decimales separados por puntos (ej: `192.168.1.1`)'
+		],
+		[
+			'**FLSM (Fixed Length Subnet Mask)**',
+			'Es un método de subneteo (división de redes IP) donde todas las subredes tienen el mismo tamaño y usan la misma máscara de subred'
+		],
+		[
+			'**VLSM (Variable Length Subnet Mask)**',
+			'Es una técnica de subneteo que permite crear subredes de diferentes tamaños según las necesidades de cada segmento de red'
+		],
+		[
+			'**DHCP (Dynamic Host Configuration Protocol)**',
+			'Es un protocolo de red que asigna direcciones IP automáticamente a los dispositivos dentro de una red. Esto significa que cuando un dispositivo se conecta a una red (como tu computadora, teléfono o impresora), no necesita configurar manualmente su dirección IP, ya que el servidor DHCP lo hace por él'
+		]
+	]}
+/>
 
 ## Inet, Host y Dispositivos de Interconexión
 
 - **Host:** En una red, cualquier dispositivo que envía o recibe datos se considera un host. Esto incluye computadoras, servidores, teléfonos inteligentes, smart TVs, impresoras y otros dispositivos con capacidad de red.
 
-<table>
-	<thead>
-		<tr>
-			<th>Dispositivo Interconexión</th>
-			<th>Descripción</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td><b>Switch</b></td>
-			<td>
-                <ul>
-                    <li>Funciona en la capa 2 (enlace de datos) del modelo OSI</li>
-                    <li>Conecta dispositivos dentro de la misma red local (LAN)</li>
-                    <li>Usa direcciones MAC para enviar datos al dispositivo correcto</li>
-                    <li>No asigna direcciones IP ni permite comunicación entre redes diferentes</li>
-                    <li>Es el punto de conexión principal para hosts dentro de una misma red</li>
-                </ul>
-            </td>
-		</tr>
-        <tr>
-			<td><b>Router</b></td>
-			<td>
-                <ul>
-                    <li>Funciona en la capa 3 (red) del modelo OSI</li>
-                    <li>Conecta redes diferentes entre sí (por ejemplo, tu red local con Internet)</li>
-                    <li>Usa direcciones IP para enrutar datos entre redes</li>
-                    <li>Asigna direcciones IP a los dispositivos (función DHCP)</li>
-                    <li>Proporciona funciones de seguridad como firewall</li>
-                </ul>
-            </td>
-		</tr>
-        <tr>
-			<td><b>Access Point</b></td>
-			<td>
-                <ul>
-                    <li>Extiende una red alámbrica a conexiones inalámbricas</li>
-                    <li>Permite que dispositivos WiFi se conecten a una red existente</li>
-                    <li>Puede integrarse con un router (router inalámbrico)</li>
-                    <li>No suele tener capacidades de enrutamiento de un router</li>
-                </ul>
-            </td>
-		</tr>
-	</tbody>
-</table>
+<SmartTable
+	tableLayout="auto"
+	headers={['Dispositivo Interconexión', 'Descripción']}
+	rows={[
+		[
+			'**Switch**',
+			'[Funciona en la capa 2 (enlace de datos) del modelo OSI,Conecta dispositivos dentro de la misma red local (LAN),Usa direcciones MAC para enviar datos al dispositivo correcto,No asigna direcciones IP ni permite comunicación entre redes diferentes,Es el punto de conexión principal para hosts dentro de una misma red]'
+		],
+		[
+			'**Router**',
+			'[Funciona en la capa 3 (red) del modelo OSI,Conecta redes diferentes entre sí (por ejemplo tu red local con Internet),Usa direcciones IP para enrutar datos entre redes,Asigna direcciones IP a los dispositivos (función DHCP),Proporciona funciones de seguridad como firewall]'
+		],
+		[
+			'**Access Point**',
+			'[Extiende una red alámbrica a conexiones inalámbricas,Permite que dispositivos WiFi se conecten a una red existente,Puede integrarse con un router (router inalámbrico),No suele tener capacidades de enrutamiento de un router]'
+		]
+	]}
+/>
 
 ## Conexiones en una Red Típica
 
@@ -88,35 +82,24 @@ Arquitectura típica de una red informática estructurada, mostrando cómo fluye
 
 ## Aclaraciones
 
-<table>
-	<thead>
-		<tr>
-			<th>Afirmación</th>
-			<th>Detalle</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>
-                <li style={{listStyleType: 'none'}}>✅ <b>Todos los equipos se llaman host</b></li>
-                <li style={{listStyleType: 'none'}}>✅ <b>Todos los hosts se conectan con un switch</b></li>
-            </td>
-			<td>
-                <li>Los hosts (equipos finales) generalmente se conectan a un switch en una red estructurada corporativa o grande.</li>
-                <li>En redes domésticas pequeñas, muchos dispositivos "router" integran las funciones de router + switch + access point en un solo equipo, por lo que técnicamente los hosts se conectan a este dispositivo multifunción.</li>
-                <li><b>Importante:</b> Una red bien estructurada separa las funciones de cada dispositivo por razones de rendimiento, seguridad y escalabilidad.</li>
-            </td>
-		</tr>
-        <tr>
-			<td> ❌ <b>Un equipo se conecta directamente al router</b></td>
-			<td>En redes empresariales estructuradas, esto es generalmente falso. Los hosts se conectan al switch, y el switch se conecta al router</td>
-		</tr>
-        <tr>
-			<td>✅ <b>Un equipo se conecta directament al switch</b></td>
-			<td>Correcto en redes estructuradas. El switch distribuye los datos dentro de la red local</td>
-		</tr>
-	</tbody>
-</table>
+<SmartTable
+	tableLayout="fixed"
+	headers={['Afirmación', 'Detalle']}
+	rows={[
+		[
+			'[✅ **Todos los equipos se llaman host**,✅ **Todos los hosts se conectan con un switch**]',
+			'[Los hosts (equipos finales) generalmente se conectan a un switch en una red estructurada corporativa o grande,En redes domésticas pequeñas muchos dispositivos router integran las funciones de router + switch + access point en un solo equipo por lo que técnicamente los hosts se conectan a este dispositivo multifunción,**Importante:** Una red bien estructurada separa las funciones de cada dispositivo por razones de rendimiento seguridad y escalabilidad]'
+		],
+		[
+			'❌ **Un equipo se conecta directamente al router**',
+			'En redes empresariales estructuradas, esto es generalmente falso. Los hosts se conectan al switch, y el switch se conecta al router'
+		],
+		[
+			'✅ **Un equipo se conecta directamente al switch**',
+			'Correcto en redes estructuradas. El switch distribuye los datos dentro de la red local'
+		]
+	]}
+/>
 
 ## Conceptos Básicos de Redes
 
@@ -138,16 +121,16 @@ Arquitectura típica de una red informática estructurada, mostrando cómo fluye
 ### Puertos
 - **Total de puertos**: 65535 (numerados del 0-65535)
 - **Puertos bien conocidos**: 0-1023 (requieren privilegios de administrador)
-- **Puerto 445**: Usado para SMB (Server Message Block), compartición de archivos en Windows
+- **Puerto `445`**: Usado para SMB (Server Message Block), compartición de archivos en Windows
 - **Puertos básicos importantes**:
-  - 20/21: FTP (transferencia de archivos)
-  - 22: SSH (acceso remoto seguro)
-  - 23: Telnet (acceso remoto no seguro)
-  - 25: SMTP (correo saliente)
-  - 53: DNS (resolución de nombres)
-  - 80: HTTP (web)
-  - 443: HTTPS (web segura)
-  - 110: POP3 (correo entrante)
+  - `20/21`: FTP (transferencia de archivos)
+  - `22`: SSH (acceso remoto seguro)
+  - `23`: Telnet (acceso remoto no seguro)
+  - `25`: SMTP (correo saliente)
+  - `53`: DNS (resolución de nombres)
+  - `80`: HTTP (web)
+  - `443`: HTTPS (web segura)
+  - `110`: POP3 (correo entrante)
 
 ### Conceptos de DNS
 - **DNS**: Sistema de nombres de dominio, traduce nombres de dominio a direcciones IP

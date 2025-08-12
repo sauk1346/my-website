@@ -1,5 +1,3 @@
-import ExternalLink from '@/components/ui/ExternalLink';
-
 # Clase 04: Estadística (2)
 
 ## Población vs Muestra
@@ -28,11 +26,15 @@ $$
 \end{aligned}
 $$
 
-| Hipótesis Alternativa | Rechazar Hipótesis Nula Si: |
-|----------------------|------------------------------|
-| $\mu > \mu_0$ | $Z > z_\alpha$ |
-| $\mu < \mu_0$ | $Z < -z_\alpha$ |
-| $\mu \neq \mu_0$ | $\|Z\| > z_{\alpha/2}$ o bien $Z < -z_{\alpha/2}$ |
+<SmartTable
+	tableLayout="fixed"
+	headers={['Hipótesis Alternativa', 'Rechazar Hipótesis Nula Si:']}
+	rows={[
+		['$\\mu > \\mu_0$', '$Z > z_\\alpha$'],
+		['$\\mu < \\mu_0$', '$Z < -z_\\alpha$'],
+		['$\\mu \\neq \\mu_0$', '$|Z| > z_{\\alpha/2}$ o bien $Z < -z_{\\alpha/2}$']
+	]}
+/>
 
 - $\mu$: Media poblacional
 - $\mu_0$: Valor de la media bajo la hipótesis nula

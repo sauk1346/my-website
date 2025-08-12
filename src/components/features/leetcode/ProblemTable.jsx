@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 import { usePagination } from '@/hooks/usePagination';
 import { useTableSort } from '@/hooks/useTableSort';
-import CustomLink from '@/components/ui/CustomLink';
+import { SmartLink } from '@/components/mdx';
 import PaginationControls from '@/components/common/table/PaginationControls';
 import SortableHeader from '@/components/common/table/SortableHeader';
 import styles from './ProblemTable.module.css';
@@ -112,12 +112,11 @@ const ProblemTable = ({
                   {id}
                 </td>
                 <td data-label="Descripción">
-                  <CustomLink 
+                  <SmartLink 
                     href={`${platform}/${id.toLowerCase()}`}
-                    className={styles.problemLink}
                   >
                     {problem.title}
-                  </CustomLink>
+                  </SmartLink>
                 </td>
                 <td data-label="Temas">
                   {problem.topics?.join(", ") || ''}

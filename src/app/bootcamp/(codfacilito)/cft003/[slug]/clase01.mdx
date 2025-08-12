@@ -1,10 +1,8 @@
-import ExternalLink from '@/components/ui/ExternalLink';
-
 # Introducción a Git
 
 ## Material Clase
 
-- <ExternalLink href='/bootcamps/codfacilito/cft003/docs/git.pdf'>git.pdf</ExternalLink>
+- [git.pdf](/bootcamps/codfacilito/cft003/docs/git.pdf)
 
 Git es un sistema de control de versiones.
 
@@ -27,15 +25,18 @@ Git es un sistema de control de versiones.
 
 ## Commando básicos
 
-|Comando|Descripción|
-|---|---|
-|`git init`|Permite inicializar una carpeta en un repositorio|
-|`git clone`|Clonar (descargar) un proyecto remoto a local|
-|`git status`|Ver si hay cambios en el proyecto|
-|`git add .`|Guardar todos los cambios del directorio actual|
-|`git branch`|Para saber en qué rama estamos|
-|`git merge`|Combina los cambios de una rama con otra rama|
-
+<SmartTable
+	tableLayout="auto"
+	headers={['Comando', 'Descripción']}
+	rows={[
+		['`git init`', 'Permite inicializar una carpeta en un repositorio'],
+		['`git clone`', 'Clonar (descargar) un proyecto remoto a local'],
+		['`git status`', 'Ver si hay cambios en el proyecto'],
+		['`git add .`', 'Guardar todos los cambios del directorio actual'],
+		['`git branch`', 'Para saber en qué rama estamos'],
+		['`git merge`', 'Combina los cambios de una rama con otra rama']
+	]}
+/>
 
 ## Ejemplo Proyecto
 

@@ -1,4 +1,3 @@
-import CustomLink from '@/components/ui/CustomLink';
 import styles from './LanguagePage.module.css';
 import Link from 'next/link';
 

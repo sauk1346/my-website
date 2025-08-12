@@ -1,5 +1,5 @@
 import styles from './CftTable.module.css';
-import CustomLink from '@/components/ui/CustomLink';
+import { SmartLink } from '@/components/mdx';
 
 const CftTable = ({ courseData }) => {
   // Validación de props
@@ -42,12 +42,11 @@ const CftTable = ({ courseData }) => {
                       </td>
                       <td>
                         {classItem.link ? (
-                          <CustomLink 
+                          <SmartLink 
                             href={classItem.link} 
-                            className={styles.courseLink}
                           >
                             {classItem.name}
-                          </CustomLink>
+                          </SmartLink>
                         ) : (
                           <span>{classItem.name}</span>
                         )}
@@ -55,12 +54,11 @@ const CftTable = ({ courseData }) => {
                         {classItem.exercises && (
                           <>
                             {' - '}
-                            <CustomLink 
+                            <SmartLink 
                               href={classItem.exercises.link} 
-                              className={styles.courseLink}
                             >
                               {classItem.exercises.name}
-                            </CustomLink>
+                            </SmartLink>
                           </>
                         )}
                       </td>

@@ -1,4 +1,4 @@
-import CustomLink from '@/components/ui/CustomLink';
+import { SmartLink } from '@/components/mdx';
 import styles from './SectionTable.module.css';
 
 const SectionTable = ({
@@ -42,12 +42,11 @@ const SectionTable = ({
                       </td>
                       <td data-label="Descripción">
                         {section.link ? (
-                          <CustomLink
+                          <SmartLink
                             href={basePath ? `${basePath}/${section.link}` : section.link}
-                            className={styles.sectionLink}
                           >
                             {section.title}
-                          </CustomLink>
+                          </SmartLink>
                         ) : (
                           <span className={styles.sectionTitle}>
                             {section.title}

@@ -29,7 +29,7 @@ const BootcampTable = ({ courses, platformName }) => { // ✅ Ahora recibe platf
               </td>
               <td data-label="Nombre">
                 {course.titleUrl ? (
-                  <SmartLink href={course.titleUrl} className={styles.titleLink}>
+                  <SmartLink href={course.titleUrl}>
                     {course.title}
                   </SmartLink>
                 ) : (

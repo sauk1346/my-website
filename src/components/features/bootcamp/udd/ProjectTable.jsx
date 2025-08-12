@@ -1,6 +1,5 @@
 import React from 'react';
-import ExternalLink from '@/components/ui/ExternalLink';
-import CustomLink from '@/components/ui/CustomLink';
+import { SmartLink } from '@/components/mdx';
 import styles from './ProjectTable.module.css';
 
 const ProjectTable = ({ projects }) => {
@@ -31,27 +30,27 @@ const ProjectTable = ({ projects }) => {
                 <td className={styles.dateCell}>{project.date}</td>
                 <td className={styles.projectCell}>
                   {project.projectLink ? (
-                    <CustomLink href={project.projectLink} className={styles.projectLink}>
+                    <SmartLink href={project.projectLink}>
                       {project.title}
-                    </CustomLink>
+                    </SmartLink>
                   ) : (
                     project.title
                   )}
                 </td>
                 <td className={styles.demoCell}>
                   {project.demoLink ? (
-                    <CustomLink href={project.demoLink} className={styles.projectLink}>
+                    <SmartLink href={project.demoLink}>
                       Ver
-                    </CustomLink>
+                    </SmartLink>
                   ) : (
                     <span>-</span>
                   )}
                 </td>
                 <td className={styles.deliveryCell}>
                   {project.deliveryLink ? (
-                    <ExternalLink href={project.deliveryLink} className={styles.deliveryLink}>
+                    <SmartLink href={project.deliveryLink}>
                       GitHub
-                    </ExternalLink>
+                    </SmartLink>
                   ) : (
                     <span>-</span>
                   )}

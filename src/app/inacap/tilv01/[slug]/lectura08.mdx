@@ -1,47 +1,82 @@
-import { Quiz } from '@/components/features/inacap/QuizComponent';
-
 # Soluciones a problemas y criterios de factibilidad con técnicas de testing
 
 ## Técnicas de testing
 Su propósito es garantizar que el software es funcional, seguro, confiable y cumpla con las expectativas del usuario y los requisitos del negocio.
 
-1. **Técnicas estáticas:** Incluyen revisiones, inspecciones y análisis estático de código sin ejecutar el software
-2. **Técnicas dinámicas:** Involucran la ejecución del software y comprenden pruebas de caja negra y caja blanca
+<SmartTable
+	tableLayout="auto"
+	headers={['Técnica', 'Descripción']}
+	rows={[
+		['**Técnicas estáticas**', 'Incluyen revisiones, inspecciones y análisis estático de código sin ejecutar el software'],
+		['**Técnicas dinámicas**', 'Involucran la ejecución del software y comprenden pruebas de caja negra y caja blanca']
+	]}
+/>
 
 ## Identificación de problamas comunes en el desarrollo de software
 
-1. **Defectos funcionales:** Fallas en las funcionalidad previstas del software
-2. **Defectos de rendimiento:** Problemas relacionados con la velocidad, capacidad de respuesta y eficiencia del software
-3. **Problamas de usabiliadad:** Dificultades que enfrentan los usuarios al interactuar con el software
-4. **Problemas de seguridad:** Vulnerabilidades que pueden ser explotadas para comprometer el sistema
+<SmartTable
+	tableLayout="auto"
+	headers={['Tipo de problema', 'Descripción']}
+	rows={[
+		['**Defectos funcionales**', 'Fallas en las funcionalidades previstas del software'],
+		['**Defectos de rendimiento**', 'Problemas relacionados con la velocidad, capacidad de respuesta y eficiencia del software'],
+		['**Problemas de usabilidad**', 'Dificultades que enfrentan los usuarios al interactuar con el software'],
+		['**Problemas de seguridad**', 'Vulnerabilidades que pueden ser explotadas para comprometer el sistema']
+	]}
+/>
 
 ## Soluciones tentativas a problemas
 
-1. **Pruebas unitarias:** Detectar y solucionar erroes en componentes individuales del software
-2. **Pruebas de integración:** Identificar y resolver problemas en la interacción entre diferentes módulos
-3. **Pruebas de sistema:** Asegurar que el sistema completo funciona correctamente bajo condiciones específicas
-4. **Pruebas de aceptación:** Verificar que el software cumple con los requisitos del usuarios y los criterios de aceptación
+<SmartTable
+	tableLayout="auto"
+	headers={['Tipo de prueba', 'Propósito']}
+	rows={[
+		['**Pruebas unitarias**', 'Detectar y solucionar errores en componentes individuales del software'],
+		['**Pruebas de integración**', 'Identificar y resolver problemas en la interacción entre diferentes módulos'],
+		['**Pruebas de sistema**', 'Asegurar que el sistema completo funciona correctamente bajo condiciones específicas'],
+		['**Pruebas de aceptación**', 'Verificar que el software cumple con los requisitos del usuario y los criterios de aceptación']
+	]}
+/>
 
 ## Criterios de factibilidad
 Son fundamentales para determinar la vulnerabilidad y la conveniencia de implementar pruebas de testing en un proyecto de desarrollo de software
 
-1. **Disponibilidad de recursos:** Evaluar si se cuenta con las herramientas, tiempo y personales necesarios para realizar las pruebas
-2. **Costo-beneficio:** analizar El costo de implementar la solución frente al beneficio que se obtendrá
-3. **Impacto en el proyecto:** Considerar cómo la solución afectará el cronograma, la calidad y el acance del proyecto
-4. **Compatibilidad con el entorno de desarrollo:** Verificar si las técnicas de testing son compatibles con las tecnologías y procesos utilizados
+<SmartTable
+	tableLayout="auto"
+	headers={['Criterio de factibilidad', 'Descripción']}
+	rows={[
+		['**Disponibilidad de recursos**', 'Evaluar si se cuenta con las herramientas, tiempo y personal necesarios para realizar las pruebas'],
+		['**Costo-beneficio**', 'Analizar el costo de implementar la solución frente al beneficio que se obtendrá'],
+		['**Impacto en el proyecto**', 'Considerar cómo la solución afectará el cronograma, la calidad y el alcance del proyecto'],
+		['**Compatibilidad con el entorno de desarrollo**', 'Verificar si las técnicas de testing son compatibles con las tecnologías y procesos utilizados']
+	]}
+/>
 
 ## Modelos existentes en la industria
-1. **V-model:** Un enfoque de testing que se realiza en paralelo con el desarrollo, donde cada fase de desarrollo tiene una fase de testing correspondiente
-2. **Agile model:** Enfoque iterativo que integra pruebas continuas a lo largo del ciclo de desarrollo, promoviendo la colaboración entre equipos de desarrollo y de testing
-3. **Devops** Combina desarrollo y operaciones para mejorar la colaboración y la entrega continua, integrando testing automatizado en el proceso de entrega
+
+<SmartTable
+	tableLayout="auto"
+	headers={['Modelo', 'Descripción']}
+	rows={[
+		['**V-model**', 'Un enfoque de testing que se realiza en paralelo con el desarrollo, donde cada fase de desarrollo tiene una fase de testing correspondiente'],
+		['**Agile model**', 'Enfoque iterativo que integra pruebas continuas a lo largo del ciclo de desarrollo, promoviendo la colaboración entre equipos de desarrollo y de testing'],
+		['**DevOps**', 'Combina desarrollo y operaciones para mejorar la colaboración y la entrega continua, integrando testing automatizado en el proceso de entrega']
+	]}
+/>
 
 ## Ejecución de técnicas de testing
 
-1. **Planificación de pruebas:** Definir los objetivos, alcance, enfoque y recursos necesarios para las pruebas
-2. **Diseño de casos de prueba:** Crear escenarios detallados que cubran todos los requisitos y especificaciones del software
-3. **Ejecución de pruebas:** Realizar las pruebas según lo planificado y registrar los resultados
-4. **Análisis de resultados:** Evaluzar los resultados de las pruebas para identificar defectos y áreas de mejora
-5. **Informe de pruebas:** Documentar los hallazgos, conclusiones y recomendaciones para futuras acciones
+<SmartTable
+	tableLayout="auto"
+	headers={['Fase', 'Descripción']}
+	rows={[
+		['**Planificación de pruebas**', 'Definir los objetivos, alcance, enfoque y recursos necesarios para las pruebas'],
+		['**Diseño de casos de prueba**', 'Crear escenarios detallados que cubran todos los requisitos y especificaciones del software'],
+		['**Ejecución de pruebas**', 'Realizar las pruebas según lo planificado y registrar los resultados'],
+		['**Análisis de resultados**', 'Evaluar los resultados de las pruebas para identificar defectos y áreas de mejora'],
+		['**Informe de pruebas**', 'Documentar los hallazgos, conclusiones y recomendaciones para futuras acciones']
+	]}
+/>
 
 # Actividad de Práctica 08
 

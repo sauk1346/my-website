@@ -1,13 +1,10 @@
-import { Quiz } from '@/components/features/inacap/QuizComponent';
-import ExternalLink from '@/components/ui/ExternalLink';
-
 # Técnicas y Herramientas de Testing
 Existen múltiplas técnicas de testing, dividias en estáticas y dinámicas, que permiten a los equipos de desarrollo identificar y corregir defectos en diferentes etapas del ciclo de vida del software.
 
 ## Material Complementario
 
-- <ExternalLink href='/inacap/tilv01/docs/glosario02.pdf'>Glosario</ExternalLink>
-- <ExternalLink href='/inacap/tilv01/docs/guia03.pdf'>Técnicas de Testing</ExternalLink>
+- [Glosario](/inacap/tilv01/docs/glosario02.pdf)
+- [Técnicas de Testing](/inacap/tilv01/docs/guia03.pdf)
 
 ## Técnicas de Testing
 Métodos sistemáticos utilizados para diseñar y ejecutar pruebas, con el objetivo de encontrar defectos en el software y aseguridad su calidad.
@@ -29,12 +26,15 @@ Implican la ejecución del software para identificar defectos que ocurren durant
 
 ## Herramientas de Testing
 
-|testing estático|testing dinámico|
-|---|---|
-|sonarqube|selenium|
-|checkstyle|JUnit|
-||LoadRunner|
-
+<SmartTable
+	tableLayout="fixed"
+	headers={['Testing estático', 'Testing dinámico']}
+	rows={[
+		['sonarqube', 'selenium'],
+		['checkstyle', 'JUnit'],
+		['', 'LoadRunner']
+	]}
+/>
 
 ## Alcance de los tipos de testing
 

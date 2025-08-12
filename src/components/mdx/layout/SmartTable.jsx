@@ -122,7 +122,9 @@ const SmartTable = ({
           <ul className={styles.smartList}>
             {lists[listId].map((item, index) => (
               <li key={index} className={styles.smartListItem}>
-                <div className={styles.smartListContent}>{item}</div>
+                <div className={styles.smartListContent}>
+                  {processContent(item)} {/* ← CAMBIO: Procesar cada item recursivamente */}
+                </div>
               </li>
             ))}
           </ul>
@@ -149,7 +151,7 @@ const SmartTable = ({
           <ul className={styles.simpleList}>
             {items.map((item, index) => (
               <li key={index} className={styles.simpleListItem}>
-                {item}
+                {processContent(item)} {/* ← CAMBIO: Procesar cada item recursivamente */}
               </li>
             ))}
           </ul>
@@ -166,7 +168,7 @@ const SmartTable = ({
           <ol className={styles.simpleList}>
             {items.map((item, index) => (
               <li key={index} className={styles.simpleListItem}>
-                {item}
+                {processContent(item)} {/* ← CAMBIO: Procesar cada item recursivamente */}
               </li>
             ))}
           </ol>
@@ -182,7 +184,7 @@ const SmartTable = ({
           <ul className={styles.simpleList}>
             {items.map((item, index) => (
               <li key={index} className={styles.simpleListItem}>
-                {item}
+                {processContent(item)} {/* ← CAMBIO: Procesar cada item recursivamente */}
               </li>
             ))}
           </ul>

@@ -1,7 +1,6 @@
-import ExternalLink from '@/components/ui/ExternalLink';
-
 # Controles de Mitigación y Gestión de Riesgos
-**Material Clase:** <ExternalLink href="/inacap/ti3v34/docs/ppt35.pdf">control-mitigacion.pdf</ExternalLink>
+
+**Material Clase:** [control-mitigacion.pdf](/inacap/ti3v34/docs/ppt35.pdf)
 
 ## CVSS
 *Common Vulnerability Scoring System*. Sistema común de puntuación de vulnerabilidades.
@@ -21,41 +20,88 @@ Factores como el Vector de Ataque, los Privilegios Requeridos y el posible impac
 
 ### Según la complejidad del ataque
 
-|||
-|---|---|
-|Baja (10)|Es fácil de explotar, no se requieren habilidades especiales ni configuración|
-|Alta (5)||
+<SmartTable
+	tableLayout="auto"
+	headers={['Complejidad del Ataque', 'Descripción']}
+	rows={[
+		[
+			'Baja (10)',
+			'Es fácil de explotar, no se requieren habilidades especiales ni configuración'
+		],
+		[
+			'Alta (5)',
+			'Es difícil de explotar, requiere habilidades especializadas, condiciones específicas o configuración compleja para tener éxito'
+		]
+	]}
+/>
 
 - 10, por la facilidad de acceso
 - 5, por la dificultad
 
 ### Privilegios requeridos (PR) ¿?El atacante necesita privilegios previos para explotar la vulnerabilidad?
 
-|||
-|---|---|
-|Ninguno||
-|Bajo||
-|Alto||
+<SmartTable
+	tableLayout="auto"
+	headers={['PR', 'Descripción']}
+	rows={[
+		[
+			'Ninguno',
+			'El atacante no necesita privilegios previos, puede explotar la vulnerabilidad sin autenticación'
+		],
+		[
+			'Bajo',
+			'El atacante necesita privilegios básicos de usuario para explotar la vulnerabilidad'
+		],
+		[
+			'Alto',
+			'El atacante necesita privilegios administrativos o de alto nivel para explotar la vulnerabilidad'
+		]
+	]}
+/>
 
 ### Vector de Ataque(AV) ¿Cómo se explota la vulnerabilidad?
 
-|||
-|---|---|
-|Red (10)|La vulnerabilidad se puede explotar de formam remota a través de la red|
-|Local (5)|Se necesita acceso físico o local al sistema afectado|
-|Adyacente (5)|El atacante debe estar en una red local (por ejemplo, una red Wi-fi compartida)|
-|Físico (0)|El atacante necesita tener acceso físico al diapositivo para explotarlo|
+<SmartTable
+	tableLayout="auto"
+	headers={['AV', 'Descripción']}
+	rows={[
+		[
+			'Red (10)',
+			'La vulnerabilidad se puede explotar de forma remota a través de la red'
+		],
+		[
+			'Local (5)',
+			'Se necesita acceso físico o local al sistema afectado'
+		],
+		[
+			'Adyacente (5)',
+			'El atacante debe estar en una red local (por ejemplo, una red Wi-fi compartida)'
+		],
+		[
+			'Físico (0)',
+			'El atacante necesita tener acceso físico al dispositivo para explotarlo'
+		]
+	]}
+/>
 
 ### Interacción del Usuario (UI) ¿El atacante necesita que un usuario realice alguna cción?
 
-|||
-|---|---|
-|Ninguna (10)|El atacante puede explotar la vulnerabilidad sin intervensción del usuario|
-|Requerida (5)|El usuario necesita realizar alguna acción, como hacer clic en un enlace o abrir un archivo|
-
+<SmartTable
+	tableLayout="auto"
+	headers={['UI', 'Descripción']}
+	rows={[
+		[
+			'Ninguna (10)',
+			'El atacante puede explotar la vulnerabilidad sin intervensción del usuario'
+		],
+		[
+			'Requerida (5)',
+			'El usuario necesita realizar alguna acción, como hacer clic en un enlace o abrir un archivo'
+		]
+	]}
+/>
 
 Las métricas se ajustan con el tiempo, teniendo encuanta la existencia de parches.
-
 
 - Solución Temporal (RL)
     - Ninguna 
@@ -73,19 +119,6 @@ Permiten ajustar el puntaje base de acuerdo con el impacto específico en un ent
 
 - Métricas impacto ambiental
     - Impacto de confidencialidad, integridad y disponibilidad (CIA): Se ajustan de acuerdo...
-
-
-**Profe:** 
-- \*muestra planilla de activos de información\*
-- Es un modelo de inventario de activos
-- Esta tablas son una referencia para la evaluación 3
-
-|Información                                                                            |Análisis de Criticidad                               |
-|Nombre activo|Tipo|Ubicación|Reponsable/dueño|Soporte|Persona autorizada para manipular|Confidencialidad|Integridad|Disponobilidad|Criticidad|
-|.......|
-
-Identificación y Caracterización de los riesgos|...|
-|Nombre activo|Confidencialidad|Integridad|Disponibilida|Criticidad|Control para mitigar el riesgo|Cumplimiento|Nombre del producto esperado|Nombre del archivo evidencia|
 
 ## Evaluación Impacto
 
@@ -133,15 +166,6 @@ Mide la dificultad de explotación
 - Complejidad de ataque|
 - Requerimiento de priviliegios|
 - Interacción de USuario|
-
-
-## Explicación caso anterior
-
-|métrica| grado| descripción|
-||||
-||||
-||||
-||||
 
 ## Implementación y monitoreo de controles
 

@@ -1,26 +1,26 @@
-import ExternalLink from '@/components/ui/ExternalLink';
-
 # Eventos e Incidentes
 
-**Material Clase:** <ExternalLink href="/inacap/ti3v34/docs/ppt14.pdf">Eventos-Incidentes.pdf</ExternalLink>
+**Material Clase:** [Eventos-Incidentes.pdf](/inacap/ti3v34/docs/ppt14.pdf)
 
 ## Eventos
 
-<img 
-    src="/inacap/ti3v34/images/fig12.png"
-    style={{ display: 'block', margin: '0 auto', width:'60%' }} 
+<SmartFigure
+	id="definicion-eventos"
+	src="/inacap/ti3v34/images/fig12.png"
+	alt="Definición de Eventos"
+	caption="Definición de Eventos"
+	size="large"
 />
-<br/>
-
-Cualquier actividad o suceso significativo q ocurre dentro del sistema 
 
 ### Características
 
-<img 
-    src="/inacap/ti3v34/images/fig13.png"
-    style={{ display: 'block', margin: '0 auto', width:'60%' }} 
+<SmartFigure
+	id="caracteristicas-eventos"
+	src="/inacap/ti3v34/images/fig13.png"
+	alt="Características de los Eventos"
+	caption="Características de los Eventos"
+	size="large"
 />
-<br/>
 
 **Ejemplos**
 
@@ -32,13 +32,15 @@ Cualquier actividad o suceso significativo q ocurre dentro del sistema
 6. Cambio de configuración del sistema
 7. Transacciones de red
 
-### Importancia de los Eventos
+### Importancia
 
-<img 
-    src="/inacap/ti3v34/images/fig14.png"
-    style={{ display: 'block', margin: '0 auto', width:'60%' }} 
+<SmartFigure
+	id="importancia-eventos"
+	src="/inacap/ti3v34/images/fig14.png"
+	alt="Importancia de los Eventos"
+	caption="Importancia de los Eventos"
+	size="large"
 />
-<br/>
 
 - **Identificación de patrones:** Para así facilitar la detección de anomalías y posibles amenazas
 - **Investigación y análisis forense:** Eventos registrados ayudan a los equipos de respuesta a entender cómo ocurrió un incidente
@@ -46,11 +48,13 @@ Cualquier actividad o suceso significativo q ocurre dentro del sistema
 
 ## Incidente
 
-<img 
-    src="/inacap/ti3v34/images/fig15.png"
-    style={{ display: 'block', margin: '0 auto', width:'60%' }} 
+<SmartFigure
+	id="evento-vs-incidente"
+	src="/inacap/ti3v34/images/fig15.png"
+	alt="Evento vs Incidente"
+	caption="Evento vs Incidente"
+	size="large"
 />
-<br/>
 
 - **Evento:** cualquier suceso o acción que ocurre dentro del sistema
 	- No todos los eventos son negativos o peligrosos
@@ -59,22 +63,54 @@ Cualquier actividad o suceso significativo q ocurre dentro del sistema
 
 ### Tipos de Incidentes
 
-- **Accesos no autorizados:** Una persona accede a sistemas, redes o datos sin autorización
-- **Robo de datos:** Se sustraen datos sensibles o confidenciales
-- **Ataques de Malware:** Virus, ransomware, etc que comprometen la seguridad de los sistemas
-- **Phishing:** Atacantes engañan a usuarios para que revelen información sensible
-- **DDoS:** Atacantes inundan un sistema o red con tráfico
-- **Pérdida o robo de dispositivos:** Laptops, teléfonos, dispositivos de almacenamiento
-- **Errores humanos:** Enviar información sensible a persona equivocada. No seguir políticas de la empresa
-- **Exposición de datos accidental:** Errores o fallos de configuración, que resultan en la divulgación no autorizada de datos
+<SmartTable
+	tableLayout="auto"
+	headers={['Tipo de Incidente', 'Descripción']}
+	rows={[
+		[
+			'**Accesos no autorizados**',
+			'Una persona accede a sistemas, redes o datos sin autorización'
+		],
+		[
+			'**Robo de datos**',
+			'Se sustraen datos sensibles o confidenciales'
+		],
+		[
+			'**Ataques de Malware**',
+			'Virus, ransomware, etc que comprometen la seguridad de los sistemas'
+		],
+		[
+			'**Phishing**',
+			'Atacantes engañan a usuarios para que revelen información sensible'
+		],
+		[
+			'**DDoS**',
+			'Atacantes inundan un sistema o red con tráfico'
+		],
+		[
+			'**Pérdida o robo de dispositivos**',
+			'Laptops, teléfonos, dispositivos de almacenamiento'
+		],
+		[
+			'**Errores humanos**',
+			'Enviar información sensible a persona equivocada. No seguir políticas de la empresa'
+		],
+		[
+			'**Exposición de datos accidental**',
+			'Errores o fallos de configuración, que resultan en la divulgación no autorizada de datos'
+		]
+	]}
+/>
 
 ### Características de un Incidente
 
-<img 
-    src="/inacap/ti3v34/images/fig16.png"
-    style={{ display: 'block', margin: '0 auto', width:'60%' }} 
+<SmartFigure
+	id="caracteristica-incidente"
+	src="/inacap/ti3v34/images/fig16.png"
+	alt="Característica de un Incidente"
+	caption="Característica de un Incidente"
+	size="large"
 />
-<br/>
 
 - **Impacto:** Dependiendo de su naturaleza, un incidente puede tener diferentes grados de impacto, desde interrupciones menores hasta daños graves a la reputación o la operatividad de la empresa
 - **Urgencia:** Algunos incidentes deben ser tratados con rapidez debido a su capacidad para propagarse rápidamente o causar daños significativos
@@ -82,49 +118,114 @@ Cualquier actividad o suceso significativo q ocurre dentro del sistema
 
 ## Gestión de Incidentes de Seguridad
 
-<img 
-    src="/inacap/ti3v34/images/fig17.png"
-    style={{ display: 'block', margin: '0 auto', width:'60%' }} 
+<SmartFigure
+	id="gestion-incidente-seguridad"
+	src="/inacap/ti3v34/images/fig17.png"
+	alt="Gestión de Incidentes de Seguridad"
+	caption="Gestión de Incidentes de Seguridad"
+	size="large"
 />
-<br/>
 
-- **Identificación:** Detectar y reconocer que un incidente ha ocurrido
-- **Clasificación:** Evaluar la gravedad del incidente y determinar su impacto potencial
-- **Contenición:** Tomar medidas para limitar el alcance del incidente y evitar que se propague
-- **Erradicación:** Eliminar la causa raíz del incidente (malware o cerrar brechas de seguridad)
-- **Recuperación:** Restaurar los sistemas y servicios afectados a su funcionamiento normal
-- **Lecciones aprendidas:** Analizar el incidente para comprender cómo ocurrió y mejorar las medidas de seguridad para evitar futuros incidentes
+<SmartTable
+	tableLayout="auto"
+	headers={['Fase', 'Descripción']}
+	rows={[
+		[
+			'**Identificación**',
+			'Detectar y reconocer que un incidente ha ocurrido'
+		],
+		[
+			'**Clasificación**',
+			'Evaluar la gravedad del incidente y determinar su impacto potencial'
+		],
+		[
+			'**Contención**',
+			'Tomar medidas para limitar el alcance del incidente y evitar que se propague'
+		],
+		[
+			'**Erradicación**',
+			'Eliminar la causa raíz del incidente (malware o cerrar brechas de seguridad)'
+		],
+		[
+			'**Recuperación**',
+			'Restaurar los sistemas y servicios afectados a su funcionamiento normal'
+		],
+		[
+			'**Lecciones aprendidas**',
+			'Analizar el incidente para comprender cómo ocurrió y mejorar las medidas de seguridad para evitar futuros incidentes'
+		]
+	]}
+/>
 
 ## Indicadores de Compromiso
 
-<img 
-    src="/inacap/ti3v34/images/fig18.png"
-    style={{ display: 'block', margin: '0 auto', width:'60%' }} 
+<SmartFigure
+	id="tipos-ioc"
+	src="/inacap/ti3v34/images/fig18.png"
+	alt="Tipos de IOC"
+	caption="Tipos de IOC"
+	size="large"
 />
-<br/>
 
-- **Direcciones IP Maliciosas:** Conocidas por estar asociadas con actividades cibercriminales, como ataque de denegación de servicios (DDoS), malware o phishing
-- **URL o dominios maliciosos:** Sitios web o dominios asociados con malware, ransomware, o campañas de phishing que intentan engañar a los usuarios para que descarguen software malicioso o entreguen información sensible
-- **Hashes de archivos:** Un hash es una *huella digital* única de un archivo. Si un archivo malicioso ha sido identificado, su hash puede ser utilizado como un IOC para buscar archivos idénticos en otros sistemas
-- **Nombres de archivos y rutas:** Los archivos maliciosos pueden tener nombres o ubicaciones específicas dentro de los sistemas. Por ejemplo, ciertos archivos con nombres sospechosos o ubicaciones inusuales pueden indicar que el sistema ha sido comprometido
-- **Tiempos de modificación o creación de archivos:** Cambios inesperados en los timestamps de los archivos pueden indicar que un atacante ha alterado o creado nuevos archivos para llevar a cabo un ataque
-- **Comportamiento anómalo:** Actividades inusiales, como un aumento inesperado en el tráfico de la red, acceso no autorizado a ciertos recursos, o el uso de cuentas de administrador sin justificación, son señales de posibles compromisos
-- **Cadenas de comandos "scripts":** Secuencias de comandos específicos que los atacantes utilizan para ejecutar ataques. Por ejemplo, comandos de PowerShell utilizados para ejecutar malware o extraer datos de una red comprometida
-- **Direcciones de correo o alias asociados a phishing:** Las direcciones de correo electrónico que se utilizan en campañas de phishing o suplantación de identidad pueden ser un IOC útil para detectar intentos de fraude
-- **Certificados digitales fraudulentos:** Manipulados o emitidos por fuentes no confiables, utilizados para cifrar comunicaciones maliciosas
+<SmartTable
+	tableLayout="auto"
+	headers={['Tipo de IOC', 'Descripción']}
+	rows={[
+		[
+			'**Direcciones IP Maliciosas**',
+			'Conocidas por estar asociadas con actividades cibercriminales, como ataque de denegación de servicios (DDoS), malware o phishing'
+		],
+		[
+			'**URL o dominios maliciosos**',
+			'Sitios web o dominios asociados con malware, ransomware, o campañas de phishing que intentan engañar a los usuarios para que descarguen software malicioso o entreguen información sensible'
+		],
+		[
+			'**Hashes de archivos**',
+			'Un hash es una huella digital única de un archivo. Si un archivo malicioso ha sido identificado, su hash puede ser utilizado como un IOC para buscar archivos idénticos en otros sistemas'
+		],
+		[
+			'**Nombres de archivos y rutas**',
+			'Los archivos maliciosos pueden tener nombres o ubicaciones específicas dentro de los sistemas. Por ejemplo, ciertos archivos con nombres sospechosos o ubicaciones inusuales pueden indicar que el sistema ha sido comprometido'
+		],
+		[
+			'**Tiempos de modificación o creación de archivos**',
+			'Cambios inesperados en los timestamps de los archivos pueden indicar que un atacante ha alterado o creado nuevos archivos para llevar a cabo un ataque'
+		],
+		[
+			'**Comportamiento anómalo**',
+			'Actividades inusiales, como un aumento inesperado en el tráfico de la red, acceso no autorizado a ciertos recursos, o el uso de cuentas de administrador sin justificación, son señales de posibles compromisos'
+		],
+		[
+			'**Cadenas de comandos "scripts"**',
+			'Secuencias de comandos específicos que los atacantes utilizan para ejecutar ataques. Por ejemplo, comandos de PowerShell utilizados para ejecutar malware o extraer datos de una red comprometida'
+		],
+		[
+			'**Direcciones de correo o alias asociados a phishing**',
+			'Las direcciones de correo electrónico que se utilizan en campañas de phishing o suplantación de identidad pueden ser un IOC útil para detectar intentos de fraude'
+		],
+		[
+			'**Certificados digitales fraudulentos**',
+			'Manipulados o emitidos por fuentes no confiables, utilizados para cifrar comunicaciones maliciosas'
+		]
+	]}
+/>
 
 ### Importancia de los IOC
 
-<img 
-    src="/inacap/ti3v34/images/fig19.png"
-    style={{ display: 'block', margin: '0 auto', width:'60%' }} 
+<SmartFigure
+	id="importancia-ioc"
+	src="/inacap/ti3v34/images/fig19.png"
+	alt="Importancia IOC"
+	caption="Importancia IOC"
+	size="large"
 />
-<br/>
 
 ## Falso Positivo
 
-<img 
-    src="/inacap/ti3v34/images/fig20.png"
-    style={{ display: 'block', margin: '0 auto', width:'60%' }} 
+<SmartFigure
+	id="falso-positivo"
+	src="/inacap/ti3v34/images/fig20.png"
+	alt="Falso-Positivo Informático"
+	caption="Falso-Positivo Informático"
+	size="large"
 />
-<br/>

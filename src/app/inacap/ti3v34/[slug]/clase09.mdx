@@ -1,10 +1,8 @@
-import ExternalLink from '@/components/ui/ExternalLink';
-
 # Política Nacional de Ciberseguridad
 
 **Material Clase:** 
-- <ExternalLink href="/inacap/ti3v34/docs/pnc.pdf">pnc.pdf</ExternalLink>
-- <ExternalLink href="/inacap/ti3v34/docs/ley21663.pdf">ley21663.pdf</ExternalLink>
+- [pnc.pdf](/inacap/ti3v34/docs/pnc.pdf)
+- [ley21663.pdf](/inacap/ti3v34/docs/ley21663.pdf)
 
 ## Importancia
 
@@ -26,19 +24,45 @@ import ExternalLink from '@/components/ui/ExternalLink';
 
 ## Ley Ciberseguridad: Obligaciones e Infracciones
 
-### Obligaciones
+<SmartTable
+	tableLayout="mixed"
+	columnWidths={['260px','auto']}
+	headers={['Obligación', 'Descripción']}
+	rows={[
+		[
+			'**Implementar un Sistema de Gestión de Seguridad de la Información**',
+			'Establecemos sistemas robustos para identificar y mitigar riesgos, garantizando la seguridad continua de las redes y sistemas informáticos'
+		],
+		[
+			'**Establecimiento y cumplimiento de Planes de Continuidad Operacional y Ciberseguridad**',
+			'Desarrollar e implementar planes estratégicos que aseguran la resiliencia de la organización frente a incidentes de Ciberserguridad: Desarrollar e implementar planes estratégicos que aseguran la resiliencia operativa de la organización frente a incidentes de Ciberseguridad'
+		],
+		[
+			'**Notificación de Incidentes**',
+			'Implementar protocolos para la rápida identificación y notificación de ciberataques o incidentes de seguridad, asegurando una comunicación efectiva con los afectados y las autoridades pertinentes, en este caso CSIRT'
+		]
+	]}
+/>
 
-1. **Implementar un Sistema de Gestión de Seguridad de la Información:** Establecemos sistemas robustos para identificar y mitigar riesgos, garantizando la seguridad continua de las redes y sistemas informáticos
-2. **Establecimiento y cumplimiento de Planes de Continuidad Operacional y Ciberseguridad:** Desarrollar e implementar planes estratégicos que aseguran la resiliencia de la organización frente a incidentes de Ciberserguridad:** Desarrollar e implementar planes estratégicos que aseguran la resiliencia operativa de la organización frente a incidentes de Ciberseguridad
-3. **Notificación de Incidentes:** Implementar protocolos para la rápida identificación y notificación de ciberataques o incidentes de seguridad, asegurando una comunicación efectiva con los afectados y las autoridades pertinentes, en este caso CSIRT
-
-### Infracciones
-
-La falta de cumplimiento con la nueva ley puede resultar en severas sanciones, que varían según la gravedad de la infracción:
-
-- **Infracciones leves:** Pueden resultar en multas de hasta 5.000 UTM
-- **Infracciones Graves:** Pueden acarrear multas de hasta 10.000 UTM
-- **Infracciones Gravísimas:** Estas infracciones pueden conllevar multas de hasta 20.000 UTM, y el doble para Operadores de Importancia Vital, llegando hasta 40.000 UTM
+<SmartTable
+	tableLayout="mixed"
+	columnWidths={['260px','auto']}
+	headers={['Tipo de Infracción', 'Multa']}
+	rows={[
+		[
+			'**Infracciones leves**',
+			'Pueden resultar en multas de hasta 5.000 UTM'
+		],
+		[
+			'**Infracciones Graves**',
+			'Pueden acarrear multas de hasta 10.000 UTM'
+		],
+		[
+			'**Infracciones Gravísimas**',
+			'Estas infracciones pueden conllevar multas de hasta 20.000 UTM, y el doble para Operadores de Importancia Vital, llegando hasta 40.000 UTM'
+		]
+	]}
+/>
 
 ## Agencia Nacional de Ciberseguridad (ANCI)
 
@@ -59,11 +83,13 @@ La falta de cumplimiento con la nueva ley puede resultar en severas sanciones, q
 
 ## Lo que debiera ser
 
-<img 
-    src="/inacap/ti3v34/images/fig28.png"
-    style={{ display: 'block', margin: '0 auto', width:'70%' }} 
+<SmartFigure
+	id="piramide-organizacional"
+	src="/inacap/ti3v34/images/fig28.png"
+	alt="Pirámide organizacional de seguridad de la información"
+	caption="Pirámide organizacional de seguridad de la información"
+	size="large"
 />
-<br/>
 
 1. **Seguridad de la Información:** Establece políticas, procedimientos y manuales que dicen relación con la aplicación de estándares ISO27001 - 27002, NIST, entre otros
 2. **Ciberseguridad:** Aplica procedimientos indicados por Seguridad de la Información, además, realiza configuración segura (hardening), técnicas de protección (firewall, antivirus, IDS), y realiza auditorias de eventos
@@ -71,4 +97,4 @@ La falta de cumplimiento con la nueva ley puede resultar en severas sanciones, q
 
 Las actividades de Informática (administrar servidores, configurar telecomunicaciones, desarrolla, etc) deben estar separadas de seguridad.
 
-*No se puede ser Juez y parte a la misma vez*
+> *No se puede ser Juez y parte a la misma vez*

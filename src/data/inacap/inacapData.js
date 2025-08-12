@@ -163,7 +163,8 @@ export const subjects = [
       semester: 4,
       year: 2025,
       category: 'programming',
-      status: 'pending'
+      status: 'current',
+      href: '/inacap/ti3v41'
     },
     { 
       code: 'TI3V42',
@@ -179,7 +180,8 @@ export const subjects = [
       semester: 4,
       year: 2025,
       category: 'methodology',
-      status: 'pending'
+      status: 'current',
+      href: '/inacap/ti3v43'
     },
     { 
       code: 'TIHV43',
@@ -203,7 +205,9 @@ export const subjects = [
       semester: 4,
       year: 2025,
       category: 'general',
-      status: 'pending'
+      status: 'current',
+      href: '/inacap/fves01'
+
     },
   
     // Semestre 5 - 2026

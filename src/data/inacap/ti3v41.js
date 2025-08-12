@@ -24,7 +24,7 @@ const courseData = {
         { 
             evaluationNumber: 1,
             date: '',
-            weighting: '',
+            weighting: '25%',
             description: {
                 text: '',
                 href: ''
@@ -33,7 +33,7 @@ const courseData = {
                 { 
             evaluationNumber: 2,
             date: '',
-            weighting: '',
+            weighting: '30%',
             description: {
                 text: '',
                 href: ''
@@ -42,7 +42,7 @@ const courseData = {
                 { 
             evaluationNumber: 3,
             date: '',
-            weighting: '',
+            weighting: '30%',
             description: {
                 text: '',
                 href: ''
@@ -51,7 +51,7 @@ const courseData = {
                 { 
             evaluationNumber: 4,
             date: '',
-            weighting: '',
+            weighting: '15%',
             description: {
                 text: '',
                 href: ''
@@ -90,7 +90,7 @@ const courseData = {
             description: [
                 {
                     text: 'Tecnologías del lado del servidor',
-                    href: '',
+                    href: '/inacap/ti3v41/docs/lectura01.pdf',
                 }
             ]
         },

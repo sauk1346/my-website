@@ -92,7 +92,7 @@ const courseData = {
             description: [
                 {
                     text: 'Introducción a la Ingeniería de software',
-                    href: '',
+                    href: '/inacap/ti3v43/docs/lectura01.pdf',
                 }
             ]
         },

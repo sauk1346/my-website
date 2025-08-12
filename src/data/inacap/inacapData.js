@@ -142,7 +142,7 @@ export const subjects = [
       name: '(Electivo I) Plan de Pruebas de Software',
       semester: 3,
       year: 2025,
-      category: 'programming',
+      category: 'methodology',
       status: 'completed',
       href: '/inacap/tilv01'
     },
@@ -196,7 +196,7 @@ export const subjects = [
       name: '(Electivo II) Desarrollo de Videojuegos',
       semester: 4,
       year: 2025,
-      category: 'general',
+      category: 'programming',
       status: 'pending'
     },
     { 

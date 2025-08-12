@@ -8,49 +8,74 @@ Se pueden clasificar en los siguientes conceptos:
 
 ## Caracteres literales
 
-|Regex|Descripción|
-|---|---|
-|`abc`|coincide exactamente con "abc"|
+<SmartTable
+    tableLayout="mixed"
+	columnWidths={['150px', 'auto']}
+    headers={["Regex","Descripción"]}
+    rows={[
+        ["`abc`","coincide exactamente con \"abc\""]
+    ]}
+/>
 
 ## Metacaracteres
 
-|Regex|Descripción|
-|---|---|
-|`.`|Cualquier caracter (excepto nueva línea)|
-|`^`|Inicio de línea|
-|`$`|Fin de línea|
-|`*`|Cero o más repeticiones|
-|`+`|Una o más repeticiones|
-|`?`|Cero o Una repetición|
-|`\|`|alternativa (OR)|
-|`\`|Escape de metacaracteres|
+<SmartTable
+    tableLayout="mixed"
+	columnWidths={['150px', 'auto']}
+    headers={["Regex","Descripción"]}
+    rows={[
+        ["`abc`","coincide exactamente con \"abc\""],
+        ["`.`","Cualquier caracter (excepto nueva línea)"],
+        ["`^`","Inicio de línea"],
+        ["`$`","Fin de línea"],
+        ["`*`","Cero o más repeticiones"],
+        ["`+`","Una o más repeticiones"],
+        ["`?`","Cero o Una repetición"],
+        ["`\\|`","alternativa (OR)"],
+        ["`\\`","Escape de metacaracteres"]
+    ]}
+/>
 
 ## Clase de caracteres
 
-|Regex|Descripción|
-|---|---|
-|`[abc]`|Un solo caracter que puede ser cualquiera de éstos|
-|`[^abc]`|Un solo caracter que no puede ser ninguno de éstos|
-|`[a-z]`|Un solo caracter que está en el rango a-z|
-|`\d`|Dígito, equivalente a `[0-9]`|
-|`\w`|Carácter de palabra, equivalente a `[a-zA-Z0-9_]`|
-|`\s`|Espacio en blanco|
+<SmartTable
+    tableLayout="mixed"
+	columnWidths={['150px', 'auto']}
+    headers={["Regex","Descripción"]}
+    rows={[
+        ["`[abc]`","Un solo caracter que puede ser cualquiera de éstos"],
+        ["`[^abc]`","Un solo caracter que no puede ser ninguno de éstos"],
+        ["`[a-z]`","Un solo caracter que está en el rango a-z"],
+        ["`\\d`","Dígito, equivalente a `[0-9]`"],
+        ["`\\w`","Carácter de palabra, equivalente a `[a-zA-Z0-9_]`"],
+        ["`\\s`","Espacio en blanco"]
+    ]}
+/>
 
 ## Cuantificadores
 
-|Regex|Descripción|
-|---|---|
-|`{n}`|Exactamente n veces|
-|`{n,}`|Al menos n veces|
-|`{n,m}`|Entre n y m veces|
+<SmartTable
+    tableLayout="mixed"
+	columnWidths={['150px', 'auto']}
+    headers={["Regex","Descripción"]}
+    rows={[
+        ["`{n}`","Exactamente n veces"],
+        ["`{n,}`","Al menos n veces"],
+        ["`{n,m}`","Entre n y m veces"]
+    ]}
+/>
 
 ## Grupos 
 
-|Regex|Descripción|
-|---|---|
-|`(...)`|Captura un grupo|
-|`(?:...)`|Grupo sin captura|
-
+<SmartTable
+    tableLayout="mixed"
+	columnWidths={['150px', 'auto']}
+    headers={["Regex","Descripción"]}
+    rows={[
+        ["`(...)`","Captura un grupo"],
+        ["`(?:...)`","Grupo sin captura"],
+    ]}
+/>
 
 # Ejercicios
 Filtrar solo las palabras en verde
@@ -63,13 +88,11 @@ Filtrar solo las palabras en verde
 5. <span style={{color:'red'}}>fooxybar</span>
 6. <span style={{color:'green'}}>foocbar</span>
 
-
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 /foo.bar/
 ```
-</details>
+</Solution>
 
 ## Ejercicio 02
 1. <span style={{color:'green'}}>foobar</span>
@@ -81,12 +104,11 @@ Filtrar solo las palabras en verde
 7. <span style={{color:'red'}}>barafoo</span>
 8. <span style={{color:'red'}}>barabfoo</span>
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 /foo.*bar/
 ```
-</details>
+</Solution>
 
 ## Ejercicio 03
 
@@ -99,12 +121,11 @@ Filtrar solo las palabras en verde
 7. <span style={{color:'green'}}>foobar</span>
 8. <span style={{color:'red'}}>fooyyybar</span>
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 /foo\s*bar/
 ```
-</details>
+</Solution>
 
 ## Ejercicio 04
 1. <span style={{color:'green'}}>foo</span>
@@ -116,12 +137,11 @@ Filtrar solo las palabras en verde
 7. <span style={{color:'red'}}>boo</span>
 8. <span style={{color:'red'}}>hoo</span>
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 /[fcl]oo/
 ```
-</details>
+</Solution>
 
 ## Ejercicio 05
 1. <span style={{color:'green'}}>foo</span>
@@ -133,8 +153,7 @@ Filtrar solo las palabras en verde
 7. <span style={{color:'green'}}>boo</span>
 8. <span style={{color:'red'}}>hoo</span>
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 
 <br/>
 **Opción 01**
@@ -146,7 +165,7 @@ Filtrar solo las palabras en verde
 ```js
 /[^mh]oo/
 ```
-</details>
+</Solution>
 
 ## Ejercicio 06
 
@@ -159,13 +178,12 @@ Filtrar solo las palabras en verde
 7. <span style={{color:'red'}}>zoo</span>
 8. <span style={{color:'red'}}>coo</span>
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 
 ```js
 /[j-m]oo/
 ```
-</details>
+</Solution>
 
 ## Ejercicio 07
 1. <span style={{color:'green'}}>joo</span>
@@ -177,13 +195,12 @@ Filtrar solo las palabras en verde
 7. <span style={{color:'green'}}>zoo</span>
 8. <span style={{color:'red'}}>coo</span>
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 
 ```js
 /[j-mz]oo/
 ```
-</details>
+</Solution>
 
 ## Ejercicio 08
 1. <span style={{color:'green'}}>joo</span>
@@ -195,13 +212,12 @@ Filtrar solo las palabras en verde
 7. <span style={{color:'green'}}>zoo</span>
 8. <span style={{color:'red'}}>coo</span>
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 
 ```js
 /[j-mz]oo/i
 ```
-</details>
+</Solution>
 
 ## Ejercicio 09
 1. <span style={{color:'green'}}>xxx.yy</span>
@@ -213,13 +229,12 @@ Filtrar solo las palabras en verde
 7. <span style={{color:'red'}}>yx</span>
 8. <span style={{color:'red'}}>yxxx</span>
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 
 ```js
 /x+\.y+/
 ```
-</details>
+</Solution>
 
 ## Ejercicio 10
 1. <span style={{color:'green'}}>x#y</span>
@@ -228,13 +243,12 @@ Filtrar solo las palabras en verde
 4. <span style={{color:'red'}}>x&y</span>
 5. <span style={{color:'red'}}>x%y</span>
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 
 ```js
 /x[^&%]y/
 ```
-</details>
+</Solution>
 
 ## Ejercicio 11
 1. <span style={{color:'green'}}>foo bar baz</span>
@@ -244,13 +258,12 @@ Filtrar solo las palabras en verde
 5. <span style={{color:'green'}}>foo baz bar</span>
 6. <span style={{color:'red'}}>baz bar foo</span>
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 
 ```js
 /^foo.*/
 ```
-</details>
+</Solution>
 
 ## Ejercicio 12
 1. <span style={{color:'red'}}>foo bar baz</span>
@@ -260,13 +273,12 @@ Filtrar solo las palabras en verde
 5. <span style={{color:'green'}}>foo baz bar</span>
 6. <span style={{color:'red'}}>baz bar foo</span>
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 
 ```js
 /.*bar$/
 ```
-</details>
+</Solution>
 
 ## Ejercicio 13
 1. <span style={{color:'green'}}>foo</span>
@@ -275,47 +287,43 @@ Filtrar solo las palabras en verde
 4. <span style={{color:'red'}}>foo bar baz</span>
 5. <span style={{color:'red'}}>baz bar foo</span>
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 
 ```js
 /^foo$/
 ```
-</details>
+</Solution>
 
 ## Ejercicio 14
 Representar ambas palabras "gray" y "grey"
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 
 ```js
 /gr[ae]y/
 ```
-</details>
+</Solution>
 
 
 ## Ejercicio 15
 Representar un número par de 2 dígitos
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 
 ```js
 /^[0-9][02468]$/
 ```
-</details>
+</Solution>
 
 ## Ejercicio 16
 Representar un número de 3 digitos que sea multiplo de 5
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 
 ```js
 /^[0-9][0-9][05]$/
 ```
-</details>
+</Solution>
 
 ## Ejercicio 17
 1. <span style={{color:'green'}}>834</span>
@@ -327,13 +335,12 @@ Representar un número de 3 digitos que sea multiplo de 5
 7. <span style={{color:'red'}}>25</span>
 8. <span style={{color:'green'}}>645</span>
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 
 ```js
 /^\d{3}$/
 ```
-</details>
+</Solution>
 
 ## Ejercicio 18
 1. <span style={{color:'green'}}>lion</span>
@@ -346,13 +353,12 @@ Representar un número de 3 digitos que sea multiplo de 5
 8. <span style={{color:'green'}}>cuckoo</span>
 9. <span style={{color:'green'}}>deer</span>
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 
 ```js
 /^[a-z]{4,6}$/
 ```
-</details>
+</Solution>
 
 ## Ejercicio 19
 1. <span style={{color:'red'}}>ha</span>
@@ -365,13 +371,12 @@ Representar un número de 3 digitos que sea multiplo de 5
 8. <span style={{color:'green'}}>hahahahahahahaha</span>
 9. <span style={{color:'green'}}>hahahahahahahahaha</span>
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 
 ```js
 /(ha){4,}/
 ```
-</details>
+</Solution>
 
 ## Ejercicio 20
 1. <span style={{color:'green'}}>ha</span>
@@ -382,13 +387,12 @@ Representar un número de 3 digitos que sea multiplo de 5
 6. <span style={{color:'red'}}>hahahahahahaha</span>
 7. <span style={{color:'red'}}>hahahahahaha</span>
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 
 ```js
 /^(ha){1,2}$/
 ```
-</details>
+</Solution>
 
 ## Ejercicio 21
 1. <span style={{color:'green'}}>fooaaaabar</span>
@@ -398,13 +402,12 @@ Representar un número de 3 digitos que sea multiplo de 5
 5. <span style={{color:'red'}}>fooxxxbar</span>
 6. <span style={{color:'red'}}>fooxbar</span>
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 
 ```js
 /^fooa+bar$/
 ```
-</details>
+</Solution>
 
 ## Ejercicio 22
 1. <span style={{color:'green'}}>https:\/\/website</span>
@@ -413,13 +416,12 @@ Representar un número de 3 digitos que sea multiplo de 5
 4. <span style={{color:'red'}}>httpx://website</span>
 5. <span style={{color:'red'}}>httpxx://website</span>
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 
 ```js
 /^https?://website/
 ```
-</details>
+</Solution>
 
 ## Ejercicio 23
 1. <span style={{color:'red'}}>sapwood</span>
@@ -429,45 +431,41 @@ Representar un número de 3 digitos que sea multiplo de 5
 5. <span style={{color:'green'}}>plywood</span>
 6. <span style={{color:'red'}}>redwood</span>
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 
 ```js
 /(log|ply)wood/
 ```
-</details>
+</Solution>
 
 ## Ejercicio 24
 Representar las palabras "colour" y "color"
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 
 ```js
 /colou?r/
 ```
-</details>
+</Solution>
 
 ## Ejercicio 25
 Representar las palabras "ascending" y "descending"
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 
 ```js
 /(as|des)cending/
 ```
-</details>
+</Solution>
 
 ## Ejercicio 26
 Representar los strings: "a", "aa" y "aaa". Además, excluír strings vacíos
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 
 ```js
 /a+/
 ```
-</details>
+</Solution>
 
 

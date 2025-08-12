@@ -13,9 +13,7 @@
     - etiquetas (array de strings, opcional)
     - detalles (subdocumento con marca, garantiaMeses)
 
-<details>
-    <summary>Solución</summary>
-
+<Solution>
 ```json
 [
   {
@@ -80,15 +78,14 @@
   }
 ]
 ```
-</details>
+</Solution>
 
 ## Parte 2: Ejercicios CRUD y Avanzados
 
 ### Ejercicio 01
 Agrega un producto nuevo que contenga un array de etiquetas (por ejemplo: ["gaming", "nuevo", "destacado"]) y un subdocumento de detalles.
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 
 ```json
 {
@@ -104,15 +101,12 @@ Agrega un producto nuevo que contenga un array de etiquetas (por ejemplo: ["gami
   }
 }
 ```
-</details>
+</Solution>
 
-<br/>
 ### Ejercicio 02
 Inserta al menos 2 productos con campos adicionales como proveedor y descuento.
 
-<details>
-    <summary>Solución</summary>
-
+<Solution>
 ```json
 [
 	{
@@ -145,75 +139,57 @@ Inserta al menos 2 productos con campos adicionales como proveedor y descuento.
 	}
 ]
 ```
-</details>
+</Solution>
 
-<br/>
 ### Ejercicio 03
 Muestra todos los productos que tengan **más de 10 unidades en stock** y un **precio menor a 200.**
 
-<details>
-    <summary>Solución</summary>
-
+<Solution>
 ```json
 {"stock":{$gt:10}, "precio":{$lt:200}}
 ```
-</details>
+</Solution>
 
-<br/>
 ### Ejercicio 04
 Filtra productos que tengan la etiqueta "gaming" dentro del array etiquetas.
 
-<details>
-    <summary>Solución</summary>
-
+<Solution>
 ```json
 {"etiquetas":"gaming"}
 ```
-</details>
+</Solution>
 
-<br/>
 ### Ejercicio 05
 Busca productos **cuya garantía sea de 12 meses o más** (desde el subdocumento detalles.garantiaMeses).
-<details>
-    <summary>Solución</summary>
 
+<Solution>
 ```json
 {"detalles.garantiaMeses":{$gte:12}}
 ```
-</details>
+</Solution>
 
-<br/>
 ### Ejercicio 06
 Encuentra productos **ingresados entre el 1 y el 15 de marzo de 2024.**
 
-<details>
-    <summary>Solución</summary>
-
+<Solution>
 ```json
 {"fechaIngreso": {$gte: ISODate("2024-03-01") , $lt: ISODate("2024-03-15")}}
 ```
-</details>
+</Solution>
 
-<br/>
 ### Ejercicio 07
 Muestra solo los productos de la categoría "Pantallas" **que no estén en promoción** (descuento no existe).
 
-
-<details>
-    <summary>Solución</summary>
-
+<Solution>
 ```json
 { "categoria": "Pantallas", "descuento": { "$exists": false } }
 ```
-</details>
+</Solution>
 
-<br/>
 ### Ejercicio 08
 Agrega un campo ultimaActualizacion con la fecha actual a todos los productos que tengan menos de 5 unidades en stock.
 
-<details>
-    <summary>Solución</summary>
-
+<Solution>
 1. Ir a query y agregar:
 ```json
 {"stock":{$lt:5}}
@@ -228,15 +204,12 @@ Agrega un campo ultimaActualizacion con la fecha actual a todos los productos qu
   },
 }
 ```
-</details>
+</Solution>
 
-<br/>
 ### Ejercicio 09
 Actualiza todos los productos de la categoría "Accesorios" para que su proveedor sea "TechGlobal" **solo si aún no tienen campo proveedor.**
 
-<details>
-    <summary>Solución</summary>
-
+<Solution>
 1. Ir a query y agregar:
 
 ```json
@@ -251,16 +224,12 @@ Actualiza todos los productos de la categoría "Accesorios" para que su proveedo
   },
 }
 ```
+</Solution>
 
-</details>
-
-<br/>
 ### Ejercicio 10
 Aumenta el stock en 3 unidades de todos los productos que contengan la palabra "Mouse" en su nombre (usa expresión regular).
 
-<details>
-    <summary>Solución</summary>
-
+<Solution>
 1. Ir a query y agregar:
 
 ```json
@@ -275,29 +244,22 @@ Aumenta el stock en 3 unidades de todos los productos que contengan la palabra "
 ```json
 {$inc: {"stock":3}}
 ```
+</Solution>
 
-</details>
-
-<br/>
 ### Ejercicio 11
 Elimina todos los productos que tengan una garantía de **menos de 6 meses.**
 
-<details>
-    <summary>Solución</summary>
-
+<Solution>
 ```json
 { "detalles.garantiaMeses": {$lt:6}}
 ```
 - Luego, botón `delete`
+</Solution>
 
-</details>
-
-<br/>
 ### Ejercicio 12
 Elimina los productos **cuyo array de etiquetas esté vacío o no exista.**
-<details>
-    <summary>Solución</summary>
 
+<Solution>
 ```json
 {
   "$or": [
@@ -307,5 +269,4 @@ Elimina los productos **cuyo array de etiquetas esté vacío o no exista.**
 }
 ```
 - Luego, botón `delete`
-
-</details>
+</Solution>

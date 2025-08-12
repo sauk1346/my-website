@@ -8,161 +8,145 @@
 ## Ejercicio 01
 Buscar todos los juegos de la consola "PS4"
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.juegos.find({ console:"PS4" }) 
 ```
-</details>
+</Solution>
 
 ## Ejercicio 02
 Mostrar todos los juegos cuya genre sea "Shooter"
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.juegos.find({ genre:"Shooter" }) 
 ```
-</details>
+</Solution>
 
 ## Ejercicio 03
 Buscar juegos con critic_score mayor a 9
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.juegos.find({ critic_score:{$gt:9} }) 
 ```
-</details>
+</Solution>
 
 ## Ejercicio 04
 Listar juegos con total_sales mayores a 20 millones
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.juegos.find({ total_sales:{$gt:20.00} }) 
 ```
-</details>
+</Solution>
 
 ## Ejercicio 05
 Mostrar los juegos lanzados después del año 2015
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.juegos.find({ release_date:{$gt:ISODate("2015-12-31")} }) 
 ```
-</details>
+</Solution>
 
 ## Ejercicio 06
 Buscar juegos con más de 8 millones en ventas en Norteamérica (na_sales)
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.juegos.find({ na_sales:{$gt:8.00}}) 
 ```
-</details>
+</Solution>
 
 ## Ejercicio 07
 Filtrar juegos con ventas en Japón (jp_sales) entre 0.5 y 1 millón
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.juegos.find({ jp_sales:{$gte:0.5, $lte:1.0}}) 
 ```
-</details>
+</Solution>
 
 ## Ejercicio 08
 Listar juegos cuya editorial (publisher) sea "Rockstar Games"
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.juegos.find({ publisher:"Rockstar Games" }) 
 ```
-</details>
+</Solution>
 
 ## Ejercicio 09
 Buscar juegos desarrollados por "Treyarch"
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.juegos.find({ developer:"Treyarch" }) 
 ```
-</details>
+</Solution>
 
 ## Ejercicio 10
 Mostrar juegos lanzados el día "2013-09-17"
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.juegos.find({ release_date:ISODate("2013-09-17") }) 
 ```
-</details>
+</Solution>
 
 ## Ejercicio 11
 Buscar juegos cuyo título contenga "Call of Duty".
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.juegos.find({ title:{$regex:/(Call of Duty)/i} }) 
 ```
-</details>
+</Solution>
 
 ## Ejercicio 12
 Listar juegos cuyo título comience con "Grand" (usando $regex)
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.juegos.find({ title:{$regex:/^Grand/} }) 
 ```
-</details>
+</Solution>
 
 ## Ejercicio 13
 Mostrar juegos del género "Action" publicados por "Rockstar Games"
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.juegos.find({ genre:"Action", publisher:"Rockstar Games" }) 
 ```
-</details>
+</Solution>
 
 ## Ejercicio 14
 Filtrar juegos cuyo desarrollador contenga "North" y consola sea "PS3"
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.juegos.find({
     developer:{$regex:/North/i}, 
     console:"PS3" 
 }) 
 ```
-</details>
+</Solution>
 
 ## Ejercicio 15
 Mostrar juegos que no pertenezcan al género "Action"
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.juegos.find({ genre:{$not:/Action/} }) 
 ```
-</details>
+</Solution>
 
 ## Ejercicio 16
 Buscar juegos que tengan una critic_score superior a 7 y user_score inferior a 5
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.juegos.find({
     critic_score:{$gt:7.00}, 
@@ -171,26 +155,24 @@ db.juegos.find({
 ```
 
 - Sin embargo, no existe el campo "user_score"
-</details>
+</Solution>
 
 ## Ejercicio 17
 Mostrar los juegos que hayan vendido más de 3 millones en Europa y menos de 1 millón en Japón
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.juegos.find({ 
     pal_sales:{$gt:3.00}, 
     jp_sales:{$lt:1.00} 
 }) 
 ```
-</details>
+</Solution>
 
 ## Ejercicio 18
 Listar juegos que no hayan sido lanzados entre 2010 y 2020
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.juegos.find({
     release_date: {
@@ -198,13 +180,12 @@ db.juegos.find({
     }
 })
 ```
-</details>
+</Solution>
 
 ## Ejercicio 19
 Filtrar juegos del género "Adventure" o que hayan sido publicados por "Ubisoft"
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.juegos.find({ 
     $or:[ 
@@ -213,13 +194,12 @@ db.juegos.find({
     ] 
 }) 
 ```
-</details>
+</Solution>
 
 ## Ejercicio 20
 Buscar juegos con total_sales mayor a 5 y lanzados después de 2018 y del género "Sports"
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.juegos.find({ 
     total_sales:{$gt:5.00}, 
@@ -227,73 +207,66 @@ db.juegos.find({
     genre:"Sports" 
 }) 
 ```
-</details>
+</Solution>
 
 ## Ejercicio 21
 Buscar juegos cuyo título incluya números (como "FIFA 23", "NBA 2K22")
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.juegos.find({ title:{$regex:/\d/} }) 
 ```
-</details>
+</Solution>
 
 ## Ejercicio 22
 Listar juegos cuyo publisher contenga dos palabras (por ejemplo: "Electronic Arts")
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.juegos.find({ publisher:{$regex:/^\w+\s\w+$/} }) 
 ```
-</details>
+</Solution>
 
 ## Ejercicio 23
-Mostrar juegos cuyo título termine en un número ($regex: "\\d$")
+Mostrar juegos cuyo título termine en un número (`$regex: /\d$/"`)
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.juegos.find({ title:{$regex:/\d$/} }) 
 ```
-</details>
+</Solution>
 
 ## Ejercicio 24
 Filtrar juegos cuyo developer comience con "N" y tenga más de 10 caracteres
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.juegos.find({ developer:{$regex:/^N.{10,}/i} }) 
 ```
-</details>
+</Solution>
 
 ## Ejercicio 25
 Buscar juegos con títulos que contengan más de un espacio (es decir, tres o más palabras)
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.juegos.find({ title: { $regex:/(\s.*){2}/} }) 
 ```
-</details>
+</Solution>
 
 ## Ejercicio 26
 Buscar juegos que no tengan el campo user_score
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.juegos.find({ user_score:{$exists:false} }) 
 ```
-</details>
+</Solution>
 
 ## Ejercicio 27
 Mostrar juegos que sí tengan campo genre pero no tengan developer
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.juegos.find({ 
     genre:{$exists:true},
@@ -301,13 +274,12 @@ db.juegos.find({
 }) 
 
 ```
-</details>
+</Solution>
 
 ## Ejercicio 28
 Filtrar juegos que tengan critic_score y user_score y ambos sean mayores a 8
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.juegos.find({ 
     critic_score: {$exists: true, $gt: 8},
@@ -315,13 +287,12 @@ db.juegos.find({
 })
 ```
 - Sin embargo, el campo "user_score" no existe
-</details>
+</Solution>
 
 ## Ejercicio 29
 Listar juegos cuya release_date esté vacía o nula
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.juegos.find({
     release_date: {
@@ -329,16 +300,15 @@ db.juegos.find({
     }
 })
 ```
-</details>
+</Solution>
 
 ## Ejercicio 30
 Buscar juegos cuya consola no sea ninguna de las siguientes: "PS4", "Xbox One", "Switch"
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.juegos.find({
     console: { $nin: ["PS4", "XOne", "Switch"] }
 })
 ```
-</details>
+</Solution>

@@ -7,18 +7,16 @@
 ## Ejercicio 01
 Buscar todas las películas disponibles en streaming.
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.peliculasDC.find({ disponible_streaming: true })
 ```
-</details>
+</Solution>
 
 ## Ejercicio 02
 Listar las películas que tengan más de dos géneros.
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.peliculasDC.find({ 
     $expr: { 
@@ -26,107 +24,98 @@ db.peliculasDC.find({
     }
 })
 ```
-</details>
+</Solution>
 
 ## Ejercicio 03
 Mostrar las películas dirigidas por 'Zack Snyder'.
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.peliculasDC.find({ director: "Zack Snyder" })
 ```
-</details>
+</Solution>
 
 ## Ejercicio 04
 Filtrar películas con una puntuación IMDb mayor a 8.
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.peliculasDC.find({ 
     "puntuaciones.IMDb": { $gt: 8 } 
 })
 ```
-</details>
+</Solution>
 
 ## Ejercicio 05
 Listar películas que hayan ganado al menos un premio.
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.peliculasDC.find({ 
     premios: { $ne: [] } 
 })
 ```
-</details>
+</Solution>
 
 ## Ejercicio 06
 Mostrar películas lanzadas después del 2010.
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.peliculasDC.find({ 
     anio: { $gt: 2010 } 
 })
 ```
-</details>
+</Solution>
 
 ## Ejercicio 07
 Buscar películas con recaudación mundial mayor a 800 millones.
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.peliculasDC.find({
     recaudacion_mundial: { $gt: 800000000 } 
 })
 ```
-</details>
+</Solution>
 
 ## Ejercicio 08
 Mostrar películas que estén disponibles en HBO Max y Netflix.
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.peliculasDC.find({
     plataformas: { $all: ["HBO Max", "Netflix"] }
 })
 ```
-</details>
+</Solution>
 
 ## Ejercicio 09
 Listar películas con clasificación diferente a 'PG-13'.
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.peliculasDC.find({
     clasificacion: { $ne: "PG-13" }
 })
 ```
-</details>
+</Solution>
 
 ## Ejercicio 10
 Filtrar películas que duren más de 150 minutos.
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.peliculasDC.find({
     duracion: { $gt: 150 }
 })
 ```
-</details>
+</Solution>
 
 ## Ejercicio 11
 Listar películas que tengan al menos 3 actores.
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.peliculasDC.find({
     $expr: { 
@@ -134,94 +123,86 @@ db.peliculasDC.find({
     } 
 })
 ```
-</details>
+</Solution>
 
 ## Ejercicio 12
 Mostrar películas que no tengan premios registrados.
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.peliculasDC.find({ 
     premios: { $size: 0 } 
 })
 ```
-</details>
+</Solution>
 
 ## Ejercicio 13
 Buscar películas que estén en Amazon Prime pero no en HBO Max.
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.peliculasDC.find({ 
     plataformas: "Amazon Prime", 
     plataformas: { $nin: ["HBO Max"] } 
 })
 ```
-</details>
+</Solution>
 
 ## Ejercicio 14
 Filtrar películas que tengan el género 'Fantasía'.
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.peliculasDC.find({ generos: "Fantasía" })
 ```
-</details>
+</Solution>
 
 ## Ejercicio 15
 Mostrar películas donde 'Gal Gadot' sea una de las actrices.
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.peliculasDC.find({ actores: "Gal Gadot" })
 ```
-</details>
+</Solution>
 
 ## Ejercicio 16
 Contar cuántas películas fueron dirigidas por cada director.
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.peliculasDC.aggregate([
   { $group: { _id: "$director", cantidad: { $sum: 1 } } }
 ])
 ```
-</details>
+</Solution>
 
 ## Ejercicio 17
 Calcular el promedio de duración de las películas.
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.peliculasDC.aggregate([
   { $group: { _id: null, promedio_duracion: { $avg: "$duracion" } } }
 ])
 ```
-</details>
+</Solution>
 
 ## Ejercicio 18
 Obtener el promedio de puntuación IMDb por año.
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.peliculasDC.aggregate([
   { $group: { _id: "$anio", promedio_imdb: { $avg: "$puntuaciones.IMDb" } } }
 ])
 ```
-</details>
+</Solution>
 
 ## Ejercicio 19
 Listar las películas con recaudación menor al promedio general.
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.peliculasDC.aggregate([
   { 
@@ -248,69 +229,63 @@ db.peliculasDC.aggregate([
   }
 ])
 ```
-</details>
+</Solution>
 
 ## Ejercicio 20
 Mostrar las películas cuyo título contenga la palabra 'Wonder'.
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.peliculasDC.find({ titulo: /Wonder/ })
 ```
-</details>
+</Solution>
 
 ## Ejercicio 21
 Buscar películas que no tengan el campo 'puntuaciones'.
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.peliculasDC.find({ 
     puntuaciones: { $exists: false } 
 })
 ```
-</details>
+</Solution>
 
 ## Ejercicio 22
 Mostrar solo el título y año de cada película.
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.peliculasDC.find({}, { titulo: 1, anio: 1, _id: 0 })
 ```
-</details>
+</Solution>
 
 ## Ejercicio 23
 Ordenar las películas por recaudación mundial de mayor a menor.
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.peliculasDC.find().sort({ recaudacion_mundial: -1 })
 ```
-</details>
+</Solution>
 
 ## Ejercicio 24
 Limitar el resultado a las 5 películas con mayor puntuación en RottenTomatoes.
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.peliculasDC.find().sort({ "puntuaciones.RottenTomatoes": -1 }).limit(5)
 ```
-</details>
+</Solution>
 
 ## Ejercicio 25
 Agrupar por plataforma y contar cuántas películas hay en cada una.
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.peliculasDC.aggregate([
   { $unwind: "$plataformas" },
   { $group: { _id: "$plataformas", cantidad: { $sum: 1 } } }
 ])
 ```
-</details>
+</Solution>

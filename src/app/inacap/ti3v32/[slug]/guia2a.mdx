@@ -192,11 +192,9 @@ db.usuarios.updateOne(
 
 # Consulta compleja
 
-Buscar productos de electrónica o computación que cuesten entre $300 y $1000, tengan stock disponible y contengan la palabra "pro" en su nombre
+Buscar productos de electrónica o computación que cuesten entre \$300 y \$1000, tengan stock disponible y contengan la palabra "pro" en su nombre
 
-<details>
-    <summary>Solución</summary>
-
+<Solution>
 ```js
 db.productos.find({
   $and: [
@@ -207,5 +205,4 @@ db.productos.find({
   ]
 })
 ```
-
-</details>
+</Solution>

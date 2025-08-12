@@ -16,30 +16,30 @@
 
 ## Ejemplos
 
-### **Crear Base de datos**
+### Crear Base de datos
 
 ```js
 use tienda
 ```
-<br/>
-### *Crear colección**
+
+### Crear colección
 
 ```js
 db.createCollections("productos")
 ```
-<br/>
-### **Mostrar colecciones**
+
+### Mostrar colecciones
 
 ```js
 show collections
 ```
 
-<br/>
-### **Insertar dato**
+### Insertar dato
 
 ```js
 db.productos.insertOne({nombre:"Teclado Mecánico", categoria:"Accesorios", precio:80, stock:15, fechaIngreso: new Date("2024-03-10T00:00:00.00Z")})
 ```
+
 - luego, devuelve lo siguiente: 
 
 ```js
@@ -49,7 +49,6 @@ db.productos.insertOne({nombre:"Teclado Mecánico", categoria:"Accesorios", prec
 }
 ```
 
-<br/>
 ### Insertar multiples datos
 
 ```js
@@ -84,57 +83,48 @@ db.productos.find().pretty
 ## Ejercicios
 
 ### Ejercicio 01
-**Filtrar por un campo especifico**. Encuentra todos los productos en la categoría "Accesorios"
+Filtrar por un campo especifico. Encuentra todos los productos en la categoría "Accesorios"
 
-<details>
-  <summary>Solución</summary>
+<Solution>
 ```js
 db.productos.find({categoria:"Accesorios"}).pretty()
 ```
-</details>
+</Solution>
 
-<br/>
 ### Ejercicio 02
 Filtrar productos con precio mayor a 100
 
-<details>
-  <summary>Solución</summary>
+<Solution>
 ```js
 db.productos.find({precio:{$gt:100}}).pretty()
 ```
-</details>
+</Solution>
 
-<br/>
 ### Ejercicio 03
 Buscar un documento
 
-<details>
-  <summary>Solución</summary>
+<Solution>
 ```js
 db.productos.findOne({nombre:"Teclado Mecánico"})
 ```
-</details>
+</Solution>
 
-<br/>
 ### Ejercicio 04 
-**Actualizar un solo documento**. Modificar el precio de un producto
+Actualizar un solo documento. Modificar el precio de un producto
 
-<details>
-  <summary>Solución</summary>
+<Solution>
 ```js
 db.productos.updateOne(
     {nombre:"Teclado Mecánico"},
     {$set:{precio:90}}
 )
 ```
-</details>
+</Solution>
 
-<br/>
 ### Ejercicio 05
-**Actualizar múltiples documentos**. Aumentar en 5 unidades el stock de todos los productos de la categoría "Accesorios"
+Actualizar múltiples documentos. Aumentar en 5 unidades el stock de todos los productos de la categoría "Accesorios"
 
-<details>
-  <summary>Solución</summary>
+<Solution>
 ```js
 db.productos.updateMany(
     {categoria:"Accesorios"},
@@ -143,36 +133,30 @@ db.productos.updateMany(
 ```
 - esto aumenta a todos los productos de la categoría Accesorios en 5 unidades
 
-</details>
+</Solution>
 
 
-<br/>
 ### Ejercicio 06
 Agregar un nuevo campo
 
-<br/>
 ### Ejercicio 07
-**Eliminar un documento específico**. Elimnar el "Mouse Inalámbrico"
+Eliminar un documento específico. Elimnar el "Mouse Inalámbrico"
 
-<details>
-  <summary>Solución</summary>
+<Solution>
 ```js
 db.productos.deleteOne({nombre:"Mouse Inalámbrico"})
 ```
-</details>
+</Solution>
 
-<br/>
 ### Ejercicio 08
-**Eliminar múltiples documentos**. Eliminar todos los productos con stock 0
+Eliminar múltiples documentos. Eliminar todos los productos con stock 0
 
-<details>
-  <summary>Solución</summary>
+<Solution>
 ```js
 db.productos.deleteMany({stock:0})
 ```
-</details>
+</Solution>
 
-<br/>
 ## Comandos útiles
 
 1. contar documentos en una coleccion 

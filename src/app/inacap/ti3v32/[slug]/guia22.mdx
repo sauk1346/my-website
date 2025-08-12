@@ -4,7 +4,7 @@
 Permite usar expresiones de agregación directamente dentro de una consulta `find()`
 
 - Comparar dos campos del mismo documento
-- Usar operadores como $gt, $add, $multiply, $size, $eq
+- Usar operadores como `$gt`, `$add`, `$multiply`, `$size`, `$eq`
 - Evaluar condiciones más complejas que no se permiten normalmente en `find()`
 
 ## Ejemplos
@@ -53,33 +53,30 @@ db.usuarios.find({
 ## Ejercicio 01
 Buscar usuarios cuya edad sea mayor que el número de compras que ha realizado
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.usuarios.find({
   $expr: { $gt: ["$edad", { $size: "$compras" }] }
 })
 ```
-</details>
+</Solution>
 
 
 ## Ejercicio 02
 Filtrar usuarios con más de dos etiquetas usando $size
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.usuarios.find({
   $expr: { $gt: [{ $size: "$etiquetas" }, 2] }
 })
 ```
-</details>
+</Solution>
 
 ## Ejercicio 03
 Mostrar usuarios con edad igual a 2025 menos año de nacimiento
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.usuarios.find({
   $expr: {
@@ -90,25 +87,23 @@ db.usuarios.find({
   }
 })
 ```
-</details>
+</Solution>
 
 ## Ejercicio 04
 Mostrar usuarios con más de una compra de productos
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.usuarios.find({
   $expr: { $gt: [{ $size: "$compras" }, 1] }
 })
 ```
-</details>
+</Solution>
 
 ## Ejercicio 05
 Mostrar usuarios registrados en 2023 o después, usando `$expr` y comparación de fechas
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.usuarios.find({
   $expr: {
@@ -119,25 +114,23 @@ db.usuarios.find({
   }
 })
 ```
-</details>
+</Solution>
 
 ## Ejercicio 06
 Filtrar usuarios cuya región sea distinta de su comuna
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.usuarios.find({
   $expr: { $ne: ["$direccion.region", "$direccion.ciudad"] }
 })
 ```
-</details>
+</Solution>
 
 ## Ejercicio 07
 Mostrar usuarios donde el total de precios de sus compras supere los \$800.000
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.usuarios.find({
   $expr: {
@@ -145,13 +138,12 @@ db.usuarios.find({
   }
 })
 ```
-</details>
+</Solution>
 
 ## Ejercicio 08
 Buscar usuarios que tengan el mismo número de compras que de etiquetas
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.usuarios.find({
   $expr: {
@@ -159,30 +151,28 @@ db.usuarios.find({
   }
 })
 ```
-</details>
+</Solution>
 
 ## Ejercicio 09
 Mostrar usuarios que hayan comprado un "Notebook" y tengan más de 1 etiqueta
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.usuarios.find({
   "compras.producto": "Notebook",
   $expr: { $gt: [{ $size: "$etiquetas" }, 1] }
 })
 ```
-</details>
+</Solution>
 
 ## Ejercicio 10
 Filtrar usuarios que tengan menos de 3 productos y edad mayor a 30
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.usuarios.find({
   $expr: { $lt: [{ $size: "$compras" }, 3] },
   "edad": { $gt: 30 }
 })
 ```
-</details>
+</Solution>

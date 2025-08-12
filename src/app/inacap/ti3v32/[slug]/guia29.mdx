@@ -7,71 +7,63 @@
 ## Ejercicio 01
 Buscar pacientes mayores de 50 años
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.pacientes.find({ edad:{$gt:50} })
 ```
-</details>
+</Solution>
 
 ## Ejercicio 02
 Filtrar pacientes con plan de salud "Premium"
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.pacientes.find({ plan_salud:"Premium" })
 ```
-</details>
+</Solution>
 
 ## Ejercicio 03
 Mostrar pacientes activos (activo: true)
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.pacientes.find({ activo:true })
 ```
-</details>
+</Solution>
 
 ## Ejercicio 04
 Listar pacientes que vivan en la comuna "Ñuñoa"
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.pacientes.find({ comuna:"Ñuñoa" })
 ```
-</details>
+</Solution>
 
 ## Ejercicio 05
 Buscar pacientes que ingresaron después del año 2020
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.pacientes.find({ fecha_ingreso:{$gt:"2020-12-31"} })
 ```
-</details>
+</Solution>
 
 ## Ejercicio 06
 Buscar pacientes con plan "Básico" o "Intermedio"
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.pacientes.find({
     plan_salud:{$in:["Básico","Intermedio"]}
 })
-
 ```
-</details>
+</Solution>
 
 ## Ejercicio 07
 Mostrar pacientes cuya evaluación de 2023 sea mayor que la de 2021
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.pacientes.find({
     $expr:{
@@ -79,38 +71,35 @@ db.pacientes.find({
     }
 })
 ```
-</details>
+</Solution>
 
 ## Ejercicio 08
 Filtrar pacientes activos con menos de 3 tratamientos
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.pacientes.find({
     activo: true,
     $expr: { $lt: [{$size: "$tratamientos"}, 3] }
 })
 ```
-</details>
+</Solution>
 
 ## Ejercicio 09
 Buscar pacientes que **no** vivan en "Maipú"
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.pacientes.find({
     comuna:{$ne:"Maipú"}
 })
 ```
-</details>
+</Solution>
 
 ## Ejercicio 10
 Mostrar pacientes con más de 2 tratamientos
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.pacientes.find({
     $expr:{
@@ -118,43 +107,39 @@ db.pacientes.find({
     }
 })
 ```
-</details>
+</Solution>
 
 ## Ejercicio 11
 Buscar pacientes cuyo nombre comience con "A"
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.pacientes.find({ nombre:/^A/i })
 ```
-</details>
+</Solution>
 
 ## Ejercicio 12
 Listar pacientes cuyo plan contenga la palabra "medio" (sin distinguir mayúsculas)
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.pacientes.find({ plan_salud:/medio/i })
 ```
-</details>
+</Solution>
 
 ## Ejercicio 13
 Mostrar pacientes con al menos un tratamiento que incluya "Cardio"
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.pacientes.find({ tratamientos:/Cardio/i })
 ```
-</details>
+</Solution>
 
 ## Ejercicio 14
 Buscar pacientes que no tengan evaluación registrada para el año "2023"
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.pacientes.find({
     $or:[
@@ -163,23 +148,21 @@ db.pacientes.find({
     ]
 })
 ```
-</details>
+</Solution>
 
 ## Ejercicio 15
 Mostrar pacientes que sí tengan el campo tratamientos
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.pacientes.find({ tratamientos:{$exists:true} })
 ```
-</details>
+</Solution>
 
 ## Ejercicio 16
 Filtrar pacientes con exactamente 3 tratamientos
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.pacientes.find({
     $expr:{
@@ -187,4 +170,4 @@ db.pacientes.find({
     }
 })
 ```
-</details>
+</Solution>

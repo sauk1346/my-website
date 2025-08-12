@@ -2,12 +2,15 @@ import { Quiz } from '@/components/features/inacap/QuizComponent';
 
 # Selección de filtros y condiciones según requerimientos de búsqueda
 
-|||
-|---|---|
-|Búsqueda|`find()`|
-|Actualización|`updateMany()`|
-|Eliminación|`deleteMany()`|
-
+<SmartTable
+	tableLayout="fixed"
+	headers={['Requerimiento', 'Método']}
+	rows={[
+		['Búsqueda', '`find()`'],
+		['Actualización', '`updateMany()`'],
+		['Eliminación', '`deleteMany()`']
+	]}
+/>
 
 ## Operaciones de agregaciones
 Nos ayudan a procesar documentos y retornar resultados calculados. Se utilizan mayoritariamente para:

@@ -9,68 +9,61 @@
 ## Ejercicio 01
 Buscar películas cuyo título contenga la palabra "love" (sin importar mayúsculas)
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.peliculas.find({ title:{$regex:/love/i} })
 ```
-</details>
+</Solution>
 
 ## Ejercicio 02
 Filtrar películas con más de 100 minutos de duración
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.peliculas.find({ runtime:{$gt:100} })
 ```
-</details>
+</Solution>
 
 ## Ejercicio 03
 Listar películas que hayan sido lanzadas a partir del año 2010
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.peliculas.find({ release_date: {$gte: ISODate("2010-01-01")} })
 ```
-</details>
+</Solution>
 
 ## Ejercicio 04
 Buscar películas con una calificación promedio (vote_average) mayor a 7
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.peliculas.find({ vote_average:{$gt:7} })
 ```
-</details>
+</Solution>
 
 ## Ejercicio 05
 Mostrar películas con idioma original en inglés
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.peliculas.find({ original_language:"en" })
 ```
-</details>
+</Solution>
 
 ## Ejercicio 06
 Listar películas que no sean para adultos (adult:false) y que tengan una sinopsis (overview) que mencione la palabra "mystery"
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.peliculas.find({adult:false, overview:{$regex:/mystery/i}})
 ```
-</details>
+</Solution>
 
 ## Ejercicio 07
 Buscar películas producidas en Japón o Alemania
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.peliculas.find({
     $or:[
@@ -79,139 +72,126 @@ db.peliculas.find({
     ]
 })
 ```
-</details>
+</Solution>
 
 ## Ejercicio 08
 Filtrar películas con género "Documentary" y una puntuación entre 6 y 8
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.peliculas.find({
     genres:{$regex:/Documentary/i},
     vote_average: {$gt:6, $lt:8}
 })
 ```
-</details>
+</Solution>
 
 ## Ejercicio 09
 Listar películas que mencionen "terrorism" o "war" en sus palabras clave (keywords)
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.peliculas.find({ keywords:{$regex:/(\bterrorism\b|\bwar\b)/i} })
 ```
-</details>
+</Solution>
 
 ## Ejercicio 10
 Mostrar películas que hablen más de un idioma (más de 1 en "spoken_languages")
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.peliculas.find({ spoken_languages: {$regex: /,/} })
 ```
-</details>
+</Solution>
 
 ## Ejercicio 11
 Buscar películas que hayan sido estrenadas antes del año 2000
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.peliculas.find( {release_date:{$lt:ISODate("2000-01-01")} })
 ```
-</details>
+</Solution>
 
 ## Ejercicio 12
 Listar películas cuyo "title" empiece con "The"
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.peliculas.find({ title:{$regex:/^The/} })
 ```
-</details>
+</Solution>
 
 ## Ejercicio 13
 Mostrar películas cuya descripción contenga un número (por ejemplo, "WWII", "2022")
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.peliculas.find({ overview:{$regex:/\d|I{2,}/} })
 ```
-</details>
+</Solution>
 
 ## Ejercicio 14
 Buscar películas que no tengan el campo "tagline"
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.peliculas.find({ tagline:{$exists:false} })
 ```
-</details>
+</Solution>
 
 ## Ejercicio 15
 Listar películas que duren exactamente 90 minutos
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.peliculas.find({ runtime:90 })
 ```
-</details>
+</Solution>
 
 ## Ejercicio 16
 Buscar películas con "vote_count" mayor a 50 y menor o igual a 100
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.peliculas.find({ vote_count:{$gt:50, $lte:100} })
 ```
-</details>
+</Solution>
 
 ## Ejercicio 17
 Mostrar películas con géneros múltiples separados por coma (más de un género en el string)
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.peliculas.find({ genres:{$regex:/,/} })
 ```
-</details>
+</Solution>
 
 ## Ejercicio 18
 Listar películas con palabras claves (keywords) que incluyan "based on" (ej: "base on play")
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.peliculas.find({ keywords:{$regex:/(based on)/i} })
 ```
-</details>
+</Solution>
 
 ## Ejercicio 19
 Filtrar películas producidas fuera de "United States of America"
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.peliculas.find({
     production_countries: { $not: { $regex: /United States of America/ } }
 })
 ```
-</details>
+</Solution>
 
 ## Ejercicio 20
 Buscar películas que contengan el término "director" en los keywords
 
-<details>
-    <summary>Solución</summary>
+<Solution>
 ```js
 db.peliculas.find({ keywords:{$regex:/director/i} })
 ```
-</details>
+</Solution>

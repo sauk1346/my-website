@@ -275,5 +275,17 @@ export const calendar25 = [
     titulo: "[FVIE01] Evaluación 03: Presentación Proyecto",
     description: "Innovación y Emprendimiento I"
   },
+  {
+    id: 47,
+    fecha: "2025-8-15",
+    titulo: "[TI3V41] Control 01",
+    description: "Programación Backend"
+  },
+  {
+    id: 48,
+    fecha: "2025-8-22",
+    titulo: "[TI3V41] Control 02",
+    description: "Programación Backend"
+  },
 ];
 export default calendar25;

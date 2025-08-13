@@ -21,6 +21,15 @@ const SmartTable = ({
     const text = content.trim();
     
     // ========================================
+    // CORCHETES ESCAPADOS: Detectar \[texto\] (solo si es todo el contenido)
+    // ========================================
+    const escapedBracketsMatch = text.match(/^\\\[([^\]]*)\\\]$/);
+    if (escapedBracketsMatch) {
+      const bracketContent = escapedBracketsMatch[1];
+      return `[${bracketContent}]`; // Devolver texto literal con corchetes
+    }
+    
+    // ========================================
     // KATEX: Detectar fórmulas matemáticas $formula$ (solo si es todo el contenido)
     // ========================================
     const katexMatch = text.match(/^\$([^$]+)\$/);
@@ -142,8 +151,8 @@ const SmartTable = ({
     // LISTAS: Formato simple inline
     // ========================================
     
-    // Lista no ordenada con corchetes: [item1,item2,item3]
-    const unorderedArrayMatch = text.match(/^\[(.*)\]$/);
+    // Lista no ordenada con corchetes: [item1,item2,item3] (solo si NO están escapados)
+    const unorderedArrayMatch = text.match(/^(?<!\\)\[(.*)\]$/);
     if (unorderedArrayMatch) {
       const items = unorderedArrayMatch[1].split(',').map(item => item.trim()).filter(item => item);
       if (items.length > 0) {
@@ -193,15 +202,16 @@ const SmartTable = ({
     }
     
     // ========================================
-    // CONTENIDO MIXTO: Detectar código inline `code`, fórmulas KaTeX $formula$, texto bold **texto** y cursiva *texto* dentro de texto largo
+    // CONTENIDO MIXTO: Detectar código inline `code`, fórmulas KaTeX $formula$, texto bold **texto**, cursiva *texto* y corchetes escapados \[texto\] dentro de texto largo
     // ========================================
-    if (text.includes('`') || text.includes('$') || text.includes('*')) {
+    if (text.includes('`') || text.includes('$') || text.includes('*') || text.includes('\\[')) {
       const parts = [];
       let lastIndex = 0;
       
-      // Regex combinado para detectar código, fórmulas KaTeX, texto bold y cursiva
+      // Regex combinado para detectar código, fórmulas KaTeX, texto bold, cursiva y corchetes escapados
       // IMPORTANTE: Bold (**) debe ir antes que italic (*) para evitar conflictos
-      const mixedRegex = /(`([^`]+)`)|(\$([^$]+)\$)|(\*\*([^*]+)\*\*)|(\*([^*]+)\*)/g;
+      // IMPORTANTE: Corchetes escapados deben procesarse para contenido mixto también
+      const mixedRegex = /(`([^`]+)`)|(\$([^$]+)\$)|(\*\*([^*]+)\*\*)|(\*([^*]+)\*)|(\\\[([^\]]*)\\\])/g;
       let match;
       
       while ((match = mixedRegex.exec(text)) !== null) {
@@ -217,7 +227,7 @@ const SmartTable = ({
           }
         }
         
-        // Determinar si es código, fórmula KaTeX, texto bold o cursiva
+        // Determinar si es código, fórmula KaTeX, texto bold, cursiva o corchetes escapados
         if (match[1]) {
           // Es código inline: `code`
           parts.push(
@@ -274,6 +284,14 @@ const SmartTable = ({
               {italicText}
             </em>
           );
+        } else if (match[9]) {
+          // Son corchetes escapados: \[texto\]
+          const bracketContent = match[10];
+          parts.push(
+            <span key={`bracket-${match.index}`}>
+              [{bracketContent}]
+            </span>
+          );
         }
         
         lastIndex = match.index + match[0].length;
@@ -297,7 +315,7 @@ const SmartTable = ({
       }
     }
     
-    // Texto normal sin código inline, fórmulas, bold o cursiva
+    // Texto normal sin código inline, fórmulas, bold, cursiva o corchetes escapados
     return content;
   };
 

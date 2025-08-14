@@ -12,20 +12,27 @@ Devuelve *el número mínimo de dulces que necesitas tener para distribuir los d
 ## Ejemplos
 
 **Ejemplo 1:**
-> **Input:** ratings = [1,0,2]
-> **Output:** 5
-> **Explicación:** Puedes asignar al primer, segundo y tercer niño con 2, 1, 2 dulces respectivamente.
+
+<TerminalOutput>
+{`Input: ratings = [1,0,2]
+Output: 5
+Explicación: Puedes asignar al primer, segundo y tercer niño 
+               con 2, 1, 2 dulces respectivamente.`}
+</TerminalOutput>
 
 **Ejemplo 2:**
-> **Input:** ratings = [1,2,2]
-> **Output:** 4
-> **Explicación:** Puedes asignar al primer, segundo y tercer niño con 1, 2, 1 dulces respectivamente.
-> El tercer niño obtiene 1 dulce porque satisface las dos condiciones anteriores.
+<TerminalOutput>
+{`Input: ratings = [1,2,2]
+Output: 4
+Explicación: Puedes asignar al primer, segundo y tercer niño 
+               con 1, 2, 1 dulces respectivamente.
+               El tercer niño obtiene 1 dulce porque satisface 
+               las dos condiciones anteriores.`}
+</TerminalOutput>
 
 ## Soluciones
 
-<details>
-    <summary>Python</summary>
+<Solution title="Python" icon="Python">
 ```python
 class Solution:
    def candy(self, ratings: List[int]) -> int:
@@ -46,4 +53,4 @@ class Solution:
        
        return total
 ```
-</details>
+</Solution>

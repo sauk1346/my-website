@@ -2,7 +2,7 @@ export const ch001Data = {
     title: "Chinese for HSK 1",
     modules: [
       {
-        title: "Module 01: Greetings and Numbers",
+        title: "Módulo 01: Saludos y Números",
         lessons: [
           {
             lesson: "01",
@@ -32,7 +32,7 @@ export const ch001Data = {
         ]
       },
       {
-        title: "Module 02: Family and school/university",
+        title: "Módulo 02: Familia y escuela/universidad",
         lessons: [
           {
             lesson: "01",

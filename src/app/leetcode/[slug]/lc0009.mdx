@@ -6,26 +6,35 @@ Dado un entero `x`, devuelve `true` si `x`es un palíndromo, y `false` en caso c
 
 **Ejemplo 1:**
 
-> **Input:** x = 121
-> **Output:** true
-> **Explicación:** 121 se lee 121 de izquierda a derecha y de derecha a izquierda.
+<TerminalOutput>
+{`Input:       x = 121
+Output:      true
+Explicación: 121 se lee 121 de izquierda a derecha y de derecha a izquierda.`}
+</TerminalOutput>
 
 **Ejemplo 2:**
 
-> **Input:** x = -121
-> **Output:** false
-> **Explicación:** De izquierda a derecha se lee -121. De derecha a izquierda se lee 121- . Por lo tanto, no es un palíndromo.
+<TerminalOutput>
+{`Input:       x = -121
+Output:      false
+Explicación: - De izquierda a derecha se lee "-121" 
+               - De derecha a izquierda se lee "121-"  
+               - Por lo tanto, no es un palíndromo.`}
+
+</TerminalOutput>
 
 **Ejemplo 3:**
 
-> **Input:** x = 10
-> **Output:** false
-> **Explicación:** Se lee 01 de derecha a izquierda. Por lo tanto, no es un palíndromo.
+<TerminalOutput>
+{`Input:       x = 10
+Output:      false
+Explicación: - Se lee 01 de derecha a izquierda.
+               - Por lo tanto, no es un palíndromo.`}
+</TerminalOutput>
 
 ## Soluciones
 
-<details>
-    <summary>Python</summary>
+<Solution title="Python">
 ```python
 class Solution:
     def isPalindrome(self, x: int) -> bool:
@@ -34,4 +43,4 @@ class Solution:
 
         return number == palindrome
 ```
-</details>
+</Solution>

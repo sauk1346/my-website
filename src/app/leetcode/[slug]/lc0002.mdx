@@ -4,30 +4,41 @@ Te dan dos listas enlazadas **no vacías** que representan dos enteros negativos
 
 Asume que los dos números no contienen ningún cero inicial, excepto el número 0 en sí mismo
 
-<img
+<SmartFigure
+	id="listas-enlazadas-no-vacias"
 	src="/leetcode/fig01.png"
-	style={{ display: 'block', margin: '0 auto', width:'60%'}}
+	alt="Dos listas enlazadas no vacías"
+	caption="Suma de 2 listas enlazadas no vacías"
+	size="large"
 />
 
 ## Ejemplos
 
 **Ejemplo 1:**
-> **Input:** l1 = [2,4,3], l2 = [5,6,4]
-> **Output:** [7,0,8]
-> **Explicación:** 342 + 465 = 807
+
+<TerminalOutput>
+{`Input:       l1 = [2,4,3], l2 = [5,6,4]
+Output:      [7,0,8]
+Explicación: 342 + 465 = 807`}
+</TerminalOutput>
+
 
 **Ejemplo 2:**
->**Input:** l1 = [0], l2 = [0]
->**Output:** [0]
+<TerminalOutput>
+{`Input:  l1 = [0], l2 = [0]
+Output: [0]`}
+</TerminalOutput>
 
 **Ejemplo 3:**
-> **Input:** l1 = [9,9,9,9,9,9,9], l2 = [9,9,9,9]
-> **Output:** [8,9,9,9,0,0,0,1]
+<TerminalOutput>
+{`Input:  l1 = [9,9,9,9,9,9,9], l2 = [9,9,9,9]
+Output: [8,9,9,9,0,0,0,1]`}
+</TerminalOutput>
+
 
 ## Soluciones
 
-<details>
-    <summary>Python</summary>
+<Solution title="Python">
 ```python
 # Definition for singly-linked list.
 # class ListNode:
@@ -69,4 +80,4 @@ class Solution:
 - El puntero `curr` va recorriendo  y uniendo los nodos con los valores generados
 - Al terminar, el puntero `dummy` avanza un nodo y obtiene la lista de nodos resultante
 - Finalmente se retorna `dummy.next`
-</details>
+</Solution>

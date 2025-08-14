@@ -15,8 +15,8 @@ const ModuleTable = ({ data }) => {
               <table className={styles.table}>
                 <thead>
                   <tr>
-                    <th>Lesson</th>
-                    <th>Description</th>
+                    <th>Lección</th>
+                    <th>Descripción</th>
                   </tr>
                 </thead>
                 <tbody>

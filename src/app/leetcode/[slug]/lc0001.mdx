@@ -6,24 +6,30 @@ Asume que cada entrada tendría **exactamente una solución**, y no puedes usar 
 
 Devuelve la respuesta en cualquier orden.
 
-### Ejemplos 
+### Ejemplos
 **Ejemplo 1:**
-> **Input:** nums = [2, 7, 11, 15], target = 9
-> **Output:** [0,1]
-> **Explicación:** como nums[0] + nums[1] == 9, se retorna [0,1]
+
+<TerminalOutput>
+{`Input:       nums = [2, 7, 11, 15], target = 9
+Output:      [0,1]
+Explicación: como nums[0] + nums[1] == 9, se retorna [0,1]`}
+</TerminalOutput>
 
 **Ejemplo 2:**
-> **Input:** nums = [3, 2, 4], target = 6
-> **Output:** [1,2]
+<TerminalOutput>
+{`Input:  nums = [3, 2, 4], target = 6
+Output: [1,2]`}
+</TerminalOutput>
 
 **Example 3:**
-> **Input:** nums =[3, 3], target = 6
-> **Output:** [0, 1] 
+<TerminalOutput>
+{`Input:  nums =[3, 3], target = 6
+Output: [0, 1]`}
+</TerminalOutput>
 
 ## Soluciones
 
-<details>
-    <summary>Python</summary>
+<Solution title="Python">
 ```python
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
@@ -41,10 +47,9 @@ class Solution:
 - Se guarda el índice y valor del número recorrido utilizando la el método `enumerate`
 - Calculamos el complemento de `num` y los buscamos en `seen`, si no está entonces guardamos `num`
 - Se continúa el ciclo hasta que uno de los números guardados sea el complemento del número actual, entonces se retorna el índice del complemento y el  índice del número actual
-</details>
+</Solution>
 
-<details>
-    <summary>JavaScript</summary>
+<Solution title="JavaScript">
 ```js
 /**
  * @param {number[]} nums
@@ -65,10 +70,9 @@ var twoSum = function(nums, target) {
     } 
 };
 ``` 
-</details>
+</Solution>
 
-<details>
-    <summary>Java</summary>
+<Solution title="Java">
 ```java
 class Solution {
     public int[] twoSum(int[] nums, int target) {
@@ -90,10 +94,9 @@ class Solution {
 
 - Se utiliza un HashMap para almacenar los números vistos y sus índices
 - Si no encuentra los índices retorna null
-</details>
+</Solution>
 
-<details>
-    <summary>C++</summary>
+<Solution title="C++">
 ```cpp
 class Solution {
 public:
@@ -115,4 +118,4 @@ public:
 ```
 
 - La función twoSum devuelve un vector de enteros con los índices de los números que cumplen con la condición del problema.
-</details>
+</Solution>

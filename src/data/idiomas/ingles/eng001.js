@@ -2,7 +2,7 @@ export const eng001Data = {
     title: "The Pronunciation of American English",
     modules: [
       {
-        title: "Module 01",
+        title: "Módulo 01",
         lessons: [
           {
             lesson: "01",
@@ -12,7 +12,7 @@ export const eng001Data = {
         ]
       },
       {
-        title: "Module 02", 
+        title: "Módulo 02", 
         lessons: [
           {
             lesson: "02",
@@ -22,7 +22,7 @@ export const eng001Data = {
         ]
       },
       {
-        title: "Module 03",
+        title: "Módulo 03",
         lessons: [
           {
             lesson: "03", 
@@ -32,7 +32,7 @@ export const eng001Data = {
         ]
       },
       {
-        title: "Module 04",
+        title: "Módulo 04",
         lessons: [
           {
             lesson: "04",

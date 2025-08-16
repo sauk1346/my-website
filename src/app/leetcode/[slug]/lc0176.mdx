@@ -1,63 +1,79 @@
 # Segundo Salario más Alto
 
 **Tabla:** `Employee`
-```markdown
-+-------------+------+
+<TerminalOutput>
+{`+-------------+------+
 | Column Name | Type |
 +-------------+------+
 | id          | int  |
 | salary      | int  |
 +-------------+------+
-"id" es la clave primaria para esta tabla.
-Cada fila contiene información sobre el salario de un empleado.
-```
+
+- "id" es la clave primaria para esta tabla.
+- Cada fila contiene información sobre el salario de un empleado.`}
+</TerminalOutput>
 
 Escribe una solución para encontrar el segundo salario **distinto** más alto de la tabla `Employee`. Si no hay un segundo salario más alto, devuelve `null` (Devuelve `None` en Pandas).
 
 ## Ejemplos
 
-**Ejemplo 1:**
-```markdown
+**Ejemplo 1**
+
+<MultiColumn columns={2}>
+<div>
 **Input:**
-Employee table:
+<TerminalOutput>
+{`Employee table:
 +----+--------+
 | id | salary |
 +----+--------+
 | 1  | 100    |
 | 2  | 200    |
 | 3  | 300    |
-+----+--------+
-
++----+--------+`}
+</TerminalOutput>
+</div>
+<div>
 **Output:**
-+---------------------+
+<TerminalOutput>
+{`+---------------------+
 | SecondHighestSalary |
 +---------------------+
 | 200                 |
-+---------------------+
-```
++---------------------+`}
+</TerminalOutput>
+</div>
+</MultiColumn>
 
 **Ejemplo 2:**
-```markdown
+
+<MultiColumn columns={2}>
+<div>
 **Input:**
-Employee table:
+<TerminalOutput>
+{`Employee table:
 +----+--------+
 | id | salary |
 +----+--------+
 | 1  | 100    |
-+----+--------+
-
-**Output:** 
-+---------------------+
++----+--------+`}
+</TerminalOutput>
+</div>
+<div>
+**Output:**
+<TerminalOutput>
+{`+---------------------+
 | SecondHighestSalary |
 +---------------------+
 | null                |
-+---------------------+
-```
++---------------------+`}
+</TerminalOutput>
+</div>
+</MultiColumn>
 
 ## Soluciones
 
-<details>
-    <summary>Python</summary>
+<Solution title="Python" icon="Python">
 ```python
 import pandas as pd
 
@@ -71,4 +87,4 @@ def second_highest_salary(employee: pd.DataFrame) -> pd.DataFrame:
     
     return pd.DataFrame({'SecondHighestSalary': [second_highest]})
 ```
-</details>
+</Solution>

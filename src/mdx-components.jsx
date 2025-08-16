@@ -11,6 +11,7 @@ SmartTable,
 Blockquote,
 Solution,
 Quiz, QuizQuestion,
+MultiColumn,
 // Code components
 PreBlock, Code,
 TerminalOutput,
@@ -59,6 +60,7 @@ SmartLink,
 SmartFigure,
 FigureProvider,
 FigureRef,
+MultiColumn,
 // Permitir componentes personalizados adicionales
  ...components,
  };

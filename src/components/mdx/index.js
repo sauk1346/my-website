@@ -8,6 +8,7 @@ export { default as SmartTable } from './layout/SmartTable';
 export { Blockquote } from './layout/Blockquote';
 export { default as Solution } from './layout/Solution';
 export { Quiz, QuizQuestion } from './layout/QuizComponent';
+export { default as MultiColumn } from './layout/MultiColumn';
 // Code components
 export { PreBlock, Code } from './code/CodeComponents';
 export { TerminalOutput } from './code/TerminalOutput';

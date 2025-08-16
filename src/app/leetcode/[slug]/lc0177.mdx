@@ -1,25 +1,27 @@
 # N-ésimo Salario más alto
 
 **Tabla:** `Employee`
-```markdown
-+-------------+------+
+<TerminalOutput>
+{`+-------------+------+
 | Column Name | Type |
 +-------------+------+
 | id          | int  |
 | salary      | int  |
 +-------------+------+
-"id" es la clave primaria para esta tabla.
-Cada fila contiene información sobre el salario de un empleado
-```
+
+- "id" es la clave primaria para esta tabla.
+- Cada fila contiene información sobre el salario de un empleado`}
+</TerminalOutput>
 
 Escribe una solución para encontrar el $n^{ésimo}$ salario **distinto** más alto de la tabla `Employee`. Si hay menos de `n` salarios distintos, retorna `null`
 
 ## Ejemplos
 
-**Ejemplo 1:**
-```markdown
+<MultiColumn columns={2}>
+<div>
 **Input:**
-Employee table:
+<TerminalOutput>
+{`Employee table:
 +----+--------+
 | id | salary |
 +----+--------+
@@ -27,39 +29,51 @@ Employee table:
 | 2  | 200    |
 | 3  | 300    |
 +----+--------+
-n = 2
-
+n = 2`}
+</TerminalOutput>
+</div>
+<div>
+<TerminalOutput>
 **Output:**
-+------------------------+
+{`+------------------------+
 | getNthHighestSalary(2) |
 +------------------------+
 | 200                    |
-+------------------------+
-```
++------------------------+`}
+</TerminalOutput>
+</div>
+</MultiColumn>
 
 **Ejemplo 2:**
-```markdown
+
+<MultiColumn>
+<div>
 **Input:**
-Employee table:
+<TerminalOutput>
+{`Employee table:
 +----+--------+
 | id | salary |
 +----+--------+
 | 1  | 100    |
 +----+--------+
-n = 2
-
+n = 2`}
+</TerminalOutput>
+</div>
+<div>
 **Output:**
-+------------------------+
+<TerminalOutput>
+{`+------------------------+
 | getNthHighestSalary(2) |
 +------------------------+
 | null                   |
-+------------------------+
-```
++------------------------+`}
+</TerminalOutput>
+</div>
+</MultiColumn>
 
 ## Soluciones
 
-<details>
-    <summary>Python</summary>
+<Solution title="Python" icon="Python">
 ```python
 import pandas as pd
 
@@ -77,4 +91,4 @@ def nth_highest_salary(employee: pd.DataFrame, N: int) -> pd.DataFrame:
         
     return pd.DataFrame({f'getNthHighestSalary({N})': [result]})
 ``` 
-</details>
+</Solution>

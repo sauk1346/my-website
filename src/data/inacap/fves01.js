@@ -23,37 +23,37 @@ const courseData = {
     evaluationsData: [
         { 
             evaluationNumber: 1,
-            date: '',
-            weighting: '',
+            date: 'Mar 02, Sep 2025',
+            weighting: '20%',
             description: {
-                text: '',
+                text: 'Role Play',
                 href: ''
             },
         },
                 { 
             evaluationNumber: 2,
-            date: '',
-            weighting: '',
+            date: 'Mar 30, Sep 2025',
+            weighting: '30%',
             description: {
-                text: '',
+                text: 'Test',
                 href: ''
             },
         },
                 { 
             evaluationNumber: 3,
-            date: '',
-            weighting: '',
+            date: 'Mar 28, Oct 2025',
+            weighting: '35%',
             description: {
-                text: '',
+                text: 'Role Play',
                 href: ''
             },
         },
                 { 
             evaluationNumber: 4,
-            date: '',
-            weighting: '',
+            date: 'Mar 28, Oct 2025',
+            weighting: '15%',
             description: {
-                text: '',
+                text: 'Units 1-3',
                 href: ''
             },
         },
@@ -65,8 +65,9 @@ const courseData = {
             date: 'Mar 12, Ago 2025', 
             description: [
                 {
-                    text: 'No asistí',
-                    strikethrough: true
+                    text: 'Personal Introduction',
+                    href: '/inacap/fves01/docs/class01.pdf',
+                    external: true
                 }
             ]
         },
@@ -78,6 +79,26 @@ const courseData = {
                 {
                     text: 'Suspensión Clases: Pre-feriado',
                     strikethrough: true
+                }
+            ]
+        },
+        { 
+            week: '02', 
+            class: '03', 
+            date: 'Mar 19, Ago 2025', 
+            description: [
+                {
+                    text: '',
+                }
+            ]
+        },
+        { 
+            week: '02', 
+            class: '04', 
+            date: 'Jue 21, Ago 2025', 
+            description: [
+                {
+                    text: '',
                 }
             ]
         },

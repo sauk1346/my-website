@@ -33,7 +33,7 @@ export const bootcampsData = {
         code: "CFT002",
         title: "DevOps",
         titleUrl: "/bootcamp/cft002",
-        certificateUrl: null,
+        certificateUrl: "https://codigofacilito.com/certificates/2e965aaf-112c-4be8-b9f5-06a6ff132db4",
       },
       {
         code: "CFT003",

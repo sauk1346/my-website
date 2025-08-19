@@ -80,6 +80,28 @@ const courseData = {
                 }
             ]
         },
+        { 
+            week: '02', 
+            class: '02', 
+            date: 'Lun 18, Ago 2025', 
+            description: [
+                {
+                    text: '',
+                    href: ''
+                }
+            ]
+        },
+        { 
+            week: '02', 
+            class: '03', 
+            date: 'Mar 19, Ago 2025', 
+            description: [
+                {
+                    text: '',
+                    href: ''
+                }
+            ]
+        },
     ],
     lectureData: [
         { 

@@ -1,5 +1,3 @@
-import { Strikethrough } from "lucide-react";
-
 const courseData = {
     courseCode: "TI3V43",
     courseTitle: "Ingeniería de Software",
@@ -78,8 +76,29 @@ const courseData = {
             date: 'Jue 14, Ago 2025', 
             description: [
                 {
+                    text: 'Modelos de Ciclos de Vida',
+                    href: 'ti3v43/clase02'
+                }
+            ]
+        },
+        { 
+            week: '02', 
+            class: '03', 
+            date: 'Lun 18, Ago 2025', 
+            description: [
+                {
+                    text: 'Suspensión clases',
+                    strikethrough: true
+                }
+            ]
+        },
+        { 
+            week: '02', 
+            class: '04', 
+            date: 'Jue 21, Ago 2025', 
+            description: [
+                {
                     text: '',
-                    href: ''
                 }
             ]
         },
@@ -103,7 +122,40 @@ const courseData = {
             description: [
                 {
                     text: 'Fundamentos de la Ingeniería de software',
-                    href: ''
+                    href: 'ti3v43/lectura02'
+                }
+            ]
+        },
+        { 
+            week: '01', 
+            lecture: '03', 
+            date: 'Sáb 16, Ago 2025', 
+            description: [
+                {
+                    text: 'Teoría general de sistemas en la ingeniería de software',
+                    href: 'ti3v43/lectura03',
+                }
+            ]
+        },
+        { 
+            week: '02', 
+            lecture: '04', 
+            date: 'Sáb 23, Ago 2025', 
+            description: [
+                {
+                    text: 'Modelos y metodologías de desarrollo de software',
+                    href: '',
+                }
+            ]
+        },
+        { 
+            week: '02', 
+            lecture: '05', 
+            date: 'Sáb 23, Ago 2025', 
+            description: [
+                {
+                    text: 'Estándares de calidad en la ingeniería de software y repaso general',
+                    href: '',
                 }
             ]
         },

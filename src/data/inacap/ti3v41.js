@@ -64,9 +64,15 @@ const courseData = {
             date: 'Lun 11, Ago 2025', 
             description: [
                 {
-                    text: '',
-                    href: ''
-                }
+                    text: 'Introducción Ambiente',
+                    href: '/inacap/ti3v41/docs/ppt01.pdf',
+                    external: true
+                },
+                {
+                    text: 'Ambiente Virtual',
+                    href: '/inacap/ti3v41/docs/ppt02.pdf',
+                    external: true
+                },
             ]
         },
         { 
@@ -75,14 +81,20 @@ const courseData = {
             date: 'Mar 12, Ago 2025', 
             description: [
                 {
-                    text: '',
-                    href: ''
-                }
+                    text: 'Páginas Dinámicas',
+                    href: '/inacap/ti3v41/docs/ppt03.pdf',
+                    external: true
+                },
+                {
+                    text: 'Introducción a Templates',
+                    href: '/inacap/ti3v41/docs/ppt04.pdf',
+                    external: true
+                },
             ]
         },
         { 
             week: '02', 
-            class: '02', 
+            class: '03', 
             date: 'Lun 18, Ago 2025', 
             description: [
                 {
@@ -93,7 +105,7 @@ const courseData = {
         },
         { 
             week: '02', 
-            class: '03', 
+            class: '04', 
             date: 'Mar 19, Ago 2025', 
             description: [
                 {
@@ -108,23 +120,28 @@ const courseData = {
             week: '01', 
             lecture: '01', 
             date: 'Sáb 16, Ago 2025', 
-            description: [
-                {
-                    text: 'Tecnologías del lado del servidor',
-                    href: '/inacap/ti3v41/docs/lectura01.pdf',
-                }
-            ]
+            description: {
+                text: 'Tecnologías del lado del servidor',
+                href: '/inacap/ti3v41/docs/lectura01.pdf',
+            }
         },
         { 
             week: '01', 
             lecture: '02', 
             date: 'Sáb 16, Ago 2025', 
-            description: [
-                {
-                    text: 'Descubriendo el lenguaje del servidor',
-                    href: ''
-                }
-            ]
+            description: {
+                text: 'Descubriendo el lenguaje del servidor',
+                href: 'ti3v41/lectura02'
+            }
+        },
+        { 
+            week: '02', 
+            lecture: '03', 
+            date: 'Sáb 24, Ago 2025', 
+            description: {
+                text: 'Ampliando tu código con Django',
+                href: ''
+            }
         },
         
     ]

@@ -88,8 +88,15 @@ const courseData = {
             date: 'Mar 19, Ago 2025', 
             description: [
                 {
-                    text: '',
-                }
+                    text: 'Unit 01: Talking about life',
+                    href: '/inacap/fves01/docs/unit01.pdf',
+                    external: true
+                },
+                {
+                    text: 'Evaluation 01 instructions',
+                    href: '/inacap/fves01/docs/eval01-instructions.pdf',
+                    external: true
+                },
             ]
         },
         { 

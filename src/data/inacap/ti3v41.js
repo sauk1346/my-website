@@ -23,11 +23,11 @@ const courseData = {
     evaluationsData: [
         { 
             evaluationNumber: 1,
-            date: '',
+            date: 'Dom 31, Ago 2025',
             weighting: '25%',
             description: {
-                text: '',
-                href: ''
+                text: 'Django: Vistas y Templates',
+                href: 'ti3v41/eval01'
             },
         },
                 { 
@@ -54,6 +54,7 @@ const courseData = {
             weighting: '15%',
             description: {
                 text: 'Promedio Controles',
+                href: 'ti3v41/controles'
             },
         },
     ],

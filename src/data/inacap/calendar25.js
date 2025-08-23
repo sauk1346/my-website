@@ -276,21 +276,63 @@ export const calendar25 = [
     description: "Innovación y Emprendimiento I"
   },
   {
+    id: 47,
+    fecha: "2025-9-1",
+    titulo: "[TI3V43] Evaluación 01",
+    description: "Ingeniería de Software"
+  },
+  {
     id: 48,
+    fecha: "2025-9-13",
+    titulo: "[TI3V43] Evaluación 02",
+    description: "Ingeniería de Software"
+  },
+  {
+    id: 49,
+    fecha: "2025-10-11",
+    titulo: "[TI3V43] Evaluación 03",
+    description: "Ingeniería de Software"
+  },
+  {
+    id: 50,
+    fecha: "2025-10-18",
+    titulo: "[TI3V43] Evaluación 04",
+    description: "Ingeniería de Software"
+  },
+  {
+    id: 51,
     fecha: "2025-8-31",
     titulo: "[TI3V41] Evaluación 01",
     description: "Programación Backend"
   },
   {
-    id: 49,
+    id: 52,
+    fecha: "2025-9-21",
+    titulo: "[TI3V41] Evaluación 02",
+    description: "Programación Backend"
+  },
+  {
+    id: 53,
+    fecha: "2025-10-12",
+    titulo: "[TI3V41] Evaluación 03",
+    description: "Programación Backend"
+  },
+  {
+    id: 152,
     fecha: "2025-8-15",
     titulo: "[TI3V41] Control 01",
     description: "Programación Backend"
   },
   {
-    id: 450,
+    id: 153,
     fecha: "2025-8-22",
     titulo: "[TI3V41] Control 02",
+    description: "Programación Backend"
+  },
+  {
+    id: 154,
+    fecha: "2025-8-29",
+    titulo: "[TI3V41] Control 03",
     description: "Programación Backend"
   },
 ];

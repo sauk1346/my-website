@@ -23,8 +23,8 @@ const courseData = {
     evaluationsData: [
         { 
             evaluationNumber: 1,
-            date: '',
-            weighting: '',
+            date: 'Lun 01, Sep 2025',
+            weighting: '20%',
             description: {
                 text: '',
                 href: ''
@@ -32,8 +32,8 @@ const courseData = {
         },
                 { 
             evaluationNumber: 2,
-            date: '',
-            weighting: '',
+            date: 'Sáb 13, Sep 2025',
+            weighting: '25%',
             description: {
                 text: '',
                 href: ''
@@ -41,8 +41,8 @@ const courseData = {
         },
                 { 
             evaluationNumber: 3,
-            date: '',
-            weighting: '',
+            date: 'Sáb 11, Oct 2025 ',
+            weighting: '40%',
             description: {
                 text: '',
                 href: ''
@@ -50,8 +50,8 @@ const courseData = {
         },
                 { 
             evaluationNumber: 4,
-            date: '',
-            weighting: '',
+            date: 'Sáb 18, Oct 2025',
+            weighting: '15%',
             description: {
                 text: '',
                 href: ''

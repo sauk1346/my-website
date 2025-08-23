@@ -32,7 +32,7 @@ const courseData = {
         },
                 { 
             evaluationNumber: 2,
-            date: '',
+            date: 'Dom 21, Sep 2025',
             weighting: '30%',
             description: {
                 text: '',
@@ -41,7 +41,7 @@ const courseData = {
         },
                 { 
             evaluationNumber: 3,
-            date: '',
+            date: 'Dom 12, Oct 2025',
             weighting: '30%',
             description: {
                 text: '',
@@ -50,7 +50,7 @@ const courseData = {
         },
                 { 
             evaluationNumber: 4,
-            date: '',
+            date: 'Vie 10, Oct 2025',
             weighting: '15%',
             description: {
                 text: 'Promedio Controles',

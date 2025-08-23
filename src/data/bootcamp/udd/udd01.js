@@ -5,52 +5,52 @@ export const udd01Data = {
     title: "Proyectos",
     data: [
       {
-        date: "Lun 04, Mar 2024",
         title: "Algoritmo de Sistema de Costos",
         projectLink: "udd001/proj01",
         demoLink: "udd001/demo01",
+        badgeLink: "https://www.credly.com/badges/c74eb3ca-ecfe-4dcf-9130-80d8923877a3/public_url",
         deliveryLink: "https://github.com/sauk1346/UDD_C13_Proyecto01"
       },
       {
-        date: "Lun 15, Abr 2024",
         title: "Sistema de Votación en JS",
         projectLink: "udd001/proj02",
         demoLink: "udd001/demo02",
+        badgeLink: "https://www.credly.com/badges/bfbfa2ad-09f0-49ab-bef2-8ac0bfe15773/public_url",
         deliveryLink: "https://github.com/sauk1346/UDD_C13_Proyecto02"
       },
       {
-        date: "Lun 13, May 2024",
         title: "Landing de Negocio",
-        projectLink: null,
+        projectLink: "udd001/proj03",
         demoLink: "udd001/demo03",
+        badgeLink: "https://www.credly.com/badges/e91090b1-32f9-43cc-9e74-1b45f3f4df2f/public_url",
         deliveryLink: "https://github.com/sauk1346/UDD_C13_Proyecto03"
       },
       {
-        date: "Lun 17, Jun 2024",
         title: "Reservas Hoteleras",
-        projectLink: null,
+        projectLink: "udd001/proj04",
         demoLink: "udd001/demo04",
+        badgeLink: "https://www.credly.com/badges/fb2a98c4-033c-4f9e-bbfd-7e3ea548ef55/public_url",
         deliveryLink: "https://github.com/sauk1346/UDD_C13_Proyecto04"
       },
       {
-        date: "Lun 15, Jul 2024",
         title: "Aplicación Web con React",
         projectLink: null,
         demoLink: "udd001/demo05",
+        badgeLink: "https://www.credly.com/badges/c1d1d5f3-5a5c-4e57-b9f6-bdd860e6e1ee/public_url",
         deliveryLink: "https://github.com/sauk1346/UDD_C13_Proyecto05"
       },
       {
-        date: "Mié 14, Ago 2024",
         title: "Aplicación Backend con Autenticación",
         projectLink: null,
         demoLink: "udd001/demo06",
+        badgeLink: "https://www.credly.com/badges/a95e98d1-4f99-4b7b-97fb-c14ead921a2e/public_url",
         deliveryLink: "https://github.com/sauk1346/UDD_C13_Proyecto06"
       },
       {
-        date: "Dom 09, Sep 2024",
         title: "Aplicación Fullstack de Comercio Electrónico",
         projectLink: null,
         demoLink: null,
+        badgeLink: "https://www.credly.com/badges/38382749-c2a8-4fb6-9a3b-ba1960f83b3a/public_url",
         deliveryLink: "https://github.com/sauk1346/UDD_C13_Proyecto07"
       }
     ]
@@ -63,22 +63,18 @@ export const udd01Data = {
         {
           number: "01",
           content: "Programación y Paradigmas",
-          date: "Sáb 20, Ene 2024"
         },
         {
           number: "02",
           content: "Algoritmia",
-          date: "Sáb 27, Ene 2024"
         },
         {
           number: "03",
           content: "Estructuras de Control Repetitivas",
-          date: "Sáb 03, Feb 2024"
         },
         {
           number: "04",
           content: "Windows Terminal, Github",
-          date: "Sáb 24, Feb 2024"
         }
       ]
     },
@@ -88,22 +84,18 @@ export const udd01Data = {
         {
           number: "05",
           content: "Introducción a Javascript",
-          date: "Sáb 09, Mar 2024"
         },
         {
           number: "06",
           content: "Tipo y Uso de Funciones",
-          date: "Sáb 16, Mar 2024"
         },
         {
           number: "07",
           content: "Programación Orientada a Objetos",
-          date: "Sáb 23, Mar 2024"
         },
         {
           number: "08",
           content: "Programación Funcional",
-          date: "Sáb 06, Abr 2024"
         }
       ]
     },
@@ -113,22 +105,18 @@ export const udd01Data = {
         {
           number: "09",
           content: "Introducción a HTML",
-          date: "Sáb 13, Abr 2024"
         },
         {
           number: "10",
           content: "Introducción a CSS",
-          date: "Sáb 20, Abr 2024"
         },
         {
           number: "11",
           content: "Diseño Responsivo, Flexbox, Grid, Bootstrap",
-          date: "Sáb 27, Abr 2024"
         },
         {
           number: "12",
           content: "Document Object Model (DOM)",
-          date: "Sáb 04, May 2024"
         }
       ]
     },
@@ -138,22 +126,18 @@ export const udd01Data = {
         {
           number: "13",
           content: "NodeJs",
-          date: "Sáb 11, May 2024"
         },
         {
           number: "14",
           content: "Asincronismo",
-          date: "Sáb 18, May 2024"
         },
         {
           number: "15",
           content: "Patrones de Diseño",
-          date: "Sáb 25, May 2024"
         },
         {
           number: "16",
           content: "Consumo de APIs usando Postman e Insomnia",
-          date: "Sáb 01, Jun 2024"
         }
       ]
     },
@@ -163,22 +147,18 @@ export const udd01Data = {
         {
           number: "17",
           content: "Introducción a React",
-          date: "Sáb 08, Jun 2024"
         },
         {
           number: "18",
           content: "Librería React Router",
-          date: "Sáb 15, Jun 2024"
         },
         {
           number: "19",
           content: "Hooks - 1ra parte",
-          date: "Sáb 22, Jun 2024"
         },
         {
           number: "20",
           content: "Hooks - 2da parte",
-          date: "Sáb 06, Jul 2024"
         }
       ]
     },
@@ -188,22 +168,18 @@ export const udd01Data = {
         {
           number: "21",
           content: "Bases de Datos",
-          date: "Sáb 20, Jul 2024"
         },
         {
           number: "22",
           content: "MongoDB a NodeJs",
-          date: "Mié 24, Jul 2024"
         },
         {
           number: "23",
           content: "Autenticación",
-          date: "Sáb 27, Jul 2024"
         },
         {
           number: "24",
           content: "Mundo laboral en el ámbito de desarrollo de software",
-          date: "Mié 07, Ago 2024"
         }
       ]
     },
@@ -213,7 +189,6 @@ export const udd01Data = {
         {
           number: "25",
           content: "React: Context API",
-          date: "Sáb 10, Ago 2024"
         },
         {
           number: "26",
@@ -223,12 +198,10 @@ export const udd01Data = {
         {
           number: "27",
           content: "React: Autenticación y autorización",
-          date: "Sáb 24, Ago 2024"
         },
         {
           number: "28",
           content: "Mercado Laboral",
-          date: "Sáb 31, Ago 2024"
         }
       ]
     }

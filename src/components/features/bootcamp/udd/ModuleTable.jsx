@@ -10,8 +10,7 @@ const ModuleTable = ({ title, sessions }) => {
           <thead>
             <tr>
               <th className={styles.numberColumn}>Clase</th>
-              <th className={styles.dateColumn}>Fecha</th>
-              <th className={styles.contentColumn}>Prework</th>
+              <th className={styles.contentColumn}>Contenido</th>
             </tr>
           </thead>
           <tbody>
@@ -20,7 +19,6 @@ const ModuleTable = ({ title, sessions }) => {
                 <td className={styles.numberCell}>
                   {String(session.number).padStart(2, '0')}
                 </td>
-                <td className={styles.dateCell}>{session.date}</td>
                 <td className={styles.contentCell}>{session.content}</td>
               </tr>
             ))}

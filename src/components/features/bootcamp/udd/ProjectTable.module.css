@@ -72,24 +72,24 @@
   min-width: 80px; 
 }
 
-.dateColumn { 
-  width: 140px; 
-  min-width: 140px; 
-}
-
 .projectColumn { 
   width: auto; 
-  min-width: 250px; 
-}
-
-.demoColumn { 
-  width: 100px; 
   min-width: 100px; 
 }
 
+.demoColumn { 
+  width: 90px; 
+  min-width: 90px; 
+}
+
 .deliveryColumn { 
-  width: 120px; 
-  min-width: 120px; 
+  width: 110px; 
+  min-width: 110px; 
+}
+
+.badgeColumn { 
+  width: 110px; 
+  min-width: 110px; 
 }
 
 .tableRow {
@@ -128,19 +128,12 @@
   transition: color 0.3s ease;
 }
 
-.dateCell {
-  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
-  font-weight: 500;
-  color: #6b7280;
-  font-size: 0.8rem;
-  white-space: nowrap;
-}
-
 .projectCell {
   font-weight: 500;
 }
 
 .demoCell,
+.badgeCell,
 .deliveryCell {
   text-align: center;
 }
@@ -185,6 +178,30 @@
   background: linear-gradient(135deg, #059669, #047857);
   transform: translateY(-1px);
   box-shadow: 0 4px 8px rgba(16, 185, 129, 0.4);
+}
+
+/* Enlaces de insignia (botón dorado) */
+.badgeLink {
+  display: inline-block;
+  padding: 0.375rem 0.875rem;
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-align: center;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(245, 158, 11, 0.3);
+}
+
+.badgeLink:hover {
+  background: linear-gradient(135deg, #d97706, #b45309);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(245, 158, 11, 0.4);
 }
 
 /* =================================================================
@@ -253,11 +270,6 @@
   color: #60a5fa;
 }
 
-:global(html.dark-mode) .dateCell,
-:global(html.dark-mode-override) .dateCell {
-  color: #9ca3af;
-}
-
 :global(html.dark-mode) .projectLink,
 :global(html.dark-mode-override) .projectLink {
   color: #60a5fa;
@@ -280,6 +292,18 @@
   box-shadow: 0 4px 8px rgba(6, 95, 70, 0.5);
 }
 
+:global(html.dark-mode) .badgeLink,
+:global(html.dark-mode-override) .badgeLink {
+  background: linear-gradient(135deg, #d97706, #b45309);
+  box-shadow: 0 2px 4px rgba(217, 119, 6, 0.4);
+}
+
+:global(html.dark-mode) .badgeLink:hover,
+:global(html.dark-mode-override) .badgeLink:hover {
+  background: linear-gradient(135deg, #b45309, #92400e);
+  box-shadow: 0 4px 8px rgba(217, 119, 6, 0.5);
+}
+
 /* =================================================================
    RESPONSIVE DESIGN
    ================================================================= */
@@ -300,8 +324,7 @@
     font-size: 0.8rem;
   }
 
-  .dateColumn { width: 120px; min-width: 120px; }
-  .projectColumn { min-width: 200px; }
+  .projectColumn { min-width: 180px; }
 }
 
 /* Móviles */
@@ -325,9 +348,10 @@
   }
 
   .numberColumn { width: 60px; min-width: 60px; }
-  .dateColumn { width: 100px; min-width: 100px; }
-  .demoColumn { width: 80px; min-width: 80px; }
-  .deliveryColumn { width: 90px; min-width: 90px; }
+  .projectColumn { min-width: 160px; }
+  .demoColumn { width: 70px; min-width: 70px; }
+  .deliveryColumn { width: 80px; min-width: 80px; }
+  .badgeColumn { width: 80px; min-width: 80px; }
 }
 
 /* Pantallas muy pequeñas - Layout de cards */
@@ -382,10 +406,10 @@
   }
 
   .numberCell:before { content: "#: "; }
-  .dateCell:before { content: "Fecha: "; }
   .projectCell:before { content: "Proyecto: "; }
   .demoCell:before { content: "Demo: "; }
   .deliveryCell:before { content: "Entrega: "; }
+  .badgeCell:before { content: "Insignia: "; }
 
   :global(html.dark-mode) .table td:before,
   :global(html.dark-mode-override) .table td:before {

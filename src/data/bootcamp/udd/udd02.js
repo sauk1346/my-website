@@ -5,53 +5,53 @@ export const udd02Data = {
     title: "Proyectos",
     data: [
       {
-        date: "Lun 15, Abr 2024",
         title: "Python para Ciencia de Datos",
         projectLink: null,
         demoLink: null,
-        deliveryLink: null
+        badgeLink: "https://www.credly.com/badges/dbfdbc54-43ae-4775-b465-1c59fec5b457/public_url",
+        deliveryLink: "https://colab.research.google.com/drive/18pQLbBdCSEdIl-42YZ_rxPf3Rt1_sZG4?usp=sharing"
       },
       {
-        date: "Lun 13, May 2024",
         title: "Limpieza y Procesado de Datos",
         projectLink: null,
         demoLink: null,
-        deliveryLink: null
+        badgeLink: "https://www.credly.com/badges/515d4202-028d-4a54-bbd3-2ed92e570ffd/public_url",
+        deliveryLink: "https://colab.research.google.com/drive/110xrO7rLLqm4tJmmFafhfnSkD9U3vIFO"
       },
       {
-        date: "Lun 10, Jun 2024",
         title: "Modelamiento supervisado en Machine Learning",
         projectLink: null,
         demoLink: null,
-        deliveryLink: null
+        badgeLink: "https://www.credly.com/badges/5e368d07-c333-4479-8e89-0ff54f9ed90a/public_url",
+        deliveryLink: "https://colab.research.google.com/drive/14X0s4s_BwIhj-VpA854rGOz_dHndAGZx?usp=sharing"
       },
       {
-        date: "Lun 08, Jul 2024",
         title: "Modelado no supervisado en Machine Learning",
         projectLink: null,
         demoLink: null,
-        deliveryLink: null
+        badgeLink: "https://www.credly.com/badges/1e36458c-178b-4609-a945-51b2004b7196/public_url",
+        deliveryLink: "https://colab.research.google.com/drive/1b9tDZ-e5cb7MlAsMwPjZBtJQ3RPQKyoi"
       },
       {
-        date: "Lun 05, Ago 2024",
         title: "Aprendizaje profundo con redes neuronales",
         projectLink: null,
         demoLink: null,
-        deliveryLink: null
+        badgeLink: "https://www.credly.com/badges/22fb99dd-a29d-4894-b881-5e99421bc80f/public_url",
+        deliveryLink: "https://colab.research.google.com/drive/18_D0vCkBryu6Dtgn5K5GiNzOlumDIhTX?usp=sharing"
       },
       {
-        date: "Lun 02, Sep 2024",
         title: "Procesamiento de Lenguaje Natural",
         projectLink: null,
         demoLink: null,
-        deliveryLink: null
+        badgeLink: "https://www.credly.com/badges/b2697be7-8296-4f3e-b2d9-0c566baa488b/public_url",
+        deliveryLink: "https://colab.research.google.com/drive/1OL1162egnusvUu71COHy2mDfKrwzLqmN?usp=sharing"
       },
       {
-        date: "Lun 14, Oct 2024",
         title: "Técnicas avanzadas para Ciencia de Datos y empleabilidad",
         projectLink: null,
         demoLink: null,
-        deliveryLink: null
+        badgeLink: "https://www.credly.com/badges/e05bbdd1-a4c5-4235-9346-dda7161d6735/public_url",
+        deliveryLink: "https://colab.research.google.com/drive/1RmuHqAVpVBOlC3Dk5FGS08z86xWaimnQ?usp=sharing"
       }
     ]
   },
@@ -63,22 +63,18 @@ export const udd02Data = {
         {
           number: "01",
           content: "Programación en Python",
-          date: "Sáb 09, Mar 2024"
         },
         {
           number: "02",
           content: "Librerías Numpy y Pandas",
-          date: "Sáb 16, Mar 2024"
         },
         {
           number: "03",
           content: "Base de datos Relacionales y No Relacionales",
-          date: "Sáb 23, Mar 2024"
         },
         {
           number: "04",
           content: "Visualización de Datos",
-          date: "Sáb 06, Abr 2024"
         }
       ]
     },
@@ -88,22 +84,18 @@ export const udd02Data = {
         {
           number: "05",
           content: "Análisis Exploratorio de Datos",
-          date: "Sáb 13, Abr 2024"
         },
         {
           number: "06",
           content: "Limpieza de Datos",
-          date: "Vie 26, Abr 2024"
         },
         {
           number: "07",
           content: "Preprocesado de Datos",
-          date: "Sáb 27, Abr 2024"
         },
         {
           number: "08",
           content: "Reducción de Dimensiones",
-          date: "Sáb 04, May 2024"
         }
       ]
     },
@@ -113,22 +105,18 @@ export const udd02Data = {
         {
           number: "09",
           content: "Fundamentos de Modelos de Regresión",
-          date: "Jue 16, May 2024"
         },
         {
           number: "10",
           content: "Aplicación de Modelos de Regresión",
-          date: "Sáb 18, May 2024"
         },
         {
           number: "11",
           content: "Fundamentos de Modelos de Clasificación",
-          date: "Sáb 25, May 2024"
         },
         {
           number: "12",
           content: "Aplicación de Modelos de Clasificación",
-          date: "Sáb 01, Jun 2024"
         }
       ]
     },
@@ -138,22 +126,18 @@ export const udd02Data = {
         {
           number: "13",
           content: "Fundamentos de Clustering",
-          date: "Sáb 08, Jun 2024"
         },
         {
           number: "14",
           content: "Técnicas de Clustering",
-          date: "Sáb 15, Jun 2024"
         },
         {
           number: "15",
           content: "Optimización de Modelos de Clustering",
-          date: "Sáb 22, Jun 2024"
         },
         {
           number: "16",
           content: "Perfilamiento",
-          date: "Jue 25, Jun 2024"
         }
       ]
     },
@@ -163,22 +147,18 @@ export const udd02Data = {
         {
           number: "17",
           content: "Fundamentos de Redes Neuronales",
-          date: "Sáb 06, Jul 2024"
         },
         {
           number: "18",
           content: "Redes Neuronales alimentadas hacia adelante",
-          date: "Sáb 13, Jul 2024"
         },
         {
           number: "19",
           content: "Redes Neuronales Convolucionales",
-          date: "Sáb 20, Jul 2024"
         },
         {
           number: "20",
           content: "Redes Neuronales Recurrentes",
-          date: "Sáb 27, Jul 2024"
         }
       ]
     },
@@ -188,22 +168,18 @@ export const udd02Data = {
         {
           number: "21",
           content: "Procesado de texto",
-          date: "Sáb 03, Ago 2024"
         },
         {
           number: "22",
           content: "Word Embeddings",
-          date: "Sáb 10, Ago 2024"
         },
         {
           number: "23",
           content: "Análisis de Sentimiento",
-          date: "Sáb 17, Ago 2024"
         },
         {
           number: "24",
           content: "Vectorización",
-          date: "Sáb 24, Ago 2024"
         }
       ]
     },
@@ -213,22 +189,18 @@ export const udd02Data = {
         {
           number: "25",
           content: "Tuning",
-          date: "Sáb 31, Ago 2024"
         },
         {
           number: "26",
           content: "Ensambles",
-          date: "Sáb 07, Sep 2024"
         },
         {
           number: "27",
           content: "Implementación de modelo en la industria",
-          date: "Sáb 14, Sep 2024"
         },
         {
           number: "28",
           content: "Story telling y presentación a equipos de trabajo",
-          date: "Sáb 28, Sep 2024"
         }
       ]
     }

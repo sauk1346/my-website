@@ -2,7 +2,7 @@
 
 <img
 	src="/bootcamp/udd001/images/banner.png"
-	style={{ display: 'block', margin: '0 auto', width:'100%'}}
+	style={{ display: 'block', border:'none', width:'100%'}}
 />
 <br/>
 
@@ -46,23 +46,23 @@ Construirás un algoritmo en pseudocódigo que simule un sistema para calcular e
 
 Los siguientes son los detalles del producto y la información del cliente:
 
-- Precio original: $100
-- Cupón de descuento: 10% de descuento
-- IVA (impuesto al valor agregado): 12%
+- Precio original: \$100
+- Cupón de descuento: 10\% de descuento
+- IVA (impuesto al valor agregado): 12\%
 - Cantidad: 2 pares de zapatos deportivos
 - Peso del paquete: 3 kg
 - Destino del envío: Nueva York
 
 De acuerdo con los requisitos del proyecto, el algoritmo deberá realizar lo siguiente:
 
-- Leer el precio original del producto: $100
-- Aplicar el descuento del cupón: 10% de descuento, es decir, el precio con descuento será $90.
-- Aplicar el IVA: 12% del precio con descuento, es decir, $90 * 1.12 = $100.80.
-- Aplicar el descuento por cantidad (2 pares de zapatos): 5% de descuento, es decir, $100.80 * 0.95 = $95.76.
-- Calcular el costo de envío basado en el peso y el destino: $10 (costo fijo) + $2 * 3 kg = $16.
-- Calcular el costo final del producto: ($95.76 * 2) + $16 = $207.52.
+- Leer el precio original del producto: \$100
+- Aplicar el descuento del cupón: 10\% de descuento, es decir, el precio con descuento será \$90.
+- Aplicar el IVA: 12\% del precio con descuento, es decir, \$90 * 1.12 = \$100.80.
+- Aplicar el descuento por cantidad (2 pares de zapatos): 5\% de descuento, es decir, \$100.80 * 0.95 = \$95.76.
+- Calcular el costo de envío basado en el peso y el destino: \$10 (costo fijo) + \$2 * 3 kg = \$16.
+- Calcular el costo final del producto: (\$95.76 * 2) + \$16 = \$207.52.
 
-Al final, el algoritmo deberá mostrar el costo final del producto ($207.52) y desglosar sus componentes: descuento, impuestos, descuento por cantidad y costo de envío.
+Al final, el algoritmo deberá mostrar el costo final del producto (\$207.52) y desglosar sus componentes: descuento, impuestos, descuento por cantidad y costo de envío.
 
 Subirás tu solución a un repositorio de GitHub, el cual compartirás con tu equipo educativo, posteriormente.
 
@@ -87,13 +87,17 @@ Usa esta lista para saber los requisitos mínimos del proyecto:
 
 A partir de los requisitos, tu % estará definido de esta forma:
 
-| ÁREA       | % DEL TOTAL |
-| ------------- |:-------------:|
-| Implementación de operaciones aritméticas y operadores de comparación      | 20%     |
-| Implementación de control de flujo: condiciones y bucles      | 30%     |
-| Uso de arreglos unidimensionales y/o bidimensionales | 20%      |
-| Uso de Git y GitHub en el proyecto | 15%      |
-| Entrega a tiempo | 15%      |
+<SmartTable
+	tableLayout="fixed"
+	headers={['ÁREA', '% DEL TOTAL']}
+	rows={[
+		['Implementación de operaciones aritméticas y operadores de comparación', '20%'],
+		['Implementación de control de flujo: condiciones y bucles', '30%'],
+		['Uso de arreglos unidimensionales y/o bidimensionales', '20%'],
+		['Uso de Git y GitHub en el proyecto', '15%'],
+		['Entrega a tiempo', '15%']
+	]}
+/>
 
 ## 7. Entregas
 

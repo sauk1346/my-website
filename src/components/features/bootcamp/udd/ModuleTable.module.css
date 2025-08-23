@@ -68,18 +68,13 @@
 
 /* Anchos específicos para columnas de módulos */
 .numberColumn { 
-  width: 80px; 
-  min-width: 80px; 
-}
-
-.dateColumn { 
-  width: 140px; 
-  min-width: 140px; 
+  width: 120px; 
+  min-width: 120px; 
 }
 
 .contentColumn { 
   width: auto; 
-  min-width: 250px; 
+  min-width: 300px; 
 }
 
 .tableRow {
@@ -116,14 +111,6 @@
   font-size: 0.8rem;
   text-align: center;
   transition: color 0.3s ease;
-}
-
-.dateCell {
-  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
-  font-weight: 500;
-  color: #6b7280;
-  font-size: 0.8rem;
-  white-space: nowrap;
 }
 
 .contentCell {
@@ -197,11 +184,6 @@
   color: #60a5fa;
 }
 
-:global(html.dark-mode) .dateCell,
-:global(html.dark-mode-override) .dateCell {
-  color: #9ca3af;
-}
-
 /* =================================================================
    RESPONSIVE DESIGN
    ================================================================= */
@@ -222,8 +204,7 @@
     font-size: 0.8rem;
   }
 
-  .dateColumn { width: 120px; min-width: 120px; }
-  .contentColumn { min-width: 200px; }
+  .contentColumn { min-width: 250px; }
 }
 
 /* Móviles */
@@ -246,8 +227,8 @@
     font-size: 0.75rem;
   }
 
-  .numberColumn { width: 60px; min-width: 60px; }
-  .dateColumn { width: 100px; min-width: 100px; }
+  .numberColumn { width: 80px; min-width: 80px; }
+  .contentColumn { min-width: 200px; }
 }
 
 /* Pantallas muy pequeñas - Layout de cards */
@@ -302,8 +283,7 @@
   }
 
   .numberCell:before { content: "#: "; }
-  .dateCell:before { content: "Fecha: "; }
-  .contentCell:before { content: "Tema: "; }
+  .contentCell:before { content: "Contenido: "; }
 
   :global(html.dark-mode) .table td:before,
   :global(html.dark-mode-override) .table td:before {

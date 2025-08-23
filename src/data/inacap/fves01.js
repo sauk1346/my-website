@@ -77,7 +77,7 @@ const courseData = {
             date: 'Jue 14, Ago 2025', 
             description: [
                 {
-                    text: 'Suspensión Clases: Pre-feriado',
+                    text: 'Class suspended: Pre-holiday',
                     strikethrough: true
                 }
             ]
@@ -105,7 +105,8 @@ const courseData = {
             date: 'Jue 21, Ago 2025', 
             description: [
                 {
-                    text: '',
+                    text: "Didn't attend",
+                    strikethrough: true
                 }
             ]
         },

@@ -98,7 +98,8 @@ const courseData = {
             date: 'Jue 21, Ago 2025', 
             description: [
                 {
-                    text: '',
+                    text: 'No asistí',
+                    strikethrough: true
                 }
             ]
         },

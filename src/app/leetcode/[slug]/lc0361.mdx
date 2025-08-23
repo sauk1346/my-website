@@ -7,30 +7,38 @@ La bomba elimina a todos los enemigos en la misma fila y columna desde el punto 
 ## Ejemplos
 
 **Ejemplo 1:**
-<img
+<SmartFigure
+	id="ej-01"
 	src="/leetcode/fig04.jpg"
-	style={{ display: 'block', margin: '0 auto', width:'60%'}}
+	alt="Ejemplo 01"
+	caption="Ejemplo 01"
+	size="large"
 />
-<br/>
 
-> **Input:** grid = [["0","E","0","0"],["E","0","W","E"],["0","E","0","0"]]
-> **Output:** 3
+<TerminalOutput>
+{`Input:  grid = [["0","E","0","0"],["E","0","W","E"],["0","E","0","0"]]
+Output: 3`}
+</TerminalOutput>
+
 
 **Ejemplo 2:**
-<img
+<SmartFigure
+	id="ej-02"
 	src="/leetcode/fig05.jpg"
-	style={{ display: 'block', margin: '0 auto', width:'60%'}}
+	alt="Ejemplo 02"
+	caption="Ejemplo 02"
+	size="large"
 />
-<br/>
 
-> **Input:** grid = [["W","W","W"],["0","0","0"],["E","E","E"]]
-> **Output:** 1
+<TerminalOutput>
+{`Input:  grid = [["W","W","W"],["0","0","0"],["E","E","E"]]
+Output: 1`}
+</TerminalOutput>
 
 
 ## Soluciones
 
-<details>
-    <summary>Python</summary>
+<Solution title="Python" icon="Python">
 ```python
 class Solution:
     def maxKilledEnemies(self, grid: List[List[str]]) -> int:
@@ -105,4 +113,4 @@ class Solution:
         
         return max_killed
 ``` 
-</details>
+</Solution>

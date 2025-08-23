@@ -318,21 +318,51 @@ export const calendar25 = [
     description: "Programación Backend"
   },
   {
-    id: 152,
+    id: 54,
     fecha: "2025-8-15",
     titulo: "[TI3V41] Control 01",
     description: "Programación Backend"
   },
   {
-    id: 153,
+    id: 55,
     fecha: "2025-8-22",
     titulo: "[TI3V41] Control 02",
     description: "Programación Backend"
   },
   {
-    id: 154,
+    id: 56,
     fecha: "2025-8-29",
     titulo: "[TI3V41] Control 03",
+    description: "Programación Backend"
+  },
+  {
+    id: 57,
+    fecha: "2025-9-5",
+    titulo: "[TI3V41] Control 04",
+    description: "Programación Backend"
+  },
+  {
+    id: 58,
+    fecha: "2025-9-12",
+    titulo: "[TI3V41] Control 05",
+    description: "Programación Backend"
+  },
+  {
+    id: 59,
+    fecha: "2025-9-19",
+    titulo: "[TI3V41] Control 06",
+    description: "Programación Backend"
+  },
+  {
+    id: 60,
+    fecha: "2025-9-26",
+    titulo: "[TI3V41] Control 07",
+    description: "Programación Backend"
+  },
+  {
+    id: 61,
+    fecha: "2025-10-3",
+    titulo: "[TI3V41] Control 08",
     description: "Programación Backend"
   },
 ];

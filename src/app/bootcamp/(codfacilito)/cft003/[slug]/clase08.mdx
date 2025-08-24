@@ -1,107 +1,105 @@
-# Tuplas
-Son objetos **inmutables**, no se pueden modificar una vez creadas
+# Listas
+
+- Nomenclatura: `<variable> = []`
+- Son objetos **mutables**, se puede cambiar su longitud.
+- Es buena práctica trabajar con listas de un solo tipo de datos.
 
 ```python
-settings = ("localhost", 3306, True)
+my_list = ["String", 10, 3.14, True, [1, 2, 3]]
 
-print(settings)
-print(type(settings))
+print(my_list)
+print(type(my_list))
 ```
-> ('localhost', 3306, True)
-> \<class 'tuple'\>
+<TerminalOutput withBg>
+{`['String', 10, 3.14, True, [1, 2, 3]]
+<class 'list'>`}
+</TerminalOutput>
 
-## 1. Crear tuplas
+## 1. Índices
 
-Es posible omitir los parentesis al crear una tupla
+Indica la posición de un elemento de la lista.
 
 ```python
-tupla_1 = 1, 2, 3, 4, 5
-tupla_2 = 10,
+courses = ["Python", "Django", "Flask", "Ruby", "MongoDB"]
 
-print(tupla_1)
-print(type(tupla_1))
-print(tupla_2)
-print(type(tupla_2))
+value_1 = courses[2]   # elemento en el índice 2
+value_2 = courses[-1]  # elemento en el último índice
+
+print(value_1)
+print(value_2)
 ```
-> (1, 2, 3, 4, 5)
-> \<class 'tuple'\>
-> (10,)
-> \<class 'tuple'\>
+<TerminalOutput withBg>
+{`Flask
+MongoDB`}
+</TerminalOutput>
 
-## 2. Desempaquetado de Tuplas
+## 2. Sublistas
+- Nomenclatura: `list = [start:end:skip]`
+- Se utiliza el concepto de *slicing*.
+- Todas las técnicas slicing crean una copia, no modifican la lista original.
 
 ```python
-courses = ("Python", "Django", "Ruby", "Ruby on Rails", "MySQL")
+courses = ["Python", "Django", "Flask", "Ruby", "MongoDB"]
 
-var1, var2, var3, var4, var5 = courses
+new_list_1 = courses[:3]   # sublista desde índice 0 a 3 (no inclusivo)
+new_list_2 = courses[2:]   # sublista desde índice 2 a último
+new_list_3 = courses[:]    # copia (sublista con todos los elementos)
+new_list_4 = courses[::2]  # saltos de 2 en 2
+new_list_5 = courses[::-1] # copia invertida de la lista
 
-print(var1)
-print(var2)
-print(var3)
-print(var4)
-print(var5)
+print(new_list_1)
+print(new_list_2)
+print(new_list_3)
+print(new_list_4)
+print(new_list_5)
 ```
-> Python
-> Django
-> Ruby
-> Ruby on Rails
-> MySQL
+<TerminalOutput withBg>
+{`['Python', 'Django', 'Flask']
+['Flask', 'Ruby', 'MongoDB']
+['Python', 'Django', 'Flask', 'Ruby', 'MongoDB']
+['Python', 'Flask', 'MongoDB']
+['MongoDB', 'Ruby', 'Flask', 'Django', 'Python']`}
+</TerminalOutput>
 
-## 3. Desempaquetado incompleto de Tuplas
+## 3. Métodos
 
-- A veces no se desea guardar todos los valores de la tupla 
-- Para esto, se utiliza la convención  guión bajo `_`
+<SmartTable
+	tableLayout="fixed"
+	headers={['Método', 'Descripción']}
+	rows={[
+		['`append(i)`', 'Agrega un **elemento-i** al final de la **lista base**'],
+		['`insert(i,j)`', 'Agrega un **elemento-j** en el **índice-i**'],
+		['`extend(i)`', 'Agrega la **lista-i** al final de la **lista base**'],
+		['`in`', 'Booleano. Permite **buscar** un **elemento** en la **lista**'],
+		['`index(i)`', 'Devuelve el **índice** del **elemento-i**'],
+		['`remove(i)`', 'Elimina el **elemento-i** de la **lista base**'],
+		['`pop(i)`', '**Devuelve y elimina** el **elemento-i** de la **lista base**'],
+		['`clear()`', 'Elimina **todos los elementos** de la **lista base**'],
+		['`copy()`', 'Crea una copia de la **lista base**'],
+		['`reverse()`', 'Invierte la posición de los elementos de la **lista base**'],
+		['`sort()`', 'Ordena la lista de forma **ascendente por default**']
+	]}
+/>
 
+## 4. Matrices
+Son listas que almacenan sublistas
 
 ```python
-courses = ("Python", "Django", "Ruby", "Ruby on Rails", "MySQL")
+# matriz 3x3
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
 
-var1, _, var3, var4, _ = courses
-
-print(var1)
-print(var3)
-print(var4)
+print(matrix)
+print(matrix[0][0]) # primer elemento
+print(matrix[2][2]) # último elemento
+print(matrix[1][1]) # elemento del centro
 ```
-> Python
-> Ruby
-> Ruby on Rails
-
-## 4. Agrupar Valores
-Para esto se utiliza el caracter arterístco `*`
-
-```python
-courses = ("Python", "Django", "Ruby", "Ruby on Rails", "MySQL")
-
-var1, var2, *sub_courses, last_value = courses
-
-print(var1)
-print(var2)
-print(sub_courses)
-print(last_value)
-```
-> Python
-> Django
-> \['Ruby', 'Ruby on Rails'\]
-> MySQL
-
-## 5. Función zip
-
-Permite trabajar con diferentes colecciones para generar tuplas.
-
-```python
-users = ["user1", "user2", "user3"]
-courses = ("Python", "Django", "Rails")
-
-response = list(zip(users,courses))
-
-print(response)
-```
-> \[('user1', 'Python'), ('user2', 'Django'), ('user3', 'Rails')\]
-
-## 6. Funciones de Tuplas
-
-|Función|Descripción|
-|---|---|
-|`len(i)`|Devuelve el **número de elementos** de la **colección-i**|
-|`sorted(i)`|Devuelve una **lista ordenada ascendente** de la **colección-i** |
-|`count(i)`|Devuelve el **número de veces** que aparece el **elemento-i** en la **colección base**|
+<TerminalOutput withBg>
+{`[[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+1
+9
+5`}
+</TerminalOutput>

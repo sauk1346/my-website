@@ -1,0 +1,239 @@
+# Programación Funcional
+
+Es un paradigma de programación declarativo, donde el foco está en las **funciones matemáticas puras** y el uso de **expresiones** en lugar de **sentencias** que alteren el estado del programa.
+
+Las funciones son tratadas como **ciudadanos de primera clase**, lo que significa que pueden ser asignadas a variables, pasadas como argumentos y retornadas como resultado.
+
+## 1. Características
+
+<SmartTable
+    tableLayout = "auto"
+    headers = {["Característica", "Descripción"]}
+    rows = {[
+        [
+            "**Inmutabilidad**",
+            "No se modifican variables ni se cambia el estado. En su lugar, se crean nuevos valores"
+        ],
+        [
+            "**Funciones puras**",
+            "Las funciones no tienen efectos secundarios. El mismo conjunto de entradas siempre produce la misma salida"
+        ],
+        [
+            "**Declarativo**",
+            "El código describe el qué hacer en lugar del cómo hacer"
+        ],
+        [
+            "**Control implícito**,",
+            "Se usan expresiones como `map()`, `filter()` y `reduce()` para aplicar operaciones sin necesidad de bucles explícitos"
+        ]
+    ]}
+/>
+
+## 2. Ventajas y Desventajas
+
+<SmartTable
+    tableLayout = "auto"
+    headers = {["Contenido", "Descripción"]}
+    lists = {{
+        R1: [
+            "Código más predecible y fácil de razonar",
+            "Facilidad de testeo",
+            "Menos errores relacionados con el estado",
+            "Modularidad y reutilización"
+        ],
+        R2: [
+            "Curva de aprendizaje",
+            "Sobrecarga de memoria",
+            "Rendimiento"
+        ]
+    }}
+    rows ={[
+        ["**Ventajas**", "@R1"],
+        ["**Desventajas**", "@R2"],
+    ]}
+/>
+
+## 3. Python como lenguaje funcional
+
+Python es un lenguaje de programación que admite **múltiples paradigmas**, lo que lo hace muy flexible y versátil.
+
+Tiene características de programación funcional, ya que permite:
+
+- Uso de funciones de primera clase
+- Funciones de orden superior
+- Expresiones **lambda**
+- Operaciones de lista, como `map`, `filter` y `reduce` para realizar operaciones funcionales
+
+## 4. Funciones Puras
+
+1. Devuelven el mismo resultado al ser llamadas con los mismo argumentos de entrada
+2. El resultado solo depende de la entrada: no tiene memoria
+3. No tiene efectos colaterales (*side effects*)
+
+## 5. Funciones como ciudadanos de primer orden
+
+Se refieren a elementos en un lenguaje de programación que pueden ser tratados de manera completa y sin restricciones.
+
+Estos elementos pueden ser asignados a variables, almacenados en estructuras de datos, pasados como argumentos a funciones y devueltos como resultados de funciones.
+
+## 6. Funciones de orden superior
+
+- Una función se denomina **función de orden superior** si ésta contiene funciones como parámetros de entrada o si devuelve una función como salida.
+- Es decir, son funciones que operan con otras funciones.
+
+```python
+def inner():
+    print("Soy una función llamada por una función de Orden Superior!")
+
+def high_order_function(callback):
+    callback()
+
+def main():
+    high_order_function(inner)
+
+main()
+```
+<TerminalOutput withBg>
+{`Soy una función llamada por una función de Orden Superior!`}
+</TerminalOutput>
+
+## 7. Funciones Recursivas
+Es una función que se define en términos de sí misma a través de una expresión autorreferencial.
+
+- Son funciones que se llaman a sí misma
+- Repite el comportamiento hasta que cumple una condición, y luego devolverá un resultado
+
+```python
+def countdown(n):
+    print(n)
+    if n > 0:
+        countdown(n - 1)
+
+def main():
+    countdown(5)
+
+main()
+```
+<TerminalOutput withBg>
+{`5
+4
+3
+2
+1
+0`}
+</TerminalOutput>
+
+## 8. Currying
+
+Es una técnica de programación funcional en la que una función con múltiples argumentos se transforma en una **secuencia de funciones**, cada una con un solo argumento.
+
+- Es decir, una función con n parámetros se transforma en n funciones anidadas con un solo argumento cada una
+
+```python
+def suma_curried(a):
+    def suma_b(b):
+        def suma_c(c):
+            return a + b + c
+        
+        return suma_c
+    return suma_b
+
+# Usamos la función curried paso a paso
+def main():
+    resultado = suma_curried(1)(2)(3)
+    print(resultado)
+
+main()
+```
+<TerminalOutput withBg>
+{`6`}
+</TerminalOutput>
+
+## 9. Lambdas, Maps y Filters
+
+### Lambdas
+Son funciones anónimas que solo pueden contener una expresión
+
+```python
+lambda <parameter_list>: <expression>
+```
+
+<SmartTable
+    tableLayout = "auto"
+    headers = {["Componente", "Descripción"]}
+    rows = {[
+        ["`lambda`", "Palabra clave para definir una expresión lambda"],
+        ["`<parameter_list`", "Una lista de nombres de parámetros opcionales"],
+        ["`<expression`", "Una expresión que normalmente incluye los parámetros"]
+    ]}
+/>
+
+Una función `lambda`:
+
+- Puede ser llamada inmediatamente
+- Puede recibir múltiples parámetros
+- Puede no recibir parámetros
+- Puede retornar múltiples valores en una tupla, pero solo de manera explícita
+
+
+```python
+def reverse(s):
+    return s[::-1]
+
+lambda_reverse = lambda s: s[::-1]
+
+def main():
+    print(reverse("SaukCode"))
+    print(lambda_reverse("Hola Mundo!"))
+
+main()
+```
+<TerminalOutput withBg>
+{`edoCkuaS
+!odnuM aloH`}
+</TerminalOutput>
+
+### Función Map()
+Devuelve un objeto de Map (que es un iterador) de los resultados después de aplicar la función a cada elemento de un iterable dado (lista, tupla, etc.)
+
+```python
+map(<f>, <iterable>)
+```
+
+**Ejemplo**
+```python
+def main():
+    animals = ["cat", "dog", "bird", "gecko"]
+    iterator = map(lambda animal: animal[::-1], animals)
+
+    for i in iterator:
+        print(i)
+
+main()
+```
+<TerminalOutput withBg>
+{`tac
+god
+drib
+okceg`}
+</TerminalOutput>
+
+### Función Filter()
+Filtra la secuencia dada con la ayuda de una función de prueba si cada elemento de la secuencia es verdadera o no.
+
+```python
+filter(<f>, <iterable>)
+```
+
+**Ejemplo**
+```python
+def main():
+    # filtrar números mayores a 100
+    result = list(filter(lambda x: x > 100, [1, 111, 2, 222, 3, 333]))
+    print(result)
+
+main()
+```
+<TerminalOutput withBg>
+{`[111, 222, 333]`}
+</TerminalOutput>

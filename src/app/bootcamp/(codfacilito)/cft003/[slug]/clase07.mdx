@@ -1,94 +1,139 @@
-# Listas
+# Asesoría 2: Fundamentos Programación
 
-- Nomenclatura: `<variable> = []`
-- Son objetos **mutables**, se puede cambiar su longitud.
-- Es buena práctica trabajar con listas de un solo tipo de datos.
+## 1. Condicionales
+
+1. Crear ambiente
+```sh
+python -m venv env
+source env/bin/activate
+```
+
+2. Código: Piedra, papel o tijeras
+```python
+import random
+
+player_choice = input("Rock, paper or scissors (r, p, s): ").lower()
+
+if player_choice not in ["r", "p", "s"]:
+    raise Exception("Opción no válida")
+
+computer_choice = random.choice(["r", "p", "s"])
+print(f"Computer: {computer_choice}")
+
+# Solo las combinaciones donde gana el jugador
+player_wins = {("r", "s"), ("p", "r"), ("s", "p")}
+
+if player_choice == computer_choice:
+    print("Result: Draw")
+elif (player_choice, computer_choice) in player_wins:
+    print("Result: Player wins")
+else:
+    print("Result: Computer wins")
+```
+
+## 2. Ciclos
 
 ```python
-my_list = ["String", 10, 3.14, True, [1, 2, 3]]
+import random
+from time import sleep
 
-print(my_list)
-print(type(my_list))
+def print_board(board):
+    print("-------------")
+    for i in range(3):
+        print(f"| {board[i][0]} | {board[i][1]} | {board[i][2]} |")
+    print("-------------")
+
+def get_player_move(board):
+    while True:
+        try:
+            move = input("Ingrese la fila y la columna (ej: 1,1): ")
+            row, column = move.split(",")
+            row = int(row.strip()) - 1
+            column = int(column.strip()) - 1
+            
+            if 0 <= row < 3 and 0 <= column < 3 and board[row][column] == "-":
+                return row, column
+            else:
+                print("Movimiento inválido. Intente de nuevo.")
+        except (ValueError, IndexError):
+            print("Formato inválido. Use el formato: fila,columna (ej: 1,1)")
+
+def get_computer_move(board):
+    # Más eficiente: obtener casillas vacías
+    empty_cells = []
+    for i in range(3):
+        for j in range(3):
+            if board[i][j] == "-":
+                empty_cells.append((i, j))
+    
+    if empty_cells:
+        return random.choice(empty_cells)
+    return None
+
+def check_winner(board):
+    # Líneas horizontales
+    for i in range(3):
+        if board[i][0] == board[i][1] == board[i][2] != "-":
+            return board[i][0]
+    
+    # Líneas verticales
+    for i in range(3):
+        if board[0][i] == board[1][i] == board[2][i] != "-":
+            return board[0][i]
+    
+    # Diagonales
+    if board[0][0] == board[1][1] == board[2][2] != "-":
+        return board[0][0]
+    elif board[2][0] == board[1][1] == board[0][2] != "-":
+        return board[2][0]
+    
+    return None
+
+def is_board_full(board):
+    for row in board:
+        if "-" in row:
+            return False
+    return True
+
+def main():
+    print("¡Bienvenido al Triki!")
+    board = [["-", "-", "-"], ["-", "-", "-"], ["-", "-", "-"]]
+    
+    while True:
+        # Turno del jugador
+        print_board(board)
+        row, column = get_player_move(board)
+        board[row][column] = "X"
+        
+        winner = check_winner(board)
+        if winner:
+            print_board(board)
+            print(f"¡{winner} gana!")
+            break
+        
+        if is_board_full(board):
+            print_board(board)
+            print("¡Empate!")
+            break
+        
+        # Turno de la computadora
+        print("Turno de la computadora...")
+        sleep(1)
+        comp_move = get_computer_move(board)
+        if comp_move:
+            board[comp_move[0]][comp_move[1]] = "O"
+        
+        winner = check_winner(board)
+        if winner:
+            print_board(board)
+            print(f"¡{winner} gana!")
+            break
+        
+        if is_board_full(board):
+            print_board(board)
+            print("¡Empate!")
+            break
+
+if __name__ == "__main__":
+    main()
 ```
-> \['String', 10, 3.14, True, \[1, 2, 3\]\]
-> \<class 'list'\>
-
-## 1. Índices
-
-Indica la posición de un elemento de la lista.
-
-```python
-courses = ["Python", "Django", "Flask", "Ruby", "MongoDB"]
-
-value_1 = courses[2]   # elemento en el índice 2
-value_2 = courses[-1]  # elemento en el último índice
-
-print(value_1)
-print(value_2)
-```
-> Flask
-> MongoDB
-
-## 2. Sublistas
-- Nomenclatura: `list = [start:end:skip]`
-- Se utiliza el concepto de *slicing*.
-- Todas las técnicas slicing crean una copia, no modifican la lista original.
-
-```python
-courses = ["Python", "Django", "Flask", "Ruby", "MongoDB"]
-
-new_list_1 = courses[:3]   # sublista desde índice 0 a 3 (no inclusivo)
-new_list_2 = courses[2:]   # sublista desde índice 2 a último
-new_list_3 = courses[:]    # copia (sublista con todos los elementos)
-new_list_4 = courses[::2]  # saltos de 2 en 2
-new_list_5 = courses[::-1] # copia invertida de la lista
-
-print(new_list_1)
-print(new_list_2)
-print(new_list_3)
-print(new_list_4)
-print(new_list_5)
-```
-> \['Python', 'Django', 'Flask'\]
-> \['Flask', 'Ruby', 'MongoDB'\]
-> \['Python', 'Django', 'Flask', 'Ruby', 'MongoDB'\]
-> \['Python', 'Flask', 'MongoDB'\]
-> \['MongoDB', 'Ruby', 'Flask', 'Django', 'Python'\]
-
-## 3. Métodos
-
-|Método|Descripción|
-|---|---|
-|`append(i)`|Agrega un **elemento-i** al final de la **lista base**|
-|`insert(i,j)`|Agrega un **elemento-j** en el **índice-i**|
-|`extend(i)`|Agrega la **lista-i** al final de la **lista base**|
-|`in`|Booleano. Permite **buscar** un **elemento** en la **lista**|
-|`index(i)`|Devuelve el **índice** del **elemento-i**|
-|`remove(i)`|Elimina el **elemento-i** de la **lista base**|
-|`pop(i)`|**Devuelve y elimina** el **elemento-i** de la **lista base**|
-|`clear()`|Elimina **todos los elementos** de la **lista base**|
-|`copy()`|Crea una copia de la **lista base**|
-|`reverse()`|Invierte la posición de los elementos de la **lista base**|
-|`sort()`|Ordena la lista de forma **ascendente por default**|
-
-
-## 4. Matrices
-Son listas que almacenan sublistas
-
-```python
-# matriz 3x3
-matrix = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
-]
-
-print(matrix)
-print(matrix[0][0]) # primer elemento
-print(matrix[2][2]) # último elemento
-print(matrix[1][1]) # elemento del centro
-```
-> \[\[1, 2, 3\], \[4, 5, 6\], \[7, 8, 9\]\]
-> 1
-> 9
-> 5

@@ -1,108 +1,210 @@
-# Strings
-Son **inmutables**.
+# Ciclos
+
+Es un bucle que repite un bloque de código hasta que se cumple una condición. Hay dos tipos de ciclos en Python:
+
+- Sentencias `for`
+- Sentencias `while`
+
+## 1. Sentencia For
+Nos permite iterar **sobre una secuencia de elementos** como por ejemplo cadenas de texto, listas y diccionarios.
 
 ```python
-message = "Hola Mundo!"
-
-print(message)
-print(type(message))
-print(len(message))
-print('!' in message)
-print(message.index('!'))
+for <var> in <iterable>:
+    <statement(s)>
 ```
-> Hola Mundo!
-> \<class 'str'\>
-> 11
-> True
-> 10
 
-## 1. Strings como listas
-
-- `split` : genera una **lista** a partir de un **string**.
-- `join` : genera un **string** a partir de una **lista**.
+**Ejemplo 01**
 
 ```python
-courses = "Python PHP Ruby Django MongoDB"
-list_courses = courses.split(' ')
-
-print(courses)
-print(list_courses)
+for i in range(1,11):
+    print(i)
 ```
-> Python PHP Ruby Django MongoDB
-> \['Python', 'PHP', 'Ruby', 'Django', 'MongoDB'\]
+<TerminalOutput withBg>
+{`1
+2
+3
+4
+5
+6
+7
+8
+9
+10`}
+</TerminalOutput>
 
+**Ejemplo 02**
 
 ```python
-courses = ['Python', 'Ruby', 'Ruby on Rails', 'MongoDB']
-messages_courses = ' ** '.join(courses)
+numbers = [0, 1, 2, 3, 4]
 
-print(messages_courses)
-print(type(messages_courses))
+for num in numbers:
+    print(num**2)
 ```
-> Python ** Ruby ** Ruby on Rails ** MongoDB
-> \<class 'str'\>
+<TerminalOutput withBg>
+{`0
+1
+4
+9
+16`}
+</TerminalOutput>
 
-## 2. Generar nuevos Strings
-
-```python
-first_name = 'Eduardo'
-last_name = 'García'
-
-# método 1
-full_name_1 = first_name + ' ' + last_name
-print(full_name_1)
-
-# método 2
-full_name_2 = ' '.join([first_name, last_name])
-print(full_name_2)
-
-# método 3
-full_name_3 = '%s %s' %(name, last_name)
-print(full_name_3)
-``` 
-> Eduardo García
-> Eduardo García
-> Eduardo García
-
-## 3. Método Format
+**Ejemplo 03**
 
 ```python
-first_name = "Eduardo"
-last_name = "García"
+fruits = {
+    "Fresa": "Roja",
+    "Limon": "Verde",
+    "Papaya": "Amarilla",
+    "Guayaba": "Rosada"
+}
 
-# método 4
-base = "El nombre completo es: {first_name} {last_name}. Su edad es: {age}"
-full_name = base.format(
-    age = 30,
-    first_name = first_name,
-    last_name = last_name 
-)
-
-print(full_name)
+for name, color in fruits.items():
+    print(f"{name} es de color {color}")
 ```
-> El nombre completo es: Eduardo García. Su edad es: 30
+<TerminalOutput withBg>
+{`Fresa es de color Roja
+Limon es de color Verde
+Papaya es de color Amarilla
+Guayaba es de color Rosada`}
+</TerminalOutput>
 
-## 4. F-Strings
-Es el más recomendado.
+## 2. Sentencia While
+Nos permite ejecutar un bloque de instrucciones mientras se cumpla la condición dada.
+
+**Ejemplo 01:** Saludo
 
 ```python
-first_name = "Eduardo"
-last_name = "García"
+want_greet = "S" # importante dar un valor inicial
 
-# método 5
-full_name = f'El nombre completo es: {first_name} {last_name}'
+while want_greet == "S":
+    print("Hola que tal!")
+    want_greet = input("¿Quiere otro saludo? [S/N]: ").upper()
 
-print(full_name)
+print("Que tenga un buen día")
 ```
-> El nombre completo es: Eduardo García
 
-## 5. Método de String
+**Ejemplo 02**
 
-|Método|Descripción|
-|---|---|
-|`strip()`|Elimina el espacio alrededor del string|
-|`upper()`|Crea un string con todos los caracteres en mayúsculas|
-|`lower()`|Crea un string con todos los caracteres en minúsculas|
-|`find(i)`|Devuelve el índice del caracter-i en el string|
-|`isnumeric()`|Booleano. Verifica si el string representa a un número|
-|`capitaliza()`|Cambia el primer caracter del string a mayúscula|
+```python
+day = 0
+week = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"]
+
+while day < 7:
+    print(f"Hoy es {week[day]}")
+    day += 1
+```
+<TerminalOutput withBg>
+{`Hoy es Lunes
+Hoy es Martes
+Hoy es Miércoles
+Hoy es Jueves
+Hoy es Viernes
+Hoy es Sábado
+Hoy es Domingo`}
+</TerminalOutput>
+
+## 3. Sentencias Break y Continue
+
+- `break`: Podemos parar o romper la ejecución de un ciclo si así lo requerimos. Esta termina el ciclo por completo y continúa con la primera declaración que sigue al ciclo.
+- `continue`: Terminamos la iteración actual y continuamos con la siguiente
+
+Ambas sentencias pueden usarse en ciclos `for` y `while`
+
+**Ejemplo 01:** uso de `break`
+
+```python
+animals = ["cat", "dog", "rabbit", "horse", "dolphin"]
+
+for animal in animals:
+    if "o" in animal:
+        break
+    print(animal)
+
+print("Done!")
+```
+<TerminalOutput withBg>
+{`cat
+Done!`}
+</TerminalOutput>
+
+**Ejemplo 02:** uso de `continue`
+
+```python
+animals = ["cat", "dog", "rabbit", "horse", "dolphin"]
+
+for animal in animals:
+    if "a" in animal:
+        continue
+    print(animal)
+
+print("Done!")
+```
+<TerminalOutput withBg>
+{`dog
+horse
+dolphin
+Done!`}
+</TerminalOutput>
+
+## 4. Sentencia else (en ciclos)
+
+Con la sentencia `else` podemos ejecutar código si se recorrieron todos los elementos de nuestro ciclo. Si por alguna razón el código fue interrumpido por un `break`, esta porción de código no se ejecutará.
+
+Se puede usar en ciclos `for` y `while`
+
+**Ejemplo 01**
+
+```python
+animals = ["cat", "dog", "rabbit", "horse", "dolphin"]
+
+for animal in animals:
+    print(animal)
+else:
+    print("Done!")
+```
+<TerminalOutput withBg>
+{`cat
+dog
+rabbit
+horse
+dolphin
+Done!`}
+</TerminalOutput>
+
+**Ejemplo 02**
+
+```python
+animals = ["cat", "dog", "rabbit", "horse", "dolphin"]
+
+for animal in animals:
+    if "o" in animal:
+        break
+    print(animal)
+else:
+    print("Done!")
+```
+<TerminalOutput withBg>
+{`cat`}
+</TerminalOutput>
+
+## 5. Ejercicio
+
+Escribe un programa que imprima los números del 1 al 100.
+
+- Si el número es múltiplo de 3 imprimir Fizz.
+- Si el número es múltiplo de 5 imprimir Buzz.
+- Si el número es múltiplo de 3 y 5 imprimir FizzBuzz
+
+<Solution>
+```python
+for num in range(1,101):
+    if num%3 == 0 and num%5 == 0:
+        print(f"{num}: FizzBuzz")
+    elif num%3 == 0:
+        print(f"{num}: Fizz")
+    elif num%5 == 0:
+        print(f"{num}: Buzz")
+    else:
+        print(num)
+```
+</Solution>

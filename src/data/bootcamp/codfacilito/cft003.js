@@ -15,7 +15,12 @@ export const cft003Data = {
           classNumber: "02",
           name: "Instalación y configuración de Python",
           link: "cft003/clase02"
-        }
+        },
+        {
+          classNumber: "03",
+          name: "Asesoría 1: Introducción",
+          link: "cft003/clase03"
+        },
       ]
     },
     {
@@ -23,40 +28,25 @@ export const cft003Data = {
       name: "Fundamentos de programación en Python",
       classes: [
         {
-          classNumber: "03",
-          name: "Introducción a Python",
-          link: "cft003/clase03"
-        },
-        {
           classNumber: "04",
-          name: "Condiciones",
-          link: null
+          name: "Introducción a Python",
+          link: "cft003/clase04"
         },
         {
           classNumber: "05",
-          name: "Ciclos",
-          link: null
+          name: "Condiciones",
+          link: "cft003/clase05"
         },
         {
           classNumber: "06",
-          name: "Strings",
+          name: "Ciclos",
           link: "cft003/clase06"
         },
         {
           classNumber: "07",
-          name: "Listas",
+          name: "Asesoría 2: Fundamentos Programación",
           link: "cft003/clase07"
         },
-        {
-          classNumber: "08",
-          name: "Tuplas",
-          link: "cft003/clase08"
-        },
-        {
-          classNumber: "09",
-          name: "Diccionarios",
-          link: "cft003/clase09"
-        }
       ]
     },
     {
@@ -64,13 +54,28 @@ export const cft003Data = {
       name: "Programación funcional en Python",
       classes: [
         {
+          classNumber: "08",
+          name: "Listas",
+          link: "cft003/clase08"
+        },
+        {
+          classNumber: "09",
+          name: "Tuplas",
+          link: "cft003/clase09"
+        },
+        {
           classNumber: "10",
           name: "Funciones",
-          link: null
+          link: "cft003/clase10"
         },
         {
           classNumber: "11",
           name: "Programación Funcional",
+          link: "cft003/clase11"
+        },
+        {
+          classNumber: "12",
+          name: "Asesoría 3",
           link: null
         }
       ]
@@ -80,12 +85,12 @@ export const cft003Data = {
       name: "Programación Orientada a Objetos en Python",
       classes: [
         {
-          classNumber: "12",
+          classNumber: "13",
           name: "Clases",
           link: null
         },
         {
-          classNumber: "13",
+          classNumber: "14",
           name: "Objetos",
           link: null
         }
@@ -96,12 +101,12 @@ export const cft003Data = {
       name: "Organización del código y modularización",
       classes: [
         {
-          classNumber: "14",
+          classNumber: "15",
           name: "Módulos y Paquetes",
           link: null
         },
         {
-          classNumber: "15",
+          classNumber: "16",
           name: "Documentación de Proyectos",
           link: null
         }
@@ -112,12 +117,12 @@ export const cft003Data = {
       name: "Novedades del lenguaje Python",
       classes: [
         {
-          classNumber: "16",
+          classNumber: "17",
           name: "Anotaciones y type hints",
           link: null
         },
         {
-          classNumber: "17",
+          classNumber: "18",
           name: "Manejo de Excepciones",
           link: null
         }
@@ -128,12 +133,12 @@ export const cft003Data = {
       name: "Uso del ecosistema Python",
       classes: [
         {
-          classNumber: "18",
+          classNumber: "19",
           name: "Paquetes que deberías conocer",
           link: null
         },
         {
-          classNumber: "19",
+          classNumber: "20",
           name: "Manejo de tiempo",
           link: null
         }
@@ -144,12 +149,12 @@ export const cft003Data = {
       name: "Conocimientos intermedio/avanzados",
       classes: [
         {
-          classNumber: "20",
+          classNumber: "21",
           name: "Threads y procesos",
           link: null
         },
         {
-          classNumber: "21",
+          classNumber: "22",
           name: "Proyecto con Decoradores",
           link: null
         }

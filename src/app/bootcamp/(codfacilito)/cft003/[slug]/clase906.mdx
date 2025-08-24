@@ -1,0 +1,108 @@
+# Strings
+Son **inmutables**.
+
+```python
+message = "Hola Mundo!"
+
+print(message)
+print(type(message))
+print(len(message))
+print('!' in message)
+print(message.index('!'))
+```
+> Hola Mundo!
+> \<class 'str'\>
+> 11
+> True
+> 10
+
+## 1. Strings como listas
+
+- `split` : genera una **lista** a partir de un **string**.
+- `join` : genera un **string** a partir de una **lista**.
+
+```python
+courses = "Python PHP Ruby Django MongoDB"
+list_courses = courses.split(' ')
+
+print(courses)
+print(list_courses)
+```
+> Python PHP Ruby Django MongoDB
+> \['Python', 'PHP', 'Ruby', 'Django', 'MongoDB'\]
+
+
+```python
+courses = ['Python', 'Ruby', 'Ruby on Rails', 'MongoDB']
+messages_courses = ' ** '.join(courses)
+
+print(messages_courses)
+print(type(messages_courses))
+```
+> Python ** Ruby ** Ruby on Rails ** MongoDB
+> \<class 'str'\>
+
+## 2. Generar nuevos Strings
+
+```python
+first_name = 'Eduardo'
+last_name = 'García'
+
+# método 1
+full_name_1 = first_name + ' ' + last_name
+print(full_name_1)
+
+# método 2
+full_name_2 = ' '.join([first_name, last_name])
+print(full_name_2)
+
+# método 3
+full_name_3 = '%s %s' %(name, last_name)
+print(full_name_3)
+``` 
+> Eduardo García
+> Eduardo García
+> Eduardo García
+
+## 3. Método Format
+
+```python
+first_name = "Eduardo"
+last_name = "García"
+
+# método 4
+base = "El nombre completo es: {first_name} {last_name}. Su edad es: {age}"
+full_name = base.format(
+    age = 30,
+    first_name = first_name,
+    last_name = last_name 
+)
+
+print(full_name)
+```
+> El nombre completo es: Eduardo García. Su edad es: 30
+
+## 4. F-Strings
+Es el más recomendado.
+
+```python
+first_name = "Eduardo"
+last_name = "García"
+
+# método 5
+full_name = f'El nombre completo es: {first_name} {last_name}'
+
+print(full_name)
+```
+> El nombre completo es: Eduardo García
+
+## 5. Método de String
+
+|Método|Descripción|
+|---|---|
+|`strip()`|Elimina el espacio alrededor del string|
+|`upper()`|Crea un string con todos los caracteres en mayúsculas|
+|`lower()`|Crea un string con todos los caracteres en minúsculas|
+|`find(i)`|Devuelve el índice del caracter-i en el string|
+|`isnumeric()`|Booleano. Verifica si el string representa a un número|
+|`capitaliza()`|Cambia el primer caracter del string a mayúscula|

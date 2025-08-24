@@ -1,0 +1,624 @@
+# Funciones
+
+## 1. Crear Funciones
+
+```python
+def say_goodbye():
+    print("Terminamos el script")
+
+def say_hello():
+    print("Hola mundo, desde una función")
+
+for _ in range(5):
+    say_hello()
+
+say_goodbye()
+```
+<TerminalOutput withBg>
+{`Hola mundo, desde una función
+Hola mundo, desde una función
+Hola mundo, desde una función
+Hola mundo, desde una función
+Hola mundo, desde una función
+Terminamos el script`}
+</TerminalOutput>
+
+## 2. Parámetros
+Son opcionales.
+
+**Ejemplo 1**
+```python
+def count_to(number):
+    for n in range(1,number+1):
+        print(n)
+
+count_to(10)
+```
+<TerminalOutput withBg>
+{`1
+2
+3
+4
+5
+6
+7
+8
+9
+10`}
+</TerminalOutput>
+
+**Ejemplo 2**
+```python
+def multiply(num1,num2):
+    result = num1 * num2
+    print(f"El resultado de la operación es: {result}")
+
+multiply(10,20)
+```
+<TerminalOutput withBg>
+{`El resultado de la operación es: 200`}
+</TerminalOutput>
+
+## 3. Retornar Valores
+- Esto permite reutilizar Funciones
+- Al ejecutar `return` finaliza la función. Todas las líneas que se encuentren después de ejecutarse `return`, no se ejecutarán.
+
+```python
+def multiply(num1,num2):
+    return num1 * num2
+    
+print(multiply(10,50))
+```
+<TerminalOutput withBg>
+{`500`}
+</TerminalOutput>
+
+## 4. Retornar múltiples valores
+
+```python
+def foo():
+    return 'Cody', True, 12
+
+print(foo())
+print(type(foo()))
+```
+<TerminalOutput withBg>
+{`('Cody', True, 12)
+<class 'tuple'>`}
+</TerminalOutput>
+
+- Python **no retorna múltiple valores**
+- Lo que en realidad pasa, es que la función `foo` retorna una **tupla.**
+
+## 5. Valores por Nombre y Posición
+
+1. **Valores por Posición:** los valores se interpretan según la posición (orden) en que fueron ingresados.
+
+```python
+def full_name(first_name, last_name, prefix):
+    full_name = f'{prefix} {first_name} {last_name}'
+    return full_name
+
+print( full_name('Cody', 'Facilito', 'Mr.'))
+```
+<TerminalOutput withBg>
+{`Mr. Cody Facilito`}
+</TerminalOutput>
+
+2. **Valores por Nombre:** se utilizan los nombres de los parámetros al ingresar los valores, así se evita conflicto en caso de un orden ingresado incorrecto.
+
+```python
+def full_name(first_name, last_name, prefix):
+    full_name = f'{prefix} {first_name} {last_name}'
+    return full_name
+
+print( full_name(prefix='Sr.', last_name='Morales', first_name='Antonio',) )
+```
+<TerminalOutput withBg>
+{`Sr. Antonio Morales`}
+</TerminalOutput>
+
+## 6. Valores por Defecto
+- Es posible omitir los valores de parámetros que tienen valores por defecto
+
+```python
+def calculate_total(price, tax=0.05, discount=0):
+    total = price + (price * tax) - discount
+    return total
+
+total1 = calculate_total(100, 0.08, 10)
+total2 = calculate_total(200, 0.08)
+total3 = calculate_total(100)
+
+print(f"total1: {total1}")
+print(f"total2: {total2}")
+print(f"total3: {total3}")
+```
+<TerminalOutput withBg>
+{`total1: 98.0
+total2: 216.0
+total3: 105.0`}
+</TerminalOutput>
+
+## 7. Args
+- *arguments* (args)
+- Existen funciones en las que necesitemos una cantidad n de argumentos
+- Para esto se utiliza la siguiente sintaxis:
+    - `*` : maneja valores de entrada **por posición**
+    - `**` : maneja valores de entrada **por nombre**
+- Lo que hace `*` es **agrupar los valores ingresados** en una **tupla**
+
+```python
+def suma(*args):
+    return sum(args)
+
+print( suma(1,2) )
+print( suma(1,2,3) )
+print( suma(1,2,3,4) )
+print( suma(1,2,3,4,5,6,7,8,9,10) )
+```
+<TerminalOutput withBg>
+{`3
+6
+10
+55`}
+</TerminalOutput>
+
+## 8. Kwargs
+- *Keyword arguments* (Kwargs)
+- Se utiliza para manejas n valores de entrada **por nombre**
+- Para esto se utiliza la sintaxis `**`
+
+```python
+def show_info(**user):
+    print(user)
+
+show_info(
+    username = "Antonio",
+    email = "antonio@example.com",
+    password = "1234",
+    active = True,
+    courses = ["Python", "Django", "Flask"],
+    last_login = "2025",
+    is_super_user = True
+)
+```
+<TerminalOutput withBg>
+{`{'username': 'Antonio', 'email': 'antonio@example.com', 'password': '1234', 'active': True, 'courses': ['Python', 'Django', 'Flask'], 'last_login': '2025', 'is_super_user': True}`}
+</TerminalOutput>
+
+## 9. Args y Kwargs
+
+```python
+def show_info(*args, **kwargs):
+    print(">>> Info")
+    for value in args:
+        print(value)
+
+    print("\n>>> Details")
+    for key, value in kwargs.items():
+        print(f"{key} -> {value}")
+
+show_info(
+    "Cody", "CodigoFacilito", 12, "cody@codigofacilito.com",
+    courses = ["Python", "Flask", "Django"],
+    score = 10,
+    active = True,
+    is_super_admin= True
+)
+```
+<TerminalOutput withBg>
+{`>>> Info
+Cody
+CodigoFacilito
+12
+cody@codigofacilito.com
+
+>>> Details
+courses -> ['Python', 'Flask', 'Django']
+score -> 10
+active -> True
+is_super_admin -> True`}
+</TerminalOutput>
+
+## 10. Ciudadanos de Primera Clase
+- En python, las **funciones** son **ciudadanos de primera clase**
+- Esto quiere decir, que pueden ser manipuladas de la misma manera que otros valores básicos:
+    - Ser pasado como argumento a una función
+    - Ser retornado como valor de una función
+    - Ser asignado a una variable
+    - Ser almacenado en estructuras de datos (listas, diccionarios, etc)
+    - Ser creado en tiempo de ejecución
+    - Ser comparado por igualdad
+
+1. Asignar función a variable
+```python
+def saludar(nombre):
+    return f"Hola, {nombre}!"
+
+mi_funcion = saludar  # La función se asigna a una variable
+```
+
+2. Pasar función como argumento
+```python
+def saludar(nombre):
+    return f"Hola, {nombre}!"
+
+def ejecutar_funcion(func, valor):
+    return func(valor)
+
+def main():
+    resultado = ejecutar_funcion(saludar, "María")
+    print(resultado)
+
+main()
+```
+<TerminalOutput withBg>
+{`Hola, María!`}
+</TerminalOutput>
+
+
+3. Retornar función desde otra función
+```python
+def crear_multiplicador(factor):
+    def multiplicar(numero):
+        return numero * factor
+    return multiplicar  # Retorna la función interna
+
+def main():
+    duplicar = crear_multiplicador(2)
+    print(duplicar(5))
+
+main()
+```
+<TerminalOutput withBg>
+{`10`}
+</TerminalOutput>
+
+4. Almacenar funciones en estructuras de datos
+```python
+operaciones = {
+    'suma': lambda x, y: x + y,
+    'resta': lambda x, y: x - y,
+    'multiplicacion': lambda x, y: x * y
+}
+
+def main():
+    print(operaciones['suma'](3, 4))
+
+main()
+```
+<TerminalOutput withBg>
+{`7`}
+</TerminalOutput>
+
+## 11. Funciones  Anidadas
+
+- Lo interesante de las funciones anidadas, es que las variables locales pueden usarse dentro de las funciones anidadas.
+- Es posible modificar su valor dentro de una función anidada con el prefijo `nonlocal`
+
+```python
+def outer_function():
+    message = "Hola, nos encontramos en una función anidada."
+
+    def inner_function():
+        print(message)
+
+    inner_function()
+
+def main():
+    outer_function()
+
+main()
+```
+<TerminalOutput withBg>
+{`Hola, nos encontramos en una función anidada.`}
+</TerminalOutput>
+
+## 12. Variables como Funciones
+
+```python
+def deposit(balance, amount=0):
+    return balance + amount
+
+def withdraw(balance, amount=0):
+    if amount > balance:
+        return None
+    else:
+        return balance - amount
+    
+def main():
+    func1 = deposit # sin paréntesis, porque no queremos el valor que retorne
+    func2 = withdraw
+
+    print(func1(100)) # depositar: balance inicial 100, depósito 0
+    print(func2(100,101)) # retirar: balance inicial 100, retiro 101
+
+main()
+```
+<TerminalOutput withBg>
+{`100
+None`}
+</TerminalOutput>
+
+## 13. Funciones Lambda
+
+- Son funciones las cuales no tienen un nombre (anónimas).
+- El cuerpo es una sola línea de código
+- Siempre retornan un valor
+
+**Ejemplo 1:** Suma de 2 números
+
+```python
+add = lambda num1, num2=0: num1 + num2
+
+def main():
+    print(add(10))
+    print(add(10,20))
+
+main()
+```
+<TerminalOutput withBg>
+{`10
+30`}
+</TerminalOutput>
+
+**Ejemplo 2:** Suma de n números 
+
+```python
+add = lambda *args: sum(args)
+
+def main():
+    print(add(10, 20, 30, 40, 50, 60, 70))
+
+main()
+```
+<TerminalOutput withBg>
+{`280`}
+</TerminalOutput>
+
+## 14. Callbacks
+- Las funciones que reciben como argumentos otras funciones, se les llama **funciones de orden superior**
+- Un **callback** es una función que pasa como argumento para que una **función superior** la puede ejecutar
+
+**Ejemplo:** callback en función `handle_operation()`
+```python
+def deposit(balance, amount=0):
+    return balance + amount
+
+def withdraw(balance, amount=0):
+    if amount > balance:
+        return None
+    else:
+        return balance - amount
+
+def handle_operation(callback, *args, **kwargs):
+    result = callback(*args, **kwargs)
+    print(result)
+
+def main():
+    options = {
+        "a": deposit,
+        "b": withdraw
+    }
+    
+    option = input("Ingrese una opción (a/b): ")
+    balance = int(input("Ingrese su balance: "))
+    amount = int(input("Ingrese la cantidad: "))
+
+    function = options.get(
+        option,
+        lambda *args, **kwargs: "Lo sentimos, opción NO válida."
+    )
+
+    handle_operation(
+        callback=function,
+        balance=balance,
+        amount=amount
+    )
+
+main()
+```
+
+## 15. Retornar Funciones
+
+- Si una función tiene la capacidad de retornar funciones, entonces es una **función de orden superior**
+
+**Ejemplo:** función `factory_operation()` retorna funciones
+```python
+def factory_operation(option):
+    def deposit(balance, amount=0):
+        return balance + amount
+
+    def withdraw(balance, amount=0):
+        if amount > balance:
+            return None
+        else:
+            return balance - amount
+    
+    default = lambda *args, **kwargs: ">>> Lo sentimos, opción NO válida"
+
+    if option == "deposit":
+        return deposit
+    elif option == "withdraw":
+        return withdraw
+    else:
+        return default
+    
+def main():
+    option = input("Ingresa una opción (deposit/withdraw): ")
+    func = factory_operation(option)
+
+    print(func(100,20))
+
+main()
+```
+
+## 16. Closures
+
+- Son funciones anidadas que **tienen memoria**
+
+```python
+def multiply(num1):
+    
+    def operation(num2):
+        return num1 * num2
+    
+    return operation
+
+def main():
+
+    func_operation = multiply(10)
+    print(">>> El resultado es: ")
+    result = func_operation(3)
+    print(result)
+
+main()
+```
+<TerminalOutput withBg>
+{`>>> El resultado es: 
+30`}
+</TerminalOutput>
+
+## 17. Decoradores
+- Son funciones que permite añadir nuevas funcionalidades a otras funciones
+- Esto lo hace sin modificar la función original
+
+```python
+def decorator(func):
+    def wrapper(*args, **kwargs):
+        print(">>> Antes del llamado")
+        result = func(*args, **kwargs)
+        print(">>> Después del llamado")
+        return result
+    
+    return wrapper
+
+@decorator
+def hello_world():
+    print("Hola mundo")
+
+@decorator
+def suma(a,b):
+    print(a+b)
+
+def main():
+    hello_world()
+    suma(1,2)
+
+main()
+```
+<TerminalOutput withBg>
+{`>>> Antes del llamado
+Hola mundo
+>>> Después del llamado
+>>> Antes del llamado
+3
+>>> Después del llamado`}
+</TerminalOutput>
+
+## 18. Docstrings
+
+- Es posible documentar una función mediante comentarios (docstrings)
+
+```python
+# docstring
+
+def full_name(first_name, last_name):
+    """Genera un nombre completo."""
+    return f"{first_name} {last_name}"
+
+def main():
+    print(full_name.__doc__)
+
+main()
+```
+<TerminalOutput withBg>
+{`Genera un nombre completo.`}
+</TerminalOutput>
+
+- Existen convenciones para que la documentación sigua ciertos estándares
+
+```python
+# docstring
+
+def full_name(first_name, last_name):
+    """Permite generar un nombre completo.
+    
+    Args:
+        - first_name (String)
+        - last_name (String)
+    
+    Return:
+        String
+    """
+    return f"{first_name} {last_name}"
+
+def main():
+    print(full_name.__doc__)
+
+main()
+```
+<TerminalOutput withBg>
+{`Permite generar un nombre completo.
+
+Args:
+    - first_name (String)
+    - last_name (String)
+
+Return:
+    String`}
+</TerminalOutput>
+
+## 19. Probar Código mediante Comentarios
+
+```python
+# docstring
+
+def palindromo(sentence):
+    """Permite conocer si un string es o no un palíndromo
+    
+    Args:
+        - sentence (String)
+
+    Return:
+        - Bool
+    
+    Examples:
+    >>> palindromo('oso')
+    True
+
+    >>> palindromo('Anita lava la tina')
+    True
+
+    >>> palindromo('Código Facilito')
+    True
+    """
+    
+    sentence = sentence.lower().replace(' ', '')
+    return sentence == sentence[::-1]
+```
+
+- Luego en la terminal ejecutar el script de la siguiente forma
+
+```sh
+python3 -m doctest main.py
+```
+
+- Si todos los ejemplos están correctos, no genera `output`
+- En caso contrario, genera el siguiente error:
+
+<TerminalOutput withBg>
+{`**********************************************************************
+File "/home/sauk/Documents/python_exercises/main.py", line 19, in main.palindromo
+Failed example:
+    palindromo('Código Facilito')
+Expected:
+    True
+Got:
+    False
+**********************************************************************
+1 item had failures:
+   1 of   3 in main.palindromo
+***Test Failed*** 1 failure.`}
+</TerminalOutput>

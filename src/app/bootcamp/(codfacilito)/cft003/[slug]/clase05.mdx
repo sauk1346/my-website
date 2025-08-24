@@ -1,0 +1,138 @@
+# Condiciones
+
+## 1. Sentencia if
+
+Permite ejecutar un bloque de código de la evaluación de la condición es verdadera
+
+```python
+if condition:
+    # código a ejecutar si la condición es true
+```
+
+**Ejemplo 01:** Número mayor a 5
+
+```python
+num = int(input("Ingresa un número:"))
+
+if num > 5:
+    print("El número ingresado es mayor a 5")
+```
+
+**Ejemplo 02:** Número par
+
+```python
+num = int(input("Ingrese un número par: "))
+
+if num%2 != 0:
+    print("ERROR: el número ingresado no es par")
+
+print(f"El número ingresado fue {num}")
+```
+
+## 2. Sentencia else
+
+La sentencia `else` permite ejecutar un bloque de código si la evaluación de la condición es falsa.
+
+```python
+if condition:
+    # código a ejecutar si la condición es true
+else:
+    # código a ejecutar si la condición es false
+```
+
+**Ejemplo 01:** Edad
+
+```python
+edad = int(input("¿Cuántos años tiene? "))
+
+if edad <18:
+    print("Usted es menor de edad.")
+else:
+    print("Usted es mayor de edad.")
+```
+
+**Ejemplo 02:** Número positivo
+
+```python
+numero = int(input("Ingrese un número: "))
+
+if numero >= 0:
+    print("El número es positivo")
+else:
+    print("El número es negativo")
+```
+
+**Ejemplo 03:** Número par
+
+```python
+numero = int(input("Ingrese un número: "))
+
+if numero%2 != 0:
+    print(f"{numero} es impar")
+else:
+    print(f"{numero} es par")
+```
+
+## 3. Diferencia "==" y "is"
+
+<SmartTable
+    tableLayout = "auto"
+    lists = {{
+        R1: [
+            "Compara si los **valores/contenido** son iguales",
+            "Lama al método `__eq__()` del objeto"
+        ],
+        R2: [
+            "Compara si son el **mismo objeto en memoria** (misma identidad)",
+            "Verifica si ambas variables apuntan exactamente al mismo objeto"
+        ]
+    }}
+    headers = {["Sintaxis", "Descripción"]}
+    rows = {[
+        ["`==`", "@R1"],
+        ["`is`", "@R2"]
+    ]}
+/>
+
+**Ejemplo 01:** Comparación de valores
+
+```python
+a = [1, 2, 3]
+b = [1, 2, 3]
+
+print(a == b)  # True - mismo contenido
+print(a is b)  # False - objetos diferentes en memoria
+```
+
+**Ejemplo 02:** Mismo objeto
+
+```python
+c = a
+
+print(a is c)  # True - mismo objeto
+print(id(a) == id(c))  # True - misma dirección de memoria
+```
+
+**Ejemplo 03:** Caso especial con números pequeños y strings
+
+```python
+x = 5
+y = 5
+
+print(x == y)  # True
+print(x is y)  # True (Python optimiza números pequeños)
+```
+
+## 4. Operadores Ternarios
+Es una forma forcata de hacer evaluaciones condicionales
+
+```python
+<expr1> if <conditional_expr> else <expr2>
+```
+
+**Ejemplo 1:** Lluvia
+
+```python
+lloviendo = True
+print("Vamos a la", "playa" if not lloviendo else "biblioteca")
+```

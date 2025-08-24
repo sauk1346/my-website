@@ -1,155 +1,81 @@
-# Introducción a Python
+# Asesoría 1: Introducción
 
-## 1. Comentarios
-Existen 2 formas
+## 1. Herramientas Python
 
-- Utilizando el númeral (\#)
-- Utilizando triple comillas (\"\"\")
+Hay varias herramientas sugeridas para que nuestro código siga los estándares `PEP8`. Entre ellas tenemos
 
-```python
-# Esta línea es un comentario
-print("¡Hola mundo")
+- `Black`: Formateador automático de código Python
+- `Autopep8`: Formateador automático de código Python
+- `Isort`: Ordena y organiza las importaciones de librerías
 
-"""
-Este es un comentario
-con múltiples
-saltos de línea
-"""
+Analizadores estáticos de código:
+
+- `Flake8`
+- `Pylint`
+- `Mypy`: analizador de tipos
+
+## 2. Git
+
+**Configuración inicial**
+
+- Lo primero es establecer el nombre de usuario y dirección de correo electrónico.
+- Esto es importante poruqe los "commits" de Git usan esta información y es introducida de manera inmutable en los commits que envías.
+
+```sh
+git config --global user.name "John Doe"
+git config --global user.mail johndoe@example.com 
 ```
 
-## 2. Variables
-- Estructura base: `<variable> = <valor>`
-- No es necesario definir el tipo de dato de la variable
+- Para verificar tu configuración, se utiliza el siguiente comando:
 
-```python
-name = "código facilito"
-age = 25
+```sh
+git config --list
 ```
 
-## 3. Tipos de Datos
-- strings
-- integers
-- floats
-- booleans
+### Diferencia "git add ." y "git add -A"
 
-```python
-primer_nombre= "Juan"
-edad = 27
-saldo = 1_000_000
-peso = 80.5
-soltero = False
+<SmartTable
+    tableLayout = "auto"
+    headers = {["Comando","Descripción"]}
+    rows = {[
+        ["`git add .`", "Agrega todos los cambios en el directorio actual (./) y sus subdirectorios"],
+        ["`git add -A`", "Agrega todos los cambios en el repositorio, sin importar desde qué directorio ejecutes el comando"]
+    ]}
+/>
 
-print(type(primer_nombre))
-print(type(edad))
-print(type(saldo))
-print(type(peso))
-print(type(soltero))
+### Diferencias entre reset, revert y checkout
+
+<SmartTable
+    tableLayout = "auto"
+    headers = {["Comando","Descripción"]}
+    rows = {[
+        ["`git reset`", "Mueve el puntero del HEAD y opcionalmente cambia el staging y el working directory. Se usa para deshacer commits recientes o sacar archivos del staging. **Útil para:** Reescribir historial, deshacer commits mal hechos \\(antes de hacer push\\)"],
+        ["`git revert`", "Crea un nuevo commit que deshace los cambios de uno anterior. **Útil para:** Corregir un commit ya compartido sin alterar el historial"],
+        ["`git checkout`", "Mueve el HEAD a otra rama o commit y/o restaura archivos"]
+    ]}
+/>
+
+### Diferencias entre "git merge" y "git rebase"
+
+<SmartTable
+    tableLayout = "auto"
+    headers = {["Comando","Descripción"]}
+    rows = {[
+        ["`git merge`", "Crea un nuevo commit `G'` en la rama main. `G'` une los historiales de las ramas main y feature. `git merge` no es destructivo. Ni la rama main ni la rama feature se modifican"],
+        ["`git rebase`", "Mueve el historial de la rama feature a la cabeza de la rama main. Crea nuevos commits `E'`, `F'` y `G'` por cada commit en la rama feature. El beneficio de rebase es que genera un historial de commits lineal"],
+    ]}
+/>
+
+## 3. pre-commit
+Es una herramienta que ejecuta scripts automáticamente antes de que se realice un commit. Estos scripts se llaman `hooks` y pueden ayudarte a:
+
+- Formatear tu código automáticamente (por ejemplo, con black o isort)
+- Verificar si tu código sigue el estándar PEP8 (flake8, pylint)
+- Evitar que subas archivos grander por error
+- Bloquear secretos como claves API en tus commits
+- Validar que los archivos .json, .yms, etc., estén bien formados
+
+```sh
+pip install pre-commit
+pre-commit install
 ```
-> \<class 'str'\>
-> \<class 'int'\>
-> \<class 'int'\>
-> \<class 'float'\>
-> \<class 'bool'\>
-
-## 4. Constantes
-- En python **no existe** el concepto de constante.
-- Se puede "recrear" utilizando una nomenclatura diferente (utilizar mayusculas)
-
-```python
-VERSION = 3.14
-
-print(VERSION)
-```
-
-## 5. Números
-
-```python
-number = 11            
-result_1 = number + 10   # entero
-result_2 = number / 10   # flotante
-result_3 = number // 10  # entero
-
-print("primer resultado:", result_1)
-print("segundo resultado:", result_2)
-print("tercer resultado:", result_3)
-```
-> primer resultado: 21
-> segundo resultado: 1.1
-> tercer resultado: 1
-
-## 6. Operadores Relacionales
-Los operadores relacionales siempre darán como resultado un valor de tipo booleano.
-
-|Operadores||
-|---|---|
-|`==`|igual a|
-|`>`|mayor a|
-|`>=`|mayor o igual a|
-|`<`|menor a|
-|`<=`|menor o igual a|
-|`!=`|distinto a|
-
-```python
-number_one = 10
-number_two = 20
-
-result = number_one == number_two
-print(result)
-```
-> False
-
-## 7. Operadores Lógicos
-
-- Son 3: `and`, `or`, `not`
-- Al utilizarlos, siempre tendremos un valor booleano
-
-```python
-number_one = 10
-number_two = 20
-
-result_1 = True and True
-result_2 = True and True and number_one == number_two
-result_3 = number_one != number_two
-
-print(result_1)
-print(result_2)
-print(result_3)
-```
-> True
-> False
-> True
-
-## 8. Pedir Valores por Teclado
-Se utiliza la función `input()` 
-
-```python
-name = input("Ingrese su nombre: ")
-
-print(name)
-```
-
-## 9. Generar Nuevos Tipos de Datos
-- `input()` siempre trabaja con datos string
-- Sin embargo, a veces es necesario trabajar con distintos tipos de datos
-
-
-```python
-first_name = input("Ingresa tu nombre: ")
-age = int(input("Ingresa tu edad: "))
-height = float(input("Ingresa tu altura: "))
-status = input("Tu usuario se encuentra activo? (s/n)") == "s"
-```
-
-## 10. Múltiples Variables
-Es posible crear múltiples variables en una sola línea de código
-
-```python
-first_name, age, is_active = "Cody", 13, True
-
-print(first_name)
-print(age)
-print(is_active)
-```
-> Cody
-> 13
-> True

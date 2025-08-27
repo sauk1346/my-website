@@ -93,8 +93,8 @@ const courseData = {
                     external: true
                 },
                 {
-                    text: 'Evaluation 01 instructions',
-                    href: '/inacap/fves01/docs/eval01-instructions.pdf',
+                    text: 'Evaluation 01 rubric',
+                    href: '/inacap/fves01/docs/eval01-rubric.pdf',
                     external: true
                 },
             ]
@@ -116,8 +116,13 @@ const courseData = {
             date: 'Mar 26, Ago 2025', 
             description: [
                 {
-                    text: "",
-                }
+                    text: "Evaluation 01 example",
+                    href: "/inacap/fves01/docs/eval01-example.pdf"
+                },
+                {
+                    text: "Evaluation 01 progress",
+                    href: "fves01/eval01"
+                },
             ]
         },
         { 

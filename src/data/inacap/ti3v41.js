@@ -99,8 +99,8 @@ const courseData = {
             date: 'Lun 18, Ago 2025', 
             description: [
                 {
-                    text: '',
-                    href: ''
+                    text: 'Repaso Templates',
+                    href: 'ti3v41/clase03'
                 }
             ]
         },

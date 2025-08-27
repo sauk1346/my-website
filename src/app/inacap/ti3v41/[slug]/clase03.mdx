@@ -1,0 +1,108 @@
+# Repaso Templates
+
+Permiten crear cadenas de texto dinámicas insertando valores en posiciones específicas.
+
+- Dentro de `miapp/` se crea una carpeta `templates/`. Aquí es donde Django va a buscar los archivos .html que interactúan con el usuario.
+- Además. como buena práctica, se crea una carpeta `miapp/` dentro de `templates/` (una carpeta con el mismo nombre de la app). Ahí se alojan los archivos .html
+
+**Template info.html**
+```html
+<!DOCTYPE html>
+<html lang="eng>
+...
+
+<body>
+    <p>Fecha: {{ fecha }} </p>
+</body>
+</html>
+```
+
+1. En el ejemplo, se incorpora una variable `fecha`, la cual se envía desde la **vista**, a través del **contexto**
+2. Es decir, en la **vista** se construye un diccionario de python
+3. Luego ese diccionario se pasa al template, y esas llaves del diccionario capturan la información deseada
+
+**Vista view.py**
+```python
+from django.shorcuts import render
+from datetime import datetime
+
+def index(request):
+    fecha = datetime.now()
+    contexto = {'fecha': fecha}
+    return render(request, 'miapp/info.html', contexto)
+```
+
+- El **contexto** es un diccionario con clave y valor
+- Luego ese contexto se pasa a la función `render`, el cual reciben todas las **vistas** de Django
+- `render` recibe **request**. Adicionalmente se le cide el template a utilizar `miapp/info.html` y el diccionario `contexto` con toda la data
+
+## Filtros
+Son funciones encapsuladas
+
+```python
+{{ lista_nombre|last|length }}
+```
+
+# Ejercicios
+
+## Ejercicio 01
+
+Agregar más contenido al template `info.html`, capturando más información del usuario
+
+<Solution>
+**miapp/templates/miapp/info.html**
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Información del usuario - {{ annio }}</h1>
+    <p>Fecha: {{ data }}</p>
+    <h2>Datos Personales</h2>
+    <p>Nombre: {{ datos_usuario.nombre }}</p>
+    <p>Apellido: {{ datos_usuario.apellido }} </p>
+    <p>Edad: {{ datos_usuario.edad }} </p>
+    <h2>Hobbies: Tiene {{datos_usuario.hobbies|length}}</h2>
+    {% if datos_usuario.hobbies %}
+        <ul>
+            {% for hobbie in datos_usuario.hobbies %}
+                <li>{{hobbie}}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>{{datos_usuario.nombre|add:' no tiene hobbies.'}}</p>
+    {% endif %}
+</body>
+</html>
+```
+
+**miapp/views.py**
+```python
+from django.shortcuts import render
+from datetime import datetime
+
+# Create your views here.
+def index(request):
+    fecha = datetime.now()
+    annio = fecha.strftime("%Y") #Año en 4 dígitos.
+    # Diccionario con información del usuario.
+    usuario = {
+        "nombre":"Rosita",
+        "apellido":"Rojas",
+        "edad":27,
+        "hobbies":["Natación","Lectura","Música","Teatro"]
+    }
+    # Información que se le entrega al template.
+    contexto = {
+        'data': fecha,
+        'annio': annio,
+        'datos_usuario':usuario
+    }
+    
+    return render(request, 'miapp/info.html', contexto)
+```
+</Solution>

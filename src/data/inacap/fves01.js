@@ -120,8 +120,12 @@ const courseData = {
                     href: "/inacap/fves01/docs/eval01-example.pdf"
                 },
                 {
-                    text: "Evaluation 01 progress",
+                    text: "Evaluation 01: Conversation",
                     href: "fves01/eval01"
+                },
+                {
+                    text: "Evaluation 01: Presentation",
+                    href: "/inacap/fves01/docs/presentation01.pdf"
                 },
             ]
         },

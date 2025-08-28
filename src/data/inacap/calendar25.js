@@ -365,5 +365,23 @@ export const calendar25 = [
     titulo: "[TI3V41] Control 08",
     description: "Programación Backend"
   },
+  {
+    id: 62,
+    fecha: "2025-9-2",
+    titulo: "[FVES01] Evaluación 01",
+    description: "Inglés Inicial"
+  },
+  {
+    id: 62,
+    fecha: "2025-9-23",
+    titulo: "[FVES01] Evaluación 02",
+    description: "Inglés Inicial"
+  },
+  {
+    id: 62,
+    fecha: "2025-10-9",
+    titulo: "[FVES01] Evaluación 03",
+    description: "Inglés Inicial"
+  },
 ];
 export default calendar25;

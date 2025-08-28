@@ -32,31 +32,31 @@ const courseData = {
         },
                 { 
             evaluationNumber: 2,
-            date: 'Mar 30, Sep 2025',
+            date: 'Mar 23, Sep 2025',
             weighting: '30%',
             description: {
                 text: 'Test',
                 href: ''
             },
         },
-                { 
+        { 
             evaluationNumber: 3,
-            date: 'Mar 28, Oct 2025',
+            date: 'Jue 09, Oct 2025',
             weighting: '35%',
             description: {
                 text: 'Role Play',
                 href: ''
             },
         },
-                { 
+        { 
             evaluationNumber: 4,
             date: 'Mar 28, Oct 2025',
             weighting: '15%',
             description: {
-                text: 'Units 1-3',
+                text: 'Online Quices',
                 href: ''
             },
-        },
+        },        
     ],
     classData: [
         { 

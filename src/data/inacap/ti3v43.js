@@ -118,8 +118,8 @@ const courseData = {
             date: 'Lun 25, Ago 2025', 
             description: [
                 {
-                    text: '',
-                    href: ''
+                    text: 'Requerimientos del Software',
+                    href: 'ti3v43/clase05'
                 }
             ]
         },
@@ -186,7 +186,25 @@ const courseData = {
             lecture: '06', 
             date: 'Sáb 30, Ago 2025', 
             description: {
-                text: '',
+                text: 'Co-creación, patrones y requerimientos del software',
+                href: '/inacap/ti3v43/docs/lectura06.pdf',
+            }
+        },
+        { 
+            week: '03', 
+            lecture: '07', 
+            date: 'Sáb 30, Ago 2025', 
+            description: {
+                text: 'Introducción a los ciclos de vida y metodologías de desarrollo de software',
+                href: '',
+            }
+        },
+        { 
+            week: '03', 
+            lecture: '08', 
+            date: 'Sáb 30, Ago 2025', 
+            description: {
+                text: 'Técnicas de levantamiento de requerimientos y co-creación',
                 href: '',
             }
         },

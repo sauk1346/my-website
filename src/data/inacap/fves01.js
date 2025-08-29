@@ -131,7 +131,7 @@ const courseData = {
             date: 'Jue 28, Ago 2025', 
             description: [
                 {
-                    text: "",
+                    text: "Extra points for Evaluation 01",
                 }
             ]
         },

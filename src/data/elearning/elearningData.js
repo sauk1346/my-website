@@ -5,78 +5,81 @@ export const platformsData = {
     image: "/logos/coursera.png",
     courses: [
       {
-        id: 1,
-        title: "Introduction to Data Analytics",
         code: "CSR001",
-        instructor: "IBM",
-        link: null
-      },
+        title: "Introduction to Data Analytics",
+        titleUrl: null,
+        certificateUrl: null,
+        instructor: "IBM"
+      }
     ]
   },
-
   codigofacilito: {
-    name: "CódigoFacilito",
+    name: "CódigoFacilito", 
     description: "Apuntes",
-    image: "/logos/codigofacilito.png", 
+    image: "/logos/codigofacilito.png",
     courses: [
       {
-        id: 2,
-        title: "Curso de Ingeniería de Prompts",
         code: "CFT001",
-        instructor: "Lesly Zerna",
-        link: null
-      },
+        title: "Curso de Ingeniería de Prompts",
+        titleUrl: null,
+        certificateUrl: null,
+        instructor: "Lesly Zerna"
+      }
     ]
   },
-
   devtalles: {
     name: "DevTalles",
-    description: "Apuntes",
-    image: "/logos/devtalles.png", 
+    description: "Apuntes", 
+    image: "/logos/devtalles.png",
     courses: [
       {
-        id: 3,
-        title: "Programación para Principiantes - Primeros Pasos",
         code: "DVT001",
-        instructor: "Fernando Herrera",
-        link: null
+        title: "Programación para Principiantes - Primeros Pasos",
+        titleUrl: null,
+        certificateUrl: null,
+        instructor: "Fernando Herrera"
       },
+      {
+        code: "DVT010", 
+        title: "Django: Crea aplicaciones web robustas con Python",
+        titleUrl: "elearning/dtv010",
+        certificateUrl: null,
+        instructor: "Ricardo Cuéllar"
+      }
     ]
   },
-
   platzi: {
     name: "Platzi",
     description: "Apuntes",
-    image: "/logos/platzi.png",
+    image: "/logos/platzi.png", 
     courses: [
       {
-        id: 4,
-        title: "Curso de Introducción a la Web: Historia y Funcionamiento de Internet",
         code: "FE-008",
-        instructor: "Diego De Granda",
-        link: null
-      },
+        title: "Curso de Introducción a la Web: Historia y Funcionamiento de Internet",
+        titleUrl: null,
+        certificateUrl: null,
+        instructor: "Diego De Granda"
+      }
     ]
   },
-
   udemy: {
     name: "Udemy",
     description: "Apuntes",
     image: "/logos/udemy.png",
     courses: [
       {
-        id: 5,
-        title: "100 Days of Code - The complete Python Pro Bootcamp",
         code: "UDM001",
-        instructor: "Angela Yu",
-        link: "elearning/udm001"
+        title: "100 Days of Code - The complete Python Pro Bootcamp",
+        titleUrl: "elearning/udm001",
+        certificateUrl: null,
+        instructor: "Angela Yu"
       },
       {
-        id: 6,
+        code: "UDM002", 
         title: "Master the Coding Interview: Data Structures + Algorithms",
-        code: "UDM002",
-        instructor: "Andrei Neagoie",
-        link: "elearning/udm002"
+        titleUrl: "elearning/udm002",
+        certificateUrl: null,
+        instructor: "Andrei Neagoie"
       }
     ]
   }

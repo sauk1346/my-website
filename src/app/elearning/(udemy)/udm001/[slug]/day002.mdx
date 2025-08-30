@@ -1,0 +1,154 @@
+# Day 02
+
+## 1. Tipos de Datos Primitivos
+
+- string
+- integer
+- float
+- boolean
+
+```python
+#Subíndices
+print("Hello"[0])
+```
+<TerminalOutput withBg>
+{`H`}
+</TerminalOutput>
+
+```python
+#Integer
+print(123 + 456)
+```
+<TerminalOutput withBg>
+{`579`}
+</TerminalOutput>
+
+```python
+#Float
+print(3.14159)
+```
+<TerminalOutput withBg>
+{`3.14159`}
+</TerminalOutput>
+
+```python
+#Boolean
+print(True)
+print(False)
+```
+<TerminalOutput withBg>
+{`True
+False`}
+</TerminalOutput>
+
+## 2. Error de Tipo, Verificación de Tipo y Conversión de Tipo
+
+- `len()`: devuelve el largo de un string
+
+```python
+print(len("Hello"))
+```
+<TerminalOutput withBg>
+{`5`}
+</TerminalOutput>
+
+- `type()`: devuelve el tipo de dato
+
+```python
+print(type("Hello"))
+print(type(199))
+print(type(3.14))
+print(type(False))
+```
+<TerminalOutput withBg>
+{`print(type("Hello"))
+print(type(199))
+print(type(3.14))
+print(type(False))`}
+</TerminalOutput>
+
+- `int()`: convierte un dato a entero
+- `float()`: convierte un dato a float
+- `str()` : convierte un dato a string
+- `bool()` : Convierte un dato a boolean
+
+## 3. Operaciones Matemáticas
+
+```python
+print(123 + 456) # suma
+print(7 - 3)     # resta
+print(3 * 2)     # multiplicación
+print(6 / 3)     # división
+print(6 // 3)    # división entera
+print(2**3)      # exponenciación
+```
+<TerminalOutput withBg>
+{`579
+4
+6
+2.0
+2
+8`}
+</TerminalOutput>
+
+## 4. Manipulación de Números y F-string
+
+- `round(number,ndigits)`: redonde el número a n-decimales
+
+```python
+number = 3.66666
+print(round(number,2))
+```
+<TerminalOutput withBg>
+{`3.67`}
+</TerminalOutput>
+
+- `+=`, `-=`, `*=`, `/=` : permite abreviar operaciones sobre una misma variable
+
+```python
+a,b,c,d = 3, 3, 3, 3
+
+a+=2
+print(a)
+
+b-=2
+print(b)
+
+c*=2
+print(c)
+
+d/=2
+print(d)
+```
+<TerminalOutput withBg>
+{`5
+1
+6
+1.5`}
+</TerminalOutput>
+
+- **f-string:** permite agregar variables dentro de un string
+
+```python
+score = 0
+height = 1.8
+is_winning = True
+
+print(f"Your score is = {score}, your height is {height}. You are winning")
+```
+<TerminalOutput withBg>
+{`Your score is = 0, your height is 1.8. You are winning`}
+</TerminalOutput>
+
+## 5. Proyecto: Tip Calculator
+
+```python
+print("Welcome to the tip calculator!")
+bill = float(input("What was the total bill? $"))
+tip = int(input("How much tip would you like to give? 10, 12 or 15? "))
+split = int(input("How many people to split the bill? "))
+
+each_person = (bill + tip)/ split
+
+print(f"Each person should pay: ${each_person}")
+```

@@ -2,8 +2,8 @@
 
 **Tabla:** `World`
 
-```markdown
-+-------------+---------+
+<TerminalOutput>
+{`+-------------+---------+
 | Column Name | Type    |
 +-------------+---------+
 | name        | varchar |
@@ -12,10 +12,11 @@
 | population  | int     |
 | gdp         | bigint  |
 +-------------+---------+
-"name" es la clave primaria para esta tabla.
-Cada fila de esta tabla proporciona información sobre el nombre de
-un país, el continente al que pertenece, área, población y valor gdp (PIB)
-```
+
+- "name" es la clave primaria para esta tabla.
+- Cada fila de esta tabla proporciona información sobre el nombre de
+    un país, el continente al que pertenece, área, población y valor gdp (PIB)`}
+</TerminalOutput>
 
 Un país es **grande** si:
 
@@ -28,9 +29,9 @@ Devuelve la tabla de resultados en **cualquier orden.**
 
 ## Ejemplo
 
-```markdown
-Input: 
-World table:
+**Input:**
+<TerminalOutput>
+{`World table:
 +-------------+-----------+---------+------------+--------------+
 | name        | continent | area    | population | gdp          |
 +-------------+-----------+---------+------------+--------------+
@@ -39,25 +40,27 @@ World table:
 | Algeria     | Africa    | 2381741 | 37100000   | 188681000000 |
 | Andorra     | Europe    | 468     | 78115      | 3712000000   |
 | Angola      | Africa    | 1246700 | 20609294   | 100990000000 |
-+-------------+-----------+---------+------------+--------------+
++-------------+-----------+---------+------------+--------------+`}
+</TerminalOutput>
 
-Output: 
-+-------------+------------+---------+
+**Output:**
+<TerminalOutput>
+{`+-------------+------------+---------+
 | name        | population | area    |
 +-------------+------------+---------+
 | Afghanistan | 25500100   | 652230  |
 | Algeria     | 37100000   | 2381741 |
-+-------------+------------+---------+
-``` 
++-------------+------------+---------+`}
+</TerminalOutput>
 
-## Solution
+## Soluciones
 
-<details>
-    <summary>Python</summary>
+<Solution title="Python" icon="Python">
 ```python
 def big_countries(world: pd.DataFrame) -> pd.DataFrame:
-    filtered_df = world.loc[ (world['area']>= 3000000) | (world['population'] >= 25000000) ]
+    
+    filtered_df = world.loc[(world['area']>= 3000000) | (world['population'] >= 25000000)]
 
     return filtered_df[['name','population','area']]
 ```
-</details>
+</Solution>

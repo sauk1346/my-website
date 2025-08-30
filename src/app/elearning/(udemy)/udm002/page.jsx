@@ -1,16 +1,8 @@
-import SectionTable from '@/components/features/elearning/SectionTable';
+import CftTable from '@/components/features/bootcamp/codfacilito/CftTable';
 import { udm002Data } from '@/data/elearning/udm002';
 
 const Udm002 = () => {
-  return (
-    <SectionTable
-      courseId={udm002Data.courseId}
-      courseName={udm002Data.courseName}
-      sections={udm002Data.sections}
-      basePath={udm002Data.basePath}
-      showDescription={false}
-    />
-  );
-};
+    return <CftTable courseData={udm002Data} />;
+}
 
 export default Udm002;

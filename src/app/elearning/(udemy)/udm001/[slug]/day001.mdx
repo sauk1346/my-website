@@ -1,21 +1,45 @@
 # Día 1
 
-## Imprimir en la consola
+## 1. Imprimir en la consola
 ```python
 print("¡Hola Mundo!")
 ```
-
-## Manipulación de Strings
+<TerminalOutput withBg>
+{`print("¡Hola Mundo!")`}
+</TerminalOutput>
+ 
+## 2. Manipulación de Strings
 ```python
 # salto de línea
 print("¡Hola Mundo!\n¡Hola!\n¡Hola!")
 ```
+<TerminalOutput withBg>
+{`¡Hola Mundo!
+¡Hola!
+¡Hola!`}
+</TerminalOutput>
+
 ```python
 # concatenación
 print("Hola" + " " + "Angela")
 ```
+<TerminalOutput withBg>
+{`Hola Angela`}
+</TerminalOutput>
 
-## Función Input
+## 3. Función Input
 ```python
 nombre = input("¿Cuál es tu nombre?")
 ```
+
+## 4. Proyecto: Band Name Generator
+
+```python
+print("Welcome to the Band Name Generator")
+city_name = input("What's the name of the city you grew up in?\n")
+pet_name = input("What's your pet's name?\n")
+
+band_name = f"{city_name} {pet_name}"
+print(f"Your band name could be {band_name}")
+```
+

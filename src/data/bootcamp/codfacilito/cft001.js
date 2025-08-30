@@ -10,12 +10,14 @@ export const cft001Data = {
         {
           classNumber: "01",
           name: "¿Qué hace un científico de datos?",
-          link: "cft001/clase01"
+          link: "cft001/clase01",
+          exercises: null
         },
         {
           classNumber: "02",
           name: "Conoce tus herramientas de ciencia de datos",
-          link: "cft001/clase02"
+          link: "cft001/clase02",
+          exercises: null
         }
       ]
     },
@@ -26,12 +28,14 @@ export const cft001Data = {
         {
           classNumber: "03",
           name: "Estadística (1)",
-          link: "cft001/clase03"
+          link: "cft001/clase03",
+          exercises: null
         },
         {
           classNumber: "04",
           name: "Estadística (2)",
-          link: "cft001/clase04"
+          link: "cft001/clase04",
+          exercises: null
         }
       ]
     },
@@ -60,7 +64,8 @@ export const cft001Data = {
         {
           classNumber: "07",
           name: "Polars",
-          link: null
+          link: null,
+          exercises: null
         }
       ]
     },
@@ -71,12 +76,14 @@ export const cft001Data = {
         {
           classNumber: "08",
           name: "EDA (1)",
-          link: "cft001/clase08"
+          link: "cft001/clase08",
+          exercises: null
         },
         {
           classNumber: "09",
           name: "EDA (2)",
-          link: "cft001/clase09"
+          link: "cft001/clase09",
+          exercises: null
         }
       ]
     },
@@ -87,17 +94,20 @@ export const cft001Data = {
         {
           classNumber: "10",
           name: "¿Qué es la visualización?",
-          link: "cft001/clase10"
+          link: "cft001/clase10",
+          exercises: null
         },
         {
           classNumber: "11",
           name: "Gráficos Básicos",
-          link: "cft001/clase11"
+          link: "cft001/clase11",
+          exercises: null
         },
         {
           classNumber: "12",
           name: "Gráficos Avanzados",
-          link: null
+          link: null,
+          exercises: null
         }
       ]
     },
@@ -108,7 +118,8 @@ export const cft001Data = {
         {
           classNumber: "13",
           name: "Generar Dashboards",
-          link: null
+          link: null,
+          exercises: null
         }
       ]
     },
@@ -119,7 +130,8 @@ export const cft001Data = {
         {
           classNumber: "14",
           name: "Uso ético de datos",
-          link: null
+          link: null,
+          exercises: null
         }
       ]
     },
@@ -130,7 +142,8 @@ export const cft001Data = {
         {
           classNumber: "15",
           name: "Git para Ciencia de Datos",
-          link: null
+          link: null,
+          exercises: null
         }
       ]
     },
@@ -141,17 +154,20 @@ export const cft001Data = {
         {
           classNumber: "16",
           name: "Introducción a Machine Learning",
-          link: null
+          link: null,
+          exercises: null
         },
         {
           classNumber: "17",
           name: "Resolviendo problemas prácticos (1)",
-          link: null
+          link: null,
+          exercises: null
         },
         {
           classNumber: "18",
           name: "Resolviendo problemas prácticos (2)",
-          link: null
+          link: null,
+          exercises: null
         }
       ]
     },
@@ -162,12 +178,14 @@ export const cft001Data = {
         {
           classNumber: "19",
           name: "Introducción a la Redes Neuronales",
-          link: null
+          link: null,
+          exercises: null
         },
         {
           classNumber: "20",
           name: "Redes Neuronales Convolucionales",
-          link: null
+          link: null,
+          exercises: null
         }
       ]
     },
@@ -178,7 +196,8 @@ export const cft001Data = {
         {
           classNumber: "21",
           name: "Crear un portafolio para un Científico de Datos",
-          link: null
+          link: null,
+          exercises: null
         }
       ]
     }

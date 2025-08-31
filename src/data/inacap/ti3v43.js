@@ -34,6 +34,22 @@ const courseData = {
                     text: 'Evaluación Diagnóstica',
                     href: 'ti3v43/diagnostica'
                 },
+                {
+                    text: 'Guía 00: Resumen',
+                    href: 'ti3v43/guia00'
+                },
+                {
+                    text: 'Guía 01',
+                    href: 'ti3v43/guia01'
+                },
+                {
+                    text: 'Guía 02',
+                    href: 'ti3v43/guia02'
+                },
+                {
+                    text: 'Guía 03',
+                    href: 'ti3v43/guia03'
+                },
             ]
             
         },

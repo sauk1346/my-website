@@ -367,7 +367,7 @@ export const calendar25 = [
   },
   {
     id: 62,
-    fecha: "2025-9-2",
+    fecha: "2025-9-4",
     titulo: "[FVES01] Evaluación 01",
     description: "Inglés Inicial"
   },

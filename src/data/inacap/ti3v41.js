@@ -137,6 +137,28 @@ const courseData = {
                 }
             ]
         },
+        { 
+            week: '04', 
+            class: '07', 
+            date: 'Lun 01, Sep 2025', 
+            description: [
+                {
+                    text: '',
+                    href: ''
+                }
+            ]
+        },
+        { 
+            week: '04', 
+            class: '08', 
+            date: 'Mar 02, Sep 2025', 
+            description: [
+                {
+                    text: '',
+                    href: ''
+                }
+            ]
+        },
     ],
     lectureData: [
         { 
@@ -172,10 +194,18 @@ const courseData = {
             date: 'Sáb 30, Ago 2025', 
             description: {
                 text: 'Tu primera aplicación Django: Templates en acción',
+                href: 'ti3v41/lectura04'
+            }
+        },
+        { 
+            week: '04', 
+            lecture: '05', 
+            date: 'Sáb 06, Sep 2025', 
+            description: {
+                text: '',
                 href: ''
             }
         },
-        
     ]
 };
 

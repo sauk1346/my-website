@@ -129,6 +129,28 @@ const courseData = {
             date: 'Jue 28, Ago 2025', 
             description: [
                 {
+                    text: 'Modelado UML',
+                    href: ''
+                }
+            ]
+        },
+        { 
+            week: '04', 
+            class: '07', 
+            date: 'Lun 01, Sep 2025', 
+            description: [
+                {
+                    text: 'Evaluación 01',
+                    href: ''
+                }
+            ]
+        },
+        { 
+            week: '04', 
+            class: '08', 
+            date: 'Jue 04, Sep 2025', 
+            description: [
+                {
                     text: '',
                     href: ''
                 }
@@ -196,7 +218,7 @@ const courseData = {
             date: 'Sáb 30, Ago 2025', 
             description: {
                 text: 'Introducción a los ciclos de vida y metodologías de desarrollo de software',
-                href: '',
+                href: 'ti3v43/lectura07',
             }
         },
         { 
@@ -205,6 +227,24 @@ const courseData = {
             date: 'Sáb 30, Ago 2025', 
             description: {
                 text: 'Técnicas de levantamiento de requerimientos y co-creación',
+                href: '',
+            }
+        },
+        { 
+            week: '04', 
+            lecture: '09', 
+            date: 'Sáb 06, Sep 2025', 
+            description: {
+                text: 'Patrones de diseño de software',
+                href: '',
+            }
+        },
+        { 
+            week: '04', 
+            lecture: '10', 
+            date: 'Sáb 06, Sep 2025', 
+            description: {
+                text: 'Diagramas UML para modelado de sistemas',
                 href: '',
             }
         },

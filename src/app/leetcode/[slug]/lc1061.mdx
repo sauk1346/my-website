@@ -18,28 +18,47 @@ Devuelve *la cadena equivalente lexicográficamente más pequeña de `baseStr` u
 
 ## Ejemplos
 
+
 **Ejemplo 1:**
-> **Input:** s1 = "parker", s2 = "morris", baseStr = "parser"
-> **Output:** "makkek"
-> **Explicación:** Basándose en la información de equivalencia en s1 y s2, podemos agrupar sus caracteres como [m,p], [a,o], [k,r,s], [e,i].
-> Los caracteres en cada grupo son equivalentes y están ordenados lexicográficamente.
-> Por lo tanto, la respuesta es "makkek".
+<TerminalOutput>
+{`Input:  s1 = "parker", s2 = "morris", baseStr = "parser"
+Output: "makkek"
+
+Explicación:
+- Basándose en la información de equivalencia en s1 y s2, podemos agrupar 
+    sus caracteres como [m,p], [a,o], [k,r,s], [e,i].
+- Los caracteres en cada grupo son equivalentes y están ordenados 
+    lexicográficamente.
+- Por lo tanto, la respuesta es "makkek".`}
+</TerminalOutput>
 
 **Ejemplo 2:**
-> **Input:** s1 = "hello", s2 = "world", baseStr = "hold"
-> **Output:** "hdld"
-> **Explicación:** Basándose en la información de equivalencia en s1 y s2, podemos agrupar sus caracteres como [h,w], [d,e,o], [l,r].
-> Por lo tanto, solo la segunda letra 'o' en baseStr se cambia a 'd', la respuesta es "hdld".
+<TerminalOutput>
+{`Input:  s1 = "hello", s2 = "world", baseStr = "hold"
+Output: "hdld"
+
+Explicación:
+- Basándose en la información de equivalencia en s1 y s2, podemos agrupar 
+    sus caracteres como [h,w], [d,e,o], [l,r].
+- Por lo tanto, solo la segunda letra 'o' en baseStr se cambia a 'd', 
+    la respuesta es "hdld".`}
+</TerminalOutput>
 
 **Ejemplo 3:**
-> **Input:** s1 = "leetcode", s2 = "programs", baseStr = "sourcecode"
-> **Output:** "aauaaaaada"
-> **Explicación:** Agrupamos los caracteres equivalentes en s1 y s2 como [a,o,e,r,s,c], [l,p], [g,t] y [d,m], por lo tanto, todas las letras en baseStr excepto 'u' y 'd' se transforman en 'a', la respuesta es "aauaaaaada".
+<TerminalOutput>
+{`Input:  s1 = "leetcode", s2 = "programs", baseStr = "sourcecode"
+Output: "aauaaaaada"
 
-## Solution
+Explicación:
+- Agrupamos los caracteres equivalentes en s1 y s2 como [a,o,e,r,s,c],
+    [l,p], [g,t] y [d,m].
+- Por lo tanto, todas las letras en baseStr excepto 'u' y 'd' se 
+    transforman en 'a', la respuesta es "aauaaaaada".`}
+</TerminalOutput>
 
-<details>
-    <summary>Python</summary>
+## Soluciones
+
+<Solution title="Python" icon="Python">
 ```python
 class Solution:
    def find(self, dsuf, v):
@@ -71,4 +90,4 @@ class Solution:
            res.append(chr(parent + ord('a')))
        return ''.join(res)
 ```
-</details>
+</Solution>

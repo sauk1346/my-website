@@ -341,6 +341,18 @@ export const problems = {
       difficulty: "Easy",
       categories: ["pandas"]
     },
+    "LC2888": {
+      title: "Reestructurar Datos: Concatenar",
+      topics: ["Database"],
+      difficulty: "Easy",
+      categories: ["pandas"]
+    },
+    "LC2889": {
+      title: "Reestructurar Datos: Pivote",
+      topics: ["Database"],
+      difficulty: "Easy",
+      categories: ["pandas"]
+    },
     "LC2894": {
       title: "Diferencia de Sumas Divisibles y No Divisibles",
       topics: ["Math"],

@@ -6,28 +6,40 @@ Dado la `raíz` de un árbol binario, devuelve `true` *si puedes particionar el 
 
 **Ejemplo 1:**
 
-<img
+<SmartFigure
+	id="particion-arbol-binario"
 	src="/leetcode/fig19.jpg"
-	style={{ display: 'block', margin: '0 auto', width:'60%'}}
+	alt="Partición de árbol binario"
+	caption="Partición de árbol binario"
+	size="large"
 />
-<br/>
-> **Input:** root = [5,10,10,null,null,2,3]
-> **Output:** true
+
+<TerminalOutput>
+{`Input:  root = [5,10,10,null,null,2,3]
+Output: true`}
+</TerminalOutput>
 
 **Ejemplo 2:**
-<img
+
+<SmartFigure
+	id="no-particion-arbol-binario"
 	src="/leetcode/fig20.jpg"
-	style={{ display: 'block', margin: '0 auto', width:'25%'}}
+	alt="No es posible particionar el árbol binario"
+	caption="No es posible particionar el árbol binario"
+	size="large"
 />
-<br/>
-> **Input:** root = [1,2,10,null,null,2,20]
-> **Output:** false
-> **Explicación:** No puedes dividir el árbol en dos árboles con sumas iguales después de eliminar exactamente una arista del árbol.
+
+<TerminalOutput>
+{`Input:  root = [1,2,10,null,null,2,20]
+Output: false
+
+Explicación: No puedes dividir el árbol en dos árboles con sumas iguales 
+               después de eliminar exactamente una arista del árbol.`}
+</TerminalOutput>
 
 ## Soluciones
 
-<details>
-    <summary>Python</summary>
+<Solution title="Python" icon="Python">
 ```python
 class Solution:
     def checkEqualTree(self, root: Optional[TreeNode]) -> bool:
@@ -53,4 +65,4 @@ class Solution:
         if total_sum % 2 != 0:
             return False
 ```
-</details>
+</Solution>

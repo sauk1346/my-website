@@ -353,6 +353,18 @@ export const problems = {
       difficulty: "Easy",
       categories: ["pandas"]
     },
+    "LC2890": {
+      title: "Reestructurar Datos: Melt",
+      topics: ["Database"],
+      difficulty: "Easy",
+      categories: ["pandas"]
+    },
+    "LC2891": {
+      title: "Method Chaining",
+      topics: ["Database"],
+      difficulty: "Easy",
+      categories: ["pandas"]
+    },
     "LC2894": {
       title: "Diferencia de Sumas Divisibles y No Divisibles",
       topics: ["Math"],

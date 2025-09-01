@@ -134,9 +134,6 @@ const ProblemTable = ({
       </div>
       
       <div className={styles.tableFooter}>
-        <div className={styles.tableInfo}>
-          Mostrando {pagination.startIndex + 1} - {pagination.endIndex} de {pagination.totalItems} problemas
-        </div>
         <PaginationControls 
           pagination={pagination}
           className={styles.paginationControls}

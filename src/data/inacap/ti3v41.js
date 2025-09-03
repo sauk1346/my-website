@@ -65,6 +65,11 @@ const courseData = {
             date: 'Lun 11, Ago 2025', 
             description: [
                 {
+                    text: 'Introducción Django',
+                    href: 'ti3v41/clase01',
+                    external: true
+                },
+                {
                     text: 'Introducción Ambiente',
                     href: '/inacap/ti3v41/docs/ppt01.pdf',
                     external: true

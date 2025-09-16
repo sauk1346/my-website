@@ -173,6 +173,12 @@ export const problems = {
       difficulty: "Easy",
       categories: ["pandas"]
     },
+    "LC1741": {
+      title: "Find Total Time Spent by Each Employee",
+      topics: ["Database"],
+      difficulty: "Easy",
+      categories: ["pandas"]
+    },
     "LC1757": {
       title: "Productos Reciclables y Bajos en Grasa",
       topics: ["Database"],

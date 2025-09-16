@@ -1,8 +1,8 @@
 # Delivery de Comida Inmediata I
 
 **Tabla:** `Delivery`
-```text
-+-----------------------------+---------+
+<TerminalOutput>
+{`+-----------------------------+---------+
 | Column Name                 | Type    |
 +-----------------------------+---------+
 | delivery_id                 | int     |
@@ -11,12 +11,13 @@
 | customer_pref_delivery_date | date    |
 +-----------------------------+---------+
 
-"delivery_id" es la clave primaria de esta tabla.
+- "delivery_id" es la clave primaria de esta tabla.
 
-La tabla contiene información sobre entregas de comida a clientes 
-que hacen pedidos en una fecha determinada (order_date) 
-y especifican una fecha de entrega preferida (customer_pref_delivery_date) 
-```
+- La tabla contiene información sobre entregas de comida a clientes 
+    que hacen pedidos en una fecha determinada (order_date) 
+    y especifican una fecha de entrega preferida (customer_pref_delivery_date)`}
+</TerminalOutput>
+
 
 Si la fecha de entrega preferida del cliente es la misma que la fecha del pediro, entonces el pedido se llama **inmediato (immediate)**, de lo contrario, se llama **programado (scheduled)** 
 
@@ -25,8 +26,8 @@ Escribe una solución para encontrar el porcentaje de pedidos inmediatos en la t
 ## Ejemplo
 
 **Input:**
-```text
-tabla Delivery:
+<TerminalOutput>
+{`tabla Delivery:
 +-------------+-------------+------------+-----------------------------+
 | delivery_id | customer_id | order_date | customer_pref_delivery_date |
 +-------------+-------------+------------+-----------------------------+
@@ -36,26 +37,26 @@ tabla Delivery:
 | 4           | 3           | 2019-08-24 | 2019-08-26                  |
 | 5           | 4           | 2019-08-21 | 2019-08-22                  |
 | 6           | 2           | 2019-08-11 | 2019-08-13                  |
-+-------------+-------------+------------+-----------------------------+
-```
++-------------+-------------+------------+-----------------------------+`}
+</TerminalOutput>
 
 **Output:**
-```text
-+----------------------+
+<TerminalOutput>
+{`+----------------------+
 | immediate_percentage |
 +----------------------+
 | 33.33                |
 +----------------------+
-```
 
-**Explicación:**
-> Los pedidos con delivery_id 2 y 3 son inmediatos, mientras que los otros están programados.
+Explicación: Los pedidos con delivery_id 2 y 3 son inmediatos, mientras que 
+               los otros están programados.`}
+</TerminalOutput>
 
 
 ## Soluciones
 
-<details>
-    <summary>Python</summary>
+<Solution title="Python" icon="Python">
+
 ```python
 import pandas as pd
 
@@ -68,4 +69,4 @@ def food_delivery(delivery: pd.DataFrame) -> pd.DataFrame:
     
     return pd.DataFrame({'immediate_percentage': [immediate_percentage]})
 ```
-</details>
+</Solution>

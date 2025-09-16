@@ -131,7 +131,29 @@ const courseData = {
             date: 'Jue 28, Ago 2025', 
             description: [
                 {
-                    text: "Extra points for Evaluation 01",
+                    text: "Extra points for Evaluation 01 (1)",
+                }
+            ]
+        },
+        { 
+            week: '04', 
+            class: '07', 
+            date: 'Mar 02, Sep 2025', 
+            description: [
+                {
+                    text: "Unit 2: Listening Comprehension",
+                    href: "fves01/clase07"
+                }
+            ]
+        },
+        { 
+            week: '04', 
+            class: '08', 
+            date: 'Jue 04, Sep 2025', 
+            description: [
+                {
+                    text: "Evaluation 01",
+                    href: "fves01/eval01"
                 }
             ]
         },

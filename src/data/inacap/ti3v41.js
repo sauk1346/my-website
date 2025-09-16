@@ -69,16 +69,6 @@ const courseData = {
                     href: 'ti3v41/clase01',
                     external: true
                 },
-                {
-                    text: 'Introducción Ambiente',
-                    href: '/inacap/ti3v41/docs/ppt01.pdf',
-                    external: true
-                },
-                {
-                    text: 'Ambiente Virtual',
-                    href: '/inacap/ti3v41/docs/ppt02.pdf',
-                    external: true
-                },
             ]
         },
         { 
@@ -157,6 +147,50 @@ const courseData = {
             week: '04', 
             class: '08', 
             date: 'Mar 02, Sep 2025', 
+            description: [
+                {
+                    text: '',
+                    href: ''
+                }
+            ]
+        },
+        { 
+            week: '05', 
+            class: '09', 
+            date: 'Lun 08, Sep 2025', 
+            description: [
+                {
+                    text: '',
+                    href: ''
+                }
+            ]
+        },
+        { 
+            week: '05', 
+            class: '10', 
+            date: 'Mar 09, Sep 2025', 
+            description: [
+                {
+                    text: '',
+                    href: ''
+                }
+            ]
+        },
+        { 
+            week: '06', 
+            class: '11', 
+            date: 'Lun 15, Sep 2025', 
+            description: [
+                {
+                    text: '',
+                    href: ''
+                }
+            ]
+        },
+        { 
+            week: '06', 
+            class: '12', 
+            date: 'Mar 16, Sep 2025', 
             description: [
                 {
                     text: '',

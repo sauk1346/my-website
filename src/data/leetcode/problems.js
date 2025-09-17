@@ -89,6 +89,12 @@ export const problems = {
       difficulty: "Medium",
       categories: ["general"]
     },
+    "LC0511": {
+      title: "Game Play Analysis I",
+      topics: ["Database"],
+      difficulty: "Easy",
+      categories: ["pandas"]
+    },
     "LC0595": {
       title: "Países Grandes",
       topics: ["Database"],

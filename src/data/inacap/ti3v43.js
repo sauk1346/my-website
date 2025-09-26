@@ -56,7 +56,7 @@ const courseData = {
         
                 { 
             evaluationNumber: 2,
-            date: 'Sáb 13, Sep 2025',
+            date: 'Jue 25, Sep 2025',
             weighting: '25%',
             description: {
                 text: 'Informe técnico grupal',
@@ -167,8 +167,96 @@ const courseData = {
             date: 'Jue 04, Sep 2025', 
             description: [
                 {
+                    text: 'No asistí',
+                    strikethrough: true 
+                }
+            ]
+        },
+        { 
+            week: '05', 
+            class: '09', 
+            date: 'Lun 08, Sep 2025', 
+            description: [
+                {
+                    text: 'No asistí',
+                    strikethrough: true 
+                }
+            ]
+        },
+        { 
+            week: '05', 
+            class: '10', 
+            date: 'Jue 11, Sep 2025', 
+            description: [
+                {
+                    text: 'Suspensión clases: 11 sept',
+                    strikethrough: true 
+                }
+            ]
+        },
+        { 
+            week: '06', 
+            class: '11', 
+            date: 'Lun 15, Sep 2025', 
+            description: [
+                {
+                    text: 'No asistí',
+                    strikethrough: true 
+                }
+            ]
+        },
+        { 
+            week: '06', 
+            class: '12', 
+            date: 'Jue 18, Sep 2025', 
+            description: [
+                {
+                    text: 'Suspensión clases: Fiesta patrias',
+                    strikethrough: true 
+                }
+            ]
+        },
+        { 
+            week: '07', 
+            class: '13', 
+            date: 'Lun 22, Sep 2025', 
+            description: [
+                {
+                    text: 'Suspensión clases: Comunicado',
+                    strikethrough: true 
+                }
+            ]
+        },
+        { 
+            week: '07', 
+            class: '14', 
+            date: 'Jue 25, Sep 2025', 
+            description: [
+                {
+                    text: 'Avance Informe',
+                     
+                }
+            ]
+        },
+        { 
+            week: '08', 
+            class: '15', 
+            date: 'Lun 29, Sep 2025', 
+            description: [
+                {
+                    text: 'Evaluación 02: Disertación',
+                     
+                }
+            ]
+        },
+        { 
+            week: '08', 
+            class: '16', 
+            date: 'Jue 02, Oct 2025', 
+            description: [
+                {
                     text: '',
-                    href: ''
+                     
                 }
             ]
         },
@@ -243,7 +331,7 @@ const courseData = {
             date: 'Sáb 30, Ago 2025', 
             description: {
                 text: 'Técnicas de levantamiento de requerimientos y co-creación',
-                href: '',
+                href: 'ti3v43/lectura08',
             }
         },
         { 
@@ -252,7 +340,7 @@ const courseData = {
             date: 'Sáb 06, Sep 2025', 
             description: {
                 text: 'Patrones de diseño de software',
-                href: '',
+                href: 'ti3v43/lectura09',
             }
         },
         { 
@@ -261,6 +349,60 @@ const courseData = {
             date: 'Sáb 06, Sep 2025', 
             description: {
                 text: 'Diagramas UML para modelado de sistemas',
+                href: 'ti3v43/lectura10',
+            }
+        },
+        { 
+            week: '05', 
+            lecture: '11', 
+            date: 'Sáb 13, Sep 2025', 
+            description: {
+                text: 'Estándares de calidad en software',
+                href: 'ti3v43/lectura11',
+            }
+        },
+        { 
+            week: '05', 
+            lecture: '12', 
+            date: 'Sáb 13, Sep 2025', 
+            description: {
+                text: 'Integración y revisión de proyecto',
+                href: 'ti3v43/lectura12',
+            }
+        },
+        { 
+            week: '06', 
+            lecture: '13', 
+            date: 'Sáb 20, Sep 2025', 
+            description: {
+                text: 'Introducción a SaaS, IaaS, y Cloud Computing',
+                href: '',
+            }
+        },
+        { 
+            week: '06', 
+            lecture: '14', 
+            date: 'Sáb 20, Sep 2025', 
+            description: {
+                text: 'Sistemas distribuidos y mensajería P2P',
+                href: '',
+            }
+        },
+        { 
+            week: '07', 
+            lecture: '15', 
+            date: 'Sáb 27, Sep 2025', 
+            description: {
+                text: 'Normativa y ética en la confiabilidad de software',
+                href: '',
+            }
+        },
+        { 
+            week: '07', 
+            lecture: '16', 
+            date: 'Sáb 27, Sep 2025', 
+            description: {
+                text: 'Desarrollo de prototipos según requisitos de proyecto',
                 href: '',
             }
         },

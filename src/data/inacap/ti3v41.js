@@ -32,7 +32,7 @@ const courseData = {
         },
                 { 
             evaluationNumber: 2,
-            date: 'Dom 21, Sep 2025',
+            date: 'Dom 28, Sep 2025',
             weighting: '30%',
             description: {
                 text: '',
@@ -78,13 +78,7 @@ const courseData = {
             description: [
                 {
                     text: 'Páginas Dinámicas',
-                    href: '/inacap/ti3v41/docs/ppt03.pdf',
-                    external: true
-                },
-                {
-                    text: 'Introducción a Templates',
-                    href: '/inacap/ti3v41/docs/ppt04.pdf',
-                    external: true
+                    href: '',
                 },
             ]
         },
@@ -94,8 +88,8 @@ const courseData = {
             date: 'Lun 18, Ago 2025', 
             description: [
                 {
-                    text: 'Repaso Templates',
-                    href: 'ti3v41/clase03'
+                    text: 'Templates',
+                    href: ''
                 }
             ]
         },
@@ -105,7 +99,7 @@ const courseData = {
             date: 'Mar 19, Ago 2025', 
             description: [
                 {
-                    text: '',
+                    text: 'Recursos Estáticos',
                     href: ''
                 }
             ]
@@ -116,7 +110,7 @@ const courseData = {
             date: 'Lun 25, Ago 2025', 
             description: [
                 {
-                    text: '',
+                    text: 'Modelos',
                     href: ''
                 }
             ]
@@ -127,7 +121,7 @@ const courseData = {
             date: 'Mar 26, Ago 2025', 
             description: [
                 {
-                    text: '',
+                    text: 'Proyecto Tienda: Inicio',
                     href: ''
                 }
             ]
@@ -138,7 +132,7 @@ const courseData = {
             date: 'Lun 01, Sep 2025', 
             description: [
                 {
-                    text: '',
+                    text: 'Proyecto Tienda: Template Base',
                     href: ''
                 }
             ]
@@ -149,7 +143,7 @@ const courseData = {
             date: 'Mar 02, Sep 2025', 
             description: [
                 {
-                    text: '',
+                    text: 'Proyecto Tienda: Vista basada en clases',
                     href: ''
                 }
             ]
@@ -160,7 +154,7 @@ const courseData = {
             date: 'Lun 08, Sep 2025', 
             description: [
                 {
-                    text: '',
+                    text: 'Proyecto Tienda: Imágenes',
                     href: ''
                 }
             ]
@@ -171,7 +165,7 @@ const courseData = {
             date: 'Mar 09, Sep 2025', 
             description: [
                 {
-                    text: '',
+                    text: 'Proyecto Tienda: Vistas Edición Genéricas',
                     href: ''
                 }
             ]
@@ -182,7 +176,7 @@ const courseData = {
             date: 'Lun 15, Sep 2025', 
             description: [
                 {
-                    text: '',
+                    text: 'Proyecto Tienda: Formularios',
                     href: ''
                 }
             ]
@@ -193,7 +187,51 @@ const courseData = {
             date: 'Mar 16, Sep 2025', 
             description: [
                 {
+                    text: 'Proyecto Tienda: Correo Contacto',
+                    href: ''
+                }
+            ]
+        },
+        { 
+            week: '07', 
+            class: '13', 
+            date: 'Lun 22, Sep 2025', 
+            description: [
+                {
+                    text: 'Suspensión clases: post-18',
+                    strikethrough: true
+                }
+            ]
+        },
+        { 
+            week: '08', 
+            class: '14', 
+            date: 'Lun 29, Sep 2025', 
+            description: [
+                {
                     text: '',
+                    strikethrough: true
+                }
+            ]
+        },
+        { 
+            week: '08', 
+            class: '15', 
+            date: 'Mar 30, Sep 2025', 
+            description: [
+                {
+                    text: '',
+                    strikethrough: true
+                }
+            ]
+        },
+        { 
+            week: '07', 
+            class: '14', 
+            date: 'Mar 23, Sep 2025', 
+            description: [
+                {
+                    text: 'Proyecto Tienda: Búsquedas',
                     href: ''
                 }
             ]
@@ -241,7 +279,52 @@ const courseData = {
             lecture: '05', 
             date: 'Sáb 06, Sep 2025', 
             description: {
-                text: '',
+                text: 'Framework Back End',
+                href: '/inacap/ti3v41/docs/lectura05.pdf'
+            }
+        },
+        { 
+            week: '04', 
+            lecture: '06', 
+            date: 'Sáb 06, Sep 2025', 
+            description: {
+                text: 'Integrando Django: Bases de datos y administración web',
+                href: 'ti3v41/lectura06'
+            }
+        },
+        { 
+            week: '05', 
+            lecture: '07', 
+            date: 'Sáb 13, Sep 2025', 
+            description: {
+                text: 'Construyendo soluciones CRUD con Django ORM',
+                href: 'ti3v41/lectura07'
+            }
+        },
+        { 
+            week: '06', 
+            lecture: '08', 
+            date: 'Sáb 20, Sep 2025', 
+            description: {
+                text: 'API RESTful con integración a base de datos',
+                href: '/inacap/ti3v41/docs/lectura08.pdf'
+            }
+        },
+        { 
+            week: '06', 
+            lecture: '09', 
+            date: 'Sáb 20, Sep 2025', 
+            description: {
+                text: 'Iniciando tu camino RESTful con Django',
+                href: ''
+            }
+        },
+        { 
+            week: '07', 
+            lecture: '09', 
+            date: 'Sáb 27, Sep 2025', 
+            description: {
+                text: 'Seguridad ante todo: Autenticación JWT',
                 href: ''
             }
         },

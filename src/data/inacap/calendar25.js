@@ -283,7 +283,7 @@ export const calendar25 = [
   },
   {
     id: 48,
-    fecha: "2025-9-13",
+    fecha: "2025-9-25",
     titulo: "[TI3V43] Evaluación 02",
     description: "Ingeniería de Software"
   },
@@ -307,7 +307,7 @@ export const calendar25 = [
   },
   {
     id: 52,
-    fecha: "2025-9-21",
+    fecha: "2025-9-28",
     titulo: "[TI3V41] Evaluación 02",
     description: "Programación Backend"
   },

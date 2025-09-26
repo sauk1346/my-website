@@ -152,8 +152,96 @@ const courseData = {
             date: 'Jue 04, Sep 2025', 
             description: [
                 {
-                    text: "Evaluation 01",
+                    text: "Evaluation 01: Role play",
                     href: "fves01/eval01"
+                }
+            ]
+        },
+        { 
+            week: '05', 
+            class: '09', 
+            date: 'Mar 09, Sep 2025', 
+            description: [
+                {
+                    text: "Didn't attend",
+                    strikethrough: true
+                }
+            ]
+        },
+        { 
+            week: '05', 
+            class: '10', 
+            date: 'Jue 11, Sep 2025', 
+            description: [
+                {
+                    text: "Class suspended: 11 sept",
+                    strikethrough: true
+                }
+            ]
+        },
+        { 
+            week: '06', 
+            class: '11', 
+            date: 'Mar 16, Sep 2025', 
+            description: [
+                {
+                    text: "Didn't attend",
+                    strikethrough: true
+                }
+            ]
+        },
+        { 
+            week: '06', 
+            class: '12', 
+            date: 'Jue 18, Sep 2025', 
+            description: [
+                {
+                    text: "Class suspended: National holidays",
+                    strikethrough: true
+                }
+            ]
+        },
+        { 
+            week: '07', 
+            class: '13', 
+            date: 'Mar 23, Sep 2025', 
+            description: [
+                {
+                    text: "Evaluation 02: simple past tense",
+                    href: ""
+                }
+            ]
+        },
+        { 
+            week: '07', 
+            class: '14', 
+            date: 'Jue 25, Sep 2025', 
+            description: [
+                {
+                    text: "Future tense: will / going to",
+                    href: ""
+                }
+            ]
+        },
+        { 
+            week: '08', 
+            class: '15', 
+            date: 'Mar 30, Sep 2025', 
+            description: [
+                {
+                    text: "",
+                    href: ""
+                }
+            ]
+        },
+        { 
+            week: '08', 
+            class: '16', 
+            date: 'Jue 02, Oct 2025', 
+            description: [
+                {
+                    text: "",
+                    href: ""
                 }
             ]
         },

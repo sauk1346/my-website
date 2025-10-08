@@ -50,7 +50,7 @@ const courseData = {
         },
         { 
             evaluationNumber: 4,
-            date: 'Mar 28, Oct 2025',
+            date: 'Jue 09, Oct 2025',
             weighting: '15%',
             description: {
                 text: 'Online Quices',
@@ -105,9 +105,14 @@ const courseData = {
             date: 'Jue 21, Ago 2025', 
             description: [
                 {
-                    text: "Didn't attend",
-                    strikethrough: true
-                }
+                    text: "Mixed Chunks",
+                    href: "/inacap/fves01/docs/chunks.pdf"
+                },
+                {
+                    text: "Good-bye Chunks",
+                    href: "/inacap/fves01/docs/goodbye_chunks.pdf"
+                },
+
             ]
         },
         { 
@@ -131,7 +136,7 @@ const courseData = {
             date: 'Jue 28, Ago 2025', 
             description: [
                 {
-                    text: "Extra points for Evaluation 01 (1)",
+                    text: "Extra points for Evaluation 01",
                 }
             ]
         },
@@ -141,8 +146,8 @@ const courseData = {
             date: 'Mar 02, Sep 2025', 
             description: [
                 {
-                    text: "Unit 2: Listening Comprehension",
-                    href: "fves01/clase07"
+                    text: "Listening Comprehension exercises",
+                    href: "https://www.esl-lab.com/"
                 }
             ]
         },
@@ -153,7 +158,7 @@ const courseData = {
             description: [
                 {
                     text: "Evaluation 01: Role play",
-                    href: "fves01/eval01"
+                    href: "/inacap/fves01/audio/evaluation01.mp3"
                 }
             ]
         },
@@ -163,8 +168,12 @@ const courseData = {
             date: 'Mar 09, Sep 2025', 
             description: [
                 {
-                    text: "Didn't attend",
-                    strikethrough: true
+                    text: "Simple Past: with/without TO BE",
+                    href: "/inacap/fves01/docs/simple_past.pdf"
+                },
+                {
+                    text: "Regular & Irregular Verbs",
+                    href: "/inacap/fves01/docs/regular_irregular_verbs.pdf"
                 }
             ]
         },
@@ -185,9 +194,21 @@ const courseData = {
             date: 'Mar 16, Sep 2025', 
             description: [
                 {
-                    text: "Didn't attend",
-                    strikethrough: true
-                }
+                    text: "Simple Past Worksheet",
+                    href: "/inacap/fves01/docs/simple_past_worksheet.pdf"
+                },
+                {
+                    text: "Exercise 01: was/were",
+                    href: "https://agendaweb.org/exercises/verbs/to-be/past-simple-forms.html"
+                },
+                {
+                    text: "Exercise 02: was/were",
+                    href: "https://agendaweb.org/exercises/verbs/to-be/past-simple-forms-2.html"
+                },
+                {
+                    text: "Exercise 03: was/were",
+                    href: "https://www.perfect-english-grammar.com/past-simple-exercise-3.html"
+                },
             ]
         },
         { 
@@ -218,8 +239,12 @@ const courseData = {
             date: 'Jue 25, Sep 2025', 
             description: [
                 {
-                    text: "Future tense: will / going to",
-                    href: ""
+                    text: "Future tense: will",
+                    href: "/inacap/fves01/docs/future_will.pdf",
+                },
+                {
+                    text: "Future tense: going to",
+                    href: "/inacap/fves01/docs/future_goingto.pdf",
                 }
             ]
         },
@@ -229,8 +254,12 @@ const courseData = {
             date: 'Mar 30, Sep 2025', 
             description: [
                 {
-                    text: "",
-                    href: ""
+                    text: "Present Continuous: Progressive",
+                    href: "/inacap/fves01/docs/present_continuous_progressive.pdf"
+                },
+                {
+                    text: "What would you like to ...?",
+                    href: "/inacap/fves01/docs/would.pdf"
                 }
             ]
         },
@@ -240,7 +269,29 @@ const courseData = {
             date: 'Jue 02, Oct 2025', 
             description: [
                 {
-                    text: "",
+                    text: "Role play exercises",
+                    href: "fves01/clase16"
+                }
+            ]
+        },
+        { 
+            week: '09', 
+            class: '17', 
+            date: 'Mar 07, Oct 2025', 
+            description: [
+                {
+                    text: "Didn't attend",
+                    strikethrough: true
+                }
+            ]
+        },
+        { 
+            week: '09', 
+            class: '18', 
+            date: 'Jue 09, Oct 2025', 
+            description: [
+                {
+                    text: "Evaluation 03: Role play",
                     href: ""
                 }
             ]

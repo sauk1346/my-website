@@ -2,7 +2,7 @@
  SMART LINK COMPONENT - CON FOCUS TEMPORAL
  ================================================================= */
 
- .link {
+.link {
   color: #2563eb;
   text-decoration: none;
   font-weight: 500;
@@ -73,6 +73,21 @@
   opacity: 1;
 }
 
+/* ✨ NUEVO: Icono para archivos de música/audio */
+.musicIcon {
+  width: 18px;
+  height: 18px;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+  flex-shrink: 0;
+  margin-left: 2px;
+  color: #7c3aed; /* Púrpura para música */
+}
+
+.link:hover .musicIcon {
+  opacity: 1;
+}
+
 /* =================================================================
  MODO OSCURO
  ================================================================= */
@@ -113,6 +128,12 @@
 :global(html.dark-mode) .pdfIcon,
 :global(html.dark-mode-override) .pdfIcon {
   color: #f87171;
+}
+
+/* ✨ NUEVO: Icono de música en modo oscuro */
+:global(html.dark-mode) .musicIcon,
+:global(html.dark-mode-override) .musicIcon {
+  color: #a78bfa; /* Púrpura más claro para dark mode */
 }
 
 /* =================================================================
@@ -193,7 +214,8 @@
 @media (prefers-reduced-motion: reduce) {
   .link,
   .externalIcon,
-  .pdfIcon {
+  .pdfIcon,
+  .musicIcon {
     transition: none;
   }
   
@@ -213,7 +235,8 @@
 /* Responsive */
 @media (max-width: 768px) {
   .externalIcon,
-  .pdfIcon {
+  .pdfIcon,
+  .musicIcon {
     width: 12px;
     height: 12px;
   }

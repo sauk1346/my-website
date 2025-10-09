@@ -78,7 +78,7 @@ const courseData = {
             description: [
                 {
                     text: 'Páginas Dinámicas',
-                    href: '',
+                    href: 'ti3v41/clase02',
                 },
             ]
         },

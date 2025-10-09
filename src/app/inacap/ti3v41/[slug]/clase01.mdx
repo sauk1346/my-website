@@ -116,8 +116,7 @@ En el caso de Django es muy parecido, pero con algunas diferencias:
 11. La **respuesta** se envía de vuelta al **navegador** del usuario
 
 ## 3. Instalación Django
-
-1. Ingresar el siguiente comando en la terminal:
+Ingresar el siguiente comando en la terminal:
 ```sh
 python -m pip install Django
 ```
@@ -138,30 +137,29 @@ Permiten resolver:
 />
 
 - Crear un ambiente virtual "denv1"
-```sh
-python -m venv denv1
-```
+	```sh
+	python -m venv denv1
+	```
  
 - Activar ambiente virtual "denv1" (windows)
- ```sh
- denv1\Scripts\activate
- ```
+ 	```sh
+ 	denv1\Scripts\activate
+ 	```
 
 - Activar ambiente virtual "denv1" (Linux/MacOS)
-```sh
-source denv1/bin/activate
-```
+	```sh
+	source denv1/bin/activate
+	```
 
 - Guardar dependencias
-```sh
-pip freeze > requirements.txt
-```
+	```sh
+	pip freeze > requirements.txt
+	```
 
 - Salir de ambiente virtual (denv1)
-```sh
-denv1\Scripts\deactivate
-```
-
+	```sh
+	denv1\Scripts\deactivate
+	```
 
 ## 4. Ejercicios
 
@@ -169,77 +167,172 @@ denv1\Scripts\deactivate
 
 Crear un proyecto Django y levantar el servidor
 
-<Solution>
-
 1. Crear proyecto "primerproyecto"
-```sh
-django-admin startproject primerproyecto
-cd miprimerproyecto
-```
+	```sh
+	django-admin startproject primerproyecto
+	cd miprimerproyecto
+	```
 
-<TerminalOutput>
-{`primerproyecto/
-├── primerproyecto
-│   ├── asgi.py
-│   ├── __init__.py
-│   ├── settings.py
-│   ├── urls.py
-│   └── wsgi.py
-└── manage.py`}
-</TerminalOutput>
+	<TerminalOutput>
+	{`.
+	├── primerproyecto
+	│   ├── asgi.py
+	│   ├── __init__.py
+	│   ├── settings.py
+	│   ├── urls.py
+	│   └── wsgi.py
+	└── manage.py`}
+	</TerminalOutput>
 
-`primerproyecto/primerproyecto/` es un package, porque dentro contiene un `__init__.py`
+	`./primerproyecto/` es un package, porque dentro contiene un `__init__.py`
 
 2. Construir la base de datos, que dará soporte a la aplicación
-```sh
-py manage.py migrate
-```
+	```sh
+	py manage.py migrate
+	```
 
-<TerminalOutput>
-{`primerproyecto/
-├── primerproyecto
-│   ├── __pycache__
-│   │   ├── __init__.cpython-313.pyc
-│   │   ├── settings.cpython-313.pyc
-│   │   └── urls.cpython-313.pyc
-│   ├── asgi.py
-│   ├── __init__.py
-│   ├── settings.py
-│   ├── urls.py
-│   └── wsgi.py
-├── db.sqlite3
-└── manage.py`}
-</TerminalOutput>
-
+	<TerminalOutput>
+	{`.
+	├── primerproyecto
+	│   ├── __pycache__
+	│   │   ├── __init__.cpython-313.pyc
+	│   │   ├── settings.cpython-313.pyc
+	│   │   └── urls.cpython-313.pyc
+	│   ├── asgi.py
+	│   ├── __init__.py
+	│   ├── settings.py
+	│   ├── urls.py
+	│   └── wsgi.py
+	├── db.sqlite3
+	└── manage.py`}
+	</TerminalOutput>
 
 3. Ejecutar el servidor
-```sh
-py manage.py runserver
-```
+	```sh
+	py manage.py runserver
+	```
 
-<TerminalOutput>
-{`Watching for file changes with StatReloader
-Performing system checks...
+	<TerminalOutput>
+	{`Watching for file changes with StatReloader
+	Performing system checks...
 
-System check identified no issues (0 silenced).
-September 03, 2025 - 04:00:12
-Django version 5.2.5, using settings 'primerproyecto.settings'
-Starting development server at http://127.0.0.1:8000/
-Quit the server with CONTROL-C.`}
-</TerminalOutput>
-</Solution>
-
+	System check identified no issues (0 silenced).
+	September 03, 2025 - 04:00:12
+	Django version 5.2.5, using settings 'primerproyecto.settings'
+	Starting development server at http://127.0.0.1:8000/
+	Quit the server with CONTROL-C.`}
+	</TerminalOutput>
 
 ### Ejercicio 02
 
 Crear una nueva aplicación dentro del proyecto
 
 1. Crear aplicación "miapp"
-```sh
-python manage.py startapp miapp
-```
+	```sh
+	python manage.py startapp miapp
+	```
 
- 
+	<TerminalOutput>
+	{`.
+	├── db.sqlite3
+	├── manage.py
+	├── miapp
+	│   ├── admin.py
+	│   ├── apps.py
+	│   ├── __init__.py
+	│   ├── migrations
+	│   │   └── __init__.py
+	│   ├── models.py
+	│   ├── tests.py
+	│   └── views.py
+	└── primerproyecto
+	    ├── asgi.py
+	    ├── __init__.py
+	    ├── __pycache__
+	    │   ├── __init__.cpython-313.pyc
+	    │   ├── settings.cpython-313.pyc
+	    │   ├── urls.cpython-313.pyc
+	    │   └── wsgi.cpython-313.pyc
+	    ├── settings.py
+	    ├── urls.py
+	    └── wsgi.py`}
+	</TerminalOutput>
 
+2. Crear una vista llamada `index` en `./miapp/views.py`
 
-...continuar desde min 00:48:45
+	```python
+	#./miapp/views.py
+	from django.http import HttpResponse
+
+	def index(request):
+		html = """
+			<!DOCTYPE html>
+			<html lang="en">
+			<head>
+			    <meta charset="UTF-8">
+			    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+			    <title>Document</title>
+			</head>
+			<body>
+				<h1>Bienvenido al mundo de Django</h1>
+				<p>Disfruta la aventura...</p>
+			</body>
+			</html>
+		"""
+		return HttpResponse(html)
+	```
+
+3. Crear `./miapp/urls.py` y configurar `./primerproyecto/urls.py` 
+	
+	```python
+	#./miapp/urls.py
+	from django.urls import path
+	from . import views
+
+	urlpatterns = [
+    path("index/", views.index),
+	]
+	```
+
+	```python
+	#./primerproyecto/urls.py
+	from django.contrib import admin
+	from django.urls import path, include
+
+	urlpatterns = [
+    	path("admin/", admin.site.urls),
+    	path("miapp/", include('miapp.urls')),
+	]
+	```
+
+4. Agregar `./miapp/` en `./miprimerproyecto/settings.py` para que el proyecto lo reconozca
+
+	```python
+	#./miprimerproyecto/settings.py
+	...
+	...
+
+	INSTALLED_APPS = [
+    	"django.contrib.admin",
+    	"django.contrib.auth",
+    	"django.contrib.contenttypes",
+    	"django.contrib.sessions",
+    	"django.contrib.messages",
+    	"django.contrib.staticfiles",
+    	"miapp"
+	]
+
+	...
+	...
+	```
+
+5. Ejecutar el servidor
+	```sh
+	python manage.py runserver
+	```
+
+6. El servidor ejecuta la vista `index` en la siguiente ruta:
+
+	```sh
+	http://127.0.0.1:8000/miapp/index/
+	```

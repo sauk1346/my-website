@@ -204,28 +204,6 @@ const courseData = {
             ]
         },
         { 
-            week: '08', 
-            class: '14', 
-            date: 'Lun 29, Sep 2025', 
-            description: [
-                {
-                    text: '',
-                    strikethrough: true
-                }
-            ]
-        },
-        { 
-            week: '08', 
-            class: '15', 
-            date: 'Mar 30, Sep 2025', 
-            description: [
-                {
-                    text: '',
-                    strikethrough: true
-                }
-            ]
-        },
-        { 
             week: '07', 
             class: '14', 
             date: 'Mar 23, Sep 2025', 
@@ -236,6 +214,51 @@ const courseData = {
                 }
             ]
         },
+        { 
+            week: '08', 
+            class: '15', 
+            date: 'Lun 29, Sep 2025', 
+            description: [
+                {
+                    text: 'DRF: Introducción APIs',
+                    href: '',
+                }
+            ]
+        },
+        { 
+            week: '08', 
+            class: '16', 
+            date: 'Mar 30, Sep 2025', 
+            description: [
+                {
+                    text: 'DRF: Creación de APIs',
+                    href: '',
+                }
+            ]
+        },
+        { 
+            week: '09', 
+            class: '17', 
+            date: 'Lun 06, Oct 2025', 
+            description: [
+                {
+                    text: 'DRF: Autenticación',
+                    href: '',
+                }
+            ]
+        },
+        { 
+            week: '09', 
+            class: '18', 
+            date: 'Mar 07, Oct 2025', 
+            description: [
+                {
+                    text: 'DRF: Autenticación - Registro',
+                    href: '',
+                }
+            ]
+        },
+        
     ],
     lectureData: [
         { 
@@ -316,16 +339,34 @@ const courseData = {
             date: 'Sáb 20, Sep 2025', 
             description: {
                 text: 'Iniciando tu camino RESTful con Django',
-                href: ''
+                href: 'ti3v41/lectura09'
             }
         },
         { 
             week: '07', 
-            lecture: '09', 
+            lecture: '10', 
             date: 'Sáb 27, Sep 2025', 
             description: {
                 text: 'Seguridad ante todo: Autenticación JWT',
-                href: ''
+                href: 'ti3v41/lectura10'
+            }
+        },
+        { 
+            week: '08', 
+            lecture: '11', 
+            date: 'Sáb 04, Oct 2025', 
+            description: {
+                text: 'Hablando el idioma REST: JSON y DjangoREST',
+                href: 'ti3v41/lectura11'
+            }
+        },
+        { 
+            week: '09', 
+            lecture: '12', 
+            date: 'Sáb 11, Oct 2025', 
+            description: {
+                text: 'API RESTful en acción: Seguridad y ejecución',
+                href: 'ti3v41/lectura12'
             }
         },
     ]

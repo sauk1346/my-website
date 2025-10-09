@@ -195,3 +195,266 @@
 		correctIndex: 3
 	}
 ]} />
+
+## Control 04
+
+<Quiz questions={[
+	{
+		question: "¿Cuál es el comando para iniciar el servidor de desarrollo en Django?",
+		options: [
+			"django runserver",
+			"manage.py startserver",
+			"django-admin runserver",
+			"python manage.py runserver"
+		],
+		correctIndex: 3
+	},
+	{
+		question: "¿Cuál es la forma correcta de insertar una variable dentro de un template HTML en Django?",
+		options: [
+			"{{ variable }}",
+			"[ variable ]",
+			"<< variable >>",
+			"{% variable %}"
+		],
+		correctIndex: 0
+	},
+	{
+		question: "¿Cuál es el archivo principal de configuración de un proyecto Django?",
+		options: [
+			"asgi.py",
+			"manage.py",
+			"urls.py",
+			"settings.py"
+		],
+		correctIndex: 3
+	},
+	{
+		question: "¿Qué se debe hacer para que Django reconozca una nueva aplicación creada con startapp?",
+		options: [
+			"Agregarla en INSTALLED_APPS del settings.py",
+			"No es necesario hacer nada",
+			"Crear una vista y una ruta",
+			"Importarla en urls.py"
+		],
+		correctIndex: 0
+	},
+	{
+		question: "¿Qué función cumple el archivo manage.py en un proyecto Django?",
+		options: [
+			"Almacena configuraciones de seguridad.",
+			"Contiene la lógica de las vistas.",
+			"Define las rutas del proyecto.",
+			"Ejecuta comandos administrativos del proyecto."
+		],
+		correctIndex: 3
+	},
+	{
+		question: "¿Cuál es el objetivo principal de las vistas (views.py) en Django?",
+		options: [
+			"Contener los estilos CSS.",
+			"Procesar solicitudes HTTP y devolver respuestas.",
+			"Generar las migraciones de la base de datos.",
+			"Almacenar archivos estáticos del proyecto."
+		],
+		correctIndex: 1
+	}
+]} />
+
+## Control 05
+
+<Quiz questions={[
+	{
+		question: "¿Qué método de Django ORM se usa para actualizar registros existentes?",
+		options: [
+			"Model.update() directamente sobre el objeto",
+			"Model.objects.modify()",
+			"obj.campo = valor; obj.save()",
+			"Model.objects.change()"
+		],
+		correctIndex: 2
+	},
+	{
+		question: "¿Qué método de Django ORM se usa para obtener un solo registro según una condición?",
+		options: [
+			"Model.objects.find()",
+			"Model.objects.get()",
+			"Model.objects.first()",
+			"Model.objects.fetch()"
+		],
+		correctIndex: 1
+	},
+	{
+		question: "¿Cuál de las siguientes consultas obtiene todos los registros de un modelo llamado Producto?",
+		options: [
+			"Producto.get()",
+			"Producto.objects.all()",
+			"Producto.all()",
+			"Producto.objects.get_all()"
+		],
+		correctIndex: 1
+	},
+	{
+		question: "¿Cuál es el método de Django ORM para crear un nuevo registro en la base de datos?",
+		options: [
+			"Model.add()",
+			"Model.insert()",
+			"Model.objects.create()",
+			"Model.save_new()"
+		],
+		correctIndex: 2
+	},
+	{
+		question: "¿Qué significa CRUD en el contexto de Django ORM?",
+		options: [
+			"Crear, leer, actualizar y eliminar.",
+			"Crear, leer, usar y depurar.",
+			"Consultar, reemplazar, actualizar y depurar.",
+			"Crear, reemplazar, usar y depurar."
+		],
+		correctIndex: 0
+	},
+	{
+		question: "¿Cómo se eliminan registros en Django ORM?",
+		options: [
+			"obj.remove()",
+			"Model.remove()",
+			"Model.objects.destroy()",
+			"obj.delete()"
+		],
+		correctIndex: 3
+	}
+]} />
+
+## Control 06
+
+<Quiz questions={[
+	{
+		question: "¿Dónde debes registrar 'rest_framework' para usar DRF?",
+		options: [
+			"views.py",
+			"urls.py",
+			"admin.py",
+			"settings.py"
+		],
+		correctIndex: 3
+	},
+	{
+		question: "¿Qué formato es el más común para intercambiar datos en una API RESTful?",
+		options: [
+			"CSV.",
+			"JSON.",
+			"YAML.",
+			"XML."
+		],
+		correctIndex: 1
+	},
+	{
+		question: "¿Qué método HTTP se utiliza para obtener información de un recurso sin modificarlo?",
+		options: [
+			"GET.",
+			"PUT.",
+			"POST.",
+			"DELETE."
+		],
+		correctIndex: 0
+	},
+	{
+		question: "¿Qué hace un serializer en DRF?",
+		options: [
+			"Transforma datos entre modelos y JSON.",
+			"Reemplaza templates.",
+			"Enlaza URL.",
+			"Crea vistas."
+		],
+		correctIndex: 0
+	},
+	{
+		question: "¿Qué método se invoca cuando se accede a una URL de listado (GET)?",
+		options: [
+			"list()",
+			"get_all()",
+			"retrieve()",
+			"create()"
+		],
+		correctIndex: 0
+	},
+	{
+		question: "¿Qué hace el método DELETE?",
+		options: [
+			"Modifica recursos.",
+			"Actualiza parcialmente.",
+			"Elimina un recurso.",
+			"Duplica un objeto."
+		],
+		correctIndex: 2
+	}
+]} />
+
+## Control 07
+
+<Quiz questions={[
+	{
+		question: "¿Qué comando instala el paquete JWT en Django REST framework?",
+		options: [
+			"pip install drf-jwt-token.",
+			"pip install djangorestframework-simplejwt.",
+			"pip install django-jwt.",
+			"pip install django-auth-jwt."
+		],
+		correctIndex: 1
+	},
+	{
+		question: "¿Qué código HTTP devuelve el servidor si el token JWT es inválido o falta?",
+		options: [
+			"404",
+			"403",
+			"401",
+			"500"
+		],
+		correctIndex: 2
+	},
+	{
+		question: "¿Cuál es el principal propósito de JWT?",
+		options: [
+			"Compartir datos entre bases de datos.",
+			"Codificar respuestas JSON.",
+			"Autenticar al usuario de forma segura.",
+			"Guardar cookies."
+		],
+		correctIndex: 2
+	},
+	{
+		question: "¿Qué clase de DRF se usa para proteger una vista y exigir autenticación?",
+		options: [
+			"StaffPermission.",
+			"AdminOnly.",
+			"AllowAny.",
+			"IsAuthenticated."
+		],
+		correctIndex: 3
+	},
+	{
+		question: "¿Dónde se define el tiempo de expiración de los tokens JWT en SimpleJWT?",
+		options: [
+			"En INSTALLED_APPS",
+			"En DATABASES",
+			"En TOKEN_SETTINGS",
+			"En SIMPLE_JWT"
+		],
+		correctIndex: 3
+	},
+	{
+		question: "¿Qué ocurre si un token JWT expira?",
+		options: [
+			"El servidor rechaza la solicitud con error.",
+			"El usuario es redirigido.",
+			"Se guarda como token temporal.",
+			"El token se renueva automáticamente."
+		],
+		correctIndex: 0
+	}
+]} />
+
+## Control 08
+

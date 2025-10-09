@@ -1,0 +1,270 @@
+# Desarrollo de prototipos según requisitos de proyecto
+
+El desarrollo de prototipos es una etapa elemental en la creación de software. Permite validar ideas, entender los requerimientos y ajustar funcionalidades antes de implementar un sistema completo.
+
+## 1. ¿Qué es un prototipo?
+Es una versión inicial o parcial de un sistema de software que sirve para:
+
+- Visualizar cómo funcionará el producto final.
+- Identificar posibles problemas en etapas tempranas.
+- Validar y refinar los requerimientos junto con los interesados.
+
+## 2. Tipos de prototipos
+
+### A) Prototipo de baja fidelidad (Low-Fidelity)
+Representaciones simples y básicas, generalmente hechas a mano o con herramientas simples
+
+<SmartTable
+    tableLayout="auto"
+    headers={["Baja fidelidad", "Descripción" ]}
+    lists={{
+        R1: [
+            "Sketches, bocetos en papel o wireframes básicos",
+            "Rápidos y económicos de crear",
+            "Enfocados en la estructura y flujo general"
+        ]
+    }}
+    rows={[
+        [
+            "**Características**",
+            "@R1"
+        ],
+        [
+            "**Cuándo usarlo**",
+            "Etapas iniciales para explorar ideas y conceptos"
+        ],
+        [
+            "**Herramientas**",
+            "Papel y lápiz, Balsamiq, dibujos básicos"
+        ],
+    ]}
+/>
+
+### B) Prototipo de alta fidelidad (High-Fidelity)
+Representaciones detalladas que se asemejan mucho al producto final.
+
+<SmartTable
+    tableLayout="auto"
+    headers={["Alta fidelidad", "Descripción" ]}
+    lists={{
+        R1: [
+            "Diseño visual completo con colores, tipografía y elementos gráficos",
+            "Interactividad avanzada",
+            "Funcionalidades simuladas realísticamente"
+        ]
+    }}
+    rows={[
+        [
+            "**Características**",
+            "@R1"
+        ],
+        [
+            "**Cuándo usarlo**",
+            "Fases avanzadas para pruebas de usabilidad y presentaciones a stakeholders"
+        ],
+        [
+            "**Herramientas**",
+            "Figma, Adobe XD, Sketch, InVision"
+        ],
+
+    ]}
+/>
+
+### C) Prototipo desechable (Throwaway/Rapid Prototyping)
+Se construye rápidamente solo para explorar requisitos y luego se descarta.
+
+<SmartTable
+    tableLayout="auto"
+    headers={["Desechable", "Descripción" ]}
+    lists={{
+        R1: [
+            "No se convierte en producto final",
+            "Enfoque en velocidad sobre calidad del código",
+            "Útil para aclarar dudas con el cliente"
+        ]
+    }}
+    rows={[
+        [
+            "**Características**",
+            "@R1"
+        ],
+        [
+            "**Cuándo usarlo**",
+            "Cuando hay incertidumbre sobre los requisitos"
+        ],
+        [
+            "**Ventaja**",
+            "Permite experimentar sim comprometer la calidad del código final"
+        ],
+
+    ]}
+/>
+
+### D) Prototipo evolutivo (Evolutionary Prototyping)
+Se desarrolla y refina continuamente hasta convertirse en el sistema final.
+
+<SmartTable
+    tableLayout="auto"
+    headers={["Evolutivo", "Descripción" ]}
+    lists={{
+        R1: [
+            "Comienza con funcionalidades básicas",
+            "Se expande iterativamente",
+            "El prototipo evoluciona hasta ser el producto completo"
+        ]
+    }}
+    rows={[
+        [
+            "**Características**",
+            "@R1"
+        ],
+        [
+            "**Cuándo usarlo**",
+            "Cuando los requisitos pueden cambiar durante el desarrollo"
+        ],
+        [
+            "**Ventajas**",
+            "Desarrollo incremental con retroalimentación constante"
+        ],
+
+    ]}
+/>
+
+### E) Prototipo incremental
+
+<SmartTable
+    tableLayout="auto"
+    headers={["Incremental", "Descripción" ]}
+    lists={{
+        R1: [
+            "Cada módulo se desarrolla y prueba por separado",
+            "Los módulos se integran progresivamente",
+            "Permite entregar funcionalidades de forma gradual"
+        ]
+    }}
+    rows={[
+        [
+            "**Características**",
+            "@R1"
+        ],
+        [
+            "**Cuándo usarlo**",
+            "Proyectos grandes que pueden dividirse en componentes"
+        ],
+        [
+            "**Ventaja**",
+            "Reduce riesgos y permite entregas parciales"
+        ],
+    ]}
+/>
+
+### F) Prototipo horizontal
+Muestra la interfaz completa pero sin funcionalidad real (solo capa de presentación).
+
+<SmartTable
+    tableLayout="auto"
+    headers={["Horizontal", "Descripción" ]}
+    lists={{
+        R1: [
+            "Amplia cobertura de pantallas y navegación",
+            "Sin lógica de negocio implementada",
+            "Enfocado en la experiencia de usuario (UX)"
+        ]
+    }}
+    rows={[
+        [
+            "**Características**",
+            "@R1"
+        ],
+        [
+            "**Cuándo usarlo**",
+            "Para validar el diseño y flujo de navegación"
+        ],
+    ]}
+/>
+
+### G) Prototipo vertical
+Implementa completamente una funcionalidad específica, atravesando todas las capas del sistema.
+
+<SmartTable
+    tableLayout="auto"
+    headers={["Vertical", "Descripción" ]}
+    lists={{
+        R1: [
+            "Profundidad en una característica particular",
+            "Incluye base de datos, lógica de negocio e interfaz",
+            "Demuestra viabilidad técnica"
+        ]
+    }}
+    rows={[
+        [
+            "**Características**",
+            "@R1"
+        ],
+        [
+            "**Cuándo usarlo**",
+            "Para probar la arquitectura o tecnologías específicas"
+        ],
+    ]}
+/>
+
+## 3. Proceso de desarrollo del prototipo según requisitos
+El desarrollo de un prototipo efectivo requiere seguir un enfoque estructurado que asegure que las funcionalidades y objetivos del proyecto se aborden adecuadamente. 
+
+Este proceso se divide en las siguientes etapas clave:
+
+<SmartTable
+    tableLayout="auto"
+    headers={["Etapas", "Descripción"]}
+    lists={{
+        R1: [
+            "Identificar los requerimientos funcionales y no funcionales",
+            "Consultar con los interesados",
+            "Documentar los requerimientos"
+        ],
+        R2: [
+            "Identificar los módulos o funciones críticas",
+            "Determinar las dependencias y riesgos",
+            "Priorizar los sistemas críticos"
+        ],
+        R3: [
+            "Prototipos de baja fidelidad",
+            "Diagramas de arquitectura y flujo de datos",
+            "Prototipos de alta fidelidad"
+        ],
+        R4: [
+            "Seleccionar herramientas y tecnologías",
+            "Incorporar seguridad desde el inicio",
+            "Crear versiones iterativas"
+        ],
+        R5: [
+            "Pruebas de usuario",
+            "Pruebas de funcionalidad",
+            "Pruebas de seguridad inicial",
+            "Recopilación de retroalimentación"
+        ]
+
+    }}
+    rows={[
+        [
+            "**Definición de los requerimientos**",
+            "@R1"
+        ],
+        [
+            "**Análisis de sistemas críticos**",
+            "@R2"
+        ],
+        [
+            "**Diseño del prototipo**",
+            "@R3"
+        ],
+        [
+            "**Construcción del prototipo**",
+            "@R4"
+        ],
+        [
+            "**Validación del prototipo**",
+            "@R5"
+        ],
+    ]}
+/>

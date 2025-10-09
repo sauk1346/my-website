@@ -283,90 +283,84 @@ export const calendar25 = [
   },
   {
     id: 48,
-    fecha: "2025-9-25",
+    fecha: "2025-10-2",
     titulo: "[TI3V43] Evaluación 02",
     description: "Ingeniería de Software"
   },
   {
     id: 49,
-    fecha: "2025-10-11",
-    titulo: "[TI3V43] Evaluación 03",
-    description: "Ingeniería de Software"
-  },
-  {
-    id: 50,
-    fecha: "2025-10-18",
-    titulo: "[TI3V43] Evaluación 04",
-    description: "Ingeniería de Software"
-  },
-  {
-    id: 51,
     fecha: "2025-8-31",
     titulo: "[TI3V41] Evaluación 01",
     description: "Programación Backend"
   },
   {
-    id: 52,
+    id: 50,
     fecha: "2025-9-28",
     titulo: "[TI3V41] Evaluación 02",
     description: "Programación Backend"
   },
   {
-    id: 53,
-    fecha: "2025-10-12",
+    id: 51,
+    fecha: "2025-10-17",
     titulo: "[TI3V41] Evaluación 03",
     description: "Programación Backend"
   },
   {
-    id: 54,
+    id: 52,
     fecha: "2025-8-15",
     titulo: "[TI3V41] Control 01",
     description: "Programación Backend"
   },
   {
-    id: 55,
+    id: 53,
     fecha: "2025-8-22",
     titulo: "[TI3V41] Control 02",
     description: "Programación Backend"
   },
   {
-    id: 56,
+    id: 54,
     fecha: "2025-8-29",
     titulo: "[TI3V41] Control 03",
     description: "Programación Backend"
   },
   {
-    id: 57,
+    id: 55,
     fecha: "2025-9-5",
     titulo: "[TI3V41] Control 04",
     description: "Programación Backend"
   },
   {
-    id: 58,
+    id: 56,
     fecha: "2025-9-12",
     titulo: "[TI3V41] Control 05",
     description: "Programación Backend"
   },
   {
-    id: 59,
+    id: 57,
     fecha: "2025-9-19",
     titulo: "[TI3V41] Control 06",
     description: "Programación Backend"
   },
   {
-    id: 60,
+    id: 58,
     fecha: "2025-9-26",
     titulo: "[TI3V41] Control 07",
     description: "Programación Backend"
   },
   {
-    id: 61,
+    id: 59,
     fecha: "2025-10-3",
     titulo: "[TI3V41] Control 08",
     description: "Programación Backend"
   },
   {
-    id: 62,
+    id: 60,
+    fecha: "2025-10-10",
+    titulo: "[TI3V41] Control 09",
+    description: "Programación Backend"
+  },
+  {
+    id: 61,
     fecha: "2025-9-4",
     titulo: "[FVES01] Evaluación 01",
     description: "Inglés Inicial"
@@ -378,7 +372,7 @@ export const calendar25 = [
     description: "Inglés Inicial"
   },
   {
-    id: 62,
+    id: 63,
     fecha: "2025-10-9",
     titulo: "[FVES01] Evaluación 03",
     description: "Inglés Inicial"

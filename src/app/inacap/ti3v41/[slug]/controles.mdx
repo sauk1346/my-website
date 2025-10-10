@@ -458,3 +458,130 @@
 
 ## Control 08
 
+<Quiz questions={[
+	{
+		question: "¿Por qué no es necesario en un videojuego 2D iluminar los sprites que se agregan a un nivel?",
+		options: [
+			"Porque en Unreal los sprites se encuentran autoiluminados.",
+			"Porque se ilumina al momento de ejecutar el juego.",
+			"Porque la iluminación no es parte de un escenario de un videojuego.",
+			"En realidad, siempre se deben iluminar."
+		],
+		correctIndex: 0
+	},
+	{
+		question: "¿Por qué es necesario modificar la separación de cada Tile al momento de agregar la colisión?",
+		options: [
+			"Porque la separación de los Tiles (márgenes) puede ser diferente.",
+			"No es necesario porque la herramienta de colisión la calcula automáticamente.",
+			"En realidad, no es necesario, ya que los Tiles no poseen separación entre ellos.",
+			"Porque el tamaño de separación de cada Tile debe ser de 8px exactamente."
+		],
+		correctIndex: 0
+	},
+	{
+		question: "¿Puedo utilizar un Tile Map en un nivel, aunque no defina las colisiones?",
+		options: [
+			"No, al menos uno de los Tiles debe tener una colisión.",
+			"No, siempre deben tener definidas las colisiones para poder ser utilizados.",
+			"Sí, que sea un Tile Map ya permite que pueda utilizarse en el nivel.",
+			"Sí, pero solo en un nivel para un videojuego 3D."
+		],
+		correctIndex: 2
+	},
+	{
+		question: "¿Cuál es la opción para poder ajustar la cápsula de colisión?",
+		options: [
+			"No existe, pero puede eliminarse la cápsula y crear otra.",
+			"La opción se llama \"shape\".",
+			"La opción se llama \"sprite\".",
+			"No es posible, queda protegido (bloqueado) el FlipBook."
+		],
+		correctIndex: 1
+	},
+	{
+		question: "¿Por qué es necesario en algunos casos editar el tamaño para agregar la colisión a un Tile?",
+		options: [
+			"Es necesario, ya que las imágenes que constituyen un Tile Set pueden estar diseñadas en diferentes tamaños.",
+			"En realidad, no es necesario, ya que la colisión se agrega automáticamente para cada Tile.",
+			"Es necesario porque siempre el tamaño debe ser de 48 por 48.",
+			"En realidad, no es necesario, ya que todos los Tiles vienen diseñados en un mismo tamaño estándar."
+		],
+		correctIndex: 0
+	},
+	{
+		question: "¿Podemos utilizar un Tile Set directamente en un nivel?",
+		options: [
+			"Sí es posible, pero solo en un videojuego 2D.",
+			"No es posible, se debe convertir en un Tile Map.",
+			"Sí, siempre es posible.",
+			"No es posible porque se debe extraer su sprite primero."
+		],
+		correctIndex: 1
+	}
+]} />
+
+## Control 09
+
+<Quiz questions={[
+	{
+		question: "¿Cuál de los siguientes mecanismos es más seguro para autenticación en API RESTful?",
+		options: [
+			"JWT",
+			"Basic Auth",
+			"URL Tokens",
+			"SessionAuthentication"
+		],
+		correctIndex: 0
+	},
+	{
+		question: "¿Qué clase de permiso DRF permite solo a administradores acceder?",
+		options: [
+			"ReadOnlyPermission",
+			"IsAuthenticated",
+			"AllowAny",
+			"IsAdminUser"
+		],
+		correctIndex: 3
+	},
+	{
+		question: "¿Qué diferencia hay entre autenticación y autorización en una API?",
+		options: [
+			"Autorización ocurre antes",
+			"Autenticación es quién eres; autorización es qué puedes hacer",
+			"Son lo mismo",
+			"Autenticación usa contraseñas, autorización no"
+		],
+		correctIndex: 1
+	},
+	{
+		question: "¿Qué significa que una API RESTful sea \"stateless\"?",
+		options: [
+			"No mantiene información entre solicitudes",
+			"Solo usa el método GET",
+			"Requiere autenticación por cookies",
+			"Almacena sesiones en el servidor"
+		],
+		correctIndex: 0
+	},
+	{
+		question: "¿Cuál es una ventaja de la arquitectura stateless en API RESTful?",
+		options: [
+			"Crea dependencias entre vistas",
+			"Mejora la escalabilidad",
+			"Usa menos modelos",
+			"Reduce la velocidad"
+		],
+		correctIndex: 1
+	},
+	{
+		question: "¿Cuál es el comportamiento de la clase AllowAny en DRF?",
+		options: [
+			"Acceso libre",
+			"Solo para administradores",
+			"Solo para usuarios registrados",
+			"Requiere token"
+		],
+		correctIndex: 0
+	}
+]} />

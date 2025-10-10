@@ -34,7 +34,6 @@
     ]}
 />
 
-
 ## 2. Cloud computing (Computación en la nube)
 Se refiere a la entrega de servicios de computación a través de Internet. Incluye almacenamiento, servidores, bases de datos, redes y software, proporcionando acceso a través de Internet en lugar de tener recursos locales.
 
@@ -46,17 +45,13 @@ Se describen los principales modelos de servicio que ofrece la computación en l
     headers={["Modelos", "Descripción"]}
     rows={[
         [
-            "**IaaS (Infraestructure as a Service)**",
-            "Proporciona recursos de computación virtualizados a través de Internet. El proveedor gestiona la infraestructura física mientras tú controlas el sistema operativo, almacenamiento y aplicaciones"
-        ],
-        [
-            "**PaaS (Platform as a Service)**",
-            "Ofrece un entorno completo de desarrollo y despliegue en la nube. El proveedor gestiona la infraestructura, el sistema operativo y el middleware, mientras tú te enfocas en desarrollar aplicaciones"
-        ],
-        [
             "**SaaS (Software as a Service)**",
-            "Proporciona aplicaciones completas a través de Internet. El proveedor gestiona todo: infraestructura, plataforma y software"
+            "Permite acceder a software a través de Internet, eliminando la necesidad de instalación y mantenimiento. Ejemplos incluyen Google Workspace y Salesforce"
         ],
+        [
+            "**IaaS (Infraestructure as a Service)**",
+            "Proporciona recursos de infraestructura a la demanda, como servidores virtuales y almacenamiento. Ejemplos son Amazon EC2 y Microsoft Azure"
+        ],        
     ]}
 />
 
@@ -88,78 +83,90 @@ Se describen los principales modelos de servicio que ofrece la computación en l
 - Mayor poder competitivo.
 - Optimización de las operaciones de la empresa.
 
-## 4. Mensajería P2P (Peer-to-peer)
+## 5. Mensajería P2P (Peer-to-peer)
 - Un modelo de comunicación en el que cada participante (o peer) actúa tanto como cliente como servidor. 
 - Esto permite una mayor escalabilidad y redundancia, ya que no hay un punto único de fallo.
 
+### Ventajas
+
+#### Mayor eficiencia y velocidad
+Las conexiones directas entre dispositivos en las redes P2P mejoran la velocidad de transferencia de datos, reduciendo la latencia, lo que es esencial en comunicaciones en tiempo real. Esta eficiencia es particularmente útil en aplicaciones empresariales como videoconferencias y colaboración en línea, donde el tiempo de respuesta es crítico.
+
+Por ejemplo, las empresas que dependen de sistemas VoIP (como los servicios que ofrece LCRcom) pueden beneficiarse de una comunicación más ágil y sin interrupciones gracias a la tecnología P2P. 
+
+#### Reducción de costos
+Una de las principales ventajas de las redes P2P es la eliminación de la necesidad de costosos servidores centrales. Al permitir que los dispositivos compartan directamente los recursos, las empresas pueden ahorrar considerablemente en infraestructura y en gastos de mantenimiento. Estos ahorros pueden destinarse a otras áreas estratégicas, optimizando el presupuesto de comunicaciones.
+
+#### Escalabilidad
+Las redes P2P son altamente escalables, ya que pueden crecer con facilidad al agregar nuevos nodos sin necesidad de modificar o aumentar la infraestructura existente. Esto es ideal para empresas en expansión o que experimentan fluctuaciones en la demanda de recursos, permitiendo un crecimiento sin límites ni grandes inversiones.
+
+Además, esta capacidad de adaptación es especialmente útil para negocios que manejan cargas de trabajo variables o que necesitan ser ágiles ante cambios en el mercado.
+
+#### Resiliencia y fiabilidad
+La descentralización de las redes P2P las hace menos vulnerables a fallos sistémicos. Si un nodo falla, los demás pueden seguir funcionando sin interrupciones, lo que mejora la continuidad operativa y reduce el riesgo de caídas masivas. Esto es fundamental para la recuperación ante desastres, garantizando que las operaciones críticas se mantengan activas en situaciones adversas.
+
+#### Seguridad
+Aunque pueda parecer contradictorio, las conexiones directas entre dispositivos pueden ofrecer un mayor control sobre la seguridad de los datos. Las redes P2P pueden implementar cifrado extremo a extremo, garantizando que la información compartida sea accesible solo por los nodos autorizados.
+
+Para las empresas que manejan datos sensibles, estas medidas pueden ofrecer ventajas significativas en términos de protección y cumplimiento de normativas sobre la privacidad
+
+## 6. Nuevas tendencias tecnológicas
+
 <SmartTable
     tableLayout="auto"
-    headers={["Ventajas", "Descripción"]}
-    lists={{
-        R1: [
-            "A medida que se añaden más nodos (peers) a la red, la capacidad total aumenta",
-            "Cada nuevo participante aporta recursos adicionales (ancho de banda, almacenamiento, procesamiento)",
-            "No requiere actualizar constantemente servidores centrales"
-        ],
-        R2: [
-            "La red continúa funcionando aunque algunos nodos fallen",
-            "Mayor disponibilidad y confiabilidad del servicio",
-            "No depende de un servidor central que pueda caer"
-        ],
-        R3: [
-            "Elimina o reduce la necesidad de servidores centrales costosos",
-            "Distribuye el coste de infraestructura entre todos los participantes",
-            "Menos gastos en mantenimiento de infraestructura centralizada"
-        ],
-        R4: [
-            "Los archivos pueden descargarse simultáneamente desde múltiples fuentes",
-            "Reduce la congestión al distribuir la carga",
-            "Aprovecha el ancho de banda de múltiples peers"
-        ],
-        R5: [
-            "No hay control centralizado de la información",
-            "Mayor autonomía para los participantes",
-            "Resistencia a la censura"
-        ],
-        R6: [
-            "Aprovecha recursos ociosos de las computadoras conectadas",
-            "Optimiza el uso del ancho de banda disponible",
-            "Distribución equilibrada de la carga de trabajo"
-        ],
-        R7: [
-            "Comunicación directa entre pares (en algunos casos, cifrada de extremo a extemo)",
-            "Dificulta el monitoreo centralizado",
-            "Menor superficie de ataque que sistemas centralizados"
-        ]
-    }}
+    headers={["Tendencias", "Descripción"]}
     rows={[
         [
-            "**Escalabilidad**",
-            "@R1"
+            "**Aumento en el uso de SaaS**",
+            "La adopción del modelo SaaS ha crecido significativamente, permitiendo a las empresas reducir costos operativos y aumentar la flexibilidad al acceder a software en la nube"
         ],
         [
-            "**Sin punto único de fallo**",
-            "@R2"
+            "**Microservicios y contenedores**",
+            "Las arquitecturas de microservicios, que dividen aplicaciones en componentes más pequeños e independientes, están ganando popularidad. Junto con tecnologías como Docker, permiten un desarrollo y despliegue más ágil"
         ],
         [
-            "**Reducción de costes**",
-            "@R3"
+            "**Desentralización**",
+            "Con la mensajería P2P y las blockchains, la tendencia se dirige hacia sistemas más descentralizados, lo que promueve la seguridad y la resistencia al control central"
         ],
         [
-            "**Mayor velocidad de transferencia**",
-            "@R4"
-        ],
-        [
-            "**Descentralización**",
-            "@R5"
-        ],
-        [
-            "**Eficiencia en el uso de recursos**",
-            "@R6"
-        ],
-        [
-            "**Privacidad y seguridad mejorada**",
-            "@R7"
+            "**Integración de IoT (Internet de las Cosas)**",
+            "Los sistemas distribuidos están comenzando a integrar más dispositivos IoT, lo que requiere soluciones de mensajería robustas para manejar la comunicación entre millones de dispositivos"
         ],
     ]}
 />
+
+
+# Actividad de Práctica 12
+
+<Quiz questions={[
+	{
+		question: "Teniendo en cuenta lo aprendido. ¿cuál de los siguiente es un ejemplo de computación en la nube?",
+		options: [
+			"Amazon EC2",
+			"Bittorrent",
+			"Cluster computing",
+			"Grid computing"
+		],
+		correctIndex: 0
+	},
+    {
+		question: "Con relación al cluster computing. ¿cuál de las siguientes características es una ventaja de la computación en clúster?",
+		options: [
+			"Baja escalabilidad",
+			"Dependencia de un único punto de fallo",
+			"Necesidad de hardware complejo",
+			"Alta disponibilidad y rendimiento mejorado"
+		],
+		correctIndex: 3
+	},
+    {
+		question: "Teniendo en cuenta lo aprendido, ¿cuál es una ventaja clave de las redes P2P (Peer-to-peer)?",
+		options: [
+			"Alta latencia",
+			"Baja escalabilidad",
+			"Necesidad de servidores centrales costosos",
+			"Reducción de costes"
+		],
+		correctIndex: 3
+	},
+]} />

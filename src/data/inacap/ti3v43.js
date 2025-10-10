@@ -27,7 +27,7 @@ const courseData = {
             weighting: '20%',
             description: {
                 text: 'Prueba escrita',
-                href: ''
+                href: 'ti3v43/eval01'
             },
             quickGuide: [
                 {

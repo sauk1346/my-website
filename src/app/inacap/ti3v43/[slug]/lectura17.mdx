@@ -11,135 +11,53 @@ Es una versión inicial o parcial de un sistema de software que sirve para:
 
 ## 2. Tipos de prototipos
 
-### A) Prototipo de baja fidelidad (Low-Fidelity)
-Representaciones simples y básicas, generalmente hechas a mano o con herramientas simples
+### Prototipo de baja fidelidad
+Este tipo de prototipo es una representación simple y preliminar del producto final. No incluye detalles específicos ni funcionalidades complejas, sino que se enfoca en la estructura y el flujo general del sistema.
 
 <SmartTable
     tableLayout="auto"
-    headers={["Baja fidelidad", "Descripción" ]}
+    headers={["Baja Fidelidad", "Descripción"]}
     lists={{
         R1: [
-            "Sketches, bocetos en papel o wireframes básicos",
-            "Rápidos y económicos de crear",
-            "Enfocados en la estructura y flujo general"
+            "**Bocetos:** Son dibujos a mano alzada que muestran la disposición básica de los elementos en la interfaz",
+            "**Wireframes:** Son diagramas que representan la estructura de las páginas o pantallas, indicando la ubicación de los elementos principales como botones, menús y campos de entrada"
+        ],
+        R2: [
+            "**Rápido y económico:** Se pueden crear rápidamente y con pocos recursos",
+            "**Facilita la comunicación:** Ayuda a los equipos a visualizar y discutir ideas sin invertir mucho tiempo en detalles",
+            "**Flexibilidad:** Es fácil de modificar y ajustar según la retroalimentación recibida",
+            "**Uso común:** Es ideal para las primeras etapas del diseño, cuando se están explorando diferentes conceptos y se necesita validar la dirección general del proyecto" 
         ]
     }}
     rows={[
         [
             "**Características**",
             "@R1"
-        ],
-        [
-            "**Cuándo usarlo**",
-            "Etapas iniciales para explorar ideas y conceptos"
-        ],
-        [
-            "**Herramientas**",
-            "Papel y lápiz, Balsamiq, dibujos básicos"
-        ],
-    ]}
-/>
-
-### B) Prototipo de alta fidelidad (High-Fidelity)
-Representaciones detalladas que se asemejan mucho al producto final.
-
-<SmartTable
-    tableLayout="auto"
-    headers={["Alta fidelidad", "Descripción" ]}
-    lists={{
-        R1: [
-            "Diseño visual completo con colores, tipografía y elementos gráficos",
-            "Interactividad avanzada",
-            "Funcionalidades simuladas realísticamente"
-        ]
-    }}
-    rows={[
-        [
-            "**Características**",
-            "@R1"
-        ],
-        [
-            "**Cuándo usarlo**",
-            "Fases avanzadas para pruebas de usabilidad y presentaciones a stakeholders"
-        ],
-        [
-            "**Herramientas**",
-            "Figma, Adobe XD, Sketch, InVision"
-        ],
-
-    ]}
-/>
-
-### C) Prototipo desechable (Throwaway/Rapid Prototyping)
-Se construye rápidamente solo para explorar requisitos y luego se descarta.
-
-<SmartTable
-    tableLayout="auto"
-    headers={["Desechable", "Descripción" ]}
-    lists={{
-        R1: [
-            "No se convierte en producto final",
-            "Enfoque en velocidad sobre calidad del código",
-            "Útil para aclarar dudas con el cliente"
-        ]
-    }}
-    rows={[
-        [
-            "**Características**",
-            "@R1"
-        ],
-        [
-            "**Cuándo usarlo**",
-            "Cuando hay incertidumbre sobre los requisitos"
-        ],
-        [
-            "**Ventaja**",
-            "Permite experimentar sim comprometer la calidad del código final"
-        ],
-
-    ]}
-/>
-
-### D) Prototipo evolutivo (Evolutionary Prototyping)
-Se desarrolla y refina continuamente hasta convertirse en el sistema final.
-
-<SmartTable
-    tableLayout="auto"
-    headers={["Evolutivo", "Descripción" ]}
-    lists={{
-        R1: [
-            "Comienza con funcionalidades básicas",
-            "Se expande iterativamente",
-            "El prototipo evoluciona hasta ser el producto completo"
-        ]
-    }}
-    rows={[
-        [
-            "**Características**",
-            "@R1"
-        ],
-        [
-            "**Cuándo usarlo**",
-            "Cuando los requisitos pueden cambiar durante el desarrollo"
         ],
         [
             "**Ventajas**",
-            "Desarrollo incremental con retroalimentación constante"
+            "@R2"
         ],
-
     ]}
 />
 
-### E) Prototipo incremental
+### Prototipo de alta fidelidad
+Este tipo de prototipo es una versión más avanzada y detallada del producto final. Incluye algunas funciones básicas o limitadas, y se asemeja mucho más al producto terminado en términos de diseño y funcionalidad.
 
 <SmartTable
     tableLayout="auto"
-    headers={["Incremental", "Descripción" ]}
+    headers={["Alta Fidelidad", "Descripción"]}
     lists={{
         R1: [
-            "Cada módulo se desarrolla y prueba por separado",
-            "Los módulos se integran progresivamente",
-            "Permite entregar funcionalidades de forma gradual"
+            "**Interactividad:** Permite a los usuarios interactuar con al prototipo, simulando la experiencia de uso del producto final",
+            "**Detalles visuales:** Incluye elementos de diseño más refinados, como colores, tipografías y gráficos",
+            "**Funcionalidades básicas:** Implementa algunas de las funciones clave del sistema, aunque de manera limitada",
+        ],
+        R2: [
+            "**Validación de diseño y funcionalidad:** Ayuda a identificar problemas de usabilidad y funcionalidad antes de la implementación completa",
+            "**Retroalimentación precisa:** Proporciona una base más realista para obtener retroalimentación de los usuarios y las partes interesadas",
+            "**Demostraciones:** Es útil para presentar el proyecto a clientes o inversores, mostrando un avance tangible del producto",
+            "**Uso común:** Se utiliza en etapas posteriores del desarrollo, cuando se necesita probar y refinar aspectos específicos del diseño y la funcionalidad",
         ]
     }}
     rows={[
@@ -148,62 +66,8 @@ Se desarrolla y refina continuamente hasta convertirse en el sistema final.
             "@R1"
         ],
         [
-            "**Cuándo usarlo**",
-            "Proyectos grandes que pueden dividirse en componentes"
-        ],
-        [
-            "**Ventaja**",
-            "Reduce riesgos y permite entregas parciales"
-        ],
-    ]}
-/>
-
-### F) Prototipo horizontal
-Muestra la interfaz completa pero sin funcionalidad real (solo capa de presentación).
-
-<SmartTable
-    tableLayout="auto"
-    headers={["Horizontal", "Descripción" ]}
-    lists={{
-        R1: [
-            "Amplia cobertura de pantallas y navegación",
-            "Sin lógica de negocio implementada",
-            "Enfocado en la experiencia de usuario (UX)"
-        ]
-    }}
-    rows={[
-        [
-            "**Características**",
-            "@R1"
-        ],
-        [
-            "**Cuándo usarlo**",
-            "Para validar el diseño y flujo de navegación"
-        ],
-    ]}
-/>
-
-### G) Prototipo vertical
-Implementa completamente una funcionalidad específica, atravesando todas las capas del sistema.
-
-<SmartTable
-    tableLayout="auto"
-    headers={["Vertical", "Descripción" ]}
-    lists={{
-        R1: [
-            "Profundidad en una característica particular",
-            "Incluye base de datos, lógica de negocio e interfaz",
-            "Demuestra viabilidad técnica"
-        ]
-    }}
-    rows={[
-        [
-            "**Características**",
-            "@R1"
-        ],
-        [
-            "**Cuándo usarlo**",
-            "Para probar la arquitectura o tecnologías específicas"
+            "**Ventajas**",
+            "@R2"
         ],
     ]}
 />
@@ -268,3 +132,77 @@ Este proceso se divide en las siguientes etapas clave:
         ],
     ]}
 />
+
+## 4. Buenas prácticas OWASP en el desarrollo de prototipos
+La *Open Web Application Security Project* (OWASP) es una referencia clave para garantizar la seguridad en el desarrollo de software.
+
+<SmartTable
+    tableLayout="auto"
+    headers={["Buenas Prácticas", "Descripción"]}
+    lists={{
+        R1: [
+            "Utiliza bibliotecas y frameworks actualizados",
+            "Monitorea vulnerabilidades conocidas en las dependencias del proyecto"
+        ],
+        R2: [
+            "Usa contraseñas fuertes y hashing seguro (por ejemplo bcrypt)",
+            "Implementa autenticación multifactor (MFA)"
+        ],
+        R3: [
+            "No reveles detalles del sistema en mensajes de error",
+            "Registra errores de manera segura"
+        ],
+        R4: [
+            "Usa cifrado (TLS) para datos en tránsito",
+            "Evita almacenar datos sensibles innecesariamente"
+        ],
+        R5: [
+            "Asegúrate de validar todas las entradas del usuario para prevenir inyecciones de código (SQLi, XSS, etc.)"
+        ]
+    }}
+    rows={[
+        [
+            "**Actualización y mantenimiento**",
+            "@R1"
+        ],
+        [
+            "**Gestión de autenticación y sesiones**",
+            "@R2"
+        ],
+        [
+            "**Manejo de errores**",
+            "@R3"
+        ],
+        [
+            "**Protección de datos sensibles**",
+            "@R4"
+        ],
+        [
+            "**Validación de entrada**",
+            "@R5"
+        ],
+    ]}
+/>
+
+
+
+# Actividad de Práctica 14
+
+<Quiz questions={[
+	{
+		question: "El proceso de desarrollo de un prototipo efectivo incluye la identificación de requerimientos funcionales y no funcionales, la consulta con los interesados, y la documentación de los requerimientos",
+		options: [
+			"Falso",
+			"Verdadero",
+		],
+		correctIndex: ""
+	},
+    {
+		question: "El uso de cifrado TLS para datos en tránsito es opcional según las buenas prácticas OWASP",
+		options: [
+			"Falso",
+			"Verdadero",
+		],
+		correctIndex: 0
+	},
+]} />

@@ -377,5 +377,11 @@ export const calendar25 = [
     titulo: "[FVES01] Evaluación 03",
     description: "Inglés Inicial"
   },
+  {
+    id: 63,
+    fecha: "2025-10-16",
+    titulo: "[FVES01] Examen (obligatorio)",
+    description: "Inglés Inicial"
+  },
 ];
 export default calendar25;

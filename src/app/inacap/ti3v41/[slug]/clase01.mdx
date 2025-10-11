@@ -167,7 +167,7 @@ Permiten resolver:
 
 Crear un proyecto Django y levantar el servidor
 
-1. Crear proyecto "primerproyecto"
+1. **Nuevo Proyecto:** Crear proyecto "primerproyecto"
 	```sh
 	django-admin startproject primerproyecto
 	cd miprimerproyecto
@@ -186,7 +186,7 @@ Crear un proyecto Django y levantar el servidor
 
 	`./primerproyecto/` es un package, porque dentro contiene un `__init__.py`
 
-2. Construir la base de datos, que dará soporte a la aplicación
+2. **Crear base de datos:** Construir la base de datos, que dará soporte a la aplicación
 	```sh
 	py manage.py migrate
 	```
@@ -207,7 +207,7 @@ Crear un proyecto Django y levantar el servidor
 	└── manage.py`}
 	</TerminalOutput>
 
-3. Ejecutar el servidor
+3. **Realizar Pruebas:** Ejecutar el servidor
 	```sh
 	py manage.py runserver
 	```
@@ -227,7 +227,7 @@ Crear un proyecto Django y levantar el servidor
 
 Crear una nueva aplicación dentro del proyecto
 
-1. Crear aplicación "miapp"
+1. **Crear nueva app:** Crear aplicación "miapp"
 	```sh
 	python manage.py startapp miapp
 	```
@@ -258,8 +258,28 @@ Crear una nueva aplicación dentro del proyecto
 	    └── wsgi.py`}
 	</TerminalOutput>
 
-2. Crear una vista llamada `index` en `./miapp/views.py`
+2. **Configuración inicial:** Agregar `./miapp/` en `./miprimerproyecto/settings.py` para que el proyecto lo reconozca
 
+	```python
+	#./miprimerproyecto/settings.py
+	...
+	...
+
+	INSTALLED_APPS = [
+    	"django.contrib.admin",
+    	"django.contrib.auth",
+    	"django.contrib.contenttypes",
+    	"django.contrib.sessions",
+    	"django.contrib.messages",
+    	"django.contrib.staticfiles",
+    	"miapp"
+	]
+
+	...
+	...
+	```
+
+3. **Configurar Vistas:** Crear una vista llamada `index` en `./miapp/views.py`
 	```python
 	#./miapp/views.py
 	from django.http import HttpResponse
@@ -282,8 +302,7 @@ Crear una nueva aplicación dentro del proyecto
 		return HttpResponse(html)
 	```
 
-3. Crear `./miapp/urls.py` y configurar `./primerproyecto/urls.py` 
-	
+4. **Configurar Enrutamiento:** Crear `./miapp/urls.py` y agregarlo a `./primerproyecto/urls.py`
 	```python
 	#./miapp/urls.py
 	from django.urls import path
@@ -305,33 +324,10 @@ Crear una nueva aplicación dentro del proyecto
 	]
 	```
 
-4. Agregar `./miapp/` en `./miprimerproyecto/settings.py` para que el proyecto lo reconozca
-
-	```python
-	#./miprimerproyecto/settings.py
-	...
-	...
-
-	INSTALLED_APPS = [
-    	"django.contrib.admin",
-    	"django.contrib.auth",
-    	"django.contrib.contenttypes",
-    	"django.contrib.sessions",
-    	"django.contrib.messages",
-    	"django.contrib.staticfiles",
-    	"miapp"
-	]
-
-	...
-	...
-	```
-
-5. Ejecutar el servidor
+5. **Realizar Pruebas:** Ejecutar el servidor y verificar ruta
 	```sh
 	python manage.py runserver
 	```
-
-6. El servidor ejecuta la vista `index` en la siguiente ruta:
 
 	```sh
 	http://127.0.0.1:8000/miapp/index/

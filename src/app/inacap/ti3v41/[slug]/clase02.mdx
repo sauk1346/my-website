@@ -4,28 +4,13 @@
 
 Generar un formulario de contacto
 
-1. Crear una vista `contacto` en `./miapp/views.py`
+1. **Configurar Vistas:** Crear una vista `contacto` en `./miapp/views.py`
 
     ```python
     #./miapp/views.py
     from django.http import HttpResponse
-
-    def index(request):
-    	html = """
-    		<!DOCTYPE html>
-    		<html lang="en">
-    		<head>
-    		    <meta charset="UTF-8">
-    		    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    		    <title>Document</title>
-    		</head>
-    		<body>
-    			<h1>Bienvenido al mundo de Django</h1>
-    			<p>Disfruta la aventura...</p>
-    		</body>
-    		</html>
-    	"""
-    	return HttpResponse(html)
+	...
+	...
 
     def contacto(request):
     	html = """
@@ -48,7 +33,7 @@ Generar un formulario de contacto
     	return HttpResponse(html)
     ```
 
-2. Crear una ruta para la vista `contacto` en `./miapp/urls.py`
+2. **Configurar Enrutamiento:** Crear una ruta para la vista `contacto` en `./miapp/urls.py`
 
     ```python
     #./miapp/urls.py
@@ -62,14 +47,19 @@ Generar un formulario de contacto
     ]
     ```
 
-3. Ejecutar el servidor
+3. **Realizar Pruebas:** Ejecutar el servidor y verificar rutas
     ```sh
     python manage.py runserver
     ```
 
-4. Las vistas se ejecutarán al ingresar sus respectivas rutas
-    - vista `index`    -> `http://127.0.0.1:8000/miapp/index/`
-    - vista `contacto` -> `http://127.0.0.1:8000/miapp/contacto/`
+	```sh
+	#ruta index
+	http://127.0.0.1:8000/miapp/index/
+	```
+	```sh
+	#ruta contacto
+	http://127.0.0.1:8000/miapp/contacto/
+	```
 
 ## 2. Introducción a Páginas Dinámicas
 - Se refiere a que no muestre siempre texto estático
@@ -77,7 +67,7 @@ Generar un formulario de contacto
 
 ### Ejemplo: Mostrar la fecha actual
 
-1. agregar la vista `muestra_fecha` en `./miapp/views.py`
+1. **Configurar Vistas:** Agregar la vista `muestra_fecha` en `./miapp/views.py`
 
 	```python
 	#./miapp/views.py
@@ -105,7 +95,7 @@ Generar un formulario de contacto
 		return HttpResponse(html)
 	```
 
-2. Agregar la ruta correspondiente a `./miapp/urls.py`
+2. **Configurar Enrutamiento:** Agregar la ruta correspondiente a `./miapp/urls.py`
 
 	```python
 	#./miapp/urls.py
@@ -158,7 +148,7 @@ Generar un formulario de contacto
 
 Crear una ruta parametrizada para el nombre de usuario
 
-1. Crear la vista `te_saludo` en `./miapp/views.py`
+1. **Configurar Vistas:** Crear la vista `te_saludo` en `./miapp/views.py`
 
 	```python
 	#./miapp/views.py
@@ -185,7 +175,7 @@ Crear una ruta parametrizada para el nombre de usuario
 		return HttpResponse(html)
 	```
 
-2. Agregar la ruta de la vista `te_saludo` en `./miapp/urls.py`
+2. **Configurar Enrutamiento:** Agregar la ruta de la vista `te_saludo` en `./miapp/urls.py`
 	- se utiliza parametrización **str** para la variable **nombre** : `<str:nombre>`
 	```python
 	#./miapp/urls.py
@@ -199,12 +189,13 @@ Crear una ruta parametrizada para el nombre de usuario
 	]
 	```
 
-3. Ejecutar el servidor y verificar ruta
+3. **Realizar Pruebas:** Ejecutar el servidor y verificar ruta
 	```sh
 	python manage.py runserver
 	```
 
 	```sh
+	# ruta parametrizada
 	http://127.0.0.1:8000/miapp/te_saludo/Antonio/
 	```
 	- se puede reemplazar **Antonio** por cualquier string
@@ -220,23 +211,23 @@ El **procedimiento correcto** es que las **vistas no generen html**, como en los
 
 ### Creación nuevo proyecto
 
-1. Crear `proyectotemplate`
+1. **Crear Nuevo Proyecto:** Crear `proyectotemplate`
 	```sh
 	django-admin startproject proyectotemplate
 	cd proyectotemplate
 	```
 
-2. Construir aplicación `miapp`
+2. **Crear Nueva App:** Construir aplicación `miapp`
 	```sh
 	python manage.py startapp miapp
 	```
 
-3. Crear base de datos
+3. **Crear base de datos**
 	```sh
 	python manage.py migrate
 	```
 
-4. Agregar `miapp` en `./proyectotemplate/settings.py`
+4. **Configuración Inicial:** Agregar `miapp` en `./proyectotemplate/settings.py`
 
 	```python
 	#./proyectotemplate/settings.py
@@ -259,12 +250,12 @@ El **procedimiento correcto** es que las **vistas no generen html**, como en los
 	...
 	```
 
-5. En `./miapp/`, crear la carpeta `templates` y su subcarpeta `miapp` (la subcarpeta es por buenas prácticas)
+5. **Crear Directorio Templates:** En `./miapp/`, crear la carpeta `templates` y su subcarpeta `miapp` (la subcarpeta es por buenas prácticas)
 	```sh
 	mkdir -p ./miapp/templates/miapp/
 	```
 
-6. Crear `info.html` en  `./miapp/templates/miapp/info.html`
+6. **Configurar Templates:** Crear `info.html` en  `./miapp/templates/miapp/info.html`
 
 	```html
 	<!DOCTYPE html>
@@ -280,7 +271,7 @@ El **procedimiento correcto** es que las **vistas no generen html**, como en los
 	</html>
 	```
 
-7. Crear la vista `info` para mostrar la página `info.html`
+7. **Configurar Vistas:** Crear la vista `info` para mostrar la página `info.html`
 
 	```python
 	#./miapp/views.py
@@ -293,7 +284,7 @@ El **procedimiento correcto** es que las **vistas no generen html**, como en los
 		return render(request, 'miapp/info.html', contexto)
 	```
 
-8. Crear `./miapp/urls.py` y configurar `./urls.py`
+8. **Configurar Enrutamiento:** Crear `./miapp/urls.py` y agregarlo a `./proyectotemplate/urls.py`
 
 	```python
 	#./miapp/urls.py
@@ -307,7 +298,7 @@ El **procedimiento correcto** es que las **vistas no generen html**, como en los
 	```
 
 	```python
-	#./urls.py
+	#./proyectotemplate/urls.py
 	from django.contrib import admin
 	from django.urls import path, include
 
@@ -317,7 +308,7 @@ El **procedimiento correcto** es que las **vistas no generen html**, como en los
 	]
 	```
 
-9. Ejecutar servidor y verificar ruta
+9. **Realizar Pruebas:** Ejecutar servidor y verificar ruta
 
 	```sh
 	python mangage.py runserver
@@ -334,7 +325,7 @@ El **procedimiento correcto** es que las **vistas no generen html**, como en los
 
 Convertir la vista `index` en página dinámica, agregando fecha y nombre de usuario.
 
-1. Modificar la vista `index` ubicada en `./miapp/views.py`
+1. **Configurar Vistas:** Modificar la vista `index` ubicada en `./miapp/views.py`
 	- se agregan las variables: fecha, nombre, apellido
 	```python
 	#./miapp/views.py
@@ -372,7 +363,7 @@ Convertir la vista `index` en página dinámica, agregando fecha y nombre de usu
 
 Utilizar las variables `nombre` y `apellido` para crear una ruta parametrizada.
 
-1. Modificar la vista `index`, para que acepte `nombre` y `apellido` como parámetros
+1. **Configurar Vistas:** Modificar la vista `index`, para que acepte `nombre` y `apellido` como parámetros
 
 ```python
 #./mipp/views.py
@@ -404,7 +395,7 @@ def index(request, nombre, apellido):
 ...
 ```
 
-2. Modificar la ruta de la vista `index` en `./miapp/urls.py` a una ruta parametrizada.
+2. **Configurar Enrutamiento:** Modificar la ruta de la vista `index` en `./miapp/urls.py` a una ruta parametrizada.
 
 ```python
 #./miapp/urls.py
@@ -418,13 +409,14 @@ urlpatterns = [
 ]
 ```
 
-3. Ejecutar servidor y verificar ruta
+3. **Realizar Pruebas:** Ejecutar servidor y verificar ruta
 
 ```sh
 python manage.py runserver
 ```
 
 ```sh
+# ruta parametrizada
 http://127.0.0.1:8000/miapp/index/Pepa/Pig
 ```
 

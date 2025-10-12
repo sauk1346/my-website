@@ -122,7 +122,7 @@ const courseData = {
             description: [
                 {
                     text: 'Proyecto Tienda: Inicio',
-                    href: ''
+                    href: 'ti3v41/clase06'
                 }
             ]
         },

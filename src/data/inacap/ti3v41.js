@@ -111,7 +111,7 @@ const courseData = {
             description: [
                 {
                     text: 'Modelos',
-                    href: ''
+                    href: 'ti3v41/clase05'
                 }
             ]
         },

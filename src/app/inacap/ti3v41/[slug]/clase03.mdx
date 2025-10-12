@@ -41,7 +41,7 @@
 		return render(request, 'miapp/info.html', contexto)
 	```
 
-4. **Configurar Enrutamiento:** Crear `./miapp/urls.py` y configurar `./urls.py`
+4. **Configurar Enrutamiento:** Crear `./miapp/urls.py` y agregarlo a `./proyectotemplate/urls.py`
 
 	```python
 	#./miapp/urls.py
@@ -55,7 +55,7 @@
 	```
 
 	```python
-	#./urls.py
+	#./proyectotemplate/urls.py
 	from django.contrib import admin
 	from django.urls import path, include
 
@@ -256,7 +256,6 @@ Agregar más contenido a `info.html`: Año, Fecha, Nombre, Apellido, Edad, Hobbi
     <!doctype html>
     <html lang="en">
     <head>
-        {% load static %}
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -303,9 +302,8 @@ Agregar más contenido a `info.html`: Año, Fecha, Nombre, Apellido, Edad, Hobbi
                 <div class="col-sm-3 "></div>
                 <div class="col-sm-6 shadow-lg rounded my-5">
                     <h2 class="bg-primary bg-gradient text-white p-5 text-center rounded ">Home</h2>
-                    <p class="lh-sm">This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>
-    
-            </div>
+                    <p class="lh-sm">This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p> 
+                </div>
             <div class="col-sm-3 "></div>
             </div>
         </div>

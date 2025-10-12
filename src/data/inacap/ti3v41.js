@@ -100,7 +100,7 @@ const courseData = {
             description: [
                 {
                     text: 'Recursos Estáticos',
-                    href: ''
+                    href: 'ti3v41/clase04'
                 }
             ]
         },

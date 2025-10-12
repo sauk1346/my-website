@@ -170,7 +170,7 @@
     admin.site.register(Categoria, CategoriaAdmin)
     ```
 
-7. **Agregar Datos:** Levantar servidor y agregar productos a través del módulo Admin
+8. **Agregar Datos:** Levantar servidor y agregar productos a través del módulo Admin
     ```sh
     python manage.py runserver
     ```
@@ -193,12 +193,11 @@
         size="large"
     />
 
-8. **Configurar Templates (1):** Crear directorio `./tiendita/templates/tienda`
+9. **Configurar Templates:** Crear directorio `./tiendita/templates/tienda` y agregar template `index.html`
     ```sh
     mkdir -p ./tiendita/templates/tiendita
     ```
 
-9. **Configurar Templates (2):** Crear template `index.html`
     ```html
     <!-- ./tiendita/templates/tiendita/index.html -->
 
@@ -281,7 +280,7 @@
     ]
     ```
 
-11. **Configurar Templates (3):** Agregar los datos creados en la vista `index` (el contexto)
+12. **Configurar Templates (3):** Agregar los datos creados en la vista `index` (el contexto)
     ```html
     <!-- ./tiendita/templates/tiendita/index.html -->
 
@@ -311,7 +310,7 @@
     </html>
     ```
 
-12. **Verificar Datos:** Verificar que se muestran correctamente los datos (contadores) en la ruta de la vista `index`
+13. **Verificar Datos:** Verificar que se muestran correctamente los datos (contadores) en la vista `index`
     ```sh
     http://127.0.0.1:8000/tiendita/index/
     ```

@@ -1,0 +1,159 @@
+# Proyecto Tienda: Template Base
+
+## 1. Relación entre Modelos
+Es posible crear relaciones entre modelos, para así generar tablas relacionales
+
+### Relación Producto-Categoria (N:1)
+
+1. **Configurar Modelos:** Crear relación entre los modelos `Producto` y `Categoria` utilizando `ForeignKey`
+    ```python
+    #./tiendita/models.py
+    from django.db import models
+    ...
+    ...
+    class Producto(models.Model):
+        ...
+        ...
+        categoria = models.ForeignKey('Categoria', on_delete=models.SET_NULL, null=True)
+        ...
+        ...
+    class Categoria(models.Model):
+        ...
+        ...
+    ```
+
+2. **Configurar Base de datos:** Crear archivos de migración con los cambios realizados y aplicarlos a la base de datos
+    ```sh
+    python manage.py makemigrations
+    ```
+    <TerminalOutput>
+    {`Migrations for 'tiendita':
+    tiendita/migrations/0002_producto_categoria.py
+        + Add field categoria to producto`}
+    </TerminalOutput>
+    ```sh
+    python manage.py migrate
+    ```
+    <TerminalOutput>
+    {`Operations to perform:
+    Apply all migrations: admin, auth, contenttypes, sessions, tiendita
+    Running migrations:
+    Applying tiendita.0002_producto_categoria... OK`}
+    </TerminalOutput>
+
+3. **Configurar Admin:** Agregar el nuevo campo a la clase `ProductoAdmin`
+    ```python
+    #./tiendita/admin.py
+    from django.contrib import admin
+    from .models import Cliente, Producto, Categoria
+    ...
+    ...
+    class ProductoAdmin(admin.ModelAdmin):
+        list_display = ('id', 'nombre', 'precio', 'stock', 'categoria')
+    ...
+    ...
+    ```
+
+4. **Realizar Pruebas:** Levantar servidor y verificar nuevo campo
+    ```sh
+    python manage.py runserver
+    ```
+    ```sh
+    http://127.0.0.1:8000/admin/tiendita/producto/1/change/
+    ```
+    <SmartFigure
+        id="relacion-modelos-campo-categoria"
+        src="/inacap/ti3v41/images/fig16.png"
+        alt="Relación entre Modelos mediante campo categoria"
+        caption="Relación entre Modelos mediante campo categoria"
+        size="large"
+    />
+
+    <SmartFigure
+        id="lista-productos-actualizados"
+        src="/inacap/ti3v41/images/fig17.png"
+        alt="Lista de Productos actualizados"
+        caption="Lista de Productos actualizados"
+        size="large"
+    />
+
+### Relación Categoria-Producto (1:N)
+- Como la relación es 1:N, sería ideal que al entrar a una categoría, se puede visualizar la lista de productos correspondiente
+- Para esto se realizan las siguientes configuraciones en `admin.py`
+
+1. **Configurar Admin** 
+    - Crear clase `ProductoInline`, que permitirá editar productos directamente desde la página de Categoría
+    - Agregar la clase `ProductoInline` a la clase `CategoriaAdmin`
+    ```python
+    #./tiendita/admin.py
+    from django.contrib import admin
+    from .models import Cliente, Producto, Categoria
+
+    # Clase de definición de modelos relacionados
+    class ProductoInline(admin.TabularInline):
+        model = Producto
+        extra = 0
+    ...
+    ...
+    class CategoriaAdmin(admin.ModelAdmin):
+        list_display = ('id', 'nombre',)
+        inlines = [ProductoInline]
+    ...
+    ...   
+    ```
+
+2. **Realizar Pruebas:** Levantar servidor y verificar cambios
+    ```sh
+    python manage.py runserver
+    ```
+    ```sh
+    http://127.0.0.1:8000/admin/tiendita/categoria/1/change/
+    ```
+    <SmartFigure
+        id="categoria-abarrotes"
+        src="/inacap/ti3v41/images/fig18.png"
+        alt="Categoria Abarrotes con lista de productos"
+        caption="Categoría Abarrotes con lista de productos"
+        size="large"
+    />
+
+## 2. Template Base (Plantillas Base)
+- Una forma de evitar que los desarrolladores dupliquen texto html en cada página, es utilizando plantillas
+- El lenguaje de plantillas en Django le permite declarar una plantilla base y luego extenderla, reemplazando solo las porciones que son distintas para cada página específica
+
+**Ejemplo:** Plantilla base `base_generic.html`
+
+```html
+<!-- base_generic.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block title %}<title>Local Library</title>{% endblock %}
+</head>
+
+<body>
+    {% block sidebar %}<!-- insert default navigation text for every page -->{% endblock %}
+    {% block content %}<!-- default content text (typically empty) -->{% endblock %}
+</body>
+</html>
+```
+```html
+<!-- index.html -->
+
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h1>Local Library Home</h1>
+<p>Welcome to <em>LocalLibrary</em>, a very basic Django website developed as a tutorial example on the Mozilla Developer Network.</p>
+{% endblock %}
+```
+
+- Se crea la plantilla base `base_generic.html`
+- Luego en `index.html` se carga la plantilla base, y se llena los bloques de la plantilla con los bloques de `index.html`
+
+## 3. Continuación Proyecto Tienda
+
+Se agrega una plantilla base al proyecto
+
+...min35:53

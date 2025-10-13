@@ -133,7 +133,7 @@ const courseData = {
             description: [
                 {
                     text: 'Proyecto Tienda: Template Base',
-                    href: ''
+                    href: 'ti3v41/clase07'
                 }
             ]
         },

@@ -221,7 +221,7 @@ const courseData = {
             description: [
                 {
                     text: 'DRF: Introducción APIs',
-                    href: '',
+                    href: 'ti3v41/clase15',
                 }
             ]
         },

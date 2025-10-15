@@ -136,27 +136,27 @@ Permiten resolver:
 	]}
 />
 
-- Crear un ambiente virtual "denv1"
+1. Crear un ambiente virtual "denv1"
 	```sh
 	python -m venv denv1
 	```
  
-- Activar ambiente virtual "denv1" (windows)
+2. Activar ambiente virtual "denv1"
  	```sh
+	# Desde Windows
  	denv1\Scripts\activate
  	```
-
-- Activar ambiente virtual "denv1" (Linux/MacOS)
 	```sh
+	# Desde Linux
 	source denv1/bin/activate
 	```
 
-- Guardar dependencias
+3. Guardar dependencias
 	```sh
 	pip freeze > requirements.txt
 	```
 
-- Salir de ambiente virtual (denv1)
+4. Salir de ambiente virtual (denv1)
 	```sh
 	denv1\Scripts\deactivate
 	```
@@ -167,7 +167,7 @@ Permiten resolver:
 
 Crear un proyecto Django y levantar el servidor
 
-1. **Nuevo Proyecto:** Crear proyecto "primerproyecto"
+1. **Crear Nuevo Proyecto:** Llamado "primerproyecto"
 	```sh
 	django-admin startproject primerproyecto
 	cd miprimerproyecto
@@ -207,11 +207,10 @@ Crear un proyecto Django y levantar el servidor
 	└── manage.py`}
 	</TerminalOutput>
 
-3. **Realizar Pruebas:** Ejecutar el servidor
+3. **Realizar Pruebas:** Levantar el servidor
 	```sh
 	py manage.py runserver
 	```
-
 	<TerminalOutput>
 	{`Watching for file changes with StatReloader
 	Performing system checks...
@@ -222,6 +221,13 @@ Crear un proyecto Django y levantar el servidor
 	Starting development server at http://127.0.0.1:8000/
 	Quit the server with CONTROL-C.`}
 	</TerminalOutput>
+	<SmartFigure
+        id="pagina-incio-django"
+        src="/inacap/ti3v41/images/fig34.png"
+        alt="Página de inicio Django"
+        caption="Página de inicio Django"
+        size="large"
+    />
 
 ### Ejercicio 02
 
@@ -332,3 +338,10 @@ Crear una nueva aplicación dentro del proyecto
 	```sh
 	http://127.0.0.1:8000/miapp/index/
 	```
+	<SmartFigure
+        id="aplicacion-miapp"
+        src="/inacap/ti3v41/images/fig35.png"
+        alt="Aplicación 'miapp'"
+        caption="Aplicación 'miapp'"
+        size="large"
+    />

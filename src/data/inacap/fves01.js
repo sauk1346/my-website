@@ -296,28 +296,6 @@ const courseData = {
                 }
             ]
         },
-        { 
-            week: '10', 
-            class: '19', 
-            date: 'Mar 14, Oct 2025', 
-            description: [
-                {
-                    text: "-",
-                    href: ""
-                }
-            ]
-        },
-        { 
-            week: '10', 
-            class: '20', 
-            date: 'Jue 16, Oct 2025', 
-            description: [
-                {
-                    text: "Exam",
-                    href: ""
-                }
-            ]
-        },
     ],
 };
 

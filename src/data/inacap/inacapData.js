@@ -138,13 +138,13 @@ export const subjects = [
       href: '/inacap/ti3v35'
     },
     { 
-      code: 'TILV01',
+      code: 'TILV21',
       name: '(Electivo I) Plan de Pruebas de Software',
       semester: 3,
       year: 2025,
       category: 'methodology',
       status: 'completed',
-      href: '/inacap/tilv01'
+      href: '/inacap/tilv21'
     },
     { 
       code: 'FVIE01',
@@ -163,7 +163,7 @@ export const subjects = [
       semester: 4,
       year: 2025,
       category: 'programming',
-      status: 'current',
+      status: 'completed',
       href: '/inacap/ti3v41'
     },
     { 
@@ -172,7 +172,8 @@ export const subjects = [
       semester: 4,
       year: 2025,
       category: 'programming',
-      status: 'pending'
+      status: 'current',
+      href: '/inacap/ti3v42'
     },
     { 
       code: 'TI3V43',
@@ -180,7 +181,7 @@ export const subjects = [
       semester: 4,
       year: 2025,
       category: 'methodology',
-      status: 'current',
+      status: 'completed',
       href: '/inacap/ti3v43'
     },
     { 
@@ -189,15 +190,17 @@ export const subjects = [
       semester: 4,
       year: 2025,
       category: 'methodology',
-      status: 'pending'
+      status: 'current',
+      href: '/inacap/tihv43'
     },
     { 
-      code: 'TILV02',
+      code: 'TILV22',
       name: '(Electivo II) Desarrollo de Videojuegos',
       semester: 4,
       year: 2025,
       category: 'programming',
-      status: 'pending'
+      status: 'current',
+      href: '/inacap/tilv22'
     },
     { 
       code: 'FVES01',
@@ -205,9 +208,8 @@ export const subjects = [
       semester: 4,
       year: 2025,
       category: 'general',
-      status: 'current',
+      status: 'completed',
       href: '/inacap/fves01'
-
     },
   
     // Semestre 5 - 2026

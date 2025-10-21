@@ -352,7 +352,7 @@ API que proveerá servicios (datos) mediante endpoints REST
 - Se reutiliza el proyecto anterior `proyectoapi`, el cual consumía una API de usuarios desde [https://reqres.in/api/users?page=2](https://reqres.in/api/users?page=2)
 - Se realizan las siguientes modificaciones a `proyectoapi` para que ahora consuma la API de proyectos
 
-1. **Consumir API:** Se agrega el método `get_proyectos()` en el módulo `service.py`
+1. **Consumir API:** Crear el método `get_proyectos()` en el módulo `service.py`
     ```python
     #./proyectoapi/api/service.py
     import requests
@@ -406,7 +406,7 @@ API que proveerá servicios (datos) mediante endpoints REST
     ]
     ```
 
-4. **Configurar Templates (1):** Agregar un template para los proyectos
+4. **Configurar Templates (1):** Agregar template `proyectos.html`
     ```html
     <!-- ./proyectoapi/api/templates/api/proyectos.html -->
     {% extends "base.html" %}
@@ -448,8 +448,9 @@ API que proveerá servicios (datos) mediante endpoints REST
     {% endblock content %}
     ```
 
-5. **Configurar Templates (2):** agregar url de proyectos en navbar de template base
+5. **Configurar Templates (2):** agregar url de proyectos, en navbar de template `base.html`
     ```html
+    <!-- ./proyectoapi/api/templates/base.html -->
     <!DOCTYPE html>
     <html lang="en">
     {% load static %}
@@ -475,7 +476,7 @@ API que proveerá servicios (datos) mediante endpoints REST
     </body>
     ```
 
-6. **Realizar Pruebas:** Levantar ambos proyectos cada uno en un puerto distinto y realizar pruebas
+6. **Realizar Pruebas:** Levantar ambos proyectos, cada uno en un puerto distinto y realizar pruebas
     ```sh
     # Cliente Django que consume la API REST
     cd proyectoapi

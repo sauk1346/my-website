@@ -114,22 +114,21 @@ Continuar con el `proyectostatic`. Agregar el template `talleres.html`
                         <p>Este taller es ideal para la gente que está 
                         estresada y quiere relajarse dentro del espacio que 
                         permite el confinamiento.</p>
-                        <img src="" width="250" alt="imagen de taller Yoga" />
+                        <img src="https://unsplash.it/250/250/?random" width="250" alt="imagen de taller Yoga" />
                     </div>
                     <div class="col-sm">
                         <h3>Taller de Cocina</h3>
                         <p>Este taller es ideal para la gente que está 
                         estresada y quiere relajarse dentro del espacio que 
                         permite el confinamiento.</p>
-                        <img src="https://unsplash.it/250/250/?random"  alt="imagen de taller Yoga" />
+                        <img src="https://unsplash.it/250/250/?random" width="250" alt="imagen de taller Yoga" />
                     </div>
                     <div class="col-sm">
                         <h3>Taller de Baile</h3>
                         <p>Este taller es ideal para la gente que está 
                         estresada y quiere relajarse dentro del espacio que 
                         permite el confinamiento.</p>
-                        <img src="https://unsplash.it/250/250/?random"
-                        alt="imagen de taller Yoga" />           
+                        <img src="https://unsplash.it/250/250/?random" width="250" alt="imagen de taller Yoga" />           
                     </div>
             </div>
         </div>
@@ -177,10 +176,16 @@ Continuar con el `proyectostatic`. Agregar el template `talleres.html`
     ```sh
     python manage.py runsever
     ```
-
     ```sh
     http://127.0.0.1:8000/core/talleres/
     ```
+	<SmartFigure
+        id="pagina-talleres"
+        src="/inacap/ti3v41/images/fig44.png"
+        alt="Página 'talleres'"
+        caption="Página 'talleres'"
+        size="large"
+    />
 
 ### Ejercicio 02
 
@@ -230,6 +235,21 @@ Agregar imágenes locales en los distintos talleres
     </body>
     </html>
     ```
+
+2. **Realizar Pruebas:** Levantar servidor y verificar ruta
+    ```sh
+    python manage.py runserver
+    ```
+    ```sh
+    http://127.0.0.1:8000/core/talleres/
+    ```
+	<SmartFigure
+        id="pagina-talleres-con-imagenes-locales"
+        src="/inacap/ti3v41/images/fig45.png"
+        alt="Página 'talleres' con imágenes locales"
+        caption="Página 'talleres' con imágenes locales"
+        size="large"
+    />
 
 ###  Ejercicio 03
 
@@ -325,10 +345,16 @@ Modificar el template `talleres.html` del Ejercicio 02, de manera que la informa
     ```sh
     python manage.py runserver
     ```
-
     ```sh
     http://127.0.0.1:8000/core/talleres/
     ```
+    <SmartFigure
+        id="pagina-talleres-con-informacion-desde-vista"
+        src="/inacap/ti3v41/images/fig46.png"
+        alt="Página 'talleres' con información desde la vista"
+        caption="Página 'talleres' con información desde la vista"
+        size="large"
+    />
 
 ### Ejercicio 04
 
@@ -434,7 +460,6 @@ Agregar las URLs para los navbar de `index.html` y `talleres.html`
     ```sh
     python manage.py runserver
     ```
-
     ```sh
     # ruta index
     http://127.0.0.1:8000/core/index/

@@ -7,14 +7,14 @@
 
 ## 1. Repaso Ejercicio Template
 
-1. **Crear Directorio Templates:** En `./miapp/`, crear la carpeta `templates` y su subcarpeta `miapp` (la subcarpeta es por buenas prácticas)
+1. **Configurar Templates (1):** Crear carpeta `templates/` y subcarpeta `miapp/` (la subcarpeta es por buenas prácticas)
 	```sh
 	mkdir -p ./miapp/templates/miapp/
 	```
 
-2. **Configurar Template:** Crear `info.html` en `./miapp/templates/miapp/info.html`
-
+2. **Configurar Template (2):** Crear template `info.html`
 	```html
+    <!-- ./miapp/templates/miapp/info.html -->
 	<!DOCTYPE html>
 	<html lang="en">
 	<head>
@@ -29,7 +29,6 @@
 	```
 
 3. **Configurar Vista:** Crear la vista `info` para mostrar la página `info.html`
-
 	```python
 	#./miapp/views.py
 	from django.shortcuts import render
@@ -42,7 +41,6 @@
 	```
 
 4. **Configurar Enrutamiento:** Crear `./miapp/urls.py` y agregarlo a `./proyectotemplate/urls.py`
-
 	```python
 	#./miapp/urls.py
 	from . import views
@@ -53,7 +51,6 @@
 	]
 
 	```
-
 	```python
 	#./proyectotemplate/urls.py
 	from django.contrib import admin
@@ -66,14 +63,21 @@
 	```
 
 5. **Realizar Pruebas:** Ejecutar servidor y verificar ruta
-
 	```sh
 	python mangage.py runserver
 	```
-
 	```sh
 	http://127.0.0.1:8000/miapp/info/
 	```
+	<SmartFigure
+        id="pagina-info"
+        src="/inacap/ti3v41/images/fig39.png"
+        alt="Página 'info'"
+        caption="Página 'info'"
+        size="large"
+    />
+
+
 
 ## 2. Elementos Estáticos
 - Los sitios web generalmente necesitan utilizar archivos adicionales como imágenes, JavaScript o CSS.
@@ -213,10 +217,17 @@ Agregar más contenido a `info.html`: Año, Fecha, Nombre, Apellido, Edad, Hobbi
     ```sh
     http://127.0.0.1:8000/miapp/info/
     ```
+	<SmartFigure
+        id="pagina-info-mejorada"
+        src="/inacap/ti3v41/images/fig42.png"
+        alt="Página 'info' mejorada"
+        caption="Página 'info' mejorada"
+        size="large"
+    />
 
 ### Ejercicio 02
 
-- Generar 1 documentos html en la carpeta `templates/` (**index.html**)
+- Generar 1 documento html en la carpeta `templates/` (**index.html**)
 - Iniciar la aplicación desde el index
 
 1. **Crear Nuevo Proyecto:** Crear un nuevo proyecto `proyectostatic`
@@ -344,7 +355,6 @@ Agregar más contenido a `info.html`: Año, Fecha, Nombre, Apellido, Edad, Hobbi
         path("index/", views.index),
     ]
     ```
-
     ```python
     #./proyectostatic/urls.py
     from django.contrib import admin
@@ -361,7 +371,13 @@ Agregar más contenido a `info.html`: Año, Fecha, Nombre, Apellido, Edad, Hobbi
     ```sh
     python manage.py runserver
     ```
-
     ```sh
     http://127.0.0.1:8000/core/index/
     ```
+    <SmartFigure
+        id="pagina-index"
+        src="/inacap/ti3v41/images/fig43.png"
+        alt="Página 'index'"
+        caption="Página 'index'"
+        size="large"
+    />

@@ -1,5 +1,5 @@
 const courseData = {
-  courseCode: "TILV01",
+  courseCode: "TILV21",
   courseTitle: "Plan de Pruebas de Software",
   courseDescription: "Plan de Pruebas de Software es una asignatura práctica del área formativa de especialidad de Tecnologías de Información y Ciberseguridad, dictada en modalidad online. Al finalizar, el estudiante será capaz de garantizar la funcionalidad, seguridad y eficiencia en el desarrollo de software, considerando la Resolución de problemas, Innovación y Emprendimiento.",
   professorData: {

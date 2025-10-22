@@ -257,6 +257,12 @@ export const problems = {
       difficulty: "Medium",
       categories: ["general"]
     },
+    "LC2356": {
+      title: "Número de Materias Únicas Enseñadas por cada Profesor",
+      topics: ["Database"],
+      difficulty: "Easy",
+      categories: ["pandas"]
+    },
     "LC2359": {
       title: "Encontrar el Nodo más Cercado a Dos Nodos",
       topics: ["Depth-First Search","Graph"],

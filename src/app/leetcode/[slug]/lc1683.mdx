@@ -1,17 +1,19 @@
 # Tweets No Válidos
 
 **Tabla:** `Tweets`
-```markdown
-+----------------+---------+
+<TerminalOutput>
+{`+----------------+---------+
 | Column Name    | Type    |
 +----------------+---------+
 | tweet_id       | int     |
 | content        | varchar |
 +----------------+---------+
-"tweet_id" es la clave primaria para esta tabla.
-"content" consiste en caracteres alfanuméricos, '!', o ' ' y ningún otro carácter especial.
-Esta tabla contiene todos los tweets en una aplicación de redes sociales.
-```
+
+- "tweet_id" es la clave primaria para esta tabla.
+- "content" consiste en caracteres alfanuméricos, '!', o ' ' y ningún otro 
+    carácter especial.
+- Esta tabla contiene todos los tweets en una aplicación de redes sociales.`}
+</TerminalOutput>
 
 Escribe una solución para encontrar los IDs de los tweets inválidos. el tweet es inválido si el número de caracteres usados en el contenido del tweet es **estrictamente mayor** que 15.
 
@@ -20,33 +22,32 @@ Devuelve la tabla de resultados en **cualquier orden**.
 ## Ejemplo
 
 **Input:**
-```markdown 
-tabla Tweets:
+<TerminalOutput>
+{`Tabla Tweets:
 +----------+-----------------------------------+
 | tweet_id | content                           |
 +----------+-----------------------------------+
 | 1        | Let us Code                       |
 | 2        | More than fifteen chars are here! |
-+----------+-----------------------------------+
-```
++----------+-----------------------------------+`}
+</TerminalOutput>
 
 **Output:** 
-```markdown
-+----------+
+<TerminalOutput>
+{`+----------+
 | tweet_id |
 +----------+
 | 2        |
 +----------+
 
 Explicación:
-Tweet 1 tiene longitud = 11. Es un tweet válido.
-Tweet 2 tiene longitud = 33. Es un tweet inválido. 
-```
+    - Tweet 1 tiene longitud = 11. Es un tweet válido.
+    - Tweet 2 tiene longitud = 33. Es un tweet inválido.`}
+</TerminalOutput>
 
 ## Soluciones
 
-<details>
-    <summary>Python</summary>
+<Solution title="Python" icon="Python">
 ```python
 import pandas as pd
 
@@ -59,5 +60,4 @@ def invalid_tweets(tweets: pd.DataFrame) -> pd.DataFrame:
     - `df[condición]` → Filtra filas (indexación booleana)
     - `df[['columna1', 'columna2']]` → Selecciona columnas
     - `df[condición][columnas]` → Combina ambas operaciones   
-
-</details>
+</Solution>

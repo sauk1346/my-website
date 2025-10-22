@@ -1,17 +1,16 @@
 # Corregir Nombres en una Tabla
 
 **Tabla:** `Users`
-
-```markdown
-+----------------+---------+
+<TerminalOutput>
+{`+----------------+---------+
 | Column Name    | Type    |
 +----------------+---------+
 | user_id        | int     |
 | name           | varchar |
 +----------------+---------+
-"user_id" es la clave primaria para esta tabla.
-Esta tabla contiene el ID y el nombre de usuario.
-```
+
+- "user_id" es la clave primaria para esta tabla.`}
+</TerminalOutput>
 
 Escribe una solución para corregir los nombres de manera que solo el primer carácter esté en mayúscula (el resto en minúscula).
 
@@ -20,30 +19,29 @@ Devuelve una tabla resultado ordenada por `user_id`.
 ## Ejemplo
 
 **Input:**
-```markdown
-tabla Users:
+<TerminalOutput>
+{`Tabla Users:
 +---------+-------+
 | user_id | name  |
 +---------+-------+
 | 1       | aLice |
 | 2       | bOB   |
-+---------+-------+
-```
++---------+-------+`}
+</TerminalOutput>
 
 **Output:**
-```markdown
-+---------+-------+
+<TerminalOutput>
+{`+---------+-------+
 | user_id | name  |
 +---------+-------+
 | 1       | Alice |
 | 2       | Bob   |
-+---------+-------+
-``` 
++---------+-------+`}
+</TerminalOutput>
 
 ## Soluciones
 
-<details>
-    <summary>Python</summary>
+<Solution title="Python" icon="Python">
 ```python
 def fix_names(users: pd.DataFrame) -> pd.DataFrame:
     
@@ -52,4 +50,4 @@ def fix_names(users: pd.DataFrame) -> pd.DataFrame:
     return users.sort_values(by='user_id')
     
 ```
-</details>
+</Solution>

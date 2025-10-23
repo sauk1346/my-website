@@ -27,7 +27,7 @@ const courseData = {
           weighting: '20% * 75%', 
           description: {
               text: 'Evaluación 01',
-              href: 'tilv01/eval01'
+              href: 'tilv21/eval01'
           }
       },
       { 
@@ -36,7 +36,7 @@ const courseData = {
           weighting: '30% * 75%', 
           description: {
               text: 'Informe 01',
-              href: '/inacap/tilv01/docs/informe01.pdf',
+              href: '/inacap/tilv21/docs/informe01.pdf',
               external: true
           }
       },
@@ -46,7 +46,7 @@ const courseData = {
           weighting: '35% * 75%',
           description: {
               text: 'Informe 02',
-              href: '/inacap/tilv01/docs/informe02.pdf',
+              href: '/inacap/tilv21/docs/informe02.pdf',
               external: true
           }
       },
@@ -56,7 +56,7 @@ const courseData = {
           weighting: '15% * 75%',
           description: {
               text: 'Promedio controles',
-              href: 'tilv01/controles'
+              href: 'tilv21/controles'
           }
       },
       { 
@@ -69,23 +69,23 @@ const courseData = {
           quickGuide: [
               {
                   text: 'Controles',
-                  href: 'tilv01/controles'
+                  href: 'tilv21/controles'
               },
               {
                   text: 'Lecturas',
-                  href: 'tilv01/lecturas'
+                  href: 'tilv21/lecturas'
               },
               {
                   text: 'Unidad01',
-                  href: 'tilv01/unidad01'
+                  href: 'tilv21/unidad01'
               },
               {
                   text: 'Unidad02',
-                  href: 'tilv01/unidad02'
+                  href: 'tilv21/unidad02'
               },
               {
                   text: 'Unidad03',
-                  href: 'tilv01/unidad03'
+                  href: 'tilv21/unidad03'
               }
           ]
       }
@@ -98,7 +98,7 @@ const courseData = {
           description: [
               {
                   text: 'Conceptos básicos en el desarrollo de software',
-                  href: 'tilv01/lectura01'
+                  href: 'tilv21/lectura01'
               }
           ]
       },
@@ -109,7 +109,7 @@ const courseData = {
           description: [
               {
                   text: 'Requisitos y calidad de software según Estándar ISO/IEC 25000',
-                  href: 'tilv01/lectura02'
+                  href: 'tilv21/lectura02'
               }
           ]
       },
@@ -120,7 +120,7 @@ const courseData = {
           description: [
               {
                   text: 'Estándares de testing, basados en normas y estándares de la industria del software',
-                  href: 'tilv01/lectura03'
+                  href: 'tilv21/lectura03'
               }
           ]
       },
@@ -131,7 +131,7 @@ const courseData = {
           description: [
               {
                   text: 'Síntesis de la Unidad 01',
-                  href: 'tilv01/lectura04'
+                  href: 'tilv21/lectura04'
               }
           ]
       },
@@ -142,7 +142,7 @@ const courseData = {
           description: [
               {
                   text: 'Técnicas y herramientas de testing',
-                  href: 'tilv01/lectura05'
+                  href: 'tilv21/lectura05'
               }
           ]
       },
@@ -153,7 +153,7 @@ const courseData = {
           description: [
               {
                   text: 'Alcances y definiciones de los tipos de testing en el desarrollo de sorftware',
-                  href: 'tilv01/lectura06'
+                  href: 'tilv21/lectura06'
               }
           ]
       },
@@ -164,7 +164,7 @@ const courseData = {
           description: [
               {
                   text: 'Cómo detectar la complejidad del testing',
-                  href: 'tilv01/lectura07'
+                  href: 'tilv21/lectura07'
               }
           ]
       },
@@ -175,7 +175,7 @@ const courseData = {
           description: [
               {
                   text: 'Soluciones a problemas y criterios de factibilidad con técnicas de testing',
-                  href: 'tilv01/lectura08'
+                  href: 'tilv21/lectura08'
               }
           ]
       },
@@ -186,7 +186,7 @@ const courseData = {
           description: [
               {
                   text: 'Síntesis de la Unidad 02',
-                  href: 'tilv01/lectura09'
+                  href: 'tilv21/lectura09'
               }
           ]
       },
@@ -197,7 +197,7 @@ const courseData = {
           description: [
               {
                   text: 'Gestión de defectos, combinación de valores de prueba y exploración',
-                  href: 'tilv01/lectura10'
+                  href: 'tilv21/lectura10'
               }
           ]
       },
@@ -208,7 +208,7 @@ const courseData = {
           description: [
               {
                   text: 'Técnicas para pruebas exploratorias',
-                  href: 'tilv01/lectura11'
+                  href: 'tilv21/lectura11'
               }
           ]
       },
@@ -219,7 +219,7 @@ const courseData = {
           description: [
               {
                   text: 'Ciclo de vida de un defecto de software',
-                  href: 'tilv01/lectura12'
+                  href: 'tilv21/lectura12'
               }
           ]
       },
@@ -230,7 +230,7 @@ const courseData = {
           description: [
               {
                   text: 'Defectos, errores y fallos según criterios de factibilidad de plan de pruebas',
-                  href: 'tilv01/lectura13'
+                  href: 'tilv21/lectura13'
               }
           ]
       },
@@ -241,7 +241,7 @@ const courseData = {
           description: [
               {
                   text: 'Procesos de seguimiento en el monitoreo',
-                  href: 'tilv01/lectura14'
+                  href: 'tilv21/lectura14'
               }
           ]
       },
@@ -252,7 +252,7 @@ const courseData = {
           description: [
               {
                   text: 'Síntesis de la Unidad 03',
-                  href: 'tilv01/lectura15'
+                  href: 'tilv21/lectura15'
               }
           ]
       }

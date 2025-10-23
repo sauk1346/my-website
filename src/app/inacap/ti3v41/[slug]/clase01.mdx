@@ -41,12 +41,10 @@
 
 <SmartFigure
 	id="modelo-vista-controlador"
-	src="/inacap/ti3v41/images/fig01.png"
+	src="/inacap/ti3v41/images/fig001.png"
 	alt="Modelo Vista Controlador"
 	caption="Modelo Vista Controlador"
-	autoNumber={true}
-	center={true}
-	size="medium"
+	size="large"
 />
 
 <SmartTable
@@ -223,7 +221,7 @@ Crear un proyecto Django y levantar el servidor
 	</TerminalOutput>
 	<SmartFigure
         id="pagina-incio-django"
-        src="/inacap/ti3v41/images/fig34.png"
+        src="/inacap/ti3v41/images/fig002.png"
         alt="Página de inicio Django"
         caption="Página de inicio Django"
         size="large"
@@ -270,7 +268,6 @@ Crear una nueva aplicación dentro del proyecto
 	#./miprimerproyecto/settings.py
 	...
 	...
-
 	INSTALLED_APPS = [
     	"django.contrib.admin",
     	"django.contrib.auth",
@@ -280,7 +277,6 @@ Crear una nueva aplicación dentro del proyecto
     	"django.contrib.staticfiles",
     	"miapp"
 	]
-
 	...
 	...
 	```
@@ -318,7 +314,6 @@ Crear una nueva aplicación dentro del proyecto
     path("index/", views.index),
 	]
 	```
-
 	```python
 	#./primerproyecto/urls.py
 	from django.contrib import admin
@@ -334,13 +329,12 @@ Crear una nueva aplicación dentro del proyecto
 	```sh
 	python manage.py runserver
 	```
-
 	```sh
 	http://127.0.0.1:8000/miapp/index/
 	```
 	<SmartFigure
         id="aplicacion-miapp"
-        src="/inacap/ti3v41/images/fig35.png"
+        src="/inacap/ti3v41/images/fig003.png"
         alt="Aplicación 'miapp'"
         caption="Aplicación 'miapp'"
         size="large"

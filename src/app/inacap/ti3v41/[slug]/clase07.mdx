@@ -1,4 +1,4 @@
-# Proyecto Tienda: Template Base
+# (Proyecto Tienda) Vistas genéricas de lista
 
 ## 1. Relación entre Modelos
 Es posible crear relaciones entre modelos, para así generar tablas relacionales
@@ -7,7 +7,7 @@ Es posible crear relaciones entre modelos, para así generar tablas relacionales
 
 1. **Configurar Modelos:** Crear relación entre los modelos `Producto` y `Categoria` utilizando `ForeignKey`
     ```python
-    #./tiendita/models.py
+    #./tienda/models.py
     from django.db import models
     ...
     ...
@@ -27,8 +27,8 @@ Es posible crear relaciones entre modelos, para así generar tablas relacionales
     python manage.py makemigrations
     ```
     <TerminalOutput>
-    {`Migrations for 'tiendita':
-    tiendita/migrations/0002_producto_categoria.py
+    {`Migrations for 'tienda':
+      tienda/migrations/0002_producto_categoria.py
         + Add field categoria to producto`}
     </TerminalOutput>
     ```sh
@@ -36,14 +36,14 @@ Es posible crear relaciones entre modelos, para así generar tablas relacionales
     ```
     <TerminalOutput>
     {`Operations to perform:
-    Apply all migrations: admin, auth, contenttypes, sessions, tiendita
+      Apply all migrations: admin, auth, contenttypes, sessions, tienda
     Running migrations:
-    Applying tiendita.0002_producto_categoria... OK`}
+      Applying tienda.0002_producto_categoria... OK`}
     </TerminalOutput>
 
 3. **Configurar Admin:** Agregar el nuevo campo a la clase `ProductoAdmin`
     ```python
-    #./tiendita/admin.py
+    #./tienda/admin.py
     from django.contrib import admin
     from .models import Cliente, Producto, Categoria
     ...
@@ -59,19 +59,18 @@ Es posible crear relaciones entre modelos, para así generar tablas relacionales
     python manage.py runserver
     ```
     ```sh
-    http://127.0.0.1:8000/admin/tiendita/producto/1/change/
+    http://127.0.0.1:8000/admin/tienda/producto/1/change/
     ```
     <SmartFigure
         id="relacion-modelos-campo-categoria"
-        src="/inacap/ti3v41/images/fig16.png"
-        alt="Relación entre Modelos mediante campo categoria"
-        caption="Relación entre Modelos mediante campo categoria"
+        src="/inacap/ti3v41/images/fig029.png"
+        alt="Relación entre Modelos mediante nuevo campo 'categoria'"
+        caption="Relación entre Modelos mediante nuevo campo 'categoria'"
         size="large"
     />
-
     <SmartFigure
         id="lista-productos-actualizados"
-        src="/inacap/ti3v41/images/fig17.png"
+        src="/inacap/ti3v41/images/fig030.png"
         alt="Lista de Productos actualizados"
         caption="Lista de Productos actualizados"
         size="large"
@@ -85,7 +84,7 @@ Es posible crear relaciones entre modelos, para así generar tablas relacionales
     - Crear clase `ProductoInline`, que permitirá editar productos directamente desde la página de Categoría
     - Agregar la clase `ProductoInline` a la clase `CategoriaAdmin`
     ```python
-    #./tiendita/admin.py
+    #./tienda/admin.py
     from django.contrib import admin
     from .models import Cliente, Producto, Categoria
 
@@ -107,11 +106,11 @@ Es posible crear relaciones entre modelos, para así generar tablas relacionales
     python manage.py runserver
     ```
     ```sh
-    http://127.0.0.1:8000/admin/tiendita/categoria/1/change/
+    http://127.0.0.1:8000/admin/tienda/categoria/1/change/
     ```
     <SmartFigure
         id="categoria-abarrotes"
-        src="/inacap/ti3v41/images/fig18.png"
+        src="/inacap/ti3v41/images/fig031.png"
         alt="Categoria Abarrotes con lista de productos"
         caption="Categoría Abarrotes con lista de productos"
         size="large"
@@ -125,7 +124,6 @@ Es posible crear relaciones entre modelos, para así generar tablas relacionales
 
 ```html
 <!-- base_generic.html -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -140,7 +138,6 @@ Es posible crear relaciones entre modelos, para así generar tablas relacionales
 ```
 ```html
 <!-- index.html -->
-
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -152,7 +149,7 @@ Es posible crear relaciones entre modelos, para así generar tablas relacionales
 - Se crea la plantilla base `base_generic.html`
 - Luego en `index.html` se carga la plantilla base, y se llena los bloques de la plantilla con los bloques de `index.html`
 
-## 3. Vistas basadas en clases
+## 3. Vistas Genéricas de lista
 - La función de vista se lleva a cabo, a través de la implementación de ésta como una clase Django
 - Se hereda desde una función de vista genérica (ListView) existente que ya hace la mayoría de lo que se requiere de una vista
 - Para las vistas basadas en clases de Django, se debe acceder a una función de vista apropiada, llama al método de clase `as_view()`
@@ -176,8 +173,7 @@ class BookListView(generic.ListView):
 
 1. **Configurar Templates (1):** Agregar template `base.html`
     ```html
-    <!-- ./tiendita/templates/tiendita/base.html -->
-
+    <!-- ./tienda/templates/tienda/base.html -->
     <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -213,9 +209,8 @@ class BookListView(generic.ListView):
 
 2. **Configurar Templates (2):** Modificar `index.html` para que acepte el template `base.html`
     ```html
-    <!-- ./tiendita/templates/tiendita/index.html -->
-
-    {% extends "tiendita/base.html" %}
+    <!-- ./tienda/templates/tienda/index.html -->
+    {% extends "tienda/base.html" %}
 
     {% block title %}
     <title>Tienda de Productos - index</title>
@@ -239,32 +234,32 @@ class BookListView(generic.ListView):
     python manage.py runserver
     ```
     ```sh
-    http://127.0.0.1:8000/tiendita/index/
+    http://127.0.0.1:8000/tienda/index/
     ```
     <SmartFigure
         id="pagina-index-con-template-base"
-        src="/inacap/ti3v41/images/fig19.png"
-        alt="Página index con template base"
-        caption="Página index con template base"
+        src="/inacap/ti3v41/images/fig032.png"
+        alt="Página 'index' con template base"
+        caption="Página 'index' con template base"
         size="large"
     />
 
-### Agregar Vistas basadas en Clases (1)
+### Agregar Vistas genéricas de lista (1)
 
-Agregar Vistas basadas en clases para el modelo `Cliente`
+Agregar vista genérica de lista para el modelo `Cliente`
 
 1. **Agregar Datos:** añadir datos al modelo `Cliente`
     <SmartFigure
         id="datos-modelo-cliente"
-        src="/inacap/ti3v41/images/fig20.png"
+        src="/inacap/ti3v41/images/fig033.png"
         alt="Datos para el modelo Cliente"
         caption="Datos para el modelo Cliente"
         size="large"
     />
 
-2. **Configurar Vistas:** Crear la 'vista basada en clases' `ClienteListView`
+2. **Configurar Vistas:** Crear la 'vista genérica de lista' `ClienteListView`
     ```python
-    #./tiendita/views.py
+    #./tienda/views.py
     from django.shortcuts import render
     from .models import Cliente, Producto, Categoria
     from django.views import generic
@@ -273,15 +268,15 @@ Agregar Vistas basadas en clases para el modelo `Cliente`
         ...
         ...
 
-    # Vistas basadas en clases
+    # Vistas genéricas de lista
     class ClienteListView(generic.ListView):
         model = Cliente
     ```
 
-3. **Configurar Templates (1):** Agregar template `cliente_list.html` para la 'vista basada en clases' `ClienteListView`
+3. **Configurar Templates (1):** Agregar template `cliente_list.html` para la 'vista genérica de lista' `ClienteListView`
     ```html
-    <!-- ./tiendita/templates/tiendita/cliente_list.html-->
-    {% extends "tiendita/base.html" %}
+    <!-- ./tienda/templates/tienda/cliente_list.html-->
+    {% extends "tienda/base.html" %}
 
     {% block title %}
         <title>Tienda de Productos - clientes</title>
@@ -301,9 +296,9 @@ Agregar Vistas basadas en clases para el modelo `Cliente`
     {% endblock content %}
     ```
 
-4. **Configurar Enrutamiento:** Agregar la ruta para la 'vista basada en clases' `ClienteListView`
+4. **Configurar Enrutamiento:** Agregar la ruta para la 'vista genérica de lista' `ClienteListView`
     ```python
-    #./tiendita/urls.py
+    #./tienda/urls.py
     from django.urls import path
     from . import views
 
@@ -315,7 +310,7 @@ Agregar Vistas basadas en clases para el modelo `Cliente`
 
 5. **Configurar Templates (2):** Agregar la ruta `ClienteListView` en el template base `base.html`
     ```html
-    <!-- ./tiendita/templates/tiendita/base.html -->
+    <!-- ./tienda/templates/tienda/base.html -->
     <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -348,29 +343,29 @@ Agregar Vistas basadas en clases para el modelo `Cliente`
     python manage.py runserver
     ```
     ```sh
-    http://127.0.0.1:8000/tiendita/clientes/
+    http://127.0.0.1:8000/tienda/clientes/
     ```
     <SmartFigure
-        id="pagina-clientes-vistas-basadas-en-clases"
-        src="/inacap/ti3v41/images/fig21.png"
-        alt="Página clientes usando Vistas basadas en clases"
-        caption="Página clientes usando Vistas basadas en clases"
+        id="pagina-clientes-vistas-genericas-de-lista"
+        src="/inacap/ti3v41/images/fig034.png"
+        alt="Página 'clientes' usando Vistas genéricas de lista"
+        caption="Página 'clientes' usando Vistas genéricas de lista"
         size="large"
     />
 
-### Agregar Vistas basadas en clases (2)
+### Agregar Vistas genéricas de lista (2)
 
-Agregar las 'vistas basadas en clases' para los modelos `Producto` y `Categoria`
+Agregar las 'vistas genéricas de lista' para los modelos `Producto` y `Categoria`
 
-1. **Configurar Vistas:** Agregar las 'vistas basadas en clases' `ProductoListView` y `ClienteListView` en `views.py`
+1. **Configurar Vistas:** Agregar las 'vistas genéricas de lista' `ProductoListView` y `ClienteListView` en `views.py`
     ```python
-    #./tiendita/views.py
+    #./tienda/views.py
     from django.shortcuts import render
     from .models import Cliente, Producto, Categoria
     from django.views import generic
     ...
     ...
-    # Vistas basadas en clases
+    # Vistas genéricas de lista
     class ClienteListView(generic.ListView):
         model = Cliente
 
@@ -383,8 +378,8 @@ Agregar las 'vistas basadas en clases' para los modelos `Producto` y `Categoria`
 
 2. **Configurar Templates (1):** Agregar los templates `producto_list.html` y `categoria_list.html`
     ```html
-    <!-- ./tiendita/templates/tiendita/producto_list.html-->
-    {% extends "tiendita/base.html" %}
+    <!-- ./tienda/templates/tienda/producto_list.html -->
+    {% extends "tienda/base.html" %}
 
     {% block title %}
         <title>Tienda de Productos - productos</title>
@@ -404,8 +399,8 @@ Agregar las 'vistas basadas en clases' para los modelos `Producto` y `Categoria`
     {% endblock content %}
     ```
     ```html
-    <!-- ./tiendita/templates/tiendita/categoria_list.html -->
-    {% extends "tiendita/base.html" %}
+    <!-- ./tienda/templates/tienda/categoria_list.html -->
+    {% extends "tienda/base.html" %}
 
     {% block title %}
         <title>Tienda de Productos - categorias</title>
@@ -425,9 +420,9 @@ Agregar las 'vistas basadas en clases' para los modelos `Producto` y `Categoria`
     {% endblock content %}
     ```
 
-3. **Configurar Enrutamiento:** Agregar las rutas para las 'vistas basadas en clases' `ProductoViewList` y `CategoriaViewList`
+3. **Configurar Enrutamiento:** Agregar las rutas para las 'vistas genéricas de lista' `ProductoViewList` y `CategoriaViewList`
     ```python
-    #./tiendita/urls.py
+    #./tienda/urls.py
     from django.urls import path
     from . import views
 
@@ -441,7 +436,7 @@ Agregar las 'vistas basadas en clases' para los modelos `Producto` y `Categoria`
 
 4. **Configurar Templates (2):** Agregar las rutas de Producto y Categoria al template base `base.html`
     ```html
-    <!-- ./tiendita/templates/tiendita/base.html -->
+    <!-- ./tienda/templates/tienda/base.html -->
     <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -473,22 +468,22 @@ Agregar las 'vistas basadas en clases' para los modelos `Producto` y `Categoria`
     python manage.py runserver
     ```
     ```sh
-    http://127.0.0.1:8000/tiendita/productos/
+    http://127.0.0.1:8000/tienda/productos/
     ```
     <SmartFigure
         id="pagina-productos-vistas-basadas-en-clases"
-        src="/inacap/ti3v41/images/fig22.png"
-        alt="Página productos usando Vistas basadas en clases"
-        caption="Página productos usando Vistas basadas en clases"
+        src="/inacap/ti3v41/images/fig035.png"
+        alt="Página 'productos' usando Vistas genéricas de lista"
+        caption="Página 'productos' usando Vistas genéricas de lista"
         size="large"
     />
     ```sh
-    http://127.0.0.1:8000/tiendita/categorias/
+    http://127.0.0.1:8000/tienda/categorias/
     ```
     <SmartFigure
         id="pagina-categorias-vistas-basadas-en-clases"
-        src="/inacap/ti3v41/images/fig23.png"
-        alt="Página categorias usando Vistas basadas en clases"
-        caption="Página categorias usando Vistas basadas en clases"
+        src="/inacap/ti3v41/images/fig036.png"
+        alt="Página 'categorias' usando Vistas genéricas de lista"
+        caption="Página 'categorias' usando Vistas genéricas de lista"
         size="large"
     />

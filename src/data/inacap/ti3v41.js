@@ -121,7 +121,7 @@ const courseData = {
             date: 'Mar 26, Ago 2025', 
             description: [
                 {
-                    text: 'Proyecto Tienda: Inicio',
+                    text: '(Proyecto Tienda) Inicio - Módulo Admin',
                     href: 'ti3v41/clase06'
                 }
             ]
@@ -132,7 +132,7 @@ const courseData = {
             date: 'Lun 01, Sep 2025', 
             description: [
                 {
-                    text: 'Proyecto Tienda: Template Base',
+                    text: '(Proyecto Tienda) Vistas genéricas de lista',
                     href: 'ti3v41/clase07'
                 }
             ]
@@ -143,8 +143,8 @@ const courseData = {
             date: 'Mar 02, Sep 2025', 
             description: [
                 {
-                    text: 'Proyecto Tienda: Vista basada en clases',
-                    href: ''
+                    text: '(Proyecto Tienda) Vistas genéricas de detalle',
+                    href: 'ti3v41/clase08'
                 }
             ]
         },
@@ -154,7 +154,7 @@ const courseData = {
             date: 'Lun 08, Sep 2025', 
             description: [
                 {
-                    text: 'Proyecto Tienda: Imágenes',
+                    text: '(Proyecto Tienda) Imágenes',
                     href: ''
                 }
             ]
@@ -165,7 +165,7 @@ const courseData = {
             date: 'Mar 09, Sep 2025', 
             description: [
                 {
-                    text: 'Proyecto Tienda: Vistas Edición Genéricas',
+                    text: '(Proyecto Tienda) Vistas genéricas de edición',
                     href: ''
                 }
             ]
@@ -176,7 +176,7 @@ const courseData = {
             date: 'Lun 15, Sep 2025', 
             description: [
                 {
-                    text: 'Proyecto Tienda: Formularios',
+                    text: '(Proyecto Tienda) Formularios',
                     href: ''
                 }
             ]
@@ -187,7 +187,7 @@ const courseData = {
             date: 'Mar 16, Sep 2025', 
             description: [
                 {
-                    text: 'Proyecto Tienda: Correo Contacto',
+                    text: '(Proyecto Tienda) Correo Contacto',
                     href: ''
                 }
             ]
@@ -209,7 +209,7 @@ const courseData = {
             date: 'Mar 23, Sep 2025', 
             description: [
                 {
-                    text: 'Proyecto Tienda: Búsquedas',
+                    text: '(Proyecto Tienda) Búsquedas',
                     href: ''
                 }
             ]
@@ -220,7 +220,7 @@ const courseData = {
             date: 'Lun 29, Sep 2025', 
             description: [
                 {
-                    text: 'DRF: Introducción APIs',
+                    text: '(DRF) Introducción APIs',
                     href: 'ti3v41/clase15',
                 }
             ]
@@ -231,7 +231,7 @@ const courseData = {
             date: 'Mar 30, Sep 2025', 
             description: [
                 {
-                    text: 'DRF: Creación de APIs',
+                    text: '(DRF) Creación de APIs',
                     href: 'ti3v41/clase16',
                 }
             ]
@@ -242,7 +242,7 @@ const courseData = {
             date: 'Lun 06, Oct 2025', 
             description: [
                 {
-                    text: 'DRF: Autenticación',
+                    text: '(DRF) Autenticación',
                     href: '',
                 }
             ]
@@ -253,7 +253,7 @@ const courseData = {
             date: 'Mar 07, Oct 2025', 
             description: [
                 {
-                    text: 'DRF: Autenticación - Registro',
+                    text: '(DRF) Autenticación - Registro',
                     href: '',
                 }
             ]

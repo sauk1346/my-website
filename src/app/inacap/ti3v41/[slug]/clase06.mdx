@@ -1,7 +1,7 @@
-# Proyecto Tienda: Inicio
+# (Proyecto Tienda) Inicio - Módulo Admin
 
 - Desarrollar un proyecto llamado **TiendaProductos**
-- Desarrollar una aplicación llamada **Tiendita**
+- Desarrollar una aplicación llamada **Tienda**
 - Construir el modelo **Cliente** en base a la siguiente estructura:
     - **id_cliente** (generado automáticamente)
     - **nombre** (caracter)
@@ -24,12 +24,12 @@
     cd tiendaproductos
     ```
 
-2. **Crear App:** Llamada `tiendita`
+2. **Crear App:** Llamada `tienda`
     ```sh
-    python manage.py startapp tiendita
+    python manage.py startapp tienda
     ```
 
-3. **Configuración Inicial:** Agregar `tiendita` en `settings.py`
+3. **Configuración Inicial:** Agregar `tienda` en `settings.py`
     - Realizar configuraciones extras como **idioma** y **zona horaria**
     ```python
     #./tiendaproductos/settings.py
@@ -39,7 +39,7 @@
     INSTALLED_APPS = [
         ...
         ...
-        "tiendita",
+        "tienda",
     ]
     ...
     ...
@@ -52,11 +52,11 @@
 
 4. **Configuración Modelos:** Crear modelos `Cliente`, `Producto` y  `Categoria` con los campos solicitados, en `models.py`
     ```python
-    #./tiendita/models.py
+    #./tienda/models.py
     from django.db import models
 
     # Create your models here.
-    class Cliente(model.Model):
+    class Cliente(models.Model):
         nombre = models.CharField(max_length=100, help_text="Ingresa tus nombres")
         apellido = models.CharField(max_length=100, help_text="Ingresa tus apellido")
         fecha_nac = models.DateField(null=True, blank=True, help_text="Ingresa tu fecha de nacimiento")
@@ -65,14 +65,14 @@
         def __str__(self):
             return f"{self.nombre} {self.apellido}"
 
-    class Producto(model.Model):
+    class Producto(models.Model):
         nombre = models.CharField(max_length=100, help_text="Nombre del producto")
         precio = models.IntegerField(null=True, blank=True, help_text="Precio del producto")
         stock = models.IntegerField(null=True, blank=True, help_text="Cantidad en stock del producto")
         def __str__(self):
             return f"{self.nombre}"
 
-    class Categoria(model.Model):
+    class Categoria(models.Model):
         nombre = models.CharField(max_length=100, help_text="Categoría del producto")
         def __str__(self):
             return f"{self.nombre}"
@@ -83,8 +83,8 @@
     python manage.py makemigrations
     ```
     <TerminalOutput>
-    {`Migrations for 'tiendita':
-    tiendita/migrations/0001_initial.py
+    {`Migrations for 'tienda':
+      tienda/migrations/0001_initial.py
         + Create model Categoria
         + Create model Cliente
         + Create model Producto`}
@@ -95,32 +95,32 @@
     ```
     <TerminalOutput>
     {`Operations to perform:
-    Apply all migrations: admin, auth, contenttypes, sessions, tiendita
+      Apply all migrations: admin, auth, contenttypes, sessions, tienda
     Running migrations:
-    Applying contenttypes.0001_initial... OK
-    Applying auth.0001_initial... OK
-    Applying admin.0001_initial... OK
-    Applying admin.0002_logentry_remove_auto_add... OK
-    Applying admin.0003_logentry_add_action_flag_choices... OK
-    Applying contenttypes.0002_remove_content_type_name... OK
-    Applying auth.0002_alter_permission_name_max_length... OK
-    Applying auth.0003_alter_user_email_max_length... OK
-    Applying auth.0004_alter_user_username_opts... OK
-    Applying auth.0005_alter_user_last_login_null... OK
-    Applying auth.0006_require_contenttypes_0002... OK
-    Applying auth.0007_alter_validators_add_error_messages... OK
-    Applying auth.0008_alter_user_username_max_length... OK
-    Applying auth.0009_alter_user_last_name_max_length... OK
-    Applying auth.0010_alter_group_name_max_length... OK
-    Applying auth.0011_update_proxy_permissions... OK
-    Applying auth.0012_alter_user_first_name_max_length... OK
-    Applying sessions.0001_initial... OK
-    Applying tiendita.0001_initial... OK`}
+      Applying contenttypes.0001_initial... OK
+      Applying auth.0001_initial... OK
+      Applying admin.0001_initial... OK
+      Applying admin.0002_logentry_remove_auto_add... OK
+      Applying admin.0003_logentry_add_action_flag_choices... OK
+      Applying contenttypes.0002_remove_content_type_name... OK
+      Applying auth.0002_alter_permission_name_max_length... OK
+      Applying auth.0003_alter_user_email_max_length... OK
+      Applying auth.0004_alter_user_username_opts... OK
+      Applying auth.0005_alter_user_last_login_null... OK
+      Applying auth.0006_require_contenttypes_0002... OK
+      Applying auth.0007_alter_validators_add_error_messages... OK
+      Applying auth.0008_alter_user_username_max_length... OK
+      Applying auth.0009_alter_user_last_name_max_length... OK
+      Applying auth.0010_alter_group_name_max_length... OK
+      Applying auth.0011_update_proxy_permissions... OK
+      Applying auth.0012_alter_user_first_name_max_length... OK
+      Applying sessions.0001_initial... OK
+      Applying tienda.0001_initial... OK`}
     </TerminalOutput>
 
 6. **Configurar Admin (1):** Importar los modelos a `admin.py` y crear superusuario
     ```python
-    #./tiendita/admin.py
+    #./tienda/admin.py
     from django.contrib import admin
     from .models import Cliente, Producto, Categoria
 
@@ -129,7 +129,6 @@
     admin.site.register(Producto)
     admin.site.register(Categoria)
     ```
-
     ```sh
     python manage.py createsuperuser
     ```
@@ -143,7 +142,7 @@
 
 7. **Configurar Admin (2):** Personalizar la visualización de los modelos con las clases `...Admin`
     ```python
-    #./tiendita/admin.py
+    #./tienda/admin.py
     from django.contrib import admin
     from .models import Cliente, Producto, Categoria
 
@@ -179,27 +178,25 @@
     ```
     <SmartFigure
         id="categorias-ingresadas"
-        src="/inacap/ti3v41/images/fig13.png"
+        src="/inacap/ti3v41/images/fig026.png"
         alt="Categorias ingresadas"
         caption="Categorías ingresadas"
         size="large"
     />
-
     <SmartFigure
         id="productos-ingresados"
-        src="/inacap/ti3v41/images/fig14.png"
+        src="/inacap/ti3v41/images/fig027.png"
         alt="Productos ingresados"
         caption="Productos ingresados"
         size="large"
     />
 
-9. **Configurar Templates (1):** Crear directorio `./tiendita/templates/tienda` y agregar template `index.html`
+9. **Configurar Templates (1):** Crear directorio `./tienda/templates/tienda` y agregar template `index.html`
     ```sh
-    mkdir -p ./tiendita/templates/tiendita
+    mkdir -p ./tienda/templates/tiendita
     ```
-
     ```html
-    <!-- ./tiendita/templates/tiendita/index.html -->
+    <!-- ./tienda/templates/tienda/index.html -->
 
     <!DOCTYPE html>
     <html lang="en">
@@ -240,7 +237,7 @@
 
 10. **Configurar Vistas:** Crear vista `index`
     ```python
-    #./tiendita/views.py
+    #./tienda/views.py
     from django.shortcuts import render
     from .models import Cliente, Producto, Categoria
 
@@ -255,12 +252,12 @@
             'cant_productos': cant_productos,
             'cant_categorias': cant_categorias
         }
-        return render(request, 'tiendita/index.html', contexto)
+        return render(request, 'tienda/index.html', contexto)
     ```
 
-11. **Configurar Enrutamiento:** Crear `./tiendita/urls.py` y agregarlo a `./tiendaproductos/urls.py`
+11. **Configurar Enrutamiento:** Crear `./tienda/urls.py` y agregarlo a `./tiendaproductos/urls.py`
     ```python
-    #./tiendita/urls.py
+    #./tienda/urls.py
     from django.urls import path
     from . import views
 
@@ -276,13 +273,13 @@
 
     urlpatterns = [
         path("admin/", admin.site.urls),
-        path("tiendita/", include('tiendita.urls')),
+        path("tienda/", include('tienda.urls')),
     ]
     ```
 
 12. **Configurar Templates (2):** Agregar los datos creados en la vista `index` (el contexto)
     ```html
-    <!-- ./tiendita/templates/tiendita/index.html -->
+    <!-- ./tienda/templates/tienda/index.html -->
 
     <!DOCTYPE html>
     <html lang="en">
@@ -312,11 +309,11 @@
 
 13. **Verificar Datos:** Verificar que se muestran correctamente los datos (contadores) en la vista `index`
     ```sh
-    http://127.0.0.1:8000/tiendita/index/
+    http://127.0.0.1:8000/tienda/index/
     ```
    <SmartFigure
         id="vista-index"
-        src="/inacap/ti3v41/images/fig15.png"
+        src="/inacap/ti3v41/images/fig028.png"
         alt="Vista index con datos (contadores)"
         caption="Vista index con datos (contadores)"
         size="large"

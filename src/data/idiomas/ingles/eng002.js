@@ -26,7 +26,7 @@ export const eng002Data = {
         lessons: [
           {
             lesson: "03",
-            description: "",
+            description: "Central and Back Vowels",
             href: ""
           }
         ]
@@ -36,7 +36,7 @@ export const eng002Data = {
         lessons: [
           {
             lesson: "04",
-            description: "",
+            description: "Vowel Challenges",
             href: ""
           }
         ]

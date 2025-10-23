@@ -85,13 +85,6 @@ If you find any errors or have suggestions for improvement:
 
 This project is licensed under the [MIT License](LICENSE) - feel free to use this code for your own learning projects.
 
-## 👤 Author
-
-**Antonio Morales**
-
-- Website: [saukcode.cl](https://saukcode.cl/)
-- GitHub: [sauk1346](https://github.com/sauk1346)
-
 ## 🌟 Acknowledgments
 
 - Thanks to all the open-source resources that made this project possible

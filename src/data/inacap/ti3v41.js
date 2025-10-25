@@ -155,7 +155,7 @@ const courseData = {
             description: [
                 {
                     text: '(Proyecto Tienda) Imágenes',
-                    href: ''
+                    href: 'ti3v41/clase09'
                 }
             ]
         },

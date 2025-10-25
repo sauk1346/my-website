@@ -65,8 +65,8 @@ const courseData = {
             date: 'Mar 21, Oct 2025', 
             description: [
                 {
-                    text: '',
-                    href: '',
+                    text: 'No asistí',
+                    strikethrough: true
                 },
             ]
         },
@@ -76,8 +76,30 @@ const courseData = {
             date: 'Mié 22, Oct 2025', 
             description: [
                 {
+                    text: 'No asistí',
+                    strikethrough: true
+                },
+            ]
+        },
+                { 
+            week: '02', 
+            class: '03', 
+            date: 'Mar 28, Oct 2025', 
+            description: [
+                {
                     text: '',
-                    href: '',
+                    href: ''
+                },
+            ]
+        },
+                { 
+            week: '02', 
+            class: '04', 
+            date: 'Mié 29, Oct 2025', 
+            description: [
+                {
+                    text: '',
+                    href:''
                 },
             ]
         },
@@ -89,7 +111,7 @@ const courseData = {
             date: 'Sáb 25, Oct 2025', 
             description: {
                 text: 'Introducción a IoT y Smart Devices',
-                href: '',
+                href: '/inacap/ti3v42/docs/lectura01.pdf',
             }
         },
         { 
@@ -98,6 +120,24 @@ const courseData = {
             date: 'Sáb 25, Oct 2025', 
             description: {
                 text: 'Explorando el mundo IoT: Dispositivos y seguridad',
+                href: 'ti3v42/lectura02',
+            }
+        },
+        { 
+            week: '02', 
+            lecture: '03', 
+            date: 'Sáb 01, Nov 2025', 
+            description: {
+                text: 'Conectando el futuro: Estándares y programación IoT',
+                href: '',
+            }
+        },
+        { 
+            week: '02', 
+            lecture: '04', 
+            date: 'Sáb 01, Nov 2025', 
+            description: {
+                text: 'Síntesis de la unidad',
                 href: '',
             }
         },

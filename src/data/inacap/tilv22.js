@@ -65,8 +65,8 @@ const courseData = {
             date: 'Mié 22, Oct 2025', 
             description: [
                 {
-                    text: '',
-                    href: '',
+                    text: 'No asistí',
+                    strikethrough: true,
                 },
             ]
         },
@@ -74,6 +74,28 @@ const courseData = {
             week: '01', 
             class: '02', 
             date: 'Jue 23, Oct 2025', 
+            description: [
+                {
+                    text: 'No asistí',
+                    strikethrough: true,
+                },
+            ]
+        },
+        { 
+            week: '02', 
+            class: '03', 
+            date: 'Mié 29, Oct 2025', 
+            description: [
+                {
+                    text: '',
+                    href: '',
+                },
+            ]
+        },
+        { 
+            week: '02', 
+            class: '03', 
+            date: 'Jue 30, Oct 2025', 
             description: [
                 {
                     text: '',
@@ -88,7 +110,25 @@ const courseData = {
             lecture: '01', 
             date: 'Sáb 25, Oct 2025', 
             description: {
+                text: 'Introducción a los Videojuegos',
+                href: '/inacap/tilv22/docs/lectura01.pdf',
+            }
+        },
+        { 
+            week: '01', 
+            lecture: '02', 
+            date: 'Sáb 25, Oct 2025', 
+            description: {
                 text: 'Los primeros pasos del gaming: la historia que forma la industria',
+                href: 'tilv22/lectura02',
+            }
+        },
+        { 
+            week: '02', 
+            lecture: '03', 
+            date: 'Sáb 01, Nov 2025', 
+            description: {
+                text: 'Desentrañando el ADN del videojuego: estructura, tecnología y diseño',
                 href: '',
             }
         },

@@ -65,8 +65,8 @@ const courseData = {
             date: 'Mar 21, Oct 2025', 
             description: [
                 {
-                    text: '',
-                    href: '',
+                    text: 'No asistí',
+                    strikethrough: true,
                 },
             ]
         },
@@ -76,8 +76,30 @@ const courseData = {
             date: 'Jue 23, Oct 2025', 
             description: [
                 {
+                    text: 'No asistí',
+                    strikethrough: true,
+                },
+            ]
+        },
+        { 
+            week: '02', 
+            class: '03', 
+            date: 'Mar 28, Oct 2025', 
+            description: [
+                {
                     text: '',
-                    href: '',
+                    href: ''
+                },
+            ]
+        },
+        { 
+            week: '02', 
+            class: '04', 
+            date: 'Jue 30, Oct 2025', 
+            description: [
+                {
+                    text: '',
+                    href: ''
                 },
             ]
         },
@@ -89,7 +111,7 @@ const courseData = {
             date: 'Sáb 25, Oct 2025', 
             description: {
                 text: '¿Qué es y cómo se levanta un diagnóstico?',
-                href: '',
+                href: 'tihv43/lectura01',
             }
         },
         { 
@@ -98,6 +120,24 @@ const courseData = {
             date: 'Sáb 25, Oct 2025', 
             description: {
                 text: 'Resumen ejecutivo',
+                href: '/inacap/tihv43/docs/lectura02.pdf',
+            }
+        },
+        { 
+            week: '02', 
+            lecture: '03', 
+            date: 'Sáb 01, Nov 2025', 
+            description: {
+                text: 'Cómo levantar una propuesta de mejora',
+                href: '',
+            }
+        },
+        { 
+            week: '02', 
+            lecture: '04', 
+            date: 'Sáb 01, Nov 2025', 
+            description: {
+                text: 'Matriz de priorización',
                 href: '',
             }
         },

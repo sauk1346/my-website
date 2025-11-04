@@ -1,0 +1,334 @@
+# Infraestructura Global de AWS
+
+La nube de AWS abarca 120 Zonas de disponibilidad dentro de 38 regiones geográficas, con planes anunciados para 10 más zonas de disponibilidad y 3 más regiones de AWS en Arabia Saudita, Chile y la Nube soberana europea de AWS
+
+## 1. Regiones de AWS: Alta disponibilidad y conectividad
+- Una región de AWS es una zona geográfica que contiene múltiples centros de datos
+- Usted controla la replicación de datos entre regiones
+- La comunicación entre regiones viaja por la red troncal global de AWS
+- Cada región ofrece redundancia y conectividad de nivel empresarial
+- Una región normalmente consta de 2 o más Zonas de Disponibilidad (AZs)
+
+## 2. Cómo elegir la región adecuada en AWS
+
+- Gobernanza de datos y requisitos legales
+- Servicios disponibles dentro de la región
+- Proximidad con los clientes (latencia)
+- Costos (varían según la región)
+
+## 3. Funciones de la Infraestructura de AWS
+
+<SmartTable
+    tableLayout="auto"
+    headers={["Función", "Descripción"]}
+    lists={{
+        R1: [
+            "**Elasticidad:** Ajusta la capacidad automáticamente según la demanda",
+            "Ejemplo: Un e-commerce aumenta recursos en Black Friday y reduce al terminar el evento",
+            "**Escalabilidad:** Crece junto con tu negocio sin necesidad de grander inversiones iniciales"
+        ],
+        R2: [
+            "La infraestructura sigue operando incluso si falla un componente",
+            "Redundancia en hardware, red y energía para evitar interrupciones",
+            "Ejemplo: Si un servidor cae, otro entra en acción de forma automática"
+        ],
+        R3: [
+            "Diseñada para ofrecer el máximo tiempo en línea sin intervención manual",
+            "Usa múltiples Zonas de Disponibilidad (AZ) dentro de una región",
+            "Ejemplo: Una app en producción puede estar replicada en 3 AZs de Norte de Virginia"
+        ]
+    }}
+    rows={[
+        [
+            "**Elasticidad y Escalabilidad**",
+            "@R1"
+        ],
+        [
+            "**Tolerencia a Errores**",
+            "@R2"
+        ],
+        [
+            "**Alta Disponibilidad**",
+            "@R3"
+        ],
+    ]}
+/>
+
+## 4. Servicios Básicos de AWS
+
+<SmartTable
+    tableLayout="auto"
+    headers={["Servicio", "Descripción"]}
+    lists={{
+        R1: [
+            "Relacional",
+            "NoSQL",
+            "Almacenamiento en caché"
+        ],
+        R2: [
+            "Cómputo en clústeres",
+            "Tiempo real",
+            "Almacén de datos",
+            "Flujos de trabajo de datos"
+        ],
+        R3: [
+            "Colas",
+            "Aprovisionamiento",
+            "Streaming de aplicaciones",
+            "Transcodificación",
+            "Correo electrónico",
+            "Buscar"
+        ],
+        R4: [
+            "Contenedores",
+            "Herramientas de DevOps",
+            "Plantillas de recursos",
+            "Seguimiento de uso",
+            "Supervisión y registros"
+        ],
+        R5: [
+            "Administración",
+            "Sincronización",
+            "Mobile Analytics",
+            "Notificaciones"
+        ]
+    }}
+    rows={[
+        [
+            "**Bases de Datos**",
+            "@R1"
+        ],
+        [
+            "**Análisis**",
+            "@R2"
+        ],
+        [
+            "**Servicios de aplicaciones**",
+            "@R3"
+        ],
+        [
+            "**Implementación y administración**",
+            "@R4"
+        ],
+        [
+            "**Servicios móviles**",
+            "@R5"
+        ],
+    ]}
+/>
+
+## 5. Servicios de Almacenamiento en AWS
+
+<SmartTable
+    tableLayout="auto"
+    headers={["Servicio", "Descripción"]}
+    rows={[
+        [
+            "**Amazon Simple Storage Service (Amazon S3)**",
+            "Almacenamiento de objetos, ideal para datos no estructurados"
+        ],
+        [
+            "**Amazon Elastic Block Store (Amazon EBS)**",
+            "Volúmenes en bloque para instancias EC2"
+        ],
+        [
+            "**Amazon Elastic File System (Amazon EFS)**",
+            "Sistema de archivos compartido y elástico"
+        ],
+        [
+            "**Amazon Simple Storage Service Glacier (Amazon S3 Glacier)**",
+            "Archivado a bajo costo, ideal para backups"
+        ]
+    ]}
+/>
+
+## 6. Servicios de Cómputo en AWS: Flexibilidad y Escalabilidad
+
+Los servicios de cómputo en AWS permiten ejecutar aplicaciones de manera flexible, desde instancias virtuales tradicionales hasta entornos serverless y contenedores.
+
+Con ellos, puedes escalar automáticamente, optimizar costos y elegir el modelo de despliegue que mejor se adapte a tus cargas de trabajo.
+
+- Amazon C2
+- Amazon EC2 Auto Scaling
+- Amazon Elastic Container Service (Amazon ECS)
+- Amazon EC2 Container Registry
+- AWS Elastic Beanstalk
+- AWS Lambda
+- Amazon Elastic Kubernetes Service (Amazon EKS)
+- AWS Fargate
+
+## 7. Servicios de Red y Distribución de contenido en AWS
+
+Optimiza la conectividad de tu infraestructura y acelera la entrega de contenido a nivel global.
+
+<SmartTable
+    tableLayout="auto"
+    headers={["Servicio", "Descripción"]}
+    rows={[
+        [
+            "**Amazon VPC**",
+            "Red privada en la nube"
+        ],
+        [
+            "**Elastic Load Balancing**",
+            "Distribuye tráfico entre instancias"
+        ],
+        [
+            "**Amazon CloudFront**",
+            "CDN global para baja latencia"
+        ],
+        [
+            "**AWS Transit Gateway**",
+            "Conecta múltiples VPCs y redes on-premise"
+        ],
+        [
+            "**Amazon Route 53**",
+            "DNS escalable y balanceo de tráfico"
+        ],
+        [
+            "**AWS Direct Connect**",
+            "Conexión privada a AWS"
+        ],
+        [
+            "**AWS VPN**",
+            "Acceso seguro a tu red en AWS"
+        ],
+    ]}
+/>
+
+## 8. Servicios de seguridad, identidad y cumplimiento de AWS
+
+<SmartTable
+    tableLayout="auto"
+    headers={["Servicio", "Descripción"]}
+    rows={[
+        [
+            "**AWS Identity and Access Management (AWS IAM)**",
+            "Controla permisos de usuarios y roles"
+        ],
+        [
+            "**AWS Organizations**",
+            "Administra múltiples cuentas aws"
+        ],
+        [
+            "**Amazon Cognito**",
+            "Autenticación de usuarios y apps"
+        ],
+        [
+            "**AWS Artifact**",
+            "Reportes y documentación de cumplimiento"
+        ],
+        [
+            "**AWS Key Management Service**",
+            "Gestión de llaves de cifrado"
+        ],
+        [
+            "**AWS Shield**",
+            "Protección contra ataques DDoS"
+        ],
+    ]}
+/>
+
+## 9. Servicios de administración de costos de AWS
+
+<SmartTable
+    tableLayout="auto"
+    headers={["Servicio", "Descripción"]}
+    rows={[
+        [
+            "**Informe de costo y uso de AWS**",
+            "Detalle granular de consumo y gastos"
+        ],
+        [
+            "**AWS Budgets**",
+            "Define límites de gasto y recibe alertas"
+        ],
+        [
+            "**Explorador de costos**",
+            "Visualiza y analiza tendencias de costos"
+        ],
+    ]}
+/>
+
+## 10. Servicios de administración y gobernanza de AWS
+
+<SmartTable
+    tableLayout="auto"
+    headers={["Servicio", "Descripción"]}
+    rows={[
+        [
+            "**Consola de administración de AWS**",
+            "Settings, configuraciones"
+        ],
+        [
+            "**AWS Config**",
+            "Settings, configuraciones"
+        ],
+        [
+            "**Amazon CloudWatch**",
+            "Ver logs, métricas"
+        ],
+        [
+            "**AWS Auto Scaling**",
+            "Configuraciones para ver si está escalando o no"
+        ],
+        [
+            "**AWS Command Line Interface (AWS CLI)**",
+            "Acceder a la nube a través de la terminal"
+        ],
+        [
+            "**AWS Trusted Advisor**",
+            "Guía para detectar niveles de costos y seguridad"
+        ],
+        [
+            "**Herramienta de AWS Well-Architected**",
+            "Guía de buenas prácticas, pilares importantes"
+        ],
+        [
+            "**AWS CloudTrail**",
+            "Auditoría"
+        ],
+     ]}
+/>
+
+## 11. Ejercicios para fin de semana
+Interacturar con la consola
+
+- AWS Skill Builder
+    - Introduction to Amazon Simple Storage Service (S3)
+    - AWS Cloud Quest: Cloud Practitioner
+
+## 12. Preguntas Examen
+
+<Quiz questions={[
+	{
+		question: "¿Qué componente de la infraestructura global de AWS utiliza Amazon Cloudfront para garantizar una entrega con baja latencia?",
+		options: [
+			"Regiones de AWS",
+			"Ubicaciones perimetrales de AWS",
+			"Zonas de disponibilidad de AWS",
+			"Amazon Virtual Private Cloud (Amazon VPC)"
+		],
+		correctIndex: 1
+	},
+    {
+		question: "¿Qué afirmación es válida para la infraestructura global de AWS?",
+		options: [
+			"Una zona de disponibilidad de una única región",
+			"Una zona de disponibilidad consta de dos o más regiones",
+			"Una región de una única zona de disponibilidad",
+			"Una región consta de dos o más zonas de disponibilidad"
+		],
+		correctIndex: 3
+	},
+    {
+		question: "¿Qué servicio de AWS utilizaría para conceder permisos a los usuarios?",
+		options: [
+			"Amazon S3",
+			"Amazon CloudWatch",
+			"Amazon SNS",
+			"AWS Identity and Access Management (IAM)"
+		],
+		correctIndex: 3
+	},
+]} />

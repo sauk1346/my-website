@@ -47,6 +47,12 @@ export const bootcampsData = {
         titleUrl: "bootcamp/cft004",
         certificateUrl: ""
       },
+      {
+        code: "CFT005",
+        title: "Fundamentos AWS",
+        titleUrl: "bootcamp/cft005",
+        certificateUrl: ""
+      },
     ]
   }
 };

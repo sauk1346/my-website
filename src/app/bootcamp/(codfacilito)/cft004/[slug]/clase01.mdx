@@ -1,0 +1,155 @@
+# Inaguración
+
+Azure AI Services se puede clasificar ampliamente en lo siguiente:
+
+<SmartTable
+    tableLayout="auto"
+    headers={["Categoría", "Descripción"]}
+    rows={[
+        [
+            "**Visión**",
+            "Analizar y comprender imágenes y videos"
+        ],
+        [
+            "**Voz**",
+            "Convertir audio en texto y texto en audio, y comprender las intenciones de voz"
+        ],
+        [
+            "**Idioma**",
+            "Comprender y analizar texto, traducir idiomas y crear interfaces conversacionales"
+        ],
+        [
+            "**Decisión**",
+            "Tomar decisiones informadas basadas en datos, detectar anomalías y moderar el contenido"
+        ],
+        [
+            "**Servicio Azure OpenAI**",
+            "Acceso a potentes modelos de lenguajes para la generación de contenido, la finalización de código y mucho más"
+        ],
+    ]}
+/>
+
+## 1. Visión
+Azure AI Vision proporciona un conjunto de API que permite a las aplicaciones comprender y analizar imágenes y videos. Estos servicioes pueden extraer información, identificar objetos, reconocer rostros y más.
+
+#### Servicios de vision
+<SmartTable
+    tableLayout="auto"
+    headers={["Servicio", "Descripción"]}
+    lists={{
+        R1:[
+            "Análisis de imágenes, etiquetado y descripciones automatizados",
+            "Detección de objetos comunes",
+            "Detección de caras",
+            "Recorte inteligente",
+            "Reconocimiento óptico de caracteres"
+        ],
+        R2: [
+            "Clasificación de imágenes personalizada",
+            "Detección de objetos personalizada"
+        ],
+        R3: [
+            "Detección y análisis de caras"
+        ],
+        R4: [
+            "Extracción de datos a partir de formularios, facturas y otros documentos"
+        ]
+    }}
+    rows={[
+        [
+            "**Computer Vision**",
+            "@R1"
+        ],
+        [
+            "**Custom Vision**",
+            "@R2"
+        ],
+        [
+            "**Face**",
+            "@R3"
+        ],
+        [
+            "**Document Intelligence (Form Recognizer)**",
+            "@R4"
+        ],
+    ]}
+/>
+
+## 2. Voz
+Azure AI Speech proporciona API para convertir audio en texto, texto en audio y comprender las intenciones de voz
+
+<SmartTable
+    tableLayout="auto"
+    headers={["Servicio", "Descripción"]}
+    rows={[
+        [
+            "**Voz a texto**",
+            "Transcribe audio a texto, compatible con el procesamiento en tiempo real y por lotes"
+        ],
+        [
+            "**Texto a Voz**",
+            "Convierte el texto en voz con sonido natural, admitiendo varias voces e idiomas",
+    
+        ],
+        [
+            "**Reconocimiento del habla**",
+            "Identifica a los altavoces a partir del audio, lo que permite experiencias pesonalizadas y aplicaciones de seguridad"
+        ],
+        [
+            "**Traducción de voz**",
+            "Traduce el audio hablado de un idioma a otro en tiempo real"
+        ],
+    ]}
+/>
+
+## 3. Procesamiento de lenguaje natural
+Azure AI Language proporciona un conjunto de API para comprender y analizar texto. Estos servicios pueden extraer frases clave, detectar sentimientos, traducir idiomas y crear interfaces conversacionales.
+
+<SmartTable
+    tableLayout="auto"
+    headers={["Servicio", "Descripción"]}
+    rows={[
+        [
+            "**Análisis de texto**",
+            "Analiza el texto para determinal la opinión, extraer frases clave, identificar entidades y detectar el idioma"
+        ],
+        [
+            "**Texto del traductor**",
+            "Traduce texto de un idioma a otro, compatible con una amplia gama de idiomas"
+        ]
+    ]}
+/>
+
+## 4. Extracción de información
+
+- Análisis de documentos generales
+- **Lectura:** OCR para texto impreso y escrito
+- **Diseño:** extracción de texto y estructura
+- **Documento general:** extracción de texto, estructura y pares clave-valor
+- Modelos predefinidos para tipos de forumularios comunes
+- Entrenamiento de modelos personalizados para sus propios formularios
+- **Plantilla personalizada:** extracción de datos de diseños estáticos
+- **Neural personalizado:** extracción de datos de documentos de tipo mixto
+- **Composición personalizada:** colección de múltiples modelos asignados a un único modelo
+
+## 5. Minería de conocimientos
+Búsqueda semántica, recuperación de documentos, QnA
+
+<SmartTable
+    tableLayout="auto"
+    headers={["Escenario", "Servicio"]}
+    rows={[
+        [
+            "Preguntas sobre una base documental",
+            "**Azure Cognitive Search + Embeddings**"
+        ],
+        [
+            "Minería en datasets tabulares/textuales",
+            "**Power BI + Synapse + AI Insights**"
+        ],
+        [
+            "Generación aumentada por recuperación",
+            "**RAG Pipeline con Azure OpenAI + Search**"
+        ],
+    ]}
+/>

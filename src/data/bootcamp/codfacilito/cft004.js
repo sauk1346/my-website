@@ -9,7 +9,7 @@ export const cft004Data = {
         {
           classNumber: "01",
           name: "Inaguración",
-          link: ""
+          link: "cft004/clase01"
         },
         {
           classNumber: "02",
@@ -82,53 +82,5 @@ export const cft004Data = {
         }
       ]
     },
-    {
-      number: "06",
-      name: "Novedades del lenguaje Python",
-      classes: [
-        {
-          classNumber: "17",
-          name: "Anotaciones y type hints",
-          link: null
-        },
-        {
-          classNumber: "18",
-          name: "Manejo de Excepciones",
-          link: null
-        }
-      ]
-    },
-    {
-      number: "07",
-      name: "Uso del ecosistema Python",
-      classes: [
-        {
-          classNumber: "19",
-          name: "Paquetes que deberías conocer",
-          link: null
-        },
-        {
-          classNumber: "20",
-          name: "Manejo de tiempo",
-          link: null
-        }
-      ]
-    },
-    {
-      number: "08",
-      name: "Conocimientos intermedio/avanzados",
-      classes: [
-        {
-          classNumber: "21",
-          name: "Threads y procesos",
-          link: null
-        },
-        {
-          classNumber: "22",
-          name: "Proyecto con Decoradores",
-          link: null
-        }
-      ]
-    }
   ]
 };

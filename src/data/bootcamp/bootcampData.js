@@ -39,7 +39,13 @@ export const bootcampsData = {
         code: "CFT003",
         title: "Python",
         titleUrl: "bootcamp/cft003",
-        certificateUrl: null
+        certificateUrl: "https://codigofacilito.com/certificates/eabfad8e-ae4e-4207-9181-06f5981d4543"
+      },
+      {
+        code: "CFT004",
+        title: "Azure AI Engineer Associate",
+        titleUrl: "bootcamp/cft004",
+        certificateUrl: ""
       },
     ]
   }

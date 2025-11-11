@@ -1,106 +1,192 @@
 export const cft005Data = {
-  title: "Fundamentos AWS",
+  title: "Java",
   sectionTitle: "Módulos",
   modules: [
     {
       number: "01",
-      name: "Fundamentos del Cloud y Facturación",
+      name: "Introducción a Java",
       classes: [
         {
           classNumber: "01",
-          name: "Inauguración e Introducción a la Nube",
+          name: "Inauguración",
           link: ""
         },
         {
           classNumber: "02",
-          name: "Facturación y Economía de la Nube",
+          name: "Bloque 01: Introducción",
+          link: ""
+        },
+        {
+          classNumber: "03",
+          name: "Bloque 02: Fundamentos del lenguaje",
+          link: ""
+        },
+        {
+          classNumber: "04",
+          name: "Bloque 03: Control de flujo",
+          link: ""
+        },
+        {
+          classNumber: "05",
+          name: "Bloque 04: Métodos y estructuras básicas",
+          link: ""
+        },
+        {
+          classNumber: "06",
+          name: "Asesoría 01",
           link: ""
         },
       ]
     },
     {
       number: "02",
-      name: "Infraestructura y Seguridad en AWS",
+      name: "POO y Arreglos",
       classes: [
         {
-          classNumber: "03",
-          name: "Infraestructura Global de AWS",
-          link: "cft005/clase03"
+          classNumber: "07",
+          name: "Bloque 05: Programación orientada a objetos",
+          link: ""
         },
         {
-          classNumber: "04",
-          name: "Seguridad en la Nube",
+          classNumber: "08",
+          name: "Bloque 06: Colecciones y arreglos",
+          link: ""
+        },
+        {
+          classNumber: "09",
+          name: "Asesoría 02",
           link: ""
         },
       ]
     },
     {
       number: "03",
-      name: "Redes, Cómputo y Automatización",
+      name: "Avanzando en Java y gestión de memoria",
       classes: [
         {
-          classNumber: "05",
-          name: "Redes y entrega de contenido",
+          classNumber: "10",
+          name: "Principios avanzados de Java",
           link: ""
         },
         {
-          classNumber: "06",
-          name: "Servicios de Cómputo",
+          classNumber: "11",
+          name: "Memory Management y Gargabe Collection",
+          link: ""
+        },
+        {
+          classNumber: "12",
+          name: "Memory Management y Garbage Collection, Parte 2",
+          link: ""
+        },
+        {
+          classNumber: "13",
+          name: "Asesoría 03",
           link: ""
         },
       ]
     },
     {
       number: "04",
-      name: "Almacenamiento, Bases de Datos y Arquitectura",
+      name: "Herramientas de Construcción y Gestión de Dependencias",
       classes: [
         {
-          classNumber: "07",
-          name: "Almacenamiento",
+          classNumber: "14",
+          name: "Maven",
           link: null
         },
         {
-          classNumber: "08",
-          name: "Bases de Datos",
+          classNumber: "15",
+          name: "Gradle",
           link: null
         },
         {
-          classNumber: "09",
-          name: "Arquitectura en la Nube",
+          classNumber: "16",
+          name: "Asesoría 04",
           link: null
         }
       ]
     },
     {
       number: "05",
-      name: "Monitoreo, Escalado y Preparación para el Examen",
+      name: "Gestión de Archivos en Java",
       classes: [
         {
-          classNumber: "10",
-          name: "Monitoreo y Escalado Automático",
+          classNumber: "17",
+          name: "Lectura y Escritura de Archivos",
           link: null
         },
         {
-          classNumber: "11",
-          name: "Simulacro + Tips para el Examen",
+          classNumber: "18",
+          name: "Manipulación de Directorios",
           link: null
-        }
+        },
+        {
+          classNumber: "19",
+          name: "Serialización de Deserialización de Objetos",
+          link: null
+        },
+        {
+          classNumber: "20",
+          name: "Acceso a Recursos en el Classpath",
+          link: null
+        },
+        {
+          classNumber: "21",
+          name: "Asesoría 05",
+          link: null
+        },
       ]
     },
     {
       number: "06",
-      name: "Clases Extras",
+      name: "Gestión avanzada Archivos en Java",
       classes: [
         {
-          classNumber: "12",
-          name: "Caso Práctico",
+          classNumber: "22",
+          name: "NIO (New I/O) en Java",
           link: null
         },
         {
-          classNumber: "13",
-          name: "Repaso",
+          classNumber: "23",
+          name: "Trabajo con Archivos de Propiedades",
           link: null
-        }
+        },
+        {
+          classNumber: "24",
+          name: "Uso de Java.nio.file",
+          link: null
+        },
+        {
+          classNumber: "25",
+          name: "Asesoría 06",
+          link: null
+        },
+      ]
+    },
+    {
+      number: "07",
+      name: "Caso Práctico y pruebas",
+      classes: [
+        {
+          classNumber: "26",
+          name: "Caso Práctico 1",
+          link: null
+        },
+        {
+          classNumber: "27",
+          name: "Caso Práctico 2",
+          link: null
+        },
+        {
+          classNumber: "28",
+          name: "Testing en Java",
+          link: null
+        },
+        {
+          classNumber: "29",
+          name: "Asesoría 7",
+          link: null
+        },
       ]
     },
   ]

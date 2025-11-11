@@ -81,25 +81,47 @@ const courseData = {
                 },
             ]
         },
-                { 
+        { 
             week: '02', 
             class: '03', 
             date: 'Mar 28, Oct 2025', 
             description: [
                 {
-                    text: '',
-                    href: ''
+                    text: 'No asistí',
+                    strikethrough: true
                 },
             ]
         },
-                { 
+        { 
             week: '02', 
             class: '04', 
             date: 'Mié 29, Oct 2025', 
             description: [
                 {
+                    text: 'No asistí',
+                    strikethrough: true
+                },
+            ]
+        },
+        { 
+            week: '03', 
+            class: '05', 
+            date: 'Mar 04, Nov 2025', 
+            description: [
+                {
+                    text: 'Función setContent()',
+                    href: 'ti3v42/clase05'
+                },
+            ]
+        },
+        { 
+            week: '03', 
+            class: '06', 
+            date: 'Mié 05, Nov 2025', 
+            description: [
+                {
                     text: '',
-                    href:''
+                    href: ''
                 },
             ]
         },
@@ -129,7 +151,7 @@ const courseData = {
             date: 'Sáb 01, Nov 2025', 
             description: {
                 text: 'Conectando el futuro: Estándares y programación IoT',
-                href: '',
+                href: 'ti3v42/lectura03',
             }
         },
         { 
@@ -138,6 +160,24 @@ const courseData = {
             date: 'Sáb 01, Nov 2025', 
             description: {
                 text: 'Síntesis de la unidad',
+                href: '/inacap/ti3v42/docs/lectura04.pdf',
+            }
+        },
+        { 
+            week: '03', 
+            lecture: '05', 
+            date: 'Sáb 08, Nov 2025', 
+            description: {
+                text: 'Aplicaciones Móviles Android',
+                href: '',
+            }
+        },
+        { 
+            week: '03', 
+            lecture: '06', 
+            date: 'Sáb 08, Nov 2025', 
+            description: {
+                text: 'Introducción al Desarrollo Móvil en Android',
                 href: '',
             }
         },

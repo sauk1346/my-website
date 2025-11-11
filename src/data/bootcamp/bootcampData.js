@@ -43,13 +43,13 @@ export const bootcampsData = {
       },
       {
         code: "CFT004",
-        title: "Azure AI Engineer Associate",
+        title: "Fundamentos AWS",
         titleUrl: "bootcamp/cft004",
         certificateUrl: ""
       },
       {
         code: "CFT005",
-        title: "Fundamentos AWS",
+        title: "Java",
         titleUrl: "bootcamp/cft005",
         certificateUrl: ""
       },

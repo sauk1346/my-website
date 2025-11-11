@@ -1,0 +1,345 @@
+# Facturación y Economía de la Nube
+
+## Material Adicional
+- [Laboratorio AWS Skill Builder](https://skillbuilder.aws/)
+- [Repositorio de práctica](https://github.com/roxsross/aws-cloud-practitioner-complete-guide)
+
+## 1. ¿Cómo funciona el modelo de precios en la nube?
+En AWS pagas principalmente por usar cómputo, almacenar datos y mover información.
+
+<SmartTable
+    tableLayout="auto"
+    headers={["Costo", "Descripción"]}
+    lists={{
+        R1: [
+            "Pagas por el tiempo que tus instancias o funciones están activas",
+            "Se cobra por hora o por segundo (en Linux)",
+            "El precio dependel tipo y tamaño de la instancia"
+        ],
+        R2: [
+            "Pagas según la cantidad de datos guardados",
+            "Se mide en GB por mes",
+            "**Ejemplo:** S3, EBS"
+        ],
+        R3: [
+            "**Salida de datos (hacia Internet):** tiene costo por GB",
+            "**Entrada de datos (hacia AWS):** normalmente gratuita (con algunas excepciones)",
+            "**Ejemplo:** tráfico de un sitio web servido desde AWS"
+        ]
+    }}
+        rows={[
+        [
+            "**Cómputo**",
+            "@R1"
+        ],
+        [
+            "**Almacenamiento**",
+            "@R2"
+        ],
+        [
+            "**Transferencia de datos**",
+            "@R3"
+        ],
+    ]}
+/>
+
+## 2. ¿Cómo se paga en AWS?
+Con AWS siempre pagas menos:
+
+- Por uso real
+- Por reservar a largo plazo
+- Por aprovechar descuentos por volumen
+
+<SmartTable
+    tableLayout="auto"
+    header={["Pago","Descripción"]}
+    lists={{
+        R1: [
+            "No hay inversión inicial",
+            "Solo pagas por los recursos que realmente consumes",
+            "**Ejemplo:** si una instancia EC2 está encendida 3 horas, solo pagas esas 3 horas"
+        ],
+        R2: [
+            "Si sabes que vas a usar un servicio por mucho tiempo, puedes reservarlo por 1 o 3 años y ahorrar hasta un 70%",
+            "**Ejemplo:** una base de datos en RDS que siempre está en uso -> conviene reservar"
+        ],
+        R3: [
+            "AWS aplica descuento por volumen",
+            "Mientras más datos almacenes o transfieras, menor es el costo por unidad",
+            "**Ejemplo:** almacenar 10TB en S3 cuesta más barato por GB que almacenar 100GB"
+        ]
+    }}
+    rows={[
+        [
+            "**Paga por lo que se usa**",
+            "@R1"
+        ],
+        [
+            "**Paga menos al reservar**",
+            "@R2"
+        ],
+        [
+            "**Paga menos cuando utilizas más**",
+            "@R3"
+        ],
+    ]}
+/>
+
+### Paga menos al reservar
+
+Instancias reservadas (RI):
+
+- Son instancias de EC2 que reservas por 1 o 3 años
+- Te permiten ahorrar hasta un 75\% frente al precio bajo demanda
+- Útiles cuando sabes que un servidor estará siempre encendido (ejemplo: una base de datos de producción)
+
+<SmartTable
+    tableLayout="auto"
+    headers={["Modelo", "Descripción"]}
+    rows={[
+        [
+            "**AURI (All Upfront**",
+            "Pagas TODO por adelantado. Mayor descuento",
+        ],
+        [
+            "**PURI (Partial Upfront**",
+            "Pagas una partes al inicio y el resto en cuotas. Descuento intermedio"
+        ],
+        [
+            "**NURI (No Upfront)**",
+            "No pagas nada al inicio, pagas mes a mes. Descuento más bajo"
+        ],
+    ]}
+/>
+
+**Ejemplo**
+
+Si tu empresa sabe que usará un servidor todo el año, conviene reservarlo
+
+- **Bajo demanda:** \$100/mes -> \$1200 al año
+- **Con RI:** Podrías pagar solo \$600 al año
+
+### Pagas menos usando más 
+
+**¿Cómo funciona?**
+
+- AWS ofrece descuentos automáticos cuando aumenta tu consumo
+- Mientras más datos almacenes o transfieras, menor será el precio por GB
+- Esto se conoce como precios por niveles (tiered pricing)
+
+**Ejemplo:** con Amazon S3
+
+<SmartTable
+    tableLayout="auto"
+    headers={["Ejemplo", "Costo"]}
+    rows={[
+        [
+            "**Primeros 50TB**",
+            "\$0.023 por GB"
+        ],
+        [
+            "**Siguientes 450TB**",
+            "\$0.022 por GB"
+        ],
+        [
+            "**Más de 500TB**",
+            "\$0.021 por GB"
+        ]
+    ]}
+/>
+
+## 3. Precios personalizados en AWS
+
+- Diseñador para empresas con gran volumen de uso o con requisitos muy específicos
+- Permiten negocias tarifas más bajas que las estándar, según el compromiso de uso
+- Se aplican generalmente en almacenamiento masivo, redes de distribución de contenido o implementaciones globales de gran escala
+- AWS asigna un equipo de *account managers* y arquitectos de soluciones para definir el plan de precios
+
+### Empresa de Streaming
+
+- Una empresa de streaming que planea almacenar miles de TB en S3 y distribuir videos globalmente con CloudFront (ej: Youtube)
+- Puede negociar un precio por GB más bajo que el listado en la página oficial
+
+### 4. On-Premises vs Nube de AWS
+
+<SmartTable
+    tableLayout="auto"
+    headers={["Modelo", "Descripción"]}
+    lists={{
+        R1: [
+            "Equipo",
+            "Recursos y administración",
+            "Contratos",
+            "Opmitización liminatada"
+        ],
+        R2: [
+            "Sin gastos iniciales, pagas solo lo que utilizas",
+            "Agilidad y velocidad, lanzar en minutos, no en semanas",
+            "Escalado bajo demanda",
+            "Autoservicio"
+        ]
+    }}
+    rows={[
+        [
+            "**On-Premise**",
+            "@R1"
+        ],
+        [
+            "**Nube AWS**",
+            "@R2"
+        ]
+    ]}
+/>
+
+## 5. ¿Qué es el costo total de proiedad (TCO)?
+
+Es una estimación financiera que nos ayuda a identificar todos los costos directos e indirectos de un sistema de TI
+
+- Permite comparar cuánto cuesta ejecutar una infraestructura completa o una carga de trabajo específica en un centro de datos tradicional vs en AWS
+- Ayuda a presupuestar y crear un caso empresarial sólido para justificar la migración a la nube
+
+### Consideraciones sobre el TCO
+
+<SmartTable
+    tableLayout="auto"
+    headers={["Costo", "Descripción"]}
+    lists={{
+        R1: [
+            "**Hardware:** Servidores, racks, PDU, switches",
+            "**Software:** SO, licencias de virtualización)",
+            "**Costos físicos:** Espacio, electricidad, refrigeración"
+        ],
+        R2: [
+            "**Hardware:** Discos, SAN, switches de fibra",
+            "Administración del almacenamiento",
+            "**Costos físicos:** espacio, electricidad, refrigeración"
+
+        ],
+        R3: [
+            "**Hardware:** LAN, balanceadores de carga",
+            "Administración de red",
+            "**Costos físicos:** Espacio, electricidad, refrigeración"
+        ],
+        R4: [
+            "Administración y mantenimiento de servidores y sistemas"
+        ],
+    }}
+    rows={[
+        [
+            "**Costos de servidores**",
+            "@R1"
+        ],
+        [
+            "**Costos de almacenamiento**",
+            "@R2"
+        ],
+        [
+            "**Costos de red**",
+            "@R3"
+        ],
+        [
+            "**Costos de mano de obra de TI**",
+            "@R4"
+        ],
+    ]}
+/>
+
+## 6. AWS Organizations
+
+Es un servicio que permite agrupar y administrar varias cuentas de AWS de manera centralizada.
+
+### Beneficios
+- Consolidar la facturación (una sola factura para todas las cuentas)
+- Aplicar políticas de seguridad y acceso de forma global
+- Organizar cuentas en Unidades Organizacionales (OU)
+- Escalar tu empresa de forma ordenada: separar entornos (dev, test, procesos)
+
+<SmartTable
+    tableLayout="auto"
+    headers={["Nivel", "Descripción"]}
+    rows={[
+        [
+            "**Organization Root (Raíz)**",
+            "Nivel superior, controla toda la organización"
+        ],
+        [
+            "**OU (Organizational Unit)**",
+            "Grupos lógicos de cuentas (por ejemplo: Finanzas, Desarrollo, Producción)"
+        ],
+        [
+            "**Accounts (Cuentas)**",
+            "Cada cuenta de AWS dentro de una OU"
+        ],
+        [
+            "**Policies (SCP - Service Control Policies)**",
+            "Reglas aplicadas a nivel OU o cuenta para restringir/permitir servicios"
+        ],
+    ]}
+/>
+
+### Seguridad en AWS Organizations
+
+<SmartTable
+    tableLayout="auto"
+    headers={["Característica", "Descripción"]}
+    lists={{
+        R1: [
+            "Define quién (usuario, grupo o rol) puede acceder",
+            "Se aplica dentro de una cuenta específica",
+            "**Ejemplo:** Un rol de desarrollador puede lanzar instancias EC2 solo en su cuenta"
+        ],
+        R2: [
+            "Define qué servicios de AWS pueden usarse",
+            "Se aplica a todas las cuentas o OU (Organizational Unit) dentro de la organización",
+            "**Ejemplo:** Bloquear la creación de buckets S3 en todas las cuentas de una OU de testing"
+        ]
+    }}
+    rows={[
+        [
+            "**Control con IAM (Identity and Access Management)**",
+            "@R1"
+        ],
+        [
+            "**Control con SCP (Service Control Policies)**",
+            "@R2"
+        ],
+    ]}
+/>
+
+### Configuración de Organizaciones
+
+1. Crear una organización
+2. Crear unidades organizativas
+3. Crear políticas de control de servicios
+4. Restricciones de prueba
+
+### Acceso a AWS Organizations
+
+<SmartTable
+    tableLayout="auto"
+    headers={["Acceso", "Descripción"]}
+    rows={[
+        [
+            "**Consola de administración de AWS**",
+            "Interfaz gráfica para gestionar cuentas y políticas de manera centralizada"
+        ],
+        [
+            "**AWS CLI (Command Line Interface)**",
+            "Ejecuta comandos para automatizar la administración de recursos"
+        ],
+        [
+            "**Kits de desarrollo de software (SDKs)**",
+            "Integra AWS Organizations en aplicaciones personalizadas"
+        ],
+        [
+            "**APIs (REST/HTTPS)**",
+            "Accede de forma programática para consultas y automatización avanzada"
+        ],
+    ]}
+/>
+
+## 7. Herramientas de Facturación
+
+- AWS Budgets
+- Informe de costo y uso de AWS
+- Explorador de costos de AWS

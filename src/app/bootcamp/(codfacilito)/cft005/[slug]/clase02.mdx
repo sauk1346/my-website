@@ -1,0 +1,81 @@
+# Bloque 01: Introducción
+
+## 1. ¿Qué es Java y por qué aprenderlo?
+
+Es un lenguaje de programación compilado, fuertemente tipado y orientado a objetos, diseñado para ser portable, concurrentes y serguro.
+
+Además, se basa en el principio de *"write onece, run anywhere"*, esto significa que puedes escribir un programa en Java y ejecutarlo en cualquier sistema operativo, gracias a la Máquina Virtual de Java (JVM)
+
+## 2. ¿Qué puedes desarrollar en Java?
+
+- Desarrollo empresarial
+- Desarrollo Mobile Android
+- Big Data y Ciencia de Datos
+- Sistemas Embebidos e IoT
+- Cloud Computing y DevOps
+- Ciberseguridad
+- Arte generativo
+- Herramientas de desarrollo
+- Aplicaciones Desktop
+
+## 3. Principales Características de Java
+
+- Sintaxis clara y estructurada
+- Programación orientada a objetos (POO)
+- Gran ecosistema de librerías y herramientas
+- Seguridad, robustez y rendimiento
+- Soporte para programación funcional (desde Java 8)
+- Actualizaciones frecuentes y *backward compatibility*
+
+## 4. Cómo se ejecuta un programa en Java
+
+Para que un programa en Java funcione, necesitamos entender 3 conceptos clave:
+
+<SmartTable
+    tableLayout="auto"
+    headers={["Concepto", "Descripción"]}
+    rows={[
+        [
+            "**Código fuente (.java)**",
+            "Es lo que escribimos como desarrolladores"
+        ],
+        [
+            "**Compilador (javac)**",
+            "Transforma ese archivo en bytecode, un formato intermedio que entiende la JVM"
+        ],
+        [
+            "**JVM (Java Virtual Machine)**",
+            "Interpreta ese bytecode y lo ejecuta en cualquier sistema operativo (Windows, Linux, MacOS)"
+        ],
+    ]}
+/>
+
+### Java Development Kit
+
+Para poder hacer todo este proceso que permite que Java sea tan flexible y multiplataforma, necesitamos instalar el JDK (Java Development Kit) que incluye:
+
+- El compilador javac
+- La JVM
+- Herramientas para desarrollar y ejecutar nuestros programas
+- JRE: Java Runtime Environment
+
+## 5. Hola mundo
+
+1. Crear el archivo `HolaMundo.java`
+    ```java
+    //HolaMundo.java
+    public class HolaMundo {
+        public static void main(String[] args) {
+            System.out.println("Hola Mundo desde Java!");
+        }
+    }
+    ```
+
+2. Ejecutar las siguientes instrucciones en la terminal
+    ```sh
+    javac HolaMundo.java
+    java HolaMundo
+    ```
+    <TerminalOutput>
+    {`Hola Mundo desde Java!`}
+    </TerminalOutput>

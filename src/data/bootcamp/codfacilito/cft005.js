@@ -9,22 +9,22 @@ export const cft005Data = {
         {
           classNumber: "01",
           name: "Inauguración",
-          link: ""
+          link: "cft005/clase01"
         },
         {
           classNumber: "02",
           name: "Bloque 01: Introducción",
-          link: ""
+          link: "cft005/clase02"
         },
         {
           classNumber: "03",
           name: "Bloque 02: Fundamentos del lenguaje",
-          link: ""
+          link: "cft005/clase03"
         },
         {
           classNumber: "04",
           name: "Bloque 03: Control de flujo",
-          link: ""
+          link: "cft005/clase04"
         },
         {
           classNumber: "05",

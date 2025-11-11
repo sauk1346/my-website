@@ -1,0 +1,457 @@
+# Bloque 02: Fundamentos del Lenguaje
+
+## 1. Tipos de datos primitivos
+Los datos primitivos en Java son datos básicos que representan valores simples y se utilizan para representar valores lógicos, números enteros, caracteres y números decimales. Sus principales características son:
+
+<SmartTable
+    tableLayout="fixed"
+    headers={["Característica", "Descripción"]}
+    rows={[
+        [
+            "**Tamaño Fijo**",
+            "Cada tipo de dato primitivo tiene un tamaño fijo en bytes, lo que define el rango de valores que puede almacenar"
+        ],
+        [
+            "**No son objetos**",
+            "Los datos primitivos no son objetos, lo que significa que no tienen métodos asociados"
+        ],
+        [
+            "**Inmutabilidad**",
+            "Los valores de los tipos primitivos son inmutables, es decir, no se pueden modificar una vez que se han creado"
+        ],
+        [
+            "**Almacenamiento directo**",
+            "Los valores de los datos primitos se almacenan diractmente en la memoria"
+        ],
+    ]}
+/>
+
+<SmartTable
+    tableLayout="fixed"
+    headers={["Tipo", "Descripción", "Ejemplo"]}
+    rows={[
+        [
+            "**byte**",
+            "Entero muy pequeño",
+            "`byte edad = 25;`"
+        ],
+        [
+            "**short**",
+            "Entero corto",
+            "`short x = 1234;`"
+        ],
+        [
+            "**int**",
+            "Entero estándar",
+            "`int a = 42;`"
+        ],
+        [
+            "**long**",
+            "Entero largo",
+            "`long n = 100L;`"
+        ],
+        [
+            "**float**",
+            "Decimal de precisión simple",
+            "`float f = 3,14f;`"
+        ],
+        [
+            "**double**",
+            "Decimal de doble precisión",
+            "`double pi = 3,1416;`"
+        ],
+        [
+            "**char**",
+            "Un solo caracter",
+            "`char letra = \"A\";`"
+        ],
+        [
+            "**boolean**",
+            "Valor verdadero/falso",
+            "`boolean activo = true;`"
+        ],
+    ]}
+/>
+
+## 2. Tipos de datos no primitivos
+
+También conocidos como objetos o tipos de referencia. Sus principales características son:
+
+<SmartTable
+    tableLayout="fixed"
+    headers={["Característica", "Descripción"]}
+    rows={[
+        [
+            "**No almacenan valores directamente**",
+            "En lugar de contener el valor en sí, contienen una referencia a la ubicación donde se guarda el objeto en memoria"
+        ],
+        [
+            "**Representan objetos**",
+            "Son instancias de clases, incluyendo clases predefinidas como `String` y clases personalizadas"
+        ],
+        [
+            "**Pueden tener métodos**",
+            "Los objetos no primitivos tienen métodos asociados que permiten realizar operaciones sobre ellos"
+        ],
+        [
+            "**Comienzan con mayúscula**",
+            "A diferencia de los tipos primitivos, los nombres de los tipos de referencia empiezan con mayúscula y su valor por defecto es null"
+        ],
+        [
+            "**Clases personalizadas**",
+            "El programador puede definir sus propios tipos de datos mediante clases"
+        ],
+    ]}
+/>
+
+
+### Ejemplos de datos No primitivos
+
+<SmartTable
+    tableLayout="auto"
+    headers={["Dato No Primitivo", "Ejemplo"]}
+    rows={[
+        [
+            "**String**",
+            "`String nombre = \"Java\";`"
+        ],
+        [
+            "**Array**",
+            "`int[] numeros = {10, 20, 30};`",
+        ],
+        
+    ]}
+/>
+
+## 3. Operadores en Java
+- Son símbolos que indican a la computadora qué operación realizar en los datos de una expresión.
+- Se utilizan para realizar cálculos, evaluar condiciones, asignar valores a variables, y mucho más.
+- Son esenciales para manipular datos y variables dentro de nuestro programa
+
+### Operadores Aritméticos
+Permiten realizar cálculos matemáticos.
+
+<SmartTable
+    tableLayout="fixed"
+    headers={["Operador Aritmético", "Ejemplo"]}
+    rows={[
+        [
+            "**Suma**",
+            "`int suma = 5 + 3;`"
+        ],
+        [
+            "**Resta**",
+            "`int resta = 10 - 2;`"
+        ],
+        [
+            "**Multiplicación**",
+            "`int multiplicacion = 4 * 3;`"
+        ],
+        [
+            "**División**",
+            "`int division = 10.0 / 3;`"
+        ],
+        [
+            "**Resto**",
+            "`int resto = 10 % 3;`"
+        ],
+    ]}
+/>
+
+### Operadores de Comparación
+Permiten comparar dos valores y devolver un resultado booleano (true o false).
+
+<SmartTable
+    tableLayout="fixed"
+    headers={["Operador Comparación", "Ejemplo"]}
+    rows={[
+        [
+            "**Igualdad**",
+            "`boolean esIgual = (5 == 5);`"
+        ],
+        [
+            "**Desigualdad**",
+            "`boolean esDiferente = (7 != 3);`"
+        ],
+        [
+            "**Mayor que**",
+            "`boolean esMayor = (10 > 20);`"
+        ],
+        [
+            "**Menor que**",
+            "`boolean esMenor = (200 < 1000);`"
+        ],
+        [
+            "**Mayor o igual que**",
+            "`boolean mayorIgualQue = (10 >= 100);`"
+        ],
+        [
+            "**Menor o igual que**",
+            "`boolean menorIgualQue = (1 <= 14);`"
+        ],
+    ]}
+/>
+
+### Operadores Lógicos
+Permiten combinar o modificar valores booleanos.
+<SmartTable
+    tableLayout="fixed"
+    headers={["Operador Lógico", "Ejemplo"]}
+    rows={[
+        [
+            "**Conjunción (AND)**",
+            "`boolean andLogico = (true && false);`"
+        ],
+        [
+            "**Disyunción (OR)**",
+            "`boolean orLogico = (true || false);`"
+        ],
+        [
+            "**Negación (NOT)**",
+            "`boolean notLogico = !true;`"
+        ],
+    ]}
+/>
+
+### Operadores de Asignación
+Permiten asignar valores a variables y sus variantes que modifican la variable al mismo tiempo
+
+<SmartTable
+    tableLayout="auto"
+    headers={["Operador Asignación", "Símbolo"]}
+    rows={[
+        [
+            "**Asignación básica**",
+            "`=`"
+        ],
+        [
+            "**Asignación y suma**",
+            "`+=`"
+        ],
+        [
+            "**Asignación y resta**",
+            "`-=`"
+        ],
+        [
+            "**Asignación y multiplicación**",
+            "`*=`"
+        ],
+        [
+            "**Asignación y división**",
+            "`/=`"
+        ],
+    ]}
+/>
+
+**Ejemplo**
+
+```java
+// Asignación básica
+int x = 10;
+
+// Asignación y suma
+x += 5; // x = 15
+
+// Asignación a String
+String nombre = "Ana";
+```
+
+### Operadores de incremento/decremento
+Permiten aumentar o disminuir el valor de una variable en 1
+
+```java
+// Incremental
+int contador = 0;
+contador++; // Incrementa a 1 (post-incremento)
+
+// Decremental
+int y = --contador; // Decrementa a 0 (pre-decremento)
+```
+
+### Operadores ternarios
+Permiten realizar operaciones condicionales en una sola línea.
+
+```java
+int edad = 18;
+String mensaje = (edad >= 18) ? "Mayor" : "Menor"; 
+```
+
+## 4. Casting: Conversión de tipos
+
+Es el proceso de convertir un valor de un tipo de datos a otro tipo de datos. Esta conversión si es entre primitivos puede ser explícita (realizada por el programador) o implícita (realizada por el compilador),
+
+Pero también hay otros casos de conversión de datos no primitivos.
+
+### Entre tipos numéricos primitivos
+
+#### Implícito (widening)
+Ocurre automáticamente cuando pasas de un tipo más pequeño a uno más grande, no hay pérdida de información, no sería estrictamente casting
+```java
+int x = 10;
+double y = x;
+```
+
+#### Explícito (narrowing)
+Ocurre cuando quieres pasar de un tipo más grande a uno más pequeño y puede hacer pérdida de datos. Es por esto que debes indicarlo
+```java
+double z = 10.5;
+int n = (int) z; // n = 10
+```
+
+### Entre clases (objetos)
+
+#### Upcasting (automático)
+Es cuando un objeto de una subclase pasa a una superclase, no sería estrictamente casting. Java lo hace automáticamente. Por Ejemplo
+
+- Yo soy programador, pero también soy persona
+- El upcasting es convertir un objeto específico (programador) a un tipo más general (persona)
+
+#### Downcasting (explícito)
+Es cuando un objeto de una superclase pasa a una subclase, tienes que indicarlo y puede presentar errores. Por ejemplo:
+
+- Si hacemos el caso anterior al revés (persona -> programador)
+- Puede presentar error, ya que no todas las personas son programadores. Podría ser un doctor, chef, etc.
+
+En el downcasting es necesario asegurarse de que la *persona* realmente sea un *programador*, o Java lanzará un errore en tiempo de ejecución.
+
+
+### Entre String y tipos numéricos
+
+#### De String a int, double, etc
+Es necesario utilizar clases envoltorio
+
+```java
+String edadTexto = "25";
+int edad = Integer.parseInt(edadTexto);
+```
+
+#### De número a String
+Utilizando el método `valueOf()`
+
+```java
+int numero = 123;
+String texto = String.valueOf(numero);
+System.out.println("texto"); // "123"
+```
+
+## 5. Entrada de datos con Scanner
+Para interactuar con el usuario por consola, usamos la clase `Scanner`.
+
+`Scanner` es una clase del paquete `java.util` que permite leer datos ingresados por el usuario desde la consola o también desde archivos.
+
+### Ejemplo de uso
+
+1. Importar la clase
+2. Crear una instancia con la palabra `new System.in` indica que queremos leer desde la entrada estándar (teclado)
+3. Leer diferentes tipos de datos según el método usado, en este caso lee la línea completa
+4. Es una buena práctica cerrar el Scanner al final del programa
+
+```java
+import java.util.Scanner;
+
+Scanner sc = new Scanner(System.in);
+System.out.println("Ingresa tu nombre: ");
+String nombre = sc.nextLine();
+sc.close();
+```
+
+### Lectura de diferentes tipos de datos
+
+<SmartTable
+    tableLayout="auto"
+    headers={["Método", "Qué lee", "Ejemplo"]}
+    rows={[
+        [
+            "`nextLine()`",
+            "Línea completa",
+            "`String nombre = sc.nextLine();`"
+        ],
+        [
+            "`next()`",
+            "Una sola palabra",
+            "`String palabra = sc.next();`"
+        ],
+        [
+            "`nextInt()`",
+            "Entero (int)",
+            "`int edad = sc.nextInt();`"
+        ],
+        [
+            "`nextDouble()`",
+            "Decimal (double)",
+            "`double precio = sc.nextDouble();`"
+        ],
+    ]}
+/>
+
+
+## 6. Mini-proyecto
+
+#### Objetivo
+- Aplicar todo lo aprendido en el bloque 2
+- Usar variables y tipos de datos
+- Aplicar operadores aritméticos y lógicos
+- Leer datos con Scanner
+- Realizar validaciones simples
+
+#### A realizar
+- Mostrar un menú con tres operaciones:
+    - Agregar tarea
+    - Ver tareas (placeholder)
+    - Salir
+- Leer la opción del usuario con Scanner
+- Verificar que la opción ingresada sea válida (uso de operadores lógicos)
+- Solicitar el nombre de la tarea y su prioridad (número)
+- Hacer una operación con esa prioridad (por ejemplo, sumarla a una variable total de prioridades)
+
+<Solution title="Solución" icon="Java">
+```java
+import java.util.Scanner;
+
+public class GestorDeTareas {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int totalPrioridad = 0;
+
+        System.out.println("=== Gestor de Tareas ===");
+        System.out.println("1. Agregar tarea");
+        System.out.println("2. Ver tareas (pendiente)");
+        System.out.println("3. Salir");
+
+        System.out.println("Seleccione una opción: ");
+        int opcion = sc.nextInt();
+        sc.nextLine(); //limpiar
+
+        if (opcion >=1 && opcion <= 3) {
+            if (opcion == 1) {
+                System.out.print("Nombre de la tarea: ");
+                String nombreTarea = sc.nextLine();
+
+                System.out.print("Prioridad (1 a 5): ");
+                int prioridad = sc.nextInt();
+
+                boolean esValida = prioridad >= 1 && prioridad <= 5;
+                System.out.println("¿Prioridad válida? " + esValida);
+                
+                if (esValida) {
+                    totalPrioridad += prioridad;
+                    System.out.println("Tarea agregada: " + nombreTarea + "(prioridad " + prioridad + ")");
+                    System.out.println("Suma total de prioridades: " + totalPrioridad);
+                }
+                
+            } else if (opcion == 2) {
+                System.out.println("Función 'ver tareas' aún no implementada");
+        
+            } else {
+                System.out.println("Hasta luego!");
+            } 
+
+        } else {
+            System.out.println("Opción inválida");
+        }
+        sc.close();
+    }
+}
+```
+</Solution>

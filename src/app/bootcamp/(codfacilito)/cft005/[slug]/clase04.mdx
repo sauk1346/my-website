@@ -1,0 +1,260 @@
+# Bloque 03: Control de flujo
+
+## 1. Condicionales
+En programación existen algo llamado las sentencias `if`, `else` y `else if`. Éstas nos permiten crear estructuras de control para la ejecución condicional del código, es decir, dependiendo del cumplimiento o no de una condición específica que nosotros mismos expresemos.
+
+Su objetivo es hacer que los programas sean más flexibles y capaces de responder a diferentes situaciones.
+
+### If 
+```java
+if (edad >= 16) {
+    System.out.println("Es mayor de edad");
+}
+```
+
+### Else
+```java
+if (edad >= 16) {
+    System.out.println("Es mayor de edad");
+} else {
+    System.out.println("Es menor de edad");
+}
+```
+
+### Else-if
+```java
+if nota (>= 9) {
+    System.out.println("Excelente");
+} else if (nota >= 6) {
+    System.out.println("Aprobado");
+} else {
+    System.out.println("Reprobado");
+}
+```
+
+## 2. Operador Ternario
+Es una forma concisa de escribir una declaración if-else en una sola línea.
+
+```text
+condición ? valorSiVerdadero : valorSiFalso;
+```
+
+```java
+int edad = 20;
+String estado = (edad >= 18) ? "Adulto" : "Menor";
+System.out.println(estado);
+```
+
+Es útil para expresiones simples y breves donde se requiere una asignación basada en una condición. Por otro lado, las declaraciones if-else son más adecuadas para situaciones complejas que involucran múltiples condiciones o instrucciones más extensas.
+
+## 3. Switch-case
+En programación un "switch case" o "switch statement" es una estructura de control de flujo que permite elegir entre diferentes bloques de código a ejecutar, dependiendo del valor de una variable o expresión. Es una alternativa a los if/else anidados y hace el código más legible y fácil de mantener.
+
+### ¿Cómo funciona?
+
+1. **Evaluación de la expresión:** El switch recibe una expresión que se evalúa
+2. **Comparación con 'case':** El valor de la expresión se compara con los valores de los diferentes 'case' dentro del switch
+3. **Ejecución del código:** Si se encuentra una coincidencia (el valor de la expresión coincide con el valor de un 'case'), se ejecuta el código dentro de ese 'case'
+4. **break (opcional pero necesario):** Si se utiliza el break después del código de un 'case', se termina la ejecución del switch. Si no se usa break, el switch continuará ejecutando el código de los 'case' seiguientes, incluso si no coinciden.
+5. **default (opcional):** Si no se encuentra ninguna coincidencia con un 'case', se puede definir un bloque 'default' que se ejecutará
+
+```java
+int dia = 3;
+switch(dia) {
+    case 1:
+        System.out.println("Lunes");
+        break;
+    case 2:
+        System.out.println("Martes");
+        break;
+    case 3:
+        System.out.println("Miércoles");
+        break;
+    case 4:
+        System.out.println("Jueves");
+        break;
+    case 5:
+        System.out.println("Viernes");
+        break;
+    case 6:
+        System.out.println("Sábado");
+        break;
+    case 7:
+        System.out.println("Domingo");
+        break;
+    default:
+        System.out.println("Día inválido");
+}
+```
+
+## 4. Ciclos: while, do-while, for
+
+Un ciclo (también conocido como bucle) es una estructura que permite ejecutar repetidamente un bloque de código hasta que se cumpla una condición específica. Los ciclos son fundamentales para automatizar tareas repetitivas y mejorar la eficiencia del código.
+
+Nos evitan la necesidad de escribir el mismo código repetidamente, nos permite realizar tareas complejas sin necesidad de intervención manual y facilitan la comprensión del código.
+
+### Ciclo for
+
+**Uso:** Cuando sabes de antemano cuántas veces se repetirá el código
+```java
+public class cicloFor {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 5; i++) {
+            System.out.println("Iteración " + i);
+        }
+    }
+}
+```
+<TerminalOutput>
+{`Iteración 1
+Iteración 2
+Iteración 3
+Iteración 4
+Iteración 5`}
+</TerminalOutput>
+
+### Ciclo While
+**Uso:** Cuando no conoces cuántas veces se repetirá el código, pero sabes la condición de parada.
+
+```java
+public class cicloWhile {
+    public static void main(String[] args) {
+        int contador = 1;
+        while (contador <= 5) {
+            System.out.println("Contador " + contador);
+            contador++;
+        }
+    }
+}
+```
+<TerminalOutput>
+{`Contador 1
+Contador 2
+Contador 3
+Contador 4
+Contador 5`}
+</TerminalOutput>
+
+### Ciclo do-while
+**Uso:** Similar al while, pero garantiza al menos una ejecución (la condición se evalúa al final)
+
+```java
+import java.util.Scanner;
+
+public class cicloDoWhile {
+    public static void main(String[] args) {
+        int numero;
+        do {
+            System.out.println("Ingresa un número positivo: ");
+            numero = new Scanner(System.in).nextInt();
+        } while (numero >= 0);        
+    }
+}
+```
+
+## 5. Break y Continue
+En Java, `break` y `continue` son palabras clave utilizadas para controlar el flujo de ejecución dentro de los bucles (loops). `break` termina el bucle actual, mientras que `continue` salta la iteración actual y continúa con la siguiente.
+
+### Break
+Esta palabra le indica al programa que debe salir del bucle en el que se encuentra. Es comúnmente utilizado para terminar la ejecución de un bucle cuando una condición específica se cumple.
+
+```java
+public class ejemploBreak {
+    public static void main(String[] args) {
+        for (int i = 0; i < 100; i++) {
+            if (i == 5) break;
+            System.out.println(i);
+        }
+    }
+}
+```
+<TerminalOutput>
+{`0
+1
+2
+3
+4`}
+</TerminalOutput>
+
+### Continue
+Le indica al programa que debe saltar la iteración actual del bucle y continuar con la siguiente iteración. 
+
+No termina el bucle, sino que salta la ejecución de las intrucciones que están después de `continue` en la iteración actual.
+
+Es útil para omitir ciertas partes de un bucle bajo ciertas condiciones.
+
+```java
+public class ejemploContinue {
+    public static void main(String[] args) {
+        for (int i = 0; i < 5; i++) {
+            if (i == 2) continue;
+            System.out.println(i);
+        }
+    }
+}
+```
+<TerminalOutput>
+{`0
+1
+3
+4`}
+</TerminalOutput>
+
+## 6. Mini-proyecto
+
+- Repetir el proyecto "gestor de tareas", mientras el usuario no elija salir.
+- Usar condicionales y ciclos para manejar opciones del menú
+
+<Solution title="Solución" icon="Java">
+```java
+import java.util.Scanner;
+
+public class GestorDeTareas {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int totalPrioridad = 0;
+        int opcion = -1;
+        while (opcion != 3) {
+            System.out.println("=== Gestor de Tareas ===");
+            System.out.println("1. Agregar tarea");
+            System.out.println("2. Ver tareas (pendiente)");
+            System.out.println("3. Salir");
+
+            System.out.println("Seleccione una opción: ");
+            opcion = sc.nextInt();
+            sc.nextLine(); //limpiar
+
+            if (opcion >=1 && opcion <= 3) {
+                if (opcion == 1) {
+                    System.out.print("Nombre de la tarea: ");
+                    String nombreTarea = sc.nextLine();
+
+                    System.out.print("Prioridad (1 a 5): ");
+                    int prioridad = sc.nextInt();
+
+                    boolean esValida = prioridad >= 1 && prioridad <= 5;
+                    System.out.println("¿Prioridad válida? " + esValida);
+
+                    if (esValida) {
+                        totalPrioridad += prioridad;
+                        System.out.println("Tarea agregada: " + nombreTarea + "(prioridad " + prioridad + ")");
+                        System.out.println("Suma total de prioridades: " + totalPrioridad + "\n");
+                    }
+
+                } else if (opcion == 2) {
+                    System.out.println("Función 'ver tareas' aún no implementada");
+
+                } else {
+                    System.out.println("Hasta luego!");
+                } 
+
+            } else {
+                System.out.println("Opción inválida");
+            }
+        }
+        sc.close();
+    }
+}
+```
+</Solution>

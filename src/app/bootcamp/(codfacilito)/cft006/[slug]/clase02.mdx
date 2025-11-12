@@ -1,0 +1,86 @@
+# Guardar y administrar cambios
+
+## 1. Pasos para creación proyecto
+
+1. Crear repositorio remoto
+    ```text
+    https://github.com/new
+    ```
+2. Crear repositorio local
+    ```sh
+    git init
+    ```
+3. Vincular ambos repositorio
+    ```sh
+    git remote add origin <link_repositorio_remoto>
+    ```
+
+
+## 2. Stash
+Es un comando poderoso que le permite guardar temporalmente (o "guardar") los cambios que ha realizado en su directorio de trabajo para que pueda trabajar en otra cosa y luego regresar y volver a aplicarlos más tarde.
+
+<SmartTable
+    tableLayout="auto"
+    headers={["Comando", "Descripción"]}
+    rows={[
+        [
+            "`git stash`",
+            "Guarta tus cambios actuales (tanto del working directory como del staging area) en un \"stash\" temporal y limpia tu directorio de trabajo, dejándolo como estaba en el último commit"
+        ],
+        [
+            "`git stash list`",
+            "Muestra todos los stashes que has guardado. Cada uno tiene un identificador como `stash@{0}` ,`stash{1}`, etc"
+        ],
+        [
+            "`git stash pop`",
+            "Recupera el último stash guardado y lo aplica a tu working directory, eliminándolo de la lista de stashes. Es como sacar algo del cajón temporal y usarlo"
+        ],
+        [
+            "`git stash apply`",
+            "Similar a `pop`, pero NO elimina el stash de la lista. Los cambios de aplican pero el stash sigue guardando por si lo necesitas de nuevo"
+            
+        ],
+        [
+            "`git stash drop`",
+            "Elimina un stash específico sin aplicar sus cambios. Ej `git stash drop stash@{0}`"
+        ],
+        [
+            "`git stash clear`",
+            "Elimina TODOS los stashes guardados"
+        ],
+    ]}
+/>
+
+## 3. Flujo de trabajo
+
+### Preparar cambios para commit
+- Agregar todos los archivos modificados al al "área de preparación" (staging)
+    ```sh
+    git add .
+    ```
+- Agregar un archivo específico
+    ```sh
+    git add <nombre_archivo>
+    ```
+
+### Deshacer cambios del área de preparación
+- Quitar todos los archivos del staging (sin perder cambios)
+    ```sh
+    git reset
+    ```
+- Quitar un archivo específico del staging (sin perder cambios)
+    ```sh
+    git reset <nombre_archivo>
+    ```
+
+### Guardar cambios en el repositorio
+- Crear un commit con los archivos del staging
+    ```sh
+    git commit -m "Descripción de los cambios"
+    ```
+
+### Ver el estado actual
+- Verificar qué archivos están modificados o en staging
+    ```sh
+    git status
+    ```

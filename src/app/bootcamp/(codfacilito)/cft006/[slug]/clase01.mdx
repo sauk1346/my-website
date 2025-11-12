@@ -1,0 +1,112 @@
+# Fundamentos de Git y GitHub
+
+- Git es un sistema de control de versiones distribuido que te permite rastrear cambios en tu código y colaborar con otros desarrolladores.
+- Fue diseñado por Linux Torvalds.
+
+## 1. Términos
+
+<SmartTable
+    tableLayout="auto"
+    headers={["Término", "Descripción"]}
+    rows={[
+        [
+            "**Repositorio**",
+            "Es como una carpeta especial donde Git guarda todo el historial de tu proyecto. Piensa en él como un contenedor que almacena todos tus archivos y cada versión que has guardado de ellos"
+        ],
+        [
+            "**Commit**",
+            "Es como tomar una fotografía de tu proyecto en un momento específico. Cada commit guarda los cambios que hiciste y tiene un mensaje describiendo qué modificaste. Es la unidad básica de cambio en Git"
+        ],
+        [
+            "**Branch (Rama)**",
+            "Imagina que tu proyecto es un árbol. Una rama es una línea independiente de desarrollo. La rama principal se llama `main` o `master`, y puedes crear otras ramas para trabajar en nuevas funcionalidades sin afectar el código principal"
+        ],
+        [
+            "**Directorio de trabajo**",
+            "Es la carpeta donde están tus archivos actuales, los que ves y editas en tu computador"
+        ],
+        [
+            "**Staging Area (área de preparación)**",
+            "Es como una zona intermedia donde colocas los archivos que quieres incluir en tu próximo commit. Aquí \"preparas\" los cambios antes de guardarlos definitivamente"
+            
+        ],
+    ]}
+/>
+
+## 2. Comandos Esenciales
+
+<SmartTable
+    tableLayout="auto"
+    headers={["Comando", "Descripción"]}
+    rows={[
+        [
+            "`git init`",
+            "Crea un nuevo repositorio Git en tu carpeta actual. Es el primer comando que usas cuando empiezas un proyecto nuevo"
+        ],
+        [
+            "`git clone`",
+            "Descarga una copia completa de un repositorio remoto a tu computador, incluyendo todo su historial"
+        ],
+        [
+            "`git add`",
+            "Mueve archivos modificados al staging area"
+        ],
+        [
+            "`git commit`",
+            "Guarda los cambios del staging area en el historial del repositorio. Siempre lleva un mensaje descriptivo"
+        ],
+        [
+            "`git status`",
+            "Te muestra el estado actual de tu repositorio. qué archivos cambiaron, cuáles están en staging, etc."
+        ],
+        [
+            "`git push`",
+            "Envía tus commits locales a un repositorio remoto para compartirlos con otros"
+        ],
+        [
+            "`git pull`",
+            "Descarga los cambios más recientes del repositorio remoto y los integra en tu rama local"
+        ],
+        [
+            "`git merge`",
+            "Combina los cambios de una rama con otra. Por ejemplo, integrar una rama de funcionalidad nueva a la rama principal"
+        ],
+    ]}  
+/>
+
+### Push vs Pull
+
+<SmartFigure
+	id="sumar-n-numeros"
+	src="/bootcamp/cft006/images/fig01.png"
+	alt="Push vs Pull"
+	caption="Push vs Pull"
+	size="medium"
+/>
+
+- **Push:** Subir contenido al repositorio
+- **Pull:** Descargar el contenido almacenado en el repositorio
+
+## 3. Creación de un repositorio
+
+1. **Crear nuevo repositorio:** Buscar el botón "new". Alternativamente se puede ir al siguiente link
+    ```text
+    https://github.com/new
+    ```
+
+2. **Nombre repositorio:** Crear un nombre sin espacios. Luego botón "Crear"
+
+3. **Configuración terminal:** Crear un directorio desde la terminal
+    ```sh
+    mkdir miproyecto
+    cd miproyecto
+    ```
+
+4. **Inicializar repositorio local:** 
+    ```sh
+    git init
+    ```
+
+
+
+

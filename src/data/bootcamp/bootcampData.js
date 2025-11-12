@@ -53,6 +53,12 @@ export const bootcampsData = {
         titleUrl: "bootcamp/cft005",
         certificateUrl: ""
       },
+      {
+        code: "CFT006",
+        title: "Git & GitHub",
+        titleUrl: "bootcamp/cft006",
+        certificateUrl: ""
+      },
     ]
   }
 };

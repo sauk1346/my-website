@@ -1,0 +1,213 @@
+# Seguridad en la Nube
+
+## 1. Repaso
+
+<SmartTable
+    tableLayout="auto"
+    headers={["Modelo", "Descripción", "Analogía"]}
+    rows={[
+        [
+            "**On-Premise (local)**",
+            "Todo está en tus instalaciones físicas"
+        ],
+        [
+            "**IaaS (Infrastructure as a Service)**",
+            "El proveedor te da la infraestructura básica virtualizada. Tú gestionas desde el sistema operativo hacia arriba",
+            "Es como arrendar un terreno donde construyes tu casa como quieras"
+        ],
+        [
+            "**PaaS (Platform as a Service)**",
+            "El proveedor gestiona toda la plataforma. Tú solo te preocupas de tu código y datos",
+            "Arrendar un departamento amoblado, solo traer tus cosas personales"
+        ],
+        [
+            "**SaaS (Software as a Service)**",
+            "Software listo para usar. No gestionas nada de la infraestructura",
+            "Ir a un hotel, todo está listo, solo usas el servicio"
+        ],
+    ]}
+/>
+
+### Servicios AWS
+
+- **IC2:** IaaS
+- **RDS:** PaaS
+- **Lambda:** PaaS
+
+## 2. Seguridad, gobernanza y compliance
+
+### Cumplimiento
+AWS cumple con múltiples estándares y certificaciones internacionales:
+
+- **HIPAA (Health Insurance Portability and Accountability Act):** Protección de datos de salud
+- **ISO 27001:** Gestión de seguridad de la información
+- **SOC 2 Type 2:** Controles de seguridad, disponibilidad y confidencialidad auditados
+- **PCI DSS (Payment Card Industry Data Security Standard):** Seguridad en procesamiento de pagos
+
+**Herramienta clave:** AWS Artifact proporciona acceso a reportes de auditoría y certificaciones.
+
+### Gobernanza
+
+- **AWS Organizations:** Gestión centralizada de múltiples cuentas
+- **AWS Control Tower:** Configuración automatizada de entornos multi-cuenta seguros
+- **AWS Config:** Evaluación continua de configuraciones y cumplimiento de reglas
+
+### Seguridad
+
+- **Modelo de responsabilidad compartida:** AWS protege la infraestructura, el cliente protege sus datos y aplicaciones
+- **Servicios clave:** IAM, KMS, CloudTrail, GuardDuty, Security Hub, Shield, WAF
+
+### Requisitos generales de compliance
+- Residencia de datos Acceso físico restringido a centros de datos
+- Cifrado en tránsito y reposo
+- Políticas de acceso de datos
+- Redundancia en sistemas eléctricos
+- Controles de acceso
+
+## 3. Conceptos clave
+<SmartTable
+    tableLayout="auto"
+    headers={["Concepto", "Descripción"]}
+    rows={[
+        [
+            "**Cifrado en tránsito**",
+            "Cuando movemos datos. Por ejemplo al acceder a una página web, transmitir información entre sistemas"
+        ],
+        [
+            "**Cifrado en reposo**",
+            "Sistemas de almacenamiento como bases de datos, discos duros, buckets de S3"
+        ],
+    ]}
+/>
+
+## 4. Herramientas AWS para Seguridad
+<SmartTable
+    tableLayout="auto"
+    headers={["Servicio", "Descripción"]}
+    rows={[
+        [
+            "**AWS Artifact**",
+            "Repositorio de documentos de cumplimiento y certificaciones de AWS para auditorías"
+        ],
+        [
+            "**AWS KMS (Key Management Service)**",
+            "Servicio para crear y gestionar claves de encriptación para proteger datos"
+        ],
+        [
+            "**AWS Cloudtrail**",
+            "Registra todas las acciones/eventos de tu cuenta AWS para auditoría y monitoreo (quién hizo qué y cuándo)"
+        ],
+        [
+            "**AWS Inspector**",
+            "Escanea automáticamente tus aplicaciones y EC2 en busca que vulnerabilidades de seguridad"
+        ],
+        [
+            "**AWS GuardDuty**",
+            "Detecta amenazas y actividades malicionas mediante análisis inteligente de logs y tráfico de red"
+        ],
+        [
+            "**AWS Security Hub**",
+            "Panel centralizado que agrega y prioriza alertas de segurida de múltiples servicios AWS"
+        ],
+        [
+            "**AWS Shield**",
+            "Protección contra ataques DDoS. Shield Standard es gratis, Shield Advanced es premium"
+        ],
+        [
+            "**AWS WAF (Web Application Firewall)**",
+            "Firewall para aplicaciones web que filtra tráfico HTTP/HTTPS maliciosos (SQL injection, XSS, etc.)"
+        ],
+    ]}
+/>
+
+## 5. Identity and Access Management
+
+### Usuario Root
+- Es el usuario que se crea cuando abrimos una cuenta de AWS
+- Tiene acceso administrativo a TODO, incluyendo datos de facturación
+- No es recomendable usarlo
+- Activa autenticación de doble factor
+
+### IAM (Identity Access Management)
+<SmartTable
+    tableLayout="auto"
+    headers={["Elemento", "Descripción"]}
+    rows={[
+        [
+            "**Usuarios**",
+            "Identidades individuales con credenciales (ej: un desarrollador, un admin)"
+        ],
+        [
+            "**Grupos**",
+            "Conjunto de usuarios para asignar permisos colectivamente (ej: grupo \"Desarrolladores\")"
+        ],
+        [
+            "**Roles**",
+            "Identidades temporales que pueden asumir usuarios, servicios o aplicaciones (ej: rol para que EC2 acceda a S3)"
+        ],
+        [
+            "**Políticas**",
+            "Documentos JSON que definen permisos específicos (qué acciones esetán permitidas o denegadas sobre qué recursos)"
+        ],
+    ]}
+/>
+
+### Principio del mínimo privilegio
+- Dar solo los permisos necesarios para que un usuario o servicio realice una tarea
+- Evitar AdministratorAccess o wildcards
+- Revisar y ajustar permisos periódicamente
+
+## 7. Evaluación
+
+<Quiz questions={[
+	{
+		question: "¿Cuál de los siguientes servicios de AWS te permite descargar reportes de cumplimiento (por ejemplo, ISO 27001, SOC2)?",
+		options: [
+			"AWS Artifact",
+			"AWS Config",
+			"Amazon Inspector",
+			"AWS Shield"
+		],
+		correctIndex: 0
+	},
+    {
+		question: "Un desarrollador crea un bucket de Amazon S3 para almacenar reportes médicos de pacientes. Por error, configura el bucket como público. ¿De quién es la responsabilidad de proteger esos datos bajo el modelo de responsabilidad compartida de AWS?",
+		options: [
+			"De AWS, porque S3 ya está certificado para HIPAA",
+			"Del desarrollador, porque él controla la configuración del bucket",
+			"De AWS y del desarrollador en partes iguales",
+			"Del auditor externo que revisa compliance"
+		],
+		correctIndex: 1
+	},
+    {
+		question: "¿Cuál de las siguientes políticas viola el principio de mínimo privilegio?",
+		options: [
+			"Permitir s3:GetObject y s3:ListBucket sobre un bucket específico",
+			"Conceder AdministratorAccess a todoss los desarrolladores",
+			"Requerir MFA para acceso a la consola",
+			"Usar roles de IAM en lugar de claves de acceso en código"
+		],
+		correctIndex: 1
+	},
+    {
+		question: "¿Qué acción es recomendada para proteger la cuenta root de AWS?",
+		options: [
+			"Usar root para las tareas diarias de administración",
+			"Crear un IAM user con permisos administrativos y activar MFA en root",
+			"Compartir las credenciales root con el equipo de TI",
+			"Desactivar el root account"
+		],
+		correctIndex: 1
+	},
+    {
+		question: "¿Cuál de los siguientes servicios detecta automáticamente actividades maliciosas o anómalas en tu cuenta de AWS?",
+		options: [
+			"AWS Security Hub",
+			"Amazon GuardDuty",
+			"AWS Artifact",
+			"AWS Config"
+		],
+		correctIndex: 3
+	},
+]} />

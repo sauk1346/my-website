@@ -30,7 +30,7 @@ export const cft004Data = {
         {
           classNumber: "04",
           name: "Seguridad en la Nube",
-          link: ""
+          link: "cft004/clase04"
         },
       ]
     },

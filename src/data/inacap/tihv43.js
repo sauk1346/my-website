@@ -23,17 +23,17 @@ const courseData = {
     evaluationsData: [
         { 
             evaluationNumber: 1,
-            date: '',
-            weighting: '',
+            date: 'Dom 02, Nov 2025',
+            weighting: '15%',
             description: {
-                text: '',
-                href: ''
+                text: 'Resumen Ejecutivo',
+                href: '/inacap/tihv43/docs/ResumenEjecutivo.pdf'
             },
         },
                 { 
             evaluationNumber: 2,
             date: '',
-            weighting: '',
+            weighting: '20%',
             description: {
                 text: '',
                 href: ''
@@ -42,7 +42,7 @@ const courseData = {
                 { 
             evaluationNumber: 3,
             date: '',
-            weighting: '',
+            weighting: '30%',
             description: {
                 text: '',
                 href: ''
@@ -51,7 +51,7 @@ const courseData = {
                 { 
             evaluationNumber: 4,
             date: '',
-            weighting: '',
+            weighting: '35%',
             description: {
                 text: '',
                 href: ''
@@ -87,8 +87,8 @@ const courseData = {
             date: 'Mar 28, Oct 2025', 
             description: [
                 {
-                    text: '',
-                    href: ''
+                    text: 'No asistí',
+                    strikethrough: true,
                 },
             ]
         },
@@ -96,6 +96,50 @@ const courseData = {
             week: '02', 
             class: '04', 
             date: 'Jue 30, Oct 2025', 
+            description: [
+                {
+                    text: 'No asistí',
+                    strikethrough: true,
+                },
+            ]
+        },
+        { 
+            week: '03', 
+            class: '05', 
+            date: 'Mar 04, Nov 2025', 
+            description: [
+                {
+                    text: 'Revisión: Resumen Ejecutivo',
+                    href: '/inacap/tihv43/docs/ResumenEjecutivo.pdf'
+                },
+            ]
+        },
+        { 
+            week: '03', 
+            class: '06', 
+            date: 'Jue 06, Nov 2025', 
+            description: [
+                {
+                    text: 'Diagrama Ishikawa',
+                    href: 'tihv43/clase06'
+                },
+            ]
+        },
+        { 
+            week: '04', 
+            class: '07', 
+            date: 'Mar 11, Nov 2025', 
+            description: [
+                {
+                    text: 'No asistí',
+                    strikethrough: true,
+                },
+            ]
+        },
+        { 
+            week: '04', 
+            class: '08', 
+            date: 'Jue 13, Oct 2025', 
             description: [
                 {
                     text: '',
@@ -129,7 +173,7 @@ const courseData = {
             date: 'Sáb 01, Nov 2025', 
             description: {
                 text: 'Cómo levantar una propuesta de mejora',
-                href: '',
+                href: 'tihv43/lectura03',
             }
         },
         { 
@@ -138,7 +182,7 @@ const courseData = {
             date: 'Sáb 01, Nov 2025', 
             description: {
                 text: 'Matriz de priorización',
-                href: '',
+                href: 'tihv43/lectura04',
             }
         },
     ]

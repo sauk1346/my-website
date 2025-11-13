@@ -120,8 +120,30 @@ const courseData = {
             date: 'Mié 05, Nov 2025', 
             description: [
                 {
-                    text: '',
-                    href: ''
+                    text: 'POO en Kotlin',
+                    href: 'ti3v42/clase06'
+                },
+            ]
+        },
+        { 
+            week: '04', 
+            class: '07', 
+            date: 'Mar 11, Nov 2025', 
+            description: [
+                {
+                    text: 'Validación de formularios',
+                    href: 'ti3v42/clase07'
+                },
+            ]
+        },
+        { 
+            week: '04', 
+            class: '08', 
+            date: 'Mié 12, Nov 2025', 
+            description: [
+                {
+                    text: 'Suspensión clases: comunicado',
+                    strikethrough: true
                 },
             ]
         },
@@ -169,7 +191,7 @@ const courseData = {
             date: 'Sáb 08, Nov 2025', 
             description: {
                 text: 'Aplicaciones Móviles Android',
-                href: '',
+                href: '/inacap/ti3v42/docs/lectura05.pdf',
             }
         },
         { 
@@ -178,6 +200,15 @@ const courseData = {
             date: 'Sáb 08, Nov 2025', 
             description: {
                 text: 'Introducción al Desarrollo Móvil en Android',
+                href: '',
+            }
+        },
+        { 
+            week: '04', 
+            lecture: '07', 
+            date: 'Sáb 15, Nov 2025', 
+            description: {
+                text: 'Estructura de aplicaciones y permisos en Android',
                 href: '',
             }
         },

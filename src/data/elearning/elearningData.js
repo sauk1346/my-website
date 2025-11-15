@@ -20,10 +20,16 @@ export const platformsData = {
     courses: [
       {
         code: "CFT001",
-        title: "Curso de Ingeniería de Prompts",
+        title: "Ingeniería de Prompts",
         titleUrl: null,
         certificateUrl: null,
         instructor: "Lesly Zerna"
+      },
+      {
+        code: "CFT002",
+        title: "IA para Datos",
+        titleUrl: 'elearning/cft002',
+        certificateUrl: null,
       }
     ]
   },

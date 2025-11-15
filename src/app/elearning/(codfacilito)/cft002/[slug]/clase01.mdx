@@ -1,0 +1,167 @@
+# Inauguración
+
+### Objetivo de hoy
+
+Entender AI modernos en el sentido más profundo que podamos
+
+- Expectativa vs realidad
+- ¿Qué es un LLM?
+- Instalación de herramientas
+- Primeros pasos
+
+## 1. ¿Por qué es importante el AI?
+
+### Autonomía
+
+- **METR:** es una organización sin fines de lucro que mide las capacidades de distintos modelos de AI para completar tareas de ingeniería de software de forma autónoma
+
+1. **Hace 7 meses**, el modelo más avanzado era capaz de trabajar **1 hora** sin requerir intervención de una presiona
+2. **Hoy (2025)**, el modelo más avanzado es capaz de trabajar **+2 horas** sin requerir intervención de una persona
+3. La estimación es que para 2027 el modelo más avanzado sea capaz de trabajar un día laboral completo de forma autónoma (+8 horas) 
+
+### Amplitud de tareas
+
+- Bienes raíces y arrendamiento
+- Gobierno / Sector público
+- Manufactura / Fabricación
+- Servicios Profesionales, Científicos y Técnicos
+- Atención Médica y Asistencia Social / Salud y Asistencia Social
+- Finanzas y Seguros
+- Comercio al por Menor / Comercio Minorista
+- Comercio al por Mayor / Comercio Mayorista
+- Información / Tecnologías de la Información y Comunicaciones
+
+
+**Open AI**, la empresa detrás de ChatGPT publicó un estudio para medir las capacidades de distintos modelos de AI para completar tareas a lo largo de 44 ocupaciones en las industrias de mayor valor económico en USA
+
+- Un **experto** con 14 años de experiencia **diseñaba una tarea (entregable requerido)**
+- **La tarea era resuelta por una AI**, y a la par, **por una persona especializada en la profesión**
+- **Una 3ra persona** recibía ambos entregables y **escogía el que presentaba mejor solución**
+
+En el **47.6\% de las ocasiones se escogió el entregable de la AI**. Los humanos ganamos...por poco.
+
+### Uso de Excel
+
+Por último, Microsoft realizó una **evaluación similar a la de OpenAI**, solo que enfocado en el uso de Excel.
+
+- Los **humanos** reponden correctamente el **71.3\% de las preguntas**
+- El **mejor modelo de AI** responde correctamente el **53.2\%**
+
+
+### ¿Debemos estar preocupados?
+
+Depende.
+
+En 2016, Geoffrey Hinton, reconocido investigador inglés sobre AI, comento que ya no habría radiólogos dado que el AI ya había sobrepasado a los humanos en esta tarea.
+
+Si no habían sobrepasado, pero hoy incluso hay más demanda por radiólogos en USA que hace 10 años.
+
+- El **problema es que ser bueno para una tarea no reemplaza por completo el trabajo**
+- **El tiempo de un radiólogo se ocupa en muchas más cosas que solo en interpretar imágenes**
+
+> **Los modelos de AI no nos van a reemplazar a todos**, solo a aquellos que no aprendamos a usar AI en nuestro día a día
+
+## 2. De qué hablamos con AI
+
+### ¿Qué es AI?
+
+<SmartFigure
+	id="definicion-ai"
+	src="/elearning/cft002/images/fig01.png"
+	alt="Definición de AI"
+	caption="Definición de AI"
+	size="large"
+/>
+
+### ¿Qué es un LLM?
+- **Large Language Model**
+- Modelo de AI entrenado con grandes cantidades de texto
+- Capaz de entender y generar lenguaje humano
+- Utiliza arquitectura Transformer para procesar y generar texto de manera coherente
+- Ejemplos: GPT-3, GPT-4, BERT, T5
+
+### ¿Qué es GPT?
+- **Generative Pre-Trained Transformed**
+- Modelo de lenguaje desarrollado por OpenAI
+- Entrenado en grandes cantidades de texto para generar respuestas coherentes y contextuales
+- Utiliza la arquitectura Transformer para entender y generar lenguaje natural
+
+### Tokens
+- Unidad básica de texto que un modelo de lenguaje procesa
+- Puede ser una palabra, parte de una palabra o incluso un carácter
+- Los modelos de lenguaje tienen un límite en la cantidad de tokens que pueden procesar en una
+- [Tiktokenizer](https://tiktokenizer.vercel.app/) es una librería de OpenAI que permite tokenizar texto de manera eficiente para su uso con modelos de lenguaje
+
+#### Ejemplo
+
+- "ChatGPT es genial" se divide en los siguientes tokens: ["Chat", "G", "PT", " es", " genial"]
+- En este caso, la frase tiene 5 tokens
+
+## 3. Instalador de paquetes UV 
+
+### ¿Qué es UV?
+- UV es un instalador de paquetes para modelos de lenguaje
+- Permite instalar, gestionar y actualizar modelos de lenguaje de manera sencilla
+- Facilita la integración de modelos de lenguaje en aplicaciones y proyectos
+- [Documentación UV](https://docs.astral.sh/uv/)
+
+### Instalación
+
+```bash
+pip install uv
+```
+
+### Comandos básicos
+<SmartTable
+    tableLayout="auto"
+    headers={['Comando', 'Descripción']}
+    rows={[
+        ['`uv search <nombre_modelo>`', 'Busca modelos disponibles'],
+        ['`uv install <nombre_modelo>`', 'Instala un modelo específico'],
+        ['`uv list`', 'Lista los modelos instalados'],
+        ['`uv update <nombre_modelo>`', 'Actualiza un modelo instalado'],
+        ['`uv remove <nombre_modelo>`', 'Elimina un modelo instalado'],
+    ]}
+/>
+
+### Ejemplo de uso
+
+```bash
+uv search gpt
+uv install gpt-4
+uv list
+```
+```bash
+uv update gpt-4
+uv remove gpt-4
+```
+
+
+## 4. Creación de un proyecto
+
+```sh
+uv init mi_proyecto
+cd mi_proyecto
+```
+<TerminalOutput>
+{`mi-proyecto/
+├── main.py
+├── pyproject.toml
+└── README.md`}
+</TerminalOutput>
+
+<SmartTable
+    tableLayout="auto"
+    headers={['Archivo', 'Descripción']}
+    rows={[
+        [
+            '`main.py`', 
+            'Archivo principal del proyecto donde se escribe el código para interactuar con el modelo de lenguaje.'],
+        [
+            '`pyproject.toml`',
+            'Archivo de configuración del proyecto que contiene información sobre las dependencias y la configuración del entorno. Reemplaza a archivos como `requirements.txt` o `setup.py`.'],
+        [
+            '`README.md`',
+            'Archivo de documentación del proyecto que describe su propósito, cómo usarlo y cualquier otra información relevante.'],
+    ]}  
+/>

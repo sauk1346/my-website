@@ -1,0 +1,66 @@
+# LLMs vía Chat e Ingeniería de Prompts para Datos
+
+## 1. Repaso clase anteriorS
+- Snowflake
+- script básico
+- Snowflake, porque es gratuito. De lo contrario, Databricks sería la mejor opción
+- Revisar [documentación Snowflake](https://docs.snowflake.com/user-guide/snowflake-cortex/aisql#availability)
+
+```sql
+SELECT
+  AI_COMPLETE(
+    'openai-gpt-5', CONCAT('devuelve el primer nombre del handle del correo', email)) as TEXT_COMPLETION,
+     EMAIL as TEXT_INPUT
+FROM "DATABASE_CF"."BOOTCAMP_AI"."CUSTOMERS";
+```
+
+## 2. Creación de un nuevo proyecto
+
+1. **Instalar dependencias**
+    ```python
+    pip install uv
+    ```
+
+2. **Crear proyecto**
+    ```python
+    uv init
+    ```
+    
+
+## 3. Tokens
+
+<SmartFigure
+	id="tabla-comparativa-tokens"
+	src="/elearning/cft002/images/fig999.png"
+	alt="Tabla comparativa de tokens"
+	caption="Tabla comparativa de tokens"
+	size="large"
+/>
+
+- El 'español' gasta hasta un 50\% más tokens que el 'inglés'
+
+## 4. Visual Studio Code
+
+### AGENTS.md
+- Es un archivo 'system prompt'
+- Siempre que la IA requiera contexto revisará dicho archivo
+
+
+### 5. Repositorio Snowflake
+
+- [Repositorio](https://github.com/Snowflake-Labs/Snowflake-AI-Toolkit/tree/main)
+
+1. Descargar: data/samples/emails.csv
+2. Crear la carpeta `.\.data` y agregar el .csv
+
+3. Prompt
+    ```text
+    write a python script to upload the .data/emails.csv to snowflake, 
+    use snowpark. don't try read the entire dataset, it's too big, but 
+    do use the first few rows if needed. Write it yourself
+    ```
+
+    ```text
+    what libraries do i need to run it? uv add them
+    ```
+

@@ -147,6 +147,28 @@ const courseData = {
                 },
             ]
         },
+        { 
+            week: '05', 
+            class: '09', 
+            date: 'Mar 18, Nov 2025', 
+            description: [
+                {
+                    text: 'Ejercicio tipo Prueba',
+                    href: 'ti3v42/clase09',
+                },
+            ]
+        },
+        { 
+            week: '05', 
+            class: '10', 
+            date: 'Mié 19, Nov 2025', 
+            description: [
+                {
+                    text: '',
+                    href: '',
+                },
+            ]
+        },
     ],
     lectureData: [
         { 
@@ -209,6 +231,24 @@ const courseData = {
             date: 'Sáb 15, Nov 2025', 
             description: {
                 text: 'Estructura de aplicaciones y permisos en Android',
+                href: '',
+            }
+        },
+        { 
+            week: '05', 
+            lecture: '08', 
+            date: 'Sáb 22, Nov 2025', 
+            description: {
+                text: 'Conexión Inalámbrica y Estándares de Seguridad',
+                href: '',
+            }
+        },
+        { 
+            week: '05', 
+            lecture: '09', 
+            date: 'Sáb 22, Nov 2025', 
+            description: {
+                text: 'Síntesis de la unidad',
                 href: '',
             }
         },

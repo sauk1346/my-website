@@ -22,19 +22,19 @@ export const udm002Data = {
         {
           classNumber: "03",
           name: "Big O",
-          link: "udm002/clase03",
+          link: "clase03",
           exercises: null
         },
         {
           classNumber: "04",
           name: "Cómo Resolver Problemas de Programación",
-          link: "udm002/clase04",
+          link: "clase04",
           exercises: null
         },
         {
           classNumber: "05",
           name: "Estructuras de Datos: Introducción",
-          link: "udm002/clase05",
+          link: "clase05",
           exercises: null
         },
       ]

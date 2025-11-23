@@ -9,7 +9,7 @@ export const cft002Data = {
         {
           classNumber: "01",
           name: "Inauguración",
-          link: "cft002/clase01"
+          link: "clase01"
         },
         {
           classNumber: "02",
@@ -25,7 +25,7 @@ export const cft002Data = {
         {
           classNumber: "03",
           name: "LLMs vía Chat e Ingeniería de Prompts para Datos",
-          link: "cft002/clase03"
+          link: "clase03"
         },
         {
           classNumber: "04",

@@ -1,13 +1,13 @@
 import React from 'react';
 import { notFound } from 'next/navigation';
 import { CustomMDXProvider } from '@/components/providers/CustomMDXProvider';
-import { getAllBootcampLessonPaths, getBootcampCourseData } from '@/utils/bootcampUtils';
+import { getAllElearningLessonPaths, getElearningCourseData, getPlatformByCourseId } from '@/utils/elearningUtils';
 
 /**
  * Pre-renderiza todas las páginas de lecciones en build time
  */
 export async function generateStaticParams() {
-    return getAllBootcampLessonPaths();
+    return getAllElearningLessonPaths();
 }
 
 /**
@@ -19,22 +19,24 @@ export const dynamicParams = false;
  * Genera metadata dinámica para SEO
  */
 export async function generateMetadata({ params }) {
-    const { platform, courseId, slug } = await params;
-    const courseData = getBootcampCourseData(platform, courseId);
+    const { courseId, slug } = await params;
+    const platform = getPlatformByCourseId(courseId);
+    const courseData = getElearningCourseData(platform, courseId);
 
     return {
-        title: `${slug} | ${courseData?.title || 'Bootcamp'}`,
-        description: courseData?.sectionTitle || 'Contenido de bootcamp',
+        title: `${slug} | ${courseData?.title || 'E-learning'}`,
+        description: courseData?.description || 'Contenido educativo online',
     };
 }
 
 export default async function LessonPage({ params }) {
-    const { platform, courseId, slug } = await params;
+    const { courseId, slug } = await params;
+    const platform = getPlatformByCourseId(courseId);
 
     try {
         // Importación directa sin dynamic() para mejor performance
         const { default: MDXContent } = await import(
-            `@/content/bootcamp/${platform}/${courseId}/${slug}.mdx`
+            `@/content/elearning/${platform}/${courseId}/${slug}.mdx`
         );
 
         return (

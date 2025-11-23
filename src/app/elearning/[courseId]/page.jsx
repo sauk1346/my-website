@@ -1,7 +1,7 @@
 import React from 'react';
 import { notFound } from 'next/navigation';
 import SectionTable from '@/components/features/elearning/SectionTable';
-import { getAllElearningCoursePaths, getElearningCourseData } from '@/utils/elearningUtils';
+import { getAllElearningCoursePaths, getElearningCourseData, getPlatformByCourseId } from '@/utils/elearningUtils';
 
 /**
  * Pre-genera todas las páginas de cursos en build time
@@ -19,7 +19,8 @@ export const dynamicParams = false;
  * Genera metadata dinámica para SEO
  */
 export async function generateMetadata({ params }) {
-    const { platform, courseId } = await params;
+    const { courseId } = await params;
+    const platform = getPlatformByCourseId(courseId);
     const courseData = getElearningCourseData(platform, courseId);
 
     return {
@@ -29,7 +30,8 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function CoursePage({ params }) {
-    const { platform, courseId } = await params;
+    const { courseId } = await params;
+    const platform = getPlatformByCourseId(courseId);
     const courseData = getElearningCourseData(platform, courseId);
 
     if (!courseData) {

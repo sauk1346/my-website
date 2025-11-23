@@ -9,7 +9,7 @@ export const cft002Data = {
         {
           classNumber: "01",
           name: "Definición de DevOps y Principios Básicos",
-          link: "cft002/clase01"
+          link: "clase01"
         },
         {
           classNumber: "02",

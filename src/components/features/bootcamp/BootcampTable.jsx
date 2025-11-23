@@ -2,17 +2,9 @@ import React from 'react';
 import styles from './BootcampTable.module.css';
 import { SmartLink } from '@/components/mdx';
 
-const BootcampTable = ({ courses, platformName }) => { // ✅ Ahora recibe platformName
+const BootcampTable = ({ courses }) => {
   return (
     <div className={styles.tableWrapper}>
-      {/* ✅ Renderiza el nombre de la plataforma */}
-      {platformName && (
-        <div className={styles.platformHeader}>
-          <h2 className={styles.platformTitle}>
-            Bootcamps de {platformName}
-          </h2>
-        </div>
-      )}
       <table className={`${styles.table} ${styles.bootcamps}`}>
         <thead>
           <tr>

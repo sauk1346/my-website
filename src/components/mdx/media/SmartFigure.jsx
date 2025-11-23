@@ -1,5 +1,6 @@
 'use client'
 import { useState, useEffect, createContext, useContext, useRef } from 'react'
+import Image from 'next/image'
 import styles from './SmartFigure.module.css'
 
 // Context para manejar la numeración de figuras
@@ -34,11 +35,11 @@ export function FigureProvider({ children }) {
   )
 }
 
-export default function SmartFigure({ 
-  src, 
-  alt = '', 
+export default function SmartFigure({
+  src,
+  alt = '',
   caption,
-  id, 
+  id,
   width,
   height,
   center = true,
@@ -46,7 +47,12 @@ export default function SmartFigure({
   className = '',
   size = 'auto', // 'small', 'medium', 'large', 'auto'
   autoNumber = true,
-  ...props 
+  optimized = false, // NEW: Enable Next.js Image optimization
+  priority = false, // NEW: Load image with priority (for above-the-fold images)
+  quality = 90, // NEW: Image quality (1-100)
+  placeholder = 'blur', // NEW: 'blur' | 'empty'
+  blurDataURL, // NEW: Custom blur placeholder
+  ...props
 }) {
   const [isLightboxOpen, setIsLightboxOpen] = useState(false)
   const [isClosing, setIsClosing] = useState(false)
@@ -158,19 +164,19 @@ export default function SmartFigure({
   // Estilos de centrado garantizados
   const imageStyle = {
     ...customStyles,
-    maxWidth: size === 'small' ? '300px' : 
-              size === 'medium' ? '500px' : 
+    maxWidth: size === 'small' ? '300px' :
+              size === 'medium' ? '500px' :
               size === 'large' ? '700px' : '100%',
     height: 'auto',
-    ...(center && { 
-      display: 'block', 
-      marginLeft: 'auto', 
+    ...(center && {
+      display: 'block',
+      marginLeft: 'auto',
       marginRight: 'auto'
     }),
   }
 
   const figureStyle = {
-    ...(center && { 
+    ...(center && {
       textAlign: 'center',
       display: 'flex',
       flexDirection: 'column',
@@ -183,21 +189,60 @@ export default function SmartFigure({
   const figureNumber = figureContext?.figures[id]
 
   // Construir caption con numeración
-  const fullCaption = autoNumber && figureNumber ? 
-    `Figura ${figureNumber}${caption ? `: ${caption}` : ''}` : 
+  const fullCaption = autoNumber && figureNumber ?
+    `Figura ${figureNumber}${caption ? `: ${caption}` : ''}` :
     caption
+
+  // Determinar dimensiones para Next.js Image
+  const getImageDimensions = () => {
+    if (width && height) {
+      return { width: parseInt(width), height: parseInt(height) }
+    }
+    // Valores por defecto basados en size
+    const sizeMap = {
+      small: { width: 300, height: 200 },
+      medium: { width: 500, height: 333 },
+      large: { width: 700, height: 467 },
+      auto: { width: 1200, height: 800 }
+    }
+    return sizeMap[size] || sizeMap.auto
+  }
+
+  const imageDimensions = getImageDimensions()
 
   return (
     <>
       <figure id={id} className={figureClasses} style={figureStyle} {...props}>
-        <img
-          src={src}
-          alt={alt}
-          className={imageClasses}
-          style={imageStyle}
-          onClick={openLightbox}
-          loading="lazy"
-        />
+        {optimized ? (
+          <Image
+            src={src}
+            alt={alt}
+            width={imageDimensions.width}
+            height={imageDimensions.height}
+            className={imageClasses}
+            style={imageStyle}
+            onClick={openLightbox}
+            quality={quality}
+            priority={priority}
+            placeholder={blurDataURL ? 'blur' : placeholder === 'blur' ? 'empty' : placeholder}
+            blurDataURL={blurDataURL}
+            sizes={
+              size === 'small' ? '300px' :
+              size === 'medium' ? '500px' :
+              size === 'large' ? '700px' :
+              '(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px'
+            }
+          />
+        ) : (
+          <img
+            src={src}
+            alt={alt}
+            className={imageClasses}
+            style={imageStyle}
+            onClick={openLightbox}
+            loading="lazy"
+          />
+        )}
         {fullCaption && (
           <figcaption className={styles.caption}>
             {fullCaption}
@@ -207,19 +252,33 @@ export default function SmartFigure({
 
       {/* Lightbox con scroll vertical */}
       {isLightboxOpen && (
-        <div 
+        <div
           ref={lightboxScrollRef}
-          className={`${styles.lightbox} ${isClosing ? styles.closing : ''}`} 
+          className={`${styles.lightbox} ${isClosing ? styles.closing : ''}`}
           onClick={handleLightboxClick}
         >
           <div className={`${styles.lightboxContent} ${isClosing ? styles.closing : ''}`}>
-            <img
-              src={src}
-              alt={alt}
-              className={styles.lightboxImage}
-              onClick={(e) => e.stopPropagation()}
-            />
-            
+            {optimized ? (
+              <Image
+                src={src}
+                alt={alt}
+                width={imageDimensions.width * 2} // Larger for lightbox
+                height={imageDimensions.height * 2}
+                className={styles.lightboxImage}
+                onClick={(e) => e.stopPropagation()}
+                quality={100} // Max quality for lightbox
+                priority
+                sizes="100vw"
+              />
+            ) : (
+              <img
+                src={src}
+                alt={alt}
+                className={styles.lightboxImage}
+                onClick={(e) => e.stopPropagation()}
+              />
+            )}
+
             {/* Botón de cerrar */}
             <button
               onClick={closeLightbox}

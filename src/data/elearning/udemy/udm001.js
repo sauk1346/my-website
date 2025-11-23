@@ -10,13 +10,13 @@ export const udm001Data = {
         {
           classNumber: "01",
           name: "Working with Variables in Python to Manage Data",
-          link: "udm001/day001",
+          link: "day001",
           exercises: null,
         },
         {
           classNumber: "02",
           name: "Understanding Data Types and How to Manipulate Strings",
-          link: "udm001/day002",
+          link: "day002",
           exercises: null,
         },
       ]

@@ -1,30 +1,43 @@
+/* =================================================================
+   BOOTCAMPTABLE - USANDO ESTILOS BASE COMPARTIDOS
+   Importa estilos comunes de table-base.module.css
+   Solo define estilos específicos de este componente
+   ================================================================= */
+
+/* Importar estilos base */
+@import url('/src/shared/table-base.module.css');
+
+/* Composición de clases base */
+.platformTitle {
+  composes: platformTitle from '/src/shared/table-base.module.css';
+  text-align: center;
+}
+
+.platformTitle::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.table {
+  composes: table from '/src/shared/table-base.module.css';
+}
+
+.code {
+  composes: code from '/src/shared/table-base.module.css';
+}
+
+.noCertificate {
+  composes: noCertificate from '/src/shared/table-base.module.css';
+}
+
+/* ================================
+   ESTILOS ESPECÍFICOS DE BOOTCAMPTABLE
+   ================================ */
+
 /* Header de la plataforma */
 .platformHeader {
   margin-bottom: 1.5rem;
   text-align: center;
-}
-
-.platformTitle {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #1f2937;
-  margin-bottom: 1.5rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 3px solid #2563eb;
-  position: relative;
-  transition: color 0.3s ease, border-color 0.3s ease;
-}
-
-.platformTitle::after {
-  content: '';
-  position: absolute;
-  bottom: -3px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 50px;
-  height: 3px;
-  background: #60a5fa;
-  transition: background 0.3s ease;
 }
 
 /* Wrapper de la tabla */
@@ -33,45 +46,6 @@
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
-}
-
-/* Estilos base de la tabla */
-.table {
-  width: 100%;
-  border-collapse: collapse;
-  background: white;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  table-layout: fixed;
-}
-
-.table thead {
-  background: linear-gradient(135deg, #2563eb 0%, #1f2937 100%);
-}
-
-.table th, .table td {
-  padding: 1rem 0.75rem;
-  text-align: left;
-  border: 1px solid white;
-  transition: border-color 0.3s ease, color 0.3s ease;
-}
-
-.table thead th {
-  font-weight: 600;
-  color: white;
-  font-size: 0.875rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  border-color: transparent;
-}
-
-.table tbody td {
-  color: #1f2937;
-  font-size: 0.875rem;
-  line-height: 1.5;
-  border-color: white;
 }
 
 /* Anchos de columnas para bootcamp (Sigla, Nombre, Certificado) */
@@ -93,30 +67,7 @@
   min-width: 150px;
 }
 
-/* Efecto hover para las filas */
-.table tbody tr {
-  transition: background-color 0.2s ease;
-}
-
-.table tbody tr:hover {
-  background-color: #edf2f7;
-  cursor: pointer;
-}
-
-/* Celda de código completamente pintada */
-.table td:first-child {
-  background-color: #f3f4f6;
-  transition: background-color 0.3s ease;
-}
-
-.code {
-  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
-  font-weight: 600;
-  color: #2563eb;
-  font-size: 0.8rem;
-  transition: color 0.3s ease;
-}
-
+/* Enlaces de título */
 .titleLink {
   color: #2563eb;
   text-decoration: none;
@@ -129,10 +80,19 @@
   color: #1d4ed8;
 }
 
-/* Eliminar outline azul en enlaces */
 .titleLink:focus,
 .titleLink:active {
   outline: none;
+}
+
+:global(html.dark-mode) .titleLink,
+:global(html.dark-mode-override) .titleLink {
+  color: #60a5fa;
+}
+
+:global(html.dark-mode) .titleLink:hover,
+:global(html.dark-mode-override) .titleLink:hover {
+  color: #93c5fd;
 }
 
 /* Estados de certificado */
@@ -159,81 +119,6 @@
   box-shadow: 0 4px 8px rgba(16, 185, 129, 0.4);
 }
 
-.noCertificate {
-  color: #9ca3af;
-  font-style: italic;
-  font-weight: 500;
-}
-
-/* =================================================================
-   MODO OSCURO
-   ================================================================= */
-:global(html.dark-mode) .platformTitle,
-:global(html.dark-mode-override) .platformTitle {
-  color: #e5e7eb;
-  border-bottom-color: #60a5fa;
-}
-
-:global(html.dark-mode) .platformTitle::after,
-:global(html.dark-mode-override) .platformTitle::after {
-  background: #93c5fd;
-}
-
-:global(html.dark-mode) .table,
-:global(html.dark-mode-override) .table {
-  background-color: #1e1e1e;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
-}
-
-:global(html.dark-mode) .table thead,
-:global(html.dark-mode-override) .table thead {
-  background: linear-gradient(135deg, #374151 0%, #111827 100%);
-}
-
-:global(html.dark-mode) .table th,
-:global(html.dark-mode) .table td,
-:global(html.dark-mode-override) .table th,
-:global(html.dark-mode-override) .table td {
-  border-color: #1e1e1e;
-}
-
-:global(html.dark-mode) .table thead th,
-:global(html.dark-mode-override) .table thead th {
-  color: #f9fafb;
-  border-color: transparent;
-}
-
-:global(html.dark-mode) .table tbody td,
-:global(html.dark-mode-override) .table tbody td {
-  color: #e5e7eb;
-  border-color: #1e1e1e;
-}
-
-:global(html.dark-mode) .table tbody tr:hover,
-:global(html.dark-mode-override) .table tbody tr:hover {
-  background-color: #2d3748;
-}
-
-:global(html.dark-mode) .table td:first-child,
-:global(html.dark-mode-override) .table td:first-child {
-  background-color: #374151;
-}
-
-:global(html.dark-mode) .code,
-:global(html.dark-mode-override) .code {
-  color: #60a5fa;
-}
-
-:global(html.dark-mode) .titleLink,
-:global(html.dark-mode-override) .titleLink {
-  color: #60a5fa;
-}
-
-:global(html.dark-mode) .titleLink:hover,
-:global(html.dark-mode-override) .titleLink:hover {
-  color: #93c5fd;
-}
-
 :global(html.dark-mode) .certificateLink,
 :global(html.dark-mode-override) .certificateLink {
   background: linear-gradient(135deg, #047857, #065f46);
@@ -246,99 +131,11 @@
   box-shadow: 0 4px 8px rgba(6, 95, 70, 0.5);
 }
 
-:global(html.dark-mode) .noCertificate,
-:global(html.dark-mode-override) .noCertificate {
-  color: #9ca3af;
-}
-
-/* =================================================================
-   RESPONSIVE DESIGN
-   ================================================================= */
-
+/* ================================
+   RESPONSIVE ESPECÍFICO
+   ================================ */
 @media (max-width: 768px) {
-  .platformTitle {
-    font-size: 1.25rem;
-  }
-  
   .platformHeader {
     margin-bottom: 1rem;
-  }
-
-  .table {
-    font-size: 0.8rem;
-  }
-
-  .table thead th,
-  .table tbody td {
-    padding: 0.75rem 0.5rem;
-  }
-}
-
-@media (max-width: 640px) {
-  .table thead th,
-  .table tbody td {
-    padding: 0.5rem 0.25rem;
-    font-size: 0.75rem;
-  }
-}
-
-/* Pantallas muy pequeñas - Layout de cards */
-@media (max-width: 480px) {
-  .platformTitle {
-    font-size: 1.1rem;
-  }
-
-  .table,
-  .table thead,
-  .table tbody,
-  .table th,
-  .table td,
-  .table tr {
-    display: block;
-  }
-  
-  .table thead tr {
-    position: absolute;
-    top: -9999px;
-    left: -9999px;
-  }
-  
-  .table tbody tr {
-    border: 1px solid #e5e7eb;
-    border-radius: 8px;
-    margin-bottom: 0.5rem;
-    padding: 0.5rem;
-    position: relative;
-    background: white;
-  }
-  
-  :global(html.dark-mode) .table tbody tr,
-  :global(html.dark-mode-override) .table tbody tr {
-    border-color: #374151;
-    background: #1e1e1e;
-  }
-  
-  .table tbody td {
-    border: none;
-    padding: 0.5rem 0;
-    position: relative;
-    padding-left: 30% !important;
-    background: transparent !important;
-  }
-  
-  .table tbody td:before {
-    content: attr(data-label) ": ";
-    position: absolute;
-    left: 6px;
-    width: 25%;
-    padding-right: 10px;
-    white-space: nowrap;
-    font-weight: 600;
-    color: #2563eb;
-  }
-  
-  :global(html.dark-mode) .table tbody td:before,
-  :global(html.dark-mode-override) .table tbody td:before {
-    color: #60a5fa;
   }
 }

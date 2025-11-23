@@ -9,17 +9,17 @@ export const cft003Data = {
         {
           classNumber: "01",
           name: "Introducción a Git",
-          link: "cft003/clase01"
+          link: "clase01"
         },
         {
           classNumber: "02",
           name: "Instalación y configuración de Python",
-          link: "cft003/clase02"
+          link: "clase02"
         },
         {
           classNumber: "03",
           name: "Asesoría 1: Introducción",
-          link: "cft003/clase03"
+          link: "clase03"
         },
       ]
     },
@@ -30,22 +30,22 @@ export const cft003Data = {
         {
           classNumber: "04",
           name: "Introducción a Python",
-          link: "cft003/clase04"
+          link: "clase04"
         },
         {
           classNumber: "05",
           name: "Condiciones",
-          link: "cft003/clase05"
+          link: "clase05"
         },
         {
           classNumber: "06",
           name: "Ciclos",
-          link: "cft003/clase06"
+          link: "clase06"
         },
         {
           classNumber: "07",
           name: "Asesoría 2: Fundamentos Programación",
-          link: "cft003/clase07"
+          link: "clase07"
         },
       ]
     },
@@ -56,22 +56,22 @@ export const cft003Data = {
         {
           classNumber: "08",
           name: "Listas",
-          link: "cft003/clase08"
+          link: "clase08"
         },
         {
           classNumber: "09",
           name: "Tuplas",
-          link: "cft003/clase09"
+          link: "clase09"
         },
         {
           classNumber: "10",
           name: "Funciones",
-          link: "cft003/clase10"
+          link: "clase10"
         },
         {
           classNumber: "11",
           name: "Programación Funcional",
-          link: "cft003/clase11"
+          link: "clase11"
         },
         {
           classNumber: "12",

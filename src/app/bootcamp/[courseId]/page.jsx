@@ -2,7 +2,7 @@ import React from 'react';
 import { notFound } from 'next/navigation';
 import CftTable from '@/components/features/bootcamp/codfacilito/CftTable';
 import UddDetail from '@/components/features/bootcamp/udd/UddDetail';
-import { getAllBootcampCoursePaths, getBootcampCourseData } from '@/utils/bootcampUtils';
+import { getAllBootcampCoursePaths, getBootcampCourseData, getPlatformByCourseId } from '@/utils/bootcampUtils';
 
 /**
  * Pre-genera todas las páginas de cursos en build time
@@ -20,7 +20,8 @@ export const dynamicParams = false;
  * Genera metadata dinámica para SEO
  */
 export async function generateMetadata({ params }) {
-    const { platform, courseId } = await params;
+    const { courseId } = await params;
+    const platform = getPlatformByCourseId(courseId);
     const courseData = getBootcampCourseData(platform, courseId);
 
     return {
@@ -30,7 +31,8 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function CoursePage({ params }) {
-    const { platform, courseId } = await params;
+    const { courseId } = await params;
+    const platform = getPlatformByCourseId(courseId);
     const courseData = getBootcampCourseData(platform, courseId);
 
     if (!courseData) {

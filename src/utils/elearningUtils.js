@@ -1,7 +1,7 @@
 import { extractSlugsFromCourseData } from './contentUtils';
-import { udm001Data } from '@/data/elearning/udm001';
-import { udm002Data } from '@/data/elearning/udm002';
-import { dvt010Data } from '@/data/elearning/dvt010';
+import { udm001Data } from '@/data/elearning/udemy/udm001';
+import { udm002Data } from '@/data/elearning/udemy/udm002';
+import { dvt010Data } from '@/data/elearning/devtalles/dvt010';
 import { cft002Data } from '@/data/elearning/codfacilito/cft002';
 
 const elearningDataMap = {
@@ -39,7 +39,19 @@ export function getAllElearningPlatforms() {
 }
 
 /**
- * Obtiene todos los pares platform/courseId/slug para generateStaticParams
+ * Obtiene la plataforma dado un courseId
+ */
+export function getPlatformByCourseId(courseId) {
+    for (const [platform, courses] of Object.entries(elearningDataMap)) {
+        if (courses[courseId]) {
+            return platform;
+        }
+    }
+    return null;
+}
+
+/**
+ * Obtiene todos los pares courseId/slug para generateStaticParams
  */
 export function getAllElearningLessonPaths() {
     const platforms = getAllElearningPlatforms();
@@ -56,7 +68,6 @@ export function getAllElearningLessonPaths() {
 
             slugs.forEach(slug => {
                 allParams.push({
-                    platform,
                     courseId,
                     slug
                 });
@@ -68,7 +79,7 @@ export function getAllElearningLessonPaths() {
 }
 
 /**
- * Obtiene todos los pares platform/courseId para páginas de curso
+ * Obtiene todos los pares courseId para páginas de curso
  */
 export function getAllElearningCoursePaths() {
     const platforms = getAllElearningPlatforms();
@@ -79,7 +90,6 @@ export function getAllElearningCoursePaths() {
 
         courseIds.forEach(courseId => {
             allParams.push({
-                platform,
                 courseId
             });
         });

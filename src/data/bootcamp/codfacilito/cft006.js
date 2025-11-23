@@ -9,12 +9,12 @@ export const cft006Data = {
         {
           classNumber: "01",
           name: "Fundamentos de Git y GitHub",
-          link: "cft006/clase01"
+          link: "clase01"
         },
         {
           classNumber: "02",
           name: "Guardar y Administrar cambios",
-          link: "cft006/clase02"
+          link: "clase02"
         },
       ]
     },

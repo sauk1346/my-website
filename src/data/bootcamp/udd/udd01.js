@@ -6,43 +6,43 @@ export const udd01Data = {
     data: [
       {
         title: "Algoritmo de Sistema de Costos",
-        projectLink: "udd001/proj01",
-        demoLink: "udd001/demo01",
+        projectLink: "proj01",
+        demoLink: "demo01",
         badgeLink: "https://www.credly.com/badges/c74eb3ca-ecfe-4dcf-9130-80d8923877a3/public_url",
         deliveryLink: "https://github.com/sauk1346/UDD_C13_Proyecto01"
       },
       {
         title: "Sistema de Votación en JS",
-        projectLink: "udd001/proj02",
-        demoLink: "udd001/demo02",
+        projectLink: "proj02",
+        demoLink: "demo02",
         badgeLink: "https://www.credly.com/badges/bfbfa2ad-09f0-49ab-bef2-8ac0bfe15773/public_url",
         deliveryLink: "https://github.com/sauk1346/UDD_C13_Proyecto02"
       },
       {
         title: "Landing de Negocio",
-        projectLink: "udd001/proj03",
-        demoLink: "udd001/demo03",
+        projectLink: "proj03",
+        demoLink: "demo03",
         badgeLink: "https://www.credly.com/badges/e91090b1-32f9-43cc-9e74-1b45f3f4df2f/public_url",
         deliveryLink: "https://github.com/sauk1346/UDD_C13_Proyecto03"
       },
       {
         title: "Reservas Hoteleras",
-        projectLink: "udd001/proj04",
-        demoLink: "udd001/demo04",
+        projectLink: "proj04",
+        demoLink: "demo04",
         badgeLink: "https://www.credly.com/badges/fb2a98c4-033c-4f9e-bbfd-7e3ea548ef55/public_url",
         deliveryLink: "https://github.com/sauk1346/UDD_C13_Proyecto04"
       },
       {
         title: "Aplicación Web con React",
         projectLink: null,
-        demoLink: "udd001/demo05",
+        demoLink: "demo05",
         badgeLink: "https://www.credly.com/badges/c1d1d5f3-5a5c-4e57-b9f6-bdd860e6e1ee/public_url",
         deliveryLink: "https://github.com/sauk1346/UDD_C13_Proyecto05"
       },
       {
         title: "Aplicación Backend con Autenticación",
         projectLink: null,
-        demoLink: "udd001/demo06",
+        demoLink: "demo06",
         badgeLink: "https://www.credly.com/badges/a95e98d1-4f99-4b7b-97fb-c14ead921a2e/public_url",
         deliveryLink: "https://github.com/sauk1346/UDD_C13_Proyecto06"
       },

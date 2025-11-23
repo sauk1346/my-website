@@ -10,13 +10,13 @@ export const cft001Data = {
         {
           classNumber: "01",
           name: "¿Qué hace un científico de datos?",
-          link: "cft001/clase01",
+          link: "clase01",
           exercises: null
         },
         {
           classNumber: "02",
           name: "Conoce tus herramientas de ciencia de datos",
-          link: "cft001/clase02",
+          link: "clase02",
           exercises: null
         }
       ]
@@ -28,13 +28,13 @@ export const cft001Data = {
         {
           classNumber: "03",
           name: "Estadística (1)",
-          link: "cft001/clase03",
+          link: "clase03",
           exercises: null
         },
         {
           classNumber: "04",
           name: "Estadística (2)",
-          link: "cft001/clase04",
+          link: "clase04",
           exercises: null
         }
       ]
@@ -46,19 +46,19 @@ export const cft001Data = {
         {
           classNumber: "05",
           name: "Numpy",
-          link: "cft001/clase05a",
+          link: "clase05a",
           exercises: {
             name: "Ejercicios Numpy",
-            link: "cft001/clase05b"
+            link: "clase05b"
           }
         },
         {
           classNumber: "06",
           name: "Pandas",
-          link: "cft001/clase06a",
+          link: "clase06a",
           exercises: {
             name: "Ejercicios Pandas",
-            link: "cft001/clase06b"
+            link: "clase06b"
           }
         },
         {
@@ -76,13 +76,13 @@ export const cft001Data = {
         {
           classNumber: "08",
           name: "EDA (1)",
-          link: "cft001/clase08",
+          link: "clase08",
           exercises: null
         },
         {
           classNumber: "09",
           name: "EDA (2)",
-          link: "cft001/clase09",
+          link: "clase09",
           exercises: null
         }
       ]
@@ -94,13 +94,13 @@ export const cft001Data = {
         {
           classNumber: "10",
           name: "¿Qué es la visualización?",
-          link: "cft001/clase10",
+          link: "clase10",
           exercises: null
         },
         {
           classNumber: "11",
           name: "Gráficos Básicos",
-          link: "cft001/clase11",
+          link: "clase11",
           exercises: null
         },
         {

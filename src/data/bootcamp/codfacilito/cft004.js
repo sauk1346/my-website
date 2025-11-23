@@ -14,7 +14,7 @@ export const cft004Data = {
         {
           classNumber: "02",
           name: "Facturación y Economía de la Nube",
-          link: "cft004/clase02"
+          link: "clase02"
         },
       ]
     },
@@ -25,12 +25,12 @@ export const cft004Data = {
         {
           classNumber: "03",
           name: "Infraestructura Global de AWS",
-          link: "cft004/clase03"
+          link: "clase03"
         },
         {
           classNumber: "04",
           name: "Seguridad en la Nube",
-          link: "cft004/clase04"
+          link: "clase04"
         },
       ]
     },

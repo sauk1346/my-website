@@ -47,7 +47,19 @@ export function getAllBootcampPlatforms() {
 }
 
 /**
- * Obtiene todos los pares platform/courseId/slug para generateStaticParams
+ * Obtiene la plataforma dado un courseId
+ */
+export function getPlatformByCourseId(courseId) {
+    for (const [platform, courses] of Object.entries(bootcampDataMap)) {
+        if (courses[courseId]) {
+            return platform;
+        }
+    }
+    return null;
+}
+
+/**
+ * Obtiene todos los pares courseId/slug para generateStaticParams
  */
 export function getAllBootcampLessonPaths() {
     const platforms = getAllBootcampPlatforms();
@@ -64,7 +76,6 @@ export function getAllBootcampLessonPaths() {
 
             slugs.forEach(slug => {
                 allParams.push({
-                    platform,
                     courseId,
                     slug
                 });
@@ -76,7 +87,7 @@ export function getAllBootcampLessonPaths() {
 }
 
 /**
- * Obtiene todos los pares platform/courseId para páginas de curso
+ * Obtiene todos los pares courseId para páginas de curso
  */
 export function getAllBootcampCoursePaths() {
     const platforms = getAllBootcampPlatforms();
@@ -87,7 +98,6 @@ export function getAllBootcampCoursePaths() {
 
         courseIds.forEach(courseId => {
             allParams.push({
-                platform,
                 courseId
             });
         });

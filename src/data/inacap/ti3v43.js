@@ -27,28 +27,28 @@ const courseData = {
             weighting: '20%',
             description: {
                 text: 'Prueba escrita',
-                href: 'ti3v43/eval01'
+                href: 'eval01'
             },
             quickGuide: [
                 {
                     text: 'Evaluación Diagnóstica',
-                    href: 'ti3v43/diagnostica'
+                    href: 'diagnostica'
                 },
                 {
                     text: 'Guía 00: Resumen',
-                    href: 'ti3v43/guia00'
+                    href: 'guia00'
                 },
                 {
                     text: 'Guía 01',
-                    href: 'ti3v43/guia01'
+                    href: 'guia01'
                 },
                 {
                     text: 'Guía 02',
-                    href: 'ti3v43/guia02'
+                    href: 'guia02'
                 },
                 {
                     text: 'Guía 03',
-                    href: 'ti3v43/guia03'
+                    href: 'guia03'
                 },
             ]  
         },
@@ -58,7 +58,7 @@ const courseData = {
             weighting: '65%',
             description: {
                 text: 'Proyecto grupal',
-                href: 'ti3v43/eval02'
+                href: 'eval02'
             },
         },
         { 
@@ -79,7 +79,7 @@ const courseData = {
             description: [
                 {
                     text: 'Introducción asignatura',
-                    href: '/inacap/ti3v43/docs/clase01.pdf',
+                    href: 'docs/clase01.pdf',
                     external: true
                 }
             ]
@@ -91,11 +91,11 @@ const courseData = {
             description: [
                 {
                     text: 'Modelos de Ciclos de Vida',
-                    href: '/inacap/ti3v43/docs/clase02.pdf'
+                    href: 'docs/clase02.pdf'
                 },
                 {
                     text: 'Apuntes',
-                    href: 'ti3v43/clase02'
+                    href: 'clase02'
                 },
 
             ]
@@ -118,11 +118,11 @@ const courseData = {
             description: [
                 {
                     text: 'Estándares de calidad',
-                    href: '/inacap/ti3v43/docs/clase04.pdf'
+                    href: 'docs/clase04.pdf'
                 },
                 {
                     text: 'Apuntes',
-                    href: 'ti3v43/clase04'
+                    href: 'clase04'
                 },
             ]
         },
@@ -133,11 +133,11 @@ const courseData = {
             description: [
                 {
                     text: 'Requerimientos del Software',
-                    href: '/inacap/ti3v43/docs/clase05.pdf'
+                    href: 'docs/clase05.pdf'
                 },
                 {
                     text: 'Apuntes',
-                    href: 'ti3v43/clase05'
+                    href: 'clase05'
                 },
             ]
         },
@@ -148,7 +148,7 @@ const courseData = {
             description: [
                 {
                     text: 'Modelado UML',
-                    href: '/inacap/ti3v43/docs/clase06.pdf'
+                    href: 'docs/clase06.pdf'
                 }
             ]
         },
@@ -159,7 +159,7 @@ const courseData = {
             description: [
                 {
                     text: 'Evaluación 01',
-                    href: 'ti3v43/eval01'
+                    href: 'eval01'
                 }
             ]
         },
@@ -258,7 +258,7 @@ const courseData = {
             description: [
                 {
                     text: 'Evaluación 02: Disertación (2)',
-                    href: 'ti3v43/eval02' 
+                    href: 'eval02' 
                 }
             ]
         },
@@ -281,7 +281,7 @@ const courseData = {
             date: 'Sáb 16, Ago 2025', 
             description: {
                 text: 'Introducción a la Ingeniería de software',
-                href: '/inacap/ti3v43/docs/lectura01.pdf',
+                href: 'docs/lectura01.pdf',
             }
         },
         { 
@@ -290,7 +290,7 @@ const courseData = {
             date: 'Sáb 16, Ago 2025', 
             description: {
                 text: 'Fundamentos de la Ingeniería de software',
-                href: 'ti3v43/lectura02'
+                href: 'lectura02'
             }
         },
         { 
@@ -299,7 +299,7 @@ const courseData = {
             date: 'Sáb 16, Ago 2025', 
             description: {
                 text: 'Teoría general de sistemas en la ingeniería de software',
-                href: 'ti3v43/lectura03',   
+                href: 'lectura03',   
             }
         },
         { 
@@ -308,7 +308,7 @@ const courseData = {
             date: 'Sáb 23, Ago 2025', 
             description: {
                 text: 'Modelos y metodologías de desarrollo de software',
-                href: 'ti3v43/lectura04',
+                href: 'lectura04',
             }
         },
         { 
@@ -317,7 +317,7 @@ const courseData = {
             date: 'Sáb 23, Ago 2025', 
             description: {
                 text: 'Estándares de calidad en la ingeniería de software',
-                href: 'ti3v43/lectura05',
+                href: 'lectura05',
             }
         },
         { 
@@ -326,7 +326,7 @@ const courseData = {
             date: 'Sáb 30, Ago 2025', 
             description: {
                 text: 'Co-creación, patrones y requerimientos del software',
-                href: '/inacap/ti3v43/docs/lectura06.pdf',
+                href: 'docs/lectura06.pdf',
             }
         },
         { 
@@ -335,7 +335,7 @@ const courseData = {
             date: 'Sáb 30, Ago 2025', 
             description: {
                 text: 'Introducción a los ciclos de vida y metodologías de desarrollo de software',
-                href: 'ti3v43/lectura07',
+                href: 'lectura07',
             }
         },
         { 
@@ -344,7 +344,7 @@ const courseData = {
             date: 'Sáb 30, Ago 2025', 
             description: {
                 text: 'Técnicas de levantamiento de requerimientos y co-creación',
-                href: 'ti3v43/lectura08',
+                href: 'lectura08',
             }
         },
         { 
@@ -353,7 +353,7 @@ const courseData = {
             date: 'Sáb 06, Sep 2025', 
             description: {
                 text: 'Patrones de diseño de software',
-                href: 'ti3v43/lectura09',
+                href: 'lectura09',
             }
         },
         { 
@@ -362,7 +362,7 @@ const courseData = {
             date: 'Sáb 06, Sep 2025', 
             description: {
                 text: 'Diagramas UML para modelado de sistemas',
-                href: 'ti3v43/lectura10',
+                href: 'lectura10',
             }
         },
         { 
@@ -371,7 +371,7 @@ const courseData = {
             date: 'Sáb 13, Sep 2025', 
             description: {
                 text: 'Estándares de calidad en software',
-                href: 'ti3v43/lectura11',
+                href: 'lectura11',
             }
         },
         { 
@@ -380,7 +380,7 @@ const courseData = {
             date: 'Sáb 13, Sep 2025', 
             description: {
                 text: 'Integración y revisión de proyecto',
-                href: 'ti3v43/lectura12',
+                href: 'lectura12',
             }
         },
         { 
@@ -389,7 +389,7 @@ const courseData = {
             date: 'Sáb 20, Sep 2025', 
             description: {
                 text: 'Implementación, Pruebas y Calidad de Software',
-                href: '/inacap/ti3v43/docs/lectura13.pdf',
+                href: 'docs/lectura13.pdf',
             }
         },
         { 
@@ -398,7 +398,7 @@ const courseData = {
             date: 'Sáb 20, Sep 2025', 
             description: {
                 text: 'Introducción a SaaS, IaaS, y Cloud Computing',
-                href: 'ti3v43/lectura14',
+                href: 'lectura14',
             }
         },
         { 
@@ -407,7 +407,7 @@ const courseData = {
             date: 'Sáb 20, Sep 2025', 
             description: {
                 text: 'Sistemas distribuidos y mensajería P2P',
-                href: 'ti3v43/lectura15',
+                href: 'lectura15',
             }
         },
         { 
@@ -416,7 +416,7 @@ const courseData = {
             date: 'Sáb 27, Sep 2025', 
             description: {
                 text: 'Normativa y ética en la confiabilidad de software',
-                href: 'ti3v43/lectura16',
+                href: 'lectura16',
             }
         },
         { 
@@ -425,7 +425,7 @@ const courseData = {
             date: 'Sáb 27, Sep 2025', 
             description: {
                 text: 'Desarrollo de prototipos según requisitos de proyecto',
-                href: 'ti3v43/lectura17',
+                href: 'lectura17',
             }
         },
         { 
@@ -434,7 +434,7 @@ const courseData = {
             date: 'Sáb 04, Oct 2025', 
             description: {
                 text: 'Modelado de sistemas mediante diagramas UML',
-                href: 'ti3v43/lectura18',
+                href: 'lectura18',
             }
         },
         { 
@@ -443,7 +443,7 @@ const courseData = {
             date: 'Sáb 04, Oct 2025', 
             description: {
                 text: 'Pruebas de testing y estándares de calidad',
-                href: 'ti3v43/lectura19',
+                href: 'lectura19',
             }
         },
         { 

@@ -140,7 +140,7 @@ const courseData = {
             description: [
                 {
                     text: 'Introducción BD NoSQL',
-                    href: 'ti3v32/clase01'
+                    href: 'clase01'
                 }
             ]
         },
@@ -172,7 +172,7 @@ const courseData = {
             description: [
                 {
                     text: 'Ejercicios CRUD (2)',
-                    href: 'ti3v32/clase04'
+                    href: 'clase04'
                 }
             ]
         },
@@ -203,7 +203,7 @@ const courseData = {
             description: [
                 {
                     text: 'MongoDB Shell',
-                    href: 'ti3v32/clase07'
+                    href: 'clase07'
                 }
             ]
         },
@@ -214,7 +214,7 @@ const courseData = {
             description: [
                 {
                     text: 'Ejercicio con puntaje',
-                    href: 'ti3v32/clase08'
+                    href: 'clase08'
                 }
             ]
         },
@@ -225,11 +225,11 @@ const courseData = {
             description: [
                 {
                     text: 'Eval01-A',
-                    href: 'ti3v32/eval01a'
+                    href: 'eval01a'
                 },
                 {
                     text: 'Eval01-B',
-                    href: 'ti3v32/eval01b'
+                    href: 'eval01b'
                 }
             ]
         },
@@ -240,7 +240,7 @@ const courseData = {
             description: [
                 {
                     text: 'Ejercicios MongoSh 01',
-                    href: 'ti3v32/clase10'
+                    href: 'clase10'
                 }
             ]
         },
@@ -251,7 +251,7 @@ const courseData = {
             description: [
                 {
                     text: 'Guía 01',
-                    href: 'ti3v32/guia21'
+                    href: 'guia21'
                 }
             ]
         },
@@ -262,7 +262,7 @@ const courseData = {
             description: [
                 {
                     text: 'Guía 02',
-                    href: 'ti3v32/guia22'
+                    href: 'guia22'
                 }
             ]
         },
@@ -273,7 +273,7 @@ const courseData = {
             description: [
                 {
                     text: 'Guía 03',
-                    href: 'ti3v32/guia23'
+                    href: 'guia23'
                 }
             ]
         },
@@ -294,7 +294,7 @@ const courseData = {
             description: [
                 {
                     text: 'Guía 04',
-                    href: 'ti3v32/guia24'
+                    href: 'guia24'
                 }
             ]
         },
@@ -305,7 +305,7 @@ const courseData = {
             description: [
                 {
                     text: 'Guía 05',
-                    href: 'ti3v32/guia25'
+                    href: 'guia25'
                 }
             ]
         },
@@ -316,7 +316,7 @@ const courseData = {
             description: [
                 {
                     text: 'Guía 06',
-                    href: 'ti3v32/guia26'
+                    href: 'guia26'
                 }
             ]
         },
@@ -327,7 +327,7 @@ const courseData = {
             description: [
                 {
                     text: 'Guía 07',
-                    href: 'ti3v32/guia27'
+                    href: 'guia27'
                 }
             ]
         },
@@ -338,7 +338,7 @@ const courseData = {
             description: [
                 {
                     text: 'Guía 08',
-                    href: 'ti3v32/guia28'
+                    href: 'guia28'
                 }
             ]
         },
@@ -349,7 +349,7 @@ const courseData = {
             description: [
                 {
                     text: 'Guía 09',
-                    href: 'ti3v32/guia29'
+                    href: 'guia29'
                 }
             ]
         },
@@ -360,11 +360,11 @@ const courseData = {
             description: [
                 {
                     text: 'Eval02-A',
-                    href: 'ti3v32/eval02a'
+                    href: 'eval02a'
                 },
                 {
                     text: 'Eval02-B',
-                    href: 'ti3v32/eval02b'
+                    href: 'eval02b'
                 }
             ]
         },
@@ -375,7 +375,7 @@ const courseData = {
             description: [
                 {
                     text: 'Python, MongoDB y APIs',
-                    href: 'ti3v32/clase22'
+                    href: 'clase22'
                 }
             ]
         },
@@ -386,7 +386,7 @@ const courseData = {
             description: [
                 {
                     text: 'Guía 10',
-                    href: 'ti3v32/guia31'
+                    href: 'guia31'
                 }
             ]
         },
@@ -408,7 +408,7 @@ const courseData = {
             description: [
                 {
                     text: 'Guía 11',
-                    href: 'ti3v32/guia32'
+                    href: 'guia32'
                 }
             ]
         },
@@ -419,11 +419,11 @@ const courseData = {
             description: [
                 {
                     text: 'Eval03-C',
-                    href: 'ti3v32/eval03c'
+                    href: 'eval03c'
                 },
                 {
                     text: 'Eval03-D',
-                    href: 'ti3v32/eval03d'
+                    href: 'eval03d'
                 }
             ]
         },
@@ -447,7 +447,7 @@ const courseData = {
             description: [
                 {
                     text: 'Introducción a las bases de datos no estructuradas',
-                    href: '/inacap/ti3v32/docs/lectura01.pdf',
+                    href: 'docs/lectura01.pdf',
                     external: true
                 }
             ]
@@ -459,7 +459,7 @@ const courseData = {
             description: [
                 {
                     text: 'Bases de datos no estructuradas: características y tipos',
-                    href: 'ti3v32/lectura02'
+                    href: 'lectura02'
                 }
             ]
         },
@@ -470,7 +470,7 @@ const courseData = {
             description: [
                 {
                     text: 'Elementos de las bases de datos no estructuradas documentales y características de Mongo DB',
-                    href: 'ti3v32/lectura03'
+                    href: 'lectura03'
                 }
             ]
         },
@@ -481,7 +481,7 @@ const courseData = {
             description: [
                 {
                     text: 'Operdores esenciales con MongoDB',
-                    href: '/inacap/ti3v32/docs/lectura04.pdf',
+                    href: 'docs/lectura04.pdf',
                     external: true
                 }
             ]
@@ -493,7 +493,7 @@ const courseData = {
             description: [
                 {
                     text: 'Etapas del proceso de instalación de MongoDB y principales comandos de gestión',
-                    href: 'ti3v32/lectura05'
+                    href: 'lectura05'
                 }
             ]
         },
@@ -504,7 +504,7 @@ const courseData = {
             description: [
                 {
                     text: 'Operaciones CRUD en documentos y subdocumentos',
-                    href: 'ti3v32/lectura06'
+                    href: 'lectura06'
                 }
             ]
         },
@@ -515,7 +515,7 @@ const courseData = {
             description: [
                 {
                     text: 'Búsqueda avanzada con MongoDB',
-                    href: '/inacap/ti3v32/docs/lectura07.pdf',
+                    href: 'docs/lectura07.pdf',
                     external: true
                 }
             ]
@@ -527,7 +527,7 @@ const courseData = {
             description: [
                 {
                     text: 'Selección de filtros y condiciones según requerimientos de búsqueda',
-                    href: 'ti3v32/lectura08'
+                    href: 'lectura08'
                 }
             ]
         },
@@ -538,7 +538,7 @@ const courseData = {
             description: [
                 {
                     text: 'Busqueda avanzada usando expresiones regulares',
-                    href: 'ti3v32/lectura09'
+                    href: 'lectura09'
                 }
             ]
         },
@@ -549,7 +549,7 @@ const courseData = {
             description: [
                 {
                     text: 'Comandos de búsqueda en subdocumentos con iteración y asociaciones lógicas',
-                    href: 'ti3v32/lectura10'
+                    href: 'lectura10'
                 }
             ]
         }

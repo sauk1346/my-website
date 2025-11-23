@@ -31,7 +31,7 @@ const courseData = {
             weighting: '20%', 
             description: {
                 text: 'Evaluación 01',
-                href: 'ti3v11/eval01'
+                href: 'eval01'
             }
         },
         { 
@@ -40,16 +40,16 @@ const courseData = {
             weighting: '35%', 
             description: {
                 text: 'Evaluación 02',
-                href: 'ti3v11/eval02'
+                href: 'eval02'
             },
             quickGuide: [
                 {
                     text: 'guía 01',
-                    href: 'ti3v11/guia21'
+                    href: 'guia21'
                 },
                 {
                     text: 'guía 02',
-                    href: 'ti3v11/guia22'
+                    href: 'guia22'
                 }
             ]
         },
@@ -59,7 +59,7 @@ const courseData = {
             weighting: '35%', 
             description: {
                 text: 'Informe SAMM y SDL',
-                href: '/inacap/ti3v11/docs/eval03_sol.pdf',
+                href: 'docs/eval03_sol.pdf',
                 external: true
             }
         },
@@ -69,7 +69,7 @@ const courseData = {
             weighting: '10%', 
             description: {
                 text: 'Promedio Controles',
-                href: 'ti3v11/controles'
+                href: 'controles'
             }
         }
     ],
@@ -81,7 +81,7 @@ const courseData = {
             description: [
                 {
                     text: 'Pseudocódigo, Diagrama de Flujo',
-                    href: 'ti3v11/clase01'
+                    href: 'clase01'
                 }
             ]
         },
@@ -92,7 +92,7 @@ const courseData = {
             description: [
                 {
                     text: 'Variables, Condiciones, Bucles',
-                    href: 'ti3v11/clase02'
+                    href: 'clase02'
                 }
             ]
         },
@@ -103,7 +103,7 @@ const courseData = {
             description: [
                 {
                     text: 'Condicionales y Lógica Booleana',
-                    href: 'ti3v11/clase03'
+                    href: 'clase03'
                 }
             ]
         },
@@ -114,7 +114,7 @@ const courseData = {
             description: [
                 {
                     text: 'Introducción a PSeInt',
-                    href: 'ti3v11/clase04'
+                    href: 'clase04'
                 }
             ]
         },
@@ -125,7 +125,7 @@ const courseData = {
             description: [
                 {
                     text: 'Ejercicios con Bucles (1)',
-                    href: 'ti3v11/clase05'
+                    href: 'clase05'
                 }
             ]
         },
@@ -136,7 +136,7 @@ const courseData = {
             description: [
                 {
                     text: 'Ejercicios con Bucles (2)',
-                    href: 'ti3v11/clase06'
+                    href: 'clase06'
                 }
             ]
         },
@@ -147,7 +147,7 @@ const courseData = {
             description: [
                 {
                     text: 'Ejercicios con Bucles (3)',
-                    href: 'ti3v11/clase07'
+                    href: 'clase07'
                 }
             ]
         },
@@ -158,7 +158,7 @@ const courseData = {
             description: [
                 {
                     text: 'Evaluación 01',
-                    href: 'ti3v11/eval01'
+                    href: 'eval01'
                 }
             ]
         },
@@ -169,7 +169,7 @@ const courseData = {
             description: [
                 {
                     text: 'Introducción a Python',
-                    href: 'ti3v11/clase09'
+                    href: 'clase09'
                 }
             ]
         },
@@ -180,7 +180,7 @@ const courseData = {
             description: [
                 {
                     text: 'Intrucciones if(), while()',
-                    href: 'ti3v11/clase10'
+                    href: 'clase10'
                 }
             ]
         },
@@ -202,7 +202,7 @@ const courseData = {
             description: [
                 {
                     text: 'Instrucción for(), Ejercicios, Tarea',
-                    href: 'ti3v11/clase12'
+                    href: 'clase12'
                 }
             ]
         },
@@ -213,7 +213,7 @@ const courseData = {
             description: [
                 {
                     text: 'Revisión Tarea, Listas, Ejercicios',
-                    href: 'ti3v11/clase13'
+                    href: 'clase13'
                 }
             ]
         },
@@ -224,7 +224,7 @@ const courseData = {
             description: [
                 {
                     text: 'Ejercicios',
-                    href: 'ti3v11/clase14'
+                    href: 'clase14'
                 }
             ]
         },
@@ -235,7 +235,7 @@ const courseData = {
             description: [
                 {
                     text: 'Tuplas, Ejercicios',
-                    href: 'ti3v11/clase15'
+                    href: 'clase15'
                 }
             ]
         },
@@ -246,7 +246,7 @@ const courseData = {
             description: [
                 {
                     text: 'Diccionarios, Ejercicios',
-                    href: 'ti3v11/clase16'
+                    href: 'clase16'
                 }
             ]
         },
@@ -257,7 +257,7 @@ const courseData = {
             description: [
                 {
                     text: 'Ejercicio Estudiantes',
-                    href: 'ti3v11/clase17'
+                    href: 'clase17'
                 }
             ]
         },
@@ -268,7 +268,7 @@ const courseData = {
             description: [
                 {
                     text: 'Funciones',
-                    href: 'ti3v11/clase18'
+                    href: 'clase18'
                 }
             ]
         },
@@ -279,7 +279,7 @@ const courseData = {
             description: [
                 {
                     text: 'Ejercicios con funciones',
-                    href: 'ti3v11/clase19'
+                    href: 'clase19'
                 }
             ]
         },
@@ -290,7 +290,7 @@ const courseData = {
             description: [
                 {
                     text: 'Evaluación 02: Primera parte',
-                    href: 'ti3v11/eval02'
+                    href: 'eval02'
                 }
             ]
         },
@@ -301,7 +301,7 @@ const courseData = {
             description: [
                 {
                     text: 'Evaluación 02: Segunda parte',
-                    href: 'ti3v11/eval02'
+                    href: 'eval02'
                 }
             ]
         },
@@ -312,7 +312,7 @@ const courseData = {
             description: [
                 {
                     text: 'Clase Recuperativa',
-                    href: 'ti3v11/clase22'
+                    href: 'clase22'
                 }
             ]
         },
@@ -323,7 +323,7 @@ const courseData = {
             description: [
                 {
                     text: 'Desarrollo Seguro',
-                    href: 'ti3v11/clase23'
+                    href: 'clase23'
                 }
             ]
         },
@@ -334,7 +334,7 @@ const courseData = {
             description: [
                 {
                     text: 'Encriptación',
-                    href: 'ti3v11/clase24'
+                    href: 'clase24'
                 }
             ]
         },
@@ -345,7 +345,7 @@ const courseData = {
             description: [
                 {
                     text: 'Informe SAMM y SDL',
-                    href: '/inacap/ti3v11/docs/eval03_sol.pdf',
+                    href: 'docs/eval03_sol.pdf',
                     external: true
                 }
             ]
@@ -359,7 +359,7 @@ const courseData = {
             description: [
                 {
                     text: 'El alcance de una problemática',
-                    href: 'ti3v11/lectura01'
+                    href: 'lectura01'
                 }
             ]
         },
@@ -370,7 +370,7 @@ const courseData = {
             description: [
                 {
                     text: 'Métodos para la resolución de problemas',
-                    href: 'ti3v11/lectura02'
+                    href: 'lectura02'
                 }
             ]
         },
@@ -381,7 +381,7 @@ const courseData = {
             description: [
                 {
                     text: 'Diagrama de flujo de datos',
-                    href: 'ti3v11/lectura03'
+                    href: 'lectura03'
                 }
             ]
         },
@@ -392,7 +392,7 @@ const courseData = {
             description: [
                 {
                     text: 'Validación de la solución',
-                    href: 'ti3v11/lectura04'
+                    href: 'lectura04'
                 }
             ]
         },
@@ -403,7 +403,7 @@ const courseData = {
             description: [
                 {
                     text: 'Python: Estructura de desición y bucles',
-                    href: 'ti3v11/lectura05'
+                    href: 'lectura05'
                 }
             ]
         },
@@ -414,7 +414,7 @@ const courseData = {
             description: [
                 {
                     text: 'Python: Tipos de datos y variables',
-                    href: 'ti3v11/lectura06'
+                    href: 'lectura06'
                 }
             ]
         },
@@ -425,7 +425,7 @@ const courseData = {
             description: [
                 {
                     text: 'Python: Sentencias básicas en la resolución de problemas',
-                    href: 'ti3v11/lectura07'
+                    href: 'lectura07'
                 }
             ]
         },
@@ -436,7 +436,7 @@ const courseData = {
             description: [
                 {
                     text: 'La lógica en la Programación Python',
-                    href: 'ti3v11/lectura08'
+                    href: 'lectura08'
                 }
             ]
         },
@@ -447,7 +447,7 @@ const courseData = {
             description: [
                 {
                     text: 'Listas, tuplas y diccionarios seguros',
-                    href: 'ti3v11/lectura09'
+                    href: 'lectura09'
                 }
             ]
         },
@@ -458,7 +458,7 @@ const courseData = {
             description: [
                 {
                     text: 'Procedimientos para la manipulación de datos',
-                    href: 'ti3v11/lectura10'
+                    href: 'lectura10'
                 }
             ]
         },
@@ -469,7 +469,7 @@ const courseData = {
             description: [
                 {
                     text: 'Mitigación del riesgo y las vulnerabilidades',
-                    href: 'ti3v11/lectura11'
+                    href: 'lectura11'
                 }
             ]
         },
@@ -480,7 +480,7 @@ const courseData = {
             description: [
                 {
                     text: 'Librerías externas y seguras',
-                    href: 'ti3v11/lectura12'
+                    href: 'lectura12'
                 }
             ]
         },
@@ -491,7 +491,7 @@ const courseData = {
             description: [
                 {
                     text: 'Script con jerarquía de excepciones',
-                    href: 'ti3v11/lectura13'
+                    href: 'lectura13'
                 }
             ]
         }

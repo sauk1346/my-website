@@ -28,29 +28,29 @@ const courseData = {
             description: [
                 {
                     text: '1ra parte (FLSM)',
-                    href: 'ti3v35/eval01-1'
+                    href: 'eval01-1'
                 },
                 {
                     text: '2da parte (VLSM)',
-                    href: 'ti3v35/eval01-2'
+                    href: 'eval01-2'
                 }
             ],
             quickGuide: [
                 {
                     text: 'Guía 00: Conceptos',
-                    href: 'ti3v35/guia00'
+                    href: 'guia00'
                 },
                 {
                     text: 'Guía 01: Ejercicio Base (FLSM)',
-                    href: 'ti3v35/guia01'
+                    href: 'guia01'
                 },
                 {
                     text: 'Guía 02: PPT (FLSM)',
-                    href: 'ti3v35/guia02'
+                    href: 'guia02'
                 },
                                 {
                     text: 'Guía 03: VLSM',
-                    href: 'ti3v35/guia03'
+                    href: 'guia03'
                 }
             ]
         },
@@ -60,7 +60,7 @@ const courseData = {
             weighting: '30%',
             description: {
                 text: 'Windows Server',
-                href: 'ti3v35/eval02'
+                href: 'eval02'
             }
         },
         { 
@@ -69,7 +69,7 @@ const courseData = {
             weighting: '30%',
             description: {
                 text: 'Linux Server',
-                href: 'ti3v35/eval03'
+                href: 'eval03'
             }
         },
         { 
@@ -78,7 +78,7 @@ const courseData = {
             weighting: '25%',
             description: {
                 text: 'Informe: Comandos Linux',
-                href: '/inacap/ti3v35/docs/informe01.pdf',
+                href: 'docs/informe01.pdf',
                 external: true
             }
         }
@@ -91,7 +91,7 @@ const courseData = {
             description: [
                 {
                     text: 'Introducción TCP/IP',
-                    href: 'ti3v35/clase01'
+                    href: 'clase01'
                 }
             ]
         },
@@ -112,7 +112,7 @@ const courseData = {
             description: [
                 {
                     text: 'FLSM (2)',
-                    href: '/inacap/ti3v35/docs/subnetting.pdf',
+                    href: 'docs/subnetting.pdf',
                     external: true
                 }
             ]
@@ -124,11 +124,11 @@ const courseData = {
             description: [
                 {
                     text: 'Evaluación 01 parte 1: FLSM',
-                    href: 'ti3v35/eval01-1'
+                    href: 'eval01-1'
                 },
                 {
                     text: 'VLSM (1)',
-                    href: 'ti3v35/clase04'
+                    href: 'clase04'
                 }
             ]
         },
@@ -139,7 +139,7 @@ const courseData = {
             description: [
                 {
                     text: 'Guía 03: VLSM',
-                    href: 'ti3v35/guia03'
+                    href: 'guia03'
                 }
             ]
         },
@@ -150,7 +150,7 @@ const courseData = {
             description: [
                 {
                     text: 'Evaluación 01 parte 2: VLSM',
-                    href: 'ti3v35/eval01-2'
+                    href: 'eval01-2'
                 }
             ]
         },
@@ -161,7 +161,7 @@ const courseData = {
             description: [
                 {
                     text: 'Windows Server (1)',
-                    href: '/inacap/ti3v35/docs/clase07.pdf',
+                    href: 'docs/clase07.pdf',
                     external: true
                 }
             ]
@@ -213,7 +213,7 @@ const courseData = {
             description: [
                 {
                     text: 'Evaluación 02: Windows Server',
-                    href: 'ti3v35/eval02'
+                    href: 'eval02'
                 }
             ]
         },
@@ -234,7 +234,7 @@ const courseData = {
             description: [
                 {
                     text: 'Linux Server: Configuración Repositorios',
-                    href: '/inacap/ti3v35/docs/clase14.pdf',
+                    href: 'docs/clase14.pdf',
                     external: true
                 }
             ]
@@ -246,7 +246,7 @@ const courseData = {
             description: [
                 {
                     text: 'Linux Server: Herramientas Principales (1)',
-                    href: '/inacap/ti3v35/docs/clase15.pdf',
+                    href: 'docs/clase15.pdf',
                     external: true
                 }
             ]
@@ -258,7 +258,7 @@ const courseData = {
             description: [
                 {
                     text: 'Linux Server: Herramientas Principales (2)',
-                    href: '/inacap/ti3v35/docs/clase15.pdf',
+                    href: 'docs/clase15.pdf',
                     external: true
                 }
             ]
@@ -283,7 +283,7 @@ const courseData = {
             description: [
                 {
                     text: 'Unidad 1: Direccionamiento de redes basada en protocolos TCP/IP',
-                    href: '/inacap/ti3v35/docs/lectura01.pdf',
+                    href: 'docs/lectura01.pdf',
                     external: true
                 }
             ]
@@ -295,7 +295,7 @@ const courseData = {
             description: [
                 {
                     text: 'Interconexión de dispositivos y redes',
-                    href: 'ti3v35/lectura02'
+                    href: 'lectura02'
                 }
             ]
         },
@@ -306,7 +306,7 @@ const courseData = {
             description: [
                 {
                     text: 'Cálculo de clases de dirección',
-                    href: 'ti3v35/lectura03'
+                    href: 'lectura03'
                 }
             ]
         },
@@ -317,7 +317,7 @@ const courseData = {
             description: [
                 {
                     text: 'Técnicas de cálculo VLSM',
-                    href: 'ti3v35/lectura04'
+                    href: 'lectura04'
                 }
             ]
         },
@@ -328,7 +328,7 @@ const courseData = {
             description: [
                 {
                     text: 'Unidad 2: Sistema operativo Windows Server',
-                    href: '/inacap/ti3v35/docs/lectura05.pdf',
+                    href: 'docs/lectura05.pdf',
                     external: true
                 }
             ]
@@ -340,7 +340,7 @@ const courseData = {
             description: [
                 {
                     text: 'Configuración básica en la instalación de un sistema operativo Windows Server',
-                    href: 'ti3v35/lectura06'
+                    href: 'lectura06'
                 }
             ]
         },
@@ -351,7 +351,7 @@ const courseData = {
             description: [
                 {
                     text: 'Incorporación de la estación de trabajo en el dominio',
-                    href: 'ti3v35/lectura07'
+                    href: 'lectura07'
                 }
             ]
         },
@@ -362,7 +362,7 @@ const courseData = {
             description: [
                 {
                     text: 'Políticas GPO en los objetos de dominio',
-                    href: 'ti3v35/lectura08'
+                    href: 'lectura08'
                 }
             ]
         },
@@ -373,7 +373,7 @@ const courseData = {
             description: [
                 {
                     text: 'Unidad 3: Sistema operativo Linux Server',
-                    href: '/inacap/ti3v35/docs/lectura09.pdf',
+                    href: 'docs/lectura09.pdf',
                     external: true
                 }
             ]
@@ -385,7 +385,7 @@ const courseData = {
             description: [
                 {
                     text: 'Licenciamiento de software',
-                    href: 'ti3v35/lectura10'
+                    href: 'lectura10'
                 }
             ]
         },
@@ -396,7 +396,7 @@ const courseData = {
             description: [
                 {
                     text: 'Gestión de archivos y directorios en Linux',
-                    href: 'ti3v35/lectura11'
+                    href: 'lectura11'
                 }
             ]
         },
@@ -407,7 +407,7 @@ const courseData = {
             description: [
                 {
                     text: 'Recurso Integrativo de la Unidad',
-                    href: 'ti3v35/lectura12'
+                    href: 'lectura12'
                 }
             ]
         }

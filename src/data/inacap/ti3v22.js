@@ -28,17 +28,17 @@ const courseData = {
             description: [
                 {
                     text: 'Evaluación 01-A',
-                    href: 'ti3v22/eval01a'    
+                    href: 'eval01a'    
                 },
                 {
                     text: 'Evaluación 01-B',
-                    href: 'ti3v22/eval01b'    
+                    href: 'eval01b'    
                 },
             ],
             quickGuide: [
                 {
                     text: 'Guía 01',
-                    href: 'ti3v22/guia11'
+                    href: 'guia11'
                 }
             ]
         },
@@ -49,11 +49,11 @@ const courseData = {
             description: [
                 {
                     text: 'Evaluación 02-A',
-                    href: 'ti3v22/eval02a'    
+                    href: 'eval02a'    
                 },
                 {
                     text: 'Evaluación 02-B',
-                    href: 'ti3v22/eval02b'    
+                    href: 'eval02b'    
                 },
             ],
         },
@@ -64,21 +64,21 @@ const courseData = {
             description: [
                 {
                     text: 'Evaluación 03-A',
-                    href: 'ti3v22/eval03a'    
+                    href: 'eval03a'    
                 },
                 {
                     text: 'Evaluación 03-B',
-                    href: 'ti3v22/eval03b'    
+                    href: 'eval03b'    
                 },
             ],
             quickGuide: [
                 {
                     text: 'Guía 01',
-                    href: 'ti3v22/guia21'
+                    href: 'guia21'
                 },
                 {
                     text: 'Guía 02',
-                    href: 'ti3v22/guia22'
+                    href: 'guia22'
                 }
             ]
         },
@@ -99,7 +99,7 @@ const courseData = {
             description: [
                 {
                     text: 'Índices y Vistas',
-                    href: 'ti3v22/clase01'
+                    href: 'clase01'
                 }
             ]
         },
@@ -110,7 +110,7 @@ const courseData = {
             description: [
                 {
                     text: 'Funciones y Procedimientos',
-                    href: 'ti3v22/clase02'
+                    href: 'clase02'
                 }
             ]
         },
@@ -141,11 +141,11 @@ const courseData = {
             description: [
                 {
                     text: 'Eval01-A',
-                    href: 'ti3v22/eval01a'
+                    href: 'eval01a'
                 },
                 {
                     text: 'Eval01-B',
-                    href: 'ti3v22/eval01b'
+                    href: 'eval01b'
                 }
             ]
         },
@@ -166,7 +166,7 @@ const courseData = {
             description: [
                 {
                     text: 'Introducción a Oracle Database',
-                    href: 'ti3v22/clase07'
+                    href: 'clase07'
                 }
             ]
         },
@@ -177,7 +177,7 @@ const courseData = {
             description: [
                 {
                     text: 'Puntaje Adicional',
-                    href: 'ti3v22/clase08'
+                    href: 'clase08'
                 }
             ]
         },
@@ -188,7 +188,7 @@ const courseData = {
             description: [
                 {
                     text: 'Consultas Complejas',
-                    href: 'ti3v22/clase09'
+                    href: 'clase09'
                 }
             ]
         },
@@ -199,7 +199,7 @@ const courseData = {
             description: [
                 {
                     text: 'Triggers, Tipos de Funciones',
-                    href: 'ti3v22/clase10'
+                    href: 'clase10'
                 }
             ]
         },
@@ -210,7 +210,7 @@ const courseData = {
             description: [
                 {
                     text: 'Ejercicios',
-                    href: 'ti3v22/clase11'
+                    href: 'clase11'
                 }
             ]
         },
@@ -221,11 +221,11 @@ const courseData = {
             description: [
                 {
                     text: 'Eval02-A',
-                    href: 'ti3v22/eval02a'
+                    href: 'eval02a'
                 },
                 {
                     text: 'Eval02-B',
-                    href: 'ti3v22/eval02b'
+                    href: 'eval02b'
                 }
             ]
         },
@@ -246,7 +246,7 @@ const courseData = {
             description: [
                 {
                     text: 'Ejercicios PL/SQL (1)',
-                    href: 'ti3v22/clase14'
+                    href: 'clase14'
                 }
             ]
         },
@@ -277,11 +277,11 @@ const courseData = {
             description: [
                 {
                     text: 'Eval03-A',
-                    href: 'ti3v22/eval03a'
+                    href: 'eval03a'
                 },
                 {
                     text: 'Eval03-B',
-                    href: 'ti3v22/eval03b'
+                    href: 'eval03b'
                 }
             ]
         }

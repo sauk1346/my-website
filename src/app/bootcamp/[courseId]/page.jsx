@@ -41,9 +41,9 @@ export default async function CoursePage({ params }) {
 
     // Renderiza el componente apropiado según la plataforma
     if (platform === 'codfacilito') {
-        return <CftTable courseData={courseData} />;
+        return <CftTable courseData={courseData} courseId={courseId} />;
     } else if (platform === 'udd') {
-        return <UddDetail bootcampData={courseData} />;
+        return <UddDetail bootcampData={courseData} courseId={courseId} />;
     }
 
     notFound();

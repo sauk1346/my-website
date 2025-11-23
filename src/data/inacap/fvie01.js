@@ -21,33 +21,33 @@ const courseData = {
         },
     ],
     evaluationsData: [
-        { 
+        {
             evaluationNumber: 1,
             date: 'Jue 10, Jul 2025',
             weighting: '30%',
             description: {
                 text: 'Informe 01',
-                href: '/inacap/fvie01/docs/informe01.pdf',
+                href: 'docs/informe01.pdf',
                 external: true
             }
         },
-        { 
+        {
             evaluationNumber: 2,
             date: 'Lun 21, Jul 2025',
             weighting: '35%',
             description: {
                 text: 'Informe 02',
-                href: '/inacap/fvie01/docs/informe02.pdf',
+                href: 'docs/informe02.pdf',
                 external: true
             }
         },
-        { 
+        {
             evaluationNumber: 3,
             date: 'Jue 24, Jul 2025',
             weighting: '35%',
             description: {
                 text: 'Presentación Proyecto',
-                href: '/inacap/fvie01/docs/presentacion.pdf',
+                href: 'docs/presentacion.pdf',
                 external: true
             }
         }
@@ -60,7 +60,7 @@ const courseData = {
             description: [
                 {
                     text: 'Introducción a I+E',
-                    href: 'fvie01/clase01'
+                    href: 'clase01'
                 }
             ]
         },
@@ -71,7 +71,7 @@ const courseData = {
             description: [
                 {
                     text: 'Tema de Proyecto',
-                    href: 'fvie01/clase02'
+                    href: 'clase02'
                 }
             ]
         },
@@ -82,7 +82,7 @@ const courseData = {
             description: [
                 {
                     text: 'Objetivos General y Específicos',
-                    href: 'fvie01/clase03'
+                    href: 'clase03'
                 }
             ]
         },
@@ -93,7 +93,7 @@ const courseData = {
             description: [
                 {
                     text: 'Planificación y Pauta (1)',
-                    href: 'fvie01/clase04'
+                    href: 'clase04'
                 }
             ]
         },
@@ -156,7 +156,7 @@ const courseData = {
             description: [
                 {
                     text: 'Matriz de Vaciado',
-                    href: 'fvie01/clase10'
+                    href: 'clase10'
                 }
             ]
         },
@@ -241,7 +241,7 @@ const courseData = {
             description: [
                 {
                     text: 'Manual Estudiante Unidad 01',
-                    href: '/inacap/fvie01/docs/manual01.pdf',
+                    href: 'docs/manual01.pdf',
                     external: true
                 }
             ]
@@ -253,7 +253,7 @@ const courseData = {
             description: [
                 {
                     text: 'Entrevista a usuario',
-                    href: 'fvie01/lectura02'
+                    href: 'lectura02'
                 }
             ]
         },
@@ -264,7 +264,7 @@ const courseData = {
             description: [
                 {
                     text: 'Elaboración de cuestionarios',
-                    href: 'fvie01/lectura03'
+                    href: 'lectura03'
                 }
             ]
         },
@@ -275,7 +275,7 @@ const courseData = {
             description: [
                 {
                     text: 'Observación no participante',
-                    href: 'fvie01/lectura04'
+                    href: 'lectura04'
                 }
             ]
         },
@@ -286,7 +286,7 @@ const courseData = {
             description: [
                 {
                     text: 'Procesamiento de Hallazgos',
-                    href: 'fvie01/lectura05'
+                    href: 'lectura05'
                 }
             ]
         },
@@ -297,7 +297,7 @@ const courseData = {
             description: [
                 {
                     text: 'Redefinición del desafío',
-                    href: 'fvie01/lectura06'
+                    href: 'lectura06'
                 }
             ]
         },
@@ -308,7 +308,7 @@ const courseData = {
             description: [
                 {
                     text: 'Estudio Comparativo Antecedentes',
-                    href: 'fvie01/lectura07'
+                    href: 'lectura07'
                 }
             ]
         },
@@ -319,7 +319,7 @@ const courseData = {
             description: [
                 {
                     text: 'Formulario Requerimientos',
-                    href: 'fvie01/lectura08'
+                    href: 'lectura08'
                 }
             ]
         },
@@ -330,7 +330,7 @@ const courseData = {
             description: [
                 {
                     text: 'Brainstorming',
-                    href: 'fvie01/lectura09'
+                    href: 'lectura09'
                 }
             ]
         },
@@ -341,7 +341,7 @@ const courseData = {
             description: [
                 {
                     text: 'Manual Estudiante Unidad 02',
-                    href: '/inacap/fvie01/docs/manual02.pdf',
+                    href: 'docs/manual02.pdf',
                     external: true
                 }
             ]
@@ -353,7 +353,7 @@ const courseData = {
             description: [
                 {
                     text: 'Modelo de negocio Business Canvas Model',
-                    href: 'fvie01/lectura11'
+                    href: 'lectura11'
                 }
             ]
         },
@@ -364,7 +364,7 @@ const courseData = {
             description: [
                 {
                     text: 'Métodos de experimentación cliente/usuario',
-                    href: 'fvie01/lectura12'
+                    href: 'lectura12'
                 }
             ]
         },
@@ -375,7 +375,7 @@ const courseData = {
             description: [
                 {
                     text: 'Desarrollo de la experimentación y ajuste del modelo de negocio',
-                    href: 'fvie01/lectura13'
+                    href: 'lectura13'
                 }
             ]
         },
@@ -386,7 +386,7 @@ const courseData = {
             description: [
                 {
                     text: 'Manual Estudiante Unidad 03',
-                    href: '/inacap/fvie01/docs/manual03.pdf',
+                    href: 'docs/manual03.pdf',
                     external: true
                 }
             ]
@@ -398,7 +398,7 @@ const courseData = {
             description: [
                 {
                     text: 'Fase de Propuesta de Valor INACAP',
-                    href: 'fvie01/lectura15'
+                    href: 'lectura15'
                 }
             ]
         },
@@ -409,7 +409,7 @@ const courseData = {
             description: [
                 {
                     text: 'Crear una Empresa en Chile',
-                    href: 'fvie01/lectura16'
+                    href: 'lectura16'
                 }
             ]
         },
@@ -420,7 +420,7 @@ const courseData = {
             description: [
                 {
                     text: 'Pitch de Negocio',
-                    href: 'fvie01/lectura17'
+                    href: 'lectura17'
                 }
             ]
         }

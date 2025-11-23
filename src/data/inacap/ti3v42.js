@@ -110,7 +110,7 @@ const courseData = {
             description: [
                 {
                     text: 'Función setContent()',
-                    href: 'ti3v42/clase05'
+                    href: 'clase05'
                 },
             ]
         },
@@ -121,7 +121,7 @@ const courseData = {
             description: [
                 {
                     text: 'POO en Kotlin',
-                    href: 'ti3v42/clase06'
+                    href: 'clase06'
                 },
             ]
         },
@@ -132,7 +132,7 @@ const courseData = {
             description: [
                 {
                     text: 'Validación de formularios',
-                    href: 'ti3v42/clase07'
+                    href: 'clase07'
                 },
             ]
         },
@@ -154,7 +154,7 @@ const courseData = {
             description: [
                 {
                     text: 'Ejercicio tipo Prueba',
-                    href: 'ti3v42/clase09',
+                    href: 'clase09',
                 },
             ]
         },
@@ -177,7 +177,7 @@ const courseData = {
             date: 'Sáb 25, Oct 2025', 
             description: {
                 text: 'Introducción a IoT y Smart Devices',
-                href: '/inacap/ti3v42/docs/lectura01.pdf',
+                href: 'docs/lectura01.pdf',
             }
         },
         { 
@@ -186,7 +186,7 @@ const courseData = {
             date: 'Sáb 25, Oct 2025', 
             description: {
                 text: 'Explorando el mundo IoT: Dispositivos y seguridad',
-                href: 'ti3v42/lectura02',
+                href: 'lectura02',
             }
         },
         { 
@@ -195,7 +195,7 @@ const courseData = {
             date: 'Sáb 01, Nov 2025', 
             description: {
                 text: 'Conectando el futuro: Estándares y programación IoT',
-                href: 'ti3v42/lectura03',
+                href: 'lectura03',
             }
         },
         { 
@@ -204,7 +204,7 @@ const courseData = {
             date: 'Sáb 01, Nov 2025', 
             description: {
                 text: 'Síntesis de la unidad',
-                href: '/inacap/ti3v42/docs/lectura04.pdf',
+                href: 'docs/lectura04.pdf',
             }
         },
         { 
@@ -213,7 +213,7 @@ const courseData = {
             date: 'Sáb 08, Nov 2025', 
             description: {
                 text: 'Aplicaciones Móviles Android',
-                href: '/inacap/ti3v42/docs/lectura05.pdf',
+                href: 'docs/lectura05.pdf',
             }
         },
         { 

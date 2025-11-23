@@ -27,7 +27,7 @@ const courseData = {
             weighting: '25%',
             description: {
                 text: 'Django: Vistas y Templates',
-                href: 'ti3v41/eval01'
+                href: 'eval01'
             },
         },
                 { 
@@ -54,7 +54,7 @@ const courseData = {
             weighting: '15%',
             description: {
                 text: 'Promedio Controles',
-                href: 'ti3v41/controles'
+                href: 'controles'
             },
         },
     ],
@@ -66,7 +66,7 @@ const courseData = {
             description: [
                 {
                     text: 'Introducción Django',
-                    href: 'ti3v41/clase01',
+                    href: 'clase01',
                     external: true
                 },
             ]
@@ -78,7 +78,7 @@ const courseData = {
             description: [
                 {
                     text: 'Páginas Dinámicas',
-                    href: 'ti3v41/clase02',
+                    href: 'clase02',
                 },
             ]
         },
@@ -89,7 +89,7 @@ const courseData = {
             description: [
                 {
                     text: 'Templates',
-                    href: 'ti3v41/clase03'
+                    href: 'clase03'
                 }
             ]
         },
@@ -100,7 +100,7 @@ const courseData = {
             description: [
                 {
                     text: 'Recursos Estáticos',
-                    href: 'ti3v41/clase04'
+                    href: 'clase04'
                 }
             ]
         },
@@ -111,7 +111,7 @@ const courseData = {
             description: [
                 {
                     text: 'Modelos',
-                    href: 'ti3v41/clase05'
+                    href: 'clase05'
                 }
             ]
         },
@@ -122,7 +122,7 @@ const courseData = {
             description: [
                 {
                     text: '(Proyecto Tienda) Inicio - Módulo Admin',
-                    href: 'ti3v41/clase06'
+                    href: 'clase06'
                 }
             ]
         },
@@ -133,7 +133,7 @@ const courseData = {
             description: [
                 {
                     text: '(Proyecto Tienda) Vistas genéricas de lista',
-                    href: 'ti3v41/clase07'
+                    href: 'clase07'
                 }
             ]
         },
@@ -144,7 +144,7 @@ const courseData = {
             description: [
                 {
                     text: '(Proyecto Tienda) Vistas genéricas de detalle',
-                    href: 'ti3v41/clase08'
+                    href: 'clase08'
                 }
             ]
         },
@@ -155,7 +155,7 @@ const courseData = {
             description: [
                 {
                     text: '(Proyecto Tienda) Imágenes',
-                    href: 'ti3v41/clase09'
+                    href: 'clase09'
                 }
             ]
         },
@@ -166,7 +166,7 @@ const courseData = {
             description: [
                 {
                     text: '(Proyecto Tienda) Vistas genéricas de edición',
-                    href: 'ti3v41/clase10'
+                    href: 'clase10'
                 }
             ]
         },
@@ -221,7 +221,7 @@ const courseData = {
             description: [
                 {
                     text: '(DRF) Introducción APIs',
-                    href: 'ti3v41/clase15',
+                    href: 'clase15',
                 }
             ]
         },
@@ -232,7 +232,7 @@ const courseData = {
             description: [
                 {
                     text: '(DRF) Creación de APIs',
-                    href: 'ti3v41/clase16',
+                    href: 'clase16',
                 }
             ]
         },
@@ -267,7 +267,7 @@ const courseData = {
             date: 'Sáb 16, Ago 2025', 
             description: {
                 text: 'Tecnologías del lado del servidor',
-                href: '/inacap/ti3v41/docs/lectura01.pdf',
+                href: 'docs/lectura01.pdf',
             }
         },
         { 
@@ -276,7 +276,7 @@ const courseData = {
             date: 'Sáb 16, Ago 2025', 
             description: {
                 text: 'Descubriendo el lenguaje del servidor',
-                href: 'ti3v41/lectura02'
+                href: 'lectura02'
             }
         },
         { 
@@ -285,7 +285,7 @@ const courseData = {
             date: 'Sáb 23, Ago 2025', 
             description: {
                 text: 'Ampliando tu código con Django',
-                href: 'ti3v41/lectura03'
+                href: 'lectura03'
             }
         },
         { 
@@ -294,7 +294,7 @@ const courseData = {
             date: 'Sáb 30, Ago 2025', 
             description: {
                 text: 'Tu primera aplicación Django: Templates en acción',
-                href: 'ti3v41/lectura04'
+                href: 'lectura04'
             }
         },
         { 
@@ -303,7 +303,7 @@ const courseData = {
             date: 'Sáb 06, Sep 2025', 
             description: {
                 text: 'Framework Back End',
-                href: '/inacap/ti3v41/docs/lectura05.pdf'
+                href: 'docs/lectura05.pdf'
             }
         },
         { 
@@ -312,7 +312,7 @@ const courseData = {
             date: 'Sáb 06, Sep 2025', 
             description: {
                 text: 'Integrando Django: Bases de datos y administración web',
-                href: 'ti3v41/lectura06'
+                href: 'lectura06'
             }
         },
         { 
@@ -321,7 +321,7 @@ const courseData = {
             date: 'Sáb 13, Sep 2025', 
             description: {
                 text: 'Construyendo soluciones CRUD con Django ORM',
-                href: 'ti3v41/lectura07'
+                href: 'lectura07'
             }
         },
         { 
@@ -330,7 +330,7 @@ const courseData = {
             date: 'Sáb 20, Sep 2025', 
             description: {
                 text: 'API RESTful con integración a base de datos',
-                href: '/inacap/ti3v41/docs/lectura08.pdf'
+                href: 'docs/lectura08.pdf'
             }
         },
         { 
@@ -339,7 +339,7 @@ const courseData = {
             date: 'Sáb 20, Sep 2025', 
             description: {
                 text: 'Iniciando tu camino RESTful con Django',
-                href: 'ti3v41/lectura09'
+                href: 'lectura09'
             }
         },
         { 
@@ -348,7 +348,7 @@ const courseData = {
             date: 'Sáb 27, Sep 2025', 
             description: {
                 text: 'Seguridad ante todo: Autenticación JWT',
-                href: 'ti3v41/lectura10'
+                href: 'lectura10'
             }
         },
         { 
@@ -357,7 +357,7 @@ const courseData = {
             date: 'Sáb 04, Oct 2025', 
             description: {
                 text: 'Hablando el idioma REST: JSON y DjangoREST',
-                href: 'ti3v41/lectura11'
+                href: 'lectura11'
             }
         },
         { 
@@ -366,7 +366,7 @@ const courseData = {
             date: 'Sáb 11, Oct 2025', 
             description: {
                 text: 'API RESTful en acción: Seguridad y ejecución',
-                href: 'ti3v41/lectura12'
+                href: 'lectura12'
             }
         },
     ]

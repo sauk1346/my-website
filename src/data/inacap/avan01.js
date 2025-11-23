@@ -27,7 +27,7 @@ const courseData = {
             weighting: '20% * 75%', 
             description: {
                 text: 'Evaluación 01',
-                href: 'avan01/eval01'
+                href: 'eval01'
             }
         },
         { 
@@ -36,7 +36,7 @@ const courseData = {
             weighting: '40% * 75%', 
             description: {
                 text: 'Informe 01',
-                href: '/inacap/avan01/docs/informe01.pdf',
+                href: 'docs/informe01.pdf',
                 external: true
             }
         },
@@ -47,12 +47,12 @@ const courseData = {
             description: [
                 {
                     text: 'Informe Pitch',
-                    href: '/inacap/avan01/docs/informe02.pdf',
+                    href: 'docs/informe02.pdf',
                     external: true
                 },
                 {
                     text: 'slide.pdf',
-                    href: '/inacap/avan01/docs/slide.pdf',
+                    href: 'docs/slide.pdf',
                     external: true
                 },
             ]
@@ -63,7 +63,7 @@ const courseData = {
             weighting: '10% * 75%', 
             description: {
                 text: 'Promedio Controles',
-                href: 'avan01/controles'
+                href: 'controles'
             }
         },
         { 
@@ -83,7 +83,7 @@ const courseData = {
             description: [
                 {
                     text: 'La evolución de las organizaciones',
-                    href: 'avan01/lectura01'
+                    href: 'lectura01'
                 }
             ]
         },
@@ -94,7 +94,7 @@ const courseData = {
             description: [
                 {
                     text: 'Los padres de la administración',
-                    href: 'avan01/lectura02'
+                    href: 'lectura02'
                 }
             ]
         },
@@ -105,7 +105,7 @@ const courseData = {
             description: [
                 {
                     text: 'Administración: Conceptos, definiciones e historia',
-                    href: 'avan01/lectura03'
+                    href: 'lectura03'
                 }
             ]
         },
@@ -116,7 +116,7 @@ const courseData = {
             description: [
                 {
                     text: 'Dinámicas transformacionales y tendencias de las organizaciones',
-                    href: 'avan01/lectura04'
+                    href: 'lectura04'
                 }
             ]
         },
@@ -127,7 +127,7 @@ const courseData = {
             description: [
                 {
                     text: 'Tendencias, Clusters, Hub y Núcleos de trabajo',
-                    href: 'avan01/lectura05'
+                    href: 'lectura05'
                 }
             ]
         },
@@ -138,7 +138,7 @@ const courseData = {
             description: [
                 {
                     text: 'Sostenibilidad y las ODS',
-                    href: 'avan01/lectura06'
+                    href: 'lectura06'
                 }
             ]
         },
@@ -149,7 +149,7 @@ const courseData = {
             description: [
                 {
                     text: 'Personalidad jurídica de nuevos emprendimientos y organizaciones existentes',
-                    href: 'avan01/lectura07'
+                    href: 'lectura07'
                 }
             ]
         },
@@ -170,7 +170,7 @@ const courseData = {
             description: [
                 {
                     text: 'Áreas funcionales: gestión de personas y contabilidad y finanzas',
-                    href: 'avan01/lectura09'
+                    href: 'lectura09'
                 }
             ]
         },

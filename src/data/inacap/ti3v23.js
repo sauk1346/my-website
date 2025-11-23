@@ -35,7 +35,7 @@ const courseData = {
             weighting: '35% * 75%', 
             description: {
                 text: 'Informe 01',
-                href: '/inacap/ti3v23/docs/informe01.pdf',
+                href: 'docs/informe01.pdf',
                 external: true
             }
         },
@@ -72,7 +72,7 @@ const courseData = {
             description: [
                 {
                     text: 'Introducción al Desarrollo Ágil',
-                    href: 'ti3v23/clase01'
+                    href: 'clase01'
                 }
             ]
         },
@@ -83,7 +83,7 @@ const courseData = {
             description: [
                 {
                     text: 'Pilares y Principios del Desarrollo Ágil',
-                    href: 'ti3v23/clase02'
+                    href: 'clase02'
                 }
             ]
         },
@@ -94,7 +94,7 @@ const courseData = {
             description: [
                 {
                     text: 'Roles en Metodología SCRUM',
-                    href: 'ti3v23/clase03'
+                    href: 'clase03'
                 },
                 {
                     text: 'Evaluación 01'
@@ -108,7 +108,7 @@ const courseData = {
             description: [
                 {
                     text: 'Historias de Usuario',
-                    href: 'ti3v23/clase04'
+                    href: 'clase04'
                 }
             ]
         },
@@ -119,7 +119,7 @@ const courseData = {
             description: [
                 {
                     text: 'Proyecto Etapa 1',
-                    href: 'ti3v23/clase05'
+                    href: 'clase05'
                 }
             ]
         },
@@ -130,7 +130,7 @@ const courseData = {
             description: [
                 {
                     text: 'Tablero Kanban',
-                    href: 'ti3v23/clase06'
+                    href: 'clase06'
                 }
             ]
         },
@@ -141,7 +141,7 @@ const courseData = {
             description: [
                 {
                     text: 'Historias Perfectas',
-                    href: 'ti3v23/clase07'
+                    href: 'clase07'
                 }
             ]
         },
@@ -174,7 +174,7 @@ const courseData = {
             description: [
                 {
                     text: 'Características de las Metodologías Ágiles',
-                    href: 'ti3v23/lectura01'
+                    href: 'lectura01'
                 }
             ]
         },
@@ -185,7 +185,7 @@ const courseData = {
             description: [
                 {
                     text: 'Aplicaciones de las Metologías Ágiles',
-                    href: 'ti3v23/lectura02'
+                    href: 'lectura02'
                 }
             ]
         },
@@ -196,7 +196,7 @@ const courseData = {
             description: [
                 {
                     text: 'Selección Metodologías Ágiles',
-                    href: 'ti3v23/lectura03'
+                    href: 'lectura03'
                 }
             ]
         },
@@ -207,7 +207,7 @@ const courseData = {
             description: [
                 {
                     text: 'Optimización de recursos',
-                    href: 'ti3v23/lectura04'
+                    href: 'lectura04'
                 }
             ]
         },
@@ -218,7 +218,7 @@ const courseData = {
             description: [
                 {
                     text: 'Levantamiento de requerimientos',
-                    href: 'ti3v23/lectura05'
+                    href: 'lectura05'
                 }
             ]
         },
@@ -229,7 +229,7 @@ const courseData = {
             description: [
                 {
                     text: 'Roles y funciones en SCRUM',
-                    href: 'ti3v23/lectura06'
+                    href: 'lectura06'
                 }
             ]
         },
@@ -240,7 +240,7 @@ const courseData = {
             description: [
                 {
                     text: 'Planificación de sprint en SCRUM',
-                    href: 'ti3v23/lectura07'
+                    href: 'lectura07'
                 }
             ]
         },
@@ -251,7 +251,7 @@ const courseData = {
             description: [
                 {
                     text: 'Metología Kanban',
-                    href: 'ti3v23/lectura08'
+                    href: 'lectura08'
                 }
             ]
         },
@@ -272,7 +272,7 @@ const courseData = {
             description: [
                 {
                     text: 'Definición de entregables iniciales',
-                    href: 'ti3v23/lectura09'
+                    href: 'lectura09'
                 }
             ]
         },
@@ -283,7 +283,7 @@ const courseData = {
             description: [
                 {
                     text: 'Reuniones de trabajo',
-                    href: 'ti3v23/lectura10'
+                    href: 'lectura10'
                 }
             ]
         },
@@ -294,7 +294,7 @@ const courseData = {
             description: [
                 {
                     text: 'Diagrama de Casos de Uso',
-                    href: 'ti3v23/lectura11'
+                    href: 'lectura11'
                 }
             ]
         },
@@ -305,7 +305,7 @@ const courseData = {
             description: [
                 {
                     text: 'Mockups',
-                    href: 'ti3v23/lectura12'
+                    href: 'lectura12'
                 }
             ]
         },
@@ -316,7 +316,7 @@ const courseData = {
             description: [
                 {
                     text: 'Etapa de Cierre',
-                    href: 'ti3v23/lectura13'
+                    href: 'lectura13'
                 }
             ]
         }

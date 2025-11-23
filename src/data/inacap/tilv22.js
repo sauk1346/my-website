@@ -155,7 +155,7 @@ const courseData = {
             date: 'Sáb 25, Oct 2025', 
             description: {
                 text: 'Introducción a los Videojuegos',
-                href: '/inacap/tilv22/docs/lectura01.pdf',
+                href: 'docs/lectura01.pdf',
             }
         },
         { 
@@ -164,7 +164,7 @@ const courseData = {
             date: 'Sáb 25, Oct 2025', 
             description: {
                 text: 'Los primeros pasos del gaming: la historia que forma la industria',
-                href: 'tilv22/lectura02',
+                href: 'lectura02',
             }
         },
         { 
@@ -173,7 +173,7 @@ const courseData = {
             date: 'Sáb 01, Nov 2025', 
             description: {
                 text: 'Desentrañando el ADN del videojuego: estructura, tecnología y diseño',
-                href: 'tilv22/lectura03',
+                href: 'lectura03',
             }
         },
         { 
@@ -182,7 +182,7 @@ const courseData = {
             date: 'Sáb 08, Nov 2025', 
             description: {
                 text: 'Arquitectura y Lógica de un Videojuego',
-                href: '/inacap/tilv22/docs/lectura04.pdf',
+                href: 'docs/lectura04.pdf',
             }
         },
         { 
@@ -191,7 +191,7 @@ const courseData = {
             date: 'Sáb 08, Nov 2025', 
             description: {
                 text: 'Diseño de la Arquitectura del Videojuego',
-                href: 'tilv22/lectura05',
+                href: 'lectura05',
             }
         },
         { 

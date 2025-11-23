@@ -51,7 +51,7 @@ const courseData = {
             weighting: '15%',
             description: {
                 text: 'Promedio Controles',
-                href: 'ti3v13/controles'
+                href: 'controles'
             }
         }
     ],
@@ -63,7 +63,7 @@ const courseData = {
             description: [
                 {
                     text: 'Componentes Básicos de Computadores',
-                    href: 'ti3v13/clase01'
+                    href: 'clase01'
                 }
             ]
         },
@@ -74,7 +74,7 @@ const courseData = {
             description: [
                 {
                     text: 'Seguridad Física en Manipulación de Hardware',
-                    href: 'ti3v13/clase02'
+                    href: 'clase02'
                 }
             ]
         },
@@ -95,7 +95,7 @@ const courseData = {
             description: [
                 {
                     text: 'Taller 01-B',
-                    href: 'ti3v13/taller01'
+                    href: 'taller01'
                 }
             ]
         },
@@ -126,7 +126,7 @@ const courseData = {
             description: [
                 {
                     text: 'Sistemas Operativos',
-                    href: 'ti3v13/clase07'
+                    href: 'clase07'
                 }
             ]
         },
@@ -137,7 +137,7 @@ const courseData = {
             description: [
                 {
                     text: 'Higiene digital, Tipos de licencia, versiones de Windows 10',
-                    href: 'ti3v13/clase08'
+                    href: 'clase08'
                 }
             ]
         },
@@ -148,7 +148,7 @@ const courseData = {
             description: [
                 {
                     text: 'Máquina Virtual: Pasos',
-                    href: 'ti3v13/clase09'
+                    href: 'clase09'
                 }
             ]
         },
@@ -159,7 +159,7 @@ const courseData = {
             description: [
                 {
                     text: 'Virtualbox, Instalación Windows 10',
-                    href: 'ti3v13/clase10'
+                    href: 'clase10'
                 }
             ]
         },
@@ -180,7 +180,7 @@ const courseData = {
             description: [
                 {
                     text: 'Taller 02-B',
-                    href: 'ti3v13/taller02'
+                    href: 'taller02'
                 }
             ]
         },
@@ -211,7 +211,7 @@ const courseData = {
             description: [
                 {
                     text: 'Fundamentos Networking',
-                    href: 'ti3v13/clase15'
+                    href: 'clase15'
                 }
             ]
         },
@@ -222,7 +222,7 @@ const courseData = {
             description: [
                 {
                     text: 'Taller 03 A/B',
-                    href: 'ti3v13/taller03'
+                    href: 'taller03'
                 }
             ]
         },
@@ -245,7 +245,7 @@ const courseData = {
             description: [
                 {
                     text: 'Selección de hardware y herramientas',
-                    href: 'ti3v13/lectura01'
+                    href: 'lectura01'
                 }
             ]
         },
@@ -256,7 +256,7 @@ const courseData = {
             description: [
                 {
                     text: 'Medidas de seguridad física',
-                    href: 'ti3v13/lectura02'
+                    href: 'lectura02'
                 }
             ]
         },
@@ -267,7 +267,7 @@ const courseData = {
             description: [
                 {
                     text: 'Procedimientos de instalación',
-                    href: 'ti3v13/lectura03'
+                    href: 'lectura03'
                 }
             ]
         },
@@ -278,7 +278,7 @@ const courseData = {
             description: [
                 {
                     text: 'Mantenimiento preventivo',
-                    href: 'ti3v13/lectura04'
+                    href: 'lectura04'
                 }
             ]
         },
@@ -289,7 +289,7 @@ const courseData = {
             description: [
                 {
                     text: 'Soluciones a problemas de hardware',
-                    href: 'ti3v13/lectura05'
+                    href: 'lectura05'
                 }
             ]
         },
@@ -300,7 +300,7 @@ const courseData = {
             description: [
                 {
                     text: 'Optimización de hardware',
-                    href: 'ti3v13/lectura06'
+                    href: 'lectura06'
                 }
             ]
         },
@@ -311,7 +311,7 @@ const courseData = {
             description: [
                 {
                     text: 'Software y hardware',
-                    href: 'ti3v13/lectura07'
+                    href: 'lectura07'
                 }
             ]
         },
@@ -322,7 +322,7 @@ const courseData = {
             description: [
                 {
                     text: 'Particiones y formateo',
-                    href: 'ti3v13/lectura08'
+                    href: 'lectura08'
                 }
             ]
         },
@@ -333,7 +333,7 @@ const courseData = {
             description: [
                 {
                     text: 'Cuentas de usuario y grupos locales',
-                    href: 'ti3v13/lectura09'
+                    href: 'lectura09'
                 }
             ]
         },
@@ -344,7 +344,7 @@ const courseData = {
             description: [
                 {
                     text: 'Estructuras de directorios y archivos',
-                    href: 'ti3v13/lectura10'
+                    href: 'lectura10'
                 }
             ]
         },
@@ -355,7 +355,7 @@ const courseData = {
             description: [
                 {
                     text: 'Copias de seguridad',
-                    href: 'ti3v13/lectura11'
+                    href: 'lectura11'
                 }
             ]
         },
@@ -366,7 +366,7 @@ const courseData = {
             description: [
                 {
                     text: 'Verificación y configuración OS',
-                    href: 'ti3v13/lectura12'
+                    href: 'lectura12'
                 }
             ]
         },
@@ -377,7 +377,7 @@ const courseData = {
             description: [
                 {
                     text: 'Tipos de redes',
-                    href: 'ti3v13/lectura13'
+                    href: 'lectura13'
                 }
             ]
         },
@@ -388,7 +388,7 @@ const courseData = {
             description: [
                 {
                     text: 'Elementos y modelos de redes',
-                    href: 'ti3v13/lectura14'
+                    href: 'lectura14'
                 }
             ]
         },
@@ -399,7 +399,7 @@ const courseData = {
             description: [
                 {
                     text: 'Direcciones IP',
-                    href: 'ti3v13/lectura15'
+                    href: 'lectura15'
                 }
             ]
         },
@@ -410,7 +410,7 @@ const courseData = {
             description: [
                 {
                     text: 'Seguridad de router inalámbrico',
-                    href: 'ti3v13/lectura16'
+                    href: 'lectura16'
                 }
             ]
         },

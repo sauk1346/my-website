@@ -36,5 +36,5 @@ export default async function CoursePage({ params }) {
         notFound();
     }
 
-    return <ModuleTable data={courseData} />;
+    return <ModuleTable data={courseData} language={language} />;
 }

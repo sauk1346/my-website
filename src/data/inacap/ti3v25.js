@@ -27,7 +27,7 @@ const courseData = {
             weighting: '20%', 
             description: {
                 text: 'Informe 01',
-                href: '/inacap/ti3v25/docs/informe01.pdf',
+                href: 'docs/informe01.pdf',
                 external: true
             }
         },
@@ -37,7 +37,7 @@ const courseData = {
             weighting: '35%', 
             description: {
                 text: 'Informe 02',
-                href: '/inacap/ti3v25/docs/informe02.pdf',
+                href: 'docs/informe02.pdf',
                 external: true
             }
         },
@@ -47,7 +47,7 @@ const courseData = {
             weighting: '35%', 
             description: {
                 text: 'Informe 03',
-                href: '/inacap/ti3v25/docs/informe03.pdf',
+                href: 'docs/informe03.pdf',
                 external: true
             }
         },
@@ -57,7 +57,7 @@ const courseData = {
             weighting: '10%', 
             description: {
                 text: 'Promedio Controles',
-                href: 'ti3v25/controles'
+                href: 'controles'
             }
         }
     ],
@@ -69,7 +69,7 @@ const courseData = {
             description: [
                 {
                     text: 'Requerimientos del Software',
-                    href: '/inacap/ti3v25/docs/clase01.pdf',
+                    href: 'docs/clase01.pdf',
                     external: true
                 }
             ]
@@ -81,7 +81,7 @@ const courseData = {
             description: [
                 {
                     text: 'Casos de Uso',
-                    href: '/inacap/ti3v25/docs/clase02.pdf',
+                    href: 'docs/clase02.pdf',
                     external: true
                 }
             ]
@@ -93,22 +93,22 @@ const courseData = {
             description: [
                 {
                     text: 'Diagrama de Clases',
-                    href: '/inacap/ti3v25/docs/clase03a.pdf',
+                    href: 'docs/clase03a.pdf',
                     external: true
                 },
                 {
                     text: 'Diagrama de Flujo',
-                    href: '/inacap/ti3v25/docs/clase03b.pdf',
+                    href: 'docs/clase03b.pdf',
                     external: true
                 },
                 {
                     text: 'Tablero Kanban',
-                    href: '/inacap/ti3v25/docs/clase03c.pdf',
+                    href: 'docs/clase03c.pdf',
                     external: true
                 },
                 {
                     text: 'Prototipos',
-                    href: '/inacap/ti3v25/docs/clase03d.pdf',
+                    href: 'docs/clase03d.pdf',
                     external: true
                 }
             ]
@@ -120,12 +120,12 @@ const courseData = {
             description: [
                 {
                     text: 'Paradigma 4+1',
-                    href: '/inacap/ti3v25/docs/clase04a.pdf',
+                    href: 'docs/clase04a.pdf',
                     external: true
                 },
                 {
                     text: '4+1: Vista Lógica',
-                    href: '/inacap/ti3v25/docs/clase04b.pdf',
+                    href: 'docs/clase04b.pdf',
                     external: true
                 }
             ]
@@ -148,12 +148,12 @@ const courseData = {
             description: [
                 {
                     text: '4+1: Vista Desarrollo',
-                    href: '/inacap/ti3v25/docs/clase06a.pdf',
+                    href: 'docs/clase06a.pdf',
                     external: true
                 },
                 {
                     text: '4+1: Vista Procesos',
-                    href: '/inacap/ti3v25/docs/clase06b.pdf',
+                    href: 'docs/clase06b.pdf',
                     external: true
                 }
             ]
@@ -165,12 +165,12 @@ const courseData = {
             description: [
                 {
                     text: '4+1: Vista Física',
-                    href: '/inacap/ti3v25/docs/clase07a.pdf',
+                    href: 'docs/clase07a.pdf',
                     external: true
                 },
                 {
                     text: '4+1: Vista Escenario',
-                    href: '/inacap/ti3v25/docs/clase07b.pdf',
+                    href: 'docs/clase07b.pdf',
                     external: true
                 }
             ]
@@ -182,7 +182,7 @@ const courseData = {
             description: [
                 {
                     text: 'BPMN y Modelo Canvas',
-                    href: '/inacap/ti3v25/docs/clase08.pdf',
+                    href: 'docs/clase08.pdf',
                     external: true
                 }
             ]
@@ -206,7 +206,7 @@ const courseData = {
             description: [
                 {
                     text: 'Toma de requerimientos',
-                    href: 'ti3v25/lectura01'
+                    href: 'lectura01'
                 }
             ]
         },
@@ -227,7 +227,7 @@ const courseData = {
             description: [
                 {
                     text: 'Casos de Uso',
-                    href: 'ti3v25/lectura03'
+                    href: 'lectura03'
                 }
             ]
         },
@@ -238,7 +238,7 @@ const courseData = {
             description: [
                 {
                     text: 'Diagramas de base de datos',
-                    href: 'ti3v25/lectura04'
+                    href: 'lectura04'
                 }
             ]
         },
@@ -249,7 +249,7 @@ const courseData = {
             description: [
                 {
                     text: 'Diagramas de flujo',
-                    href: 'ti3v25/lectura05'
+                    href: 'lectura05'
                 }
             ]
         },
@@ -260,7 +260,7 @@ const courseData = {
             description: [
                 {
                     text: 'Kanban',
-                    href: 'ti3v25/lectura06'
+                    href: 'lectura06'
                 }
             ]
         },

@@ -27,7 +27,7 @@ const courseData = {
             weighting: '25%', 
             description: {
                 text: 'Evaluación 01',
-                href: '/inacap/mvfm01/docs/eval01.pdf',
+                href: 'docs/eval01.pdf',
                 external: true
             }
         },
@@ -45,7 +45,7 @@ const courseData = {
             weighting: '40%', 
             description: {
                 text: 'Proyecto: Trigonautas',
-                href: 'mvfm01/proyecto'
+                href: 'proyecto'
             }
         },
         { 
@@ -54,7 +54,7 @@ const courseData = {
             weighting: '10%', 
             description: {
                 text: 'Promedio Controles',
-                href: '/inacap/mvfm01/docs/controles.pdf',
+                href: 'docs/controles.pdf',
                 external: true
             }
         }
@@ -67,11 +67,11 @@ const courseData = {
             description: [
                 {
                     text: 'ARPA 1: Consumo de energía',
-                    href: 'mvfm01/arpa11'
+                    href: 'arpa11'
                 },
                 {
                     text: 'SM 1: Servicio Eléctrico',
-                    href: 'mvfm01/sm11'
+                    href: 'sm11'
                 }
             ]
         },
@@ -82,7 +82,7 @@ const courseData = {
             description: [
                 {
                     text: 'ARPA 2: Lanzamiento de una piedra',
-                    href: 'mvfm01/arpa12'
+                    href: 'arpa12'
                 }
             ]
         },
@@ -93,7 +93,7 @@ const courseData = {
             description: [
                 {
                     text: 'SM 2: Sueño dorado',
-                    href: 'mvfm01/sm12'
+                    href: 'sm12'
                 }
             ]
         },
@@ -104,11 +104,11 @@ const courseData = {
             description: [
                 {
                     text: 'ARPA 3: Eliminación de fármacos',
-                    href: 'mvfm01/arpa13'
+                    href: 'arpa13'
                 },
                 {
                     text: 'SM 3: Desabastecimiento',
-                    href: 'mvfm01/sm13'
+                    href: 'sm13'
                 }
             ]
         },
@@ -119,7 +119,7 @@ const courseData = {
             description: [
                 {
                     text: 'SM 4: Crecimiento de Bacterias',
-                    href: 'mvfm01/sm14'
+                    href: 'sm14'
                 }
             ]
         },
@@ -130,7 +130,7 @@ const courseData = {
             description: [
                 {
                     text: 'ARPA 4: La escala Ritcher',
-                    href: 'mvfm01/arpa14'
+                    href: 'arpa14'
                 }
             ]
         },
@@ -141,11 +141,11 @@ const courseData = {
             description: [
                 {
                     text: 'AFO 09',
-                    href: 'mvfm01/afo1-09'
+                    href: 'afo1-09'
                 },
                 {
                     text: 'AFO 10',
-                    href: 'mvfm01/afo1-10'
+                    href: 'afo1-10'
                 }
             ]
         },
@@ -156,7 +156,7 @@ const courseData = {
             description: [
                 {
                     text: 'SM 5: Seguidores en Instagram',
-                    href: 'mvfm01/sm15'
+                    href: 'sm15'
                 }
             ]
         },
@@ -181,11 +181,11 @@ const courseData = {
                 },
                 {
                     text: 'AFO 05',
-                    href: 'mvfm01/afo1-05'
+                    href: 'afo1-05'
                 },
                 {
                     text: 'AFO 10',
-                    href: 'mvfm01/afo1-10'
+                    href: 'afo1-10'
                 }
             ]
         },
@@ -196,7 +196,7 @@ const courseData = {
             description: [
                 {
                     text: 'Repaso (sin logaritmo)',
-                    href: 'mvfm01/repaso01'
+                    href: 'repaso01'
                 }
             ]
         },
@@ -207,7 +207,7 @@ const courseData = {
             description: [
                 {
                     text: 'Guía Resumen Unidad 1',
-                    href: 'mvfm01/guia01'
+                    href: 'guia01'
                 }
             ]
         },
@@ -218,7 +218,7 @@ const courseData = {
             description: [
                 {
                     text: 'Evaluación 01',
-                    href: '/inacap/mvfm01/docs/eval01.pdf',
+                    href: 'docs/eval01.pdf',
                     external: true
                 }
             ]
@@ -230,11 +230,11 @@ const courseData = {
             description: [
                 {
                     text: 'Introducción a Trigonometría',
-                    href: 'mvfm01/intro-trig'
+                    href: 'intro-trig'
                 },
                 {
                     text: 'ARPA 1: La plaza de skate',
-                    href: 'mvfm01/arpa21'
+                    href: 'arpa21'
                 }
             ]
         },
@@ -245,7 +245,7 @@ const courseData = {
             description: [
                 {
                     text: 'SM 1: La Rampa',
-                    href: 'mvfm01/sm21'
+                    href: 'sm21'
                 }
             ]
         },
@@ -256,15 +256,15 @@ const courseData = {
             description: [
                 {
                     text: 'AFO 01',
-                    href: 'mvfm01/afo2-01'
+                    href: 'afo2-01'
                 },
                 {
                     text: 'AFO 02',
-                    href: 'mvfm01/afo2-02'
+                    href: 'afo2-02'
                 },
                 {
                     text: 'AFO 03',
-                    href: 'mvfm01/afo2-03'
+                    href: 'afo2-03'
                 }
             ]
         },
@@ -275,23 +275,23 @@ const courseData = {
             description: [
                 {
                     text: 'ARPA 2: Un terreno peligroso',
-                    href: 'mvfm01/arpa22'
+                    href: 'arpa22'
                 },
                 {
                     text: 'AFO 04',
-                    href: 'mvfm01/afo2-04'
+                    href: 'afo2-04'
                 },
                 {
                     text: 'AFO 05',
-                    href: 'mvfm01/afo2-05'
+                    href: 'afo2-05'
                 },
                 {
                     text: 'AFO 06',
-                    href: 'mvfm01/afo2-06'
+                    href: 'afo2-06'
                 },
                 {
                     text: 'AFO 07',
-                    href: 'mvfm01/afo2-07'
+                    href: 'afo2-07'
                 }
             ]
         },
@@ -312,7 +312,7 @@ const courseData = {
             description: [
                 {
                     text: 'SM 2: Viaje en globo aerostático',
-                    href: 'mvfm01/sm22'
+                    href: 'sm22'
                 }
             ]
         },
@@ -323,7 +323,7 @@ const courseData = {
             description: [
                 {
                     text: 'SM 3: Análisis de ondas sonoras',
-                    href: 'mvfm01/sm23'
+                    href: 'sm23'
                 }
             ]
         },
@@ -334,11 +334,11 @@ const courseData = {
             description: [
                 {
                     text: 'Temperatura de una tubería',
-                    href: 'mvfm01/trig01'
+                    href: 'trig01'
                 },
                 {
                     text: 'Ejercicios Trigonometría',
-                    href: 'mvfm01/trig02'
+                    href: 'trig02'
                 }
             ]
         },
@@ -469,7 +469,7 @@ const courseData = {
             description: [
                 {
                     text: 'Entrega Proyecto: Trigonautas',
-                    href: 'mvfm01/proyecto'
+                    href: 'proyecto'
                 }
             ]
         },

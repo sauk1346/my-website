@@ -66,7 +66,7 @@ const courseData = {
             description: [
                 {
                     text: 'Personal Introduction',
-                    href: '/inacap/fves01/docs/class01.pdf',
+                    href: 'docs/class01.pdf',
                     external: true
                 }
             ]
@@ -89,12 +89,12 @@ const courseData = {
             description: [
                 {
                     text: 'Unit 01: Talking about life',
-                    href: '/inacap/fves01/docs/unit01.pdf',
+                    href: 'docs/unit01.pdf',
                     external: true
                 },
                 {
                     text: 'Evaluation 01 rubric',
-                    href: '/inacap/fves01/docs/eval01-rubric.pdf',
+                    href: 'docs/eval01-rubric.pdf',
                     external: true
                 },
             ]

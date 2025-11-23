@@ -1,7 +1,8 @@
 import styles from './CftTable.module.css';
 import { SmartLink } from '@/components/mdx';
+import { buildLessonLink } from '@/utils/linkBuilder';
 
-const CftTable = ({ courseData }) => {
+const CftTable = ({ courseData, courseId }) => {
   // Validación de props
   if (!courseData) {
     return (
@@ -42,20 +43,20 @@ const CftTable = ({ courseData }) => {
                       </td>
                       <td>
                         {classItem.link ? (
-                          <SmartLink 
-                            href={classItem.link} 
+                          <SmartLink
+                            href={buildLessonLink('bootcamp', courseId, classItem.link)}
                           >
                             {classItem.name}
                           </SmartLink>
                         ) : (
                           <span>{classItem.name}</span>
                         )}
-                        
+
                         {classItem.exercises && (
                           <>
                             {' - '}
-                            <SmartLink 
-                              href={classItem.exercises.link} 
+                            <SmartLink
+                              href={buildLessonLink('bootcamp', courseId, classItem.exercises.link)}
                             >
                               {classItem.exercises.name}
                             </SmartLink>

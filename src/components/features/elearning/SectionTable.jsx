@@ -1,4 +1,5 @@
 import { SmartLink } from '@/components/mdx';
+import { buildLessonLink } from '@/utils/linkBuilder';
 import styles from './SectionTable.module.css';
 
 const SectionTable = ({
@@ -53,7 +54,7 @@ const SectionTable = ({
                             <td data-label="Clase">
                               {classItem.link ? (
                                 <SmartLink
-                                  href={classItem.link}
+                                  href={buildLessonLink('elearning', courseId, classItem.link)}
                                 >
                                   {classItem.name}
                                 </SmartLink>

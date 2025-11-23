@@ -27,7 +27,7 @@ const courseData = {
             weighting: '20%',
             description: {
                 text: 'HTML y CSS',
-                href: 'ti3v31/eval01'
+                href: 'eval01'
             }
         },
         { 
@@ -36,7 +36,7 @@ const courseData = {
             weighting: '25%',
             description: {
                 text: 'JavaScript',
-                href: 'ti3v31/eval02'
+                href: 'eval02'
             }
         },
         { 
@@ -45,7 +45,7 @@ const courseData = {
             weighting: '40%',
             description: {
                 text: 'React',
-                href: 'ti3v31/eval03'
+                href: 'eval03'
             }
         },
         { 
@@ -54,7 +54,7 @@ const courseData = {
             weighting: '15%',
             description: {
                 text: 'Promedio Controles',
-                href: 'ti3v31/controles'
+                href: 'controles'
             }
         }
     ],
@@ -66,17 +66,17 @@ const courseData = {
             description: [
                 {
                     text: 'HTML (01): Conceptos Básicos',
-                    href: '/inacap/ti3v31/docs/html01.pdf',
+                    href: 'docs/html01.pdf',
                     external: true
                 },
                 {
                     text: 'CSS (01): Introducción',
-                    href: '/inacap/ti3v31/docs/css01.pdf',
+                    href: 'docs/css01.pdf',
                     external: true
                 },
                 {
                     text: 'CSS (02): Selectores',
-                    href: '/inacap/ti3v31/docs/css02.pdf',
+                    href: 'docs/css02.pdf',
                     external: true
                 }
             ]
@@ -88,17 +88,17 @@ const courseData = {
             description: [
                 {
                     text: 'HTML (02): Elementos Avanzados',
-                    href: '/inacap/ti3v31/docs/html02.pdf',
+                    href: 'docs/html02.pdf',
                     external: true
                 },
                 {
                     text: 'CSS (03): Unidades y Notaciones',
-                    href: '/inacap/ti3v31/docs/css03.pdf',
+                    href: 'docs/css03.pdf',
                     external: true
                 },
                 {
                     text: 'CSS (04): Modelo de Cajas',
-                    href: '/inacap/ti3v31/docs/css04.pdf',
+                    href: 'docs/css04.pdf',
                     external: true
                 }
             ]
@@ -110,22 +110,22 @@ const courseData = {
             description: [
                 {
                     text: 'HTML (03): Diseño Formulario',
-                    href: '/inacap/ti3v31/docs/html03.pdf',
+                    href: 'docs/html03.pdf',
                     external: true
                 },
                 {
                     text: 'HTML (04): Formularios en HTML5',
-                    href: '/inacap/ti3v31/docs/html04.pdf',
+                    href: 'docs/html04.pdf',
                     external: true
                 },
                 {
                     text: 'CSS (05): Atributos y Valores',
-                    href: '/inacap/ti3v31/docs/css05.pdf',
+                    href: 'docs/css05.pdf',
                     external: true
                 },
                 {
                     text: 'CSS (06): Fuentes y Fondos',
-                    href: '/inacap/ti3v31/docs/css06.pdf',
+                    href: 'docs/css06.pdf',
                     external: true
                 }
             ]
@@ -137,17 +137,17 @@ const courseData = {
             description: [
                 {
                     text: 'HTML (05): Semántica en HTML5',
-                    href: '/inacap/ti3v31/docs/html05.pdf',
+                    href: 'docs/html05.pdf',
                     external: true
                 },
                 {
                     text: 'CSS (07): Layout',
-                    href: '/inacap/ti3v31/docs/css07.pdf',
+                    href: 'docs/css07.pdf',
                     external: true
                 },
                 {
                     text: 'CSS (08): Posicionamiento',
-                    href: '/inacap/ti3v31/docs/css08.pdf',
+                    href: 'docs/css08.pdf',
                     external: true
                 }
             ]
@@ -159,17 +159,17 @@ const courseData = {
             description: [
                 {
                     text: 'JS (01): Introducción',
-                    href: '/inacap/ti3v31/docs/js01.pdf',
+                    href: 'docs/js01.pdf',
                     external: true
                 },
                 {
                     text: 'JS (02): Variables y Operadores',
-                    href: '/inacap/ti3v31/docs/js02.pdf',
+                    href: 'docs/js02.pdf',
                     external: true
                 },
                 {
                     text: 'JS (03): Estructuras de Control',
-                    href: '/inacap/ti3v31/docs/js03.pdf',
+                    href: 'docs/js03.pdf',
                     external: true
                 }
             ]
@@ -181,17 +181,17 @@ const courseData = {
             description: [
                 {
                     text: 'JS (04): Funciones y Propiedades',
-                    href: '/inacap/ti3v31/docs/js04.pdf',
+                    href: 'docs/js04.pdf',
                     external: true
                 },
                 {
                     text: 'JS (05): Funciones definidas por usuario',
-                    href: '/inacap/ti3v31/docs/js05.pdf',
+                    href: 'docs/js05.pdf',
                     external: true
                 },
                 {
                     text: 'JS (06): DOM',
-                    href: '/inacap/ti3v31/docs/js06.pdf',
+                    href: 'docs/js06.pdf',
                     external: true
                 }
             ]
@@ -203,12 +203,12 @@ const courseData = {
             description: [
                 {
                     text: 'JS (07): Eventos',
-                    href: '/inacap/ti3v31/docs/js07.pdf',
+                    href: 'docs/js07.pdf',
                     external: true
                 },
                 {
                     text: 'JS (08): Framework JQuery',
-                    href: '/inacap/ti3v31/docs/js08.pdf',
+                    href: 'docs/js08.pdf',
                     external: true
                 }
             ]
@@ -231,12 +231,12 @@ const courseData = {
             description: [
                 {
                     text: 'React (01): Ambiente',
-                    href: '/inacap/ti3v31/docs/react01.pdf',
+                    href: 'docs/react01.pdf',
                     external: true
                 },
                 {
                     text: 'React (02): Componentes',
-                    href: '/inacap/ti3v31/docs/react02.pdf',
+                    href: 'docs/react02.pdf',
                     external: true
                 }
             ]
@@ -248,12 +248,12 @@ const courseData = {
             description: [
                 {
                     text: 'React (03): Hooks, Props',
-                    href: '/inacap/ti3v31/docs/react03.pdf',
+                    href: 'docs/react03.pdf',
                     external: true
                 },
                 {
                     text: 'React (04): Creación proyectos Vite',
-                    href: '/inacap/ti3v31/docs/react04.pdf',
+                    href: 'docs/react04.pdf',
                     external: true
                 }
             ]
@@ -267,7 +267,7 @@ const courseData = {
             description: [
                 {
                     text: 'Unidad 1: Desarrollo de sitio web estático utilizando HTML5 y CSS3',
-                    href: '/inacap/ti3v31/docs/lectura01.pdf',
+                    href: 'docs/lectura01.pdf',
                     external: true
                 }
             ]
@@ -279,7 +279,7 @@ const courseData = {
             description: [
                 {
                     text: 'Principios de diseño responsivo de Programación Front End',
-                    href: 'ti3v31/lectura02'
+                    href: 'lectura02'
                 }
             ]
         },
@@ -290,7 +290,7 @@ const courseData = {
             description: [
                 {
                     text: 'Tutorial Interactivo de HTML',
-                    href: 'ti3v31/lectura03'
+                    href: 'lectura03'
                 }
             ]
         },
@@ -301,7 +301,7 @@ const courseData = {
             description: [
                 {
                     text: 'Tutorial Práctico: convertir un diseño en HTML',
-                    href: 'ti3v31/lectura04'
+                    href: 'lectura04'
                 }
             ]
         },
@@ -312,7 +312,7 @@ const courseData = {
             description: [
                 {
                     text: 'CSS3: aplicación de estilos según un diseño',
-                    href: 'ti3v31/lectura05'
+                    href: 'lectura05'
                 }
             ]
         },
@@ -323,7 +323,7 @@ const courseData = {
             description: [
                 {
                     text: 'Git y GitHub: implementación de políticas de respaldo',
-                    href: 'ti3v31/lectura06'
+                    href: 'lectura06'
                 }
             ]
         },
@@ -334,7 +334,7 @@ const courseData = {
             description: [
                 {
                     text: 'Unidad 2: Interacción con documentos HTML usando JavaScript',
-                    href: '/inacap/ti3v31/docs/lectura07.pdf',
+                    href: 'docs/lectura07.pdf',
                     external: true
                 }
             ]
@@ -346,7 +346,7 @@ const courseData = {
             description: [
                 {
                     text: 'Manipulación del DOM con JavaScript',
-                    href: 'ti3v31/lectura08'
+                    href: 'lectura08'
                 }
             ]
         },
@@ -357,7 +357,7 @@ const courseData = {
             description: [
                 {
                     text: 'Validación y modularización de formularios y códigos en JS',
-                    href: 'ti3v31/lectura09'
+                    href: 'lectura09'
                 }
             ]
         },
@@ -368,7 +368,7 @@ const courseData = {
             description: [
                 {
                     text: 'Manejo de arreglos y objetos en JS',
-                    href: 'ti3v31/lectura10'
+                    href: 'lectura10'
                 }
             ]
         },
@@ -379,7 +379,7 @@ const courseData = {
             description: [
                 {
                     text: 'Unidad 3: Framework basado en JS',
-                    href: '/inacap/ti3v31/docs/lectura11.pdf',
+                    href: 'docs/lectura11.pdf',
                     external: true
                 }
             ]
@@ -391,7 +391,7 @@ const courseData = {
             description: [
                 {
                     text: 'Evolución de los frameworks de JS en el desarrollo web moderno',
-                    href: 'ti3v31/lectura12'
+                    href: 'lectura12'
                 }
             ]
         },
@@ -402,7 +402,7 @@ const courseData = {
             description: [
                 {
                     text: 'Elementos esenciales de los frameworks de JS',
-                    href: 'ti3v31/lectura13'
+                    href: 'lectura13'
                 }
             ]
         },
@@ -413,7 +413,7 @@ const courseData = {
             description: [
                 {
                     text: 'Codificación de componentes en JS con componentes en React',
-                    href: 'ti3v31/lectura14'
+                    href: 'lectura14'
                 }
             ]
         },
@@ -424,7 +424,7 @@ const courseData = {
             description: [
                 {
                     text: 'Implementación de CRUD con local storage en JS',
-                    href: 'ti3v31/lectura15'
+                    href: 'lectura15'
                 }
             ]
         },
@@ -435,7 +435,7 @@ const courseData = {
             description: [
                 {
                     text: 'Acceso a datos externos con Fetch y Axios en JS',
-                    href: 'ti3v31/lectura16'
+                    href: 'lectura16'
                 }
             ]
         }

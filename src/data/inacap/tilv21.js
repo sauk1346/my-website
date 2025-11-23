@@ -27,7 +27,7 @@ const courseData = {
           weighting: '20% * 75%', 
           description: {
               text: 'Evaluación 01',
-              href: 'tilv21/eval01'
+              href: 'eval01'
           }
       },
       { 
@@ -36,7 +36,7 @@ const courseData = {
           weighting: '30% * 75%', 
           description: {
               text: 'Informe 01',
-              href: '/inacap/tilv21/docs/informe01.pdf',
+              href: 'docs/informe01.pdf',
               external: true
           }
       },
@@ -46,7 +46,7 @@ const courseData = {
           weighting: '35% * 75%',
           description: {
               text: 'Informe 02',
-              href: '/inacap/tilv21/docs/informe02.pdf',
+              href: 'docs/informe02.pdf',
               external: true
           }
       },
@@ -56,7 +56,7 @@ const courseData = {
           weighting: '15% * 75%',
           description: {
               text: 'Promedio controles',
-              href: 'tilv21/controles'
+              href: 'controles'
           }
       },
       { 
@@ -69,23 +69,23 @@ const courseData = {
           quickGuide: [
               {
                   text: 'Controles',
-                  href: 'tilv21/controles'
+                  href: 'controles'
               },
               {
                   text: 'Lecturas',
-                  href: 'tilv21/lecturas'
+                  href: 'lecturas'
               },
               {
                   text: 'Unidad01',
-                  href: 'tilv21/unidad01'
+                  href: 'unidad01'
               },
               {
                   text: 'Unidad02',
-                  href: 'tilv21/unidad02'
+                  href: 'unidad02'
               },
               {
                   text: 'Unidad03',
-                  href: 'tilv21/unidad03'
+                  href: 'unidad03'
               }
           ]
       }
@@ -98,7 +98,7 @@ const courseData = {
           description: [
               {
                   text: 'Conceptos básicos en el desarrollo de software',
-                  href: 'tilv21/lectura01'
+                  href: 'lectura01'
               }
           ]
       },
@@ -109,7 +109,7 @@ const courseData = {
           description: [
               {
                   text: 'Requisitos y calidad de software según Estándar ISO/IEC 25000',
-                  href: 'tilv21/lectura02'
+                  href: 'lectura02'
               }
           ]
       },
@@ -120,7 +120,7 @@ const courseData = {
           description: [
               {
                   text: 'Estándares de testing, basados en normas y estándares de la industria del software',
-                  href: 'tilv21/lectura03'
+                  href: 'lectura03'
               }
           ]
       },
@@ -131,7 +131,7 @@ const courseData = {
           description: [
               {
                   text: 'Síntesis de la Unidad 01',
-                  href: 'tilv21/lectura04'
+                  href: 'lectura04'
               }
           ]
       },
@@ -142,7 +142,7 @@ const courseData = {
           description: [
               {
                   text: 'Técnicas y herramientas de testing',
-                  href: 'tilv21/lectura05'
+                  href: 'lectura05'
               }
           ]
       },
@@ -153,7 +153,7 @@ const courseData = {
           description: [
               {
                   text: 'Alcances y definiciones de los tipos de testing en el desarrollo de sorftware',
-                  href: 'tilv21/lectura06'
+                  href: 'lectura06'
               }
           ]
       },
@@ -164,7 +164,7 @@ const courseData = {
           description: [
               {
                   text: 'Cómo detectar la complejidad del testing',
-                  href: 'tilv21/lectura07'
+                  href: 'lectura07'
               }
           ]
       },
@@ -175,7 +175,7 @@ const courseData = {
           description: [
               {
                   text: 'Soluciones a problemas y criterios de factibilidad con técnicas de testing',
-                  href: 'tilv21/lectura08'
+                  href: 'lectura08'
               }
           ]
       },
@@ -186,7 +186,7 @@ const courseData = {
           description: [
               {
                   text: 'Síntesis de la Unidad 02',
-                  href: 'tilv21/lectura09'
+                  href: 'lectura09'
               }
           ]
       },
@@ -197,7 +197,7 @@ const courseData = {
           description: [
               {
                   text: 'Gestión de defectos, combinación de valores de prueba y exploración',
-                  href: 'tilv21/lectura10'
+                  href: 'lectura10'
               }
           ]
       },
@@ -208,7 +208,7 @@ const courseData = {
           description: [
               {
                   text: 'Técnicas para pruebas exploratorias',
-                  href: 'tilv21/lectura11'
+                  href: 'lectura11'
               }
           ]
       },
@@ -219,7 +219,7 @@ const courseData = {
           description: [
               {
                   text: 'Ciclo de vida de un defecto de software',
-                  href: 'tilv21/lectura12'
+                  href: 'lectura12'
               }
           ]
       },
@@ -230,7 +230,7 @@ const courseData = {
           description: [
               {
                   text: 'Defectos, errores y fallos según criterios de factibilidad de plan de pruebas',
-                  href: 'tilv21/lectura13'
+                  href: 'lectura13'
               }
           ]
       },
@@ -241,7 +241,7 @@ const courseData = {
           description: [
               {
                   text: 'Procesos de seguimiento en el monitoreo',
-                  href: 'tilv21/lectura14'
+                  href: 'lectura14'
               }
           ]
       },
@@ -252,7 +252,7 @@ const courseData = {
           description: [
               {
                   text: 'Síntesis de la Unidad 03',
-                  href: 'tilv21/lectura15'
+                  href: 'lectura15'
               }
           ]
       }

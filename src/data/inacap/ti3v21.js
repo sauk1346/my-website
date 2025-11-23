@@ -27,12 +27,12 @@ const courseData = {
             weighting: '20%', 
             description: {
                 text: 'Evaluación 01',
-                href: 'ti3v21/eval01'
+                href: 'eval01'
             }, 
             quickGuide: [
                 {
                     text: 'Guía 01',
-                    href: 'ti3v21/guia01'
+                    href: 'guia01'
                 }
             ]
         },
@@ -42,7 +42,7 @@ const courseData = {
             weighting: '35%', 
             description: {
                 text: 'Evaluación 02',
-                href: 'ti3v21/eval02'
+                href: 'eval02'
             }
         },
         { 
@@ -51,7 +51,7 @@ const courseData = {
             weighting: '35%', 
             description: {
                 text: 'Proyecto',
-                href: 'ti3v21/eval03'
+                href: 'eval03'
             }
         },
         { 
@@ -71,7 +71,7 @@ const courseData = {
             description: [
                 {
                     text: 'Ejercicios Python (1)',
-                    href: 'ti3v21/clase01'
+                    href: 'clase01'
                 }
             ]
         },
@@ -82,7 +82,7 @@ const courseData = {
             description: [
                 {
                     text: 'Ejercicios Python (2)',
-                    href: 'ti3v21/clase02'
+                    href: 'clase02'
                 }
             ]
         },
@@ -93,7 +93,7 @@ const courseData = {
             description: [
                 {
                     text: 'Ejercicios Python (3)',
-                    href: 'ti3v21/clase03'
+                    href: 'clase03'
                 }
             ]
         },
@@ -104,7 +104,7 @@ const courseData = {
             description: [
                 {
                     text: 'Ejercicios Python (4)',
-                    href: 'ti3v21/clase04'
+                    href: 'clase04'
                 }
             ]
         },
@@ -115,7 +115,7 @@ const courseData = {
             description: [
                 {
                     text: 'Evaluación 01',
-                    href: 'ti3v21/eval01'
+                    href: 'eval01'
                 }
             ]
         },
@@ -126,7 +126,7 @@ const courseData = {
             description: [
                 {
                     text: 'Listas',
-                    href: 'ti3v21/clase06'
+                    href: 'clase06'
                 }
             ]
         },
@@ -137,7 +137,7 @@ const courseData = {
             description: [
                 {
                     text: 'Ejercicios Listas',
-                    href: 'ti3v21/clase07'
+                    href: 'clase07'
                 }
             ]
         },
@@ -148,7 +148,7 @@ const courseData = {
             description: [
                 {
                     text: 'Paradigma POO',
-                    href: 'ti3v21/clase08'
+                    href: 'clase08'
                 }
             ]
         },
@@ -159,7 +159,7 @@ const courseData = {
             description: [
                 {
                     text: 'Ejercicios POO (1)',
-                    href: 'ti3v21/clase09'
+                    href: 'clase09'
                 }
             ]
         },
@@ -190,7 +190,7 @@ const courseData = {
             description: [
                 {
                     text: 'Entrega Evaluación 02',
-                    href: 'ti3v21/eval02'
+                    href: 'eval02'
                 }
             ]
         },
@@ -201,7 +201,7 @@ const courseData = {
             description: [
                 {
                     text: 'Ejercicio para Evaluación 03',
-                    href: 'ti3v21/clase13'
+                    href: 'clase13'
                 }
             ]
         },
@@ -212,7 +212,7 @@ const courseData = {
             description: [
                 {
                     text: 'Bases de datos con Python',
-                    href: 'ti3v21/clase14'
+                    href: 'clase14'
                 }
             ]
         },
@@ -233,7 +233,7 @@ const courseData = {
             description: [
                 {
                     text: 'Instrucciones Proyecto',
-                    href: 'ti3v21/clase16'
+                    href: 'clase16'
                 }
             ]
         },
@@ -244,7 +244,7 @@ const courseData = {
             description: [
                 {
                     text: 'Presentación Proyecto',
-                    href: 'ti3v21/eval03'
+                    href: 'eval03'
                 }
             ]
         }
@@ -257,7 +257,7 @@ const courseData = {
             description: [
                 {
                     text: 'Conceptos básicos de POO',
-                    href: 'ti3v21/lectura01'
+                    href: 'lectura01'
                 }
             ]
         },
@@ -268,7 +268,7 @@ const courseData = {
             description: [
                 {
                     text: 'Símbolos diagramas de Clase',
-                    href: 'ti3v21/lectura02'
+                    href: 'lectura02'
                 }
             ]
         },
@@ -279,7 +279,7 @@ const courseData = {
             description: [
                 {
                     text: 'Las relaciones entre Clases',
-                    href: 'ti3v21/lectura03'
+                    href: 'lectura03'
                 }
             ]
         },
@@ -290,7 +290,7 @@ const courseData = {
             description: [
                 {
                     text: 'Solucionando un problema con Diagramas de clases en UML',
-                    href: 'ti3v21/lectura04'
+                    href: 'lectura04'
                 }
             ]
         },
@@ -301,7 +301,7 @@ const courseData = {
             description: [
                 {
                     text: 'Diagrama de Clases una propuesta de solución',
-                    href: 'ti3v21/lectura05'
+                    href: 'lectura05'
                 }
             ]
         },
@@ -312,7 +312,7 @@ const courseData = {
             description: [
                 {
                     text: 'Códigos con herencia, encapsulamiento y polimorfismo',
-                    href: 'ti3v21/lectura06'
+                    href: 'lectura06'
                 }
             ]
         },
@@ -323,7 +323,7 @@ const courseData = {
             description: [
                 {
                     text: 'Librerías Python con conexión a base de datos',
-                    href: 'ti3v21/lectura07'
+                    href: 'lectura07'
                 }
             ]
         },
@@ -334,7 +334,7 @@ const courseData = {
             description: [
                 {
                     text: 'Manipulación de registros',
-                    href: 'ti3v21/lectura08'
+                    href: 'lectura08'
                 }
             ]
         },
@@ -345,7 +345,7 @@ const courseData = {
             description: [
                 {
                     text: 'Manejo de excepciones y jerarquías',
-                    href: 'ti3v21/lectura09'
+                    href: 'lectura09'
                 }
             ]
         },
@@ -366,7 +366,7 @@ const courseData = {
             description: [
                 {
                     text: 'Scripts seguros de Python',
-                    href: 'ti3v21/lectura10'
+                    href: 'lectura10'
                 }
             ]
         },
@@ -377,7 +377,7 @@ const courseData = {
             description: [
                 {
                     text: 'Librerías para consumo de datos externos',
-                    href: 'ti3v21/lectura11'
+                    href: 'lectura11'
                 }
             ]
         },
@@ -388,7 +388,7 @@ const courseData = {
             description: [
                 {
                     text: 'Clase de Python con deserialización de información',
-                    href: 'ti3v21/lectura12'
+                    href: 'lectura12'
                 }
             ]
         },
@@ -399,7 +399,7 @@ const courseData = {
             description: [
                 {
                     text: 'Registra data obtenida en base de datos',
-                    href: 'ti3v21/lectura13'
+                    href: 'lectura13'
                 }
             ]
         },
@@ -410,7 +410,7 @@ const courseData = {
             description: [
                 {
                     text: 'Requerimientos de la solución',
-                    href: 'ti3v21/lectura14'
+                    href: 'lectura14'
                 }
             ]
         },
@@ -421,7 +421,7 @@ const courseData = {
             description: [
                 {
                     text: 'Diseño de diagrama de clases y casos de uso para la solución',
-                    href: 'ti3v21/lectura15'
+                    href: 'lectura15'
                 }
             ]
         },
@@ -432,7 +432,7 @@ const courseData = {
             description: [
                 {
                     text: 'Aplicando metodologías ágiles de desarrollo',
-                    href: 'ti3v21/lectura16'
+                    href: 'lectura16'
                 }
             ]
         },
@@ -443,7 +443,7 @@ const courseData = {
             description: [
                 {
                     text: 'Solución con hash y conectada a base de datos',
-                    href: 'ti3v21/lectura17'
+                    href: 'lectura17'
                 }
             ]
         }

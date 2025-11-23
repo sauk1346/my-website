@@ -27,7 +27,7 @@ const courseData = {
             weighting: '15%',
             description: {
                 text: 'Resumen Ejecutivo',
-                href: '/inacap/tihv43/docs/ResumenEjecutivo.pdf'
+                href: 'docs/ResumenEjecutivo.pdf'
             },
         },
                 { 
@@ -110,7 +110,7 @@ const courseData = {
             description: [
                 {
                     text: 'Revisión: Resumen Ejecutivo',
-                    href: '/inacap/tihv43/docs/ResumenEjecutivo.pdf'
+                    href: 'docs/ResumenEjecutivo.pdf'
                 },
             ]
         },
@@ -121,7 +121,7 @@ const courseData = {
             description: [
                 {
                     text: 'Diagrama Ishikawa',
-                    href: 'tihv43/clase06'
+                    href: 'clase06'
                 },
             ]
         },
@@ -155,7 +155,7 @@ const courseData = {
             date: 'Sáb 25, Oct 2025', 
             description: {
                 text: '¿Qué es y cómo se levanta un diagnóstico?',
-                href: 'tihv43/lectura01',
+                href: 'lectura01',
             }
         },
         { 
@@ -164,7 +164,7 @@ const courseData = {
             date: 'Sáb 25, Oct 2025', 
             description: {
                 text: 'Resumen ejecutivo',
-                href: '/inacap/tihv43/docs/lectura02.pdf',
+                href: 'docs/lectura02.pdf',
             }
         },
         { 
@@ -173,7 +173,7 @@ const courseData = {
             date: 'Sáb 01, Nov 2025', 
             description: {
                 text: 'Cómo levantar una propuesta de mejora',
-                href: 'tihv43/lectura03',
+                href: 'lectura03',
             }
         },
         { 
@@ -182,7 +182,7 @@ const courseData = {
             date: 'Sáb 01, Nov 2025', 
             description: {
                 text: 'Matriz de priorización',
-                href: 'tihv43/lectura04',
+                href: 'lectura04',
             }
         },
     ]

@@ -1,7 +1,8 @@
 import Link from 'next/link';
+import { buildLanguageLessonLink } from '@/utils/linkBuilder';
 import styles from './ModuleTable.module.css';
 
-const ModuleTable = ({ data }) => {
+const ModuleTable = ({ data, language }) => {
   const { title, modules } = data;
 
   return (
@@ -25,7 +26,10 @@ const ModuleTable = ({ data }) => {
                       <td className={styles.lessonNumber}>{lesson.lesson}</td>
                       <td>
                         {lesson.href ? (
-                          <Link href={lesson.href} className={styles.courseLink}>
+                          <Link
+                            href={buildLanguageLessonLink(language, lesson.href)}
+                            className={styles.courseLink}
+                          >
                             {lesson.description}
                           </Link>
                         ) : (

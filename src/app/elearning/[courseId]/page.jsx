@@ -38,5 +38,5 @@ export default async function CoursePage({ params }) {
         notFound();
     }
 
-    return <SectionTable courseData={courseData} />;
+    return <SectionTable courseData={courseData} courseId={courseId} />;
 }

@@ -1,8 +1,9 @@
 import React from 'react';
 import { SmartLink } from '@/components/mdx';
+import { buildLessonLink } from '@/utils/linkBuilder';
 import styles from './ProjectTable.module.css';
 
-const ProjectTable = ({ projects }) => {
+const ProjectTable = ({ projects, courseId }) => {
   // Manejar tanto la estructura antigua (array directo) como la nueva (objeto con data)
   const projectsData = Array.isArray(projects) ? projects : projects.data;
   const sectionTitle = Array.isArray(projects) ? "Proyectos" : projects.title;
@@ -46,7 +47,7 @@ const ProjectTable = ({ projects }) => {
                 </td>
                 <td className={styles.projectCell}>
                   {project.projectLink ? (
-                    <SmartLink href={project.projectLink}>
+                    <SmartLink href={buildLessonLink('bootcamp', courseId, project.projectLink)}>
                       {project.title}
                     </SmartLink>
                   ) : (
@@ -55,7 +56,7 @@ const ProjectTable = ({ projects }) => {
                 </td>
                 <td className={styles.demoCell}>
                   {project.demoLink ? (
-                    <SmartLink href={project.demoLink}>
+                    <SmartLink href={buildLessonLink('bootcamp', courseId, project.demoLink)}>
                       Ver
                     </SmartLink>
                   ) : (

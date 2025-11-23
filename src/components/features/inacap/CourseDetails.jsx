@@ -2,7 +2,8 @@
 
 import React, { useState, useEffect } from 'react';
 import { Calendar, Book, CheckSquare, User, Grid3x3, Monitor, FileText, Clock, Percent } from 'lucide-react';
-import { SmartLink } from '@/components/ui/SmartLink'; 
+import { SmartLink } from '@/components/ui/SmartLink';
+import { buildCourseResourceLink } from '@/utils/linkBuilder';
 import ProfessorCard from './ProfessorCard';
 import styles from './CourseDetails.module.css';
 
@@ -20,18 +21,25 @@ const CourseDetails = ({
   // Helper function para renderizar un elemento individual de contenido
   const renderContentItem = (item, index) => {
     if (!item) return null;
-    
+
     const key = `content-${index}`;
-    
+
     // Agregar viñeta automáticamente - siempre uniforme
     const displayText = !item.text.startsWith('-') && !item.text.startsWith('•') && !item.text.startsWith('*')
-      ? `- ${item.text}` 
+      ? `- ${item.text}`
       : item.text;
-    
+
     // Inferir el tipo basado en la presencia de href
     if (item.href) {
-      // ✨ SIMPLIFICADO: SmartLink maneja automáticamente interno vs externo
-      const linkContent = <SmartLink href={item.href}>{displayText}</SmartLink>;
+      // Construir la ruta completa si es una ruta interna relativa
+      let fullHref = item.href;
+
+      // Si no empieza con '/' ni 'http', es una ruta relativa que necesita el prefijo /inacap/courseCode/
+      if (!item.href.startsWith('/') && !item.href.startsWith('http')) {
+        fullHref = buildCourseResourceLink('inacap', courseCode.toLowerCase(), item.href);
+      }
+
+      const linkContent = <SmartLink href={fullHref}>{displayText}</SmartLink>;
       return (
         <div key={key} className={styles.contentItem}>
           {item.strikethrough ? <del>{linkContent}</del> : linkContent}

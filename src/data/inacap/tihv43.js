@@ -32,19 +32,19 @@ const courseData = {
         },
                 { 
             evaluationNumber: 2,
-            date: '',
+            date: 'Lun 17, Nov 2025',
             weighting: '20%',
             description: {
-                text: '',
-                href: ''
+                text: 'Informe 2: Diseño de la Solución',
+                href: 'docs/informe02.pdf'
             },
         },
                 { 
             evaluationNumber: 3,
-            date: '',
+            date: 'Jue 11, Dic 2025',
             weighting: '30%',
             description: {
-                text: '',
+                text: 'Presentación Final del Proyecto',
                 href: ''
             },
         },
@@ -142,50 +142,56 @@ const courseData = {
             date: 'Jue 13, Oct 2025', 
             description: [
                 {
+                    text: 'Avance proyecto',
+                    href: ''
+                },
+            ]
+        },
+        { 
+            week: '05', 
+            class: '09', 
+            date: 'Mar 18, Oct 2025', 
+            description: [
+                {
+                    text: 'Reglas para Unidad 3',
+                    href: 'clase09'
+                },
+            ]
+        },
+        { 
+            week: '05', 
+            class: '10', 
+            date: 'Jue 20, Oct 2025', 
+            description: [
+                {
+                    text: 'Avance proyecto',
+                    href: ''
+                },
+            ]
+        },
+        { 
+            week: '06', 
+            class: '11', 
+            date: 'Mar 25, Oct 2025', 
+            description: [
+                {
+                    text: '',
+                    href: ''
+                },
+            ]
+        },
+        { 
+            week: '06', 
+            class: '12', 
+            date: 'Jue 27, Oct 2025', 
+            description: [
+                {
                     text: '',
                     href: ''
                 },
             ]
         },
     ],
-    lectureData: [
-        { 
-            week: '01', 
-            lecture: '01', 
-            date: 'Sáb 25, Oct 2025', 
-            description: {
-                text: '¿Qué es y cómo se levanta un diagnóstico?',
-                href: 'lectura01',
-            }
-        },
-        { 
-            week: '01', 
-            lecture: '02', 
-            date: 'Sáb 25, Oct 2025', 
-            description: {
-                text: 'Resumen ejecutivo',
-                href: 'docs/lectura02.pdf',
-            }
-        },
-        { 
-            week: '02', 
-            lecture: '03', 
-            date: 'Sáb 01, Nov 2025', 
-            description: {
-                text: 'Cómo levantar una propuesta de mejora',
-                href: 'lectura03',
-            }
-        },
-        { 
-            week: '02', 
-            lecture: '04', 
-            date: 'Sáb 01, Nov 2025', 
-            description: {
-                text: 'Matriz de priorización',
-                href: 'lectura04',
-            }
-        },
-    ]
 };
 
 export default courseData;

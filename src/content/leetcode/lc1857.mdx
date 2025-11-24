@@ -16,11 +16,13 @@ Devuelve *el **color de mayor valor** de cualquier camino válido en el grado da
 
 **Ejemplo 1:**
 
-<img
+<SmartFigure
+	id="grafo-de-cinco-nodos"
 	src="/leetcode/fig09.png"
-	style={{ display: 'block', margin: '0 auto', width:'50%'}}
+	alt="Grafo de 5 nodos"
+	caption="Grafo de 5 nodos"
+	size="large"
 />
-<br/>
 
 > **Input:** colors = "abaca", edges = [[0,1],[0,2],[2,3],[3,4]]
 > **Output:** 3
@@ -28,11 +30,13 @@ Devuelve *el **color de mayor valor** de cualquier camino válido en el grado da
 
 **Ejemplo 2:**
 
-<img
+<SmartFigure
+	id="grafo-de-un-nodo"
 	src="/leetcode/fig10.png"
-	style={{ display: 'block', margin: '0 auto', width:'12%'}}
+	alt="Grafo de 1 nodos"
+	caption="Grafo de 1 nodo"
+	size="large"
 />
-<br/>
 
 > **Input:** colors = "a", edges = [[0,0]]
 > **Output:** -1
@@ -40,8 +44,7 @@ Devuelve *el **color de mayor valor** de cualquier camino válido en el grado da
 
 ## Soluciones
 
-<details>   
-    <summary>Python</summary>
+<Solution title="Python" icon="Python">   
 ```python
 class Solution:
     def largestPathValue(self, colors: str, edges: List[List[int]]) -> int:
@@ -81,4 +84,4 @@ class Solution:
         
         return max_color_length
 ```
-</details>
+</Solution>

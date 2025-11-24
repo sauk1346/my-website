@@ -6,21 +6,28 @@ Devuelve *el número de formas de colorear la cuadrícula sin que **dos celdas a
 ## Ejemplos
 
 **Ejemplo 1:**
-<img
+
+<SmartFigure
+	id="cuadricula-1x1"
 	src="/leetcode/fig02.png"
-	style={{ display: 'block', margin: '0 auto', width:'40%'}}
+	alt="Cuadrícula de 1x1"
+	caption="Cuadrícula de 1x1"
+	size="large"
 />
-<br/>
+
 > **Input: m = 1, n = 1**
 > **Output: 3**
 > **Explicación:** Las tres posibles coloraciones se muestran en la imagen de arriba.
 
 **Ejemplo 2:**
-<img
+<SmartFigure
+	id="cuadricula-1x2"
 	src="/leetcode/fig03.png"
-	style={{ display: 'block', margin: '0 auto', width:'40%'}}
+	alt="Cuadrícula de 1x2"
+	caption="Cuadrícula de 1x2"
+	size="large"
 />
-<br/>
+
 > **Input:** m = 1, n = 2
 > **Output:** 6
 > **Explicación:** Las seis posibles coloraciones se muestran en la imagen de arriba.
@@ -31,8 +38,7 @@ Devuelve *el número de formas de colorear la cuadrícula sin que **dos celdas a
 
 ## Soluciones
 
-<details>
-    <summary>Python</summary>
+<Solution title="Python" icon="Python">
 ```python
 class Solution:
     def colorTheGrid(self, m: int, n: int) -> int:
@@ -93,4 +99,4 @@ Para **Bitmasking**
 2. Una columna completa se codifica en un solo entero
 3. Ej: para `m = 3` necesitamos 6 bits para representar una columna completa
 
-</details>
+</Solution>

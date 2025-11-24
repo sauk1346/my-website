@@ -90,13 +90,19 @@ export const problems = {
       categories: ["general"]
     },
     "LC0511": {
-      title: "Game Play Analysis I",
+      title: "Análisis de Juego I",
       topics: ["Database"],
       difficulty: "Easy",
       categories: ["pandas"]
     },
     "LC0595": {
       title: "Países Grandes",
+      topics: ["Database"],
+      difficulty: "Easy",
+      categories: ["pandas"]
+    },
+    "LC0596": {
+      title: "Clases con al menos 5 Estudiantes",
       topics: ["Database"],
       difficulty: "Easy",
       categories: ["pandas"]
@@ -180,7 +186,7 @@ export const problems = {
       categories: ["pandas"]
     },
     "LC1741": {
-      title: "Find Total Time Spent by Each Employee",
+      title: "Encontrar el Tiempo Total empleado por cada empleado",
       topics: ["Database"],
       difficulty: "Easy",
       categories: ["pandas"]

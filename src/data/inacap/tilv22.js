@@ -23,26 +23,26 @@ const courseData = {
     evaluationsData: [
         { 
             evaluationNumber: 1,
-            date: '',
-            weighting: '',
+            date: 'Lun 03, Nov 2025',
+            weighting: '20%',
             description: {
-                text: '',
-                href: ''
+                text: 'Informe 1',
+                href: 'docs/informe01.pdf'
             },
         },
                 { 
             evaluationNumber: 2,
-            date: '',
-            weighting: '',
+            date: 'Mié 26, Nov 2025',
+            weighting: '35%',
             description: {
-                text: '',
+                text: 'Presentación prototipo videojuego',
                 href: ''
             },
         },
                 { 
             evaluationNumber: 3,
-            date: '',
-            weighting: '',
+            date: 'Jue 11, Dic 2025',
+            weighting: '35%',
             description: {
                 text: '',
                 href: ''
@@ -50,8 +50,8 @@ const courseData = {
         },
                 { 
             evaluationNumber: 4,
-            date: '',
-            weighting: '',
+            date: 'Mar 18, Dic 2025',
+            weighting: '10%',
             description: {
                 text: '',
                 href: ''
@@ -128,7 +128,7 @@ const courseData = {
         { 
             week: '04', 
             class: '07', 
-            date: 'Mié 13, Nov 2025', 
+            date: 'Mié 12, Nov 2025', 
             description: [
                 {
                     text: 'No asistí',
@@ -139,7 +139,40 @@ const courseData = {
         { 
             week: '04', 
             class: '08', 
-            date: 'Jue 14, Nov 2025', 
+            date: 'Jue 13, Nov 2025', 
+            description: [
+                {
+                    text: 'Física y Colisiones en Motores de Videojuegos',
+                    href: 'clase08',
+                },
+            ]
+        },
+        { 
+            week: '05', 
+            class: '09', 
+            date: 'Mié 19, Nov 2025', 
+            description: [
+                {
+                    text: 'No asistí',
+                    strikethrough: true,
+                },
+            ]
+        },
+        { 
+            week: '05', 
+            class: '10', 
+            date: 'Jue 20, Nov 2025', 
+            description: [
+                {
+                    text: 'Auto-estudio: Introducción a Godot',
+                    href: 'clase10',
+                },
+            ]
+        },
+        { 
+            week: '06', 
+            class: '11', 
+            date: 'Mié 26, Nov 2025', 
             description: [
                 {
                     text: '',
@@ -147,6 +180,18 @@ const courseData = {
                 },
             ]
         },
+        { 
+            week: '06', 
+            class: '12', 
+            date: 'Jue 27, Nov 2025', 
+            description: [
+                {
+                    text: '',
+                    href: '',
+                },
+            ]
+        },
+        
     ],
     lectureData: [
         { 
@@ -200,6 +245,24 @@ const courseData = {
             date: 'Sáb 15, Nov 2025', 
             description: {
                 text: 'Construyendo la Lógica del Videojuego',
+                href: 'lectura06',
+            }
+        },
+        { 
+            week: '05', 
+            lecture: '07', 
+            date: 'Sáb 22, Nov 2025', 
+            description: {
+                text: 'Integrando Sonido y Pulido Final',
+                href: 'lectura07',
+            }
+        },
+        { 
+            week: '06', 
+            lecture: '07', 
+            date: 'Sáb 29, Nov 2025', 
+            description: {
+                text: 'Fundamentos del desarrollo de videojuegos 2D y 3D',
                 href: '',
             }
         },

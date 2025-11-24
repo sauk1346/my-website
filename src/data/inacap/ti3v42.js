@@ -164,6 +164,28 @@ const courseData = {
             date: 'Mié 19, Nov 2025', 
             description: [
                 {
+                    text: 'No asistí',
+                    strikethrough: true,
+                },
+            ]
+        },
+        { 
+            week: '06', 
+            class: '11', 
+            date: 'Mar 25, Nov 2025', 
+            description: [
+                {
+                    text: '',
+                    href: '',
+                },
+            ]
+        },
+        { 
+            week: '06', 
+            class: '12', 
+            date: 'Mié 26, Nov 2025', 
+            description: [
+                {
                     text: '',
                     href: '',
                 },
@@ -222,7 +244,7 @@ const courseData = {
             date: 'Sáb 08, Nov 2025', 
             description: {
                 text: 'Introducción al Desarrollo Móvil en Android',
-                href: '',
+                href: 'lectura06',
             }
         },
         { 
@@ -231,16 +253,16 @@ const courseData = {
             date: 'Sáb 15, Nov 2025', 
             description: {
                 text: 'Estructura de aplicaciones y permisos en Android',
-                href: '',
+                href: 'lectura07',
             }
         },
         { 
-            week: '05', 
+            week: '04', 
             lecture: '08', 
-            date: 'Sáb 22, Nov 2025', 
+            date: 'Sáb 15, Nov 2025', 
             description: {
-                text: 'Conexión Inalámbrica y Estándares de Seguridad',
-                href: '',
+                text: 'Activities y permisos en Android',
+                href: 'docs/lectura08.pdf',
             }
         },
         { 
@@ -248,10 +270,47 @@ const courseData = {
             lecture: '09', 
             date: 'Sáb 22, Nov 2025', 
             description: {
+                text: 'Conexión Inalámbrica y Estándares de Seguridad',
+                href: 'lectura09',
+            }
+        },
+        { 
+            week: '05', 
+            lecture: '10', 
+            date: 'Sáb 22, Nov 2025', 
+            description: {
                 text: 'Síntesis de la unidad',
+                href: 'docs/lectura10.pdf',
+            }
+        },
+        { 
+            week: '06', 
+            lecture: '11', 
+            date: 'Sáb 29, Nov 2025', 
+            description: {
+                text: 'Cómo garantizar la seguridad en conexiones Bluetooth o Wi-Fi en contextos industriales',
                 href: '',
             }
         },
+        { 
+            week: '06', 
+            lecture: '12', 
+            date: 'Sáb 29, Nov 2025', 
+            description: {
+                text: 'Integración de Smart Devices con aplicaciones externas',
+                href: '',
+            }
+        },
+        { 
+            week: '06', 
+            lecture: '13', 
+            date: 'Sáb 29, Nov 2025', 
+            description: {
+                text: 'Envío y Recepción de Información Serial entre Android y Arduino',
+                href: '',
+            }
+        },
+
     ]
 };
 

@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { CompactPlatformGrid } from '@/components/ui/CompactPlatformGrid';
 import BootcampTable from '@/components/features/bootcamp/BootcampTable';
-import { bootcampsData } from '@/data/bootcamp/bootcampData';
+import { bootcampsData } from '@/utils/bootcampUtils';
 import styles from './Bootcamp.module.css';
 
 export default function Bootcamp() {

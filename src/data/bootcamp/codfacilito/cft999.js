@@ -1,4 +1,10 @@
 export const cft999Data = {
+  // Metadata
+  code: "CFT999",
+  certificateUrl: "",
+  instructor: null,
+
+  // Course structure
   title: "Azure AI Engineer Associate",
   sectionTitle: "Módulos",
   modules: [

@@ -1,6 +1,12 @@
 export const udd01Data = {
+  // Metadata
+  code: "UDD001",
+  certificateUrl: "/bootcamp/udd001/docs/DWFS-Diploma.pdf",
+  instructor: null,
+
+  // Course structure
   title: "Desarrollo Web Fullstack",
-  
+
   projects: {
     title: "Proyectos",
     data: [

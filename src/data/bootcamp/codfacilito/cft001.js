@@ -1,5 +1,11 @@
 // data/cft001-data.js
 export const cft001Data = {
+  // Metadata
+  code: "CFT001",
+  certificateUrl: "https://codigofacilito.com/certificates/75c59561-4dc2-4b23-aff0-04efb256a186",
+  instructor: null,
+
+  // Course structure
   title: "Ciencia de Datos",
   sectionTitle: "Módulos",
   modules: [

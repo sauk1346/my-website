@@ -1,4 +1,10 @@
 export const udm002Data = {
+  // Metadata
+  code: "UDM002",
+  instructor: "Andrei Neagoie",
+  certificateUrl: null,
+
+  // Course structure
   title: "Master the Coding Interview: Data Structures + Algorithms",
   sectionTitle: "Sections",
   basePath: "udm002",

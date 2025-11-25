@@ -1,4 +1,11 @@
 export const ch001Data = {
+    // Metadata
+    code: "CH001",
+    professor: "Peking University",
+    platform: "Coursera",
+    certificate: "",
+
+    // Course structure
     title: "Chinese for HSK 1",
     modules: [
       {

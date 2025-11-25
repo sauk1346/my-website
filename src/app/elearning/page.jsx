@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react';
 import { CompactPlatformGrid } from '@/components/ui/CompactPlatformGrid';
-import { platformsData } from '@/data/elearning/elearningData';
+import { platformsData } from '@/utils/elearningUtils';
 import styles from './Elearning.module.css';
 import { CourseTable } from '@/components/features/elearning/CourseTable';
 

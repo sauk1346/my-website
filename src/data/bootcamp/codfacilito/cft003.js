@@ -1,4 +1,10 @@
 export const cft003Data = {
+  // Metadata
+  code: "CFT003",
+  certificateUrl: "https://codigofacilito.com/certificates/eabfad8e-ae4e-4207-9181-06f5981d4543",
+  instructor: null,
+
+  // Course structure
   title: "Python",
   sectionTitle: "Módulos",
   modules: [

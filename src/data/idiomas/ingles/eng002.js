@@ -1,4 +1,11 @@
 export const eng002Data = {
+    // Metadata
+    code: "EN002",
+    professor: "University of California, Irvine",
+    platform: "Coursera",
+    certificate: "",
+
+    // Course structure
     title: "Vowels of American English Pronunciation",
     modules: [
       {

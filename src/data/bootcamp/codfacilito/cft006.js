@@ -1,4 +1,10 @@
 export const cft006Data = {
+  // Metadata
+  code: "CFT006",
+  certificateUrl: "",
+  instructor: null,
+
+  // Course structure
   title: "Git & GitHub",
   sectionTitle: "Módulos",
   modules: [

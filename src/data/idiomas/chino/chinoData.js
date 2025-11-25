@@ -1,15 +1,11 @@
+import { generateLanguageCourses } from '@/utils/idiomasUtils';
+
 export const chinoData = {
     title: "Chino Mandarín",
-    courses: [
-      {
-        code: "CH001",
-        name: "Chinese for HSK 1",
-        href: "chino/ch001",
-        platform: "Coursera",
-        professor: "Peking University",
-        certificate: ""
-      }
-    ],
+    // Los cursos se generan automáticamente desde los archivos individuales
+    get courses() {
+        return generateLanguageCourses('chino');
+    },
     topics: [
       {
         item: "01",

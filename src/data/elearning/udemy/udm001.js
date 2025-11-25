@@ -1,7 +1,13 @@
 export const udm001Data = {
+  // Metadata
+  code: "UDM001",
+  instructor: "Angela Yu",
+  certificateUrl: null,
+
+  // Course structure
   title: "100 Days of Code: The Complete Python Pro Bootcamp",
   sectionTitle: "Days",
-  basePath: "dvt010",
+  basePath: "udm001",
   modules: [
     {
       number: "01",

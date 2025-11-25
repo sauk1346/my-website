@@ -1,6 +1,12 @@
 export const udd02Data = {
+  // Metadata
+  code: "UDD002",
+  certificateUrl: "/bootcamp/udd002/docs/DS-Diploma.pdf",
+  instructor: null,
+
+  // Course structure
   title: "Ciencia de Datos e Inteligencia Artificial",
-  
+
   projects: {
     title: "Proyectos",
     data: [

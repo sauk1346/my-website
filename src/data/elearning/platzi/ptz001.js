@@ -1,13 +1,13 @@
-export const dvt010Data = {
+export const ptz001Data = {
   // Metadata
-  code: "DVT010",
-  instructor: "Ricardo Cuéllar",
+  code: "PTZ001",
+  instructor: "Lucio Negrello",
   certificateUrl: null,
 
   // Course structure
-  title: "Django: Crea aplicaciones web robustas con Python",
-  sectionTitle: "Days",
-  basePath: "dtv010",
+  title: "Curso Introductorio de Desarrollo de Videojuegos con Godot",
+  sectionTitle: "Módulos",
+  basePath: "ptz001",
   modules: [
     {
       number: "01", 
@@ -21,31 +21,25 @@ export const dvt010Data = {
         },
         {
           classNumber: "02",
-          name: "Control de Flujo",
+          name: "Tu primer Juego (1)",
           link: null,
           exercises: null,
         },
         {
           classNumber: "03",
-          name: "Estructura de Datos",
+          name: "Tu primer Juego (2)",
           link: null,
           exercises: null,
         },
         {
           classNumber: "04",
-          name: "Programación Funcional",
+          name: "Desarrollando el juego",
           link: null,
           exercises: null,
         },
         {
           classNumber: "05",
-          name: "Programación Orientada a Objetos",
-          link: null,
-          exercises: null,
-        },
-        {
-          classNumber: "06",
-          name: "Manejo Avanzado",
+          name: "Conclusión",
           link: null,
           exercises: null,
         },
@@ -54,4 +48,4 @@ export const dvt010Data = {
   ]
 };
 
-export default dvt010Data;
+export default ptz001Data;

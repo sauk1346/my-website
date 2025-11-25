@@ -1,4 +1,12 @@
 export const eng001Data = {
+    // Metadata
+    code: "EN001",
+    professor: "University of California, Irvine",
+    platform: "Coursera",
+    certificate: "Diploma",
+    certificateHref: "https://coursera.org/share/c92d6590395fbc5e305b1939b16963d2",
+
+    // Course structure
     title: "The Pronunciation of American English",
     modules: [
       {

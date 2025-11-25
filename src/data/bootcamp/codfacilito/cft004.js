@@ -1,4 +1,10 @@
 export const cft004Data = {
+  // Metadata
+  code: "CFT004",
+  certificateUrl: "",
+  instructor: null,
+
+  // Course structure
   title: "Fundamentos AWS",
   sectionTitle: "Módulos",
   modules: [

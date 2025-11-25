@@ -216,8 +216,7 @@ export function generatePlatformsData() {
                 code: courseData.code || courseId.toUpperCase(),
                 title: courseData.title,
                 titleUrl: `elearning/${courseId}`,
-                certificateUrl: courseData.certificateUrl || null,
-                instructor: courseData.instructor || ""
+                certificateUrl: courseData.certificateUrl || null
             }))
         };
     }

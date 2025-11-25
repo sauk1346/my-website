@@ -1,7 +1,6 @@
 export const udm002Data = {
   // Metadata
   code: "UDM002",
-  instructor: "Andrei Neagoie",
   certificateUrl: null,
 
   // Course structure

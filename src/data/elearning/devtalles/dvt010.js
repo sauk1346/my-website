@@ -1,7 +1,6 @@
 export const dvt010Data = {
   // Metadata
   code: "DVT010",
-  instructor: "Ricardo Cuéllar",
   certificateUrl: null,
 
   // Course structure

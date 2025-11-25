@@ -13,7 +13,7 @@ export const CourseTable = ({ courses, platformName, type = 'elearning' }) => {
               <tr>
                 <th>Código</th>
                 <th>Curso</th>
-                {type === 'elearning' && <th>Instructor</th>}
+                {type === 'elearning' && <th>Diploma</th>}
                 {type === 'bootcamp' && <th>Certificado</th>}
               </tr>
             </thead>
@@ -39,16 +39,27 @@ export const CourseTable = ({ courses, platformName, type = 'elearning' }) => {
                     )}
                   </td>
                   {type === 'elearning' && (
-                    <td data-label="Instructor">
-                      {course.instructor || '-'}
+                    <td data-label="Diploma">
+                      {course.certificateUrl ? (
+                        <a
+                          href={course.certificateUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={styles.certificateLink}
+                        >
+                          Diploma
+                        </a>
+                      ) : (
+                        '-'
+                      )}
                     </td>
                   )}
                   {type === 'bootcamp' && (
                     <td data-label="Certificado">
                       {course.certificateUrl ? (
-                        <a 
-                          href={course.certificateUrl} 
-                          target="_blank" 
+                        <a
+                          href={course.certificateUrl}
+                          target="_blank"
                           rel="noopener noreferrer"
                           className={styles.certificateLink}
                         >

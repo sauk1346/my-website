@@ -1,0 +1,199 @@
+# Últimos ajustes y exportación del juego
+
+
+## 1. Agregar sonido de pelota
+
+1. **Buscar y descargar [audio de pelota](https://www.youtube.com/watch?v=ZRLDCEp8Hqw) en youtube**
+2. **Crear nodo hijo `AudioStreamPlayer` en el nodo padre `Ball`**
+3. **Renombrar `AudioSteamPlayer` a `AudioCollision`**
+4. **Agregar el audio en el inspector**
+
+<SmartFigure
+	id="agregar-audio-en-nodo-audioCollision"
+	src="/elearning/ptz001/images/fig27.png"
+	alt="Agregar audio en nodo 'AudioCollision'"
+	caption="Agregar audio en nodo 'AudioCollision'"
+	size="large"
+/>
+
+## 2. Refactorizar script 'ball.gd'
+
+Refactorizar `ball.gd` para ejecutar el sonido cada vez que ocurra una colisión
+
+
+**ball.gd**
+
+```gdscript
+extends CharacterBody2D
+
+class_name Ball
+
+var speed = 0
+var is_moving = false
+
+func _ready():
+	randomize()
+	reset_ball()
+	
+func reset_ball():
+	speed = 600
+	velocity.x = [-1,1][randi() % 2] * speed
+	velocity.y = [-0.8, 0.8][randi() % 2] * speed
+	is_moving = true
+
+func _physics_process(delta):
+	
+	if is_moving:
+		var collide = move_and_collide(velocity * delta)
+		if collide:
+			$AudioCollision.play()
+			velocity = velocity.bounce(collide.get_normal())
+```
+
+## 3. Nodo 'Timer'
+
+Se utiliza el nodo `Timer` para dar un tiempo prudente luego de anotar un gol. Así el jugador tiene tiempo para reaccionar a la nuva posición de la pelota
+
+1. **Agregar nodo `Timer`**
+2. **Renombrarlo a `RestartTimer`**
+
+<SmartFigure
+	id="nodo-restartTimer"
+	src="/elearning/ptz001/images/fig28.png"
+	alt="Nodo 'RestartTimer'"
+	caption="Nodo 'RestartTimer'"
+	size="large"
+/>
+
+### Refactorizar nuevamente `ball.gd`
+
+```gdscript
+extends CharacterBody2D
+class_name Ball
+
+var speed = 0
+var is_moving = false
+@onready var timer = get_parent().get_node("RestartTimer")
+
+func _ready():
+	randomize()
+	reset_ball()
+	
+func reset_ball():
+	timer.stop()
+	speed = 600
+	velocity.x = [-1, 1][randi() % 2] * speed
+	velocity.y = [-0.8, 0.8][randi() % 2] * speed
+	is_moving = true
+
+func _physics_process(delta):
+	if is_moving:
+		var collide = move_and_collide(velocity * delta)
+		if collide:
+			$AudioCollision.play()
+			velocity = velocity.bounce(collide.get_normal())
+
+func _on_restart_timer_timeout() -> void:
+	reset_ball()
+```
+
+#### Declaración y referencia del Timer
+
+- Se declaró una variable timer que obtiene la referencia al nodo RestartTimer desde el padre usando `@onready`
+- Se utiliza `get_parent().get_node("RestartTimer")` para acceder al nodo Timer que está en el mismo nivel que Ball en la jerarquía
+
+#### Función reset_ball()
+
+- Se llama a `timer.stop()` para detener cualquier cuenta regresiva activa del timer
+- Se reinicia la velocidad de la pelota a 600
+- Se asigna una dirección aleatoria en X (izquierda o derecha: -1 o 1)
+- Se asigna una dirección aleatoria en Y (arriba o abajo: -0.8 o 0.8)
+- Se activa el movimiento con `is_moving = true`
+
+#### Función de callback del Timer
+
+- Se implementó `_on_restart_timer_timeout()` que se ejecuta cuando el timer llega a cero
+- Esta función llama a `reset_ball()` para reiniciar la pelota automáticamente
+
+#### Propósito general
+
+- El RestartTimer permite crear un retraso entre el momento en que la pelota entra al arco y cuando se reinicia el juego
+- Mejora la experiencia de juego al dar tiempo visual para que el jugador procese el gol antes del reinicio
+
+
+### Refactorizar `level.gd`
+
+```gdscript
+extends Node2D
+
+var playerScore = 0
+var oponentScore = 0 
+
+func _ready():
+	_restart_game()
+
+func _process(delta):
+	$Marcador.text = str(playerScore) + " | " + str(oponentScore)
+
+func _restart_game():
+	$Ball.is_moving = false
+	$Ball.velocity = Vector2.ZERO
+	$Ball.position = Vector2(960, 540)
+	#$Ball.reset_ball()
+	$RestartTimer.start()
+	
+func _on_arco_oponente_body_entered(body):
+	if body is Ball:
+		playerScore += 1
+		_restart_game()
+
+func _on_arco_player_body_entered(body):
+	if body is Ball:
+		oponentScore += 1
+		_restart_game()
+```
+
+#### Variables de puntaje
+
+- Se declararon `playerScore` y `oponentScore` inicializadas en 0 para llevar el marcador del juego
+
+#### Función _ready()
+
+- Se llama a `_restart_game()` al iniciar la escena para posicionar correctamente la pelota desde el comienzo
+
+#### Función _process(delta)
+
+- Se actualiza el texto del nodo `$Marcador` en cada frame
+- Se muestra el puntaje en formato "playerScore | oponentScore" usando concatenación de strings
+
+#### Función _restart_game()
+
+- Se detiene el movimiento de la pelota con `$Ball.is_moving = false`
+- Se resetea la velocidad a cero con `$Ball.velocity = Vector2.ZERO`
+- Se reposiciona la pelota en el centro de la pantalla con `Vector2(960, 540)`
+- Se inicia el `RestartTimer` que esperará antes de llamar a `reset_ball()` desde Ball
+- La línea `$Ball.reset_ball()` está comentada porque ahora el timer se encarga de llamarla
+
+#### Detección de goles
+
+- `_on_arco_oponente_body_entered()`: Se ejecuta cuando un cuerpo entra al arco del oponente
+    - Verifica que el cuerpo sea de tipo Ball
+    - Incrementa el puntaje del jugador en 1
+    - Llama a `_restart_game()` para reiniciar
+- `_on_arco_player_body_entered()`: Se ejecuta cuando un cuerpo entra al arco del jugador
+    - Verifica que el cuerpo sea de tipo Ball
+    - Incrementa el puntaje del oponente en 1
+    - Llama a `_restart_game()` para reiniciar
+
+## 4. Exportar juego
+
+1. Proyecto -> Exportar -> Add... -> (elegir modo)
+2. Se escoge HTML5 -> Exportar Proyecto
+3. Se crea carpeta `./dist` y dentro de ella `index.html`
+4. Exportar proyecto
+5. Abrir carpeta `./dist` en VsCode y usar extensión "Go Live" para ejecutarlo como servidor
+
+
+## 5. Proyecto Desplegado
+
+- [PongWeb](https://sauk1346.github.io/pongWeb/)

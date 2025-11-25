@@ -1,7 +1,6 @@
 export const cft002Data = {
   // Metadata
   code: "CFT002",
-  instructor: "Lesly Zerna",
   certificateUrl: null,
 
   // Course structure

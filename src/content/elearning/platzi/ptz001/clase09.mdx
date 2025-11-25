@@ -1,0 +1,78 @@
+# Creando el marcador
+
+## 1. Crear un nuevo nodo
+
+1. **Crear un nodo `Label` para ingresar texto en la pantalla**
+2. **Renombrar a `MarcadorPlayer`**
+3. En inspector, cambiar tamaño a 1920 x 1080
+
+<SmartFigure
+	id="valores-para-marcadorPlayer"
+	src="/elearning/ptz001/images/fig26.png"
+	alt="Valores para nodo 'MarcadorPlayer'"
+	caption="Valores para nodo 'MarcadorPlayer'"
+	size="large"
+/>
+
+## 2. Refactorizar scripts 'ball.gd' y 'level.gd'
+
+Se crea una clase `Ball`, para evitar el puntaje adicional
+
+- El puntaje adicional se debe a que los arcos tocan los limites superior e inferior, dando 2 ptos extras para cada jugador
+- La clase `Ball` se utilizará para condicionar el puntaje solo cuando se toque la pelota
+
+**ball.gd:** Se crea la clase 'Ball'
+
+```gdscript
+extends CharacterBody2D
+
+class_name Ball
+
+var speed = 0
+var is_moving = false
+
+func _ready():
+	randomize()
+	reset_ball()
+	
+func reset_ball():
+	speed = 600
+	velocity.x = [-1,1][randi() % 2] * speed
+	velocity.y = [-0.8, 0.8][randi() % 2] * speed
+	is_moving = true
+
+func _physics_process(delta):
+	
+	if is_moving:
+		var collide = move_and_collide(velocity * delta)
+		if collide:
+			velocity = velocity.bounce(collide.get_normal())
+``` 
+
+**level.gd:** se condiciona el puntaje solo si body es 'Ball'
+
+```gdscript
+extends Node2D
+
+var playerScore = 0
+var oponentScore = 0 
+func _process(delta):
+	$Marcador.text = str(playerScore) + " | " + str(oponentScore)
+
+func _restart_game():
+	$Ball.is_moving = false
+	$Ball.velocity = Vector2.ZERO
+	$Ball.position = Vector2(960, 540)
+	$Ball.reset_ball()
+
+func _on_arco_oponente_body_entered(body):
+	if body is Ball:
+		playerScore += 1
+		_restart_game()
+
+
+func _on_arco_player_body_entered(body):
+	if body is Ball:
+		oponentScore += 1
+		_restart_game()
+```

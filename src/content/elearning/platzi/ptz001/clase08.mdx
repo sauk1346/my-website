@@ -1,0 +1,58 @@
+# Conectando los nodos
+
+## 1. Refactorizar script 'ball'
+- Se crea la función `reset_ball()` y se llama desde la función `_ready()`
+
+**ball.gd**
+
+```gdscript
+extends CharacterBody2D
+
+var speed = 0
+var is_moving = false
+
+func _ready():
+	randomize()
+	reset_ball()
+	
+func reset_ball():
+	speed = 600
+	velocity.x = [-1,1][randi() % 2] * speed
+	velocity.y = [-0.8, 0.8][randi() % 2] * speed
+	is_moving = true
+
+func _physics_process(delta):
+	
+	if is_moving:
+		var collide = move_and_collide(velocity * delta)
+		if collide:
+			velocity = velocity.bounce(collide.get_normal())
+```
+
+## 2. Crear un script para 'level'
+- Crear un script `level.gd` que permita resetear el juego
+- Esto se realiza en el nodo raíz ('level')
+
+**level.gd**
+```gdscript
+extends Node2D
+
+func _restart_game():
+	$Ball.is_moving = false
+	$Ball.velocity = Vector2.ZERO
+	$Ball.position = Vector2(960, 540)
+	$Ball.reset_ball()
+
+func _on_arco_oponente_body_entered(body):
+	_restart_game()
+
+
+func _on_arco_player_body_entered(body):
+	_restart_game()
+```
+
+## 3. Agregar señales a los nodos 'ArcoPlayer' y 'ArcoOponente'
+
+- ArcoPlayer -> Node -> `area_entered(area: Area2D)` -> doble click
+- Linkear con 'Level'
+- Realizar lo mismo para ArcoOponente

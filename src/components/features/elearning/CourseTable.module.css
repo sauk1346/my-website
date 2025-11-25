@@ -70,3 +70,39 @@
   width: 150px;
   min-width: 150px;
 }
+
+/* Enlaces de certificado/diploma */
+.certificateLink {
+  display: inline-block;
+  padding: 0.375rem 0.875rem;
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-align: center;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(16, 185, 129, 0.3);
+}
+
+.certificateLink:hover {
+  background: linear-gradient(135deg, #059669, #047857);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(16, 185, 129, 0.4);
+}
+
+:global(html.dark-mode) .certificateLink,
+:global(html.dark-mode-override) .certificateLink {
+  background: linear-gradient(135deg, #047857, #065f46);
+  box-shadow: 0 2px 4px rgba(6, 95, 70, 0.4);
+}
+
+:global(html.dark-mode) .certificateLink:hover,
+:global(html.dark-mode-override) .certificateLink:hover {
+  background: linear-gradient(135deg, #065f46, #064e3b);
+  box-shadow: 0 4px 8px rgba(6, 95, 70, 0.5);
+}

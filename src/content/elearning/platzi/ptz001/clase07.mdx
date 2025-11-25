@@ -1,0 +1,53 @@
+# Desarrollando la IA del oponente
+
+## 1. Crear 'Oponente'
+
+1. **Duplicar** el escenario 'Player' y renombrarlo 'Oponente'
+
+<SmartFigure
+	id="nuevo-escenario-oponente"
+	src="/elearning/ptz001/images/fig24.png"
+	alt="Nuevo escenario 'Oponente'"
+	caption="Nuevo escenario 'Oponente'"
+	size="large"
+/>
+
+2. **Configurar valores de posición para 'Oponente'**
+    - position-x: 1920-50-10 (ancho pantalla - espacio - ancho oponente)
+    - position-y: 1080/2 - 160/2 (mitad altura pantalla menos mitad altura oponente)
+
+<SmartFigure
+	id="valores-posicion-para-oponente"
+	src="/elearning/ptz001/images/fig25.png"
+	alt="Valores de posición para 'Oponente'"
+	caption="Valores de posición para 'Oponente'"
+	size="large"
+/>
+
+## 2. Script 'Oponente'
+
+**oponente.gd**
+
+```gdscript
+extends CharacterBody2D
+
+const SPEED = 600.0
+@onready var ball = get_parent().find_child("Ball")
+
+func _physics_process(delta):
+	
+	velocity.y = _get_oponent_direction() * SPEED
+	#velocity.x = 0
+	
+	move_and_collide(velocity * delta)
+	
+func _get_oponent_direction():
+	
+	if abs(ball.position.y - position.y) > 25:
+		if ball.position.y > position.y:
+			return 1
+		else:
+			return -1
+	else:
+		return 0
+```

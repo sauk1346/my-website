@@ -1,0 +1,119 @@
+# Examen
+
+<Quiz questions={[
+	{
+		question: "Desarrolla una inteligencia artificial puede servir para:",
+		options: [
+			"Todas las opciones son correctas",
+			"Crear el comportamiento automático de un personaje no manipulable",
+			"Modificar elementos de un nodo basados en alguna propiedad de otro nodo",
+			"Desencadenar comportamientos automáticos basados en alguna señal o evento"
+		],
+		correctIndex: 0
+	},
+    {
+		question: "¿Qué debemos hacer si queremos que un nodo se desplace hacia arriba en un proyecto 2D?",
+		options: [
+			"Parsarle la función move_and_slide la velocidad multiplicada por un Vector2 en el que el valor de X sea 1 y el valor de Y sea 0 move_and_slide(speed * Vector2(1, 0))",
+			"Parsarle la función move_and_slide la velocidad multiplicada por un Vector2 en el que el valor de X sea 0 y el valor de Y sea 1 move_and_slide(speed * Vector2(0, 1))",
+			"Parsarle la función move_and_slide la velocidad multiplicada por un Vector2 en el que el valor de X sea 0 y el valor de Y sea -1 move_and_slide(speed * Vector2(0, -1))",
+			"Parsarle la función move_and_slide la velocidad multiplicada por un Vector2 en el que el valor de X sea -1 y el valor de Y sea 0 move_and_slide(speed * Vector2(-1, 0))",
+		],
+		correctIndex: 2
+	},
+    {
+		question: "¿Qué lenguajes de programación puedes usar en Godot?",
+		options: [
+			"Godot tiene soporte nativo para GDScript, C\# y GDNative (C y C++)",
+			"La comunidad da soporte a muchos lenguajes entre los que se encuentran Kotlin y Python",
+			"Godot cuenta con soporte para Visual Scripting",
+			"Todas son correctas"
+		],
+		correctIndex: 3
+	},
+    {
+		question: "¿Cómo podemos invertir en la dirección de un nodo para crear un rebote?",
+		options: [
+			"Debemos utilizar el método bounce() del Vector2 recibiendo el valor \"normal\" de la función move_and_collide pasándole la dirección multiplicada por la velocidad y el valor delta",
+			"Necesitamos descargar la librería \"bouce\", creada por la comunidad, y llamarla cuando ocurra una colisión",
+			"Debemos pasarle la función move_and_collide el valor \"nnormal\" del nodo con el que colisionó multiplicando la dirección por la velocidad y el valor delta",
+		],
+		correctIndex: 0
+	},
+    {
+		question: "¿En qué función debemos actualizar la información de la interfaz de usuario?",
+		options: [
+			"_process()",
+			"_interface()",
+			"_ready()",
+			"_physics_process()"
+		],
+		correctIndex: 0
+	},
+    {
+		question: "¿Cuál es la diferencia entre OpenGL 2.0 y OpenGL 3.0?",
+		options: [
+			"OpenGL 2.0 usa más recursos de memoria",
+			"OpenGL 3.0 es parte del metaverso",
+			"OpenGL 3.0 está optimizada para dispositivos más antiguos y tiene retrocompatibilidad",
+			"OpenGL 3.0 tiene mayor calidad y más recursos, mientras que OpenGL 2.0 tiene una mejor compatibilidad con hardware antiguo y puede exportarse para web"
+		],
+		correctIndex: 3
+	},
+    {
+		question: "Godot es un motor de videojuego 2D y 3D multiplataforma, libre y de código abierto.",
+		options: [
+			"Verdadero",
+			"Falso",
+		],
+		correctIndex: 0
+	},
+    {
+		question: "La diferencia entre un Area2D y los demás collisionBodies (RigidBody, KinematicBody y StaticBody) es que la primera no ocupa un lugar físico dentro del juego y sirve para remarcar un espacio determinado.",
+		options: [
+			"Falso",
+			"Verdadero",
+		],
+		correctIndex: 1
+	},
+    {
+		question: "El nodo que nos permite tener un control total sobre su movilidad y no se ve afectado por las físicas del ambiente es:",
+		options: [
+			"KinematicBody",
+			"RigidBody",
+			"Area",
+			"StaticBody"
+		],
+		correctIndex: 0
+	},
+    {
+		question: "¿Qué ocurre cuando un nodo emite una señal?",
+		options: [
+			"Aparece Batman",
+			"Todos los nodos reciben la señal y la almacenan",
+			"Los nodos no pueden emitir señales",
+			"Se ejecuta la función que está asociada a dicha señal"
+		],
+		correctIndex: 3
+	},
+    {
+		question: "¿Cuáles son los conceptos claves de Godot?",
+		options: [
+			"Ítems, Armas, Sujetos y Diálogos",
+			"Juego, Escenas, Colisiones y Personajes",
+			"Objetos, Herramientas, Personajes y Comunicación",
+			"Nodos, Escenas, Árbol y Señales"
+		],
+		correctIndex: 3
+	},
+    {
+		question: "¿Cómo se llama el nodo que utilizamos para reproducir audios, sin localización espacial?",
+		options: [
+			"SoundPlayer",
+			"AudioPlayer",
+			"Todos los nodos pueden emitir sonidos",
+			"AudioStreamPlayer"
+		],
+		correctIndex: 3
+	},
+]} />

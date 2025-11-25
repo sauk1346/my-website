@@ -1,3 +1,41 @@
 # Introducción
 
-asdf
+- Es un motor de código abierto y gratuito para la creación de videojuegos en 2D y 3D.
+- Ofrece una interfaz intuitiva y herramientas potentes para diseñar, programar y desplegar juegos.
+- Soporta múltiples plataformas, incluyendo Windows, macOS, Linux, Android, i
+
+## 1. Lenguajes Oficiales
+
+<SmartTable
+    tableLayout="auto"
+    headers={["Lenguaje", "Descripción"]}
+    rows={[
+        ["**GDScript**", "Lenguaje de scripting propio de Godot, similar a Python, diseñado para integrarse perfectamente con el motor."],
+        ["**C#**", "Soporte para C# a través de Mono, permitiendo a los desarrolladores utilizar este lenguaje popular."],
+        ["**VisualScript**", "Lenguaje visual basado en nodos, ideal para quienes prefieren una aproximación gráfica al desarrollo."]
+    ]}
+/>
+
+### GDScript
+
+- Es un lenguaje de tipado dinámico propio de Godot
+- Está basado en la sintaxis de Python y optimizado para el motor
+
+## 2. Conceptos
+
+### Nodos
+- Son las unidad mínima de medida dentro de Godot
+- Son los bloques de construcción básicos para crear escenas y objetos en el juego
+
+### Escenas
+- Es la forma de agrupar nodos en unidades lógicas
+- Son un grupo de nodos que le dan vida a algo más complejo dentro del juego
+- Pueden representar personajes, objetos, niveles o cualquier otra entidad en el juego
+
+### Árbol
+- El conjunto de escenas que conformas el juego se llama "árbol de escenas"
+- A su vez, cada escena tiene su propio "árbol de nodos"
+
+### Señales
+- Es el mecanismo que permite a los diferentes nodos comunicarse entre sí sin dificultad
+- Las señales permiten que un nodo emita una señal cuando ocurre un evento específico, y otros nodos pueden conectarse a esa señal para reaccionar en consecuencia

@@ -10,40 +10,52 @@ export const ptz001Data = {
   basePath: "ptz001",
   modules: [
     {
-      number: "01", 
-      name: "Fundamentos necesarios de Python",
+      number: "01",
+      name: "Introducción Godot",
       classes: [
         {
           classNumber: "01",
           name: "Introducción",
-          link: null,
+          link: 'clase01',
           exercises: null,
         },
         {
           classNumber: "02",
-          name: "Tu primer Juego (1)",
-          link: null,
+          name: "Configuración Godot",
+          link: 'clase02',
           exercises: null,
         },
+      ],
+    },
+    {
+      number: "02",
+      name: "Tu primer Juego",
+      classes: [
         {
           classNumber: "03",
-          name: "Tu primer Juego (2)",
-          link: null,
+          name: "Definiendo los límites del escenario",
+          link: 'clase03',
           exercises: null,
         },
         {
           classNumber: "04",
-          name: "Desarrollando el juego",
-          link: null,
+          name: "Creando tu personaje",
+          link: 'clase04',
           exercises: null,
         },
         {
           classNumber: "05",
-          name: "Conclusión",
-          link: null,
+          name: "Programando el movimiento y sus controles",
+          link: 'clase05',
           exercises: null,
         },
-      ]
+        {
+          classNumber: "06",
+          name: "Dando vida a la pelota",
+          link: 'clase06',
+          exercises: null,
+        },
+      ],
     },
   ]
 };

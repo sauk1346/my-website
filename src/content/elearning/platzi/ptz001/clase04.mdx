@@ -1,0 +1,56 @@
+# Creando tu personaje
+
+## 1. Nodo para personaje
+
+1. **Agregar nodo `CharacterBody2D`**
+2. **Renombrar `CharacterBody2D` a `Player`**
+3. **Agregar nodo hijo `CollisionShape2D`**
+4. **Agregar nodo hijo `ColorRect` para visibilidad del nodo**
+
+<SmartFigure
+	id="valores-player-collisionShape2D"
+	src="/elearning/ptz001/images/fig13.png"
+	alt="Valores para 'Player' -> 'CollisionShape2D'"
+	caption="Valores para 'Player' -> 'CollisionShape2D'"
+	size="large"
+/>
+
+<SmartFigure
+	id="valores-player-colorRect"
+	src="/elearning/ptz001/images/fig14.png"
+	alt="Valores para 'Player' -> 'ColorRect'"
+	caption="Valores para 'Player' -> 'ColorRect'"
+	size="large"
+/>
+
+## 2. Convertir Nodo 'Player' a 'Escena'
+Se recomienda convertir el nodo Player en una escena independiente porque encapsula su propia lógica y componentes (script de movimiento, sprites, colisiones, etc.). Esto permite reutilizarlo en diferentes niveles, facilita el mantenimiento y promueve una arquitectura modular del proyecto.
+
+1. **Click-derecho en nodo 'Player' y seleccionar 'Guardar rama como escena'**
+
+<SmartFigure
+	id="guardar-nodo-como-escena"
+	src="/elearning/ptz001/images/fig15.png"
+	alt="Guardar nodo 'Player' como 'Escena'"
+	caption="Guardar nodo 'Player' como 'Escena'"
+	size="large"
+/>
+
+2. **Reposicionar 'Player' a los siguientes valores**
+    - position-x: 50
+    - position-y: 1080/2 - 160/2 (mitad de altura ventana menos mitad altura player)
+
+<SmartFigure
+	id="valores-para-player"
+	src="/elearning/ptz001/images/fig16.png"
+	alt="Valores para 'Player'"
+	caption="Valores para 'Player'"
+	size="large"
+/>
+<SmartFigure
+	id="vista-nodos-limites-y-nodo-player"
+	src="/elearning/ptz001/images/fig17.png"
+	alt="Vista de nodos límites y nodo player"
+	caption="Vista de nodos límites y nodo player"
+	size="large"
+/>

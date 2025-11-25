@@ -1,0 +1,98 @@
+# Definiendo los límites del escenario
+
+## 1. Creación de Nodos
+1. **Iniciar nodo principal**
+    - `Node2D` -> nombrar  a `Level`
+2. **Crear pared superior**
+    - simbolo '+' -> `StaticBody2D`
+3. **Agregar nodo `CollisionShape2D` a `StaticBody2D`**
+
+<SmartFigure
+	id="arbol-de-nodos-actual"
+	src="/elearning/ptz001/images/fig05.png"
+	alt="Árbol de nodos actual"
+	caption="Árbol de nodos actual"
+	size="large"
+/>
+
+4. **Definir como `RectangleShape2D` para `CollisionShape2D`, en Inspector**
+
+<SmartFigure
+	id="rectangleshape2d"
+	src="/elearning/ptz001/images/fig06.png"
+	alt="Definir forma RectangleShape2D en 'Inspector'"
+	caption="Definir forma RectangleShape2D en 'Inspector'"
+	size="large"
+/>
+
+## 2. Modificar nodo para limites
+
+1. **Renombrar `StaticBody2D` a `ParedSuperior`**
+2. **Modificar las dimensiones de `ParedSuperior` -> `CollisionShape2D`**
+    - size-x: 1920 (ancho de la ventana)
+    - size-y: 50 (grosor)
+    - position-x: 1920/2 (mitad de la ventana)
+    - position-y: 1080-25 (fuera de la ventana, q sea un borde)
+
+<SmartFigure
+	id="configuracion-limites-nodo-superior"
+	src="/elearning/ptz001/images/fig07.png"
+	alt="Configuración para 'ParedSuperior' -> 'CollisionShape2D'"
+	caption="Configuración para 'ParedSuperior' -> 'CollisionShape2D'"
+	size="large"
+/>
+3. **Duplicar `ParedSuperior` y renombrar a `ParedInferior`**
+4. **Modificar las dimensiones de `ParedInferior` -> `CollisionShape2D`**
+    - size-x: 1920 (ancho de la ventana)
+    - size-y: 50 (grosor)
+    - position-x: 1920/2 (mitad de la ventana)
+    - position-y: 1080+25 (fuera de la ventana, q sea un borde)
+
+<SmartFigure
+	id="configuracion-limites-nodo-inferior"
+	src="/elearning/ptz001/images/fig08.png"
+	alt="Configuración para 'ParedInferior' -> 'CollisionShape2D'"
+	caption="Configuración para 'ParedInferior' -> 'CollisionShape2D'"
+	size="large"
+/>
+
+<SmartFigure
+	id="arbol-nodos-actualizado"
+	src="/elearning/ptz001/images/fig09.png"
+	alt="Árbol de nodos actualizado"
+	caption="Árbol de nodos actualizado"
+	size="large"
+/>
+
+## 3. Crear arcos
+
+1. **Agregar nodo `Area2D` para los arcos**
+2. **Renombrar `Area2D` a `ArcoPlayer`** 
+3. **Agregar a `ArcoPlayer` el nodo hijo `Collision2D`**
+
+<SmartFigure
+	id="valores-para-arcoplayer"
+	src="/elearning/ptz001/images/fig10.png"
+	alt="Valores para 'ArcoPlayer' -> 'Collision2D'"
+	caption="Valores para 'ArcoPlayer' -> 'Collision2D'"
+	size="large"
+/>
+
+4. Duplicar `ArcoPlayer` y renombrarlo a `ArcoOponente`
+
+<SmartFigure
+	id="valores-para-arcoOponente"
+	src="/elearning/ptz001/images/fig11.png"
+	alt="Valores para 'ArcoOponente' -> 'Collision2D'"
+	caption="Valores para 'ArcoOponente' -> 'Collision2D'"
+	size="large"
+/>
+
+<SmartFigure
+	id="escenario-con-cuatro-nodos"
+	src="/elearning/ptz001/images/fig12.png"
+	alt="Escenario con los 4 nodos creados"
+	caption="Escenario con los 4 nodos creados"
+	size="large"
+/>
+

@@ -1,6 +1,7 @@
 import React from 'react';
 import { notFound } from 'next/navigation';
 import { CustomMDXProvider } from '@/components/providers/CustomMDXProvider';
+import { FigureProvider } from '@/components/mdx';
 import { getAllElearningLessonPaths, getElearningCourseData, getPlatformByCourseId } from '@/utils/elearningUtils';
 
 /**
@@ -41,7 +42,9 @@ export default async function LessonPage({ params }) {
 
         return (
             <CustomMDXProvider>
-                <MDXContent />
+                <FigureProvider>
+                    <MDXContent />
+                </FigureProvider>
             </CustomMDXProvider>
         );
     } catch (error) {

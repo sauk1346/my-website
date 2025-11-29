@@ -1,5 +1,6 @@
 import { udm001Data } from '@/data/elearning/udemy/udm001';
 import { udm002Data } from '@/data/elearning/udemy/udm002';
+import { udm003Data } from '@/data/elearning/udemy/udm003';
 import { dvt010Data } from '@/data/elearning/devtalles/dvt010';
 import { cft002Data } from '@/data/elearning/codfacilito/cft002';
 import { ptz001Data } from '@/data/elearning/platzi/ptz001';
@@ -100,6 +101,7 @@ const elearningDataMap = {
     udemy: {
         udm001: udm001Data,
         udm002: udm002Data,
+        udm003: udm003Data,
     },
     devtalles: {
         dtv010: dvt010Data,

@@ -142,7 +142,7 @@ const courseData = {
             date: 'Jue 13, Oct 2025', 
             description: [
                 {
-                    text: 'Avance proyecto',
+                    text: 'Avance proyecto (1)',
                     href: ''
                 },
             ]
@@ -164,7 +164,7 @@ const courseData = {
             date: 'Jue 20, Oct 2025', 
             description: [
                 {
-                    text: 'Avance proyecto',
+                    text: 'Avance proyecto (2)',
                     href: ''
                 },
             ]
@@ -175,7 +175,7 @@ const courseData = {
             date: 'Mar 25, Oct 2025', 
             description: [
                 {
-                    text: '',
+                    text: 'Avance Proyecto (3)',
                     href: ''
                 },
             ]
@@ -184,6 +184,28 @@ const courseData = {
             week: '06', 
             class: '12', 
             date: 'Jue 27, Oct 2025', 
+            description: [
+                {
+                    text: 'Avance Proyecto (4)',
+                    href: ''
+                },
+            ]
+        },
+        { 
+            week: '07', 
+            class: '13', 
+            date: 'Mar 02, Dic 2025', 
+            description: [
+                {
+                    text: '',
+                    href: ''
+                },
+            ]
+        },
+        { 
+            week: '07', 
+            class: '14', 
+            date: 'Jue 04, Dic 2025', 
             description: [
                 {
                     text: '',

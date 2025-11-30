@@ -175,7 +175,7 @@ const courseData = {
             date: 'Mié 26, Nov 2025', 
             description: [
                 {
-                    text: '',
+                    text: 'Presentación Videjuego Prototipo (1)',
                     href: '',
                 },
             ]
@@ -184,6 +184,28 @@ const courseData = {
             week: '06', 
             class: '12', 
             date: 'Jue 27, Nov 2025', 
+            description: [
+                {
+                    text: 'Presentación Videjuego Prototipo (2)',
+                    href: 'clase12',
+                },
+            ]
+        },
+        { 
+            week: '07', 
+            class: '13', 
+            date: 'Mié 03, Dic 2025', 
+            description: [
+                {
+                    text: '',
+                    href: '',
+                },
+            ]
+        },
+        { 
+            week: '07', 
+            class: '14', 
+            date: 'Jue 04, Dic 2025', 
             description: [
                 {
                     text: '',

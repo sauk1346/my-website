@@ -175,7 +175,7 @@ const courseData = {
             date: 'Mar 25, Nov 2025', 
             description: [
                 {
-                    text: '',
+                    text: 'Instrucciones Evaluación 01',
                     href: '',
                 },
             ]
@@ -184,6 +184,28 @@ const courseData = {
             week: '06', 
             class: '12', 
             date: 'Mié 26, Nov 2025', 
+            description: [
+                {
+                    text: 'No asistí',
+                    strikethrough: true,
+                },
+            ]
+        },
+        { 
+            week: '07', 
+            class: '13', 
+            date: 'Mar 02, Dic 2025', 
+            description: [
+                {
+                    text: '',
+                    href: ''
+                },
+            ]
+        },
+        { 
+            week: '07', 
+            class: '14', 
+            date: 'Mié 03, Dic 2025', 
             description: [
                 {
                     text: '',
@@ -307,6 +329,15 @@ const courseData = {
             date: 'Sáb 29, Nov 2025', 
             description: {
                 text: 'Envío y Recepción de Información Serial entre Android y Arduino',
+                href: '',
+            }
+        },
+        { 
+            week: '07', 
+            lecture: '14', 
+            date: 'Sáb 06, Dic 2025', 
+            description: {
+                text: 'Integración de Microcontrolador con Aplicación Android',
                 href: '',
             }
         },

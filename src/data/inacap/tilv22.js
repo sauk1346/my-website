@@ -35,8 +35,8 @@ const courseData = {
             date: 'Mié 26, Nov 2025',
             weighting: '35%',
             description: {
-                text: 'Presentación prototipo videojuego',
-                href: ''
+                text: 'Presentación Videojuego Prototipo',
+                href: 'clase12'
             },
         },
                 { 

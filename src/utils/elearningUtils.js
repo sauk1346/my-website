@@ -4,6 +4,7 @@ import { udm003Data } from '@/data/elearning/udemy/udm003';
 import { dvt010Data } from '@/data/elearning/devtalles/dvt010';
 import { cft002Data } from '@/data/elearning/codfacilito/cft002';
 import { ptz001Data } from '@/data/elearning/platzi/ptz001';
+import { cor001Data } from '@/data/elearning/coursera/cor001';
 
 /**
  * Extrae todos los slugs de un objeto de datos de curso
@@ -111,6 +112,9 @@ const elearningDataMap = {
     },
     platzi: {
         ptz001: ptz001Data,
+    },
+    coursera: {
+        cor001: cor001Data,
     }
 };
 

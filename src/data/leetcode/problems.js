@@ -101,6 +101,12 @@ export const problems = {
       difficulty: "Easy",
       categories: ["pandas"]
     },
+    "LC0586": {
+      title: "Cliente con mayor número de pedidos realizados",
+      topics: ["Database"],
+      difficulty: "Easy",
+      categories: ["pandas"]
+    },
     "LC0596": {
       title: "Clases con al menos 5 Estudiantes",
       topics: ["Database"],

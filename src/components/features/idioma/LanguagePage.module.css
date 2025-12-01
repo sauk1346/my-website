@@ -57,7 +57,7 @@
 /* Grid para las dos secciones */
 .grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr auto;
   gap: 2.5rem;
   margin-top: 2rem;
 }
@@ -240,6 +240,17 @@
 :global(html.dark-mode) .courseLink:hover,
 :global(html.dark-mode-override) .courseLink:hover {
   color: #93c5fd;
+}
+
+/* Estilo para nombre de curso sin link */
+.courseNameNoLink {
+  color: #1f2937;
+}
+
+/* Nombre sin link en modo oscuro */
+:global(html.dark-mode) .courseNameNoLink,
+:global(html.dark-mode-override) .courseNameNoLink {
+  color: #e5e7eb;
 }
 
 /* Estilos para enlaces de certificados */

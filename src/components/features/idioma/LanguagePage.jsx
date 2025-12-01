@@ -27,7 +27,11 @@ const LanguagePage = ({ data }) => {
                   <tr key={course.code || index} className={styles.tableRow}>
                     <td className={styles.code}>{course.code}</td>
                     <td>
-                      <Link href={course.href} className={styles.courseLink}>{course.name}</Link>
+                      {course.hasContent ? (
+                        <Link href={course.href} className={styles.courseLink}>{course.name}</Link>
+                      ) : (
+                        <span className={styles.courseNameNoLink}>{course.name}</span>
+                      )}
                     </td>
                     <td>{course.platform}</td>
                     <td>{course.professor}</td>

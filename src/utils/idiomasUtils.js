@@ -1,5 +1,6 @@
 import { eng001Data } from '@/data/idiomas/ingles/eng001';
 import { eng002Data } from '@/data/idiomas/ingles/eng002';
+import { eng003Data } from '@/data/idiomas/ingles/eng003';
 import { ch001Data } from '@/data/idiomas/chino/ch001';
 
 /**
@@ -26,6 +27,7 @@ const idiomasDataMap = {
     ingles: {
         en001: eng001Data,
         en002: eng002Data,
+        en003: eng003Data,
     },
     chino: {
         ch001: ch001Data,
@@ -127,13 +129,15 @@ export function generateLanguageCourses(language) {
         return [];
     }
 
-    return Object.entries(courses).map(([courseId, courseData]) => ({
-        code: courseData.code || courseId.toUpperCase(),
-        name: courseData.title,
-        href: `${language}/${courseId}`,
-        platform: courseData.platform || "",
-        professor: courseData.professor || "",
-        certificate: courseData.certificate || "",
-        certificateHref: courseData.certificateHref || ""
-    }));
+    return Object.entries(courses)
+        .map(([courseId, courseData]) => ({
+            code: courseData.code || courseId.toUpperCase(),
+            name: courseData.title,
+            href: `${language}/${courseId}`,
+            platform: courseData.platform || "",
+            professor: courseData.professor || "",
+            certificate: courseData.certificate || "",
+            certificateHref: courseData.certificateHref || "",
+            hasContent: courseData.modules && courseData.modules.length > 0
+        }));
 }

@@ -3,7 +3,8 @@ export const eng002Data = {
     code: "EN002",
     professor: "University of California, Irvine",
     platform: "Coursera",
-    certificate: "",
+    certificate: "Diploma",
+    certificateHref: "https://coursera.org/share/7613987bd744a621c7e1d4667832e7fa",
 
     // Course structure
     title: "Vowels of American English Pronunciation",

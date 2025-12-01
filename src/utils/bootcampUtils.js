@@ -4,6 +4,9 @@ import { cft003Data } from '@/data/bootcamp/codfacilito/cft003';
 import { cft004Data } from '@/data/bootcamp/codfacilito/cft004';
 import { cft005Data } from '@/data/bootcamp/codfacilito/cft005';
 import { cft006Data } from '@/data/bootcamp/codfacilito/cft006';
+import { cft007Data } from '@/data/bootcamp/codfacilito/cft007';
+import { cft008Data } from '@/data/bootcamp/codfacilito/cft008';
+import { cft009Data } from '@/data/bootcamp/codfacilito/cft009';
 import { cft999Data } from '@/data/bootcamp/codfacilito/cft999';
 import { udd01Data } from '@/data/bootcamp/udd/udd01';
 import { udd02Data } from '@/data/bootcamp/udd/udd02';
@@ -93,6 +96,9 @@ const bootcampDataMap = {
         cft004: cft004Data,
         cft005: cft005Data,
         cft006: cft006Data,
+        cft007: cft007Data,
+        cft008: cft008Data,
+        cft008: cft009Data,
         cft999: cft999Data,
     },
     udd: {

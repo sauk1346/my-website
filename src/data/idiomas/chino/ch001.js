@@ -9,47 +9,47 @@ export const ch001Data = {
     title: "Chinese for HSK 1",
     modules: [
       {
-        title: "Módulo 01: Saludos y Números",
+        title: "Greetings and numbers",
         lessons: [
           {
             lesson: "01",
             description: "你好 Nǐ hǎo!",
-            href: "ch001/lesson11"
+            href: "ch001/class01"
           },
           {
             lesson: "02", 
             description: "你是哪国人? Nǐ shì nǎ guó rén?",
-            href: "ch001/lesson12"
+            href: "ch001/class02"
           },
           {
             lesson: "03",
             description: "你多大了? Nǐ duō dà le?",
-            href: "ch001/lesson13"
+            href: "ch001/class03"
           },
           {
             lesson: "04",
             description: "我的电话号码是... Wǒ de diànhuà hàomǎ shì...",
-            href: "ch001/lesson14"
+            href: "ch001/class04"
           },
           {
             lesson: "05",
             description: "谢谢 Xièxie!",
-            href: "ch001/lesson15"
+            href: "ch001/class05"
           }
         ]
       },
       {
-        title: "Módulo 02: Familia y escuela/universidad",
+        title: "Family and school/university",
         lessons: [
           {
             lesson: "01",
             description: "她是谁 Tā shì shéi?",
-            href: "ch001/lesson21"
+            href: "ch001/class06"
           },
           {
             lesson: "02",
             description: "我有一只大狗 Wǒ yǒu yī zhī dà gǒu",
-            href: "ch001/lesson22"
+            href: "ch001/class07"
           },
           {
             lesson: "03",
@@ -64,6 +64,31 @@ export const ch001Data = {
             description: "他是你的同学吗 Tā shì nǐ de tóngxué ma?"
           }
         ]
-      }
+      },
+      {
+        title: "Timer and wheather",
+        lessons: [
+        ]
+      },
+      {
+        title: "Work and hobbies",
+        lessons: [
+        ]
+      },
+      {
+        title: "Shopping and food",
+        lessons: [
+        ]
+      },
+      {
+        title: "Traffic and directions",
+        lessons: [
+        ]
+      },
+      {
+        title: "Final Test",
+        lessons: [
+        ]
+      },
     ]
   };

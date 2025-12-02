@@ -16,7 +16,7 @@ const ModuleTable = ({ data, language }) => {
               <table className={styles.table}>
                 <thead>
                   <tr>
-                    <th>Lección</th>
+                    <th>Clase</th>
                     <th>Descripción</th>
                   </tr>
                 </thead>

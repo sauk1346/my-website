@@ -1,6 +1,8 @@
 import React from 'react';
 import { notFound } from 'next/navigation';
 import { getAllLanguageLessonPaths, getLanguageCourseData } from '@/utils/idiomasUtils';
+import { FigureProvider } from '@/components/mdx';
+import { CustomMDXProvider } from '@/components/providers/CustomMDXProvider';
 
 /**
  * Pre-renderiza todas las páginas de lecciones en build time
@@ -36,7 +38,13 @@ export default async function LessonPage({ params }) {
             `@/content/idiomas/${language}/${courseId}/${slug}.mdx`
         );
 
-        return <MDXContent />;
+        return (
+            <CustomMDXProvider>
+                <FigureProvider>
+                    <MDXContent />
+                </FigureProvider>
+            </CustomMDXProvider>
+        );
     } catch (error) {
         notFound();
     }

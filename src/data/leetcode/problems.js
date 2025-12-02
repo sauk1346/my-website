@@ -167,6 +167,12 @@ export const problems = {
       difficulty: "Medium",
       categories: ["general"]
     },
+    "LC1484": {
+      title: "Agrupar Productos vendidos por Fecha",
+      topics: ["Database"],
+      difficulty: "Easy",
+      categories: ["pandas"]
+    },
     "LC1517": {
       title: "Usuarios con Emails Válidos",
       topics: ["Database"],

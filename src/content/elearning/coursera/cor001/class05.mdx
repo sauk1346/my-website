@@ -1,0 +1,70 @@
+# A day in the life of a ML Engineer
+
+*Let’s go through the Lifecycle of a Machine Learning Model in a project that I am currently working on.* 
+
+- To help increase business revenue, I have been tasked with creating and deploying a model that recommends similar products to what the customer has already bought
+- I have worked together with the client to come up with an end-user’s pain point
+
+## 1. End-user's paint point
+
+> As a beauty product customer, I would **like to receive recommendations for other products based on my purchase history** so that I will be able to address my skincare needs and improve the overall health of my skin
+
+## 2. Data collection
+
+I should determine what kind of data the company has and identify the sources it will come from.
+
+- **User data:** demographics, purchase history, etc
+- **Product data:** inventory, ingredients, popularity
+- **Other data:** saved products, liked products, search history
+
+### Transforming
+*I will go ahead and do some major transforming by:*
+
+ - wrangling, aggregating, joining, merging, and mapping the data onto one central source
+
+This reduces the need to deal with multiple databases every time we need to pull data.
+
+## 3. Data Preparation
+Most of the time, data from multiple sources will contain errors, different formatting, and missing data.
+ 
+This process overlaps with the Data Collection process as they can be done in tandem.
+
+- Clean data to remove irrelevant data
+- Remove extreme values
+- Missing values should ve removed or replaced
+- Each data column should be in the proper format
+- Create new features
+    - For example, I may need to calculate the average duration between transactions for each user and find which products they buy the most
+    - I may need a feature that identifies what kind of skin issues each product targets and assign them to each user
+- Exploratory Data Analysis
+- Identify how to split up the data into training and test sets
+
+## 4. Model Development
+*I will go ahead and build a Machine Learning model.*
+
+### Content-based-filtering
+This technique finds the similarity between products, based on product content.
+
+**Example:** someone is using a cleanser with lots of water, it is likely that the user has dry skin and will want a moisturizer that is highly moisturizing as well. 
+
+- One of the steps I might take here is to create a similarity score of the products a user has purchased and rank them to other products.
+
+### Collaborative Filtering
+
+I am creating similarities between two users based on how they view a product.
+
+**Example:** I can create a similarity, based on how two users rate their product. 
+
+- First, I group users into a bucket based on their characteristics. This could be age, region, and skin type, products the users rated, and or purchased. 
+- Then, I can take the average ratings for existing members and assume that the new user will be somewhere around the average, and recommend a product based on what others have rated highly.
+
+## 5. Model Evaluation
+The initial stages of Model Evaluation will involve me tuning the model and doing some testing on the data set I had kept earlier for testing.
+
+Once I am satisfied with the results, I will further evaluate the model by experimenting with the recommendations on a group of users and asking for their feedback.
+
+## 6. Model Deployment
+While this is the last step, I still need to track the deployed model’s performance to make sure it continues to do the job that the business requires.
+
+- Continue to track model performance
+- Retrain model based on new information

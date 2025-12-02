@@ -4,7 +4,7 @@ export const cor001Data = {
   certificateUrl: null,
 
   // Course structure
-  title: "Introduction to Machine Learning",
+  title: "Machine Learning with Python",
   sectionTitle: "Modules",
   basePath: "cor001",
   modules: [
@@ -30,7 +30,17 @@ export const cor001Data = {
         {
           classNumber: "04",
           name: "Machine Learning Model Lifecycle",
-          link: '',
+          link: 'class04',
+        },
+        {
+          classNumber: "05",
+          name: "A day in the life of a Machine Learning Engineer",
+          link: 'class05',
+        },
+        {
+          classNumber: "06",
+          name: "Data Scientist vs AI Engineer",
+          link: 'class06',
         },
       ]
     },

@@ -1,0 +1,50 @@
+# Orden y lugar de las importaciones
+
+- Es recomendable dejar el script al final del body de un html
+- A veces es estrictamente necesario dejarlo en el header del html
+
+## 1. Script en el \<head\>
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Script en Head</title>
+    <script>
+        // Se ejecuta ANTES de que el DOM esté listo
+        console.log("Script ejecutándose desde el head");
+        // document.body aún no existe aquí
+    </script>
+</head>
+<body>
+    <h1>Hola Mundo</h1>
+    <p>Contenido de la página</p>
+</body>
+</html>
+```
+
+## 2. Script al final del \<body\>
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Script en Body</title>
+</head>
+<body>
+    <h1 id="titulo">Hola Mundo</h1>
+    <p>Contenido de la página</p>
+    
+    <script>
+        // Se ejecuta DESPUÉS de que el DOM esté listo
+        console.log("Script ejecutándose al final del body");
+        // Ahora sí podemos acceder a los elementos del DOM
+        document.getElementById("titulo").style.color = "blue";
+    </script>
+</body>
+</html>
+```
+
+**Diferencia clave:**
+- **Head**: El script se ejecuta antes de cargar el contenido, no puede manipular elementos del DOM directamente.
+- **Final del body**: El script se ejecuta después de cargar todo el HTML, puede acceder y manipular cualquier elemento del DOM.

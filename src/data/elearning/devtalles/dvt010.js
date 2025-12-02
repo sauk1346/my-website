@@ -6,7 +6,7 @@ export const dvt010Data = {
   // Course structure
   title: "Django: Crea aplicaciones web robustas con Python",
   sectionTitle: "Days",
-  basePath: "dtv010",
+  basePath: "dvt010",
   modules: [
     {
       number: "01", 

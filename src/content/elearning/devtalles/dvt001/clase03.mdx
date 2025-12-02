@@ -1,0 +1,31 @@
+# Prompt, confirm y alert
+
+## 1. prompt()
+Solicita al usuario ingresar un dato. Retorna el texto ingresado o `null` si cancela.
+```js
+let nombre = prompt("¿Cuál es tu nombre?");
+if (nombre) {
+    alert("Hola, " + nombre);
+} else {
+    alert("No ingresaste un nombre");
+}
+```
+
+## 2. confirm()
+Muestra un mensaje con botones "Aceptar" y "Cancelar". Retorna `true` si el usuario acepta, `false` si cancela.
+```js
+let respuesta = confirm("¿Estás seguro de eliminar este archivo?");
+if (respuesta) {
+    console.log("Archivo eliminado");
+} else {
+    console.log("Operación cancelada");
+}
+```
+
+## 3. alert()
+Muestra un mensaje al usuario con un botón "Aceptar".
+```js
+alert("¡Bienvenido a mi sitio web!");
+```
+
+**Nota:** Estos métodos bloquean la ejecución del código hasta que el usuario responde y se consideran intrusivos en aplicaciones modernas.

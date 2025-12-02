@@ -1,0 +1,70 @@
+# Tipos de datos primitivos
+
+<SmartTable
+    tableLayout="auto"
+    headers={["Primitivo", "Descripción"]}
+    rows={[
+        [
+            "**Boolean**",
+            "true/false",
+        ],
+        [
+            "**Null**",
+            "Sin valor en lo absoluto",
+        ],
+        [
+            "**Undefined**",
+            "Una variable declarada que aún no se le asigna valor",
+        ],
+        [
+            "**Number**",
+            "integers, floats, etc.",
+        ],
+        [
+            "**String**",
+            "Una cadena de caracteres, por ej, palabras, nombre de personas",
+        ],
+        [
+            "**Symbol**",
+            "Es una valor único que no es igual a ningún otro valor",
+        ],
+    ]}
+/>
+
+```js
+// string
+let nombre = "Peter Parker";
+console.log("nombre: " + typeof nombre);
+
+//numeros
+let numero = 123;
+console.log("numero: " + typeof nombre);
+
+let numero2 = 33.0001;
+console.log("numero2: " + typeof numero2);
+
+// booleano
+let esMarvel = true;
+console.log("esMarvel: " + typeof esMarvel);
+
+// undefined
+let superPoder;
+console.log("superPoder: " + typeof superPoder);
+
+// null
+let soyNull = null;
+console.log("soyNull: " + typeof soyNull);
+
+// symbol
+let symbol1 = Symbol('a');
+console.log("symbol1: " + typeof symbol1);
+```
+<TerminalOutput withBg={true}>
+{`nombre: string
+numero: string
+numero2: number
+esMarvel: boolean
+superPoder: undefined
+soyNull: object
+symbol1: symbol`}
+</TerminalOutput>

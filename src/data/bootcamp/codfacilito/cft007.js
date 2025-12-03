@@ -20,7 +20,7 @@ export const cft007Data = {
         {
           classNumber: "02",
           name: "Prepara tu entorno de trabajo para usar SQL",
-          link: ""
+          link: "clase02"
         },
         {
           classNumber: "03",

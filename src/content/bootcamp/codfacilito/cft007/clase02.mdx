@@ -1,0 +1,57 @@
+# Prepara tu entorno de trabajo para usar SQL
+
+## 1. DuckDB Shell
+
+Es la interfaz de línea de comandos (CLI) de DuckDB, un sistema de gestión de bases de datos analíticas embebido y de alto rendimiento.
+
+### Ejercicio
+
+1. Abrir [shell duckdb online](https://shell.duckdb.org/): 
+2. Obtener link de [datos .csv online](https://raw.githubusercontent.com/rfordatascience/tidytuesday/refs/heads/main/data/2024/2024-09-03/stackoverflow_survey_questions.csv)
+3. Crear la siguiente consulta:
+    ```sql
+    select * from
+    "https://raw.githubusercontent.com/rfordatascience/tidytuesday/refs/heads/main/data/2024/2024-
+    09-03/stackoverflow_survey_questions.csv";
+    ```
+    <SmartFigure
+    	id="resultado-consulta"
+    	src="/bootcamp/cft007/images/fig01.png"
+    	alt="Resultado de consulta"
+    	caption="Resultado de consulta"
+    	size="large"
+    />
+
+## 2. Teoría
+
+### DBMS
+- Database Management System (Gestor de base de datos)
+- Software que cumple con propiedades ACID
+
+<SmartTable
+    tableLayout="auto"
+    headers={["ACID","Propiedad","Descripción"]}
+    rows={[
+        [
+            "**A**",
+            "**Atomicity**",
+            "Las transacciones son todo o nada. Si una parte falla, toda la transacción se revierte (rollback)."
+        ],
+        [
+            "**C**",
+            "**Consistency**",
+            "La base de datos pasa de un estado válido a otro estado válido, manteniendo todas las reglas e integridad de datos."
+        ],
+        [
+            "**I**",
+            "**Isolation**",
+            "Las transacciones concurrentes se ejecutan de forma aislada, sin interferir entre sí."
+        ],
+        [
+            "**D**",
+            "**Durability**",
+            "Una vez confirmada (commit), la transacción persiste permanentemente, incluso ante fallos del sistema."
+        ],
+    ]}
+/>
+

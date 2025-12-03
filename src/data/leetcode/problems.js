@@ -197,6 +197,12 @@ export const problems = {
       difficulty: "Easy",
       categories: ["pandas"]
     },
+    "LC1693": {
+      title: "Clientes potenciales y Socios diarios",
+      topics: ["Database"],
+      difficulty: "Easy",
+      categories: ["pandas"]
+    },
     "LC1741": {
       title: "Encontrar el Tiempo Total empleado por cada empleado",
       topics: ["Database"],

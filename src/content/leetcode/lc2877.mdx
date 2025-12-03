@@ -6,18 +6,21 @@ El DataFrame debe tener dos columnas, `student_id` y `age`, y estar en el mismo 
 
 ## Ejemplo
 
-```text
-Input:
-student_data:
+**Input**
+<TerminalOutput>
+{`student_data:
 [
   [1, 15],
   [2, 11],
   [3, 11],
   [4, 20]
-]
+]`}
+</TerminalOutput>
 
-Output:
-+------------+-----+
+
+**Output**
+<TerminalOutput>
+{`+------------+-----+
 | student_id | age |
 +------------+-----+
 | 1          | 15  |
@@ -27,13 +30,14 @@ Output:
 +------------+-----+
 
 Explicación:
-Se creó un DataFrame basado en student_data, con dos columnas llamadas student_id y age.
-```
+Se creó un DataFrame basado en student_data, con dos columnas llamadas student_id 
+y age.`}
+</TerminalOutput>
+
 
 ## Soluciones
 
-<details>
-    <summary>Python</summary>
+<Solution title="Python" icon="Python">
 ```python
 import pandas as pd
 
@@ -44,4 +48,4 @@ def createDataframe(student_data: List[List[int]]) -> pd.DataFrame:
     
     return df
 ```
-</details>
+</Solution>

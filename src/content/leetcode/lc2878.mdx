@@ -1,8 +1,8 @@
 # Obtener el Tamaño de un DataFrame
 
-```text
-DataFrame players:
-+-------------+--------+
+**DataFrame** `players`
+<TerminalOutput>
+{`+-------------+--------+
 | Column Name | Type   |
 +-------------+--------+
 | player_id   | int    |
@@ -10,8 +10,8 @@ DataFrame players:
 | age         | int    |
 | position    | object |
 | ...         | ...    |
-+-------------+--------+
-```
++-------------+--------+`}
+</TerminalOutput>
 
 Escribe una solución para calcular y mostrar el **número de filas y columnas** de `players`.
 
@@ -19,9 +19,9 @@ Devuelve el resultado como un array: `[número de filas, número de columnas]`
 
 ## Ejemplo
 
-```text
-Input:
-+-----------+----------+-----+-------------+--------------------+
+**Input**
+<TerminalOutput>
+{`+-----------+----------+-----+-------------+--------------------+
 | player_id | name     | age | position    | team               |
 +-----------+----------+-----+-------------+--------------------+
 | 846       | Mason    | 21  | Forward     | RealMadrid         |
@@ -34,19 +34,21 @@ Input:
 | 247       | Thomas   | 27  | Striker     | ParisSaint-Germain |
 | 761       | Jack     | 33  | Midfielder  | ManchesterCity     |
 | 642       | Charlie  | 36  | Center-back | Arsenal            |
-+-----------+----------+-----+-------------+--------------------+
++-----------+----------+-----+-------------+--------------------+`}
+</TerminalOutput>
 
-Output:
-[10, 5]
+**Output**
+<TerminalOutput>
+{`[10, 5]
 
 Explicación:
-Este DataFrame contiene 10 filas y 5 columnas.
-```
+Este DataFrame contiene 10 filas y 5 columnas.`}
+</TerminalOutput>
+
 
 ## Soluciones
 
-<details>
-    <summary>Python</summary>
+<Solution title="Python" icon="Python">
 ```python
 import pandas as pd
 
@@ -55,4 +57,4 @@ def getDataframeSize(players: pd.DataFrame) -> List[int]:
 
     return [rows, cols]
 ```
-</details>
+</Solution>

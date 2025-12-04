@@ -33,6 +33,12 @@ export const homeData = {
         description: "Academias",
         image: "/logos/bootcamp.png",
         link: "/bootcamp"
+      },
+      flashcards: {
+        name: "Flashcards",
+        description: "Estudio Programación",
+        image: "/logos/codeTraining.png",
+        link: "/flashcards-programacion"
       }
     }
   },
@@ -77,6 +83,12 @@ export const homeData = {
         description: "Учи русский",
         image: "https://kapowaz.github.io/square-flags/flags/ru.svg",
         link: "/ruso"
+      },
+      flashcards: {
+        name: "Flashcards",
+        description: "Práctica Idiomas",
+        image: "/logos/language.png",
+        link: "/flashcards-idiomas"
       }
     }
   },

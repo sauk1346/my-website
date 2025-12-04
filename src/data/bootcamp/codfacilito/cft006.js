@@ -1,7 +1,7 @@
 export const cft006Data = {
   // Metadata
   code: "CFT006",
-  certificateUrl: "",
+  certificateUrl: "https://codigofacilito.com/certificates/e64aee4e-362c-4e13-8c93-07de8b76f198",
   instructor: null,
 
   // Course structure

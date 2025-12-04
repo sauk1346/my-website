@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import Navbar from '@/components/layout/Navbar';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 import Footer from '@/components/layout/Footer';
+import { FlashcardProvider } from '@/contexts/FlashcardContext';
 import Script from "next/script";
 import "./globals.css";
 import "@/shared/override.css";
@@ -59,11 +60,13 @@ export default function RootLayout({ children }) {
             console.log('✅ KaTeX JavaScript cargado');
           }}
         />
-        
-        <Navbar />
-        <Breadcrumb />
-        {children}
-        <Footer/>
+
+        <FlashcardProvider>
+          <Navbar />
+          <Breadcrumb />
+          {children}
+          <Footer/>
+        </FlashcardProvider>
       </body>
     </html>
   );

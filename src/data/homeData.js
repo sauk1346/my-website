@@ -90,7 +90,7 @@ export const homeData = {
         name: "Portfolio",
         description: "Desarrollos",
         image: "/logos/portfolio.png",
-        link: "/portfolio"
+        link: "https://www.antoniomorales.cl"
       }
     }
   }

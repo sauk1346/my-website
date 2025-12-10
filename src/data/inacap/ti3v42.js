@@ -197,8 +197,8 @@ const courseData = {
             date: 'Mar 02, Dic 2025', 
             description: [
                 {
-                    text: '',
-                    href: ''
+                    text: 'No asistí',
+                    strikethrough: true,
                 },
             ]
         },
@@ -208,7 +208,29 @@ const courseData = {
             date: 'Mié 03, Dic 2025', 
             description: [
                 {
-                    text: '',
+                    text: 'Repaso Conceptos para Prueba',
+                    href: 'clase14',
+                },
+            ]
+        },
+        { 
+            week: '08', 
+            class: '15', 
+            date: 'Mar 09, Dic 2025', 
+            description: [
+                {
+                    text: 'Ejercicio',
+                    href: '',
+                },
+            ]
+        },
+        { 
+            week: '08', 
+            class: '16', 
+            date: 'Mié 10, Dic 2025', 
+            description: [
+                {
+                    text: 'Evaluación 02',
                     href: '',
                 },
             ]

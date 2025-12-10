@@ -12,10 +12,15 @@ export default function Home() {
     // Buscar la card en la sección correspondiente
     const section = sectionsOrder.find(s => s.id === sectionId);
     const card = section?.cardsData[cardKey];
-    
+
     if (card?.link) {
-      // Navegar directamente al link
-      router.push(card.link);
+      // Si es un link externo (comienza con http), abrir en nueva pestaña
+      if (card.link.startsWith('http')) {
+        window.open(card.link, '_blank', 'noopener,noreferrer');
+      } else {
+        // Navegar internamente
+        router.push(card.link);
+      }
     }
   };
 

@@ -41,19 +41,19 @@ const courseData = {
         },
                 { 
             evaluationNumber: 3,
-            date: 'Jue 11, Dic 2025',
+            date: 'Jue 18, Dic 2025',
             weighting: '35%',
             description: {
-                text: '',
+                text: 'Presentación Demo Videojuego',
                 href: ''
             },
         },
                 { 
             evaluationNumber: 4,
-            date: 'Mar 18, Dic 2025',
+            date: 'Vie 19, Dic 2025',
             weighting: '10%',
             description: {
-                text: '',
+                text: 'Promedio Controles',
                 href: ''
             },
         },
@@ -65,8 +65,8 @@ const courseData = {
             date: 'Mié 22, Oct 2025', 
             description: [
                 {
-                    text: 'No asistí',
-                    strikethrough: true,
+                    text: 'Introducción',
+                    href: '',
                 },
             ]
         },
@@ -76,8 +76,8 @@ const courseData = {
             date: 'Jue 23, Oct 2025', 
             description: [
                 {
-                    text: 'No asistí',
-                    strikethrough: true,
+                    text: 'Motores Videojuegos',
+                    href: '',
                 },
             ]
         },
@@ -131,8 +131,8 @@ const courseData = {
             date: 'Mié 12, Nov 2025', 
             description: [
                 {
-                    text: 'No asistí',
-                    strikethrough: true,
+                    text: 'Efectos de Partículas',
+                    href: '',
                 },
             ]
         },
@@ -142,7 +142,7 @@ const courseData = {
             date: 'Jue 13, Nov 2025', 
             description: [
                 {
-                    text: 'Física y Colisiones en Motores de Videojuegos',
+                    text: 'Física y Colisiones',
                     href: 'clase08',
                 },
             ]
@@ -153,8 +153,8 @@ const courseData = {
             date: 'Mié 19, Nov 2025', 
             description: [
                 {
-                    text: 'No asistí',
-                    strikethrough: true,
+                    text: 'Avance Proyecto (1)',
+                    href: '',
                 },
             ]
         },
@@ -164,8 +164,8 @@ const courseData = {
             date: 'Jue 20, Nov 2025', 
             description: [
                 {
-                    text: 'Auto-estudio: Introducción a Godot',
-                    href: 'clase10',
+                    text: 'Avance Proyecto (2)',
+                    href: '',
                 },
             ]
         },
@@ -197,7 +197,7 @@ const courseData = {
             date: 'Mié 03, Dic 2025', 
             description: [
                 {
-                    text: '',
+                    text: 'Cambios de Escena',
                     href: '',
                 },
             ]
@@ -208,7 +208,51 @@ const courseData = {
             date: 'Jue 04, Dic 2025', 
             description: [
                 {
-                    text: '',
+                    text: 'Dialogic',
+                    href: '',
+                },
+            ]
+        },
+        { 
+            week: '08', 
+            class: '15', 
+            date: 'Mié 10, Dic 2025', 
+            description: [
+                {
+                    text: 'Avance Proyecto (2)',
+                    href: '',
+                },
+            ]
+        },
+        { 
+            week: '08', 
+            class: '16', 
+            date: 'Jue 11, Dic 2025', 
+            description: [
+                {
+                    text: 'Avance Proyecto (3)',
+                    href: '',
+                },
+            ]
+        },
+        { 
+            week: '09', 
+            class: '17', 
+            date: 'Mié 17, Dic 2025', 
+            description: [
+                {
+                    text: 'Suspensión clases',
+                    strikethrough: true,
+                },
+            ]
+        },
+        { 
+            week: '09', 
+            class: '18', 
+            date: 'Jue 18, Dic 2025', 
+            description: [
+                {
+                    text: 'Presentación Demo Videjuego',
                     href: '',
                 },
             ]
@@ -280,11 +324,56 @@ const courseData = {
             }
         },
         { 
+            week: '05', 
+            lecture: '08', 
+            date: 'Sáb 22, Nov 2025', 
+            description: {
+                text: 'Síntesis de la unidad',
+                href: '',
+            }
+        },
+        { 
             week: '06', 
-            lecture: '07', 
+            lecture: '09', 
             date: 'Sáb 29, Nov 2025', 
             description: {
                 text: 'Fundamentos del desarrollo de videojuegos 2D y 3D',
+                href: '',
+            }
+        },
+        { 
+            week: '07', 
+            lecture: '10', 
+            date: 'Sáb 06, Dic 2025', 
+            description: {
+                text: 'Modelado y Texturizado de Personajes Jugables y no Jugables',
+                href: '',
+            }
+        },
+        { 
+            week: '08', 
+            lecture: '11', 
+            date: 'Sáb 13, Dic 2025', 
+            description: {
+                text: 'Animación, Iluminación y Colisiones en Videojuegos',
+                href: '',
+            }
+        },
+        { 
+            week: '09', 
+            lecture: '12', 
+            date: 'Sáb 20, Dic 2025', 
+            description: {
+                text: 'Interfaz y Distribución del Videojuego',
+                href: '',
+            }
+        },
+        { 
+            week: '09', 
+            lecture: '13', 
+            date: 'Sáb 20, Dic 2025', 
+            description: {
+                text: 'Síntesis de la unidad',
                 href: '',
             }
         },

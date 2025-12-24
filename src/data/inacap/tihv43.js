@@ -44,16 +44,16 @@ const courseData = {
             date: 'Jue 11, Dic 2025',
             weighting: '30%',
             description: {
-                text: 'Presentación Final del Proyecto',
+                text: 'Software Funcional + Plan de Pruebas (videos)',
                 href: ''
             },
         },
                 { 
             evaluationNumber: 4,
-            date: '',
+            date: 'Mar 16, Dic 2025',
             weighting: '35%',
             description: {
-                text: '',
+                text: 'Presentación Proyecto',
                 href: ''
             },
         },
@@ -153,7 +153,11 @@ const courseData = {
             date: 'Mar 18, Oct 2025', 
             description: [
                 {
-                    text: 'Reglas para Unidad 3',
+                    text: 'Revisión Informe 02',
+                    href: ''
+                },
+                {
+                    text: 'Reglas Evaluación 03',
                     href: 'clase09'
                 },
             ]
@@ -197,7 +201,7 @@ const courseData = {
             date: 'Mar 02, Dic 2025', 
             description: [
                 {
-                    text: '',
+                    text: 'Avance Proyecto (5)',
                     href: ''
                 },
             ]
@@ -208,7 +212,51 @@ const courseData = {
             date: 'Jue 04, Dic 2025', 
             description: [
                 {
-                    text: '',
+                    text: 'Avance Proyecto (6)',
+                    href: ''
+                },
+            ]
+        },
+        { 
+            week: '08', 
+            class: '15', 
+            date: 'Mar 09, Dic 2025', 
+            description: [
+                {
+                    text: 'Avance Proyecto (7)',
+                    href: ''
+                },
+            ]
+        },
+        { 
+            week: '08', 
+            class: '16', 
+            date: 'Jue 11, Dic 2025', 
+            description: [
+                {
+                    text: 'Entrega: Software Funcional + Plan de Pruebas',
+                    href: ''
+                },
+            ]
+        },
+        { 
+            week: '09', 
+            class: '17', 
+            date: 'Mar 16, Dic 2025', 
+            description: [
+                {
+                    text: 'Presentación Proyecto (1)',
+                    href: ''
+                },
+            ]
+        },
+        { 
+            week: '09', 
+            class: '18', 
+            date: 'Jue 18, Dic 2025', 
+            description: [
+                {
+                    text: 'Presentación Proyecto (2)',
                     href: ''
                 },
             ]

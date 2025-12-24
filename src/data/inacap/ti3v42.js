@@ -23,35 +23,35 @@ const courseData = {
     evaluationsData: [
         { 
             evaluationNumber: 1,
-            date: '',
-            weighting: '',
+            date: 'Jue 27, Nov 2025',
+            weighting: '15%',
             description: {
-                text: '',
-                href: ''
+                text: 'Instrucciones Eval01',
+                href: 'eval01'
             },
         },
                 { 
             evaluationNumber: 2,
-            date: '',
-            weighting: '',
+            date: 'Sáb 13, Dic 2025',
+            weighting: '25%',
             description: {
-                text: '',
-                href: ''
+                text: 'Instrucciones Eval02',
+                href: 'eval02'
             },
         },
                 { 
             evaluationNumber: 3,
-            date: '',
-            weighting: '',
+            date: 'Sáb 20, Dic 2025',
+            weighting: '35%',
             description: {
-                text: '',
-                href: ''
+                text: 'Instrucciones Eval03',
+                href: 'eval03'
             },
         },
                 { 
             evaluationNumber: 4,
-            date: '',
-            weighting: '',
+            date: 'Sáb 20, Dic 2025',
+            weighting: '25%',
             description: {
                 text: '',
                 href: ''
@@ -176,7 +176,7 @@ const courseData = {
             description: [
                 {
                     text: 'Instrucciones Evaluación 01',
-                    href: '',
+                    href: 'eval01',
                 },
             ]
         },
@@ -200,7 +200,7 @@ const courseData = {
                     text: 'No asistí',
                     strikethrough: true,
                 },
-            ]
+            ],
         },
         { 
             week: '07', 
@@ -230,7 +230,40 @@ const courseData = {
             date: 'Mié 10, Dic 2025', 
             description: [
                 {
-                    text: 'Evaluación 02',
+                    text: 'Instrucciones Evaluación 02',
+                    href: 'eval02',
+                },
+            ]
+        },
+        { 
+            week: '09', 
+            class: '17', 
+            date: 'Mié 16, Dic 2025', 
+            description: [
+                {
+                    text: 'Integración de Firebase Realtime Database',
+                    href: 'clase17',
+                },
+            ]
+        },
+        { 
+            week: '09', 
+            class: '18', 
+            date: 'Mié 17, Dic 2025', 
+            description: [
+                {
+                    text: 'Instrucciones Evaluación 03',
+                    href: 'eval03',
+                },
+            ]
+        },
+        { 
+            week: '10', 
+            class: '19', 
+            date: 'Mar 22, Dic 2025', 
+            description: [
+                {
+                    text: 'Cierre de Notas',
                     href: '',
                 },
             ]
@@ -332,8 +365,8 @@ const courseData = {
             lecture: '11', 
             date: 'Sáb 29, Nov 2025', 
             description: {
-                text: 'Cómo garantizar la seguridad en conexiones Bluetooth o Wi-Fi en contextos industriales',
-                href: '',
+                text: 'Integración de Smart Devices con aplicaciones externas',
+                href: 'docs/lectura11.pdf',
             }
         },
         { 
@@ -341,25 +374,25 @@ const courseData = {
             lecture: '12', 
             date: 'Sáb 29, Nov 2025', 
             description: {
-                text: 'Integración de Smart Devices con aplicaciones externas',
-                href: '',
-            }
-        },
-        { 
-            week: '06', 
-            lecture: '13', 
-            date: 'Sáb 29, Nov 2025', 
-            description: {
                 text: 'Envío y Recepción de Información Serial entre Android y Arduino',
-                href: '',
+                href: 'lectura12',
             }
         },
         { 
             week: '07', 
-            lecture: '14', 
+            lecture: '13', 
             date: 'Sáb 06, Dic 2025', 
             description: {
                 text: 'Integración de Microcontrolador con Aplicación Android',
+                href: '',
+            }
+        },
+        { 
+            week: '08', 
+            lecture: '14', 
+            date: 'Sáb 13, Dic 2025', 
+            description: {
+                text: 'Implementación de Comunicación Segura entre Dispositivos IoT y Aplicaciones',
                 href: '',
             }
         },

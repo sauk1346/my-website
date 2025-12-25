@@ -172,7 +172,7 @@ export const subjects = [
       semester: 4,
       year: 2025,
       category: 'programming',
-      status: 'current',
+      status: 'completed',
       href: '/inacap/ti3v42'
     },
     { 
@@ -190,7 +190,7 @@ export const subjects = [
       semester: 4,
       year: 2025,
       category: 'methodology',
-      status: 'current',
+      status: 'completed',
       href: '/inacap/tihv43'
     },
     { 
@@ -199,7 +199,7 @@ export const subjects = [
       semester: 4,
       year: 2025,
       category: 'programming',
-      status: 'current',
+      status: 'completed',
       href: '/inacap/tilv22'
     },
     { 

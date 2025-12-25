@@ -36,7 +36,7 @@ const courseData = {
             weighting: '35%',
             description: {
                 text: 'Presentación Videojuego Prototipo',
-                href: 'clase12'
+                href: 'eval02'
             },
         },
                 { 
@@ -45,7 +45,7 @@ const courseData = {
             weighting: '35%',
             description: {
                 text: 'Presentación Demo Videojuego',
-                href: ''
+                href: 'eval03'
             },
         },
                 { 
@@ -54,7 +54,7 @@ const courseData = {
             weighting: '10%',
             description: {
                 text: 'Promedio Controles',
-                href: ''
+                href: 'controles'
             },
         },
     ],
@@ -187,7 +187,7 @@ const courseData = {
             description: [
                 {
                     text: 'Presentación Videjuego Prototipo (2)',
-                    href: 'clase12',
+                    href: 'eval02',
                 },
             ]
         },
@@ -253,7 +253,7 @@ const courseData = {
             description: [
                 {
                     text: 'Presentación Demo Videjuego',
-                    href: '',
+                    href: 'eval03',
                 },
             ]
         },
@@ -329,7 +329,7 @@ const courseData = {
             date: 'Sáb 22, Nov 2025', 
             description: {
                 text: 'Síntesis de la unidad',
-                href: '',
+                href: 'docs/lectura08.pdf',
             }
         },
         { 
@@ -337,35 +337,35 @@ const courseData = {
             lecture: '09', 
             date: 'Sáb 29, Nov 2025', 
             description: {
+                text: 'Desarrollo videojuegos 2D y 3D',
+                href: 'docs/lectura09.pdf',
+            }
+        },
+        { 
+            week: '06', 
+            lecture: '10', 
+            date: 'Sáb 29, Nov 2025', 
+            description: {
                 text: 'Fundamentos del desarrollo de videojuegos 2D y 3D',
-                href: '',
+                href: 'lectura10',
             }
         },
         { 
             week: '07', 
-            lecture: '10', 
+            lecture: '11', 
             date: 'Sáb 06, Dic 2025', 
             description: {
                 text: 'Modelado y Texturizado de Personajes Jugables y no Jugables',
-                href: '',
+                href: 'lectura11',
             }
         },
         { 
             week: '08', 
-            lecture: '11', 
+            lecture: '12', 
             date: 'Sáb 13, Dic 2025', 
             description: {
                 text: 'Animación, Iluminación y Colisiones en Videojuegos',
-                href: '',
-            }
-        },
-        { 
-            week: '09', 
-            lecture: '12', 
-            date: 'Sáb 20, Dic 2025', 
-            description: {
-                text: 'Interfaz y Distribución del Videojuego',
-                href: '',
+                href: 'lectura12',
             }
         },
         { 
@@ -373,8 +373,17 @@ const courseData = {
             lecture: '13', 
             date: 'Sáb 20, Dic 2025', 
             description: {
+                text: 'Interfaz y Distribución del Videojuego',
+                href: 'lectura13',
+            }
+        },
+        { 
+            week: '09', 
+            lecture: '14', 
+            date: 'Sáb 20, Dic 2025', 
+            description: {
                 text: 'Síntesis de la unidad',
-                href: '',
+                href: 'docs/lectura14.pdf',
             }
         },
     ]

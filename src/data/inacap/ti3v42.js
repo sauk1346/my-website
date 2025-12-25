@@ -384,7 +384,7 @@ const courseData = {
             date: 'Sáb 06, Dic 2025', 
             description: {
                 text: 'Integración de Microcontrolador con Aplicación Android',
-                href: '',
+                href: 'lectura13',
             }
         },
         { 
@@ -393,7 +393,7 @@ const courseData = {
             date: 'Sáb 13, Dic 2025', 
             description: {
                 text: 'Implementación de Comunicación Segura entre Dispositivos IoT y Aplicaciones',
-                href: '',
+                href: 'lectura14',
             }
         },
 

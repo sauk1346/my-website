@@ -2,7 +2,6 @@ export const cft004Data = {
   // Metadata
   code: "CFT004",
   certificateUrl: "https://codigofacilito.com/certificates/b4bd8119-8dce-40e9-b6b0-f4ae02f2052a",
-  instructor: null,
 
   // Course structure
   title: "Fundamentos AWS",

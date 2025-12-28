@@ -2,7 +2,6 @@ export const cft008Data = {
   // Metadata
   code: "CFT008",
   certificateUrl: "",
-  instructor: null,
 
   // Course structure
   title: "DevOps III",

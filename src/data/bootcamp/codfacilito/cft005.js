@@ -1,8 +1,7 @@
 export const cft005Data = {
   // Metadata
   code: "CFT005",
-  certificateUrl: "",
-  instructor: null,
+  certificateUrl: "https://codigofacilito.com/certificates/2fac52bc-814e-4c90-ac03-371ebfb5bc01",
 
   // Course structure
   title: "Java",

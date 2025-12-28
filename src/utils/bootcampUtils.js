@@ -98,7 +98,7 @@ const bootcampDataMap = {
         cft006: cft006Data,
         cft007: cft007Data,
         cft008: cft008Data,
-        cft008: cft009Data,
+        cft009: cft009Data,
         cft999: cft999Data,
     },
     udd: {

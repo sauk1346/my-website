@@ -1,0 +1,65 @@
+# Panorama General de React
+
+## 1. Qué es React realmente
+
+### Historia
+- En 2011 el panorama de desarrollo web era muy distinto, las herramientas y tecnologías no estaban diseñadas para la creciente complejidad de desrrollo en el Frontend.
+- En 2011 un desarrollador: Jordan Walke presenta *Fax.js*, una librería inspirada en XHP (de PHP) para Facebook
+- A partir de ahí, React ha evolucionado y crecido para pasar de unas cientas de miles de descargas al día, a millones +15 millones de descargas diarias de npm
+
+### Definición
+Es una librería para crear interfaces basada en 2 pilares principales:
+
+- Vista declarativas
+- Lógica encapsulada en componentes
+
+Construir interfaces es una tarea cada vez más y más compleja, pero mantenerla actualizada de una manera eficiente, es todavía más complejo.
+
+Sobre todo hoy en día donde interactuamos con aplicaciones intensivamente. Estas aplicaciones usan JavaScript para responder a estas interacciones, y actualizar la información en una página.
+
+### Vistas Declarativas
+En programación tenemos dos grandes categorías para agrupar la forma en que escribimos la solución a un problema, está la **declarativa** y la **imperativa**.
+
+<SmartTable
+    tableLayout="fixed"
+    headers={["Paradigma", "Descripción"]}
+    rows={[
+        [
+            "**Imperativo**",
+            "Es cuando paso a paso le decimos al programa **cómo hacer** algo, en este estilo de programación importa el **cómo** más que el **qué**"
+        ],
+        [
+            "**Declarativo**",
+            "Es cuando le decimos al programa **qué hacer**, en este estilo de programación importa el **qué**, y no el **cómo**"
+        ],
+    ]}
+/>
+
+Una tecnología no es 100% imperativa, o 100% declarativa, más bien cada una se posicióna en un espectro que la guía más al lado imperativo, o al lado declarativo que otras.
+
+### ¿Qué tan bueno es tener vistas declarativas?
+
+**Ventajas**
+
+- Comúnmente requieren menos código
+- Puedes usar la funcionalidad, sin que aún entiendas 100\% como funciona cada detalle
+- La optimización de ejecución en el código se delega, en este caso a React
+- Produce código expresigo con lo que podemos entender el panorama general de una pieza de código
+- Ofusca los detalles de implementación, lo que permite que en general sea más fácil de usar
+
+**Desventajas**
+
+- Puede ser más difícil entender los detalles, ya que hay cosas sucediendo sin que explícitamente veamos dónde
+- Puede ser más difícil debuggear, ya que no tenermos todos los detalles
+- Comúnmenete involucra el manejo de estado, que puede ser un concepto difícil de entender
+
+ ### Componentes
+- El segundo gran pilar de React es la arquitectura basada en componentes.
+
+**Arquitectura:** define el diseño de las estructuras y los elementos del programa, así como la forma en que deben ser reutilizados. En términos prácticos esto se refiere a cómo vamos a agrupara nuestro código para ser reutilizado.
+
+En un programa puedes definir agrupar tu código en funciones, en objetos, separarlas en modelos, vistas y controladores, entre otras posibles arquitecturas más.
+
+### Estados
+- Es un concepto interesante que puede ser difícil de entender, pero es clave para React
+- En términos prácticos el estado de un elemento en programación, corresponde a las variables de dicho elemento, y su valor

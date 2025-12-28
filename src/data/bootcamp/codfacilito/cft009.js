@@ -15,12 +15,12 @@ export const cft009Data = {
         {
           classNumber: "01",
           name: "Panorama General de React",
-          link: ""
+          link: "clase01"
         },
         {
           classNumber: "02",
           name: "Javascript Esenciales",
-          link: ""
+          link: "clase02"
         },
         {
           classNumber: "03",

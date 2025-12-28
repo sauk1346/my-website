@@ -25,7 +25,7 @@ export const cft007Data = {
         {
           classNumber: "03",
           name: "SQL Básico",
-          link: ""
+          link: "clase03"
         },
         {
           classNumber: "04",

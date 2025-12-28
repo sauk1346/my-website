@@ -1,0 +1,306 @@
+# SQL Básico
+
+## 1. Sintaxis y Estructura
+
+- SQL es un lenguaje **declarativo**, se enfoca en **qué** obtener, no en **cómo** obtenerlo
+- Se usa para interactuar con bases de datos relacionales y manipular datos de manera estructurada
+- SQL es case-insensitive. pero por convención:
+    - Las palabras clave (SELECT, FROM, WHERE, etc.) se escriben en MAYÚSCULAS
+    - Los nombres de tablas y columnas suelen escribirse en minúsculas
+    ```sql
+    SELECT nombre, edad
+    FROM clientes
+    WHERE edad > 25
+    ```
+
+## 2. Estructura básica de una consulta SQL
+Una consulta SQL generalmente tiene la siguiente estructura:
+
+```sql
+SELECT   --> Define qué columnas se van a mostrar
+FROM     --> Especifica de qué tabla se extraen los datos
+WHERE    --> (Opcional) Filtra los datos seǵun una condición
+ORDER BY --> (Opcional) Ordena los resultados según una columna
+```
+
+**Ejemplo**
+
+```sql
+SELECT nombre, edad
+FROM clientes
+WHERE edad > 25
+ORDER BY edad DESC;
+```
+
+## 3. Sintaxis de SELECT
+
+1. Seleccionar todas las columnas de una tabla
+    ```sql
+    SELECT * FROM empleados;
+    ```
+2. Seleccionar columnas específicas:
+    ```sql
+    SELECT nombre, salario FROM empleados;
+    ```
+3. Usar alias (AS) para cambiar nombre de columnas:
+    ```sql
+    SELECT
+        nombre AS "Nombre Completo",
+        salario AS "Salario Mensual"
+    FROM empleados;
+    ```
+
+> Evitar usar `SELECT *` en producción, ya que puede afectar el rendimiento
+> Usar alias para mejorar la claridad de los resultados
+
+## 4. Filtros con WHERE
+Permite filtrar los datos según condiciones específicas
+
+**Operadores comunes en WHERE**
+
+<SmartTable
+    tableLayout="fixed"
+    headers={["Operador", "Descripción"]}
+    rows={[
+        [
+            "`=`",
+            "Igual a"
+        ],
+        [
+            "`!=` o `<>`",
+            "Diferente de"
+        ],
+        [
+            "`>`",
+            "Mayor que"
+        ],
+        [
+            "`<`",
+            "Menor que"
+        ],
+        [
+            "`BETWEEN`",
+            "Rango de valores"
+        ],
+        [
+            "`LIKE`",
+            "Búsqueda con patrones"
+        ],
+        [
+            "`IN`",
+            "Comparar con múltiples valores"
+        ],
+    ]}
+/>
+
+**Ejemplo:** `WHERE` y `BETWEEN`
+```sql
+SELECT * FROM empleados
+WHERE salario BETWEEN 3000 AND 7000;
+```
+
+**Ejemplo:** `LIKE` (búsqueda de patrones)
+```sql
+SELECT * FROM empleados
+WHERE salario LIKE 'J%'; -- Nombres que empiezan con "J"
+```
+
+## 5. Ordenar y Agrupar Datos con ORDER BY
+
+1. Orden ascendente (por defecto)
+```sql
+SELECT * FROM empleados ORDER BY precio;
+```
+2. Orden descendente (DESC)
+```sql
+SELECT * FROM empleador ORDER BY precio DESC;
+```
+
+## 6. Buenas Prácticas en SQL
+- Usa nombres de columnas y tablas descriptivas
+- Usa alias (`AS`) para mejorar la legibilidad
+- Evita `SELECT *` en producción. Especifíca las columnas necesarias
+- Usa `LIMIT` para restringir la cantidad de datos devueltos en consultas grandes
+
+**Ejemplo:** `LIMIT`
+```sql
+SELECT * FROM clientes LIMIT 10;
+```
+
+## 7. Ejercicio Práctico
+1. Escribir una consulta SQL para obtener los nombres y salarios de empleados que ganan más de \$4000, ordenados por salario descendente
+
+<Solution title="SQL" icon="SQL">
+```sql
+SELECT nombre, salario FROM empleados
+ORDER BY salario DESC
+```
+</Solution>
+
+2. ¿Qué pasa si eliminamos `ORDER BY`? ¿Cómo se verían los resultados?
+
+<Solution title="SQL" icon="SQL">
+Al eliminar `ORDER BY`, los resultados aparecen en un orden no garantizado (indeterminado). El motor de base de datos puede devolverlos en cualquier orden, típicamente según cómo están almacenados físicamente o según los índices utilizados en la consulta. 
+
+Nunca debes asumir un orden específico sin usar `ORDER BY`.
+</Solution>
+
+
+## 8. DDL: CREATE, DROP, ALTER
+
+### Data Definition Language (DDL)
+- Permite crear, modificar y eliminar estructuras de bases de datos
+- Las principales sentencias son:
+
+<SmartTable
+    tableLayout="auto"
+    headers={["Sentencia", "Descripción"]}
+    rows={[
+        [
+            "`CREATE`",
+            "Crea BBDD, tablas, índices, etc."
+        ],
+        [
+            "`DROP`",
+            "Elimina BBDD, tablas, columnas, índices, etc."
+        ],
+        [
+            "`ALTER`",
+            "Modifica la estructura de una tabla"
+        ],
+    ]}
+/>
+
+**Creación de tabla clientes**
+```sql
+CREATE TABLE clientes (
+    id SERIAL PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE,
+    edad INT CHECK (edad >= 18)
+);
+```
+
+**Modificación de tabla clientes**
+
+1. Agregar una nueva columna
+    ```sql
+    ALTER TABLE clientes ADD COLUMN direccion VARCHAr(255);
+    ```
+
+2. Modifica el tipo de dato de una columna
+    ```sql
+    ALTER TABLE clientes ALTER COLUMN nombre TYPE TEXT;
+    ```
+
+3. Eliminar una columna
+    ```sql
+    ALTER TABLE clientes DROP COLUMN direccion;
+    ```
+> Las sentencias DDL **modifican la estructura de la base de datos de forma permanente**
+
+**Eliminación de tabla clientes**
+```sql
+DROP TABLE clientes;
+```
+
+- `DROP TABLE` elimina la estructura y los datos
+- No se puede recuperar la información después de ejecutar este comando
+- Si solo deseas borrar los datos pero **mantener la estructura de la tabla**, usa `TRUNCATE` en lugar de `DROP`
+    ```sql
+    TRUNCATE TABLE clientes;
+    ```
+
+### Data Manipulation Language (DML)
+
+- Permite gestionar los datos dentro de las tablas de la base de datos
+- Las principales sentencias de DML son:
+
+<SmartTable
+    tableLayout="auto"
+    headers={["Sentencia", "Descripción"]}
+    rows={[
+        [
+            "`INSERT`",
+            "Agrega nuevos registros"
+        ],
+        [
+            "`UPDATE`",
+            "Modifica registros existentes"
+        ],
+        [
+            "`DELETE`",
+            "Elimina registros específicos"
+        ],
+    ]}
+/>
+
+**Ejemplo general de DML**
+
+```sql
+INSERT INTO clientes (nombre, edad) VALUES ('Carlos', 30);
+
+UPDATE clientes SET edad = 31 WHERE nombre = 'Carlos';
+
+DELETE FROM clientes WHERE edad < 18;
+```
+
+> DML **afecta los datos**, pero **no la estructura de la tabla** (a diferencia de DDL)
+> Las operaciones DML **pueden deshacerse** si se usan dentro de una transacción
+
+**Insertar múltiples registros en una sola consulta**
+```sql
+INSERT INTO clientes (nombre, edad, email)
+VALUES
+('Luis', 30, 'Luis@email.com'),
+('María', 27, 'maria@email.com'),
+('Pedro', 35, 'pedro@email.com');
+```
+
+**Ejemplo combinado**
+
+1. Insertar un nuevo cliente
+    ```sql
+    INSERT INTO clientes (nombre, edad) VALUES ('José', 35);
+    ```
+2. Modificar su edad
+    ```sql
+    UPDATE clientes SET edad = 31 WHERE nombre = 'José';
+    ```
+3. Eliminarlo de la base de datos
+    ```sql
+    DELETE FROM clientes WHERE nombre = 'José';
+    ```
+
+## 9. ¿Qué es CRUD en SQL?
+Es un conjunto de **cuatro operaciones fundamentales** para manipular datos en una base de datos
+
+### ¿Que relación tiene con DML?
+DML es el subconjunto de SQL que implementa CRUD
+
+<SmartTable
+    tableLayout="auto"
+    headers={["", "Operación", "Descripción"]}
+    rows={[
+        [
+            "**C**",
+            "**CREATE**",
+            "Insertar datos (`INSERT`)"
+        ],
+        [
+            "**R**",
+            "**READ**",
+            "Leer datos (`SELECT`)"
+        ],
+        [
+            "**U**",
+            "**UPDATE**",
+            "Modificar datos (`UPDATE`)"
+        ],
+        [
+            "**D**",
+            "**DELETE**",
+            "Eliminar datos (`DELETE`)"
+        ],
+    ]}
+/>

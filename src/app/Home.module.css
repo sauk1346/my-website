@@ -14,7 +14,7 @@
 /* Cada sección individual */
 .section {
   width: 100%;
-  padding: 3rem 1rem;
+  padding: var(--spacing-3xl) var(--spacing-md);
   border-bottom: 1px solid var(--border, #e5e7eb);
   transition: border-color 0.3s ease, background-color 0.3s ease;
 }
@@ -41,7 +41,7 @@
   justify-content: center;
   max-width: 1200px;
   margin: 0 auto;
-  gap: 1rem;
+  gap: var(--spacing-md);
 }
 
 /* Título de cada sección */
@@ -62,7 +62,7 @@
   width: 60px;
   height: 3px;
   background: linear-gradient(90deg, var(--primary, #3b82f6), var(--accent, #8b5cf6));
-  margin: 0.5rem auto 0;
+  margin: var(--spacing-sm) auto 0;
   border-radius: var(--radius-sm, 4px);
   transition: width 0.3s ease;
 }
@@ -73,10 +73,10 @@
 
 /* Descripción de cada sección */
 .description {
-  font-size: 1rem;
+  font-size: var(--text-md);
   color: var(--muted-foreground, #6b7280);
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: var(--spacing-md);
   transition: color 0.3s ease;
 }
 
@@ -84,7 +84,7 @@
 /* Contenedor para el CardCarousel - evita que las cards se estiren */
 .carouselWrapper {
   width: 100%;
-  max-width: 900px; /* Limita el ancho máximo del carousel */
+  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -144,13 +144,13 @@
 /* Tablets y pantallas medianas */
 @media (max-width: 768px) {
   .section {
-    padding: 2rem 1rem;
+    padding: var(--spacing-xl) var(--spacing-md);
   }
-  
+
   .description {
-    font-size: 0.875rem;
+    font-size: var(--text-sm);
   }
-  
+
   .carouselWrapper {
     max-width: 700px;
   }
@@ -159,22 +159,22 @@
 /* Móviles */
 @media (max-width: 640px) {
   .section {
-    padding: 1.5rem 0.75rem;
+    padding: var(--spacing-lg) var(--spacing-sm);
   }
-  
+
   .sectionTitle::after {
     width: 40px;
     height: 2px;
   }
-  
+
   .sectionTitle:hover::after {
     width: 60px;
   }
-  
+
   .description {
-    font-size: 0.8rem;
+    font-size: var(--text-xs);
   }
-  
+
   .carouselWrapper {
     max-width: 100%;
   }
@@ -183,6 +183,6 @@
 /* Pantallas muy pequeñas */
 @media (max-width: 480px) {
   .section {
-    padding: 1rem 0.5rem;
+    padding: var(--spacing-md) var(--spacing-sm);
   }
 }

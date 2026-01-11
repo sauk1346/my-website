@@ -15,31 +15,31 @@
     border: 0;
     height: 1px;
     background-color: #e2e8f0;
-    margin: 2rem 0;
+    margin: var(--spacing-xl) 0;
     transition: background-color 0.3s ease;
   }
-  
+
   :global(html.dark-mode) .hr,
   :global(html.dark-mode-override) .hr {
     background-color: #4b5563;
   }
-  
+
   /* Espaciado vertical */
   .br {
     display: block;
-    margin-top: 1.25rem;
-    line-height: 1.25rem;
+    margin-top: var(--spacing-md);
+    line-height: var(--spacing-md);
   }
-  
+
   .brAfterPre {
-    margin-top: 2.5rem;
-    line-height: 2.5rem;
+    margin-top: var(--spacing-2xl);
+    line-height: var(--spacing-2xl);
   }
-  
+
   /* Componentes de alerta */
   .alert {
-    padding: 1rem 1.5rem;
-    border-radius: 0.5rem;
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-radius: var(--radius-lg);
     margin-bottom: 1.75rem;
     border-left: 4px solid;
     transition: background-color 0.3s ease, color 0.3s ease, border-left-color 0.3s ease;

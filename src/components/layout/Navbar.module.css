@@ -1,14 +1,14 @@
 /* components/Navbar.module.css */
 .navbar {
   background-color: #2563eb;
-  padding: 1rem;
+  padding: var(--spacing-md);
   transition: background-color 0.3s ease;
   position: sticky;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-sm);
 }
 
 /* Navbar en modo oscuro */
@@ -28,7 +28,7 @@
 .menu {
   display: flex;
   list-style: none;
-  gap: 1.5rem;
+  gap: var(--spacing-lg);
   padding: 0;
   margin: 0;
   align-items: center;
@@ -58,7 +58,7 @@
 
 .logo {
   color: white;
-  font-size: 1.5rem;
+  font-size: var(--text-lg);
   font-weight: bold;
   text-decoration: none;
 }
@@ -67,11 +67,11 @@
 .themeToggle {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: var(--spacing-sm);
   position: relative;
   cursor: pointer;
-  padding: 0.25rem;
-  border-radius: 0.5rem;
+  padding: var(--spacing-xs);
+  border-radius: var(--radius-lg);
   transition: background-color 0.3s ease;
   color: white;
 }
@@ -95,11 +95,11 @@
 
 /* Color de los iconos */
 .themeToggle svg:first-child {
-  color: #fbbf24; /* Color sol */
+  color: #fbbf24;
 }
 
 .themeToggle svg:last-child {
-  color: #60a5fa; /* Color luna */
+  color: #60a5fa;
 }
 
 /* Ocultar input nativo */
@@ -131,7 +131,7 @@
   left: 2px;
   bottom: 1px;
   background-color: white;
-  border-radius: 50%;
+  border-radius: var(--radius-full);
   transition: transform 0.3s ease;
 }
 
@@ -156,9 +156,9 @@
   background: transparent;
   border: none;
   color: white;
-  font-size: 1.5rem;
+  font-size: var(--text-lg);
   cursor: pointer;
-  padding: 0.5rem;
+  padding: var(--spacing-sm);
   z-index: 20;
 }
 
@@ -167,79 +167,94 @@
   display: none;
 }
 
+/* Overlay para el menú móvil */
+.mobileMenuOverlay {
+  display: none;
+}
+
 /* Media queries para hacer responsivo */
 @media (max-width: 768px) {
   .container {
     flex-wrap: wrap;
   }
-  
+
   .menuButton {
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  
+
   .menu {
     display: none;
   }
-  
-  .mobileMenu {
+
+  /* Overlay del menú móvil */
+  .mobileMenuOverlay {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    z-index: 999;
+    display: block;
+  }
+
+  .mobileMenu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 280px;
+    max-width: 85vw;
     background-color: #2563eb;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
-    z-index: 10;
-    transition: transform 0.3s ease;
-    transform: translateY(-100%);
-    overflow-y: auto; /* Permitir scroll si el contenido es muy alto */
+    gap: var(--spacing-xl);
+    z-index: 1000;
+    overflow-y: auto;
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.2);
   }
-  
+
   :global(html.dark-mode) .mobileMenu,
   :global(html.dark-mode-override) .mobileMenu {
     background-color: #1e293b;
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.4);
   }
-  
-  .mobileMenuOpen {
-    transform: translateY(0);
-  }
-  
+
   .logo {
     margin: 0 auto;
     position: relative;
     z-index: 5;
   }
-  
+
   .mobileMenuHeader {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 1rem;
+    padding: var(--spacing-md);
     position: absolute;
     top: 0;
     left: 0;
   }
-  
+
   .mobileMenuItem {
-    font-size: 1.25rem;
-    margin: 0.5rem 0;
+    font-size: var(--text-lg);
+    margin: var(--spacing-sm) 0;
   }
-  
+
   .closeButton {
     position: absolute;
-    top: 1rem;
-    right: 1rem;
+    top: var(--spacing-md);
+    right: var(--spacing-md);
     background: transparent;
     border: none;
     color: white;
-    font-size: 1.5rem;
+    font-size: var(--text-lg);
     cursor: pointer;
   }
 }
@@ -249,14 +264,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
+  gap: var(--spacing-lg);
   width: 100%;
-  padding: 0 1rem;
+  padding: 0 var(--spacing-md);
 }
 
 /* Estilo específico para el toggle de tema en móvil */
 .mobileThemeToggle {
-  margin-top: 1rem;
+  margin-top: var(--spacing-md);
   width: 100%;
   display: flex;
   justify-content: center;
@@ -269,26 +284,26 @@
     flex-direction: column;
     justify-content: flex-start;
     padding-top: 4rem;
-    padding-bottom: 2rem;
+    padding-bottom: var(--spacing-xl);
   }
-  
+
   .mobileMenuContent {
-    gap: 0.75rem;
+    gap: var(--spacing-sm);
     overflow-y: auto;
-    padding-bottom: 1rem;
+    padding-bottom: var(--spacing-md);
   }
-  
+
   .mobileMenuItem {
-    margin: 0.25rem 0;
-    font-size: 1.1rem;
+    margin: var(--spacing-xs) 0;
+    font-size: var(--text-md);
   }
-  
+
   /* Ajustar el botón de tema en el menú móvil */
   .mobileThemeToggle {
-    margin-top: 0.5rem;
+    margin-top: var(--spacing-sm);
     position: static;
   }
-  
+
   /* Asegurar que el logo no se superponga con otros elementos */
   .logo {
     position: relative;
@@ -301,11 +316,11 @@
   .iconActive, .iconInactive {
     transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.3s ease;
   }
-  
+
   .toggleSlider:before {
     transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
   }
-  
+
   .mobileMenu {
     transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
   }

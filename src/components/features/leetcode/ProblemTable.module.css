@@ -8,7 +8,7 @@
 .tableContainer { composes: tableContainer from '/src/shared/table-base.module.css'; min-height: 760px; display: flex; flex-direction: column; }
 .platformTitle { composes: platformTitle from '/src/shared/table-base.module.css'; text-align: center; }
 .platformTitle::after { left: 50%; transform: translateX(-50%); }
-.tableWrapper { overflow-x: auto; margin-bottom: 1rem; }
+.tableWrapper { overflow-x: auto; margin-bottom: var(--spacing-md); }
 .table { composes: table from '/src/shared/table-base.module.css'; }
 .code { composes: code from '/src/shared/table-base.module.css'; white-space: nowrap; }
 .problemLink { composes: problemLink from '/src/shared/table-base.module.css'; }
@@ -34,7 +34,7 @@
   justify-content: center;
   align-items: center;
   margin-top: auto;
-  padding: 1rem 0;
+  padding: var(--spacing-md) 0;
   height: 70px;
   border-top: 1px solid #e5e7eb;
   transition: border-color 0.3s ease;
@@ -61,18 +61,18 @@
 .paginationControls {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: var(--spacing-sm);
   justify-content: flex-end;
   min-width: 300px;
 }
 
 .paginationButton {
-  padding: 0.5rem 0.75rem;
+  padding: var(--spacing-sm) 0.75rem;
   border: 1px solid #dee2e6;
   background-color: #f8f9fa;
   color: #495057;
   cursor: pointer;
-  border-radius: 4px;
+  border-radius: var(--radius-sm);
   transition: all 0.2s ease;
   min-width: 40px;
   text-align: center;
@@ -147,7 +147,7 @@
 /* Responsive */
 @media (max-width: 768px) {
   .table { font-size: 0.8rem; min-width: 650px; }
-  .tableFooter { flex-direction: column; gap: 1rem; text-align: center; height: auto; padding: 1rem 0; }
+  .tableFooter { flex-direction: column; gap: var(--spacing-md); text-align: center; height: auto; padding: var(--spacing-md) 0; }
   .paginationControls { justify-content: center; min-width: auto; }
   .paginationButton { min-width: 35px; padding: 0.4rem 0.6rem; font-size: 0.8rem; }
   .tableInfo { text-align: center; }

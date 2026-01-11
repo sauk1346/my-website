@@ -1,31 +1,33 @@
 :root {
   /* Colores principales - Modo claro por defecto */
-  --background: #ffffff;
+  --background: #f8fafc;
+  --background-elevated: #ffffff;
   --foreground: #111111;
-  
+
   /* Colores secundarios */
   --primary: #3b82f6;
   --primary-hover: #2563eb;
   --secondary: #6b7280;
   --accent: #8b5cf6;
-  
-  /* Colores de interfaz */
-  --card-bg: #f9fafb;
+
+  /* Colores de interfaz - Tonos de gris claro para profundidad */
+  --card-bg: #ffffff;
+  --surface: #f1f5f9;
   --input-bg: #ffffff;
-  --input-border: #d1d5db;
-  --border-color: #e5e7eb;
-  --divider: #e5e7eb;
-  
+  --input-border: #cbd5e1;
+  --border-color: #e2e8f0;
+  --divider: #e2e8f0;
+
   /* Colores de estado */
   --success: #10b981;
   --error: #ef4444;
   --warning: #f59e0b;
   --info: #3b82f6;
-  
+
   /* Sombras */
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
   
   /* Tipografía */
   --font-sans: Arial, Helvetica, sans-serif;
@@ -36,11 +38,13 @@
   --text-xl: 1.25rem;
   
   /* Espaciado */
-  --spacing-xs: 0.25rem;
-  --spacing-sm: 0.5rem;
-  --spacing-md: 1rem;
-  --spacing-lg: 1.5rem;
-  --spacing-xl: 2rem;
+  --spacing-xs: 0.25rem;   /* 4px */
+  --spacing-sm: 0.5rem;    /* 8px */
+  --spacing-md: 1rem;      /* 16px */
+  --spacing-lg: 1.5rem;    /* 24px */
+  --spacing-xl: 2rem;      /* 32px */
+  --spacing-2xl: 2.5rem;   /* 40px */
+  --spacing-3xl: 3rem;     /* 48px */
   
   /* Radios de borde */
   --radius-sm: 0.125rem;
@@ -53,32 +57,34 @@
 @media (prefers-color-scheme: dark) {
   :root {
     /* Colores principales */
-    --background: #121212;
+    --background: #0f0f0f;
+    --background-elevated: #1a1a1a;
     --foreground: #f3f4f6;
-    
+
     /* Colores secundarios */
     --primary: #60a5fa;
     --primary-hover: #3b82f6;
     --secondary: #9ca3af;
     --accent: #a78bfa;
-    
+
     /* Colores de interfaz */
     --card-bg: #1e1e1e;
+    --surface: #262626;
     --input-bg: #2d2d2d;
     --input-border: #4b5563;
-    --border-color: #374151;
-    --divider: #374151;
-    
+    --border-color: #333333;
+    --divider: #333333;
+
     /* Colores de estado */
     --success: #34d399;
     --error: #f87171;
     --warning: #fbbf24;
     --info: #60a5fa;
-    
+
     /* Sombras */
-    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.18);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.18);
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.4);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.24);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.24);
   }
 }
 
@@ -177,67 +183,71 @@ a {
 /* Sobrescribir preferencia del sistema - Modo claro forzado */
 html.light-mode-override {
   color-scheme: light !important;
-  
+
   /* Colores principales */
-  --background: #ffffff !important;
+  --background: #f8fafc !important;
+  --background-elevated: #ffffff !important;
   --foreground: #111111 !important;
-  
+
   /* Colores secundarios */
   --primary: #3b82f6 !important;
   --primary-hover: #2563eb !important;
   --secondary: #6b7280 !important;
   --accent: #8b5cf6 !important;
-  
+
   /* Colores de interfaz */
-  --card-bg: #f9fafb !important;
+  --card-bg: #ffffff !important;
+  --surface: #f1f5f9 !important;
   --input-bg: #ffffff !important;
-  --input-border: #d1d5db !important;
-  --border-color: #e5e7eb !important;
-  --divider: #e5e7eb !important;
-  
+  --input-border: #cbd5e1 !important;
+  --border-color: #e2e8f0 !important;
+  --divider: #e2e8f0 !important;
+
   /* Colores de estado */
   --success: #10b981 !important;
   --error: #ef4444 !important;
   --warning: #f59e0b !important;
   --info: #3b82f6 !important;
-  
+
   /* Sombras */
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05) !important;
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -1px rgba(0, 0, 0, 0.04) !important;
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04) !important;
 }
 
 /* Sobrescribir preferencia del sistema - Modo oscuro forzado */
 html.dark-mode-override {
   color-scheme: dark !important;
-  
+
   /* Colores principales */
-  --background: #121212 !important;
+  --background: #0f0f0f !important;
+  --background-elevated: #1a1a1a !important;
   --foreground: #f3f4f6 !important;
-  
+
   /* Colores secundarios */
   --primary: #60a5fa !important;
   --primary-hover: #3b82f6 !important;
   --secondary: #9ca3af !important;
   --accent: #a78bfa !important;
-  
+
   /* Colores de interfaz */
   --card-bg: #1e1e1e !important;
+  --surface: #262626 !important;
   --input-bg: #2d2d2d !important;
   --input-border: #4b5563 !important;
-  --border-color: #374151 !important;
-  --divider: #374151 !important;
-  
+  --border-color: #333333 !important;
+  --divider: #333333 !important;
+
   /* Colores de estado */
   --success: #34d399 !important;
   --error: #f87171 !important;
   --warning: #fbbf24 !important;
   --info: #60a5fa !important;
-  
+
   /* Sombras */
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3) !important;
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.18) !important;
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.18) !important;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.4) !important;
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.24) !important;
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.24) !important;
 }
 
 /* Invertir imágenes en modo claro forzado */
@@ -252,12 +262,12 @@ html.dark-mode-override .invert-in-dark {
 
 /* Estilos forzados para elementos específicos */
 html.light-mode-override body {
-  background-color: #ffffff !important;
+  background-color: #f8fafc !important;
   color: #111111 !important;
 }
 
 html.dark-mode-override body {
-  background-color: #121212 !important;
+  background-color: #0f0f0f !important;
   color: #f3f4f6 !important;
 }
 
@@ -293,21 +303,18 @@ details > *:not(summary) {
   margin-top: 1rem;
 }
 
-img {
-  border-radius: 4px; /* Esquinas ligeramente redondeadas */
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid #e2e8f0; /* Borde ligero en modo claro */
-}
-
-/* Opcional: Añadir espacio alrededor de las imágenes */
-img:not(.no-spacing) {
+/* Estilos globales para imágenes de contenido (NO componentes UI) */
+/* Usa la clase .content-img para imágenes que necesitan bordes */
+img.content-img {
+  border-radius: 4px;
+  border: 1px solid #e2e8f0;
   margin: 0.5rem 0;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Contorno en modo oscuro */
-html.dark-mode img,
-html.dark-mode-override img {
-  border-color: #4a5568; /* Color de borde más oscuro */
+html.dark-mode img.content-img,
+html.dark-mode-override img.content-img {
+  border-color: #4a5568;
 }
 
 /* Si quieres un efecto de sombra adicional que cambie según el modo */

@@ -1,6 +1,48 @@
+'use client';
+
+import { motion } from 'framer-motion';
 import { SmartLink } from '@/components/mdx';
 import { buildLessonLink } from '@/utils/linkBuilder';
 import styles from './SectionTable.module.css';
+import { staggerContainer, viewportConfig } from '@/utils/animations';
+
+// Variantes para el título
+const titleVariants = {
+  initial: { opacity: 0, y: -10 },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: [0.25, 0.1, 0.25, 1],
+    },
+  },
+};
+
+// Variantes para cada módulo
+const moduleVariants = {
+  initial: { opacity: 0, y: 20 },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.4,
+      ease: [0.25, 0.1, 0.25, 1],
+    },
+  },
+};
+
+// Variantes para las filas
+const rowVariants = {
+  initial: { opacity: 0, x: -10 },
+  animate: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.3,
+    },
+  },
+};
 
 const SectionTable = ({
   courseData, // Support passing the full course object
@@ -21,13 +63,24 @@ const SectionTable = ({
       return (
         <div className={styles.pageContainer}>
           <div className={styles.container}>
-            <h1 className={`${styles.title} ${className}`}>
+            <motion.h1
+              className={`${styles.title} ${className}`}
+              variants={titleVariants}
+              initial="initial"
+              animate="animate"
+            >
               {courseName}
-            </h1>
+            </motion.h1>
 
-            <div className={styles.grid}>
+            <motion.div
+              className={styles.grid}
+              initial="initial"
+              whileInView="animate"
+              viewport={viewportConfig}
+              variants={staggerContainer(0.15, 0.2)}
+            >
               {courseData.modules.map((module, index) => (
-                <div key={index} className={styles.tableContainer}>
+                <motion.div key={index} className={styles.tableContainer} variants={moduleVariants}>
                   <h2 className={styles.platformTitle}>
                     {module.name}
                   </h2>
@@ -43,9 +96,21 @@ const SectionTable = ({
                           )}
                         </tr>
                       </thead>
-                      <tbody>
+                      <motion.tbody
+                        initial="initial"
+                        animate="animate"
+                        variants={staggerContainer(0.03)}
+                      >
                         {module.classes.map((classItem, idx) => (
-                          <tr key={idx} className={styles.tableRow}>
+                          <motion.tr
+                            key={idx}
+                            className={styles.tableRow}
+                            variants={rowVariants}
+                            whileHover={{
+                              backgroundColor: 'rgba(59, 130, 246, 0.05)',
+                              transition: { duration: 0.05 },
+                            }}
+                          >
                             <td data-label="#">
                               <span className={styles.sectionNumber}>
                                 {classItem.classNumber}
@@ -71,14 +136,14 @@ const SectionTable = ({
                                 </span>
                               </td>
                             )}
-                          </tr>
+                          </motion.tr>
                         ))}
-                      </tbody>
+                      </motion.tbody>
                     </table>
                   </div>
-                </div>
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
           </div>
         </div>
       );
@@ -91,12 +156,23 @@ const SectionTable = ({
   return (
     <div className={styles.pageContainer}>
       <div className={styles.container}>
-        <h1 className={`${styles.title} ${className}`}>
+        <motion.h1
+          className={`${styles.title} ${className}`}
+          variants={titleVariants}
+          initial="initial"
+          animate="animate"
+        >
           {courseId}
           {courseName && <span className={styles.courseName}>{courseName}</span>}
-        </h1>
+        </motion.h1>
 
-        <div className={styles.grid}>
+        <motion.div
+          className={styles.grid}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={viewportConfig}
+          transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
+        >
           <div className={styles.tableContainer}>
             <h2 className={styles.platformTitle}>Secciones</h2>
 
@@ -111,9 +187,21 @@ const SectionTable = ({
                     )}
                   </tr>
                 </thead>
-                <tbody>
+                <motion.tbody
+                  initial="initial"
+                  animate="animate"
+                  variants={staggerContainer(0.03)}
+                >
                   {sections.map((section) => (
-                    <tr key={section.id} className={styles.tableRow}>
+                    <motion.tr
+                      key={section.id}
+                      className={styles.tableRow}
+                      variants={rowVariants}
+                      whileHover={{
+                        backgroundColor: 'rgba(59, 130, 246, 0.05)',
+                        transition: { duration: 0.05 },
+                      }}
+                    >
                       <td data-label="#">
                         <span className={styles.sectionNumber}>
                           {section.id}
@@ -139,9 +227,9 @@ const SectionTable = ({
                           </span>
                         </td>
                       )}
-                    </tr>
+                    </motion.tr>
                   ))}
-                </tbody>
+                </motion.tbody>
               </table>
             </div>
 
@@ -151,7 +239,7 @@ const SectionTable = ({
               </div>
             )}
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

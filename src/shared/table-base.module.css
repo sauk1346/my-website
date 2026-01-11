@@ -10,7 +10,7 @@
 .pageContainer {
   min-height: 100vh;
   background: linear-gradient(135deg, #2563eb 0%, #1f2937 100%);
-  padding: 2rem 1rem;
+  padding: var(--spacing-xl) var(--spacing-md);
   transition: background 0.3s ease;
 }
 
@@ -23,9 +23,9 @@
   max-width: 1200px;
   margin: 0 auto;
   background: white;
-  border-radius: 16px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-  padding: 2.5rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: var(--spacing-2xl);
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -38,13 +38,13 @@
 .section {
   display: flex;
   flex-direction: column;
-  margin-bottom: 2rem;
+  margin-bottom: var(--spacing-xl);
   align-items: center;
 }
 
 .tableContainer {
   width: 100%;
-  margin-bottom: 1rem;
+  margin-bottom: var(--spacing-md);
 }
 
 .tableWrapper {
@@ -58,7 +58,7 @@
   font-size: 2.5rem;
   font-weight: 700;
   text-align: center;
-  margin-bottom: 2.5rem;
+  margin-bottom: var(--spacing-2xl);
   background: linear-gradient(135deg, #2563eb 0%, #1f2937 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -80,8 +80,8 @@
   font-size: 1.5rem;
   font-weight: 600;
   color: #1f2937;
-  margin-bottom: 1.5rem;
-  padding-bottom: 0.5rem;
+  margin-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-sm);
   border-bottom: 3px solid #2563eb;
   position: relative;
   transition: color 0.3s ease, border-color 0.3s ease;
@@ -116,9 +116,9 @@
   width: 100%;
   border-collapse: collapse;
   background: white;
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+  box-shadow: var(--shadow-md);
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
   table-layout: fixed;
 }
@@ -142,7 +142,7 @@
 }
 
 .table thead th {
-  padding: 1rem;
+  padding: var(--spacing-md);
   text-align: left;
   font-weight: 600;
   color: white;
@@ -179,7 +179,7 @@
 }
 
 .table tbody td {
-  padding: 1rem 0.75rem;
+  padding: var(--spacing-md) 0.75rem;
   text-align: left;
   border: 1px solid white;
   color: #1f2937;
@@ -318,16 +318,16 @@
 /* Tablets y pantallas medianas */
 @media (max-width: 768px) {
   .pageContainer {
-    padding: 1rem 0.5rem;
+    padding: var(--spacing-md) var(--spacing-sm);
   }
 
   .container {
-    padding: 1.5rem;
+    padding: var(--spacing-lg);
   }
 
   .title {
     font-size: 2rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: var(--spacing-lg);
   }
 
   .platformTitle {
@@ -381,9 +381,9 @@
 
   .table tbody tr {
     border: 1px solid #e5e7eb;
-    border-radius: 8px;
-    margin-bottom: 0.5rem;
-    padding: 0.5rem;
+    border-radius: var(--radius-md);
+    margin-bottom: var(--spacing-sm);
+    padding: var(--spacing-sm);
     position: relative;
     background: white;
   }

@@ -3,7 +3,7 @@
 /* Contenedor principal */
 .gridContainer {
   width: 100%;
-  margin: 2rem 0;
+  margin: var(--spacing-xl) 0;
   display: flex;
   justify-content: center;
 }
@@ -12,10 +12,10 @@
 .platformGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, 85px);
-  gap: 2rem;
+  gap: var(--spacing-xl);
   max-width: 600px;
   width: 100%;
-  padding: 1rem;
+  padding: var(--spacing-md);
   justify-content: center;
 }
 
@@ -24,7 +24,7 @@
   position: relative;
   background: var(--card-bg, #ffffff);
   border: 2px solid var(--border-color, #e2e8f0);
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   padding: 0.75rem;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -72,7 +72,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   overflow: hidden;
   transition: transform 0.3s ease;
 }
@@ -158,14 +158,14 @@
 @media (max-width: 768px) {
   .platformGrid {
     grid-template-columns: repeat(auto-fit, 75px);
-    gap: 1rem;
-    padding: 0.5rem;
+    gap: var(--spacing-md);
+    padding: var(--spacing-sm);
   }
   
   .platformCard {
     width: 75px;
     height: 75px;
-    padding: 0.5rem;
+    padding: var(--spacing-sm);
   }
   
   .imageContainer {
@@ -209,7 +209,7 @@
 @media (min-width: 1200px) {
   .platformGrid {
     grid-template-columns: repeat(auto-fit, 90px);
-    gap: 1.5rem;
+    gap: var(--spacing-lg);
     max-width: 650px;
   }
   

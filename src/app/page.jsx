@@ -9,16 +9,13 @@ export default function Home() {
   const router = useRouter();
 
   const handleCardClick = (sectionId, cardKey) => {
-    // Buscar la card en la sección correspondiente
     const section = sectionsOrder.find(s => s.id === sectionId);
     const card = section?.cardsData[cardKey];
 
     if (card?.link) {
-      // Si es un link externo (comienza con http), abrir en nueva pestaña
       if (card.link.startsWith('http')) {
         window.open(card.link, '_blank', 'noopener,noreferrer');
       } else {
-        // Navegar internamente
         router.push(card.link);
       }
     }
@@ -31,14 +28,16 @@ export default function Home() {
           <div className={styles.sectionContent}>
             <h1 className={styles.sectionTitle}>{section.title}</h1>
             <p className={styles.description}>{section.description}</p>
-            
-            {/* Wrapper para controlar el ancho del carousel */}
+
             <div className={styles.carouselWrapper}>
               <CardCarousel
                 platforms={Object.keys(section.cardsData)}
                 platformsData={section.cardsData}
-                selectedPlatform={null} // ← No necesitamos selección en Home
+                selectedPlatform={null}
                 onCardClick={(cardKey) => handleCardClick(section.id, cardKey)}
+                autoplay
+                autoplayInterval={4000}
+                loop
               />
             </div>
           </div>

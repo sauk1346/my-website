@@ -1,7 +1,7 @@
 /* components/Breadcrumb.module.css - Actualización */
 
 .breadcrumb {
-  padding: 10px;
+  padding: var(--spacing-sm);
   background-color: #ffffff;
   transition: background-color 0.3s ease, border-color 0.3s ease;
   overflow-x: auto; /* Permite desplazamiento horizontal */
@@ -76,7 +76,7 @@
 }
 
 .breadcrumbSeparator {
-  margin: 0 8px;
+  margin: 0 var(--spacing-sm);
   color: #888;
   transition: color 0.3s ease;
   flex-shrink: 0;
@@ -138,10 +138,10 @@
   border: none;
   cursor: pointer;
   color: #0070f3;
-  margin-left: 8px;
+  margin-left: var(--spacing-sm);
   font-size: 0.9rem;
-  padding: 3px 8px;
-  border-radius: 4px;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-sm);
   background-color: rgba(0, 112, 243, 0.1);
   display: none;
   position: absolute;

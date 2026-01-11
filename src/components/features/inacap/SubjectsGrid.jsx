@@ -1,14 +1,31 @@
-import React from 'react';
-import styles from './SubjectsGrid.module.css';
+'use client';
 
-const SubjectsGrid = ({ 
+import React from 'react';
+import { motion } from 'framer-motion';
+import styles from './SubjectsGrid.module.css';
+import { hoverLift, tapScale, staggerContainer } from '@/utils/animations';
+
+// Variantes para cada tarjeta - solo entrada, sin exit
+const cardVariants = {
+  initial: { opacity: 0, y: 20, scale: 0.95 },
+  animate: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      duration: 0.4,
+      ease: [0.25, 0.1, 0.25, 1],
+    },
+  },
+};
+
+const SubjectsGrid = ({
   subjects,
   categories,
   statusConfig,
-  layout = 'default', // default, compact, wide, list
-  className = '' 
+  layout = 'default',
+  className = ''
 }) => {
-  // Construir clases CSS del contenedor
   const containerClasses = [
     layout !== 'default' && styles[layout],
     className
@@ -23,7 +40,7 @@ const SubjectsGrid = ({
     </div>
   );
 
-  // Componente para tarjeta individual de materia
+  // Componente para tarjeta individual
   const SubjectCard = ({ subject }) => {
     const category = categories[subject.category];
     const status = statusConfig[subject.status];
@@ -34,9 +51,14 @@ const SubjectsGrid = ({
     ].filter(Boolean).join(' ');
 
     return (
-      <div className={cardClasses}>
+      <motion.div
+        className={cardClasses}
+        variants={cardVariants}
+        whileHover={hoverLift}
+        whileTap={tapScale}
+      >
         <div className={`${styles.categoryBar} ${styles[subject.category]}`} />
-        
+
         <div className={styles.cardContent}>
           <div className={styles.cardHeader}>
             <div className={styles.cardLeft}>
@@ -52,45 +74,47 @@ const SubjectsGrid = ({
               </div>
             </div>
           </div>
-          
+
           <h3 className={styles.cardTitle}>
             {subject.href ? (
-              <a 
-                href={subject.href} 
-                className={styles.link}
-              >
+              <a href={subject.href} className={styles.link}>
                 {subject.name}
               </a>
             ) : (
               subject.name
             )}
           </h3>
-          
+
           <div className={styles.cardFooter}>
             <span className={styles.categoryLabel}>
               {category.icon} {category.name}
             </span>
           </div>
         </div>
-      </div>
+      </motion.div>
     );
   };
 
-  // Renderizado principal
   if (!subjects || subjects.length === 0) {
     return <NoResults />;
   }
 
+  // Key basada en el semestre para re-montar y animar al cambiar
+  const semesterKey = subjects[0]?.semester || 'default';
+
   return (
     <div className={containerClasses}>
-      <div className={styles.grid}>
+      <motion.div
+        className={styles.grid}
+        key={semesterKey}
+        initial="initial"
+        animate="animate"
+        variants={staggerContainer(0.08, 0.1)}
+      >
         {subjects.map(subject => (
-          <SubjectCard 
-            key={subject.code} 
-            subject={subject} 
-          />
+          <SubjectCard key={subject.code} subject={subject} />
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };

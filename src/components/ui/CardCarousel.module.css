@@ -1,28 +1,72 @@
 /* CAROUSEL.MODULE.CSS */
 .carouselContainer {
   width: 100%;
-  margin: 2rem 0;
+  margin: var(--spacing-xl) 0;
+  position: relative;
+  outline: none;
+}
+
+.carouselContainer:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 4px;
+  border-radius: var(--radius-md);
+}
+
+/* Barra de progreso para autoplay */
+.progressBarContainer {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  max-width: 80%;
+  height: 3px;
+  background: var(--border-color);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.progressBar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  border-radius: var(--radius-full);
+}
+
+/* Screen reader only */
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .carouselWrapper {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
-  margin-bottom: 1rem;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
 }
 
 .carouselContent {
   flex: 1;
   max-width: 1000px;
   overflow: hidden;
-  border-radius: 0.5rem;
+  border-radius: var(--radius-lg);
+  touch-action: pan-y pinch-zoom; /* Permite scroll vertical pero captura swipe horizontal */
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .carouselTrack {
   display: flex;
-  transition: transform 0.3s ease;
-  gap: 1rem;
+  gap: var(--spacing-md);
+  /* Transición manejada por Framer Motion */
 }
 
 /* Cuando es una sola card, centra todo el track */
@@ -45,7 +89,13 @@
 .carouselContainer.centeredCards .carouselTrack {
   justify-content: center;
   width: auto;
-  transform: none !important; /* Anula cualquier transform */
+  transform: none !important;
+}
+
+.carouselContainer.centeredCards .carouselSlide {
+  flex: 0 0 auto;
+  max-width: none;
+  width: auto;
 }
 
 .carouselSlide {
@@ -53,13 +103,13 @@
 }
 
 .carouselButton {
-  background: #007bff;
+  background: var(--primary);
   color: white;
   border: none;
   width: 40px;
   height: 40px;
-  border-radius: 50%;
-  font-size: 1.5rem;
+  border-radius: var(--radius-full);
+  font-size: var(--text-lg);
   font-weight: bold;
   cursor: pointer;
   display: flex;
@@ -70,12 +120,12 @@
 }
 
 .carouselButton:hover:not(:disabled) {
-  background: #0056b3;
+  background: var(--primary-hover);
   transform: scale(1.1);
 }
 
 .carouselButton:disabled {
-  background: #6c757d;
+  background: var(--secondary);
   cursor: not-allowed;
   opacity: 0.5;
   transform: none;
@@ -90,56 +140,74 @@
 .carouselDots {
   display: flex;
   justify-content: center;
-  gap: 0.5rem;
-  margin-top: 1rem;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-md);
 }
 
 .carouselDot {
   width: 8px;
   height: 8px;
-  border-radius: 50%;
+  border-radius: var(--radius-full);
   border: none;
-  background: #dee2e6;
+  background: var(--border-color);
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .carouselDot:hover {
-  background: #adb5bd;
+  background: var(--secondary);
 }
 
 .activeDot {
-  background: #007bff;
+  background: var(--primary);
   transform: scale(1.2);
 }
 
 .clickableCard {
   cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.clickableCard:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .selectedCard {
-  border: 2px solid #007bff;
+  border: 2px solid var(--primary);
   box-shadow: 0 8px 25px rgba(0, 123, 255, 0.3);
 }
 
-@media (max-width: 768px) {
+/* Cards con ancho fijo - no se estiran */
+.carouselSlide {
+  flex: 0 0 auto;
+  width: 300px;
+  max-width: 300px;
+}
+
+/* Tablets / monitores pequeños */
+@media (max-width: 1024px) {
+  .carouselSlide {
+    width: 280px;
+    max-width: 280px;
+  }
+}
+
+/* Móviles: 1 card centrada */
+@media (max-width: 640px) {
   .carouselWrapper {
-    gap: 0.5rem;
+    gap: var(--spacing-xs);
   }
-  
+
   .carouselButton {
-    width: 35px;
-    height: 35px;
-    font-size: 1.2rem;
+    width: 32px;
+    height: 32px;
+    font-size: var(--text-sm);
   }
-  
+
   .carouselTrack {
-    gap: 0.5rem;
+    gap: 0;
+  }
+
+  .carouselSlide {
+    flex: 0 0 100%;
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    justify-content: center;
   }
 }

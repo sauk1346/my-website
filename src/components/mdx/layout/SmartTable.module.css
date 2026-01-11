@@ -13,9 +13,9 @@
     width: 100%;
     border-collapse: collapse;
     background: white;
-    border-radius: 12px;
+    border-radius: var(--radius-lg);
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+    box-shadow: var(--shadow-md);
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
     table-layout: fixed;
     margin-bottom: 1.75rem;
@@ -35,7 +35,7 @@
   }
   
   .table th, .table td {
-    padding: 1rem 0.75rem;
+    padding: var(--spacing-md) 0.75rem;
     text-align: left;
     border: 1px solid white;
     transition: border-color 0.3s ease, color 0.3s ease;
@@ -82,7 +82,7 @@
     background-color: #f8fafc;
     color: #475569;
     padding: 0.125rem 0.375rem;
-    border-radius: 0.25rem;
+    border-radius: var(--radius-sm);
     font-family: "Menlo", "Monaco", "Courier New", monospace;
     font-size: 0.875rem;
     font-weight: 400;
@@ -160,7 +160,7 @@
   }
   
   .smartListItem {
-    margin-bottom: 1rem;
+    margin-bottom: var(--spacing-md);
     line-height: 1.5;
     text-align: justify;
   }
@@ -194,9 +194,9 @@
   .errorMessage {
     color: #dc2626;
     font-style: italic;
-    padding: 0.5rem;
+    padding: var(--spacing-sm);
     background-color: #fef2f2;
-    border-radius: 4px;
+    border-radius: var(--radius-sm);
     border: 1px solid #fecaca;
     font-size: 0.875rem;
   }

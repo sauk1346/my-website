@@ -3,7 +3,7 @@
 /* Lista principal (nivel 1) - Círculo relleno */
 .list {
   list-style-type: disc;
-  padding-left: 2rem;
+  padding-left: var(--spacing-xl);
   margin-bottom: 1.75rem;
   color: #374151;
   transition: color 0.3s ease;
@@ -18,7 +18,7 @@
 /* Lista anidada nivel 2 - Círculo vacío */
 .list .list {
   list-style-type: circle;
-  margin-top: 0.5rem;
+  margin-top: var(--spacing-sm);
   margin-bottom: 0.75rem;
   padding-left: 1.75rem;
   color: #4b5563;
@@ -74,7 +74,7 @@
 /* Lista ordenada principal */
 .orderedList {
   list-style-type: decimal;
-  padding-left: 2rem;
+  padding-left: var(--spacing-xl);
   margin-bottom: 1.75rem;
   color: #374151;
   transition: color 0.3s ease;
@@ -156,8 +156,8 @@
 .list + .list,
 .orderedList + .orderedList {
   border-top: 1px solid #f3f4f6;
-  padding-top: 1rem;
-  margin-top: 2rem;
+  padding-top: var(--spacing-md);
+  margin-top: var(--spacing-xl);
 }
 
 /* Modo oscuro para separadores */
@@ -197,19 +197,19 @@
 @media (max-width: 768px) {
   .list,
   .orderedList {
-    padding-left: 1.5rem;
+    padding-left: var(--spacing-lg);
   }
-  
+
   .list .list,
   .orderedList .orderedList {
-    padding-left: 1.25rem;
+    padding-left: var(--spacing-md);
   }
-  
+
   .list .list .list,
   .orderedList .orderedList .orderedList {
-    padding-left: 1rem;
+    padding-left: var(--spacing-md);
   }
-  
+
   .listItem {
     font-size: 0.95em;
   }
@@ -218,12 +218,12 @@
 @media (max-width: 480px) {
   .list,
   .orderedList {
-    padding-left: 1.25rem;
-    margin-bottom: 1.25rem;
+    padding-left: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
   }
-  
+
   .listItem {
-    margin-bottom: 0.5rem;
+    margin-bottom: var(--spacing-sm);
     font-size: 0.9em;
   }
 }

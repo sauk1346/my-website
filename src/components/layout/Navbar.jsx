@@ -3,7 +3,9 @@
 import Link from 'next/link';
 import { useRouter, usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import styles from './Navbar.module.css';
+import { menuOverlay, menuSlide, menuItemVariants, staggerContainer } from '@/utils/animations';
 
 const Navbar = () => {
   const router = useRouter();
@@ -11,33 +13,33 @@ const Navbar = () => {
   const [darkMode, setDarkMode] = useState(false);
   const [mounted, setMounted] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  
+
   // Función para verificar el tema actual
   const checkTheme = () => {
     if (typeof window === 'undefined') return false;
-    
+
     // Verificar clases de modo oscuro
     const hasDarkMode = document.documentElement.classList.contains('dark-mode');
     const hasDarkOverride = document.documentElement.classList.contains('dark-mode-override');
-    
+
     // Verificar clase de modo claro forzado
     const hasLightOverride = document.documentElement.classList.contains('light-mode-override');
-    
+
     // Verificar preferencia del sistema si no hay override
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
+
     // Lógica de decisión
     if (hasLightOverride) return false;
     if (hasDarkOverride) return true;
     if (hasDarkMode) return true;
-    
+
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark') return true;
     if (savedTheme === 'light') return false;
-    
+
     return prefersDark;
   };
-  
+
   // Detectar el tema inicial y cambios + manejar el overflow del body
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -45,44 +47,44 @@ const Navbar = () => {
       const initialDarkMode = checkTheme();
       setDarkMode(initialDarkMode);
       setMounted(true);
-      
+
       // Observar cambios en las clases
       const observer = new MutationObserver(() => {
         const newDarkMode = checkTheme();
         setDarkMode(newDarkMode);
       });
-      
-      observer.observe(document.documentElement, { 
+
+      observer.observe(document.documentElement, {
         attributes: true,
-        attributeFilter: ['class'] 
+        attributeFilter: ['class']
       });
-      
+
       // Manejar el overflow del body basado en mobileMenuOpen
       if (mobileMenuOpen) {
         document.body.style.overflow = 'hidden';
       } else {
         document.body.style.overflow = '';
       }
-      
+
       return () => {
         observer.disconnect();
         document.body.style.overflow = '';
       };
     }
   }, [mobileMenuOpen]);
-  
+
   // Función para cambiar el tema
   const toggleTheme = () => {
     const newDarkMode = !darkMode;
-    
+
     if (typeof window !== 'undefined') {
       localStorage.setItem('theme', newDarkMode ? 'dark' : 'light');
-      
+
       // Limpiar todas las clases relacionadas con temas
       document.documentElement.classList.remove('dark-mode');
       document.documentElement.classList.remove('dark-mode-override');
       document.documentElement.classList.remove('light-mode-override');
-      
+
       // Aplicar la nueva clase según el tema seleccionado
       if (newDarkMode) {
         document.documentElement.classList.add('dark-mode-override');
@@ -91,11 +93,11 @@ const Navbar = () => {
       }
     }
   };
-  
+
   // Función para navegar a una sección
   const navigateToSection = (sectionId, e) => {
     if (e) e.preventDefault();
-    
+
     // Si no estamos en la página principal, primero navegamos a home
     if (pathname !== '/') {
       // Almacenar el destino de la sección en sessionStorage
@@ -108,11 +110,11 @@ const Navbar = () => {
         section.scrollIntoView({ behavior: 'smooth' });
       }
     }
-    
+
     // Cerrar el menú móvil si está abierto
     setMobileMenuOpen(false);
   };
-  
+
   // Función para verificar si hay que hacer scroll al cargar la página
   useEffect(() => {
     if (pathname === '/' && typeof window !== 'undefined') {
@@ -130,7 +132,7 @@ const Navbar = () => {
       }
     }
   }, [pathname]);
-  
+
   // Evitar problemas de hidratación
   if (!mounted) {
     return (
@@ -138,7 +140,7 @@ const Navbar = () => {
         <div className={styles.container}>
           {/* Logo */}
           <span className={styles.logo}>SaukCode</span>
-          
+
           {/* Menú placeholder */}
           <ul className={styles.menu}>
             <li><span className={styles.link}>Programación</span></li>
@@ -153,7 +155,7 @@ const Navbar = () => {
 
   // Componentes para los iconos
   const MenuIcon = () => (
-    <svg 
+    <svg
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
@@ -168,9 +170,9 @@ const Navbar = () => {
       <line x1="3" y1="18" x2="21" y2="18" />
     </svg>
   );
-  
+
   const CloseIcon = () => (
-    <svg 
+    <svg
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
@@ -184,7 +186,7 @@ const Navbar = () => {
       <line x1="6" y1="6" x2="18" y2="18" />
     </svg>
   );
-  
+
   // Componente del ThemeToggle para reutilizarlo
   const ThemeToggleComponent = () => (
     <label className={styles.themeToggle}>
@@ -203,11 +205,11 @@ const Navbar = () => {
         <path
           d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" />
       </svg>
-      <input 
-        type="checkbox" 
+      <input
+        type="checkbox"
         checked={darkMode}
         onChange={toggleTheme}
-        className={styles.toggleInput} 
+        className={styles.toggleInput}
       />
       <span className={styles.toggleSlider}></span>
       <svg
@@ -226,47 +228,66 @@ const Navbar = () => {
     </label>
   );
 
+  // Variantes para los items del menú móvil con stagger
+  const mobileMenuContainerVariants = {
+    initial: {},
+    animate: {
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.2,
+      },
+    },
+    exit: {
+      transition: {
+        staggerChildren: 0.05,
+        staggerDirection: -1,
+      },
+    },
+  };
+
   return (
     <div className={styles.navbar}>
       <div className={styles.container}>
         {/* Botón del menú para móvil */}
-        <button 
-          className={styles.menuButton} 
+        <motion.button
+          className={styles.menuButton}
           onClick={() => setMobileMenuOpen(true)}
           aria-label="Abrir menú de navegación"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
         >
           <MenuIcon />
-        </button>
-        
+        </motion.button>
+
         {/* Logo */}
         <Link href="/" className={styles.logo}>
           SaukCode
         </Link>
-        
+
         {/* Menú principal */}
         <ul className={styles.menu}>
           <li>
-            <Link 
-              href="/#programacion" 
-              onClick={(e) => navigateToSection('programacion', e)} 
+            <Link
+              href="/#programacion"
+              onClick={(e) => navigateToSection('programacion', e)}
               className={styles.link}
             >
               Programación
             </Link>
           </li>
           <li>
-            <Link 
-              href="/#idiomas" 
-              onClick={(e) => navigateToSection('idiomas', e)} 
+            <Link
+              href="/#idiomas"
+              onClick={(e) => navigateToSection('idiomas', e)}
               className={styles.link}
             >
               Idiomas
             </Link>
           </li>
           <li>
-            <Link 
-              href="/#sobre-mi" 
-              onClick={(e) => navigateToSection('sobre-mi', e)} 
+            <Link
+              href="/#sobre-mi"
+              onClick={(e) => navigateToSection('sobre-mi', e)}
               className={styles.link}
             >
               Sobre mí
@@ -276,45 +297,85 @@ const Navbar = () => {
             <ThemeToggleComponent />
           </li>
         </ul>
-        
-        {/* Menú móvil */}
-        <div className={`${styles.mobileMenu} ${mobileMenuOpen ? styles.mobileMenuOpen : ''}`}>
-          <button 
-            className={styles.closeButton} 
-            onClick={() => setMobileMenuOpen(false)}
-            aria-label="Cerrar menú de navegación"
-          >
-            <CloseIcon />
-          </button>
-          
-          <div className={styles.mobileMenuContent}>
-            <Link 
-              href="/#programacion" 
-              onClick={(e) => navigateToSection('programacion', e)} 
-              className={`${styles.link} ${styles.mobileMenuItem}`}
-            >
-              Programación
-            </Link>
-            <Link 
-              href="/#idiomas" 
-              onClick={(e) => navigateToSection('idiomas', e)} 
-              className={`${styles.link} ${styles.mobileMenuItem}`}
-            >
-              Idiomas
-            </Link>
-            <Link 
-              href="/#sobre-mi" 
-              onClick={(e) => navigateToSection('sobre-mi', e)} 
-              className={`${styles.link} ${styles.mobileMenuItem}`}
-            >
-              Sobre mí
-            </Link>
-            
-            <div className={styles.mobileThemeToggle}>
-              <ThemeToggleComponent />
-            </div>
-          </div>
-        </div>
+
+        {/* Menú móvil animado */}
+        <AnimatePresence>
+          {mobileMenuOpen && (
+            <>
+              {/* Overlay de fondo */}
+              <motion.div
+                className={styles.mobileMenuOverlay}
+                variants={menuOverlay}
+                initial="initial"
+                animate="animate"
+                exit="exit"
+                onClick={() => setMobileMenuOpen(false)}
+              />
+
+              {/* Panel del menú */}
+              <motion.div
+                className={styles.mobileMenu}
+                variants={menuSlide}
+                initial="initial"
+                animate="animate"
+                exit="exit"
+              >
+                <motion.button
+                  className={styles.closeButton}
+                  onClick={() => setMobileMenuOpen(false)}
+                  aria-label="Cerrar menú de navegación"
+                  whileHover={{ scale: 1.1, rotate: 90 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <CloseIcon />
+                </motion.button>
+
+                <motion.div
+                  className={styles.mobileMenuContent}
+                  variants={mobileMenuContainerVariants}
+                  initial="initial"
+                  animate="animate"
+                  exit="exit"
+                >
+                  <motion.div variants={menuItemVariants}>
+                    <Link
+                      href="/#programacion"
+                      onClick={(e) => navigateToSection('programacion', e)}
+                      className={`${styles.link} ${styles.mobileMenuItem}`}
+                    >
+                      Programación
+                    </Link>
+                  </motion.div>
+                  <motion.div variants={menuItemVariants}>
+                    <Link
+                      href="/#idiomas"
+                      onClick={(e) => navigateToSection('idiomas', e)}
+                      className={`${styles.link} ${styles.mobileMenuItem}`}
+                    >
+                      Idiomas
+                    </Link>
+                  </motion.div>
+                  <motion.div variants={menuItemVariants}>
+                    <Link
+                      href="/#sobre-mi"
+                      onClick={(e) => navigateToSection('sobre-mi', e)}
+                      className={`${styles.link} ${styles.mobileMenuItem}`}
+                    >
+                      Sobre mí
+                    </Link>
+                  </motion.div>
+
+                  <motion.div
+                    className={styles.mobileThemeToggle}
+                    variants={menuItemVariants}
+                  >
+                    <ThemeToggleComponent />
+                  </motion.div>
+                </motion.div>
+              </motion.div>
+            </>
+          )}
+        </AnimatePresence>
       </div>
     </div>
   );

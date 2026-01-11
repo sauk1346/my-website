@@ -6,11 +6,11 @@
 }
 
 .tocContainer {
-  padding: 1.25rem;
+  padding: var(--spacing-lg);
   border-left: 2px solid #e2e8f0;
   background-color: #ffffff;
-  border-radius: 0.5rem;
-  margin-left: 1rem;
+  border-radius: var(--radius-md);
+  margin-left: var(--spacing-md);
   box-sizing: border-box;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   overflow-y: auto;
@@ -30,10 +30,10 @@
 .tocHeading {
   font-size: 1.25rem;
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: var(--spacing-md);
   font-weight: 600;
   color: #1e40af;
-  padding-bottom: 0.5rem;
+  padding-bottom: var(--spacing-sm);
   border-bottom: 1px solid #e2e8f0;
   transition: color 0.3s ease, border-bottom-color 0.3s ease;
 }
@@ -52,7 +52,7 @@
 }
 
 .tocItem {
-  margin-bottom: 0.5rem;
+  margin-bottom: var(--spacing-sm);
   font-size: 0.95rem;
   line-height: 1.4;
 }
@@ -62,21 +62,21 @@
 }
 
 .level2 {
-  margin-left: 0.5rem;
+  margin-left: var(--spacing-sm);
 }
 
 .level3 {
-  margin-left: 1rem;
+  margin-left: var(--spacing-md);
   font-size: 0.9rem;
 }
 
 .level4 {
-  margin-left: 1.5rem;
+  margin-left: var(--spacing-lg);
   font-size: 0.85rem;
 }
 
 .level5, .level6 {
-  margin-left: 2rem;
+  margin-left: var(--spacing-xl);
   font-size: 0.8rem;
 }
 
@@ -84,8 +84,8 @@
   color: #64748b;
   text-decoration: none;
   display: block;
-  padding: 0.3rem 0.5rem;
-  border-radius: 0.25rem;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-sm);
   transition: all 0.2s ease;
 }
 
@@ -128,7 +128,7 @@
     max-width: 250px;
   }
   .tocContainer {
-    padding: 1rem;
+    padding: var(--spacing-md);
   }
   .tocHeading {
     font-size: 1.1rem;

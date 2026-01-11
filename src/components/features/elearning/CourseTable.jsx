@@ -1,10 +1,32 @@
+'use client';
+
 import React from 'react';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 import styles from './CourseTable.module.css';
+import { staggerContainer, viewportConfig } from '@/utils/animations';
+
+// Variantes para las filas
+const rowVariants = {
+  initial: { opacity: 0, x: -10 },
+  animate: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.3,
+    },
+  },
+};
 
 export const CourseTable = ({ courses, platformName, type = 'elearning' }) => {
   return (
-    <div className={styles.section}>
+    <motion.div
+      className={styles.section}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={viewportConfig}
+      transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
+    >
       <div className={`${styles.tableContainer} ${styles.courses}`}>
         <h2 className={styles.platformTitle}>{platformName}</h2>
         <div className={styles.tableWrapper}>
@@ -17,9 +39,21 @@ export const CourseTable = ({ courses, platformName, type = 'elearning' }) => {
                 {type === 'bootcamp' && <th>Certificado</th>}
               </tr>
             </thead>
-            <tbody>
+            <motion.tbody
+              key={`tbody-${platformName}`}
+              initial="initial"
+              animate="animate"
+              variants={staggerContainer(0.03)}
+            >
               {courses.map(course => (
-                <tr key={course.code}>
+                <motion.tr
+                  key={`${platformName}-${course.code}`}
+                  variants={rowVariants}
+                  whileHover={{
+                    backgroundColor: 'rgba(59, 130, 246, 0.05)',
+                    transition: { duration: 0.05 },
+                  }}
+                >
                   <td
                     className={styles.code}
                     data-label="Código"
@@ -70,12 +104,12 @@ export const CourseTable = ({ courses, platformName, type = 'elearning' }) => {
                       )}
                     </td>
                   )}
-                </tr>
+                </motion.tr>
               ))}
-            </tbody>
+            </motion.tbody>
           </table>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };

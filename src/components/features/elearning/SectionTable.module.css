@@ -87,7 +87,7 @@
   font-weight: 400;
   color: #6b7280;
   display: block;
-  margin-top: 0.5rem;
+  margin-top: var(--spacing-sm);
   transition: color 0.3s ease;
 }
 
@@ -99,8 +99,8 @@
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2.5rem;
-  margin-top: 2rem;
+  gap: var(--spacing-2xl);
+  margin-top: var(--spacing-xl);
 }
 
 /* Anchos de columnas específicos */
@@ -158,10 +158,10 @@
 
 /* Footer de resumen */
 .summaryFooter {
-  margin-top: 2rem;
-  padding: 1.5rem;
+  margin-top: var(--spacing-xl);
+  padding: var(--spacing-lg);
   background: linear-gradient(135deg, #eff6ff, #dbeafe);
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   text-align: center;
   border: 2px solid #2563eb;
   max-width: 800px;
@@ -180,7 +180,7 @@
   font-size: 1.5rem;
   font-weight: 700;
   color: #1f2937;
-  margin-bottom: 1rem;
+  margin-bottom: var(--spacing-md);
   transition: color 0.3s ease;
 }
 
@@ -192,14 +192,14 @@
 .summaryStats {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
-  margin-top: 1rem;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
 }
 
 .statItem {
-  padding: 1rem;
+  padding: var(--spacing-md);
   background: white;
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
 }
@@ -213,7 +213,7 @@
 .statLabel {
   font-size: 0.875rem;
   color: #6b7280;
-  margin-bottom: 0.25rem;
+  margin-bottom: var(--spacing-xs);
   transition: color 0.3s ease;
 }
 
@@ -240,11 +240,11 @@
 @media (max-width: 768px) {
   .grid {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: var(--spacing-xl);
   }
 
   .summaryFooter {
-    padding: 1rem;
+    padding: var(--spacing-md);
   }
 
   .summaryTitle {

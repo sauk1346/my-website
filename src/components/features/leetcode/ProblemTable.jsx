@@ -1,10 +1,26 @@
+'use client';
+
 import { useMemo } from 'react';
+import { motion } from 'framer-motion';
 import { usePagination } from '@/hooks/usePagination';
 import { useTableSort } from '@/hooks/useTableSort';
 import { SmartLink } from '@/components/mdx';
 import PaginationControls from '@/components/common/table/PaginationControls';
 import SortableHeader from '@/components/common/table/SortableHeader';
 import styles from './ProblemTable.module.css';
+import { staggerContainer, viewportConfig } from '@/utils/animations';
+
+// Variantes para las filas
+const rowVariants = {
+  initial: { opacity: 0, x: -10 },
+  animate: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.3,
+    },
+  },
+};
 
 const ProblemTable = ({
   title,
@@ -65,9 +81,15 @@ const ProblemTable = ({
   }
 
   return (
-    <div className={styles.tableContainer}>
+    <motion.div
+      className={styles.tableContainer}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={viewportConfig}
+      transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
+    >
       <h2 className={styles.platformTitle}>{title}</h2>
-      
+
       <div className={styles.tableWrapper}>
         <table className={styles.table}>
           <thead>
@@ -102,17 +124,29 @@ const ProblemTable = ({
               />
             </tr>
           </thead>
-          <tbody>
+          <motion.tbody
+            key={`tbody-${platform}-${pagination.currentPage}`}
+            initial="initial"
+            animate="animate"
+            variants={staggerContainer(0.03)}
+          >
             {pagination.paginatedData.map(([id, problem]) => (
-              <tr key={id}>
-                <td 
+              <motion.tr
+                key={`${platform}-${id}`}
+                variants={rowVariants}
+                whileHover={{
+                  backgroundColor: 'rgba(59, 130, 246, 0.05)',
+                  transition: { duration: 0.05 },
+                }}
+              >
+                <td
                   className={styles.code}
                   data-label="Código"
                 >
                   {id}
                 </td>
                 <td data-label="Descripción">
-                  <SmartLink 
+                  <SmartLink
                     href={`${platform}/${id.toLowerCase()}`}
                   >
                     {problem.title}
@@ -121,25 +155,25 @@ const ProblemTable = ({
                 <td data-label="Temas">
                   {problem.topics?.join(", ") || ''}
                 </td>
-                <td 
+                <td
                   className={getDifficultyClass(problem.difficulty)}
                   data-label="Dificultad"
                 >
                   {getDifficultyLabel(problem.difficulty) || 'Desconocido'}
                 </td>
-              </tr>
+              </motion.tr>
             ))}
-          </tbody>
+          </motion.tbody>
         </table>
       </div>
-      
+
       <div className={styles.tableFooter}>
-        <PaginationControls 
+        <PaginationControls
           pagination={pagination}
           className={styles.paginationControls}
         />
       </div>
-    </div>
+    </motion.div>
   );
 };
 

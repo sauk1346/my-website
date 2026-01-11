@@ -5,7 +5,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 0;
+    padding: var(--spacing-md) 0;
     height: 70px;
     border-top: 1px solid #e5e7eb;
     transition: border-color 0.3s ease;
@@ -30,7 +30,7 @@
   .paginationControls {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: var(--spacing-sm);
     justify-content: flex-end;
     min-width: 300px;
   }
@@ -39,12 +39,12 @@
      BOTONES DE PAGINACIÓN
      ================================ */
   .paginationButton {
-    padding: 0.5rem 0.75rem;
+    padding: var(--spacing-sm) 0.75rem;
     border: 1px solid #dee2e6;
     background-color: #f8f9fa;
     color: #495057;
     cursor: pointer;
-    border-radius: 4px;
+    border-radius: var(--radius-sm);
     transition: all 0.2s ease;
     min-width: 40px;
     text-align: center;
@@ -97,13 +97,13 @@
      VARIANTES DE TAMAÑO
      ================================ */
   .small .paginationButton {
-    padding: 0.25rem 0.5rem;
+    padding: var(--spacing-xs) var(--spacing-sm);
     font-size: 0.8rem;
     min-width: 32px;
   }
   
   .large .paginationButton {
-    padding: 0.75rem 1rem;
+    padding: 0.75rem var(--spacing-md);
     font-size: 1rem;
     min-width: 48px;
   }
@@ -194,10 +194,10 @@
   @media (max-width: 768px) {
     .tableFooter {
       flex-direction: column;
-      gap: 1rem;
+      gap: var(--spacing-md);
       text-align: center;
       height: auto;
-      padding: 1rem 0;
+      padding: var(--spacing-md) 0;
     }
     
     .paginationControls {
@@ -220,7 +220,7 @@
   
   @media (max-width: 480px) {
     .paginationControls {
-      gap: 0.25rem;
+      gap: var(--spacing-xs);
     }
     
     .paginationButton {

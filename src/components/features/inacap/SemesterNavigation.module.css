@@ -3,39 +3,183 @@
    ================================ */
    .semesterNavigation {
     background: var(--background);
-    border-radius: 12px;
-    padding: 1.5rem;
-    margin-bottom: 2rem;
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
     box-shadow: var(--shadow-lg);
     border: 1px solid var(--border-color);
     transition: all 0.3s ease;
   }
-  
+
+  .semesterNavigation.collapsed {
+    padding: var(--spacing-md);
+  }
+
   .semesterNavigation:hover {
     box-shadow: var(--shadow-xl, 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04));
   }
-  
+
+  /* ================================
+     HEADER CON TOGGLE
+     ================================ */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .collapsed .header {
+    margin-bottom: var(--spacing-sm);
+  }
+
   /* ================================
      TÍTULO DE NAVEGACIÓN
      ================================ */
   .navigationTitle {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: bold;
     color: var(--foreground);
-    margin-bottom: 1.5rem;
-    text-align: center;
+    margin: 0;
     transition: color 0.3s ease;
-    position: relative;
   }
-  
-  .navigationTitle::after {
-    content: '';
-    display: block;
-    width: 40px;
-    height: 3px;
+
+  .collapsed .navigationTitle {
+    font-size: 1rem;
+  }
+
+  /* ================================
+     BOTÓN TOGGLE
+     ================================ */
+  .toggleButton {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    color: var(--foreground);
+  }
+
+  .toggleButton:hover {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+  }
+
+  .toggleIcon {
+    display: inline-block;
+    font-size: 0.75rem;
+  }
+
+  /* ================================
+     VISTA COLAPSADA
+     ================================ */
+  .collapsedView {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-xs) 0;
+  }
+
+  .navArrow {
+    background: var(--primary);
+    color: white;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: var(--radius-full);
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+  }
+
+  .navArrow:hover:not(:disabled) {
+    background: var(--primary-hover);
+    transform: scale(1.1);
+  }
+
+  .navArrow:disabled {
+    background: var(--secondary);
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  .currentSemester {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--radius-md);
+    border: 2px solid var(--border-color);
+    background: var(--background);
+    transition: all 0.2s ease;
+    min-width: 280px;
+    justify-content: space-between;
+  }
+
+  .currentSemester.completed {
+    border-color: var(--success);
+  }
+
+  .currentSemester.current {
+    border-color: var(--primary);
+  }
+
+  .currentSemester.pending {
+    border-color: var(--secondary);
+  }
+
+  .currentSemesterInfo {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+  }
+
+  .currentNumber {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--foreground);
+  }
+
+  .currentYear {
+    font-size: 0.8rem;
+    color: var(--secondary);
+  }
+
+  .currentProgress {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+  }
+
+  .currentProgressBar {
+    width: 80px;
+    height: 6px;
+    background: var(--card-bg);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+  }
+
+  .currentProgressFill {
+    height: 100%;
     background: linear-gradient(90deg, var(--primary), var(--accent));
-    margin: 0.5rem auto 0;
-    border-radius: 2px;
+    border-radius: var(--radius-full);
+  }
+
+  .currentProgressText {
+    font-size: 0.7rem;
+    color: var(--secondary);
+    white-space: nowrap;
   }
   
   /* ================================
@@ -45,18 +189,18 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 1rem;
+    gap: var(--spacing-md);
     justify-items: center;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
   }
-  
+
   .semesterButton {
     background: var(--background);
     border: 2px solid var(--secondary);
-    border-radius: 12px;
-    padding: 1.2rem;
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-md);
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     width: 100%;
@@ -138,24 +282,24 @@
      CONTENIDO DEL SEMESTRE
      ================================ */
   .semesterInfo {
-    margin-bottom: 0.5rem;
+    margin-bottom: var(--spacing-sm);
   }
-  
+
   .semesterNumber {
     font-size: 1.5rem;
     font-weight: bold;
     line-height: 1.2;
   }
-  
+
   .semesterYear {
     font-size: 0.9rem;
     opacity: 0.8;
     font-weight: 500;
   }
-  
+
   .semesterCount {
     font-size: 0.8rem;
-    margin-bottom: 0.75rem;
+    margin-bottom: var(--spacing-sm);
     font-weight: 500;
     opacity: 0.9;
   }
@@ -167,17 +311,17 @@
     width: 100%;
     height: 6px;
     background: var(--card-bg);
-    border-radius: 3px;
+    border-radius: var(--radius-sm);
     overflow: hidden;
-    margin-bottom: 0.5rem;
+    margin-bottom: var(--spacing-sm);
     transition: background-color 0.3s ease;
     position: relative;
   }
-  
+
   .semesterProgressFill {
     height: 100%;
     background: linear-gradient(90deg, var(--primary), var(--accent));
-    border-radius: 3px;
+    border-radius: var(--radius-sm);
     transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
   }
@@ -229,8 +373,8 @@
      ================================ */
   .subjectCard {
     background: var(--background);
-    border-radius: 6px;
-    padding: 0.5rem;
+    border-radius: var(--radius-md);
+    padding: var(--spacing-sm);
     box-shadow: var(--shadow-md);
     border: 1px solid var(--border-color);
     transition: all 0.3s ease;
@@ -288,7 +432,7 @@
   .categoryIcon {
     color: white;
     padding: 0.2rem;
-    border-radius: 3px;
+    border-radius: var(--radius-sm);
     font-size: 0.7rem;
     width: 20px;
     height: 20px;
@@ -317,7 +461,7 @@
     align-items: center;
     gap: 0.1rem;
     padding: 0.1rem 0.25rem;
-    border-radius: 6px;
+    border-radius: var(--radius-md);
     font-size: 0.55rem;
     font-weight: 500;
     line-height: 1;
@@ -361,7 +505,7 @@
 
   .categoryLabel {
     padding: 0.1rem 0.25rem;
-    border-radius: 6px;
+    border-radius: var(--radius-md);
     background: var(--card-bg);
     color: var(--secondary);
     font-size: 0.55rem;
@@ -373,8 +517,8 @@
      ================================ */
   .controls {
     display: flex;
-    gap: 0.8rem;
-    margin-bottom: 1.5rem;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-lg);
     max-width: 75rem;
     margin-left: auto;
     margin-right: auto;
@@ -388,9 +532,9 @@
 
   .searchInput {
     width: 100%;
-    padding: 0.75rem 1rem;
+    padding: var(--spacing-sm) var(--spacing-md);
     border: 1px solid var(--input-border);
-    border-radius: 8px;
+    border-radius: var(--radius-md);
     font-size: 1rem;
     outline: none;
     transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
@@ -403,9 +547,9 @@
   }
 
   .filterSelect {
-    padding: 0.75rem 1rem;
+    padding: var(--spacing-sm) var(--spacing-md);
     border: 1px solid var(--input-border);
-    border-radius: 8px;
+    border-radius: var(--radius-md);
     font-size: 1rem;
     outline: none;
     background: var(--input-bg);
@@ -415,9 +559,9 @@
 
   .noResults {
     text-align: center;
-    padding: 2rem;
+    padding: var(--spacing-xl);
     background: var(--background);
-    border-radius: 12px;
+    border-radius: var(--radius-lg);
     box-shadow: var(--shadow-lg);
     border: 1px solid var(--border-color);
     transition: background-color 0.3s ease;
@@ -425,12 +569,12 @@
 
   .noResultsIcon {
     font-size: 2.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: var(--spacing-md);
   }
 
   .noResultsTitle {
     color: var(--secondary);
-    margin-bottom: 0.5rem;
+    margin-bottom: var(--spacing-sm);
     transition: color 0.3s ease;
   }
 
@@ -448,8 +592,8 @@
     grid-template-rows: 1fr;
     justify-content: flex-start;
     overflow-x: auto;
-    gap: 0.75rem;
-    padding-bottom: 0.5rem;
+    gap: var(--spacing-sm);
+    padding-bottom: var(--spacing-sm);
     max-width: none;
   }
   
@@ -541,18 +685,41 @@
   :global(html.dark-mode-override) .semesterProgressBar {
     background: var(--card-bg-dark, #374151);
   }
-  
+
+  :global(html.dark-mode) .toggleButton,
+  :global(html.dark-mode-override) .toggleButton {
+    background: var(--card-bg-dark, #374151);
+    border-color: var(--border-color-dark, #4a5568);
+    color: var(--foreground-dark, #e5e7eb);
+  }
+
+  :global(html.dark-mode) .currentSemester,
+  :global(html.dark-mode-override) .currentSemester {
+    background: var(--background-dark, #1e1e1e);
+    border-color: var(--border-color-dark, #4a5568);
+  }
+
+  :global(html.dark-mode) .currentNumber,
+  :global(html.dark-mode-override) .currentNumber {
+    color: var(--foreground-dark, #e5e7eb);
+  }
+
+  :global(html.dark-mode) .currentProgressBar,
+  :global(html.dark-mode-override) .currentProgressBar {
+    background: var(--card-bg-dark, #374151);
+  }
+
   /* ================================
      RESPONSIVE
      ================================ */
   @media (max-width: 1024px) {
     .semesterButtons {
       max-width: 900px;
-      gap: 0.8rem;
+      gap: var(--spacing-sm);
     }
-    
+
     .semesterButton {
-      padding: 1rem;
+      padding: var(--spacing-md);
       min-width: 180px;
       max-width: 220px;
     }
@@ -563,32 +730,32 @@
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(4, 1fr);
       max-width: 600px;
-      gap: 0.8rem;
+      gap: var(--spacing-sm);
     }
-    
+
     .semesterButton {
       width: 100%;
       max-width: 280px;
       min-width: auto;
-      padding: 1rem;
+      padding: var(--spacing-md);
     }
 
     .grid {
       grid-template-columns: repeat(2, 1fr);
       max-width: 100%;
-      gap: 0.5rem;
+      gap: var(--spacing-sm);
     }
 
     .controls {
       flex-direction: column;
     }
-    
+
     .navigationTitle {
-      font-size: 1.25rem;
+      font-size: 1rem;
     }
-    
+
     .semesterNavigation {
-      padding: 1rem;
+      padding: var(--spacing-md);
     }
 
     .subjectCard {
@@ -598,30 +765,61 @@
     .cardTitle {
       font-size: 0.7rem;
     }
+
+    /* Vista colapsada responsive */
+    .collapsedView {
+      gap: var(--spacing-sm);
+    }
+
+    .currentSemester {
+      min-width: auto;
+      flex: 1;
+      max-width: 300px;
+      gap: var(--spacing-sm);
+      padding: var(--spacing-xs) var(--spacing-sm);
+    }
+
+    .currentNumber {
+      font-size: 0.9rem;
+    }
+
+    .currentProgressBar {
+      width: 60px;
+    }
+
+    .currentProgressText {
+      font-size: 0.65rem;
+    }
+
+    .navArrow {
+      width: 28px;
+      height: 28px;
+      font-size: 1rem;
+    }
   }
-  
+
   @media (max-width: 480px) {
     .semesterButtons {
       grid-template-columns: 1fr;
       grid-template-rows: repeat(8, 1fr);
       max-width: 300px;
-      gap: 0.6rem;
+      gap: var(--spacing-sm);
     }
-    
+
     .semesterButton {
-      padding: 1rem;
+      padding: var(--spacing-md);
       min-width: auto;
       max-width: none;
     }
-    
+
     .semesterNumber {
       font-size: 1.25rem;
     }
-    
+
     .semesterYear {
       font-size: 0.8rem;
     }
-    
+
     .semesterCount,
     .semesterPercent {
       font-size: 0.75rem;
@@ -629,7 +827,7 @@
 
     .grid {
       grid-template-columns: 1fr;
-      gap: 0.4rem;
+      gap: var(--spacing-xs);
     }
 
     .subjectCard {
@@ -655,6 +853,56 @@
     .categoryLabel {
       font-size: 0.5rem;
       padding: 0.08rem 0.2rem;
+    }
+
+    /* Vista colapsada móvil */
+    .header {
+      flex-wrap: wrap;
+      gap: var(--spacing-xs);
+    }
+
+    .navigationTitle {
+      font-size: 0.9rem;
+    }
+
+    .toggleButton {
+      padding: 4px 8px;
+    }
+
+    .toggleIcon {
+      font-size: 0.65rem;
+    }
+
+    .collapsedView {
+      flex-wrap: nowrap;
+      gap: var(--spacing-xs);
+    }
+
+    .currentSemester {
+      flex-direction: column;
+      align-items: stretch;
+      gap: var(--spacing-xs);
+      padding: var(--spacing-xs);
+    }
+
+    .currentSemesterInfo {
+      justify-content: center;
+    }
+
+    .currentProgress {
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+    }
+
+    .currentProgressBar {
+      width: 100%;
+    }
+
+    .navArrow {
+      width: 24px;
+      height: 24px;
+      font-size: 0.9rem;
     }
   }
   

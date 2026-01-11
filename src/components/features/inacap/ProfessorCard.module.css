@@ -1,8 +1,8 @@
 /* Tarjeta base - extraído de CourseDetails */
 .card {
   background-color: white;
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
   overflow: hidden;
   transition: background-color 0.3s ease;
   width: 100%;
@@ -20,7 +20,7 @@
 
 /* Header de tarjeta - extraído de CourseDetails */
 .cardHeader {
-  padding: 1rem;
+  padding: var(--spacing-md);
   border-bottom: 1px solid #e2e8f0;
   background-color: #f8fafc;
   transition: background-color 0.3s ease, border-color 0.3s ease;
@@ -37,7 +37,7 @@
 .cardTitle {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: var(--spacing-sm);
   font-size: 1.25rem;
   font-weight: bold;
   color: #1f2937;
@@ -53,12 +53,12 @@
 
 /* Cuerpo de tarjeta - extraído de CourseDetails */
 .cardBody {
-  padding: 1rem;
+  padding: var(--spacing-md);
 }
 
 /* Items de información - extraído de CourseDetails */
 .infoItem {
-  margin-bottom: 0.75rem;
+  margin-bottom: var(--spacing-sm);
 }
 
 .infoItem:last-child {
@@ -70,7 +70,7 @@
   display: block;
   font-weight: 500;
   color: #64748b;
-  margin-bottom: 0.25rem;
+  margin-bottom: var(--spacing-xs);
   transition: color 0.3s ease;
 }
 
@@ -89,23 +89,23 @@
     max-width: 100%;
     margin: 0; /* Sin auto-centering en móvil */
   }
-  
+
   .cardHeader {
-    padding: 0.75rem;
+    padding: var(--spacing-sm);
   }
-  
+
   .cardBody {
-    padding: 0.75rem;
+    padding: var(--spacing-sm);
   }
-  
+
   .cardTitle {
     font-size: 1.125rem;
   }
-  
+
   .infoItem {
-    margin-bottom: 0.5rem;
+    margin-bottom: var(--spacing-sm);
   }
-  
+
   .infoLabel {
     font-size: 0.875rem;
   }
@@ -115,9 +115,9 @@
   .cardTitle {
     font-size: 1rem;
   }
-  
+
   .cardHeader,
   .cardBody {
-    padding: 0.5rem;
+    padding: var(--spacing-sm);
   }
 }

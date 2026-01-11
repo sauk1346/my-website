@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { subjects, categories, statusConfig, semesters } from '@/data/inacap/inacapData';
 import Calendar from '@/components/features/inacap/Calendar';
 import InacapStats from '@/components/features/inacap/InacapStats';
-import SemesterNavigation from '@/components/features/inacap/SemesterNavigation';
+import SemesterTabs from '@/components/features/inacap/SemesterTabs';
 import SubjectsGrid from '@/components/features/inacap/SubjectsGrid';
 import calendar25 from '@/data/inacap/calendar25.js';
 import styles from './Inacap.module.css';
@@ -23,48 +23,44 @@ const Inacap = () => {
   };
 
   return (
-    <div className={styles.container}>
-      {/* Título principal */}
-      <h1 className={styles.title}>Malla Curricular</h1>
+    <div className={styles.pageWrapper}>
+      <div className={styles.container}>
+        {/* Título principal */}
+        <h1 className={styles.title}>Malla Curricular</h1>
 
-      {/* Componente de estadísticas */}
-      <section className={styles.section}>
-        <InacapStats 
-          subjects={subjects}
-          showProgress={true}
-          variant="default"
-        />
-      </section>
+        {/* Componente de estadísticas */}
+        <section className={styles.section}>
+          <InacapStats subjects={subjects} />
+        </section>
 
-      {/* Componente de navegación por semestres */}
-      <section className={styles.section}>
-        <SemesterNavigation
-          semesters={semesters}
-          subjects={subjects}
-          selectedSemester={selectedSemester}
-          onSemesterChange={handleSemesterChange}
-          showProgress={true}
-          layout="default"
-        />
-      </section>
+        {/* Navegación por semestres con pestañas */}
+        <section className={styles.section}>
+          <SemesterTabs
+            semesters={semesters}
+            subjects={subjects}
+            selectedSemester={selectedSemester}
+            onSemesterChange={handleSemesterChange}
+          />
+        </section>
 
-      {/* Componente de grid de materias */}
-      <section className={styles.section}>
-        <SubjectsGrid
-          subjects={filteredSubjects}
-          categories={categories}
-          statusConfig={statusConfig}
-          layout="default"
-        />
-      </section>
+        {/* Componente de grid de materias */}
+        <section className={styles.section}>
+          <SubjectsGrid
+            subjects={filteredSubjects}
+            categories={categories}
+            statusConfig={statusConfig}
+            layout="default"
+          />
+        </section>
 
-      {/* Sección del calendario */}
-      <section className={styles.section}>
-        <h2 className={styles.title}>Calendario 2025</h2>
-        <div className={styles.calendarPlaceholder}>
-          <Calendar eventos={calendar25} />
-        </div>
-      </section>
+        {/* Sección del calendario */}
+        <section className={styles.section}>
+          <h2 className={styles.title}>Calendario 2025</h2>
+          <div className={styles.calendarPlaceholder}>
+            <Calendar eventos={calendar25} />
+          </div>
+        </section>
+      </div>
     </div>
   );
 };

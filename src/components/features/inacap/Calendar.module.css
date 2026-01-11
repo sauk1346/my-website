@@ -3,11 +3,11 @@
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
-  padding: 1rem;
+  padding: var(--spacing-md);
   font-family: var(--font-sans);
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.5rem;
+  gap: var(--spacing-lg);
 }
 
 /* Layout lado a lado para pantallas grandes */
@@ -20,7 +20,7 @@
 
 .calendario {
   background: var(--background);
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   box-shadow: var(--shadow-lg);
   border: 1px solid var(--border-color);
   overflow: hidden;
@@ -32,7 +32,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem;
+  padding: var(--spacing-lg);
   background: linear-gradient(135deg, var(--primary), var(--accent));
   color: white;
   position: relative;
@@ -98,7 +98,7 @@
 }
 
 .calendarioDayOfWeek {
-  padding: 1rem 0.5rem;
+  padding: var(--spacing-md) var(--spacing-sm);
   text-align: center;
   font-weight: 600;
   font-size: 0.875rem;
@@ -118,7 +118,7 @@
 .calendarioDay {
   aspect-ratio: 1;
   background: var(--background);
-  padding: 0.75rem;
+  padding: var(--spacing-sm);
   cursor: pointer;
   transition: all 0.2s ease;
   position: relative;
@@ -139,7 +139,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 0.5rem;
+  margin-bottom: var(--spacing-sm);
   font-weight: 600;
 }
 
@@ -205,8 +205,8 @@
 .calendarioEvent {
   background: linear-gradient(135deg, var(--primary), var(--accent));
   color: white;
-  padding: 0.25rem 0.5rem;
-  border-radius: 4px;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-sm);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -242,12 +242,12 @@
 /* Panel de detalles del día - TAMAÑO FIJO */
 .dayDetails {
   background: var(--background);
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   box-shadow: var(--shadow-lg);
   border: 1px solid var(--border-color);
-  padding: 1.5rem;
+  padding: var(--spacing-lg);
   position: sticky;
-  top: 1rem;
+  top: var(--spacing-md);
   /* CLAVE: Altura fija para evitar cambio de layout */
   height: fit-content;
   min-height: 400px;
@@ -265,8 +265,8 @@
 .dayDetailsTitle {
   font-size: 1.25rem;
   font-weight: 700;
-  margin: 0 0 1rem 0;
-  padding-bottom: 1rem;
+  margin: 0 0 var(--spacing-md) 0;
+  padding-bottom: var(--spacing-md);
   border-bottom: 2px solid var(--border-color);
   color: var(--foreground);
   display: flex;
@@ -297,13 +297,13 @@
 .eventsList {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: var(--spacing-md);
 }
 
 .eventItem {
   background: var(--card-bg);
-  border-radius: 8px;
-  padding: 1rem;
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
   border-left: 4px solid var(--primary);
   transition: all 0.2s ease;
   position: relative;
@@ -330,15 +330,15 @@
 .eventItemHeader {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 0.5rem;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
 }
 
 .eventItemTime {
   background: var(--primary);
   color: white;
-  padding: 0.25rem 0.5rem;
-  border-radius: 4px;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-sm);
   font-weight: 600;
   font-size: 0.75rem;
   min-width: fit-content;
@@ -354,18 +354,18 @@
   color: var(--secondary);
   font-size: 0.875rem;
   line-height: 1.5;
-  margin-top: 0.5rem;
+  margin-top: var(--spacing-sm);
 }
 
 .noEvents {
   text-align: center;
   color: var(--secondary);
   font-style: italic;
-  padding: 2rem;
+  padding: var(--spacing-xl);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  gap: var(--spacing-md);
 }
 
 .noEvents::before {
@@ -402,7 +402,7 @@
   max-width: 500px;
   max-height: 80vh;
   background: var(--background);
-  border-radius: 16px;
+  border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-lg);
   border: 1px solid var(--border-color);
@@ -423,7 +423,7 @@
 .modalContent .dayDetails {
   display: block;
   margin: 0;
-  padding: 1.5rem;
+  padding: var(--spacing-lg);
   box-shadow: none;
   background: transparent;
   border: none;
@@ -436,8 +436,8 @@
 
 .modalCloseButton {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
+  top: var(--spacing-md);
+  right: var(--spacing-md);
   background: var(--card-bg);
   border: none;
   font-size: 1.5rem;
@@ -462,33 +462,33 @@
 /* Responsive */
 @media (max-width: 768px) {
   .calendarioContainer {
-    padding: 0.5rem;
+    padding: var(--spacing-sm);
   }
-  
+
   .calendarioHeader {
-    padding: 1rem;
+    padding: var(--spacing-md);
   }
-  
+
   .calendarioTitle {
     font-size: 1.25rem;
   }
-  
+
   .calendarioNavButton {
     width: 36px;
     height: 36px;
     font-size: 1rem;
   }
-  
+
   .calendarioDayOfWeek {
-    padding: 0.5rem;
+    padding: var(--spacing-sm);
     font-size: 0.75rem;
   }
-  
+
   .calendarioDay {
     min-height: 80px;
-    padding: 0.5rem;
+    padding: var(--spacing-sm);
   }
-  
+
   .calendarioEvent {
     font-size: 0.7rem;
     padding: 0.2rem 0.4rem;
@@ -498,22 +498,22 @@
 @media (max-width: 480px) {
   .calendarioDay {
     min-height: 60px;
-    padding: 0.25rem;
+    padding: var(--spacing-xs);
   }
-  
+
   .calendarioDayHeader {
-    margin-bottom: 0.25rem;
+    margin-bottom: var(--spacing-xs);
     font-size: 0.875rem;
   }
-  
+
   .calendarioEvent {
     font-size: 0.65rem;
     padding: 0.15rem 0.3rem;
   }
-  
+
   .modalContent {
     width: 95%;
-    margin: 1rem;
+    margin: var(--spacing-md);
   }
 }
 

@@ -172,18 +172,17 @@
   box-shadow: 0 8px 25px rgba(0, 123, 255, 0.3);
 }
 
-/* Cards con ancho fijo - no se estiran */
+/* Desktop: 3 cards visibles */
 .carouselSlide {
-  flex: 0 0 auto;
-  width: 300px;
-  max-width: 300px;
+  flex: 0 0 calc((100% - 2 * var(--spacing-md)) / 4);
+  max-width: calc((100% - 2 * var(--spacing-md)) / 4);
 }
 
-/* Tablets / monitores pequeños */
+/* Tablets: 2 cards visibles */
 @media (max-width: 1024px) {
   .carouselSlide {
-    width: 280px;
-    max-width: 280px;
+    flex: 0 0 calc((100% - var(--spacing-md)) / 3);
+    max-width: calc((100% - var(--spacing-md)) / 3);
   }
 }
 
@@ -205,9 +204,6 @@
 
   .carouselSlide {
     flex: 0 0 100%;
-    width: 100%;
-    max-width: 300px;
-    display: flex;
-    justify-content: center;
+    max-width: 100%;
   }
 }

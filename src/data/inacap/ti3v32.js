@@ -32,17 +32,17 @@ const courseData = {
             description: [
                 {
                     text: "Evaluación 01-A",
-                    href: "ti3v32/eval01a"    
+                    href: "eval01a"    
                 },
                 {
                     text: "Evaluación 01-B",
-                    href: "ti3v32/eval01b"    
+                    href: "eval01b"    
                 },
             ],
             quickGuide: [
                 {
                     text: "Guía 01",
-                    href: "ti3v32/guia11"
+                    href: "guia11"
                 }
             ]
         },
@@ -53,57 +53,57 @@ const courseData = {
             description: [
                 {
                     text: "Evaluación 02-A",
-                    href: "ti3v32/eval02a"    
+                    href: "eval02a"    
                 },
                 {
                     text: "Evaluación 02-B",
-                    href: "ti3v32/eval02b"    
+                    href: "eval02b"    
                 },
             ],
             quickGuide: [
                 {
                     text: "Operators",
-                    href: "ti3v32/guia2a"
+                    href: "guia2a"
                 },
                 {
                     text: "Regex",
-                    href: "ti3v32/guia2b"
+                    href: "guia2b"
                 },
                 {
                     text: "Guía 01",
-                    href: "ti3v32/guia21"
+                    href: "guia21"
                 },
                 {
                     text: "Guía 02",
-                    href: "ti3v32/guia22"
+                    href: "guia22"
                 },
                 {
                     text: "Guía 03",
-                    href: "ti3v32/guia23"
+                    href: "guia23"
                 },
                 {
                     text: "Guía 04",
-                    href: "ti3v32/guia24"
+                    href: "guia24"
                 },
                 {
                     text: "Guía 05",
-                    href: "ti3v32/guia25"
+                    href: "guia25"
                 },
                 {
                     text: "Guía 06",
-                    href: "ti3v32/guia26"
+                    href: "guia26"
                 },
                 {
                     text: "Guía 07",
-                    href: "ti3v32/guia27"
+                    href: "guia27"
                 },
                 {
                     text: "Guía 08",
-                    href: "ti3v32/guia28"
+                    href: "guia28"
                 },
                 {
                     text: "Guía 09",
-                    href: "ti3v32/guia29"
+                    href: "guia29"
                 }
             ]
         },
@@ -114,11 +114,11 @@ const courseData = {
             description: [
                 {
                     text: "Evaluación 03-C",
-                    href: "ti3v32/eval03c"    
+                    href: "eval03c"    
                 },
                 {
                     text: "Evaluación 03-D",
-                    href: "ti3v32/eval03d"    
+                    href: "eval03d"    
                 },
             ],
         },

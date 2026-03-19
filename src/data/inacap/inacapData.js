@@ -213,12 +213,57 @@ export const subjects = [
     },
   
     // Semestre 5 - 2026
-    { code: 'TI3V51', name: 'Arquitectura y Almacenamiento de Datos', semester: 5, year: 2026, category: 'database', status: 'pending' },
-    { code: 'TI3V52', name: 'Redes de Datos', semester: 5, year: 2026, category: 'systems', status: 'pending' },
-    { code: 'TI3V53', name: 'Arquitectura Multi Cloud', semester: 5, year: 2026, category: 'systems', status: 'pending' },
-    { code: 'FVIE02', name: 'Innovación y Emprendimiento II', semester: 5, year: 2026, category: 'business', status: 'pending' },
-    { code: 'AVGP01', name: 'Gestión de Personas', semester: 5, year: 2026, category: 'business', status: 'pending' },
-    { code: 'CVCD01', name: 'Cálculo Diferencial', semester: 5, year: 2026, category: 'math', status: 'pending' },
+    {
+      code: 'TI3V51',
+      name: 'Arquitectura y Almacenamiento de Datos',
+      semester: 5,
+      year: 2026,
+      category: 'database',
+      status: 'current',
+      href: '/inacap/ti3v51'
+    },
+    { 
+      code: 'TI3V52',
+      name: 'Redes de Datos',
+      semester: 5,
+      year: 2026,
+      category:'systems',
+      status: 'pending'
+    },
+    {
+      code: 'TI3V53',
+      name: 'Arquitectura Multi Cloud',
+      semester: 5,
+      year: 2026,
+      category: 'systems',
+      status: 'current',
+      href: '/inacap/ti3v53'
+    },
+    {
+      code: 'FVIE02',
+      name: 'Innovación y Emprendimiento II',
+      semester: 5,
+      year: 2026,
+      category: 'business',
+      status: 'pending'
+    },
+    {
+      code: 'AVGP01',
+      name: 'Gestión de Personas',
+      semester: 5,
+      year: 2026,
+      category: 'business',
+      status: 'current',
+      href: '/inacap/avgp01'
+    },
+    {
+      code: 'CVCD01',
+      name: 'Cálculo Diferencial',
+      semester: 5,
+      year: 2026,
+      category: 'math',
+      status: 'pending'
+    },
   
     // Semestre 6 - 2026
     { code: 'TI3V61', name: 'Minería de Datos', semester: 6, year: 2026, category: 'database', status: 'pending' },
@@ -266,8 +311,8 @@ export const subjects = [
     { number: 1, year: 2024, status: 'completed' },
     { number: 2, year: 2024, status: 'completed' },
     { number: 3, year: 2025, status: 'completed' },
-    { number: 4, year: 2025, status: 'current' },
-    { number: 5, year: 2026, status: 'pending' },
+    { number: 4, year: 2025, status: 'completed' },
+    { number: 5, year: 2026, status: 'current' },
     { number: 6, year: 2026, status: 'pending' },
     { number: 7, year: 2027, status: 'pending' },
     { number: 8, year: 2027, status: 'pending' }

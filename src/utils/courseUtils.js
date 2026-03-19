@@ -19,6 +19,10 @@ import ti3v43 from '@/data/inacap/ti3v43';
 import tihv43 from '@/data/inacap/tihv43';
 import tilv21 from '@/data/inacap/tilv21';
 import tilv22 from '@/data/inacap/tilv22';
+// semetre 5
+import avgp01 from '@/data/inacap/avgp01';
+import ti3v51 from '@/data/inacap/ti3v51';
+import ti3v53 from '@/data/inacap/ti3v53';
 
 const courseDataMap = {
     avan01,
@@ -41,6 +45,9 @@ const courseDataMap = {
     tihv43,
     tilv21,
     tilv22,
+    avgp01,
+    ti3v51,
+    ti3v53
 };
 
 export function getCourseData(courseId) {

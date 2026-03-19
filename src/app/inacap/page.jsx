@@ -10,7 +10,8 @@ import calendar25 from '@/data/inacap/calendar25.js';
 import styles from './Inacap.module.css';
 
 const Inacap = () => {
-  const [selectedSemester, setSelectedSemester] = useState(4);
+  const currentSemester = semesters.find(s => s.status === 'current')?.number ?? semesters[0].number;
+  const [selectedSemester, setSelectedSemester] = useState(currentSemester);
 
   // Filtrado de materias (solo por semestre)
   const filteredSubjects = subjects.filter(subject => {

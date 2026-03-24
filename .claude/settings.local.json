@@ -18,7 +18,9 @@
       "Bash(tree:*)",
       "Bash(npm install:*)",
       "Bash(npm run build:*)",
-      "Bash(tr:*)"
+      "Bash(tr:*)",
+      "Bash(npm audit:*)",
+      "Bash(npm uninstall:*)"
     ],
     "deny": [],
     "ask": []

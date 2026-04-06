@@ -65,8 +65,8 @@ const courseData = {
             date: 'Lun 09, Mar 2026', 
             description: [
                 {
-                    text: 'no asistí',
-                    strikethrough: true
+                    text: 'Unidad 1: Principios de la Gestión Estratégica de Personas',
+                    href: 'docs/Introduccion01.pdf'
                 }
             ]
         },
@@ -76,9 +76,14 @@ const courseData = {
             date: 'Jue 12, Mar 2026', 
             description: [
                 {
-                    text: 'no asistí',
-                    strikethrough: true
+                    text: 'Caso-Tributa.pdf',
+                    href: 'docs/Caso-Tributa.pdf'
+                },
+                {
+                    text: 'Resolución Preguntas',
+                    href: 'clase02'
                 }
+
             ]
         },
         { 
@@ -87,8 +92,12 @@ const courseData = {
             date: 'Lun 16, Mar 2026', 
             description: [
                 {
-                    text: 'no asistí',
-                    strikethrough: true
+                    text: 'Caso-NestléChile.pdf',
+                    href: 'docs/Caso-NestléChile.pdf'
+                },
+                {
+                    text: 'Resolución Preguntas',
+                    href: 'clase03'
                 }
             ]
         },
@@ -98,11 +107,81 @@ const courseData = {
             date: 'Jue 19, Mar 2026', 
             description: [
                 {
-                    text: 'no asistí',
+                    text: 'plan-estrategico-RRHH.pdf',
+                    href: 'docs/plan-estrategico-RRHH.pdf'
+                }
+            ]
+        },
+        { 
+            week: '03', 
+            class: '05', 
+            date: 'Lun 23, Mar 2026', 
+            description: [
+                {
+                    text: 'Instrucciones Actividad 05',
+                    href: 'docs/Instrucciones-Actividad05.pdf'
+                    
+                }
+            ]
+        },
+        { 
+            week: '03', 
+            class: '06', 
+            date: 'Jue 26, Mar 2026', 
+            description: [
+                {
+                    text: 'Consultas Actividades Aula Virtual',
+                }
+            ]
+        },
+        { 
+            week: '04', 
+            class: '07', 
+            date: 'Lun 30, Mar 2026', 
+            description: [
+                {
+                    text: 'Unidad 2: Principios de la Gestión de Desempeño',
+                    href: 'docs/Introduccion02.pdf'
+                },
+                {
+                    text: 'Instrucciones Actividad 07',
+                    href: 'docs/Instrucciones-Actividad07.pdf'
+                }
+            ]
+        },
+        { 
+            week: '04', 
+            class: '08', 
+            date: 'Jue 02, Abr 2026', 
+            description: [
+                {
+                    text: 'Suspensión clases: Semana Santa',
                     strikethrough: true
                 }
             ]
         },
+        { 
+            week: '05', 
+            class: '08', 
+            date: 'Lun 06, Abr 2026', 
+            description: [
+                {
+                    text: '',
+                }
+            ]
+        },
+        { 
+            week: '05', 
+            class: '09', 
+            date: 'Jue 09, Abr 2026', 
+            description: [
+                {
+                    text: '',
+                }
+            ]
+        },
+
+
     ],
     lectureData: [
         { 
@@ -123,6 +202,28 @@ const courseData = {
             description: [
                 {
                     text: 'Elementos clave en la definición de roles y la cultura organizacional',
+                    href: ''
+                }
+            ]
+        },
+        { 
+            week: '03', 
+            lecture: '03', 
+            date: 'Sáb 28, Mar 2026', 
+            description: [
+                {
+                    text: 'Análisis de una problemática o dilema sobre los fundamentos de la gestión estratégica de personas',
+                    href: ''
+                }
+            ]
+        },
+        { 
+            week: '04', 
+            lecture: '04', 
+            date: 'Sáb 04, Abr 2026', 
+            description: [
+                {
+                    text: 'Gestión del desempeño, estrategia y contribución a la mejora continua',
                     href: ''
                 }
             ]

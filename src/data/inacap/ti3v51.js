@@ -23,37 +23,37 @@ const courseData = {
     evaluationsData: [
         { 
             evaluationNumber: 1,
-            date: '',
-            weighting: '', 
+            date: 'Jue 02, Abr 2026',
+            weighting: '15%', 
             description: {
-                text: '',
-                href: ''
+                text: 'Informe 01',
+                href: 'docs/informe01.pdf'
             }
         },
         { 
             evaluationNumber: 2,
             date: '',
-            weighting: '', 
+            weighting: '35%', 
             description: {
-                text: '',
+                text: 'Informe 02',
                 href: ''
             }
         },
         { 
             evaluationNumber: 3,
             date: '',
-            weighting: '', 
+            weighting: '35%', 
             description: {
-                text: '',
+                text: 'Informe 03',
                 href: ''
             }
         },
         { 
             evaluationNumber: 4,
             date: '',
-            weighting: '', 
+            weighting: '15%', 
             description: {
-                text: '',
+                text: 'Promedio Controles',
                 href: ''
             }
         }
@@ -65,8 +65,12 @@ const courseData = {
             date: 'Lun 09, Mar 2026', 
             description: [
                 {
-                    text: 'no asistí',
-                    strikethrough: true
+                    text: 'Introducción al DataWarehouse',
+                    href:'clase01'
+                },
+                {
+                    text: 'Datawarehouse.pdf',
+                    href: 'docs/Datawarehouse.pdf',
                 }
             ]
         },
@@ -76,8 +80,13 @@ const courseData = {
             date: 'Mié 11, Mar 2026', 
             description: [
                 {
-                    text: 'no asistí',
-                    strikethrough: true
+                    text: 'Integridad de Bases de Datos',
+                    href:'clase02'
+                    
+                },
+                {
+                    text: 'Integridad.pdf',
+                    href: 'docs/Integridad.pdf'
                 }
             ]
         },
@@ -87,8 +96,8 @@ const courseData = {
             date: 'Lun 16, Mar 2026', 
             description: [
                 {
-                    text: 'no asistí',
-                    strikethrough: true
+                    text: 'Restricciones de Integridad en SQL',
+                    href: 'clase03'
                 }
             ]
         },
@@ -96,6 +105,76 @@ const courseData = {
             week: '02', 
             class: '04', 
             date: 'Mié 18, Mar 2026', 
+            description: [
+                {
+                    text: 'Arquitectura de DW: Kimball, Inmon y ETL',
+                    href: 'clase04'
+                }
+            ]
+        },
+                { 
+            week: '03', 
+            class: '05', 
+            date: 'Lun 23, Mar 2026', 
+            description: [
+                {
+                    text: 'OLAP: Cubos de Datos, Tipos y Diseño',
+                    href: 'clase05'
+                },
+                {
+                    text: 'PPTARQ.pdf',
+                    href: 'docs/PPTARQ.pdf'
+                }
+            ]
+        },
+                { 
+            week: '03', 
+            class: '06', 
+            date: 'Mié 25, Mar 2026', 
+            description: [
+                {
+                    text: 'no asistí',
+                    strikethrough: true
+                }
+            ]
+        },
+                { 
+            week: '04', 
+            class: '07', 
+            date: 'Lun 30, Mar 2026', 
+            description: [
+                {
+                    text: 'no asistí',
+                    strikethrough: true
+                }
+            ]
+        },
+                { 
+            week: '04', 
+            class: '08', 
+            date: 'Mié 01, Abr 2026', 
+            description: [
+                {
+                    text: 'no asistí',
+                    strikethrough: true
+                }
+            ]
+        },
+                { 
+            week: '05', 
+            class: '09', 
+            date: 'Lun 06, Abr 2026', 
+            description: [
+                {
+                    text: '',
+                    href: ''
+                }
+            ]
+        },
+                { 
+            week: '05', 
+            class: '10', 
+            date: 'Mié 08, Abr 2026', 
             description: [
                 {
                     text: '',
@@ -127,7 +206,39 @@ const courseData = {
                 }
             ]
         },
-
+        { 
+            week: '03', 
+            lecture: '03', 
+            date: 'Sáb 28, Mar 2026', 
+            description: [
+                {
+                    text: 'Del dato crudo a la información útil: procesos ETL en acción',
+                    href: ''
+                }
+            ]
+        },
+        { 
+            week: '04', 
+            lecture: '04', 
+            date: 'Sáb 04, Abr 2026', 
+            description: [
+                {
+                    text: 'Automatizando la integración de datos con Pentaho',
+                    href: ''
+                }
+            ]
+        },
+        { 
+            week: '05', 
+            lecture: '05', 
+            date: 'Sáb 11, Abr 2026', 
+            description: [
+                {
+                    text: 'De la arquitectura a la acción: integración y despliegue final del almacén de dato',
+                    href: ''
+                }
+            ]
+        },
     ]
 };
 

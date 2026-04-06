@@ -1,5 +1,5 @@
 const courseData = {
-    courseCode: "TI3V51",
+    courseCode: "TI3V53",
     courseTitle: "Arquitectura Multi Cloud",
     courseDescription: "Arquitectura Multicloud es una asignatura práctica, del área formativa de Tecnologías de la Información y Ciberseguridad, dictada en modalidad presencial. Al finalizar, el estudiante será capaz de tomar decisiones de implementación de sistemas basados en diferentes nubes, diseño de soluciones con alta disponibilidad y redundancia, considerando la Resolución de Problemas, Innovación y Emprendimiento.",
     professorData: {
@@ -23,10 +23,10 @@ const courseData = {
     evaluationsData: [
         { 
             evaluationNumber: 1,
-            date: '',
-            weighting: '', 
+            date: 'Jueves 02, Abr 2026',
+            weighting: '20%', 
             description: {
-                text: '',
+                text: 'Evaluación 01',
                 href: ''
             }
         },
@@ -103,6 +103,72 @@ const courseData = {
                 }
             ]
         },
+        { 
+            week: '03', 
+            class: '05', 
+            date: 'Mié 25, Mar 2026', 
+            description: [
+                {
+                    text: '',
+                    href: ''
+                }
+            ]
+        },
+        { 
+            week: '03', 
+            class: '06', 
+            date: 'Jue 26, Mar 2026', 
+            description: [
+                {
+                    text: '',
+                    href: ''
+                }
+            ]
+        },
+        { 
+            week: '04', 
+            class: '07', 
+            date: 'Mié 01, Abr 2026', 
+            description: [
+                {
+                    text: 'Cuestionario Online Kahoot',
+                    href: ''
+                }
+            ]
+        },
+        { 
+            week: '04', 
+            class: '08', 
+            date: 'Jue 02, Abr 2026', 
+            description: [
+                {
+                    text: 'Evaluación 01',
+                    href: ''
+                }
+            ]
+        },
+        { 
+            week: '05', 
+            class: '09', 
+            date: 'Jue 19, Mar 2026', 
+            description: [
+                {
+                    text: '',
+                    href: ''
+                }
+            ]
+        },
+        { 
+            week: '05', 
+            class: '10', 
+            date: 'Jue 19, Mar 2026', 
+            description: [
+                {
+                    text: '',
+                    href: ''
+                }
+            ]
+        },
     ],
     lectureData: [
         { 
@@ -134,6 +200,39 @@ const courseData = {
             description: [
                 {
                     text: 'Aprovisionamiento seguro en la nube: estrategias y normativas',
+                    href: ''
+                }
+            ]
+        },
+        { 
+            week: '03', 
+            lecture: '03', 
+            date: 'Sáb 28, Mar 2026', 
+            description: [
+                {
+                    text: 'Fundamentos de la Arquitectura en Cloud Computing',
+                    href: ''
+                }
+            ]
+        },
+        { 
+            week: '04', 
+            lecture: '04', 
+            date: 'Sáb 04, Abr 2026', 
+            description: [
+                {
+                    text: 'Fiabilidad en entornos Cloud: Diseño para la Alta Disponibilidad',
+                    href: ''
+                }
+            ]
+        },
+        { 
+            week: '05', 
+            lecture: '05', 
+            date: 'Sáb 11, Mar 2026', 
+            description: [
+                {
+                    text: 'Diseño Estratégico de Pruebas en Cloud Computing',
                     href: ''
                 }
             ]

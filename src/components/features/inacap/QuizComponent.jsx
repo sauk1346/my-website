@@ -1,8 +1,10 @@
 'use client'
 import React, { useState, useEffect, useRef } from 'react';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import styles from './QuizComponent.module.css';
 
-export const QuizQuestion = ({ question, options, correctIndex, questionNumber }) => {
+export const QuizQuestion = ({ question, questionItems, questionSuffix, options, correctIndex, questionNumber }) => {
   const [selectedOption, setSelectedOption] = useState(null);
   const confettiCanvasRef = useRef(null);
   
@@ -77,7 +79,17 @@ export const QuizQuestion = ({ question, options, correctIndex, questionNumber }
       {/* Estructura modificada para mejorar la sangría */}
       <div className={styles.questionTitleWrapper}>
         <span className={styles.questionNumber}>{questionNumber}.</span>
-        <span className={styles.questionText}>{question}</span>
+        <div className={styles.questionText}>
+          {questionItems ? (
+            <>
+              <p>{question}</p>
+              <ol className={styles.questionList}>
+                {questionItems.map((item, i) => <li key={i}>{item}</li>)}
+              </ol>
+              {questionSuffix && <p>{questionSuffix}</p>}
+            </>
+          ) : question}
+        </div>
       </div>
       
       <div className={styles.optionsContainer}>
@@ -138,9 +150,11 @@ export const Quiz = ({ questions }) => {
   return (
     <div className={styles.quizContainer}>
       {questions.map((q, index) => (
-        <QuizQuestion 
+        <QuizQuestion
           key={index}
           question={q.question}
+          questionItems={q.questionItems}
+          questionSuffix={q.questionSuffix}
           options={q.options}
           correctIndex={q.correctIndex}
           questionNumber={index + 1}

@@ -35,7 +35,52 @@
   font-size: 0.9rem;
   color: var(--foreground, #111111);
   transition: color 0.3s ease;
-  white-space: pre-wrap; /* Preserva espacios y saltos de línea */
+}
+
+.questionText p {
+  margin: 0 0 0.5rem 0;
+}
+
+.questionText p:last-child {
+  margin-bottom: 0;
+}
+
+.questionList {
+  list-style-type: decimal;
+  margin: 0.4rem 0 0.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.questionList li {
+  display: list-item;
+  margin-bottom: 0.25rem;
+}
+
+.questionText code {
+  font-family: monospace;
+  font-size: 0.85em;
+  background-color: var(--code-bg, #f3f4f6);
+  padding: 0.1em 0.35em;
+  border-radius: 3px;
+}
+
+.questionText pre {
+  background-color: var(--code-bg, #f3f4f6);
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin: 0.5rem 0;
+}
+
+.questionText pre code {
+  background: none;
+  padding: 0;
+}
+
+.questionImage {
+  max-width: 100%;
+  border-radius: 6px;
+  margin: 0.5rem 0;
 }
 
 /* Mantener esta clase para compatibilidad, pero no se usará para el texto */

@@ -35,7 +35,21 @@
     font-size: 0.9rem;
     color: var(--foreground, #111111);
     transition: color 0.3s ease;
-    white-space: pre-wrap; /* Preserva espacios y saltos de línea */
+  }
+
+  .questionText p {
+    margin: 0 0 0.4rem 0;
+  }
+
+  .questionList {
+    list-style-type: decimal;
+    margin: 0.4rem 0 0.4rem 0;
+    padding-left: 1.5rem;
+  }
+
+  .questionList li {
+    display: list-item;
+    margin-bottom: 0.25rem;
   }
   
   /* Mantener esta clase para compatibilidad, pero no se usará para el texto */

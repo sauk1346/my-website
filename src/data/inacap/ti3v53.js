@@ -27,7 +27,7 @@ const courseData = {
             weighting: '20%', 
             description: {
                 text: 'Evaluación 01',
-                href: ''
+                href: 'eval01'
             }
         },
         { 
@@ -143,14 +143,14 @@ const courseData = {
             description: [
                 {
                     text: 'Evaluación 01',
-                    href: ''
+                    href: 'eval01'
                 }
             ]
         },
         { 
             week: '05', 
             class: '09', 
-            date: 'Jue 19, Mar 2026', 
+            date: 'Mié 08, Abr 2026', 
             description: [
                 {
                     text: '',
@@ -161,7 +161,7 @@ const courseData = {
         { 
             week: '05', 
             class: '10', 
-            date: 'Jue 19, Mar 2026', 
+            date: 'Jue 09, Abr 2026', 
             description: [
                 {
                     text: '',

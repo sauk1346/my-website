@@ -20,7 +20,8 @@
       "Bash(npm run build:*)",
       "Bash(tr:*)",
       "Bash(npm audit:*)",
-      "Bash(npm uninstall:*)"
+      "Bash(npm uninstall:*)",
+      "Bash(/dev/null git:*)"
     ],
     "deny": [],
     "ask": []

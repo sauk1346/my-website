@@ -65,8 +65,12 @@ const courseData = {
             date: 'Mié 11, Mar 2026', 
             description: [
                 {
-                    text: 'no asistí',
-                    strikethrough: true
+                    text: 'AWS: Conceptos de la nube',
+                    href: 'docs/modulo01.pdf'
+                },
+                {
+                    text: 'AWS: Economía y facturación de la nube',
+                    href: 'docs/modulo02.pdf'
                 }
             ]
         },
@@ -76,9 +80,13 @@ const courseData = {
             date: 'Jue 12, Mar 2026', 
             description: [
                 {
-                    text: 'no asistí',
-                    strikethrough: true
-                }
+                    text: 'AWS: Infraestructura global de AWS',
+                    href: 'docs/modulo03.pdf'
+                },
+                {
+                    text: 'AWS: Seguridad en la nube de AWS',
+                    href: 'docs/modulo04.pdf'
+                },
             ]
         },
         { 
@@ -87,9 +95,13 @@ const courseData = {
             date: 'Mié 18, Mar 2026', 
             description: [
                 {
-                    text: '',
-                    href: ''
-                }
+                    text: 'AWS: Redes y entrega de contenido',
+                    href: 'docs/modulo05.pdf'
+                },
+                {
+                    text: 'AWS: Cómputo',
+                    href: 'docs/modulo06.pdf'
+                },
             ]
         },
         { 
@@ -98,9 +110,13 @@ const courseData = {
             date: 'Jue 19, Mar 2026', 
             description: [
                 {
-                    text: '',
-                    href: ''
-                }
+                    text: 'AWS: Almacenamiento',
+                    href: 'docs/modulo07.pdf'
+                },
+                {
+                    text: 'AWS: Bases de datos',
+                    href: 'docs/modulo08.pdf'
+                },
             ]
         },
         { 
@@ -109,9 +125,13 @@ const courseData = {
             date: 'Mié 25, Mar 2026', 
             description: [
                 {
-                    text: '',
-                    href: ''
-                }
+                    text: 'AWS: Arquitectura en la nube',
+                    href: 'docs/modulo09.pdf'
+                },
+                {
+                    text: 'AWS: Monitoreo y escalado automático',
+                    href: 'docs/modulo10.pdf'
+                },
             ]
         },
         { 
@@ -120,7 +140,7 @@ const courseData = {
             date: 'Jue 26, Mar 2026', 
             description: [
                 {
-                    text: '',
+                    text: 'Cuestionario de práctica (1)',
                     href: ''
                 }
             ]
@@ -131,7 +151,7 @@ const courseData = {
             date: 'Mié 01, Abr 2026', 
             description: [
                 {
-                    text: 'Cuestionario Online Kahoot',
+                    text: 'Cuestionario de práctica (2)',
                     href: ''
                 }
             ]
@@ -144,7 +164,12 @@ const courseData = {
                 {
                     text: 'Evaluación 01',
                     href: 'eval01'
-                }
+                },
+                {
+                    text: 'Intrucciones Tarea Investigación (opcional)',
+                    href: 'docs/TareaKudafit.pdf'
+                },
+
             ]
         },
         { 
@@ -153,7 +178,7 @@ const courseData = {
             date: 'Mié 08, Abr 2026', 
             description: [
                 {
-                    text: '',
+                    text: 'Avance Evaluación 02',
                     href: ''
                 }
             ]
@@ -162,6 +187,28 @@ const courseData = {
             week: '05', 
             class: '10', 
             date: 'Jue 09, Abr 2026', 
+            description: [
+                {
+                    text: 'Avance Evaluación 02',
+                    href: ''
+                }
+            ]
+        },
+        { 
+            week: '06', 
+            class: '11', 
+            date: 'Mié 15, Abr 2026', 
+            description: [
+                {
+                    text: '',
+                    href: ''
+                }
+            ]
+        },
+        { 
+            week: '06', 
+            class: '12', 
+            date: 'Jue 16, Abr 2026', 
             description: [
                 {
                     text: '',

@@ -23,11 +23,11 @@ const courseData = {
     evaluationsData: [
         { 
             evaluationNumber: 1,
-            date: 'Lun 23, Mar 2026',
+            date: 'Dom 29, Mar 2026',
             weighting: '20%', 
             description: {
-                text: '',
-                href: ''
+                text: 'Informe: Caso Nestlé Chile',
+                href: 'docs/informe01.pdf'
             }
         },
         { 
@@ -76,8 +76,8 @@ const courseData = {
             date: 'Jue 12, Mar 2026', 
             description: [
                 {
-                    text: 'Caso-Tributa.pdf',
-                    href: 'docs/Caso-Tributa.pdf'
+                    text: 'Material didáctico: Caso TransAlim Ltda',
+                    href: 'docs/Caso-TransAlimLtda.pdf'
                 },
                 {
                     text: 'Resolución Preguntas',
@@ -92,7 +92,7 @@ const courseData = {
             date: 'Lun 16, Mar 2026', 
             description: [
                 {
-                    text: 'Caso-NestléChile.pdf',
+                    text: 'Material didáctico: Caso Nestlé Chile.pdf',
                     href: 'docs/Caso-NestléChile.pdf'
                 },
                 {
@@ -162,8 +162,34 @@ const courseData = {
         },
         { 
             week: '05', 
-            class: '08', 
+            class: '09', 
             date: 'Lun 06, Abr 2026', 
+            description: [
+                {
+                    text: 'Material didáctico: Caso Servilog SA',
+                    href: 'docs/Caso-ServilogSA.pdf'
+                }
+            ]
+        },
+        { 
+            week: '05', 
+            class: '10', 
+            date: 'Jue 09, Abr 2026', 
+            description: [
+                {
+                    text: 'Instrucciones Actividad 10',
+                    href: 'docs/Instrucciones-Actividad10.pdf'
+                },
+                {
+                    text: 'Datos-Caso-Logisur.xlsx',
+                    href: 'docs/Datos-Caso-Logisur.xlsx'
+                },
+            ]
+        },
+        { 
+            week: '06', 
+            class: '11', 
+            date: 'Lun 13, Abr 2026', 
             description: [
                 {
                     text: '',
@@ -171,9 +197,9 @@ const courseData = {
             ]
         },
         { 
-            week: '05', 
-            class: '09', 
-            date: 'Jue 09, Abr 2026', 
+            week: '06', 
+            class: '12', 
+            date: 'Jue 16, Abr 2026', 
             description: [
                 {
                     text: '',

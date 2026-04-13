@@ -112,7 +112,7 @@ const courseData = {
                 }
             ]
         },
-                { 
+        { 
             week: '03', 
             class: '05', 
             date: 'Lun 23, Mar 2026', 
@@ -127,7 +127,7 @@ const courseData = {
                 }
             ]
         },
-                { 
+        { 
             week: '03', 
             class: '06', 
             date: 'Mié 25, Mar 2026', 
@@ -138,7 +138,7 @@ const courseData = {
                 }
             ]
         },
-                { 
+        { 
             week: '04', 
             class: '07', 
             date: 'Lun 30, Mar 2026', 
@@ -149,7 +149,7 @@ const courseData = {
                 }
             ]
         },
-                { 
+        { 
             week: '04', 
             class: '08', 
             date: 'Mié 01, Abr 2026', 
@@ -160,10 +160,32 @@ const courseData = {
                 }
             ]
         },
-                { 
+        { 
             week: '05', 
             class: '09', 
             date: 'Lun 06, Abr 2026', 
+            description: [
+                {
+                    text: 'no asistí',
+                    strikethrough: true
+                }
+            ]
+        },
+        { 
+            week: '05', 
+            class: '10', 
+            date: 'Mié 08, Abr 2026', 
+            description: [
+                {
+                    text: 'no asistí',
+                    strikethrough: true
+                }
+            ]
+        },
+        { 
+            week: '06', 
+            class: '11', 
+            date: 'Lun 13, Abr 2026', 
             description: [
                 {
                     text: '',
@@ -171,10 +193,10 @@ const courseData = {
                 }
             ]
         },
-                { 
-            week: '05', 
-            class: '10', 
-            date: 'Mié 08, Abr 2026', 
+        { 
+            week: '06', 
+            class: '12', 
+            date: 'Mié 15, Abr 2026', 
             description: [
                 {
                     text: '',

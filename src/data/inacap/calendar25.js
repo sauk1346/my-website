@@ -381,7 +381,7 @@ export const calendar25 = [
 // ----- [AVGP01]Gestión de Personas -----
   {
     id: 64,
-    fecha: "2026-3-9",
+    fecha: "2026-3-29",
     titulo: "[AVGP01] Evaluación 01",
     description: "Gestión de Personas"
   },

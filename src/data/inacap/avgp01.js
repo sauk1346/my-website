@@ -32,11 +32,11 @@ const courseData = {
         },
         { 
             evaluationNumber: 2,
-            date: 'Lun 13, Abr 2026',
+            date: 'Lun 20, Abr 2026',
             weighting: '40%', 
             description: {
-                text: '',
-                href: ''
+                text: 'Presentación: Caso FinaChile',
+                href: 'docs/Presentacion-Eval02.pdf'
             }
         },
         { 
@@ -52,10 +52,22 @@ const courseData = {
             evaluationNumber: 4,
             date: 'Jue 07, May 2026',
             weighting: '10%', 
-            description: {
-                text: '',
-                href: ''
-            }
+            description: [
+                {
+                    text: 'Controles',
+                    href: 'controles'
+                },
+                {
+                    text: 'Actividad 05'
+                },
+                {
+                    text: 'Actividad 07'
+                },
+                {
+                    text: 'Actividad 10'
+                },
+            ]
+             
         }
     ],
     classData: [
@@ -76,7 +88,7 @@ const courseData = {
             date: 'Jue 12, Mar 2026', 
             description: [
                 {
-                    text: 'Material didáctico: Caso TransAlim Ltda',
+                    text: 'Caso: TransAlim Ltda',
                     href: 'docs/Caso-TransAlimLtda.pdf'
                 },
                 {
@@ -92,7 +104,7 @@ const courseData = {
             date: 'Lun 16, Mar 2026', 
             description: [
                 {
-                    text: 'Material didáctico: Caso Nestlé Chile.pdf',
+                    text: 'Caso: Nestlé Chile',
                     href: 'docs/Caso-NestléChile.pdf'
                 },
                 {
@@ -166,7 +178,7 @@ const courseData = {
             date: 'Lun 06, Abr 2026', 
             description: [
                 {
-                    text: 'Material didáctico: Caso Servilog SA',
+                    text: 'Caso: Servilog SA',
                     href: 'docs/Caso-ServilogSA.pdf'
                 }
             ]
@@ -192,8 +204,17 @@ const courseData = {
             date: 'Lun 13, Abr 2026', 
             description: [
                 {
-                    text: '',
-                }
+                    text: 'Instrucciones Evaluación 02',
+                    href: 'docs/Instrucciones-Eval02.pdf'
+                },
+                {
+                    text: 'Rúbrica Evaluación 02',
+                    href: 'docs/Rubrica-Eval02.pdf'
+                },
+                {
+                    text: 'Caso: FinaChile SA',
+                    href: 'docs/Caso-FinaChileSA.pdf'
+                },
             ]
         },
         { 
@@ -202,7 +223,31 @@ const courseData = {
             date: 'Jue 16, Abr 2026', 
             description: [
                 {
-                    text: '',
+                    text: 'No asistí',
+                    strikethrough: true
+                }
+            ]
+        },
+        { 
+            week: '07', 
+            class: '13', 
+            date: 'Lun 20, Abr 2026', 
+            description: [
+                {
+                    text: 'Evaluación 02: Disertación (1)',
+                    
+                }
+            ]
+        },
+        { 
+            week: '07', 
+            class: '14', 
+            date: 'Jue 23, Abr 2026', 
+            description: [
+                {
+                    text: 'Evaluación 02: Disertación (2)',
+                    href: 'docs/Presentacion-Eval02.pdf'
+                    
                 }
             ]
         },
@@ -238,19 +283,96 @@ const courseData = {
             date: 'Sáb 28, Mar 2026', 
             description: [
                 {
-                    text: 'Análisis de una problemática o dilema sobre los fundamentos de la gestión estratégica de personas',
+                    text: 'Tendencias actuales en Gestión de personas',
                     href: ''
                 }
             ]
         },
         { 
-            week: '04', 
+            week: '03', 
             lecture: '04', 
+            date: 'Sáb 28, Mar 2026', 
+            description: [
+                {
+                    text: 'Gestión estratégica y modelo por competencia',
+                    href: 'docs/lectura04.pdf'
+                }
+            ]
+        },
+        { 
+            week: '03', 
+            lecture: '05', 
+            date: 'Sáb 28, Mar 2026', 
+            description: [
+                {
+                    text: 'Síntesis de la Unidad 01',
+                    href: 'docs/sintesis-unidad01.pdf'
+                }
+            ]
+        },
+        { 
+            week: '04', 
+            lecture: '06', 
+            date: 'Sáb 04, Abr 2026', 
+            description: [
+                {
+                    text: 'Gestión del desempeño por competencia',
+                    href: 'docs/lectura06.pdf'
+                },
+            ]
+        },
+        { 
+            week: '04', 
+            lecture: '07', 
             date: 'Sáb 04, Abr 2026', 
             description: [
                 {
                     text: 'Gestión del desempeño, estrategia y contribución a la mejora continua',
                     href: ''
+                }
+            ]
+        },
+        { 
+            week: '05', 
+            lecture: '08', 
+            date: 'Sáb 11, Abr 2026', 
+            description: [
+                {
+                    text: 'Evaluación del desempeño por competencias, impacto en el desarrollo de los empleados',
+                    href: ''
+                }
+            ]
+        },
+        { 
+            week: '06', 
+            lecture: '09', 
+            date: 'Sáb 18, Abr 2026', 
+            description: [
+                {
+                    text: 'Desarrollo profesional y gestión por competencias',
+                    href: ''
+                }
+            ]
+        },
+        { 
+            week: '07', 
+            lecture: '10', 
+            date: 'Sáb 25, Abr 2026', 
+            description: [
+                {
+                    text: 'Tendencias actuales en la gestión del desempeño, evaluaciones continuas, feedback 360°',
+                    href: ''
+                }
+            ]
+        },
+        { 
+            week: '07', 
+            lecture: '11', 
+            date: 'Sáb 25, Abr 2026', 
+            description: [
+                {
+                    text: 'Síntesis de la Unidad 02',
+                    href: 'docs/lectura11.pdf'
                 }
             ]
         },

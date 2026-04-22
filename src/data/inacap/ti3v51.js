@@ -23,7 +23,7 @@ const courseData = {
     evaluationsData: [
         { 
             evaluationNumber: 1,
-            date: 'Jue 02, Abr 2026',
+            date: 'Mié 01, Abr 2026',
             weighting: '15%', 
             description: {
                 text: 'Informe 01',
@@ -32,7 +32,7 @@ const courseData = {
         },
         { 
             evaluationNumber: 2,
-            date: '',
+            date: 'Mié 22, Abr',
             weighting: '35%', 
             description: {
                 text: 'Informe 02',
@@ -188,7 +188,7 @@ const courseData = {
             date: 'Lun 13, Abr 2026', 
             description: [
                 {
-                    text: '',
+                    text: 'Avance Evaluación 02 (script)',
                     href: ''
                 }
             ]
@@ -199,8 +199,34 @@ const courseData = {
             date: 'Mié 15, Abr 2026', 
             description: [
                 {
-                    text: '',
+                    text: 'Avance Evaluación 02 (script)',
                     href: ''
+                }
+            ]
+        },
+        { 
+            week: '07', 
+            class: '13', 
+            date: 'Lun 20, Abr 2026', 
+            description: [
+                {
+                    text: 'Avance Evaluación 02 (script)',
+                    href: ''
+                },
+                {
+                    text: 'Introducción Power BI',
+                    href: ''
+                },
+            ]
+        },
+        { 
+            week: '07', 
+            class: '14', 
+            date: 'Mié 22, Abr 2026', 
+            description: [
+                {
+                    text: 'No asistí',
+                    strikethrough: true
                 }
             ]
         },
@@ -209,7 +235,7 @@ const courseData = {
         { 
             week: '01', 
             lecture: '01', 
-            date: 'Sáb 14, Mar 2026', 
+            date: 'Vie 13, Mar 2026', 
             description: [
                 {
                     text: 'Arquitecturas que transforman datos en valor',
@@ -220,7 +246,7 @@ const courseData = {
         { 
             week: '02', 
             lecture: '02', 
-            date: 'Sáb 21, Mar 2026', 
+            date: 'Vie 20, Mar 2026', 
             description: [
                 {
                     text: 'Arquitecturas en acción: integración, nube y automatización',
@@ -231,7 +257,7 @@ const courseData = {
         { 
             week: '03', 
             lecture: '03', 
-            date: 'Sáb 28, Mar 2026', 
+            date: 'Vie 27, Mar 2026', 
             description: [
                 {
                     text: 'Del dato crudo a la información útil: procesos ETL en acción',
@@ -242,7 +268,7 @@ const courseData = {
         { 
             week: '04', 
             lecture: '04', 
-            date: 'Sáb 04, Abr 2026', 
+            date: 'Vie 03, Abr 2026', 
             description: [
                 {
                     text: 'Automatizando la integración de datos con Pentaho',
@@ -253,12 +279,34 @@ const courseData = {
         { 
             week: '05', 
             lecture: '05', 
-            date: 'Sáb 11, Abr 2026', 
+            date: 'Vie 10, Abr 2026', 
             description: [
                 {
                     text: 'De la arquitectura a la acción: integración y despliegue final del almacén de dato',
                     href: ''
                 }
+            ]
+        },
+        { 
+            week: '06', 
+            lecture: '06', 
+            date: 'Vie 17, Abr 2026', 
+            description: [
+                {
+                    text: 'TOGAF: marco estratégico para el desarrollo de planes de implementación de datos',
+                    href: ''
+                },
+            ]
+        },
+        { 
+            week: '07', 
+            lecture: '07', 
+            date: 'Vie 24, Abr 2026', 
+            description: [
+                {
+                    text: 'DMBOK y TOGAF: estándares para la gestión y arquitectura de datos',
+                    href: ''
+                },
             ]
         },
     ]

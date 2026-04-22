@@ -23,37 +23,55 @@ const courseData = {
     evaluationsData: [
         { 
             evaluationNumber: 1,
-            date: 'Jueves 02, Abr 2026',
+            date: 'Jue 02, Abr 2026',
             weighting: '20%', 
-            description: {
-                text: 'Evaluación 01',
-                href: 'eval01'
-            }
+            description: [
+                {
+                    text: 'Evaluación 01',
+                    href: 'eval01'
+                },
+                {
+                    text: 'Tarea Kudafit (opcional)',
+                    href: 'docs/Informe-Kudafit.pdf'
+                },
+            ]                
         },
         { 
             evaluationNumber: 2,
-            date: '',
+            date: 'Mar 14, Abr 2026',
             weighting: '', 
-            description: {
-                text: '',
-                href: ''
-            }
+            description: [
+                {
+                    text: 'Actividad 01',
+                    href: 'docs/Actividad01.pdf'
+                },
+                {
+                    text: 'Actividad 02',
+                    href: 'docs/Actividad02.pdf'
+                },
+            ]
         },
         { 
             evaluationNumber: 3,
-            date: '',
+            date: 'Jue 23, Abr 2026',
             weighting: '', 
-            description: {
-                text: '',
-                href: ''
-            }
+            description: [
+                {
+                    text: 'Actividad 03',
+                    href: ''
+                },
+                {
+                    text: 'Actividad 04',
+                    href: ''
+                },
+            ]
         },
         { 
             evaluationNumber: 4,
             date: '',
             weighting: '', 
             description: {
-                text: '',
+                text: 'Controles',
                 href: ''
             }
         }
@@ -166,7 +184,7 @@ const courseData = {
                     href: 'eval01'
                 },
                 {
-                    text: 'Intrucciones Tarea Investigación (opcional)',
+                    text: 'Instrucciones Tarea Investigación (opcional)',
                     href: 'docs/TareaKudafit.pdf'
                 },
 
@@ -178,7 +196,7 @@ const courseData = {
             date: 'Mié 08, Abr 2026', 
             description: [
                 {
-                    text: 'Avance Evaluación 02',
+                    text: 'Avance Evaluación 02 (Actividad 01)',
                     href: ''
                 }
             ]
@@ -189,7 +207,7 @@ const courseData = {
             date: 'Jue 09, Abr 2026', 
             description: [
                 {
-                    text: 'Avance Evaluación 02',
+                    text: 'Avance Evaluación 02 (Actividad 02)',
                     href: ''
                 }
             ]
@@ -200,8 +218,8 @@ const courseData = {
             date: 'Mié 15, Abr 2026', 
             description: [
                 {
-                    text: '',
-                    href: ''
+                    text: 'Instrucciones Evaluación 03 (Actividad 03)',
+                    href: 'docs/Instrucciones-Actividad03.pdf'
                 }
             ]
         },
@@ -211,8 +229,8 @@ const courseData = {
             date: 'Jue 16, Abr 2026', 
             description: [
                 {
-                    text: '',
-                    href: ''
+                    text: 'Suspensión Clases: Comunicado profesor',
+                    strikethrough: true
                 }
             ]
         },
@@ -221,18 +239,7 @@ const courseData = {
         { 
             week: '01', 
             lecture: '01', 
-            date: 'Sáb 14, Mar 2026', 
-            description: [
-                {
-                    text: 'Fundamentos de Cloud Computing',
-                    href: ''
-                }
-            ]
-        },
-        { 
-            week: '01', 
-            lecture: '02', 
-            date: 'Sáb 14, Mar 2026', 
+            date: 'Dom 15, Mar 2026', 
             description: [
                 {
                     text: 'Fundamentos de Cloud Computing: La Nube actual',
@@ -243,7 +250,7 @@ const courseData = {
         { 
             week: '02', 
             lecture: '02', 
-            date: 'Sáb 21, Mar 2026', 
+            date: 'Dom 22, Mar 2026', 
             description: [
                 {
                     text: 'Aprovisionamiento seguro en la nube: estrategias y normativas',
@@ -254,7 +261,7 @@ const courseData = {
         { 
             week: '03', 
             lecture: '03', 
-            date: 'Sáb 28, Mar 2026', 
+            date: 'Dom 29, Mar 2026', 
             description: [
                 {
                     text: 'Fundamentos de la Arquitectura en Cloud Computing',
@@ -265,7 +272,7 @@ const courseData = {
         { 
             week: '04', 
             lecture: '04', 
-            date: 'Sáb 04, Abr 2026', 
+            date: 'Dom 05, Abr 2026', 
             description: [
                 {
                     text: 'Fiabilidad en entornos Cloud: Diseño para la Alta Disponibilidad',
@@ -276,10 +283,32 @@ const courseData = {
         { 
             week: '05', 
             lecture: '05', 
-            date: 'Sáb 11, Mar 2026', 
+            date: 'Dom 12, Abr 2026', 
             description: [
                 {
                     text: 'Diseño Estratégico de Pruebas en Cloud Computing',
+                    href: ''
+                }
+            ]
+        },
+        { 
+            week: '06', 
+            lecture: '06', 
+            date: 'Dom 19, Abr 2026', 
+            description: [
+                {
+                    text: 'Protegiendo nuestros datos: protocolos esenciales en la nube',
+                    href: ''
+                }
+            ]
+        },
+        { 
+            week: '07', 
+            lecture: '07', 
+            date: 'Dom 26, Abr 2026', 
+            description: [
+                {
+                    text: 'Asegurando el acceso: protocolos de protección de cuentas',
                     href: ''
                 }
             ]

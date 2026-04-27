@@ -44,7 +44,7 @@ const courseData = {
             date: 'Lun 04, May 2026',
             weighting: '30%', 
             description: {
-                text: '',
+                text: 'Prueba Escrita',
                 href: ''
             }
         },
@@ -251,6 +251,30 @@ const courseData = {
                 }
             ]
         },
+        { 
+            week: '08', 
+            class: '15', 
+            date: 'Lun 27, Abr 2026', 
+            description: [
+                {
+                    text: 'Unidad 3: Relaciones laborales y legislación chilena',
+                    href: 'docs/lectura12.pdf'
+                    
+                }
+            ]
+        },
+        { 
+            week: '08', 
+            class: '16', 
+            date: 'Jue 30, Abr 2026', 
+            description: [
+                {
+                    text: '',
+                    href: ''
+                    
+                }
+            ]
+        },
 
 
     ],
@@ -262,7 +286,7 @@ const courseData = {
             description: [
                 {
                     text: 'Fundamentos de la gestión del talento en las organizaciones',
-                    href: ''
+                    href: 'lectura01'
                 }
             ]
         },
@@ -273,7 +297,7 @@ const courseData = {
             description: [
                 {
                     text: 'Elementos clave en la definición de roles y la cultura organizacional',
-                    href: ''
+                    href: 'lectura02'
                 }
             ]
         },
@@ -373,6 +397,28 @@ const courseData = {
                 {
                     text: 'Síntesis de la Unidad 02',
                     href: 'docs/lectura11.pdf'
+                }
+            ]
+        },
+        { 
+            week: '08', 
+            lecture: '12', 
+            date: 'Sáb 02, May 2026', 
+            description: [
+                {
+                    text: 'Relaciones labores y legislación chilena',
+                    href: 'docs/lectura12.pdf'
+                }
+            ]
+        },
+        { 
+            week: '08', 
+            lecture: '13', 
+            date: 'Sáb 02, May 2026', 
+            description: [
+                {
+                    text: 'Mercado laboral chileno',
+                    href: ''
                 }
             ]
         },

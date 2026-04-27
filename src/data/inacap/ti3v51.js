@@ -34,10 +34,16 @@ const courseData = {
             evaluationNumber: 2,
             date: 'Mié 22, Abr',
             weighting: '35%', 
-            description: {
-                text: 'Informe 02',
-                href: ''
-            }
+            description: [
+                {
+                    text: 'Informe 02',
+                    href: 'docs/informe02.pdf'
+                },
+                {
+                    text: 'script-segmentado.rar',
+                    href: 'script/script-segmentado.rar'
+                },
+            ]
         },
         { 
             evaluationNumber: 3,
@@ -53,8 +59,8 @@ const courseData = {
             date: '',
             weighting: '15%', 
             description: {
-                text: 'Promedio Controles',
-                href: ''
+                text: 'Controles',
+                href: 'controles'
             }
         }
     ],
@@ -230,6 +236,28 @@ const courseData = {
                 }
             ]
         },
+        { 
+            week: '08', 
+            class: '15', 
+            date: 'Lun 27, Abr 2026', 
+            description: [
+                {
+                    text: '',
+                    href: ''
+                }
+            ]
+        },
+        { 
+            week: '08', 
+            class: '16', 
+            date: 'Mié 29, Abr 2026', 
+            description: [
+                {
+                    text: '',
+                    href: ''
+                }
+            ]
+        },
     ],
     lectureData: [
         { 
@@ -238,25 +266,36 @@ const courseData = {
             date: 'Vie 13, Mar 2026', 
             description: [
                 {
+                    text: 'Fundamentos de Almacenamiento',
+                    href: 'docs/lectura01.pdf'
+                }
+            ]
+        },
+        { 
+            week: '01', 
+            lecture: '02', 
+            date: 'Vie 13, Mar 2026', 
+            description: [
+                {
                     text: 'Arquitecturas que transforman datos en valor',
-                    href: ''
+                    href: 'lectura02'
                 }
             ]
         },
         { 
             week: '02', 
-            lecture: '02', 
+            lecture: '03', 
             date: 'Vie 20, Mar 2026', 
             description: [
                 {
                     text: 'Arquitecturas en acción: integración, nube y automatización',
-                    href: ''
+                    href: 'lectura03'
                 }
             ]
         },
         { 
             week: '03', 
-            lecture: '03', 
+            lecture: '04', 
             date: 'Vie 27, Mar 2026', 
             description: [
                 {
@@ -267,7 +306,7 @@ const courseData = {
         },
         { 
             week: '04', 
-            lecture: '04', 
+            lecture: '05', 
             date: 'Vie 03, Abr 2026', 
             description: [
                 {
@@ -278,7 +317,7 @@ const courseData = {
         },
         { 
             week: '05', 
-            lecture: '05', 
+            lecture: '06', 
             date: 'Vie 10, Abr 2026', 
             description: [
                 {
@@ -289,7 +328,7 @@ const courseData = {
         },
         { 
             week: '06', 
-            lecture: '06', 
+            lecture: '07', 
             date: 'Vie 17, Abr 2026', 
             description: [
                 {
@@ -300,7 +339,7 @@ const courseData = {
         },
         { 
             week: '07', 
-            lecture: '07', 
+            lecture: '08', 
             date: 'Vie 24, Abr 2026', 
             description: [
                 {

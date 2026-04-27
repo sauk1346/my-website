@@ -39,7 +39,7 @@ const courseData = {
         { 
             evaluationNumber: 2,
             date: 'Mar 14, Abr 2026',
-            weighting: '', 
+            weighting: '30%', 
             description: [
                 {
                     text: 'Actividad 01',
@@ -54,11 +54,11 @@ const courseData = {
         { 
             evaluationNumber: 3,
             date: 'Jue 23, Abr 2026',
-            weighting: '', 
+            weighting: '35%', 
             description: [
                 {
                     text: 'Actividad 03',
-                    href: ''
+                    href: 'docs/Actividad03.pdf'
                 },
                 {
                     text: 'Actividad 04',
@@ -69,10 +69,10 @@ const courseData = {
         { 
             evaluationNumber: 4,
             date: '',
-            weighting: '', 
+            weighting: '15%', 
             description: {
                 text: 'Controles',
-                href: ''
+                href: 'controles'
             }
         }
     ],
@@ -196,8 +196,8 @@ const courseData = {
             date: 'Mié 08, Abr 2026', 
             description: [
                 {
-                    text: 'Avance Evaluación 02 (Actividad 01)',
-                    href: ''
+                    text: 'Instrucciones Evaluación 02 (Actividad 01)',
+                    href: 'docs/Instrucciones-Actividad01.pdf'
                 }
             ]
         },
@@ -207,8 +207,8 @@ const courseData = {
             date: 'Jue 09, Abr 2026', 
             description: [
                 {
-                    text: 'Avance Evaluación 02 (Actividad 02)',
-                    href: ''
+                    text: 'Instrucciones Evaluación 02 (Actividad 02)',
+                    href: 'docs/Instrucciones-Actividad02.pdf'
                 }
             ]
         },
@@ -234,6 +234,50 @@ const courseData = {
                 }
             ]
         },
+        { 
+            week: '07', 
+            class: '13', 
+            date: 'Mié 22, Abr 2026', 
+            description: [
+                {
+                    text: 'Instrucciones Evaluación 03 (Actividad 04)',
+                    href: 'docs/Instrucciones-Actividad04.pdf'
+                }
+            ]
+        },
+        { 
+            week: '07', 
+            class: '14', 
+            date: 'Jue 23, Abr 2026', 
+            description: [
+                {
+                    text: 'No asistí',
+                    strikethrough: true,
+                }
+            ]
+        },
+        { 
+            week: '08', 
+            class: '15', 
+            date: 'Mié 29, Abr 2026', 
+            description: [
+                {
+                    text: '',
+                    href: '',
+                }
+            ]
+        },
+        { 
+            week: '08', 
+            class: '16', 
+            date: 'Jue 30, Abr 2026', 
+            description: [
+                {
+                    text: '',
+                    href: '',
+                }
+            ]
+        },
     ],
     lectureData: [
         { 
@@ -242,25 +286,36 @@ const courseData = {
             date: 'Dom 15, Mar 2026', 
             description: [
                 {
+                    text: 'Fundamentos de Cloud Computing',
+                    href: 'docs/lectura01.pdf'
+                }
+            ]
+        },
+        { 
+            week: '01', 
+            lecture: '02', 
+            date: 'Dom 15, Mar 2026', 
+            description: [
+                {
                     text: 'Fundamentos de Cloud Computing: La Nube actual',
-                    href: ''
+                    href: 'lectura02'
                 }
             ]
         },
         { 
             week: '02', 
-            lecture: '02', 
+            lecture: '03', 
             date: 'Dom 22, Mar 2026', 
             description: [
                 {
                     text: 'Aprovisionamiento seguro en la nube: estrategias y normativas',
-                    href: ''
+                    href: 'lectura03'
                 }
             ]
         },
         { 
             week: '03', 
-            lecture: '03', 
+            lecture: '04', 
             date: 'Dom 29, Mar 2026', 
             description: [
                 {
@@ -271,7 +326,7 @@ const courseData = {
         },
         { 
             week: '04', 
-            lecture: '04', 
+            lecture: '05', 
             date: 'Dom 05, Abr 2026', 
             description: [
                 {
@@ -282,7 +337,7 @@ const courseData = {
         },
         { 
             week: '05', 
-            lecture: '05', 
+            lecture: '06', 
             date: 'Dom 12, Abr 2026', 
             description: [
                 {
@@ -293,7 +348,7 @@ const courseData = {
         },
         { 
             week: '06', 
-            lecture: '06', 
+            lecture: '07', 
             date: 'Dom 19, Abr 2026', 
             description: [
                 {
@@ -304,7 +359,7 @@ const courseData = {
         },
         { 
             week: '07', 
-            lecture: '07', 
+            lecture: '08', 
             date: 'Dom 26, Abr 2026', 
             description: [
                 {

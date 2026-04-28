@@ -308,7 +308,7 @@ const courseData = {
             description: [
                 {
                     text: 'Tendencias actuales en Gestión de personas',
-                    href: ''
+                    href: 'lectura03'
                 }
             ]
         },

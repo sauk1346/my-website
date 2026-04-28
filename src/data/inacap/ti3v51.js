@@ -299,14 +299,25 @@ const courseData = {
             date: 'Vie 27, Mar 2026', 
             description: [
                 {
+                    text: 'Herramientas de implementación',
+                    href: 'docs/lectura04.pdf'
+                }
+            ]
+        },
+        { 
+            week: '03', 
+            lecture: '05', 
+            date: 'Vie 27, Mar 2026', 
+            description: [
+                {
                     text: 'Del dato crudo a la información útil: procesos ETL en acción',
-                    href: ''
+                    href: 'lectura05'
                 }
             ]
         },
         { 
             week: '04', 
-            lecture: '05', 
+            lecture: '06', 
             date: 'Vie 03, Abr 2026', 
             description: [
                 {
@@ -317,7 +328,7 @@ const courseData = {
         },
         { 
             week: '05', 
-            lecture: '06', 
+            lecture: '07', 
             date: 'Vie 10, Abr 2026', 
             description: [
                 {
@@ -328,7 +339,7 @@ const courseData = {
         },
         { 
             week: '06', 
-            lecture: '07', 
+            lecture: '08', 
             date: 'Vie 17, Abr 2026', 
             description: [
                 {
@@ -339,11 +350,22 @@ const courseData = {
         },
         { 
             week: '07', 
-            lecture: '08', 
+            lecture: '09', 
             date: 'Vie 24, Abr 2026', 
             description: [
                 {
                     text: 'DMBOK y TOGAF: estándares para la gestión y arquitectura de datos',
+                    href: ''
+                },
+            ]
+        },
+        { 
+            week: '08', 
+            lecture: '10', 
+            date: 'Vie 01, May 2026', 
+            description: [
+                {
+                    text: 'Estrategias de datos en AWS: optimización y evaluación del rendimiento',
                     href: ''
                 },
             ]

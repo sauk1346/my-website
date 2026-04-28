@@ -319,14 +319,25 @@ const courseData = {
             date: 'Dom 29, Mar 2026', 
             description: [
                 {
+                    text: 'Arquitectura en Cloud Computing',
+                    href: 'docs/lectura04.pdf'
+                }
+            ]
+        },
+        { 
+            week: '03', 
+            lecture: '05', 
+            date: 'Dom 29, Mar 2026', 
+            description: [
+                {
                     text: 'Fundamentos de la Arquitectura en Cloud Computing',
-                    href: ''
+                    href: 'lectura05'
                 }
             ]
         },
         { 
             week: '04', 
-            lecture: '05', 
+            lecture: '06', 
             date: 'Dom 05, Abr 2026', 
             description: [
                 {
@@ -337,7 +348,7 @@ const courseData = {
         },
         { 
             week: '05', 
-            lecture: '06', 
+            lecture: '07', 
             date: 'Dom 12, Abr 2026', 
             description: [
                 {
@@ -348,7 +359,7 @@ const courseData = {
         },
         { 
             week: '06', 
-            lecture: '07', 
+            lecture: '08', 
             date: 'Dom 19, Abr 2026', 
             description: [
                 {
@@ -359,11 +370,22 @@ const courseData = {
         },
         { 
             week: '07', 
-            lecture: '08', 
+            lecture: '09', 
             date: 'Dom 26, Abr 2026', 
             description: [
                 {
                     text: 'Asegurando el acceso: protocolos de protección de cuentas',
+                    href: ''
+                }
+            ]
+        },
+        { 
+            week: '08', 
+            lecture: '10', 
+            date: 'Dom 03, May 2026', 
+            description: [
+                {
+                    text: 'Servicios de seguridad cloud: aplicación y análisis estratégico',
                     href: ''
                 }
             ]

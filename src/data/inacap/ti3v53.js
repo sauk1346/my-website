@@ -262,7 +262,7 @@ const courseData = {
             date: 'Mié 29, Abr 2026', 
             description: [
                 {
-                    text: '',
+                    text: 'Revisión Evaluación 02 (1)',
                     href: '',
                 }
             ]
@@ -271,6 +271,28 @@ const courseData = {
             week: '08', 
             class: '16', 
             date: 'Jue 30, Abr 2026', 
+            description: [
+                {
+                    text: 'Revisión Evaluación 02 (2)',
+                    href: '',
+                }
+            ]
+        },
+        { 
+            week: '09', 
+            class: '17', 
+            date: 'Mié 06, May 2026', 
+            description: [
+                {
+                    text: '',
+                    href: '',
+                }
+            ]
+        },
+        { 
+            week: '09', 
+            class: '18', 
+            date: 'Jue 07, May 2026', 
             description: [
                 {
                     text: '',
@@ -342,7 +364,7 @@ const courseData = {
             description: [
                 {
                     text: 'Fiabilidad en entornos Cloud: Diseño para la Alta Disponibilidad',
-                    href: ''
+                    href: 'lectura06'
                 }
             ]
         },

@@ -242,7 +242,7 @@ const courseData = {
             date: 'Lun 27, Abr 2026', 
             description: [
                 {
-                    text: '',
+                    text: 'Revisión Informe 02 y Script (1)',
                     href: ''
                 }
             ]
@@ -251,6 +251,28 @@ const courseData = {
             week: '08', 
             class: '16', 
             date: 'Mié 29, Abr 2026', 
+            description: [
+                {
+                    text: 'Revisión Informe 02 y Script (2)',
+                    href: ''
+                }
+            ]
+        },
+        { 
+            week: '09', 
+            class: '17', 
+            date: 'Lun 04, May 2026', 
+            description: [
+                {
+                    text: '',
+                    href: ''
+                }
+            ]
+        },
+        { 
+            week: '09', 
+            class: '18', 
+            date: 'Mié 06, May 2026', 
             description: [
                 {
                     text: '',
@@ -322,7 +344,7 @@ const courseData = {
             description: [
                 {
                     text: 'Automatizando la integración de datos con Pentaho',
-                    href: ''
+                    href: 'lectura06'
                 }
             ]
         },

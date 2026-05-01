@@ -269,6 +269,30 @@ const courseData = {
             date: 'Jue 30, Abr 2026', 
             description: [
                 {
+                    text: 'Suspensión clases: vísperas feriado',
+                    strikethrough: true
+                    
+                }
+            ]
+        },
+        { 
+            week: '09', 
+            class: '17', 
+            date: 'Lun 04, May 2026', 
+            description: [
+                {
+                    text: 'Evaluación 03',
+                    href: ''
+                    
+                }
+            ]
+        },
+        { 
+            week: '09', 
+            class: '18', 
+            date: 'Jue 07, May 2026', 
+            description: [
+                {
                     text: '',
                     href: ''
                     
@@ -352,7 +376,7 @@ const courseData = {
             description: [
                 {
                     text: 'Gestión del desempeño, estrategia y contribución a la mejora continua',
-                    href: ''
+                    href: 'lectura07'
                 }
             ]
         },

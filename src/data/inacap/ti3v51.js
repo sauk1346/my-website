@@ -47,7 +47,7 @@ const courseData = {
         },
         { 
             evaluationNumber: 3,
-            date: '',
+            date: 'Sáb 09, May 2026',
             weighting: '35%', 
             description: {
                 text: 'Informe 03',

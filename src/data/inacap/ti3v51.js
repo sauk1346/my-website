@@ -288,7 +288,7 @@ const courseData = {
             date: 'Vie 13, Mar 2026', 
             description: [
                 {
-                    text: 'Fundamentos de Almacenamiento',
+                    text: 'Resumen Unidad 1',
                     href: 'docs/lectura01.pdf'
                 }
             ]
@@ -321,7 +321,7 @@ const courseData = {
             date: 'Vie 27, Mar 2026', 
             description: [
                 {
-                    text: 'Herramientas de implementación',
+                    text: 'Resumen Unidad 2',
                     href: 'docs/lectura04.pdf'
                 }
             ]
@@ -355,7 +355,7 @@ const courseData = {
             description: [
                 {
                     text: 'De la arquitectura a la acción: integración y despliegue final del almacén de dato',
-                    href: ''
+                    href: 'lectura07'
                 }
             ]
         },
@@ -365,14 +365,25 @@ const courseData = {
             date: 'Vie 17, Abr 2026', 
             description: [
                 {
+                    text: 'Resumen Unidad 3',
+                    href: 'docs/lectura08.pdf'
+                },
+            ]
+        },
+        { 
+            week: '06', 
+            lecture: '09', 
+            date: 'Vie 17, Abr 2026', 
+            description: [
+                {
                     text: 'TOGAF: marco estratégico para el desarrollo de planes de implementación de datos',
-                    href: ''
+                    href: 'lectura09'
                 },
             ]
         },
         { 
             week: '07', 
-            lecture: '09', 
+            lecture: '10', 
             date: 'Vie 24, Abr 2026', 
             description: [
                 {
@@ -383,11 +394,22 @@ const courseData = {
         },
         { 
             week: '08', 
-            lecture: '10', 
+            lecture: '11', 
             date: 'Vie 01, May 2026', 
             description: [
                 {
                     text: 'Estrategias de datos en AWS: optimización y evaluación del rendimiento',
+                    href: ''
+                },
+            ]
+        },
+        { 
+            week: '09', 
+            lecture: '12', 
+            date: 'Vie 08, May 2026', 
+            description: [
+                {
+                    text: 'Optimizando el futuro: eficiencia y mejora continua en la arquitectura de datos',
                     href: ''
                 },
             ]

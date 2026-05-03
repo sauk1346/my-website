@@ -58,13 +58,16 @@ const courseData = {
                     href: 'controles'
                 },
                 {
-                    text: 'Actividad 05'
+                    text: 'Actividad 05: Retención de talento con IA'
                 },
                 {
-                    text: 'Actividad 07'
+                    text: 'Actividad 07: Caso - AgroTech Chile SA'
                 },
                 {
-                    text: 'Actividad 10'
+                    text: 'Actividad 10: Caso - Logisur SA '
+                },
+                {
+                    text: 'Actividad 13: Caso - Mieles del Sur'
                 },
             ]
              
@@ -223,8 +226,8 @@ const courseData = {
             date: 'Jue 16, Abr 2026', 
             description: [
                 {
-                    text: 'No asistí',
-                    strikethrough: true
+                    text: 'Instrucciones Actividad 13',
+                    href: 'docs/Instrucciones-Actividad13.pdf'
                 }
             ]
         },
@@ -259,6 +262,11 @@ const courseData = {
                 {
                     text: 'Unidad 3: Relaciones laborales y legislación chilena',
                     href: 'docs/lectura12.pdf'
+                    
+                },
+                {
+                    text: 'Guía de estudio Unidad 3',
+                    href: 'docs/guia-modulo03.pdf'
                     
                 }
             ]
@@ -387,7 +395,7 @@ const courseData = {
             description: [
                 {
                     text: 'Evaluación del desempeño por competencias, impacto en el desarrollo de los empleados',
-                    href: ''
+                    href: 'lectura08'
                 }
             ]
         },
@@ -398,7 +406,7 @@ const courseData = {
             description: [
                 {
                     text: 'Desarrollo profesional y gestión por competencias',
-                    href: ''
+                    href: 'lectura09'
                 }
             ]
         },
@@ -442,6 +450,17 @@ const courseData = {
             description: [
                 {
                     text: 'Mercado laboral chileno',
+                    href: ''
+                }
+            ]
+        },
+        { 
+            week: '09', 
+            lecture: '14', 
+            date: 'Sáb 09, May 2026', 
+            description: [
+                {
+                    text: '',
                     href: ''
                 }
             ]

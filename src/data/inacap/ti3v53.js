@@ -308,7 +308,7 @@ const courseData = {
             date: 'Dom 15, Mar 2026', 
             description: [
                 {
-                    text: 'Fundamentos de Cloud Computing',
+                    text: 'Resumen Unidad 1',
                     href: 'docs/lectura01.pdf'
                 }
             ]
@@ -341,7 +341,7 @@ const courseData = {
             date: 'Dom 29, Mar 2026', 
             description: [
                 {
-                    text: 'Arquitectura en Cloud Computing',
+                    text: 'Resumen Unidad 2',
                     href: 'docs/lectura04.pdf'
                 }
             ]
@@ -375,7 +375,7 @@ const courseData = {
             description: [
                 {
                     text: 'Diseño Estratégico de Pruebas en Cloud Computing',
-                    href: ''
+                    href: 'lectura07'
                 }
             ]
         },
@@ -385,14 +385,25 @@ const courseData = {
             date: 'Dom 19, Abr 2026', 
             description: [
                 {
+                    text: 'Resumen Unidad 3',
+                    href: 'docs/lectura08.pdf'
+                }
+            ]
+        },
+        { 
+            week: '06', 
+            lecture: '09', 
+            date: 'Dom 19, Abr 2026', 
+            description: [
+                {
                     text: 'Protegiendo nuestros datos: protocolos esenciales en la nube',
-                    href: ''
+                    href: 'lectura09'
                 }
             ]
         },
         { 
             week: '07', 
-            lecture: '09', 
+            lecture: '10', 
             date: 'Dom 26, Abr 2026', 
             description: [
                 {
@@ -403,11 +414,22 @@ const courseData = {
         },
         { 
             week: '08', 
-            lecture: '10', 
+            lecture: '11', 
             date: 'Dom 03, May 2026', 
             description: [
                 {
                     text: 'Servicios de seguridad cloud: aplicación y análisis estratégico',
+                    href: ''
+                }
+            ]
+        },
+        { 
+            week: '09', 
+            lecture: '12', 
+            date: 'Dom 10, May 2026', 
+            description: [
+                {
+                    text: 'Procedimientos de auditoría en arquitecturas cloud',
                     href: ''
                 }
             ]

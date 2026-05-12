@@ -301,6 +301,35 @@ const courseData = {
             date: 'Jue 07, May 2026', 
             description: [
                 {
+                    text: 'no asistí',
+                    strikethrough: true
+                    
+                }
+            ]
+        },
+        { 
+            week: '10', 
+            class: '19', 
+            date: 'Lun 11, May 2026', 
+            description: [
+                {
+                    text: 'Material para Examen',
+                    href: 'docs/Materia-Examen.pdf'
+                    
+                },
+                {
+                    text: 'Cuestionario para Examen',
+                    href: 'docs/Cuestionario-Examen.pdf'
+                    
+                },
+            ]
+        },
+        { 
+            week: '10', 
+            class: '20', 
+            date: 'Jue 07, May 2026', 
+            description: [
+                {
                     text: '',
                     href: ''
                     
@@ -417,7 +446,7 @@ const courseData = {
             description: [
                 {
                     text: 'Tendencias actuales en la gestión del desempeño, evaluaciones continuas, feedback 360°',
-                    href: ''
+                    href: 'lectura10'
                 }
             ]
         },
@@ -460,12 +489,22 @@ const courseData = {
             date: 'Sáb 09, May 2026', 
             description: [
                 {
-                    text: '',
+                    text: 'Leyes de  Seguridad Social en Chile: ISAPRE, APF, y Seguro de Cesantía',
                     href: ''
                 }
             ]
         },
-
+        { 
+            week: '09', 
+            lecture: '15', 
+            date: 'Sáb 09, May 2026', 
+            description: [
+                {
+                    text: 'Síntesis de la Unidad 03',
+                    href: 'docs/lectura15.pdf'
+                }
+            ]
+        },
     ]
 };
 

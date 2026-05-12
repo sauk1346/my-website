@@ -58,10 +58,16 @@ const courseData = {
             evaluationNumber: 4,
             date: '',
             weighting: '15%', 
-            description: {
-                text: 'Controles',
-                href: 'controles'
-            }
+            description: [
+                {
+                    text: 'Evaluación diagnóstica',
+                    href: 'diagnostica'
+                },
+                {
+                    text: 'Controles',
+                    href: 'controles'
+                },
+            ]
         }
     ],
     classData: [
@@ -264,8 +270,8 @@ const courseData = {
             date: 'Lun 04, May 2026', 
             description: [
                 {
-                    text: '',
-                    href: ''
+                    text: 'no asistí',
+                    strikethrough: true
                 }
             ]
         },
@@ -273,6 +279,28 @@ const courseData = {
             week: '09', 
             class: '18', 
             date: 'Mié 06, May 2026', 
+            description: [
+                {
+                    text: 'no asistí',
+                    strikethrough: true
+                }
+            ]
+        },
+        { 
+            week: '10', 
+            class: '19', 
+            date: 'Lun 11, May 2026', 
+            description: [
+                {
+                    text: 'no asistí',
+                    strikethrough: true
+                }
+            ]
+        },
+        { 
+            week: '10', 
+            class: '20', 
+            date: 'Mié 13, May 2026', 
             description: [
                 {
                     text: '',
@@ -388,7 +416,7 @@ const courseData = {
             description: [
                 {
                     text: 'DMBOK y TOGAF: estándares para la gestión y arquitectura de datos',
-                    href: ''
+                    href: 'lectura10'
                 },
             ]
         },
@@ -399,7 +427,7 @@ const courseData = {
             description: [
                 {
                     text: 'Estrategias de datos en AWS: optimización y evaluación del rendimiento',
-                    href: ''
+                    href: 'lectura11'
                 },
             ]
         },
@@ -410,10 +438,11 @@ const courseData = {
             description: [
                 {
                     text: 'Optimizando el futuro: eficiencia y mejora continua en la arquitectura de datos',
-                    href: ''
+                    href: 'lectura12'
                 },
             ]
         },
+        
     ]
 };
 

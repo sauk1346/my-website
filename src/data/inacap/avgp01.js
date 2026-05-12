@@ -327,7 +327,7 @@ const courseData = {
         { 
             week: '10', 
             class: '20', 
-            date: 'Jue 07, May 2026', 
+            date: 'Jue 14, May 2026', 
             description: [
                 {
                     text: '',

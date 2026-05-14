@@ -58,16 +58,20 @@ const courseData = {
                     href: 'controles'
                 },
                 {
-                    text: 'Actividad 05: Retención de talento con IA'
+                    text: 'Actividad 05: Retención de talento con IA',
+                    href: 'docs/Actividad05.pdf'
                 },
                 {
-                    text: 'Actividad 07: Caso - AgroTech Chile SA'
+                    text: 'Actividad 07: Caso - AgroTech Chile SA',
+                    href: 'docs/Actividad07.pdf'
                 },
                 {
-                    text: 'Actividad 10: Caso - Logisur SA '
+                    text: 'Actividad 10: Caso - Logisur SA',
+                    href: 'docs/Actividad10.pdf'
                 },
                 {
-                    text: 'Actividad 13: Caso - Mieles del Sur'
+                    text: 'Actividad 13: Caso - Mieles del Sur',
+                    href: 'docs/Actividad13.pdf'
                 },
             ]
              
@@ -330,7 +334,7 @@ const courseData = {
             date: 'Jue 14, May 2026', 
             description: [
                 {
-                    text: '',
+                    text: 'Examen (si nota <= 5.0)',
                     href: ''
                     
                 }
@@ -479,7 +483,7 @@ const courseData = {
             description: [
                 {
                     text: 'Mercado laboral chileno',
-                    href: ''
+                    href: 'lectura13'
                 }
             ]
         },

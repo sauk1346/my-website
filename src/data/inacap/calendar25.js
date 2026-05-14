@@ -399,200 +399,230 @@ export const calendar25 = [
   },
   {
     id: 67,
+    fecha: "2026-5-14",
+    titulo: "[AVGP01] Examen (si nota <= 5.0)",
+    description: "Gestión de Personas"
+  },
+  {
+    id: 68,
     fecha: "2026-3-28",
     titulo: "[AVGP01] Actividad 05",
     description: "Gestión de Personas"
   },
   {
-    id: 68,
+    id: 69,
     fecha: "2026-4-4",
     titulo: "[AVGP01] Actividad 07",
     description: "Gestión de Personas"
   },
   {
-    id: 69,
+    id: 70,
     fecha: "2026-4-11",
     titulo: "[AVGP01] Actividad 10",
     description: "Gestión de Personas"
   },
   {
-    id: 70,
+    id: 71,
     fecha: "2026-3-14",
     titulo: "[AVGP01] Control 01",
     description: "Gestión de Personas"
   },
   {
-    id: 71,
+    id: 72,
     fecha: "2026-3-21",
     titulo: "[AVGP01] Control 02",
     description: "Gestión de Personas"
   },
   {
-    id: 72,
+    id: 73,
     fecha: "2026-3-28",
     titulo: "[AVGP01] Control 03",
     description: "Gestión de Personas"
   },
   {
-    id: 73,
+    id: 74,
     fecha: "2026-4-4",
     titulo: "[AVGP01] Control 04",
     description: "Gestión de Personas"
   },
   {
-    id: 74,
+    id: 75,
     fecha: "2026-4-11",
     titulo: "[AVGP01] Control 05",
     description: "Gestión de Personas"
   },
   {
-    id: 75,
+    id: 76,
     fecha: "2026-4-18",
     titulo: "[AVGP01] Control 06",
     description: "Gestión de Personas"
   },
   {
-    id: 76,
+    id: 77,
     fecha: "2026-4-25",
     titulo: "[AVGP01] Control 07",
     description: "Gestión de Personas"
   },
   {
-    id: 77,
+    id: 78,
     fecha: "2026-5-2",
     titulo: "[AVGP01] Control 08",
     description: "Gestión de Personas"
   },
   {
-    id: 78,
+    id: 79,
     fecha: "2026-5-9",
     titulo: "[AVGP01] Control 09",
     description: "Gestión de Personas"
   },
 // ----- [TI3V51]Arquitectura y Almacenamiento de Datos -----
   {
-    id: 79,
+    id: 80,
     fecha: "2026-4-1",
     titulo: "[TI3V51] Evaluación 01",
     description: "Arquitectura y Almacenamiento de Datos"
   },
   {
-    id: 80,
+    id: 81,
     fecha: "2026-4-22",
     titulo: "[TI3V51] Evaluación 02",
     description: "Arquitectura y Almacenamiento de Datos"
   },
   {
-    id: 81,
-    fecha: "2026-5-9",
+    id: 82,
+    fecha: "2026-5-11",
     titulo: "[TI3V51] Evaluación 03",
     description: "Arquitectura y Almacenamiento de Datos"
   },
   {
-    id: 82,
+    id: 83,
     fecha: "2026-3-13",
     titulo: "[TI3V51] Control 01",
     description: "Arquitectura y Almacenamiento de Datos"
   },
   {
-    id: 83,
-    fecha: "2026-3-27",
+    id: 84,
+    fecha: "2026-3-20",
     titulo: "[TI3V51] Control 02",
     description: "Arquitectura y Almacenamiento de Datos"
   },
   {
-    id: 84,
-    fecha: "2026-4-10",
+    id: 85,
+    fecha: "2026-3-27",
     titulo: "[TI3V51] Control 03",
     description: "Arquitectura y Almacenamiento de Datos"
   },
   {
-    id: 85,
-    fecha: "2026-4-24",
+    id: 86,
+    fecha: "2026-4-3",
     titulo: "[TI3V51] Control 04",
     description: "Arquitectura y Almacenamiento de Datos"
   },
   {
-    id: 86,
-    fecha: "2026-5-8",
+    id: 87,
+    fecha: "2026-4-10",
     titulo: "[TI3V51] Control 05",
+    description: "Arquitectura y Almacenamiento de Datos"
+  },
+  {
+    id: 88,
+    fecha: "2026-4-17",
+    titulo: "[TI3V51] Control 06",
+    description: "Arquitectura y Almacenamiento de Datos"
+  },
+  {
+    id: 89,
+    fecha: "2026-4-24",
+    titulo: "[TI3V51] Control 07",
+    description: "Arquitectura y Almacenamiento de Datos"
+  },
+  {
+    id: 90,
+    fecha: "2026-5-1",
+    titulo: "[TI3V51] Control 08",
+    description: "Arquitectura y Almacenamiento de Datos"
+  },
+  {
+    id: 91,
+    fecha: "2026-5-8",
+    titulo: "[TI3V51] Control 09",
     description: "Arquitectura y Almacenamiento de Datos"
   },
 // ----- [TI3V53] Arquitectura Multi Cloud -----
   {
-    id: 87,
+    id: 92,
     fecha: "2026-4-2",
     titulo: "[TI3V53] Evaluación 01",
     description: "Arquitectura Multi Cloud"
   },
   {
-    id: 88,
+    id: 93,
     fecha: "2026-4-14",
     titulo: "[TI3V53] Evaluación 02",
     description: "Arquitectura Multi Cloud"
   },
   {
-    id: 89,
+    id: 94,
     fecha: "2026-4-23",
     titulo: "[TI3V53] Evaluación 03 (Actividad 3)",
     description: "Arquitectura Multi Cloud"
   },
   {
-    id: 90,
+    id: 95,
     fecha: "2026-5-6",
     titulo: "[TI3V53] Evaluación 03 (Actividad 4)",
     description: "Arquitectura Multi Cloud"
   },
   {
-    id: 91,
+    id: 96,
     fecha: "2026-3-15",
     titulo: "[TI3V53] Control 01",
     description: "Arquitectura Multi Cloud"
   },
   {
-    id: 92,
+    id: 97,
     fecha: "2026-3-22",
     titulo: "[TI3V53] Control 02",
     description: "Arquitectura Multi Cloud"
   },
   {
-    id: 93,
+    id: 98,
     fecha: "2026-3-29",
     titulo: "[TI3V53] Control 03",
     description: "Arquitectura Multi Cloud"
   },
   {
-    id: 94,
+    id: 99,
     fecha: "2026-4-5",
     titulo: "[TI3V53] Control 04",
     description: "Arquitectura Multi Cloud"
   },
   {
-    id: 95,
+    id: 100,
     fecha: "2026-4-12",
     titulo: "[TI3V53] Control 05",
     description: "Arquitectura Multi Cloud"
   },
   {
-    id: 96,
+    id: 101,
     fecha: "2026-4-19",
     titulo: "[TI3V53] Control 06",
     description: "Arquitectura Multi Cloud"
   },
   {
-    id: 97,
+    id: 102,
     fecha: "2026-4-26",
     titulo: "[TI3V53] Control 07",
     description: "Arquitectura Multi Cloud"
   },
   {
-    id: 98,
+    id: 103,
     fecha: "2026-5-3",
     titulo: "[TI3V53] Control 08",
     description: "Arquitectura Multi Cloud"
   },
   {
-    id: 99,
+    id: 104,
     fecha: "2026-5-10",
     titulo: "[TI3V53] Control 09",
     description: "Arquitectura Multi Cloud"

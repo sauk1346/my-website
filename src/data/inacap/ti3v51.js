@@ -41,18 +41,32 @@ const courseData = {
                 },
                 {
                     text: 'script-segmentado.rar',
-                    href: 'script/script-segmentado.rar'
+                    href: 'data/script-segmentado.rar'
                 },
             ]
         },
         { 
             evaluationNumber: 3,
-            date: 'Sáb 09, May 2026',
+            date: 'Lun 11, May 2026',
             weighting: '35%', 
-            description: {
-                text: 'Informe 03',
-                href: ''
-            }
+            description: [
+                {
+                    text: 'Informe 03',
+                    href: 'docs/Informe03.pdf'
+                },
+                {
+                    text: 'Informe Técnico',
+                    href: 'docs/Informe-Tecnico.pdf'
+                },
+                {
+                    text: 'dashboards.pbit',
+                    href: 'data/dashboards.pbit'
+                },
+                {
+                    text: 'script.sql',
+                    href: 'data/dashboards.sql'
+                },
+            ]
         },
         { 
             evaluationNumber: 4,
@@ -156,8 +170,8 @@ const courseData = {
             date: 'Lun 30, Mar 2026', 
             description: [
                 {
-                    text: 'no asistí',
-                    strikethrough: true
+                    text: 'Instrucciones Informe 01',
+                    href: 'docs/Instrucciones-Informe01.pdf'
                 }
             ]
         },
@@ -167,8 +181,8 @@ const courseData = {
             date: 'Mié 01, Abr 2026', 
             description: [
                 {
-                    text: 'no asistí',
-                    strikethrough: true
+                    text: 'Avance Informe 01: Modelo de negocio (1)',
+                    href: ''
                 }
             ]
         },
@@ -178,8 +192,8 @@ const courseData = {
             date: 'Lun 06, Abr 2026', 
             description: [
                 {
-                    text: 'no asistí',
-                    strikethrough: true
+                    text: 'Avance Informe 01: Modelo de negocio (2)',
+                    href: ''
                 }
             ]
         },
@@ -189,8 +203,8 @@ const courseData = {
             date: 'Mié 08, Abr 2026', 
             description: [
                 {
-                    text: 'no asistí',
-                    strikethrough: true
+                    text: 'Instrucciones Informe 02',
+                    href: 'docs/Instrucciones-Informe02.pdf'
                 }
             ]
         },
@@ -200,7 +214,7 @@ const courseData = {
             date: 'Lun 13, Abr 2026', 
             description: [
                 {
-                    text: 'Avance Evaluación 02 (script)',
+                    text: 'Avance Informe 02: script BD (1)',
                     href: ''
                 }
             ]
@@ -211,7 +225,7 @@ const courseData = {
             date: 'Mié 15, Abr 2026', 
             description: [
                 {
-                    text: 'Avance Evaluación 02 (script)',
+                    text: 'Avance Informe 02: script BD (2)',
                     href: ''
                 }
             ]
@@ -222,7 +236,7 @@ const courseData = {
             date: 'Lun 20, Abr 2026', 
             description: [
                 {
-                    text: 'Avance Evaluación 02 (script)',
+                    text: 'Avance Informe 02: script BD (3)',
                     href: ''
                 },
                 {
@@ -248,7 +262,7 @@ const courseData = {
             date: 'Lun 27, Abr 2026', 
             description: [
                 {
-                    text: 'Revisión Informe 02 y Script (1)',
+                    text: 'Revisión Informe 02 y script BD (1)',
                     href: ''
                 }
             ]
@@ -259,7 +273,7 @@ const courseData = {
             date: 'Mié 29, Abr 2026', 
             description: [
                 {
-                    text: 'Revisión Informe 02 y Script (2)',
+                    text: 'Revisión Informe 02 y script BD (2)',
                     href: ''
                 }
             ]
@@ -270,8 +284,8 @@ const courseData = {
             date: 'Lun 04, May 2026', 
             description: [
                 {
-                    text: 'no asistí',
-                    strikethrough: true
+                    text: 'Instrucciones Informe 03',
+                    href: 'docs/Instrucciones-Informe03.pdf'
                 }
             ]
         },
@@ -281,8 +295,8 @@ const courseData = {
             date: 'Mié 06, May 2026', 
             description: [
                 {
-                    text: 'no asistí',
-                    strikethrough: true
+                    text: 'Avance Informe 03: Dashboards Power BI (1)',
+                    href: ''
                 }
             ]
         },
@@ -292,8 +306,8 @@ const courseData = {
             date: 'Lun 11, May 2026', 
             description: [
                 {
-                    text: 'no asistí',
-                    strikethrough: true
+                    text: 'Avance Informe 03: Dashboards Power BI (2)',
+                    href: ''
                 }
             ]
         },
@@ -303,7 +317,7 @@ const courseData = {
             date: 'Mié 13, May 2026', 
             description: [
                 {
-                    text: '',
+                    text: 'Cierre de Notas',
                     href: ''
                 }
             ]

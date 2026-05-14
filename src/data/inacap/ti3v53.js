@@ -62,7 +62,7 @@ const courseData = {
                 },
                 {
                     text: 'Actividad 04',
-                    href: ''
+                    href: 'docs/Actividad04.pdf'
                 },
             ]
         },
@@ -284,8 +284,8 @@ const courseData = {
             date: 'Mié 06, May 2026', 
             description: [
                 {
-                    text: '',
-                    href: '',
+                    text: 'no asistí',
+                    strikethrough: true
                 }
             ]
         },
@@ -295,7 +295,29 @@ const courseData = {
             date: 'Jue 07, May 2026', 
             description: [
                 {
-                    text: '',
+                    text: 'no asistí',
+                    strikethrough: true
+                }
+            ]
+        },
+        { 
+            week: '10', 
+            class: '19', 
+            date: 'Mar 12, May 2026', 
+            description: [
+                {
+                    text: 'Clase Recuperativa',
+                    href: '',
+                }
+            ]
+        },
+        { 
+            week: '10', 
+            class: '20', 
+            date: 'Mié 13, May 2026', 
+            description: [
+                {
+                    text: 'Cierre de Notas',
                     href: '',
                 }
             ]
@@ -408,7 +430,7 @@ const courseData = {
             description: [
                 {
                     text: 'Asegurando el acceso: protocolos de protección de cuentas',
-                    href: ''
+                    href: 'lectura10'
                 }
             ]
         },

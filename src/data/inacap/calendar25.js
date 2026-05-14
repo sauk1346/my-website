@@ -400,7 +400,7 @@ export const calendar25 = [
   {
     id: 67,
     fecha: "2026-5-14",
-    titulo: "[AVGP01] Examen (si nota <= 5.0)",
+    titulo: "[AVGP01] Examen (si nota < 5.0)",
     description: "Gestión de Personas"
   },
   {

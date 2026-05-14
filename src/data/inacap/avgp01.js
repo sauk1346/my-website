@@ -334,7 +334,7 @@ const courseData = {
             date: 'Jue 14, May 2026', 
             description: [
                 {
-                    text: 'Examen (si nota <= 5.0)',
+                    text: 'Examen (si nota < 5.0)',
                     href: ''
                     
                 }

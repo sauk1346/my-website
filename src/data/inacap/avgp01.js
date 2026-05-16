@@ -494,7 +494,7 @@ const courseData = {
             description: [
                 {
                     text: 'Leyes de  Seguridad Social en Chile: ISAPRE, APF, y Seguro de Cesantía',
-                    href: ''
+                    href: 'lectura14'
                 }
             ]
         },

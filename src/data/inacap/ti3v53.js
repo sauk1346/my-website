@@ -70,10 +70,18 @@ const courseData = {
             evaluationNumber: 4,
             date: '',
             weighting: '15%', 
-            description: {
-                text: 'Controles',
-                href: 'controles'
-            }
+            description: [
+                {
+                    text: 'Evaluación Diagnóstica',
+                    href: 'diagnostica'
+                },
+                {
+                    text: 'Controles',
+                    href: 'controles'
+                },
+                
+            ]
+            
         }
     ],
     classData: [
@@ -441,7 +449,7 @@ const courseData = {
             description: [
                 {
                     text: 'Servicios de seguridad cloud: aplicación y análisis estratégico',
-                    href: ''
+                    href: 'lectura11'
                 }
             ]
         },
@@ -452,7 +460,7 @@ const courseData = {
             description: [
                 {
                     text: 'Procedimientos de auditoría en arquitecturas cloud',
-                    href: ''
+                    href: 'lectura12'
                 }
             ]
         },

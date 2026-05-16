@@ -1,0 +1,648 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{parskip}
+\usepackage{mdframed}
+\usepackage{enumitem}
+\usepackage{multicol}
+
+\geometry{top=2.5cm, bottom=2.5cm, left=3cm, right=3cm}
+
+\definecolor{codeblue}{RGB}{41, 98, 255}
+\definecolor{codegray}{RGB}{128, 128, 128}
+\definecolor{codegreen}{RGB}{38, 166, 65}
+\definecolor{bgcode}{RGB}{245, 247, 250}
+\definecolor{accent}{RGB}{0, 112, 243}
+\definecolor{headerblue}{RGB}{15, 30, 70}
+\definecolor{taggray}{RGB}{90, 90, 110}
+
+\lstset{
+  backgroundcolor=\color{bgcode},
+  basicstyle=\ttfamily\footnotesize,
+  breaklines=true,
+  captionpos=b,
+  commentstyle=\color{codegray},
+  keywordstyle=\color{codeblue}\bfseries,
+  stringstyle=\color{codegreen},
+  numberstyle=\tiny\color{codegray},
+  numbers=left,
+  numbersep=8pt,
+  frame=single,
+  framesep=4pt,
+  rulecolor=\color{codegray!40},
+  tabsize=2,
+  showstringspaces=false,
+  xleftmargin=12pt,
+}
+
+\titleformat{\section}{\Large\bfseries\color{headerblue}}{}{0em}{\thesection\quad}[\titlerule]
+\titleformat{\subsection}{\large\bfseries\color{accent}}{}{0em}{\thesubsection\quad}
+\titleformat{\subsubsection}{\normalsize\bfseries}{}{0em}{\thesubsubsection\quad}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textcolor{codegray}{SaukCode.cl --- Documentación Técnica}}
+\fancyhead[R]{\small\textcolor{codegray}{Vol. II: Componentes}}
+\fancyfoot[C]{\small\textcolor{codegray}{\thepage}}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\mdfdefinestyle{infobox}{
+  linecolor=accent, linewidth=1.5pt, backgroundcolor=accent!5,
+  innertopmargin=8pt, innerbottommargin=8pt,
+  innerleftmargin=12pt, innerrightmargin=12pt, roundcorner=4pt,
+}
+
+\mdfdefinestyle{propbox}{
+  linecolor=codegreen!60, linewidth=1pt, backgroundcolor=codegreen!5,
+  innertopmargin=6pt, innerbottommargin=6pt,
+  innerleftmargin=10pt, innerrightmargin=10pt, roundcorner=3pt,
+}
+
+\newcommand{\prop}[3]{%
+  \texttt{#1} \textit{(#2)} \textemdash\ #3\\%
+}
+
+\hypersetup{colorlinks=true, linkcolor=accent, urlcolor=codeblue}
+
+\begin{document}
+
+% Portada
+\thispagestyle{empty}
+\begin{center}
+  \vspace*{3cm}
+  {\Huge\bfseries\color{headerblue} SaukCode.cl}\\[0.5cm]
+  {\Large\color{accent} Documentación Técnica}\\[0.3cm]
+  {\large\color{codegray} Volumen II: Catálogo de Componentes}\\[2cm]
+  \rule{10cm}{1.5pt}\\[0.5cm]
+  {\normalsize Layout \textbullet\ MDX \textbullet\ Features \textbullet\ UI \textbullet\ Providers}\\[0.5cm]
+  \rule{10cm}{1.5pt}\\[2cm]
+  {\small\color{codegray} Generado: Mayo 2026}
+\end{center}
+\newpage
+
+\tableofcontents
+\newpage
+
+% =====================================================
+\section{Visión General de Componentes}
+% =====================================================
+
+Los componentes están organizados en 6 categorías bajo \texttt{src/components/}:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lll}
+\toprule
+\textbf{Directorio} & \textbf{Tipo} & \textbf{Cantidad} \\
+\midrule
+\texttt{layout/} & Estructura global de página & 4 \\
+\texttt{common/} & Reutilizables genéricos & 6+ \\
+\texttt{ui/} & Elementos de interfaz & 3 \\
+\texttt{mdx/} & Específicos de contenido MDX & 15+ \\
+\texttt{features/} & Por sección del sitio & 20+ \\
+\texttt{providers/} & Proveedores de contexto & 2 \\
+\bottomrule
+\end{tabular}
+\caption{Categorías de componentes}
+\end{table}
+
+% =====================================================
+\section{Componentes de Layout}
+% =====================================================
+
+Estos componentes forman el esqueleto visual de todas las páginas.
+
+\subsection{Navbar.jsx}
+
+Barra de navegación principal con soporte para menú móvil y toggle de tema.
+
+\begin{mdframed}[style=propbox]
+\textbf{Características:}\\
+\prop{darkMode toggle}{boolean state}{Alterna clases \texttt{dark-mode-override}/\texttt{light-mode-override} en \texttt{<html>} y persiste en \texttt{localStorage}}
+\prop{menuOpen}{boolean state}{Controla el panel lateral deslizante en móvil}
+\prop{isScrolled}{boolean state}{Activa sombra/blur cuando \texttt{scrollY > 10px}}
+\end{mdframed}
+
+\textbf{Animaciones}: Usa \texttt{menuSlide} (spring desde derecha) y \texttt{menuItemVariants} (stagger) de \texttt{utils/animations.js}.
+
+\textbf{Comportamiento de tema}:
+\begin{lstlisting}[language=JavaScript]
+const toggleTheme = () => {
+  const isDark = document.documentElement.classList
+    .contains('dark-mode-override');
+  if (isDark) {
+    document.documentElement.classList.remove('dark-mode-override');
+    document.documentElement.classList.add('light-mode-override');
+    localStorage.setItem('theme', 'light');
+  } else {
+    document.documentElement.classList.remove(
+      'dark-mode', 'light-mode-override'
+    );
+    document.documentElement.classList.add('dark-mode-override');
+    localStorage.setItem('theme', 'dark');
+  }
+};
+\end{lstlisting}
+
+\subsection{Breadcrumb.jsx}
+
+Navegación de migas de pan dinámica basada en la URL actual.
+
+\begin{mdframed}[style=propbox]
+\textbf{Características:}\\
+\prop{usePathname()}{Next.js hook}{Lee la ruta actual del App Router}
+Genera automáticamente las migas dividiendo la URL por \texttt{/} y formateando cada segmento (capitalización, reemplazo de guiones)
+\end{mdframed}
+
+\subsection{Footer.jsx}
+
+Pie de página con información del sitio y enlaces.
+
+\subsection{PageTransition.jsx}
+
+Wrapper de transición de página. Envuelve el contenido en un elemento \texttt{motion.div} con variante \texttt{pageTransition} de Framer Motion.
+
+\begin{lstlisting}[language=JavaScript]
+// src/app/template.js — envuelve todas las páginas
+export default function Template({ children }) {
+  return <PageTransition>{children}</PageTransition>;
+}
+\end{lstlisting}
+
+% =====================================================
+\section{Componentes MDX}
+% =====================================================
+
+Estos componentes están disponibles dentro de cualquier archivo \texttt{.mdx} del proyecto. Se mapean en \texttt{src/mdx-components.jsx} y en el \texttt{CustomMDXProvider}.
+
+\subsection{Componentes de Texto (\texttt{mdx/text/})}
+
+\subsubsection{Headings (H1--H6)}
+
+Componentes personalizados para todos los niveles de encabezado. Añaden estilos consistentes con soporte de tema oscuro/claro.
+
+\subsubsection{Paragraph}
+
+Párrafo con tipografía mejorada. Aplica \texttt{line-height} y espaciado optimizados para lectura.
+
+\subsubsection{Lists (Ol, Ul)}
+
+Listas ordenadas y no ordenadas con estilos personalizados (marcadores, indentación, espaciado).
+
+\subsection{Componentes de Layout (\texttt{mdx/layout/})}
+
+\subsubsection{SmartTable.jsx}
+
+Tabla avanzada con soporte de fórmulas matemáticas en celdas.
+
+\begin{mdframed}[style=propbox]
+\textbf{Props:}\\
+\prop{columns}{Array\textless\{key, label, formula?\}\textgreater}{Definición de columnas; si \texttt{formula=true} el contenido se renderiza con KaTeX}
+\prop{data}{Array\textless Object\textgreater}{Filas de datos}
+\prop{className}{string?}{Clase CSS adicional}
+\end{mdframed}
+
+Ejemplo de uso en MDX:
+\begin{lstlisting}[language=JavaScript]
+<SmartTable
+  columns={[
+    { key: 'formula', label: 'Fórmula', formula: true },
+    { key: 'desc', label: 'Descripción' }
+  ]}
+  data={[
+    { formula: '\\frac{n!}{k!(n-k)!}', desc: 'Combinaciones' }
+  ]}
+/>
+\end{lstlisting}
+
+\subsubsection{Blockquote.jsx}
+
+Cita visual con borde lateral de color y fondo diferenciado. Soporta anidamiento.
+
+\subsubsection{Solution.jsx}
+
+Contenedor colapsable para mostrar soluciones. Usa el elemento nativo \texttt{<details>} envuelto en estilos personalizados.
+
+\begin{lstlisting}[language=HTML]
+<Solution>
+  El resultado es **42**. El algoritmo tiene complejidad O(n log n).
+</Solution>
+\end{lstlisting}
+
+\subsubsection{Quiz.jsx y QuizQuestion.jsx}
+
+Sistema de preguntas de opción múltiple interactivo.
+
+\begin{mdframed}[style=propbox]
+\textbf{QuizQuestion Props:}\\
+\prop{question}{string}{Texto de la pregunta}
+\prop{options}{Array\textless string\textgreater}{Lista de opciones de respuesta}
+\prop{answer}{number}{Índice (0-based) de la respuesta correcta}
+\prop{explanation}{string?}{Explicación que aparece al responder}
+\end{mdframed}
+
+\begin{lstlisting}[language=HTML]
+<Quiz>
+  <QuizQuestion
+    question="¿Cuál es la complejidad de quicksort en promedio?"
+    options={['O(n)', 'O(n log n)', 'O(n²)', 'O(log n)']}
+    answer={1}
+    explanation="Quicksort tiene complejidad promedio O(n log n)"
+  />
+</Quiz>
+\end{lstlisting}
+
+\subsubsection{MultiColumn.jsx}
+
+Divide el contenido en múltiples columnas CSS.
+
+\begin{mdframed}[style=propbox]
+\prop{columns}{2 | 3}{Número de columnas}
+\prop{children}{ReactNode}{Contenido a distribuir en columnas}
+\end{mdframed}
+
+\subsection{Componentes de Código (\texttt{mdx/code/})}
+
+\subsubsection{CodeBlock.jsx}
+
+Bloque de código con resaltado de sintaxis, número de líneas y botón de copia.
+
+\begin{mdframed}[style=propbox]
+\textbf{Props:}\\
+\prop{language}{string}{Lenguaje de programación (python, javascript, etc.)}
+\prop{filename}{string?}{Nombre del archivo a mostrar en header}
+\prop{showLineNumbers}{boolean?}{Muestra números de línea (default: true)}
+\prop{children}{string}{Código fuente}
+\end{mdframed}
+
+\subsubsection{CodeComponents.jsx}
+
+Mapeo de elementos de código inline (\texttt{<code>}) a estilos personalizados. Detecta si el código es inline o dentro de un bloque y aplica estilos distintos.
+
+\subsubsection{Terminal.jsx}
+
+Simula una terminal de línea de comandos con prompt visual.
+
+\subsection{Componentes de Media (\texttt{mdx/media/})}
+
+\subsubsection{SmartLink.jsx}
+
+Link inteligente que detecta si la URL es interna o externa:
+\begin{itemize}
+  \item \textbf{Interna} (\texttt{/}...): Usa \texttt{<Link>} de Next.js para navegación SPA
+  \item \textbf{Externa} (http/https): Agrega \texttt{target="\_blank"} y \texttt{rel="noopener noreferrer"}
+\end{itemize}
+
+\begin{lstlisting}[language=HTML]
+<SmartLink href="/inacap/ti3v53/lectura10">Ver lectura 10</SmartLink>
+<SmartLink href="https://example.com">Recurso externo</SmartLink>
+\end{lstlisting}
+
+\subsubsection{SmartFigure.jsx}
+
+Wrapper de imágenes con funcionalidades avanzadas.
+
+\begin{mdframed}[style=propbox]
+\textbf{Props:}\\
+\prop{lightbox}{boolean?}{Activa vista ampliada al hacer clic}
+\prop{centered}{boolean?}{Centra la imagen horizontalmente}
+\prop{width}{string?}{Ancho máximo de la imagen}
+\prop{children}{ReactNode}{Imagen + caption opcional}
+\end{mdframed}
+
+\begin{lstlisting}[language=HTML]
+<SmartFigure lightbox={true} centered={true}>
+  <img src="/diagrama.png" alt="Diagrama de flujo" />
+  Figura 1: Diagrama de flujo del algoritmo
+</SmartFigure>
+\end{lstlisting}
+
+\subsubsection{Iframe.jsx}
+
+Wrapper seguro para iframes (videos, demos). Añade responsive wrapper con aspect ratio correcto.
+
+\subsection{Utilidades MDX (\texttt{mdx/utils/})}
+
+\subsubsection{slugify.js}
+
+Convierte texto a slug URL-friendly para los IDs de encabezados y el Table of Contents.
+
+% =====================================================
+\section{Componentes de Features (por Sección)}
+% =====================================================
+
+\subsection{INACAP (\texttt{features/inacap/})}
+
+\subsubsection{SubjectsGrid.jsx}
+
+Grid de tarjetas de asignaturas, organizado por semestre. Muestra el código, nombre, semestre y estado de completitud de cada asignatura.
+
+\subsubsection{SemesterTabs.jsx}
+
+Pestañas de navegación para filtrar asignaturas por semestre. Estado interno de pestaña activa.
+
+\subsubsection{Calendar.jsx}
+
+Calendario académico visual con eventos de clases, evaluaciones y feriados.
+
+\begin{mdframed}[style=propbox]
+\textbf{Props:}\\
+\prop{events}{Array\textless\{date, title, type\}\textgreater}{Lista de eventos del calendario}
+\prop{month}{number}{Mes a mostrar (1-12)}
+\prop{year}{number}{Año a mostrar}
+\end{mdframed}
+
+\subsubsection{ProfessorCard.jsx}
+
+Tarjeta con información del docente: nombre, especialidad, contacto.
+
+\subsubsection{InacapStats.jsx}
+
+Estadísticas de progreso de la asignatura: clases completadas, evaluaciones, porcentaje de avance.
+
+\subsection{Bootcamp (\texttt{features/bootcamp/})}
+
+\subsubsection{CftTable.jsx}
+
+Tabla expandible de módulos para cursos CódigoFacilito. Soporta:
+\begin{itemize}
+  \item Estructura de módulos con clases anidadas
+  \item Links a clases y ejercicios
+  \item Estado de completitud por clase
+  \item Paginación de módulos
+\end{itemize}
+
+\subsubsection{UddDetail.jsx}
+
+Vista de detalle para cursos UDD con diseño específico de esa plataforma.
+
+\subsection{E-Learning (\texttt{features/elearning/})}
+
+\subsubsection{CourseTable.jsx}
+
+Tabla de cursos para una plataforma específica. Muestra título, plataforma, estado y enlace.
+
+\subsubsection{SectionTable.jsx}
+
+Vista de secciones dentro de un curso e-learning.
+
+\subsubsection{CompactPlatformGrid.jsx}
+
+Grid compacto para seleccionar entre las 5 plataformas disponibles.
+
+\subsection{Idiomas (\texttt{features/idioma/})}
+
+\subsubsection{LanguagePage.jsx}
+
+Página principal de un idioma con estadísticas generales y acceso a módulos.
+
+\subsubsection{ModuleTable.jsx}
+
+Tabla de módulos y lecciones para cursos de idiomas.
+
+\subsection{LeetCode (\texttt{features/leetcode/})}
+
+\subsubsection{ProblemTable.jsx}
+
+Tabla interactiva de problemas LeetCode. Integra los tres hooks de tabla.
+
+\begin{mdframed}[style=propbox]
+\textbf{Funcionalidades:}\\
+--- Búsqueda por título, ID o tópico con normalización de texto (tildes)\\
+--- Filtro por dificultad (Fácil / Medio / Difícil)\\
+--- Filtro por tópico (array, string, graph, etc.)\\
+--- Ordenamiento por ID, título, tópico o dificultad\\
+--- Paginación con 20 problemas por página
+\end{mdframed}
+
+\subsubsection{ProblemStats.jsx}
+
+Estadísticas globales: total de problemas, distribución por dificultad, porcentajes completados.
+
+\subsection{CodeVault (\texttt{features/codevault/})}
+
+\subsubsection{CodeTable.jsx}
+
+Tabla de algoritmos y estructuras de datos con filtros por categoría y búsqueda.
+
+\subsection{Home (\texttt{features/home/})}
+
+\subsubsection{SectionCards.jsx}
+
+Cards de navegación a las secciones principales del sitio en la página de inicio.
+
+% =====================================================
+\section{Componentes de UI}
+% =====================================================
+
+\subsection{Card.jsx}
+
+Tarjeta base reutilizable con:
+\begin{itemize}
+  \item Efecto hover (\texttt{hoverLift} de Framer Motion)
+  \item Soporte de tema oscuro/claro vía CSS modules
+  \item Composición flexible (cualquier children)
+\end{itemize}
+
+\subsection{CardCarousel.jsx}
+
+Carrusel de tarjetas para la página principal. Usa \texttt{staggerContainer} con \texttt{staggerItem} para animar la entrada de cada tarjeta.
+
+% =====================================================
+\section{Componentes Comunes}
+% =====================================================
+
+\subsection{MDXWrapper.jsx}
+
+Wrapper que aplica estilos base al contenido MDX. Establece ancho máximo, tipografía y espaciado.
+
+\subsection{TableOfContents.jsx}
+
+Tabla de contenidos flotante generada automáticamente a partir de los headings del MDX.
+
+\begin{mdframed}[style=propbox]
+Escanea el DOM del documento en busca de elementos \texttt{h2} y \texttt{h3} para construir el índice. Usa \texttt{IntersectionObserver} para destacar la sección visible.
+\end{mdframed}
+
+\subsection{ScrollReveal.jsx}
+
+Wrapper de animación de scroll. Aplica una variante de Framer Motion cuando el elemento entra al viewport.
+
+\begin{lstlisting}[language=JavaScript]
+<ScrollReveal variant="fadeInUp">
+  <MiComponente />
+</ScrollReveal>
+\end{lstlisting}
+
+\subsection{Componentes de Tabla (\texttt{common/table/})}
+
+\subsubsection{PaginationControls.jsx}
+
+Controles de paginación numerados.
+
+\begin{mdframed}[style=propbox]
+\textbf{Props:}\\
+\prop{currentPage}{number}{Página actual}
+\prop{totalPages}{number}{Total de páginas}
+\prop{onPageChange}{function}{Callback al cambiar página}
+\prop{getPageNumbers}{function}{Retorna array de números de página visibles}
+\prop{maxVisible}{number?}{Máximo de botones de página (default: 5)}
+\end{mdframed}
+
+\subsubsection{SortableHeader.jsx}
+
+Encabezado de columna de tabla con indicadores de ordenamiento (↑ ↓ ↕).
+
+\begin{mdframed}[style=propbox]
+\textbf{Props:}\\
+\prop{columnKey}{string}{Clave de la columna}
+\prop{label}{string}{Texto a mostrar}
+\prop{sortConfig}{\{key, direction\}}{Estado actual de ordenamiento}
+\prop{onSort}{function}{Callback al hacer clic}
+\end{mdframed}
+
+\subsubsection{FilterControls.jsx}
+
+Panel de filtros con campos de búsqueda y selects.
+
+\begin{mdframed}[style=propbox]
+\textbf{Props:}\\
+\prop{searchTerm}{string}{Término de búsqueda actual}
+\prop{onSearchChange}{function}{Actualiza búsqueda}
+\prop{topicFilter}{string}{Filtro de tópico activo}
+\prop{onTopicChange}{function}{Actualiza filtro de tópico}
+\prop{difficultyFilter}{string}{Filtro de dificultad activo}
+\prop{onDifficultyChange}{function}{Actualiza dificultad}
+\prop{allTopics}{Array\textless string\textgreater}{Opciones para el select de tópicos}
+\prop{onClear}{function}{Limpia todos los filtros}
+\end{mdframed}
+
+% =====================================================
+\section{Providers}
+% =====================================================
+
+\subsection{ThemeProvider.jsx}
+
+Proveedor ligero que expone el estado del tema si se necesita desde componentes hijo (no usado globalmente — la lógica principal vive en \texttt{Navbar.jsx}).
+
+\subsection{CustomMDXProvider.jsx}
+
+Proveedor de componentes MDX con soporte de tema dinámico.
+
+\begin{lstlisting}[language=JavaScript, caption={CustomMDXProvider.jsx completo}]
+'use client';
+import { MDXProvider } from '@mdx-js/react';
+
+export function CustomMDXProvider({ children }) {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  useEffect(() => {
+    const checkDarkMode = () => {
+      const isDark =
+        document.documentElement.classList.contains('dark-mode') ||
+        document.documentElement.classList.contains('dark-mode-override');
+      setIsDarkMode(isDark);
+    };
+    checkDarkMode();
+    const observer = new MutationObserver(checkDarkMode);
+    observer.observe(document.documentElement, {
+      attributes: true, attributeFilter: ['class']
+    });
+    return () => observer.disconnect();
+  }, []);
+
+  const components = {
+    details: props => <details {...props} />,
+    summary: props => (
+      <summary style={{ color: isDarkMode ? '#ff6b6b' : 'red', ... }} />
+    )
+  };
+
+  return <MDXProvider components={components}>{children}</MDXProvider>;
+}
+\end{lstlisting}
+
+El \texttt{MutationObserver} garantiza que el componente reaccione en tiempo real a cambios de tema sin necesidad de un sistema de estado global.
+
+\subsection{Mapeo Global: mdx-components.jsx}
+
+Archivo requerido por Next.js para configurar el mapeo global de componentes en archivos MDX:
+
+\begin{lstlisting}[language=JavaScript]
+// src/mdx-components.jsx
+import { SmartTable, CodeBlock, SmartLink,
+         SmartFigure, Solution, Quiz, QuizQuestion,
+         MultiColumn, Iframe } from '@/components/mdx';
+import { H1, H2, H3, Paragraph, Ul, Ol } from '@/components/mdx/text';
+
+export function useMDXComponents(components) {
+  return {
+    h1: H1, h2: H2, h3: H3,
+    p: Paragraph, ul: Ul, ol: Ol,
+    SmartTable, CodeBlock, SmartLink,
+    SmartFigure, Solution, Quiz, QuizQuestion,
+    MultiColumn, Iframe,
+    ...components,
+  };
+}
+\end{lstlisting}
+
+% =====================================================
+\section{Resumen de Componentes}
+% =====================================================
+
+\begin{longtable}{lll}
+\toprule
+\textbf{Componente} & \textbf{Categoría} & \textbf{Propósito} \\
+\midrule
+\endhead
+Navbar & Layout & Navegación principal + tema \\
+Breadcrumb & Layout & Migas de pan dinámicas \\
+Footer & Layout & Pie de página \\
+PageTransition & Layout & Transiciones entre páginas \\
+SmartTable & MDX & Tabla con KaTeX \\
+CodeBlock & MDX & Código con resaltado \\
+SmartLink & MDX & Link inteligente int/ext \\
+SmartFigure & MDX & Imagen con lightbox \\
+Solution & MDX & Respuesta colapsable \\
+Quiz/QuizQuestion & MDX & Quiz interactivo \\
+MultiColumn & MDX & Layout de columnas \\
+Iframe & MDX & Embed seguro \\
+Terminal & MDX & Simulación de terminal \\
+SubjectsGrid & Feature/INACAP & Grid de asignaturas \\
+SemesterTabs & Feature/INACAP & Tabs de semestres \\
+Calendar & Feature/INACAP & Calendario académico \\
+CftTable & Feature/Bootcamp & Tabla de módulos \\
+ProblemTable & Feature/LeetCode & Tabla de problemas \\
+ProblemStats & Feature/LeetCode & Estadísticas LeetCode \\
+CourseTable & Feature/E-Learning & Tabla de cursos \\
+Card & UI & Tarjeta base \\
+CardCarousel & UI & Carrusel de tarjetas \\
+TableOfContents & Common & TOC automático \\
+ScrollReveal & Common & Animación scroll \\
+PaginationControls & Common/Table & Paginación \\
+SortableHeader & Common/Table & Encabezado sorteable \\
+FilterControls & Common/Table & Panel de filtros \\
+CustomMDXProvider & Provider & Contexto MDX + tema \\
+\bottomrule
+\caption{Catálogo completo de componentes}
+\end{longtable}
+
+\vspace{1cm}
+\begin{center}
+\rule{8cm}{0.4pt}\\[0.3cm]
+{\small\color{codegray} SaukCode.cl --- Documentación Técnica Vol. II\\
+Catálogo de Componentes}
+\end{center}
+
+\end{document}

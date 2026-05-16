@@ -1,0 +1,493 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{parskip}
+\usepackage{dirtree}
+\usepackage{graphicx}
+\usepackage{mdframed}
+\usepackage{enumitem}
+
+\geometry{top=2.5cm, bottom=2.5cm, left=3cm, right=3cm}
+
+% Colores
+\definecolor{codeblue}{RGB}{41, 98, 255}
+\definecolor{codered}{RGB}{220, 50, 47}
+\definecolor{codegray}{RGB}{128, 128, 128}
+\definecolor{codegreen}{RGB}{38, 166, 65}
+\definecolor{codepurple}{RGB}{136, 0, 210}
+\definecolor{bgcode}{RGB}{245, 247, 250}
+\definecolor{accent}{RGB}{0, 112, 243}
+\definecolor{headerblue}{RGB}{15, 30, 70}
+
+% Configuración de listings
+\lstset{
+  backgroundcolor=\color{bgcode},
+  basicstyle=\ttfamily\small,
+  breaklines=true,
+  captionpos=b,
+  commentstyle=\color{codegray},
+  keywordstyle=\color{codeblue}\bfseries,
+  stringstyle=\color{codegreen},
+  numberstyle=\tiny\color{codegray},
+  numbers=left,
+  numbersep=8pt,
+  frame=single,
+  framesep=4pt,
+  rulecolor=\color{codegray!40},
+  tabsize=2,
+  showstringspaces=false,
+  xleftmargin=12pt,
+}
+
+% Estilo de encabezados
+\titleformat{\section}{\Large\bfseries\color{headerblue}}{}{0em}{\thesection\quad}[\titlerule]
+\titleformat{\subsection}{\large\bfseries\color{accent}}{}{0em}{\thesubsection\quad}
+\titleformat{\subsubsection}{\normalsize\bfseries\color{black}}{}{0em}{\thesubsubsection\quad}
+
+% Header/Footer
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textcolor{codegray}{SaukCode.cl --- Documentación Técnica}}
+\fancyhead[R]{\small\textcolor{codegray}{Vol. I: Arquitectura}}
+\fancyfoot[C]{\small\textcolor{codegray}{\thepage}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Caja de información
+\mdfdefinestyle{infobox}{
+  linecolor=accent,
+  linewidth=1.5pt,
+  backgroundcolor=accent!5,
+  innertopmargin=10pt,
+  innerbottommargin=10pt,
+  innerleftmargin=12pt,
+  innerrightmargin=12pt,
+  roundcorner=4pt,
+}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=accent,
+  urlcolor=codeblue,
+  pdfauthor={SaukCode},
+  pdftitle={SaukCode.cl - Documentación Técnica Vol. I},
+}
+
+\begin{document}
+
+% Portada
+\thispagestyle{empty}
+\begin{center}
+  \vspace*{3cm}
+  {\Huge\bfseries\color{headerblue} SaukCode.cl}\\[0.5cm]
+  {\Large\color{accent} Documentación Técnica}\\[0.3cm]
+  {\large\color{codegray} Volumen I: Arquitectura y Stack Tecnológico}\\[2cm]
+  \rule{10cm}{1.5pt}\\[0.5cm]
+  {\normalsize Plataforma web de recopilación de contenido académico}\\[0.3cm]
+  {\normalsize Next.js 15 \textbullet\ React 19 \textbullet\ MDX}\\[0.5cm]
+  \rule{10cm}{1.5pt}\\[2cm]
+  {\small\color{codegray} Generado: Mayo 2026}
+\end{center}
+\newpage
+
+% Tabla de contenidos
+\tableofcontents
+\newpage
+
+% =====================================================
+\section{Descripción General del Proyecto}
+% =====================================================
+
+SaukCode.cl es una plataforma web personal de recopilación y organización de contenido académico. Centraliza material de estudio proveniente de múltiples fuentes:
+
+\begin{itemize}[leftmargin=1.5cm]
+  \item \textbf{INACAP}: 25 asignaturas distribuidas en 7 semestres (más pendientes)
+  \item \textbf{Bootcamps}: 10+ cursos de dos plataformas (CódigoFacilito y UDD)
+  \item \textbf{E-Learning}: 5 plataformas (Udemy, DevTalles, CódigoFacilito, Platzi, Coursera)
+  \item \textbf{Idiomas}: 6 idiomas (Inglés, Alemán, Coreano, Mandarín, Japonés, Ruso)
+  \item \textbf{LeetCode}: 100+ problemas con soluciones documentadas
+  \item \textbf{CodeVault}: Colección de algoritmos y estructuras de datos
+\end{itemize}
+
+El sitio sirve como bitácora personal de aprendizaje, con contenido en formato MDX que soporta matemáticas (\LaTeX), bloques de código con resaltado de sintaxis, tablas, quizzes interactivos y más.
+
+\begin{mdframed}[style=infobox]
+  \textbf{Estadísticas del proyecto:} 628 archivos MDX de contenido \textbullet\ 25 cursos INACAP \textbullet\ 10+ bootcamps \textbullet\ 100+ problemas LeetCode \textbullet\ 6 idiomas
+\end{mdframed}
+
+% =====================================================
+\section{Stack Tecnológico}
+% =====================================================
+
+\subsection{Framework Principal}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lll}
+\toprule
+\textbf{Tecnología} & \textbf{Versión} & \textbf{Rol} \\
+\midrule
+Next.js & 15.5.14 & Framework web (App Router) \\
+React & 19.0.0 & UI Library \\
+JavaScript/JSX & ES2022+ & Lenguaje principal \\
+Node.js & 20.x & Runtime de servidor \\
+\bottomrule
+\end{tabular}
+\caption{Framework y runtime}
+\end{table}
+
+\subsection{Dependencias de Producción}
+
+\begin{longtable}{lll}
+\toprule
+\textbf{Paquete} & \textbf{Versión} & \textbf{Propósito} \\
+\midrule
+\endhead
+framer-motion & 12.23.26 & Animaciones y transiciones \\
+katex & 0.16.22 & Renderizado de fórmulas matemáticas \\
+react-katex & --- & Integración React para KaTeX \\
+highlight.js & 11.11.1 & Resaltado de código \\
+prismjs & 1.30.0 & Resaltado de código alternativo \\
+react-markdown & 10.1.0 & Renderizado de Markdown \\
+remark-gfm & --- & GitHub Flavored Markdown \\
+remark-math & --- & Soporte de sintaxis matemática \\
+rehype-katex & --- & Renderizado KaTeX en MDX \\
+@mdx-js/react & --- & Proveedor de componentes MDX \\
+@next/mdx & --- & Integración MDX con Next.js \\
+lucide-react & --- & Iconos SVG \\
+classnames & --- & Utilidad para clases CSS \\
+marked & --- & Parser de Markdown \\
+\bottomrule
+\caption{Dependencias de producción}
+\end{longtable}
+
+\subsection{Herramientas de Desarrollo}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lll}
+\toprule
+\textbf{Herramienta} & \textbf{Versión} & \textbf{Rol} \\
+\midrule
+ESLint & 9.x & Linting de código \\
+eslint-config-next & --- & Reglas específicas de Next.js \\
+\bottomrule
+\end{tabular}
+\caption{DevDependencies}
+\end{table}
+
+\subsection{Fuentes y Tipografía}
+
+El proyecto utiliza las fuentes de Google:
+\begin{itemize}
+  \item \textbf{Geist Sans} (\texttt{--font-geist-sans}): fuente principal para texto de interfaz
+  \item \textbf{Geist Mono} (\texttt{--font-geist-mono}): fuente monoespaciada para código
+\end{itemize}
+
+Estas se cargan mediante \texttt{next/font/google} en el layout raíz para optimización automática.
+
+% =====================================================
+\section{Estructura de Directorios}
+% =====================================================
+
+La organización del proyecto sigue las convenciones del App Router de Next.js 15:
+
+\begin{lstlisting}[language=bash, caption={Árbol de directorios principal}]
+saukcode.cl/
+├── src/
+│   ├── app/                    # Rutas (Next.js App Router)
+│   │   ├── layout.js           # Layout raíz global
+│   │   ├── template.js         # Template de página (animaciones)
+│   │   ├── page.jsx            # Página home
+│   │   ├── globals.css         # Estilos globales
+│   │   ├── inacap/             # Sección INACAP
+│   │   ├── bootcamp/           # Sección Bootcamp
+│   │   ├── elearning/          # Sección E-Learning
+│   │   ├── (idiomas)/          # Grupo de rutas: idiomas
+│   │   ├── leetcode/           # Sección LeetCode
+│   │   ├── codevault/          # Sección CodeVault
+│   │   └── portfolio/          # Portafolio personal
+│   ├── components/             # Componentes React
+│   │   ├── layout/             # Navbar, Breadcrumb, Footer
+│   │   ├── common/             # Componentes reutilizables
+│   │   ├── ui/                 # Componentes de UI genéricos
+│   │   ├── mdx/                # Componentes específicos MDX
+│   │   ├── features/           # Componentes por sección
+│   │   └── providers/          # Proveedores de contexto
+│   ├── data/                   # Metadatos de cursos y secciones
+│   │   ├── homeData.js
+│   │   ├── inacap/             # 25+ archivos de datos INACAP
+│   │   ├── bootcamp/           # 12 archivos de datos
+│   │   ├── elearning/          # Datos de plataformas
+│   │   ├── idiomas/            # Datos de idiomas
+│   │   ├── leetcode/           # Problemas y categorías
+│   │   └── codevault/          # Algoritmos
+│   ├── content/                # Archivos MDX (628 total)
+│   │   ├── inacap/             # Contenido INACAP
+│   │   ├── bootcamp/           # Contenido bootcamp
+│   │   ├── elearning/          # Contenido e-learning
+│   │   ├── idiomas/            # Contenido idiomas
+│   │   └── leetcode/           # Soluciones LeetCode
+│   ├── hooks/                  # Custom hooks de React
+│   ├── utils/                  # Funciones utilitarias
+│   ├── shared/                 # Estilos compartidos CSS
+│   └── mdx-components.jsx      # Mapeo global de componentes MDX
+├── public/                     # Archivos estáticos
+├── next.config.mjs             # Configuración de Next.js
+├── package.json
+└── jsconfig.json               # Alias de rutas (@/*)
+\end{lstlisting}
+
+% =====================================================
+\section{Sistema de Routing (App Router)}
+% =====================================================
+
+El proyecto utiliza el \textbf{App Router} de Next.js 15, con generación estática (\texttt{generateStaticParams}) para todas las páginas de contenido.
+
+\subsection{Convenciones de Rutas}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{ll}
+\toprule
+\textbf{Ruta} & \textbf{Descripción} \\
+\midrule
+\texttt{/} & Página principal \\
+\texttt{/inacap} & Lista de asignaturas INACAP \\
+\texttt{/inacap/[courseId]} & Detalle de asignatura \\
+\texttt{/inacap/[courseId]/[slug]} & Lección específica \\
+\texttt{/bootcamp} & Cursos de bootcamp \\
+\texttt{/bootcamp/[courseId]/[slug]} & Clase de bootcamp \\
+\texttt{/elearning/[courseId]/[slug]} & Clase de e-learning \\
+\texttt{/[idioma]/[courseId]/[slug]} & Lección de idioma \\
+\texttt{/leetcode} & Lista de problemas \\
+\texttt{/leetcode/[problemId]} & Solución de problema \\
+\texttt{/codevault} & Colección de algoritmos \\
+\texttt{/portfolio} & Portafolio personal \\
+\bottomrule
+\end{tabular}
+\caption{Mapa de rutas del sitio}
+\end{table}
+
+\subsection{Patrón de Generación Estática}
+
+Todas las páginas de contenido usan el patrón de generación estática en build time:
+
+\begin{lstlisting}[language=JavaScript, caption={Patrón de generación estática típico}]
+// src/app/inacap/[courseId]/[slug]/page.jsx
+
+export const dynamicParams = false; // 404 para rutas no generadas
+
+export async function generateStaticParams() {
+  return getAllLessonPaths('inacap'); // Escanea filesystem
+}
+
+export default async function LessonPage({ params }) {
+  const { courseId, slug } = params;
+  const { default: Content } =
+    await import(`@/content/inacap/${courseId}/${slug}.mdx`);
+
+  return (
+    <CustomMDXProvider>
+      <Content />
+    </CustomMDXProvider>
+  );
+}
+\end{lstlisting}
+
+Con \texttt{dynamicParams = false}, cualquier ruta no generada en build time retorna un 404 automáticamente.
+
+\subsection{Grupo de Rutas: Idiomas}
+
+Los idiomas usan un \textbf{Route Group} (\texttt{(idiomas)/}) que permite agrupar varias rutas bajo un layout compartido sin afectar la URL:
+
+\begin{lstlisting}[language=bash]
+src/app/(idiomas)/
+├── chino/[courseId]/[slug]/
+├── ingles/[courseId]/[slug]/
+├── japones/[courseId]/[slug]/
+├── aleman/[courseId]/[slug]/
+├── coreano/[courseId]/[slug]/
+└── ruso/[courseId]/[slug]/
+\end{lstlisting}
+
+% =====================================================
+\section{Configuración del Proyecto}
+% =====================================================
+
+\subsection{next.config.mjs}
+
+\begin{lstlisting}[language=JavaScript, caption={next.config.mjs}]
+import createMDX from '@next/mdx';
+import remarkGfm from 'remark-gfm';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
+
+const withMDX = createMDX({
+  extension: /\.mdx?$/,
+  options: {
+    remarkPlugins: [remarkGfm, remarkMath],
+    rehypePlugins: [rehypeKatex],
+  },
+});
+
+const nextConfig = {
+  pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
+  images: {
+    remotePatterns: [{
+      protocol: 'https',
+      hostname: 'kapowaz.github.io',
+      pathname: '/square-flags/flags/**',
+    }],
+  },
+};
+
+export default withMDX(nextConfig);
+\end{lstlisting}
+
+Los plugins configurados son:
+\begin{itemize}
+  \item \textbf{remark-gfm}: Soporte de tablas, listas de tareas y otras extensiones de GitHub Flavored Markdown
+  \item \textbf{remark-math}: Detecta bloques de sintaxis matemática (\texttt{\$...\$} y \texttt{\$\$...\$\$})
+  \item \textbf{rehype-katex}: Convierte la sintaxis matemática detectada en HTML renderizado con KaTeX
+\end{itemize}
+
+\subsection{jsconfig.json --- Alias de Rutas}
+
+\begin{lstlisting}[language=JavaScript, caption={jsconfig.json}]
+{
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  }
+}
+\end{lstlisting}
+
+El alias \texttt{@/*} mapea a \texttt{./src/*}, permitiendo imports limpios como:
+
+\begin{lstlisting}[language=JavaScript]
+import { usePagination } from '@/hooks/usePagination';
+import { buildLessonLink } from '@/utils/linkBuilder';
+import styles from '@/shared/layout.module.css';
+\end{lstlisting}
+
+\subsection{Scripts NPM}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{ll}
+\toprule
+\textbf{Script} & \textbf{Comando} \\
+\midrule
+\texttt{npm run dev} & Inicia servidor de desarrollo \\
+\texttt{npm run build} & Genera build de producción (estático) \\
+\texttt{npm run start} & Inicia servidor de producción \\
+\texttt{npm run lint} & Ejecuta ESLint \\
+\bottomrule
+\end{tabular}
+\caption{Scripts disponibles}
+\end{table}
+
+% =====================================================
+\section{Sistema de Temas (Dark/Light Mode)}
+% =====================================================
+
+El sistema de temas opera directamente sobre las clases CSS del elemento \texttt{<html>}, sin usar Context API ni variables de estado global.
+
+\subsection{Clases de Tema}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{ll}
+\toprule
+\textbf{Clase CSS} & \textbf{Estado} \\
+\midrule
+\texttt{dark-mode} & Modo oscuro por preferencia del sistema \\
+\texttt{dark-mode-override} & Modo oscuro forzado por el usuario \\
+\texttt{light-mode-override} & Modo claro forzado por el usuario \\
+(sin clase) & Modo claro por defecto del sistema \\
+\bottomrule
+\end{tabular}
+\caption{Clases de control de tema}
+\end{table}
+
+\subsection{Flujo de Inicialización}
+
+La lógica de inicialización vive en el \texttt{RootLayout} (con directiva \texttt{'use client'}):
+
+\begin{lstlisting}[language=JavaScript, caption={Inicialización del tema en layout.js}]
+useEffect(() => {
+  const savedTheme = localStorage.getItem('theme');
+  const prefersDark =
+    window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+  document.documentElement.classList.remove(
+    'dark-mode', 'dark-mode-override', 'light-mode-override'
+  );
+
+  if (savedTheme === 'dark') {
+    document.documentElement.classList.add('dark-mode-override');
+  } else if (savedTheme === 'light') {
+    document.documentElement.classList.add('light-mode-override');
+  } else if (prefersDark) {
+    document.documentElement.classList.add('dark-mode');
+  }
+}, []);
+\end{lstlisting}
+
+\subsection{Persistencia}
+
+La preferencia de tema se almacena en \texttt{localStorage} con clave \texttt{'theme'}. El \texttt{CustomMDXProvider} observa cambios en las clases del \texttt{<html>} mediante un \texttt{MutationObserver} para actualizar estilos inline de componentes MDX.
+
+% =====================================================
+\section{Flujo de Datos General}
+% =====================================================
+
+El flujo de datos del proyecto sigue un patrón unidireccional de tres capas:
+
+\begin{enumerate}
+  \item \textbf{Capa de Datos} (\texttt{src/data/}): Archivos JS que definen metadatos de cursos (títulos, links, estructura de módulos)
+  \item \textbf{Capa de Utilidades} (\texttt{src/utils/}): Funciones que parsean los datos y escanean el filesystem para generar rutas
+  \item \textbf{Capa de Presentación} (\texttt{src/app/} + \texttt{src/components/}): Páginas Next.js y componentes React que consumen los datos
+\end{enumerate}
+
+\begin{lstlisting}[language=bash, caption={Flujo de datos simplificado}]
+data/inacap/ti3v53.js          # Define estructura del curso
+  └─> utils/contentUtils.js    # getLessonSlugs() escanea filesystem
+        └─> app/inacap/[courseId]/[slug]/page.jsx
+              └─> generateStaticParams()  # Pre-genera todas las rutas
+                    └─> import('@/content/inacap/...')  # Carga MDX
+\end{lstlisting}
+
+% =====================================================
+\section{Conclusiones de Arquitectura}
+% =====================================================
+
+La arquitectura de SaukCode.cl está optimizada para:
+
+\begin{itemize}
+  \item \textbf{Rendimiento}: Generación estática completa en build time; no hay peticiones al servidor en tiempo de ejecución para el contenido
+  \item \textbf{Escalabilidad de contenido}: Agregar nuevas lecciones solo requiere crear archivos MDX; el sistema las detecta automáticamente
+  \item \textbf{Mantenibilidad}: Separación clara entre datos, utilidades y presentación
+  \item \textbf{Experiencia de usuario}: Animaciones fluidas con Framer Motion, temas persistentes, navegación sin recarga completa
+\end{itemize}
+
+\vspace{1cm}
+\begin{center}
+\rule{8cm}{0.4pt}\\[0.3cm]
+{\small\color{codegray} SaukCode.cl --- Documentación Técnica Vol. I\\
+Arquitectura y Stack Tecnológico}
+\end{center}
+
+\end{document}

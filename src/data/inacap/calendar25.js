@@ -627,6 +627,81 @@ export const calendar25 = [
     titulo: "[TI3V53] Control 09",
     description: "Arquitectura Multi Cloud"
   },
+// ----- [FVIE02] Innovación y Emprendimiento II -----
+  {
+    id: 105,
+    fecha: "2026-6-10",
+    titulo: "[FVIE01] Evaluación 01",
+    description: "Innovación y Emprendimiento II"
+  },
+  {
+    id: 106,
+    fecha: "2026-7-1",
+    titulo: "[FVIE01] Evaluación 02",
+    description: "Innovación y Emprendimiento II"
+  },
+  {
+    id: 107,
+    fecha: "2026-7-20",
+    titulo: "[FVIE01] Evaluación 03",
+    description: "Innovación y Emprendimiento II"
+  },
+  {
+    id: 108,
+    fecha: "2026-7-25",
+    titulo: "[FVIE01] Evaluación 04",
+    description: "Innovación y Emprendimiento II"
+  },
+// ----- [TI3V52] Redes de Datos -----
+  {
+    id: 109,
+    fecha: "2026-6-4",
+    titulo: "[TI3V52] Evaluación 01",
+    description: "Redes de Datos"
+  },
+  {
+    id: 110,
+    fecha: "2026-6-25",
+    titulo: "[TI3V52] Evaluación 02",
+    description: "Redes de Datos"
+  },
+  {
+    id: 111,
+    fecha: "2026-7-20",
+    titulo: "[TI3V52] Evaluación 03",
+    description: "Redes de Datos"
+  },
+  {
+    id: 112,
+    fecha: "2026-7-23",
+    titulo: "[TI3V52] Evaluación 04",
+    description: "Redes de Datos"
+  },
+// ----- [CVCD01] Cálculo Diferencial -----
+  {
+    id: 113,
+    fecha: "2026-6-11",
+    titulo: "[CVCD01] Evaluación 01",
+    description: "Cálculo Diferencial"
+  },
+  {
+    id: 114,
+    fecha: "2026-7-2",
+    titulo: "[CVCD01] Evaluación 02",
+    description: "Cálculo Diferencial"
+  },
+  {
+    id: 115,
+    fecha: "2026-7-9",
+    titulo: "[CVCD01] Evaluación 03",
+    description: "Cálculo Diferencial"
+  },
+  {
+    id: 116,
+    fecha: "2026-7-22",
+    titulo: "[CVCD01] Evaluación 04",
+    description: "Cálculo Diferencial"
+  },
 
 ];
 export default calendar25;

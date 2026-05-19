@@ -5,7 +5,52 @@ import { useRouter, usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import styles from './Navbar.module.css';
-import { menuOverlay, menuSlide, menuItemVariants, staggerContainer } from '@/utils/animations';
+import { menuOverlay, menuSlide, menuItemVariants } from '@/utils/animations';
+
+const MenuIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+    fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <line x1="3" y1="12" x2="21" y2="12" />
+    <line x1="3" y1="6" x2="21" y2="6" />
+    <line x1="3" y1="18" x2="21" y2="18" />
+  </svg>
+);
+
+const CloseIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+    fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <line x1="18" y1="6" x2="6" y2="18" />
+    <line x1="6" y1="6" x2="18" y2="18" />
+  </svg>
+);
+
+const ThemeToggleComponent = ({ darkMode, onToggle }) => (
+  <label className={styles.themeToggle}>
+    <svg className={darkMode ? styles.iconInactive : styles.iconActive}
+      xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+      fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="12" cy="12" r="5" />
+      <path d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" />
+    </svg>
+    <input type="checkbox" checked={darkMode} onChange={onToggle} className={styles.toggleInput} />
+    <span className={styles.toggleSlider}></span>
+    <svg className={darkMode ? styles.iconActive : styles.iconInactive}
+      xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+      fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </svg>
+  </label>
+);
+
+const mobileMenuContainerVariants = {
+  initial: {},
+  animate: {
+    transition: { staggerChildren: 0.1, delayChildren: 0.2 },
+  },
+  exit: {
+    transition: { staggerChildren: 0.05, staggerDirection: -1 },
+  },
+};
 
 const Navbar = () => {
   const router = useRouter();
@@ -40,37 +85,21 @@ const Navbar = () => {
     return prefersDark;
   };
 
-  // Detectar el tema inicial y cambios + manejar el overflow del body
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      // Configuración del tema
-      const initialDarkMode = checkTheme();
-      setDarkMode(initialDarkMode);
-      setMounted(true);
+    setDarkMode(checkTheme());
+    setMounted(true);
 
-      // Observar cambios en las clases
-      const observer = new MutationObserver(() => {
-        const newDarkMode = checkTheme();
-        setDarkMode(newDarkMode);
-      });
+    const observer = new MutationObserver(() => setDarkMode(checkTheme()));
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['class'],
+    });
+    return () => observer.disconnect();
+  }, []);
 
-      observer.observe(document.documentElement, {
-        attributes: true,
-        attributeFilter: ['class']
-      });
-
-      // Manejar el overflow del body basado en mobileMenuOpen
-      if (mobileMenuOpen) {
-        document.body.style.overflow = 'hidden';
-      } else {
-        document.body.style.overflow = '';
-      }
-
-      return () => {
-        observer.disconnect();
-        document.body.style.overflow = '';
-      };
-    }
+  useEffect(() => {
+    document.body.style.overflow = mobileMenuOpen ? 'hidden' : '';
+    return () => { document.body.style.overflow = ''; };
   }, [mobileMenuOpen]);
 
   // Función para cambiar el tema
@@ -153,98 +182,6 @@ const Navbar = () => {
     );
   }
 
-  // Componentes para los iconos
-  const MenuIcon = () => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round">
-      <line x1="3" y1="12" x2="21" y2="12" />
-      <line x1="3" y1="6" x2="21" y2="6" />
-      <line x1="3" y1="18" x2="21" y2="18" />
-    </svg>
-  );
-
-  const CloseIcon = () => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round">
-      <line x1="18" y1="6" x2="6" y2="18" />
-      <line x1="6" y1="6" x2="18" y2="18" />
-    </svg>
-  );
-
-  // Componente del ThemeToggle para reutilizarlo
-  const ThemeToggleComponent = () => (
-    <label className={styles.themeToggle}>
-      <svg
-        className={darkMode ? styles.iconInactive : styles.iconActive}
-        xmlns="http://www.w3.org/2000/svg"
-        width="20"
-        height="20"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round">
-        <circle cx="12" cy="12" r="5" />
-        <path
-          d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" />
-      </svg>
-      <input
-        type="checkbox"
-        checked={darkMode}
-        onChange={toggleTheme}
-        className={styles.toggleInput}
-      />
-      <span className={styles.toggleSlider}></span>
-      <svg
-        className={darkMode ? styles.iconActive : styles.iconInactive}
-        xmlns="http://www.w3.org/2000/svg"
-        width="20"
-        height="20"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round">
-        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-      </svg>
-    </label>
-  );
-
-  // Variantes para los items del menú móvil con stagger
-  const mobileMenuContainerVariants = {
-    initial: {},
-    animate: {
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2,
-      },
-    },
-    exit: {
-      transition: {
-        staggerChildren: 0.05,
-        staggerDirection: -1,
-      },
-    },
-  };
-
   return (
     <div className={styles.navbar}>
       <div className={styles.container}>
@@ -294,7 +231,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <ThemeToggleComponent />
+            <ThemeToggleComponent darkMode={darkMode} onToggle={toggleTheme} />
           </li>
         </ul>
 
@@ -369,7 +306,7 @@ const Navbar = () => {
                     className={styles.mobileThemeToggle}
                     variants={menuItemVariants}
                   >
-                    <ThemeToggleComponent />
+                    <ThemeToggleComponent darkMode={darkMode} onToggle={toggleTheme} />
                   </motion.div>
                 </motion.div>
               </motion.div>

@@ -18,30 +18,30 @@ export const useTableSort = (data, defaultSort = { key: 'id', direction: 'asc' }
       const [idA, problemA] = a;
       const [idB, problemB] = b;
       
+      const asc = sortConfig.direction === 'asc';
       switch (sortConfig.key) {
-        case 'id':
-          const numA = parseInt(idA.replace(/\D/g, ''));
-          const numB = parseInt(idB.replace(/\D/g, ''));
-          return sortConfig.direction === 'asc' ? numA - numB : numB - numA;
-        
+        case 'id': {
+          const numA = parseInt(idA.replace(/\D/g, ''), 10);
+          const numB = parseInt(idB.replace(/\D/g, ''), 10);
+          return asc ? numA - numB : numB - numA;
+        }
         case 'title':
-          return sortConfig.direction === 'asc'
+          return asc
             ? problemA.title.localeCompare(problemB.title)
             : problemB.title.localeCompare(problemA.title);
-        
-        case 'topics':
+        case 'topics': {
           const firstTopicA = problemA.topics?.[0] || '';
           const firstTopicB = problemB.topics?.[0] || '';
-          return sortConfig.direction === 'asc'
+          return asc
             ? firstTopicA.localeCompare(firstTopicB)
             : firstTopicB.localeCompare(firstTopicA);
-        
-        case 'difficulty':
-          const difficultyOrder = { 'Easy': 1, 'Medium': 2, 'Hard': 3 };
-          const orderA = difficultyOrder[problemA.difficulty] || 0;
-          const orderB = difficultyOrder[problemB.difficulty] || 0;
-          return sortConfig.direction === 'asc' ? orderA - orderB : orderB - orderA;
-        
+        }
+        case 'difficulty': {
+          const order = { 'Easy': 1, 'Medium': 2, 'Hard': 3 };
+          const orderA = order[problemA.difficulty] || 0;
+          const orderB = order[problemB.difficulty] || 0;
+          return asc ? orderA - orderB : orderB - orderA;
+        }
         default:
           return 0;
       }

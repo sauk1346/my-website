@@ -37,7 +37,9 @@
       "Bash(python3 -m ensurepip --upgrade)",
       "Bash(npm --version)",
       "Bash(npm list *)",
-      "Bash(node *)"
+      "Bash(node *)",
+      "Bash(npm run *)",
+      "Bash(python3 *)"
     ],
     "deny": [],
     "ask": []

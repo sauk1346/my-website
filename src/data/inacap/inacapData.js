@@ -219,7 +219,7 @@ export const subjects = [
       semester: 5,
       year: 2026,
       category: 'database',
-      status: 'current',
+      status: 'completed',
       href: '/inacap/ti3v51'
     },
     { 
@@ -228,7 +228,9 @@ export const subjects = [
       semester: 5,
       year: 2026,
       category:'systems',
-      status: 'pending'
+      status: 'current',
+      href: '/inacap/ti3v52'
+
     },
     {
       code: 'TI3V53',
@@ -236,7 +238,7 @@ export const subjects = [
       semester: 5,
       year: 2026,
       category: 'systems',
-      status: 'current',
+      status: 'completed',
       href: '/inacap/ti3v53'
     },
     {
@@ -245,7 +247,8 @@ export const subjects = [
       semester: 5,
       year: 2026,
       category: 'business',
-      status: 'pending'
+      status: 'current',
+      href: '/inacap/fvie02'
     },
     {
       code: 'AVGP01',
@@ -253,7 +256,7 @@ export const subjects = [
       semester: 5,
       year: 2026,
       category: 'business',
-      status: 'current',
+      status: 'completed',
       href: '/inacap/avgp01'
     },
     {
@@ -262,7 +265,9 @@ export const subjects = [
       semester: 5,
       year: 2026,
       category: 'math',
-      status: 'pending'
+      status: 'current',
+      href: '/inacap/cvcd01'
+
     },
   
     // Semestre 6 - 2026

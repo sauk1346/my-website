@@ -56,7 +56,7 @@ const Inacap = () => {
 
         {/* Sección del calendario */}
         <section className={styles.section}>
-          <h2 className={styles.title}>Calendario 2025</h2>
+          <h2 className={styles.title}>Calendario 2026</h2>
           <div className={styles.calendarPlaceholder}>
             <Calendar eventos={calendar25} />
           </div>

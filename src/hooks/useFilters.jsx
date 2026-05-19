@@ -1,109 +1,75 @@
 import { useState, useMemo } from 'react';
 
-export const useFilters = (data, options = {}) => {
+const difficultyMap = {
+  'Easy': 'Fácil',
+  'Medium': 'Medio',
+  'Hard': 'Difícil',
+};
+
+const reverseDifficultyMap = {
+  'Fácil': 'Easy',
+  'Medio': 'Medium',
+  'Difícil': 'Hard',
+};
+
+const normalizeText = (text) =>
+  text.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+
+export const useFilters = (data) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [topicFilter, setTopicFilter] = useState('');
   const [difficultyFilter, setDifficultyFilter] = useState('');
-  const [categoryFilter, setCategoryFilter] = useState(''); // Nuevo filtro opcional
+  const [categoryFilter, setCategoryFilter] = useState('');
 
-  // Difficulty mapping
-  const difficultyMap = {
-    'Easy': 'Fácil',
-    'Medium': 'Medio',
-    'Hard': 'Difícil'
-  };
-
-  const reverseDifficultyMap = {
-    'Fácil': 'Easy',
-    'Medio': 'Medium',
-    'Difícil': 'Hard'
-  };
-
-  // Function to normalize text for better searching
-  const normalizeText = (text) => {
-    return text
-      .toLowerCase()
-      .normalize('NFD')
-      .replace(/[\u0300-\u036f]/g, '');
-  };
-
-  // Extract all unique topics
   const allTopics = useMemo(() => {
     if (!data) return [];
     const topicsSet = new Set();
     Object.values(data).forEach(item => {
-      if (item.topics) {
-        item.topics.forEach(topic => {
-          topicsSet.add(topic);
-        });
-      }
+      item.topics?.forEach(topic => topicsSet.add(topic));
     });
     return Array.from(topicsSet).sort();
   }, [data]);
 
-  // Extract all unique categories (nuevo)
   const allCategories = useMemo(() => {
     if (!data) return [];
     const categoriesSet = new Set();
     Object.values(data).forEach(item => {
-      if (item.categories) {
-        item.categories.forEach(category => {
-          categoriesSet.add(category);
-        });
-      }
+      item.categories?.forEach(category => categoriesSet.add(category));
     });
     return Array.from(categoriesSet).sort();
   }, [data]);
 
-  // Filter function
-  const filterData = useMemo(() => {
+  const filteredData = useMemo(() => {
     if (!data) return [];
     return Object.entries(data).filter(([id, item]) => {
-      // Filter by search term
       if (searchTerm) {
-        const normalizedSearchTerm = normalizeText(searchTerm);
+        const normalizedSearch = normalizeText(searchTerm);
+        const searchWords = normalizedSearch.split(/\s+/).filter(w => w.length > 0);
         const normalizedTitle = normalizeText(item.title || '');
         const normalizedId = normalizeText(id);
-        
+
         const matchesAnyTopic = item.topics?.some(topic => {
           const normalizedTopic = normalizeText(topic);
-          if (normalizedTopic.includes(normalizedSearchTerm)) {
-            return true;
-          }
-          const searchWords = normalizedSearchTerm.split(/\s+/).filter(word => word.length > 0);
-          if (searchWords.length > 1) {
-            return searchWords.every(word => normalizedTopic.includes(word));
-          }
-          return false;
-        }) || false;
+          if (searchWords.length > 1) return searchWords.every(w => normalizedTopic.includes(w));
+          return normalizedTopic.includes(normalizedSearch);
+        }) ?? false;
 
         const matchesSearch =
-          normalizedTitle.includes(normalizedSearchTerm) ||
-          normalizedId.includes(normalizedSearchTerm) ||
+          normalizedTitle.includes(normalizedSearch) ||
+          normalizedId.includes(normalizedSearch) ||
           matchesAnyTopic;
 
-        if (!matchesSearch) {
-          return false;
-        }
+        if (!matchesSearch) return false;
       }
 
-      // Filter by topic
-      if (topicFilter && !item.topics?.includes(topicFilter)) {
-        return false;
-      }
+      if (topicFilter && !item.topics?.includes(topicFilter)) return false;
 
-      // Filter by difficulty
       if (difficultyFilter) {
         const targetDifficulty = reverseDifficultyMap[difficultyFilter] || difficultyFilter;
-        if (item.difficulty !== targetDifficulty) {
-          return false;
-        }
+        if (item.difficulty !== targetDifficulty) return false;
       }
 
-      // Filter by category (nuevo - opcional)
-      if (categoryFilter && !item.categories?.includes(categoryFilter)) {
-        return false;
-      }
+      if (categoryFilter && !item.categories?.includes(categoryFilter)) return false;
 
       return true;
     });
@@ -113,32 +79,27 @@ export const useFilters = (data, options = {}) => {
     setSearchTerm('');
     setTopicFilter('');
     setDifficultyFilter('');
-    setCategoryFilter(''); // Limpiar también categoría
+    setCategoryFilter('');
   };
 
   const hasActiveFilters = searchTerm || topicFilter || difficultyFilter || categoryFilter;
 
   return {
-    // State
     searchTerm,
     topicFilter,
     difficultyFilter,
-    categoryFilter, // Nuevo
-    // Setters
+    categoryFilter,
     setSearchTerm,
     setTopicFilter,
     setDifficultyFilter,
-    setCategoryFilter, // Nuevo
-    // Computed values
+    setCategoryFilter,
     allTopics,
-    allCategories, // Nuevo
-    filteredData: filterData,
+    allCategories,
+    filteredData,
     hasActiveFilters,
-    // Actions
     clearFilters,
-    // Utilities
     difficultyMap,
     reverseDifficultyMap,
-    normalizeText
+    normalizeText,
   };
 };

@@ -9,6 +9,8 @@ export { Blockquote } from './layout/Blockquote';
 export { default as Solution } from './layout/Solution';
 export { Quiz, QuizQuestion } from './layout/QuizComponent';
 export { default as MultiColumn } from './layout/MultiColumn';
+export { default as Callout } from './layout/Callout';
+export { Tabs, Tab } from './layout/Tabs';
 // Code components
 export { PreBlock, Code } from './code/CodeComponents';
 export { TerminalOutput } from './code/TerminalOutput';

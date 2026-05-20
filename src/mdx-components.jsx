@@ -12,6 +12,8 @@ Blockquote,
 Solution,
 Quiz, QuizQuestion,
 MultiColumn,
+Callout,
+Tabs, Tab,
 // Code components
 PreBlock, Code,
 TerminalOutput,
@@ -61,6 +63,9 @@ SmartFigure,
 FigureProvider,
 FigureRef,
 MultiColumn,
+Callout,
+Tabs,
+Tab,
 // Permitir componentes personalizados adicionales
  ...components,
  };

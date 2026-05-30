@@ -87,8 +87,8 @@ const courseData = {
             date: 'Mié 27, May 2026', 
             description: [
                 {
-                    text: '',
-                    href: ''
+                    text: 'Taller Repaso Funciones',
+                    href: 'clase03a'
                 }
             ]
         },
@@ -98,9 +98,35 @@ const courseData = {
             date: 'Jue 28, May 2026', 
             description: [
                 {
+                    text: 'AT01: Primeros Cálculos de Límites',
+                    href: 'docs/at01.pdf'
+                },
+                {
+                    text: 'SM01: Costos de Producción',
+                    href: 'clase03b'
+                },
+            ]
+        },
+        { 
+            week: '03', 
+            class: '05', 
+            date: 'Mié 03, Jun 2026', 
+            description: [
+                {
                     text: '',
                     href: ''
-                }
+                },
+            ]
+        },
+        { 
+            week: '03', 
+            class: '06', 
+            date: 'Jue 04, Jun 2026', 
+            description: [
+                {
+                    text: '',
+                    href: ''
+                },
             ]
         },
     ],

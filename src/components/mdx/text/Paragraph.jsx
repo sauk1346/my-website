@@ -6,3 +6,12 @@ export const Paragraph = ({ children, ...props }) => (
     {children}
   </p>
 );
+
+export const P = ({ children, indent = 1 }) => (
+  <div
+    className={styles.pContainer}
+    data-indent={Math.min(Math.max(indent, 1), 4)}
+  >
+    {children}
+  </div>
+);

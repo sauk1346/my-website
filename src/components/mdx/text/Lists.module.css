@@ -192,6 +192,89 @@
   padding-left: 1.75rem;
 }
 
+/* ==================== SUBLISTA INDEPENDIENTE ==================== */
+/* Uso: <List level={N} indent={M}> donde N,M son 1-4 (default: 2) */
+/* El componente siempre establece data-level — no se usan catch-alls */
+
+/* --- nivel 1 (disc) --- */
+.listContainer[data-level="1"] .list              { list-style-type: disc;   padding-left: var(--spacing-xl); color: #374151; }
+.listContainer[data-level="1"] .list .list        { list-style-type: circle; padding-left: 1.75rem; color: #4b5563; }
+.listContainer[data-level="1"] .list .list .list  { list-style-type: square; padding-left: 1.5rem;  color: #6b7280; }
+.listContainer[data-level="1"] .list .list .list .list { list-style-type: none; padding-left: 1.25rem; color: #9ca3af; }
+.listContainer[data-level="1"] .list .list .list .list .listItem::before {
+  content: "–"; color: #d1d5db; font-weight: bold;
+  display: inline-block; width: 1em; margin-left: -1em; font-size: 1.1em;
+}
+
+/* --- nivel 2 (circle) — default --- */
+.listContainer[data-level="2"] .list              { list-style-type: circle; padding-left: 1.75rem; color: #4b5563; }
+.listContainer[data-level="2"] .list .list        { list-style-type: square; padding-left: 1.5rem;  color: #6b7280; }
+.listContainer[data-level="2"] .list .list .list  { list-style-type: none;   padding-left: 1.25rem; color: #9ca3af; }
+.listContainer[data-level="2"] .list .list .list .listItem::before {
+  content: "–"; color: #d1d5db; font-weight: bold;
+  display: inline-block; width: 1em; margin-left: -1em; font-size: 1.1em;
+}
+
+/* --- nivel 3 (square) --- */
+.listContainer[data-level="3"] .list              { list-style-type: square; padding-left: 1.5rem;  color: #6b7280; }
+.listContainer[data-level="3"] .list .list        { list-style-type: none;   padding-left: 1.25rem; color: #9ca3af; }
+.listContainer[data-level="3"] .list .list .listItem::before {
+  content: "–"; color: #d1d5db; font-weight: bold;
+  display: inline-block; width: 1em; margin-left: -1em; font-size: 1.1em;
+}
+
+/* --- nivel 4 (dash) --- */
+.listContainer[data-level="4"] .list              { list-style-type: none;   padding-left: 1.25rem; color: #9ca3af; }
+.listContainer[data-level="4"] .list .listItem::before {
+  content: "–"; color: #d1d5db; font-weight: bold;
+  display: inline-block; width: 1em; margin-left: -1em; font-size: 1.1em;
+}
+
+/* Posición horizontal según nivel de indentación (independiente del estilo de viñeta) */
+/* indent=1: sin indentación extra                                                      */
+/* indent=2: alineado con subitems de nivel 2 (spacing-lg + spacing-xl)                */
+/* indent=3: alineado con subitems de nivel 3 (+ spacing-lg + 1.75rem)                 */
+/* indent=4: alineado con subitems de nivel 4 (+ spacing-lg + 1.5rem)                  */
+.listContainer[data-indent="1"] { margin-left: 0; }
+.listContainer[data-indent="2"] { margin-left: calc(var(--spacing-lg) + var(--spacing-xl)); }
+.listContainer[data-indent="3"] { margin-left: calc(var(--spacing-lg) + var(--spacing-xl) + var(--spacing-lg) + 1.75rem); }
+.listContainer[data-indent="4"] { margin-left: calc(var(--spacing-lg) + var(--spacing-xl) + var(--spacing-lg) * 2 + 1.75rem + 1.5rem); }
+
+/* Espaciado de ítems — aplica a todos los niveles */
+.listContainer .list { margin-top: var(--spacing-sm); margin-bottom: 0.75rem; }
+.listContainer .list .listItem { margin-bottom: 0.5rem; }
+
+/* Reducción de tamaño solo para niveles 2+ (nivel 1 usa tamaño base) */
+.listContainer[data-level="2"] .list .listItem,
+.listContainer[data-level="3"] .list .listItem,
+.listContainer[data-level="4"] .list .listItem { font-size: 0.95em; }
+
+/* Ítems doblemente anidados */
+.listContainer .list .list .listItem { margin-bottom: 0.25rem; font-size: 0.9em; }
+
+/* Modo oscuro — misma cascada de colores que las listas regulares */
+:global(html.dark-mode) .listContainer[data-level="1"] .list,
+:global(html.dark-mode-override) .listContainer[data-level="1"] .list                         { color: #d1d5db; }
+:global(html.dark-mode) .listContainer[data-level="1"] .list .list,
+:global(html.dark-mode-override) .listContainer[data-level="1"] .list .list                   { color: #9ca3af; }
+:global(html.dark-mode) .listContainer[data-level="1"] .list .list .list,
+:global(html.dark-mode-override) .listContainer[data-level="1"] .list .list .list             { color: #6b7280; }
+
+:global(html.dark-mode) .listContainer[data-level="2"] .list,
+:global(html.dark-mode-override) .listContainer[data-level="2"] .list                         { color: #9ca3af; }
+:global(html.dark-mode) .listContainer[data-level="2"] .list .list,
+:global(html.dark-mode-override) .listContainer[data-level="2"] .list .list                   { color: #6b7280; }
+
+:global(html.dark-mode) .listContainer[data-level="3"] .list,
+:global(html.dark-mode-override) .listContainer[data-level="3"] .list                         { color: #6b7280; }
+
+:global(html.dark-mode) .listContainer[data-level="4"] .list,
+:global(html.dark-mode-override) .listContainer[data-level="4"] .list                         { color: #9ca3af; }
+:global(html.dark-mode) .listContainer .list .list .list .listItem::before,
+:global(html.dark-mode-override) .listContainer .list .list .list .listItem::before,
+:global(html.dark-mode) .listContainer[data-level="1"] .list .list .list .list .listItem::before,
+:global(html.dark-mode-override) .listContainer[data-level="1"] .list .list .list .list .listItem::before { color: #4b5563; }
+
 /* ==================== RESPONSIVO ==================== */
 
 @media (max-width: 768px) {

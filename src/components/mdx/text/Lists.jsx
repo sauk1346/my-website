@@ -18,3 +18,13 @@ export const ListItem = ({ children, ...props }) => (
     {children}
   </li>
 );
+
+export const List = ({ children, level = 2, indent }) => (
+  <div
+    className={styles.listContainer}
+    data-level={Math.min(Math.max(level, 1), 4)}
+    data-indent={Math.min(Math.max(indent ?? level, 1), 4)}
+  >
+    {children}
+  </div>
+);

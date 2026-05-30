@@ -3,8 +3,8 @@ import 'katex/dist/katex.min.css';
 import {
 // Text components
 H1, H2, H3,
-Paragraph,
-UnorderedList, OrderedList, ListItem,
+Paragraph, P,
+UnorderedList, OrderedList, ListItem, List,
 // Layout components
 Container,
 SmartTable,
@@ -66,6 +66,8 @@ MultiColumn,
 Callout,
 Tabs,
 Tab,
+List,
+P,
 // Permitir componentes personalizados adicionales
  ...components,
  };

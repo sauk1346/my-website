@@ -76,8 +76,8 @@ const courseData = {
             date: 'Mié 20, May 2026', 
             description: [
                 {
-                    text: 'no asistí',
-                    strikethrough: true
+                    text: 'Toolkit Unidad 01',
+                    href: 'docs/Toolkit-U1.pdf'
                 }
             ]
         },
@@ -87,8 +87,8 @@ const courseData = {
             date: 'Lun 25, May 2026', 
             description: [
                 {
-                    text: '',
-                    href: ''
+                    text: 'Idea de la Solución',
+                    href: 'clase03'
                 }
             ]
         },
@@ -96,6 +96,32 @@ const courseData = {
             week: '02', 
             class: '04', 
             date: 'Mié 27, May 2026', 
+            description: [
+                {
+                    text: 'Preguntas Exploratorias',
+                    href: 'clase04'
+                },
+                {
+                    text: 'Avance01.pdf',
+                    href: 'docs/avance01.pdf'
+                },
+            ]
+        },
+        { 
+            week: '03', 
+            class: '05', 
+            date: 'Lun 01, Jun 2026', 
+            description: [
+                {
+                    text: '',
+                    href: ''
+                }
+            ]
+        },
+        { 
+            week: '03', 
+            class: '06', 
+            date: 'Mié 03, Jun 2026', 
             description: [
                 {
                     text: '',
@@ -112,8 +138,8 @@ const courseData = {
             date: 'Vie 22, May 2026', 
             description: [
                 {
-                    text: 'Entrevista a usuario',
-                    href: '',
+                    text: 'Entrevista a Usuarios',
+                    href: 'lectura01',
                 }
             ]
         },
@@ -123,8 +149,8 @@ const courseData = {
             date: 'Vie 22, May 2026', 
             description: [
                 {
-                    text: 'Elaboración de cuestionarios',
-                    href: '',
+                    text: 'Elaboración de Cuestionarios',
+                    href: 'lectura02',
                 }
             ]
         },
@@ -134,8 +160,8 @@ const courseData = {
             date: 'Vie 22, May 2026', 
             description: [
                 {
-                    text: 'Entrevista a experto',
-                    href: '',
+                    text: 'Entrevista a Expertos',
+                    href: 'lectura03',
                 }
             ]
         },
@@ -161,6 +187,73 @@ const courseData = {
                 }
             ]
         },
+        { 
+            week: '02', 
+            lecture: '06', 
+            date: 'Vie 29, May 2026', 
+            description: [
+                {
+                    text: 'Procesamiento de hallazgos',
+                    href: '',
+                }
+            ]
+        },
+        { 
+            week: '02', 
+            lecture: '07', 
+            date: 'Vie 29, May 2026', 
+            description: [
+                {
+                    text: 'Redefinición del desafío',
+                    href: '',
+                }
+            ]
+        },
+        { 
+            week: '03', 
+            lecture: '08', 
+            date: 'Vie 05, Jun 2026', 
+            description: [
+                {
+                    text: 'Estudio Comparativo de Antecedentes',
+                    href: '',
+                }
+            ]
+        },
+        { 
+            week: '03', 
+            lecture: '09', 
+            date: 'Vie 05, Jun 2026', 
+            description: [
+                {
+                    text: 'Formulario de Requerimientos',
+                    href: '',
+                }
+            ]
+        },
+        { 
+            week: '03', 
+            lecture: '10', 
+            date: 'Vie 05, Jun 2026', 
+            description: [
+                {
+                    text: 'Generación Metáforas',
+                    href: '',
+                }
+            ]
+        },
+        { 
+            week: '03', 
+            lecture: '11', 
+            date: 'Vie 05, Jun 2026', 
+            description: [
+                {
+                    text: 'Brainstorming',
+                    href: '',
+                }
+            ]
+        },
+        
     ]
 };
 

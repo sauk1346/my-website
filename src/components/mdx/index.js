@@ -1,7 +1,7 @@
 // Text components
 export { H1, H2, H3 } from './text/Headings';
-export { Paragraph } from './text/Paragraph';
-export { UnorderedList, OrderedList, ListItem } from './text/Lists';
+export { Paragraph, P } from './text/Paragraph';
+export { UnorderedList, OrderedList, ListItem, List } from './text/Lists';
 // Layout components
 export { Container } from './layout/Container';
 export { default as SmartTable } from './layout/SmartTable';

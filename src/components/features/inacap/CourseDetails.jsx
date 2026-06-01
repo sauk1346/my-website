@@ -1,13 +1,14 @@
 'use client'
 
 import React, { useState, useEffect } from 'react';
-import { Calendar, Book, CheckSquare, User, Grid3x3, Monitor, FileText, Clock, Percent } from 'lucide-react';
+import { Calendar, Book, CheckSquare, User, Grid3x3, Monitor, FileText, Clock, Percent, Layers } from 'lucide-react';
 import { SmartLink } from '@/components/ui/SmartLink';
 import { buildCourseResourceLink } from '@/utils/linkBuilder';
+import Link from 'next/link';
 import ProfessorCard from './ProfessorCard';
 import styles from './CourseDetails.module.css';
 
-const CourseDetails = ({ 
+const CourseDetails = ({
   courseCode,
   courseTitle,
   courseDescription,
@@ -15,7 +16,9 @@ const CourseDetails = ({
   unitsData,
   evaluationsData,
   classData = [],
-  lectureData = []
+  lectureData = [],
+  flashcardTopics = [],
+  courseId = '',
 }) => {
   
   // Helper function para renderizar un elemento individual de contenido
@@ -97,6 +100,7 @@ const CourseDetails = ({
   // Determinamos qué pestañas están disponibles
   const hasClasses = Array.isArray(classData) && classData.length > 0;
   const hasLectures = Array.isArray(lectureData) && lectureData.length > 0;
+  const hasFlashcards = Array.isArray(flashcardTopics) && flashcardTopics.length > 0;
   
   // Configuramos la pestaña activa inicial
   const [activeTab, setActiveTab] = useState('general');
@@ -109,7 +113,10 @@ const CourseDetails = ({
     if (activeTab === 'lecturas' && !hasLectures) {
       setActiveTab('general');
     }
-  }, [activeTab, hasClasses, hasLectures]);
+    if (activeTab === 'flashcards' && !hasFlashcards) {
+      setActiveTab('general');
+    }
+  }, [activeTab, hasClasses, hasLectures, hasFlashcards]);
 
   // Agrupamos clases por semana (solo si hay clases)
   const classesByWeek = hasClasses 
@@ -193,12 +200,22 @@ const CourseDetails = ({
           )}
           
           {hasLectures && (
-            <button 
+            <button
               className={`${styles.tabButton} ${activeTab === 'lecturas' ? styles.activeTab : ''}`}
               onClick={() => setActiveTab('lecturas')}
             >
               <Book size={18} />
               <span>Lecturas</span>
+            </button>
+          )}
+
+          {hasFlashcards && (
+            <button
+              className={`${styles.tabButton} ${activeTab === 'flashcards' ? styles.activeTab : ''}`}
+              onClick={() => setActiveTab('flashcards')}
+            >
+              <Layers size={18} />
+              <span>Flashcards</span>
             </button>
           )}
         </div>
@@ -376,6 +393,30 @@ const CourseDetails = ({
                   </div>
                 ))}
             </div>
+          </div>
+        )}
+        {/* Pestaña Flashcards */}
+        {activeTab === 'flashcards' && hasFlashcards && (
+          <div className={styles.tabContent}>
+            <h2 className={styles.sectionTitle}>Flashcards</h2>
+            {flashcardTopics.map(topic => (
+              <div key={topic.slug} className={styles.flashcardTopic}>
+                <h3 className={styles.flashcardTopicName}>{topic.name}</h3>
+                <div className={styles.flashcardDecks}>
+                  {topic.decks.map(deck => (
+                    <Link
+                      key={deck.id}
+                      href={`/inacap/${courseId}/flashcards/${topic.slug}/${deck.number}`}
+                      className={styles.flashcardDeckCard}
+                    >
+                      <Layers size={18} />
+                      <span>Mazo {deck.number}</span>
+                      <span className={styles.flashcardDeckCount}>{deck.cardCount} cartas</span>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         )}
       </div>

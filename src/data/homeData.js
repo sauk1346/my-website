@@ -33,6 +33,12 @@ export const homeData = {
         description: "Academias",
         image: "/logos/bootcamp.png",
         link: "/bootcamp"
+      },
+      flashcards: {
+        name: "Flashcards",
+        description: "Estudio por tarjetas",
+        image: "/logos/flashcards.svg",
+        link: "/flashcards"
       }
     }
   },

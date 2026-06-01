@@ -2,6 +2,7 @@ import React from 'react';
 import { notFound } from 'next/navigation';
 import CourseDetails from '@/components/features/inacap/CourseDetails';
 import { getCourseData, getAllCourseIds } from '@/utils/courseUtils';
+import { getTopicsByCourseId } from '@/lib/flashcards';
 
 export async function generateStaticParams() {
     const courseIds = getAllCourseIds();
@@ -18,5 +19,7 @@ export default async function CoursePage({ params }) {
         notFound();
     }
 
-    return <CourseDetails {...courseData} />;
+    const flashcardTopics = getTopicsByCourseId(courseId);
+
+    return <CourseDetails {...courseData} flashcardTopics={flashcardTopics} courseId={courseId} />;
 }

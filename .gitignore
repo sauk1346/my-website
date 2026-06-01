@@ -51,3 +51,7 @@ next-env.d.ts
 
 # claude
 .claude/
+# SQLite
+flashcards.db
+flashcards.db-shm
+flashcards.db-wal

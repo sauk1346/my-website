@@ -65,9 +65,13 @@ const courseData = {
             date: 'Lun 18, May 2026', 
             description: [
                 {
-                    text: 'no asistí',
-                    strikethrough: true
-                }
+                    text: 'Descripción Asignatura',
+                    href: 'docs/clase01.pdf'
+                },
+                {
+                    text: 'Direccionamiento IP',
+                    href: 'docs/direccionamiento-IP.pdf'
+                },
             ]
         },
         { 
@@ -87,15 +91,42 @@ const courseData = {
             date: 'Lun 25, May 2026', 
             description: [
                 {
-                    text: '',
+                    text: 'Modelo OSI y Modelo TCP/IP',
+                    href: 'docs/osi-tcp-ip.pdf'
+                },
+                {
+                    text: 'Red LAN y configuraciones básicas - Ejercicio 02',
                     href: ''
-                }
+                },
+
             ]
         },
         { 
             week: '02', 
             class: '04', 
             date: 'Jue 28, May 2026', 
+            description: [
+                {
+                    text: 'Red LAN y configuraciones básicas - Ejercicio 03',
+                    href: ''
+                }
+            ]
+        },
+        { 
+            week: '03', 
+            class: '05', 
+            date: 'Lun 01, Jun 2026', 
+            description: [
+                {
+                    text: '',
+                    href: ''
+                }
+            ]
+        },
+        { 
+            week: '03', 
+            class: '06', 
+            date: 'Jue 04, Jun 2026', 
             description: [
                 {
                     text: '',
@@ -111,7 +142,40 @@ const courseData = {
             date: 'Sáb 23, May 2026', 
             description: [
                 {
+                    text: 'Lectura dirigida: Estándares IEEE 802.3 y IEEE 802.11',
+                    href: 'docs/lectura01.pdf',
+                }
+            ]
+        },
+        { 
+            week: '01', 
+            lecture: '02', 
+            date: 'Sáb 23, May 2026', 
+            description: [
+                {
                     text: 'Estándares IEEE 802.3 y IEEE 802.11',
+                    href: 'lectura02',
+                }
+            ]
+        },
+        { 
+            week: '02', 
+            lecture: '03', 
+            date: 'Sáb 30, May 2026', 
+            description: [
+                {
+                    text: 'Comandos Básicos y Seguridad en Routers y Switches Cisco',
+                    href: 'lectura03',
+                }
+            ]
+        },
+        { 
+            week: '03', 
+            lecture: '04', 
+            date: 'Sáb 06, Jun 2026', 
+            description: [
+                {
+                    text: 'Fundamentos y protocolos IP',
                     href: '',
                 }
             ]

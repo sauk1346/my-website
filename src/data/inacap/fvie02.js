@@ -172,7 +172,7 @@ const courseData = {
             description: [
                 {
                     text: 'Observación no participante',
-                    href: '',
+                    href: 'lectura04',
                 }
             ]
         },
@@ -183,7 +183,7 @@ const courseData = {
             description: [
                 {
                     text: 'Estudio Comparativo de Referentes',
-                    href: '',
+                    href: 'lectura05',
                 }
             ]
         },

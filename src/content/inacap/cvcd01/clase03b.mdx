@@ -25,6 +25,47 @@ donde $x$ representa el número de artículos producidos, en cientos de miles, y
 />
 
 2. ¿Qué puedes concluir respecto de la producción y los costos de la empresa?
+
+<Solution title="Solución Actividad 01">
+
+1. **Completa la siguiente tabla:**
+
+<SmartFigure
+	src="/inacap/cvcd01/images/fig45.png"
+	alt="tabla a completar"
+	caption="tabla a completar"
+	size="large"
+/>
+
+<List level={1} indent={2}>
+- Se utiliza la **hoja de cálculo** de GeoGebra
+</List>
+
+<SmartFigure
+	id="act01-pregunta01"
+	src="/inacap/cvcd01/images/fig47.png"
+	alt="tabla con datos"
+	caption="tabla con datos"
+	size="large"
+/>
+
+---
+2. **¿Qué puedes concluir respecto de la producción y los costos de la empresa?**
+
+$$
+\begin{align*}
+C(x) &= \frac{4x^2-100}{x-5}=\frac{4(x^2-25)}{x-5}=\frac{4(x+5)(x-5)}{x-5}=4(x+5)\\[10pt]
+&=4x+20
+\end{align*}
+$$
+
+<P indent={2}>
+- El costo tiene una **relación lineal creciente** con la producción
+- Por cada unidad producida el costo **aumenta en 4**
+- La empresa tiene un **costo base de 20** independiente de la cantidad producida
+</P>
+
+</Solution>
 ---
 ## Actividad 02
 Teniendo en cuenta la función de costo anterior, responde:
@@ -39,7 +80,69 @@ Teniendo en cuenta la función de costo anterior, responde:
 	size="large"
 />
 
-3. ¿Que se puede concluir? ¿Cuál es el costo total de producir $500000$ artículos?
+3. ¿Que se puede concluir? ¿Cuál es el costo total de producir $5$ artículos?
+
+<Solution title="Solución Actividad 02">
+
+1. **¿Cuál es el costo total de producir $500000$ artículos?**
+
+<SmartFigure
+	id="act02-pregunta01"
+	src="/inacap/cvcd01/images/fig48.png"
+	alt="cálculo C(500000)"
+	caption="cálculo C(500000)"
+	size="large"
+/>
+---
+2. **¿Cuáles son los valores de costo total que completan las siguientes tablas?**
+
+<SmartFigure
+	src="/inacap/cvcd01/images/fig46.png"
+	alt="tabla a completar"
+	caption="tablas a completar"
+	size="large"
+/>
+
+<List level={1} indent={2}>
+- Se utiliza la **hoja de cálculo** de GeoGebra
+</List>
+
+<SmartFigure
+	id="act02-pregunta02"
+	src="/inacap/cvcd01/images/fig49.png"
+	alt="tabla con datos"
+	caption="tabla con datos"
+	size="large"
+/>
+
+---
+3. **¿Que se puede concluir? ¿Cuál es el costo total de producir $5$ artículos?**
+
+
+<List level={1} indent={2}>
+- Desde la izquierda $(4.9, 4.99, 4.999...) \rightarrow C(x)$ se acerca a 40
+- Desde la derecha $(5.1, 5.01, 5.001...) \rightarrow C(x)$ se acerca a 40
+</List>
+
+<Callout type="warning" title="Discontinuidad removible">
+- $C(5)$ no está definida
+- El denominador y numerador se anulan mutuamente $\frac{0}{0}$
+- La función "no pasa por ese único punto" $(5,C(5))$
+- Es posible "reparar", es decir, remover esa discontinuidad, simplificando la función
+$$
+\begin{align*}
+C(x)&=\frac{4x^2-100}{x-5}=4x+20\\[10pt]
+C(5)&=4\cdot 5 + 20 = 20+20 = 40
+\end{align*}
+$$
+</Callout>
+
+<P indent={2}>
+$\therefore$ El costo total $C(x)$ de producir $5$ artículos es $40$
+</P>
+
+</Solution>
+
 ---
 ## Actividad 03
 

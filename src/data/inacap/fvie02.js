@@ -194,7 +194,7 @@ const courseData = {
             description: [
                 {
                     text: 'Procesamiento de hallazgos',
-                    href: '',
+                    href: 'lectura06',
                 }
             ]
         },

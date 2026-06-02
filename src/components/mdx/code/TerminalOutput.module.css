@@ -41,6 +41,23 @@
   border-color: #444;
 }
 
+/* Comentarios: líneas que empiezan con # */
+.comment {
+  color: #6b7280;
+  font-style: italic;
+}
+
+:global(html.dark-mode) .comment,
+:global(html.dark-mode-override) .comment {
+  color: #9ca3af;
+}
+
+.terminalWithBg .comment {
+  color: #4ade80;
+  opacity: 0.6;
+  font-style: italic;
+}
+
 /* Scrollbars para ambas clases */
 .terminal::-webkit-scrollbar,
 .terminalWithBg::-webkit-scrollbar {

@@ -52,10 +52,12 @@ const courseData = {
             evaluationNumber: 4,
             date: 'Jue 23, Jul 2026',
             weighting: '25%',
-            description: {
-                text: '',
-                href: '',
-            }
+            description: [
+                    {
+                    text: 'Evaluación diagnóstica',
+                    href: 'diagnostica',
+                },
+            ]
         },
     ],
     classData: [
@@ -96,7 +98,7 @@ const courseData = {
                 },
                 {
                     text: 'Red LAN y configuraciones básicas - Ejercicio 02',
-                    href: ''
+                    href: 'ejercicio02'
                 },
 
             ]

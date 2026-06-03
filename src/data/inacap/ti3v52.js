@@ -110,7 +110,7 @@ const courseData = {
             description: [
                 {
                     text: 'Red LAN y configuraciones básicas - Ejercicio 03',
-                    href: ''
+                    href: 'ejercicio03'
                 }
             ]
         },

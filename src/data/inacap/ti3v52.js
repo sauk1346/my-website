@@ -120,8 +120,8 @@ const courseData = {
             date: 'Lun 01, Jun 2026', 
             description: [
                 {
-                    text: '',
-                    href: ''
+                    text: 'TCP/IP - Ejercicio 04',
+                    href: 'ejercicio04'
                 }
             ]
         },
@@ -131,7 +131,7 @@ const courseData = {
             date: 'Jue 04, Jun 2026', 
             description: [
                 {
-                    text: '',
+                    text: 'Evaluación 01',
                     href: ''
                 }
             ]

@@ -28,8 +28,19 @@ function renderWithComments(children) {
   });
 }
 
-export function TerminalOutput({ children, withBg = false, className = "" }) {
+export function TerminalOutput({ children, withBg = false, className = "", caption }) {
   const terminalClass = withBg ? styles.terminalWithBg : styles.terminal;
+
+  if (caption) {
+    return (
+      <figure className={styles.figure}>
+        <pre className={`${terminalClass} ${styles.withCaption} ${className}`}>
+          {renderWithComments(children)}
+        </pre>
+        <figcaption className={styles.caption}>{caption}</figcaption>
+      </figure>
+    );
+  }
 
   return (
     <pre className={`${terminalClass} ${className}`}>

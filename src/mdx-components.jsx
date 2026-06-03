@@ -21,6 +21,7 @@ TerminalOutput,
 SmartLink,
 CustomIframe,
 SmartFigure, FigureProvider, FigureRef,
+TableProvider, TableRef,
 } from './components/mdx';
 
 export function useMDXComponents(components) {
@@ -62,6 +63,8 @@ SmartLink,
 SmartFigure,
 FigureProvider,
 FigureRef,
+TableProvider,
+TableRef,
 MultiColumn,
 Callout,
 Tabs,

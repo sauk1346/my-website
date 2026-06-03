@@ -221,6 +221,10 @@
   font-size: 0.875rem;
 }
 
+.content :global(figure pre) {
+  margin-bottom: 0 !important;
+}
+
 .content :global(code) {
   font-size: 0.875rem;
 }

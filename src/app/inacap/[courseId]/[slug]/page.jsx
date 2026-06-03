@@ -1,7 +1,7 @@
 import React from 'react';
 import { notFound } from 'next/navigation';
 import { CustomMDXProvider } from '@/components/providers/CustomMDXProvider';
-import { FigureProvider } from '@/components/mdx';
+import { FigureProvider, TableProvider } from '@/components/mdx';
 import { getAllInacapLessonPaths, getCourseData } from '@/utils/courseUtils';
 
 /**
@@ -42,7 +42,9 @@ export default async function LessonPage({ params }) {
         return (
             <CustomMDXProvider>
                 <FigureProvider>
-                    <MDXContent />
+                    <TableProvider>
+                        <MDXContent />
+                    </TableProvider>
                 </FigureProvider>
             </CustomMDXProvider>
         );

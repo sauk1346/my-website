@@ -41,6 +41,29 @@
   border-color: #444;
 }
 
+/* Wrapper cuando hay caption */
+.figure {
+  margin: 0;
+}
+
+.withCaption {
+  margin-bottom: 0 !important;
+}
+
+.caption {
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+  color: #6b7280;
+  text-align: center;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+:global(html.dark-mode) .caption,
+:global(html.dark-mode-override) .caption {
+  color: #9ca3af;
+}
+
 /* Comentarios: líneas que empiezan con # */
 .comment {
   color: #6b7280;

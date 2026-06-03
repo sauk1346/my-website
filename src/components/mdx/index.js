@@ -4,7 +4,7 @@ export { Paragraph, P } from './text/Paragraph';
 export { UnorderedList, OrderedList, ListItem, List } from './text/Lists';
 // Layout components
 export { Container } from './layout/Container';
-export { default as SmartTable } from './layout/SmartTable';
+export { default as SmartTable, TableProvider, TableRef } from './layout/SmartTable';
 export { Blockquote } from './layout/Blockquote';
 export { default as Solution } from './layout/Solution';
 export { Quiz, QuizQuestion } from './layout/QuizComponent';

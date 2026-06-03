@@ -1,17 +1,69 @@
-import React from 'react';
+'use client'
+import React, { useState, useEffect, createContext, useContext } from 'react';
 import katex from 'katex';
 import 'katex/dist/katex.min.css';
 import styles from './SmartTable.module.css';
 
-const SmartTable = ({ 
+const TableContext = createContext()
+
+export function TableProvider({ children }) {
+  const [tables, setTables] = useState({})
+
+  const registerTable = (id) => {
+    setTables(prev => {
+      if (prev[id]) return prev
+      const existingNumbers = Object.values(prev)
+      const nextNumber = existingNumbers.length > 0 ? Math.max(...existingNumbers) + 1 : 1
+      return { ...prev, [id]: nextNumber }
+    })
+  }
+
+  return (
+    <TableContext.Provider value={{ registerTable, tables }}>
+      {children}
+    </TableContext.Provider>
+  )
+}
+
+export function TableRef({ id }) {
+  const tableContext = useContext(TableContext)
+  const tableNumber = tableContext?.tables[id]
+
+  if (!tableNumber) {
+    return <span className={styles.tableRefError}>[Tabla ?]</span>
+  }
+
+  return (
+    <a href={`#${id}`} className={styles.tableRef}>
+      Tabla {tableNumber}
+    </a>
+  )
+}
+
+const SmartTable = ({
   tableLayout = 'fixed', // 'fixed', 'auto', 'mixed'
   columnWidths = [], // Solo para tableLayout='mixed'
   lists = {},
   headers = [],
   rows = [],
   className = '',
-  ...props 
+  id,
+  caption,
+  autoNumber = true,
+  ...props
 }) => {
+  const tableContext = useContext(TableContext)
+
+  useEffect(() => {
+    if (autoNumber && id && tableContext) {
+      tableContext.registerTable(id)
+    }
+  }, [id, autoNumber, tableContext])
+
+  const tableNumber = tableContext?.tables[id]
+  const fullCaption = autoNumber && tableNumber
+    ? `Tabla ${tableNumber}${caption ? `: ${caption}` : ''}`
+    : caption
   
   const processContent = (content) => {
     if (typeof content !== 'string') {
@@ -360,11 +412,14 @@ const SmartTable = ({
   };
 
   return (
-    <div className={styles.tableWrapper}>
-      <table 
+    <div id={id} className={styles.tableWrapper}>
+      <table
         className={getTableClasses()}
         {...props}
       >
+        {fullCaption && (
+          <caption className={styles.caption}>{fullCaption}</caption>
+        )}
         {/* HEADERS */}
         {headers.length > 0 && (
           <thead>

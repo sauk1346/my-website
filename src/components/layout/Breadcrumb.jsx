@@ -1,12 +1,15 @@
 'use client';
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import style from './Breadcrumb.module.css';
 
 const Breadcrumb = () => {
   const pathname = usePathname();
-  const pathnames = pathname?.split('/').filter((x) => x);
+  const pathnames = useMemo(
+    () => pathname?.split('/').filter((x) => x) ?? [],
+    [pathname]
+  );
   
   // Estado para controlar la visualización comprimida en móviles
   const [isCompressed, setIsCompressed] = useState(false);
@@ -18,28 +21,24 @@ const Breadcrumb = () => {
   // Comprobar si el breadcrumb es demasiado ancho para el contenedor
   useEffect(() => {
     const checkOverflow = () => {
-      if (breadcrumbRef.current) {
-        const { scrollWidth, clientWidth } = breadcrumbRef.current;
-        const isActuallyOverflowing = scrollWidth > clientWidth;
-        setIsOverflowing(isActuallyOverflowing);
-        
-        // Solo comprimir automáticamente si realmente no hay espacio suficiente
-        if (isActuallyOverflowing && window.innerWidth <= 768) {
-          setIsCompressed(true);
-        } else {
-          setIsCompressed(false);
-        }
-      }
+      if (!breadcrumbRef.current) return;
+      const { scrollWidth, clientWidth } = breadcrumbRef.current;
+      const overflowing = scrollWidth > clientWidth;
+      setIsOverflowing((prev) => (prev === overflowing ? prev : overflowing));
+      setIsCompressed((prev) => {
+        const next = overflowing && window.innerWidth <= 768;
+        return prev === next ? prev : next;
+      });
     };
     
     // Comprobar al cargar y al cambiar el tamaño de la ventana
     checkOverflow();
     window.addEventListener('resize', checkOverflow);
-    
+
     return () => {
       window.removeEventListener('resize', checkOverflow);
     };
-  }, [pathname, pathnames]);
+  }, [pathname]);
   
   // Determinar qué elementos mostrar en modo comprimido
   const renderBreadcrumbItems = () => {

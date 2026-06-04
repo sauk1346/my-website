@@ -111,6 +111,15 @@
   background-color: rgba(0, 255, 0, 0.5);
 }
 
+@media (max-width: 768px) {
+  .terminal,
+  .terminalWithBg {
+    margin: 0.75rem 0;
+    touch-action: pan-x;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
 /* Scrollbars en modo oscuro */
 :global(html.dark-mode) .terminal::-webkit-scrollbar-thumb,
 :global(html.dark-mode-override) .terminal::-webkit-scrollbar-thumb {

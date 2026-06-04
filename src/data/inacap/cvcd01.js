@@ -113,7 +113,15 @@ const courseData = {
             date: 'Mié 03, Jun 2026', 
             description: [
                 {
-                    text: '',
+                    text: 'AT02: Otros cálculos de límites y asíntotas',
+                    href: 'docs/at02.pdf'
+                },
+                {
+                    text: 'ARPA 1: Ahorro para el departamento',
+                    href: ''
+                },
+                {
+                    text: 'SM02: Ley de enfriamiento y asíntotas',
                     href: ''
                 },
             ]
@@ -124,9 +132,13 @@ const courseData = {
             date: 'Jue 04, Jun 2026', 
             description: [
                 {
-                    text: '',
-                    href: ''
+                    text: 'AT03: Continuidad',
+                    href: 'docs/at03.pdf'
                 },
+                {
+                    text: 'SM03: Manteniendo la continuidad en la producción',
+                    href: ''
+                },  
             ]
         },
     ],

@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import { getDeckByTopicAndNumber, getCardsByDeckId, getTopicsByCourseId } from '@/lib/flashcards';
 import { getAllCourseIds } from '@/utils/courseUtils';
+import { renderMdxCards } from '@/lib/renderMdxCards';
 import FlashcardStudy from '@/components/features/flashcards/FlashcardStudy';
 
 export async function generateStaticParams() {
@@ -34,8 +35,9 @@ export default async function InacapStudyPage({ params }) {
   if (!result) notFound();
 
   const { topic, deck } = result;
-  const cards = getCardsByDeckId(deck.id);
-  if (!cards.length) notFound();
+  const rawCards = getCardsByDeckId(deck.id);
+  if (!rawCards.length) notFound();
+  const cards = await renderMdxCards(rawCards);
 
   return (
     <FlashcardStudy

@@ -5,7 +5,7 @@
   font-family: "Menlo", "Monaco", "Courier New", "Consolas", monospace;
   font-size: 0.9rem;
   line-height: 1.4;
-  margin: calc(-1 * var(--spacing-md)) 1.7rem var(--spacing-xl);
+  margin: 1.75rem 1.7rem;
   padding: var(--spacing-md) 0;
   background: transparent;
   border: none;
@@ -20,6 +20,7 @@
 .terminalWithBg {
   composes: terminal;
   line-height: 1.2; /* Ajuste específico para la variante con bg */
+  margin: 1.75rem 1.7rem;
   background-color: #1a1a1a;
   color: #00ff00;
   border: 1px solid #333;

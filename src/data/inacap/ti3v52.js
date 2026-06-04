@@ -109,9 +109,13 @@ const courseData = {
             date: 'Jue 28, May 2026', 
             description: [
                 {
+                    text: 'Comandos IOS para Configuración de Redes',
+                    href: 'docs/comandos-ios.pdf'
+                },
+                {
                     text: 'Red LAN y configuraciones básicas - Ejercicio 03',
                     href: 'ejercicio03'
-                }
+                },
             ]
         },
         { 
@@ -132,6 +136,28 @@ const courseData = {
             description: [
                 {
                     text: 'Evaluación 01',
+                    href: ''
+                }
+            ]
+        },
+        { 
+            week: '04', 
+            class: '07', 
+            date: 'Lun 08, Jun 2026', 
+            description: [
+                {
+                    text: '',
+                    href: ''
+                }
+            ]
+        },
+        { 
+            week: '04', 
+            class: '08', 
+            date: 'Jue 11, Jun 2026', 
+            description: [
+                {
+                    text: '',
                     href: ''
                 }
             ]

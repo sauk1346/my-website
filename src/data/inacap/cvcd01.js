@@ -118,7 +118,7 @@ const courseData = {
                 },
                 {
                     text: 'ARPA 1: Ahorro para el departamento',
-                    href: ''
+                    href: 'clase04a'
                 },
                 {
                     text: 'SM02: Ley de enfriamiento y asíntotas',
@@ -139,6 +139,28 @@ const courseData = {
                     text: 'SM03: Manteniendo la continuidad en la producción',
                     href: ''
                 },  
+            ]
+        },
+        { 
+            week: '04', 
+            class: '07', 
+            date: 'Mié 10, Jun 2026', 
+            description: [
+                {
+                    text: '',
+                    href: ''
+                }, 
+            ]
+        },
+        { 
+            week: '04', 
+            class: '08', 
+            date: 'Jue 11, Jun 2026', 
+            description: [
+                {
+                    text: '',
+                    href: ''
+                }, 
             ]
         },
     ],

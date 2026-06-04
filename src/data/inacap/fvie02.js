@@ -113,8 +113,8 @@ const courseData = {
             date: 'Lun 01, Jun 2026', 
             description: [
                 {
-                    text: '',
-                    href: ''
+                    text: 'no asistí',
+                    strikethrough: true
                 }
             ]
         },
@@ -122,6 +122,28 @@ const courseData = {
             week: '03', 
             class: '06', 
             date: 'Mié 03, Jun 2026', 
+            description: [
+                {
+                    text: 'no asistí',
+                    strikethrough: true
+                }
+            ]
+        },
+        { 
+            week: '04', 
+            class: '07', 
+            date: 'Lun 08, Jun 2026', 
+            description: [
+                {
+                    text: '',
+                    href: ''
+                }
+            ]
+        },
+        { 
+            week: '04', 
+            class: '08', 
+            date: 'Mié 10, Jun 2026', 
             description: [
                 {
                     text: '',
@@ -205,7 +227,7 @@ const courseData = {
             description: [
                 {
                     text: 'Redefinición del desafío',
-                    href: '',
+                    href: 'lectura07',
                 }
             ]
         },

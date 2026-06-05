@@ -26,8 +26,8 @@ const courseData = {
             date: 'Jue 04, Jun 2026',
             weighting: '15%',
             description: {
-                text: '',
-                href: '',
+                text: 'Evaluación 01: Red LAN y configuraciones básicas',
+                href: 'eval01',
             }
         },
         {
@@ -135,8 +135,8 @@ const courseData = {
             date: 'Jue 04, Jun 2026', 
             description: [
                 {
-                    text: 'Evaluación 01',
-                    href: ''
+                    text: 'Evaluación 01: Red LAN y configuraciones básicas',
+                    href: 'eval01'
                 }
             ]
         },

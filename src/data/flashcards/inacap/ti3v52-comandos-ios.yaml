@@ -3,6 +3,7 @@ slug: ti3v52-comandos-ios
 courseId: ti3v52
 layout: default
 cards:
+  # tarjeta01
   - front: |
       ¿Cómo acceder al modo privilegiado?
     back: |
@@ -15,6 +16,7 @@ cards:
       Switch#`}
       </TerminalOutput>
 
+  # tarjeta02
   - front: |
       ¿Cómo entrar al modo de configuración global?
     back: |
@@ -27,6 +29,7 @@ cards:
       Switch(config)#`}
       </TerminalOutput>
 
+  # tarjeta03
   - front: |
       ¿Cómo entrar a la interfaz virtual de administración de un switch?
     back: |
@@ -39,6 +42,7 @@ cards:
       Switch(config-if)#`}
       </TerminalOutput>
 
+  # tarjeta04
   - front: |
       ¿Cómo asignar una IP y máscara a una interfaz?
     back: |
@@ -50,6 +54,7 @@ cards:
       {`Switch(config-if)# ip address 172.20.30.2 255.255.255.0`}
       </TerminalOutput>
 
+  # tarjeta05
   - front: |
       ¿Cómo activar una interfaz en Cisco IOS?
     back: |
@@ -61,6 +66,7 @@ cards:
       {`Switch(config-if)# no shutdown`}
       </TerminalOutput>
 
+  # tarjeta06
   - front: |
       ¿Cómo salir de un submodo de configuración?
     back: |
@@ -73,6 +79,7 @@ cards:
       Switch(config)#`}
       </TerminalOutput>
 
+  # tarjeta07
   - front: |
       ¿Cómo definir el gateway por defecto en un switch?
     back: |
@@ -84,6 +91,7 @@ cards:
       {`Switch(config)# ip default-gateway 172.20.30.1`}
       </TerminalOutput>
 
+  # tarjeta08
   - front: |
       ¿Cómo asignar una IP a una interfaz física de un router?
     back: |
@@ -97,6 +105,7 @@ cards:
       Router(config-if)# no shutdown`}
       </TerminalOutput>
 
+  # tarjeta09
   - front: |
       ¿Cómo configurar múltiples interfaces en un router?
     back: |
@@ -114,6 +123,7 @@ cards:
       Router(config-if)# no shutdown`}
       </TerminalOutput>
 
+  # tarjeta10
   - front: |
       ¿Cuáles son las abreviaciones de interfaces más comunes en Cisco IOS?
     back: |
@@ -127,6 +137,7 @@ cards:
       Serial0/0/0         →  se0/0/0  o  s0/0/0`}
       </TerminalOutput>
 
+  # tarjeta11
   - front: |
       ¿Cómo cambiar el nombre de un router o switch?
     back: |
@@ -139,6 +150,7 @@ cards:
       ANTONIO(config)#`}
       </TerminalOutput>
 
+  # tarjeta12
   - front: |
       ¿Cómo asignar un nombre de dominio en Cisco IOS?
     back: |
@@ -150,6 +162,7 @@ cards:
       {`ANTONIO(config)# ip domain-name morales.cl`}
       </TerminalOutput>
 
+  # tarjeta13
   - front: |
       ¿Cómo crear un usuario local con contraseña cifrada?
     back: |
@@ -161,6 +174,7 @@ cards:
       {`ANTONIO(config)# username admin secret cisco-admin`}
       </TerminalOutput>
 
+  # tarjeta14
   - front: |
       ¿Cuál es la diferencia entre `enable password` y `enable secret`?
     back: |
@@ -172,6 +186,7 @@ cards:
       {`ANTONIO(config)# enable secret cisco-ena`}
       </TerminalOutput>
 
+  # tarjeta15
   - front: |
       ¿Cómo generar las claves RSA para habilitar SSH?
     back: |
@@ -184,6 +199,7 @@ cards:
       How many bits in the modulus [512]: 2048`}
       </TerminalOutput>
 
+  # tarjeta16
   - front: |
       ¿Cómo habilitar SSH versión 2?
     back: |
@@ -195,18 +211,31 @@ cards:
       {`ANTONIO(config)# ip ssh version 2`}
       </TerminalOutput>
 
+  # tarjeta17
   - front: |
-      ¿Cómo configurar el tiempo de inactividad y los reintentos de SSH?
+      ¿Cómo configurar el tiempo máximo de inactividad en SSH?
     back: |
-      Con `ip ssh time-out <segundos>` e `ip ssh authentication-retries <n>`
+      Con el comando `ip ssh time-out <segundos>`
 
       Ejemplo:
 
       <TerminalOutput withBg>
-      {`ANTONIO(config)# ip ssh time-out 60
-      ANTONIO(config)# ip ssh authentication-retries 2`}
+      {`ANTONIO(config)# ip ssh time-out 60`}
       </TerminalOutput>
 
+  # tarjeta18
+  - front: |
+      ¿Cómo configurar los intentos de autenticación en SSH?
+    back: |
+      Con el comando `ip ssh authentication-retries <n>`
+
+      Ejemplo:
+
+      <TerminalOutput withBg>
+      {`ANTONIO(config)# ip ssh authentication-retries 2`}
+      </TerminalOutput>
+  
+  # tarjeta19
   - front: |
       ¿Cómo restringir el acceso remoto solo a SSH en las líneas vty?
     back: |
@@ -221,6 +250,7 @@ cards:
       ANTONIO(config-line)# login local`}
       </TerminalOutput>
 
+  # tarjeta20
   - front: |
       ¿Qué hace `login local` en las líneas vty?
     back: |

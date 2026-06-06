@@ -275,6 +275,28 @@ const courseData = {
                 }
             ]
         },
+        { 
+            week: '04', 
+            lecture: '', 
+            date: 'Vie 12, Jun 2026', 
+            description: [
+                {
+                    text: '',
+                    href: '',
+                }
+            ]
+        },
+        { 
+            week: '05', 
+            lecture: '12', 
+            date: 'Vie 19, Jun 2026', 
+            description: [
+                {
+                    text: 'Prototipo',
+                    href: '',
+                }
+            ]
+        },
         
     ]
 };

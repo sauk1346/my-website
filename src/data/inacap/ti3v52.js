@@ -208,6 +208,17 @@ const courseData = {
                 }
             ]
         },
+        { 
+            week: '04', 
+            lecture: '05', 
+            date: 'Sáb 13, Jun 2026', 
+            description: [
+                {
+                    text: 'Clases, tipos y taller VLSM',
+                    href: '',
+                }
+            ]
+        },
     ]
 };
 

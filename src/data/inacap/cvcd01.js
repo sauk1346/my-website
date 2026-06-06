@@ -103,7 +103,7 @@ const courseData = {
                 },
                 {
                     text: 'SM01: Costos de Producción',
-                    href: 'clase03b'
+                    href: 'unit01-sm01'
                 },
             ]
         },
@@ -118,11 +118,11 @@ const courseData = {
                 },
                 {
                     text: 'ARPA 1: Ahorro para el departamento',
-                    href: 'clase04a'
+                    href: 'unit01-arpa01'
                 },
                 {
                     text: 'SM02: Ley de enfriamiento y asíntotas',
-                    href: ''
+                    href: 'unit01-sm02'
                 },
             ]
         },
@@ -134,6 +134,10 @@ const courseData = {
                 {
                     text: 'AT03: Continuidad',
                     href: 'docs/at03.pdf'
+                },
+                {
+                    text: 'ARPA 2: Ferrocarriles del Estado',
+                    href: ''
                 },
                 {
                     text: 'SM03: Manteniendo la continuidad en la producción',

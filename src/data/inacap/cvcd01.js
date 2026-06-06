@@ -137,7 +137,7 @@ const courseData = {
                 },
                 {
                     text: 'ARPA 2: Ferrocarriles del Estado',
-                    href: ''
+                    href: 'unit01-arpa02'
                 },
                 {
                     text: 'SM03: Manteniendo la continuidad en la producción',
@@ -162,7 +162,7 @@ const courseData = {
             date: 'Jue 11, Jun 2026', 
             description: [
                 {
-                    text: '',
+                    text: 'Evaluación 01',
                     href: ''
                 }, 
             ]

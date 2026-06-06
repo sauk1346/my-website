@@ -101,6 +101,16 @@
   transform: rotateY(180deg);
 }
 
+@keyframes flipToNext {
+  from { transform: rotateY(180deg); }
+  to   { transform: rotateY(360deg); }
+}
+
+.transitioning .cardInner {
+  animation: flipToNext 0.45s ease forwards;
+  transition: none;
+}
+
 .cardFront,
 .cardBack {
   position: absolute;

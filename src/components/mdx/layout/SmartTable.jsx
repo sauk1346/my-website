@@ -50,6 +50,7 @@ const SmartTable = ({
   id,
   caption,
   autoNumber = true,
+  rowHeaders = false, // primera columna como encabezado de fila
   ...props
 }) => {
   const tableContext = useContext(TableContext)
@@ -390,17 +391,21 @@ const SmartTable = ({
 
   const getTableClasses = () => {
     let classes = styles.table;
-    
+
     if (tableLayout === 'auto') {
       classes += ` ${styles.tableLayoutAuto}`;
     } else if (tableLayout === 'mixed') {
       classes += ` ${styles.tableLayoutMixed}`;
     }
-    
+
+    if (rowHeaders) {
+      classes += ` ${styles.rowHeaders}`;
+    }
+
     if (className) {
       classes += ` ${className}`;
     }
-    
+
     return classes;
   };
 
@@ -442,14 +447,21 @@ const SmartTable = ({
           <tbody>
             {rows.map((row, rowIndex) => (
               <tr key={rowIndex}>
-                {row.map((cell, cellIndex) => (
-                  <td 
-                    key={cellIndex}
-                    data-label={headers[cellIndex] || `Column ${cellIndex + 1}`}
-                  >
-                    {processContent(cell)}
-                  </td>
-                ))}
+                {row.map((cell, cellIndex) => {
+                  const label = headers[cellIndex] || `Column ${cellIndex + 1}`;
+                  if (rowHeaders && cellIndex === 0) {
+                    return (
+                      <th key={cellIndex} scope="row" data-label={label}>
+                        {processContent(cell)}
+                      </th>
+                    );
+                  }
+                  return (
+                    <td key={cellIndex} data-label={label}>
+                      {processContent(cell)}
+                    </td>
+                  );
+                })}
               </tr>
             ))}
           </tbody>

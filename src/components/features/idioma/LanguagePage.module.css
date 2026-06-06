@@ -54,15 +54,64 @@
   color: transparent;
 }
 
-/* Grid para las dos secciones */
-.grid {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: var(--spacing-2xl);
+/* Navegación por pestañas */
+.tabNavigation {
+  width: 100%;
   margin-top: var(--spacing-xl);
 }
 
-/* Títulos de las secciones */
+.tabButtons {
+  display: flex;
+  border-bottom: 1px solid #e2e8f0;
+  margin-bottom: var(--spacing-lg);
+  overflow-x: auto;
+}
+
+:global(html.dark-mode) .tabButtons,
+:global(html.dark-mode-override) .tabButtons {
+  border-bottom-color: #374151;
+}
+
+.tabButton {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: none;
+  border: none;
+  color: #4a4a4a;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+:global(html.dark-mode) .tabButton,
+:global(html.dark-mode-override) .tabButton {
+  color: #d1d5db;
+}
+
+.tabButton:hover {
+  color: #3b82f6;
+}
+
+.activeTab {
+  color: #3b82f6;
+  border-bottom: 2px solid #3b82f6;
+}
+
+:global(html.dark-mode) .activeTab,
+:global(html.dark-mode-override) .activeTab {
+  color: #60a5fa;
+  border-bottom-color: #60a5fa;
+}
+
+.tabContent {
+  width: 100%;
+}
+
+/* Títulos de las secciones (legacy, mantenido por compatibilidad) */
 .platformTitle {
   font-size: 1.5rem;
   font-weight: 600;
@@ -102,6 +151,7 @@
 .table {
   width: 100%;
   border-collapse: collapse;
+  table-layout: auto;
   background: white;
   border-radius: var(--radius-lg);
   overflow: hidden;
@@ -184,6 +234,13 @@
 :global(html.dark-mode) .table tbody tr:hover,
 :global(html.dark-mode-override) .table tbody tr:hover {
   background-color: #2d3748;
+}
+
+/* Primera columna: ancho mínimo al contenido */
+.table th:first-child,
+.table td:first-child {
+  width: 1%;
+  white-space: nowrap;
 }
 
 /* Estilo específico para las filas de la tabla */
@@ -311,11 +368,6 @@
   .title {
     font-size: 2rem;
     margin-bottom: var(--spacing-lg);
-  }
-  
-  .grid {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-xl);
   }
   
   .table {

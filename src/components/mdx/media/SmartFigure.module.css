@@ -5,6 +5,8 @@
    .figure {
     margin: var(--spacing-lg) 0;
     position: relative;
+    overflow-x: auto;
+    max-width: 100%;
   }
   
   .image {

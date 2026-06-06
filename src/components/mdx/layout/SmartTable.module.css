@@ -74,6 +74,24 @@
   }
   
   /* ================================
+     ROW HEADERS - primera columna destacada
+     ================================ */
+  .table.rowHeaders tbody th[scope="row"] {
+    background-color: #f3f4f6;
+    font-weight: 600;
+    color: #1f2937;
+    border-right: 2px solid #e2e8f0;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  }
+
+  :global(html.dark-mode) .table.rowHeaders tbody th[scope="row"],
+  :global(html.dark-mode-override) .table.rowHeaders tbody th[scope="row"] {
+    background-color: #374151;
+    color: #f9fafb;
+    border-right-color: #4b5563;
+  }
+
+  /* ================================
      CAPTION DE TABLA
      ================================ */
   .caption {
@@ -399,59 +417,3 @@
     }
   }
   
-  /* Pantallas muy pequeñas - Layout de cards */
-  @media (max-width: 480px) {
-    .table,
-    .table thead,
-    .table tbody,
-    .table th,
-    .table td,
-    .table tr {
-      display: block;
-    }
-    
-    .table thead tr {
-      position: absolute;
-      top: -9999px;
-      left: -9999px;
-    }
-    
-    .table tbody tr {
-      border: 1px solid #e5e7eb;
-      border-radius: 8px;
-      margin-bottom: 0.5rem;
-      padding: 0.5rem;
-      position: relative;
-      background: white;
-    }
-    
-    :global(html.dark-mode) .table tbody tr,
-    :global(html.dark-mode-override) .table tbody tr {
-      border-color: #374151;
-      background: #1e1e1e;
-    }
-    
-    .table tbody td {
-      border: none;
-      padding: 0.5rem 0;
-      position: relative;
-      padding-left: 30%;
-      background: transparent;
-    }
-    
-    .table tbody td:before {
-      content: attr(data-label) ": ";
-      position: absolute;
-      left: 6px;
-      width: 25%;
-      padding-right: 10px;
-      white-space: nowrap;
-      font-weight: 600;
-      color: #2563eb;
-    }
-    
-    :global(html.dark-mode) .table tbody td:before,
-    :global(html.dark-mode-override) .table tbody td:before {
-      color: #60a5fa;
-    }
-  }

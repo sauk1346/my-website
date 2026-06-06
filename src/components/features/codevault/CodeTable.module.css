@@ -13,7 +13,3 @@
 .code { composes: code from '/src/shared/table-base.module.css'; white-space: nowrap; }
 .courseLink { composes: courseLink from '/src/shared/table-base.module.css'; }
 
-/* Anchos de columnas */
-.table th:nth-child(1), .table td:nth-child(1) { width: 100px; min-width: 100px; }
-.table th:nth-child(2), .table td:nth-child(2) { width: auto; min-width: 200px; }
-.table th:nth-child(3), .table td:nth-child(3) { width: 120px; min-width: 120px; }

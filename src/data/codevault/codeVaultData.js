@@ -1,6 +1,7 @@
 export const codeVaultData = {
     dataStructures: {
       title: "Estructuras de Datos",
+      shortTitle: "Estructuras",
       headers: ['Material', 'Descripción'],
       data: [
         ['Arrays', 'estáticos y dinámicos'],
@@ -16,6 +17,7 @@ export const codeVaultData = {
   
     designTechniques: {
       title: "Técnicas de Diseño de Algoritmos",
+      shortTitle: "Técnicas",
       headers: ['Técnica', 'Descripción'],
       data: [
         ['Programación Dinámica', 'memoización, bottom-up, optimización de subproblemas'],
@@ -29,6 +31,7 @@ export const codeVaultData = {
   
     sortingAlgorithms: {
       title: "Algoritmos de Ordenamiento",
+      shortTitle: "Ordenamiento",
       headers: ['Algoritmo', 'Complejidad', 'Estabilidad'],
       data: [
         ['Bubble Sort', 'O(n²)', 'Estable'],
@@ -46,6 +49,7 @@ export const codeVaultData = {
   
     searchAlgorithms: {
       title: "Algoritmos de Búsqueda",
+      shortTitle: "Búsqueda",
       headers: ['Algoritmo', 'Complejidad', 'Tipo'],
       data: [
         ['Búsqueda Lineal', 'O(n)', 'Secuencial'],
@@ -59,6 +63,7 @@ export const codeVaultData = {
   
     complexityAnalysis: {
       title: "Análisis de Complejidad",
+      shortTitle: "Complejidad",
       headers: ['Notación', 'Significado', 'Ejemplo'],
       data: [
         ['O(1)', 'Tiempo constante', 'Acceso a array por índice'],

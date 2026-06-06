@@ -240,6 +240,7 @@
 .content p {
   margin-top: var(--spacing-lg);
   margin-left: var(--spacing-lg);
+  margin-right: var(--spacing-lg);
 }
 
 .content p:last-child {
@@ -250,6 +251,7 @@
 .content ol{
   margin-top: var(--spacing-lg);
   margin-left: var(--spacing-lg);
+  margin-right: var(--spacing-lg);
   margin-bottom: var(--spacing-lg);
 }
 

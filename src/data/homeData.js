@@ -5,14 +5,14 @@ export const homeData = {
     description: "Apuntes y recursos de aprendizaje",
     cardsData: {
       inacap: {
-        name: "Ingeniería Informática",
+        name: "Ing. Informática",
         description: "Semestres",
         image: "/logos/inacap_logo.png",
         link: "/inacap"
       },
       leetcode: {
         name: "LeetCode",
-        description: "Ejercicios Programación",
+        description: "Ej. Programación",
         image: "/logos/codeTraining.png",
         link: "/leetcode"
       },

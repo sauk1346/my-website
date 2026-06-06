@@ -19,6 +19,7 @@ export default function FlashcardStudy({ cards, topicName, deckNumber, layout })
   const [deck, setDeck] = useState(cards);
   const [index, setIndex] = useState(0);
   const [flipped, setFlipped] = useState(false);
+  const [transitioning, setTransitioning] = useState(false);
   const [correct, setCorrect] = useState(0);
   const [incorrect, setIncorrect] = useState(0);
   const [finished, setFinished] = useState(false);
@@ -32,6 +33,7 @@ export default function FlashcardStudy({ cards, topicName, deckNumber, layout })
       setDeck(next ? shuffleArray(cards) : [...cards]);
       setIndex(0);
       setFlipped(false);
+      setTransitioning(false);
       setCorrect(0);
       setIncorrect(0);
       setFinished(false);
@@ -44,21 +46,28 @@ export default function FlashcardStudy({ cards, topicName, deckNumber, layout })
     else setIncorrect(i => i + 1);
 
     const isLast = index === total - 1;
+
     if (isLast) {
-      setTimeout(() => setFinished(true), 400);
+      setFlipped(false);
+      setTimeout(() => setFinished(true), 500);
     } else {
-      setTimeout(() => {
-        setIndex(i => i + 1);
-        setFlipped(false);
-      }, 400);
+      setTransitioning(true);
+      // Cambia el contenido cuando la carta está de canto (~270°), invisible
+      setTimeout(() => setIndex(i => i + 1), 225);
     }
   }, [index, total]);
+
+  const handleAnimationEnd = useCallback(() => {
+    setTransitioning(false);
+    setFlipped(false);
+  }, []);
 
   const restart = useCallback(() => {
     const nextDeck = shuffled ? shuffleArray(cards) : [...cards];
     setDeck(nextDeck);
     setIndex(0);
     setFlipped(false);
+    setTransitioning(false);
     setCorrect(0);
     setIncorrect(0);
     setFinished(false);
@@ -116,10 +125,10 @@ export default function FlashcardStudy({ cards, topicName, deckNumber, layout })
 
       {/* Carta */}
       <div
-        className={`${styles.cardWrapper} ${flipped ? styles.flipped : ''}`}
-        onClick={() => setFlipped(f => !f)}
+        className={`${styles.cardWrapper} ${flipped && !transitioning ? styles.flipped : ''} ${transitioning ? styles.transitioning : ''}`}
+        onClick={() => !transitioning && setFlipped(f => !f)}
       >
-        <div className={styles.cardInner}>
+        <div className={styles.cardInner} onAnimationEnd={handleAnimationEnd}>
           <div className={styles.cardFront}>
             <div className={styles.cardSideLabel}>Pregunta</div>
             <CardRenderer content={current.front} layout={layout} />
@@ -134,7 +143,7 @@ export default function FlashcardStudy({ cards, topicName, deckNumber, layout })
       <p className={styles.flipHint}>Haz clic en la carta para voltearla</p>
 
       {/* Botones correcto / incorrecto */}
-      <div className={styles.answerButtons} style={{ visibility: flipped ? 'visible' : 'hidden' }}>
+      <div className={styles.answerButtons} style={{ visibility: flipped && !transitioning ? 'visible' : 'hidden' }}>
         <button
           className={`${styles.answerBtn} ${styles.incorrectBtn}`}
           onClick={() => markAnswer(false)}

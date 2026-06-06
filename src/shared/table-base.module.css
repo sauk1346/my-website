@@ -120,7 +120,7 @@
   overflow: hidden;
   box-shadow: var(--shadow-md);
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  table-layout: fixed;
+  table-layout: auto;
 }
 
 :global(html.dark-mode) .table,
@@ -205,6 +205,12 @@
 }
 
 /* Primera columna (código) con fondo gris */
+.table th:first-child,
+.table td:first-child {
+  width: 1%;
+  white-space: nowrap;
+}
+
 .table td:first-child {
   background-color: #f3f4f6;
   transition: background-color 0.3s ease;

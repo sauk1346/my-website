@@ -680,7 +680,7 @@ export const calendar25 = [
 // ----- [CVCD01] Cálculo Diferencial -----
   {
     id: 113,
-    fecha: "2026-6-11",
+    fecha: "2026-6-10",
     titulo: "[CVCD01] Evaluación 01",
     description: "Cálculo Diferencial"
   },

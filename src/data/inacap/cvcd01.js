@@ -23,7 +23,7 @@ const courseData = {
     evaluationsData: [
         {
             evaluationNumber: 1,
-            date: 'Jue 11, Jun 2026',
+            date: 'Mié 10, Jun 2026',
             weighting: '20%',
             description: {
                 text: '',
@@ -141,7 +141,7 @@ const courseData = {
                 },
                 {
                     text: 'SM03: Manteniendo la continuidad en la producción',
-                    href: ''
+                    href: 'unit01-sm03'
                 },  
             ]
         },

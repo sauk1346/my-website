@@ -151,7 +151,7 @@ const courseData = {
             date: 'Mié 10, Jun 2026', 
             description: [
                 {
-                    text: '',
+                    text: 'Evaluación 01',
                     href: ''
                 }, 
             ]
@@ -162,7 +162,7 @@ const courseData = {
             date: 'Jue 11, Jun 2026', 
             description: [
                 {
-                    text: 'Evaluación 01',
+                    text: '',
                     href: ''
                 }, 
             ]

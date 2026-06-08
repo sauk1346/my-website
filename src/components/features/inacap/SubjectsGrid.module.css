@@ -3,8 +3,8 @@
    ================================ */
    .grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--spacing-lg);
+    grid-template-columns: repeat(6, 1fr);
+    gap: var(--spacing-sm);
     width: 100%;
     max-width: 80rem;
     margin-top: var(--spacing-lg);
@@ -18,7 +18,7 @@
   .subjectCard {
     background: var(--background);
     border-radius: var(--radius-lg);
-    padding: var(--spacing-md);
+    padding: 0.75rem;
     box-shadow: var(--shadow-lg);
     border: 1px solid var(--border-color);
     transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
@@ -26,7 +26,8 @@
                 background-color 0.3s ease;
     position: relative;
     overflow: hidden;
-    /* SIN altura fija - se ajusta al contenido automáticamente */
+    display: flex;
+    flex-direction: column;
   }
   
   .subjectCard:hover {
@@ -88,6 +89,9 @@
      ================================ */
   .cardContent {
     margin-top: var(--spacing-sm);
+    display: flex;
+    flex-direction: column;
+    flex: 1;
   }
   
   .cardHeader {
@@ -108,9 +112,9 @@
      ================================ */
   .categoryIcon {
     color: white;
-    padding: 0.4rem;
+    padding: 0.3rem;
     border-radius: var(--radius-sm);
-    font-size: 1rem;
+    font-size: 0.875rem;
     transition: transform 0.2s ease;
   }
   
@@ -163,7 +167,7 @@
   .code {
     font-family: monospace;
     color: var(--secondary);
-    font-size: 0.875rem;
+    font-size: 0.75rem;
     font-weight: 600;
     transition: color 0.3s ease;
   }
@@ -174,10 +178,10 @@
   .statusBadge {
     display: inline-flex;
     align-items: center;
-    gap: var(--spacing-xs);
-    padding: var(--spacing-xs) var(--spacing-sm);
+    gap: 0.2rem;
+    padding: 0.15rem var(--spacing-xs);
     border-radius: var(--radius-lg);
-    font-size: 0.75rem;
+    font-size: 0.65rem;
     font-weight: 500;
     transition: all 0.2s ease;
   }
@@ -203,10 +207,11 @@
   .cardTitle {
     font-weight: 600;
     color: var(--foreground);
-    margin-bottom: var(--spacing-sm);
+    margin-bottom: var(--spacing-xs);
     line-height: 1.3;
     transition: color 0.3s ease;
-    font-size: 0.95rem;
+    font-size: 0.8rem;
+    flex: 1;
   }
   
   .link {
@@ -245,11 +250,11 @@
   }
   
   .categoryLabel {
-    padding: var(--spacing-xs) var(--spacing-sm);
+    padding: 0.15rem var(--spacing-xs);
     border-radius: var(--radius-lg);
     background: var(--card-bg);
     color: var(--secondary);
-    font-size: 0.75rem;
+    font-size: 0.65rem;
     font-weight: 500;
     transition: all 0.2s ease;
   }
@@ -407,29 +412,29 @@
      ================================ */
   @media (max-width: 768px) {
     .grid {
-      grid-template-columns: 1fr;
-      gap: var(--spacing-md);
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--spacing-sm);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--spacing-xs);
     }
 
     .subjectCard {
-      padding: var(--spacing-md);
+      padding: 0.6rem;
     }
 
     .cardTitle {
-      font-size: 0.9rem;
+      font-size: 0.75rem;
     }
 
-    .categoryIcon {
-      padding: 0.3rem;
-      font-size: 0.9rem;
-    }
-  }
-  
-  @media (max-width: 480px) {
     .cardHeader {
       flex-direction: column;
       align-items: flex-start;
-      gap: var(--spacing-sm);
+      gap: var(--spacing-xs);
     }
 
     .cardLeft {

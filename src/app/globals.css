@@ -332,9 +332,21 @@ html.dark-mode-override img.with-shadow {
   html {
     scroll-snap-type: y proximity;
   }
-  
+
   section[id] {
     scroll-snap-align: start;
   }
+}
+
+/* KaTeX responsive: scroll horizontal en ecuaciones de bloque */
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 0.25rem; /* espacio para scrollbar en móvil */
+}
+
+/* Evita que la ecuación en línea rompa el layout en pantallas angostas */
+.katex {
+  max-width: 100%;
 }
 

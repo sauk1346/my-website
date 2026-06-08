@@ -28,6 +28,9 @@
   font-size: 0.95rem;
   color: var(--foreground);
   line-height: 1.6;
+  text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
 }
 
 /* Elimina el margen extra del último párrafo dentro del callout */

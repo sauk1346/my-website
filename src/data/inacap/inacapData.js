@@ -307,7 +307,7 @@ export const subjects = [
   };
   
   export const statusConfig = {
-    completed: { name: 'Completada', icon: '✅' },
+    completed: { name: 'Completado', icon: '✅' },
     current: { name: 'En Curso', icon: '⏳' },
     pending: { name: 'Pendiente', icon: '⏸️' }
   };

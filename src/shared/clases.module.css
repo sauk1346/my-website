@@ -373,16 +373,34 @@
   .container {
     padding: 1.5rem;
   }
-  
+
   .container h1 {
     font-size: 1.875rem;
   }
-  
+
   .container h2 {
     font-size: 1.5rem;
   }
-  
+
   .container h3 {
     font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .container h1 {
+    font-size: 1.5rem;
+  }
+
+  .container h2 {
+    font-size: 1.25rem;
+  }
+
+  .container h3 {
+    font-size: 1.1rem;
   }
 }

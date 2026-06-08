@@ -52,11 +52,24 @@
   margin: 1.8rem !important;
   margin-bottom: 1.75rem !important;
   transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease !important;
-  /* Scroll horizontal agregado */
   overflow-x: auto;
   overflow-y: hidden;
   white-space: pre;
   scrollbar-width: thin;
+}
+
+@media (max-width: 768px) {
+  .pre {
+    margin: 1rem 0.75rem !important;
+    margin-bottom: 1rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .pre {
+    margin: 0.75rem 0 !important;
+    margin-bottom: 0.75rem !important;
+  }
 }
 
 /* Estilos para la barra de desplazamiento */

@@ -630,7 +630,7 @@ export const calendar25 = [
 // ----- [FVIE02] Innovación y Emprendimiento II -----
   {
     id: 105,
-    fecha: "2026-6-10",
+    fecha: "2026-6-14",
     titulo: "[FVIE01] Evaluación 01",
     description: "Innovación y Emprendimiento II"
   },

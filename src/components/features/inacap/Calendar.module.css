@@ -480,13 +480,13 @@
   }
 
   .calendarioDayOfWeek {
-    padding: var(--spacing-sm);
+    padding: var(--spacing-xs) var(--spacing-sm);
     font-size: 0.75rem;
   }
 
   .calendarioDay {
-    min-height: 80px;
-    padding: var(--spacing-sm);
+    min-height: 64px;
+    padding: var(--spacing-xs) var(--spacing-sm);
   }
 
   .calendarioEvent {
@@ -497,18 +497,28 @@
 
 @media (max-width: 480px) {
   .calendarioDay {
-    min-height: 60px;
+    min-height: 42px;
+    aspect-ratio: unset;
     padding: var(--spacing-xs);
   }
 
   .calendarioDayHeader {
-    margin-bottom: var(--spacing-xs);
-    font-size: 0.875rem;
+    margin-bottom: 0;
+    font-size: 0.75rem;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
   }
 
-  .calendarioEvent {
-    font-size: 0.65rem;
-    padding: 0.15rem 0.3rem;
+  /* Ocultar texto de eventos en celda, el punto indicador es suficiente */
+  .calendarioEvents {
+    display: none;
+  }
+
+  .calendarioDayOfWeek {
+    padding: var(--spacing-xs);
+    font-size: 0.7rem;
   }
 
   .modalContent {

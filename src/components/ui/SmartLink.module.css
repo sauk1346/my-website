@@ -7,7 +7,6 @@
   text-decoration: none;
   font-weight: 500;
   transition: all 0.2s ease;
-  border-bottom: 1px solid transparent;
   line-height: 25px;
   cursor: pointer;
   display: inline-flex;
@@ -16,7 +15,8 @@
 }
 
 .link:hover {
-  border-bottom: 1px solid #2563eb;
+  text-decoration: underline;
+  text-underline-offset: 2px;
   color: #1d4ed8;
 }
 
@@ -99,7 +99,8 @@
 
 :global(html.dark-mode) .link:hover,
 :global(html.dark-mode-override) .link:hover {
-  border-bottom: 1px solid #60a5fa;
+  text-decoration: underline;
+  text-underline-offset: 2px;
   color: #93c5fd;
 }
 
@@ -141,7 +142,7 @@
  ================================================================= */
 
 .link.noUnderline:hover {
-  border-bottom: 1px solid transparent;
+  text-decoration: none;
 }
 
 .link.subtle {
@@ -159,13 +160,12 @@
   color: white;
   padding: 8px 16px;
   border-radius: 6px;
-  border-bottom: 1px solid transparent;
   font-weight: 600;
 }
 
 .link.button:hover {
   background-color: #1d4ed8;
-  border-bottom: 1px solid transparent;
+  text-decoration: none;
   color: white;
 }
 

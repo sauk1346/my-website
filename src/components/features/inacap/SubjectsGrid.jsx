@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import styles from './SubjectsGrid.module.css';
 import { hoverLift, tapScale, staggerContainer } from '@/utils/animations';
@@ -54,9 +55,12 @@ const SubjectsGrid = ({
       <motion.div
         className={cardClasses}
         variants={cardVariants}
-        whileHover={hoverLift}
-        whileTap={tapScale}
+        whileHover={subject.href ? hoverLift : undefined}
+        whileTap={subject.href ? tapScale : undefined}
       >
+        {subject.href && (
+          <Link href={subject.href} className={styles.cardLink} aria-label={subject.name} />
+        )}
         <div className={`${styles.categoryBar} ${styles[subject.category]}`} />
 
         <div className={styles.cardContent}>
@@ -76,13 +80,7 @@ const SubjectsGrid = ({
           </div>
 
           <h3 className={styles.cardTitle}>
-            {subject.href ? (
-              <a href={subject.href} className={styles.link}>
-                {subject.name}
-              </a>
-            ) : (
-              subject.name
-            )}
+            {subject.name}
           </h3>
 
           <div className={styles.cardFooter}>

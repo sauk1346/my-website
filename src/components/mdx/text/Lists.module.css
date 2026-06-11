@@ -233,6 +233,27 @@
   display: inline-block; width: 1em; margin-left: -1em; font-size: 1.1em;
 }
 
+/* ==================== SUBLISTA INDEPENDIENTE — LISTAS ORDENADAS ==================== */
+/* Misma lógica que unordered pero con list-style-type numérico/alfabético            */
+
+/* --- nivel 1 (decimal) --- */
+.listContainer[data-level="1"] .orderedList                                       { list-style-type: decimal;     padding-left: var(--spacing-xl); color: #374151; }
+.listContainer[data-level="1"] .orderedList .orderedList                          { list-style-type: lower-alpha; padding-left: 1.75rem;           color: #4b5563; }
+.listContainer[data-level="1"] .orderedList .orderedList .orderedList             { list-style-type: lower-roman; padding-left: 1.5rem;            color: #6b7280; }
+.listContainer[data-level="1"] .orderedList .orderedList .orderedList .orderedList{ list-style-type: upper-alpha; padding-left: 1.25rem;           color: #9ca3af; }
+
+/* --- nivel 2 (lower-alpha) — default --- */
+.listContainer[data-level="2"] .orderedList                          { list-style-type: lower-alpha; padding-left: 1.75rem; color: #4b5563; }
+.listContainer[data-level="2"] .orderedList .orderedList             { list-style-type: lower-roman; padding-left: 1.5rem;  color: #6b7280; }
+.listContainer[data-level="2"] .orderedList .orderedList .orderedList{ list-style-type: upper-alpha; padding-left: 1.25rem; color: #9ca3af; }
+
+/* --- nivel 3 (lower-roman) --- */
+.listContainer[data-level="3"] .orderedList             { list-style-type: lower-roman; padding-left: 1.5rem;  color: #6b7280; }
+.listContainer[data-level="3"] .orderedList .orderedList{ list-style-type: upper-alpha; padding-left: 1.25rem; color: #9ca3af; }
+
+/* --- nivel 4 (upper-alpha) --- */
+.listContainer[data-level="4"] .orderedList{ list-style-type: upper-alpha; padding-left: 1.25rem; color: #9ca3af; }
+
 /* Posición horizontal según nivel de indentación (independiente del estilo de viñeta) */
 /* indent=1: sin indentación extra                                                      */
 /* indent=2: alineado con subitems de nivel 2 (spacing-lg + spacing-xl)                */
@@ -244,16 +265,22 @@
 .listContainer[data-indent="4"] { margin-left: calc(var(--spacing-xl) + 1.75rem + 1.5rem); }
 
 /* Espaciado de ítems — aplica a todos los niveles */
-.listContainer .list { margin-top: var(--spacing-sm); margin-bottom: 0.75rem; }
-.listContainer .list .listItem { margin-bottom: 0.5rem; }
+.listContainer .list,
+.listContainer .orderedList { margin-top: var(--spacing-sm); margin-bottom: 0.75rem; }
+.listContainer .list .listItem,
+.listContainer .orderedList .listItem { margin-bottom: 0.5rem; }
 
 /* Reducción de tamaño solo para niveles 2+ (nivel 1 usa tamaño base) */
 .listContainer[data-level="2"] .list .listItem,
 .listContainer[data-level="3"] .list .listItem,
-.listContainer[data-level="4"] .list .listItem { font-size: 0.95em; }
+.listContainer[data-level="4"] .list .listItem,
+.listContainer[data-level="2"] .orderedList .listItem,
+.listContainer[data-level="3"] .orderedList .listItem,
+.listContainer[data-level="4"] .orderedList .listItem { font-size: 0.95em; }
 
 /* Ítems doblemente anidados */
-.listContainer .list .list .listItem { margin-bottom: 0.25rem; font-size: 0.9em; }
+.listContainer .list .list .listItem,
+.listContainer .orderedList .orderedList .listItem { margin-bottom: 0.25rem; font-size: 0.9em; }
 
 /* Modo oscuro — misma cascada de colores que las listas regulares */
 :global(html.dark-mode) .listContainer[data-level="1"] .list,
@@ -273,6 +300,26 @@
 
 :global(html.dark-mode) .listContainer[data-level="4"] .list,
 :global(html.dark-mode-override) .listContainer[data-level="4"] .list                         { color: #9ca3af; }
+
+/* Modo oscuro — listas ordenadas en listContainer */
+:global(html.dark-mode) .listContainer[data-level="1"] .orderedList,
+:global(html.dark-mode-override) .listContainer[data-level="1"] .orderedList                                        { color: #d1d5db; }
+:global(html.dark-mode) .listContainer[data-level="1"] .orderedList .orderedList,
+:global(html.dark-mode-override) .listContainer[data-level="1"] .orderedList .orderedList                           { color: #9ca3af; }
+:global(html.dark-mode) .listContainer[data-level="1"] .orderedList .orderedList .orderedList,
+:global(html.dark-mode-override) .listContainer[data-level="1"] .orderedList .orderedList .orderedList              { color: #6b7280; }
+
+:global(html.dark-mode) .listContainer[data-level="2"] .orderedList,
+:global(html.dark-mode-override) .listContainer[data-level="2"] .orderedList                          { color: #9ca3af; }
+:global(html.dark-mode) .listContainer[data-level="2"] .orderedList .orderedList,
+:global(html.dark-mode-override) .listContainer[data-level="2"] .orderedList .orderedList             { color: #6b7280; }
+
+:global(html.dark-mode) .listContainer[data-level="3"] .orderedList,
+:global(html.dark-mode-override) .listContainer[data-level="3"] .orderedList                          { color: #6b7280; }
+
+:global(html.dark-mode) .listContainer[data-level="4"] .orderedList,
+:global(html.dark-mode-override) .listContainer[data-level="4"] .orderedList                          { color: #9ca3af; }
+
 :global(html.dark-mode) .listContainer .list .list .list .listItem::before,
 :global(html.dark-mode-override) .listContainer .list .list .list .listItem::before,
 :global(html.dark-mode) .listContainer[data-level="1"] .list .list .list .list .listItem::before,
@@ -305,13 +352,20 @@
   .listContainer[data-indent="4"] { margin-left: calc(var(--spacing-lg) + var(--spacing-md) * 2); }
 
   /* Reducir padding-left de listas dentro de listContainer (mayor especificidad que .list solo) */
-  .listContainer[data-level="1"] .list              { padding-left: var(--spacing-lg); }
+  .listContainer[data-level="1"] .list,
+  .listContainer[data-level="1"] .orderedList              { padding-left: var(--spacing-lg); }
   .listContainer[data-level="1"] .list .list,
-  .listContainer[data-level="2"] .list              { padding-left: var(--spacing-md); }
+  .listContainer[data-level="2"] .list,
+  .listContainer[data-level="1"] .orderedList .orderedList,
+  .listContainer[data-level="2"] .orderedList              { padding-left: var(--spacing-md); }
   .listContainer[data-level="2"] .list .list,
-  .listContainer[data-level="3"] .list              { padding-left: var(--spacing-md); }
+  .listContainer[data-level="3"] .list,
+  .listContainer[data-level="2"] .orderedList .orderedList,
+  .listContainer[data-level="3"] .orderedList              { padding-left: var(--spacing-md); }
   .listContainer[data-level="3"] .list .list,
-  .listContainer[data-level="4"] .list              { padding-left: var(--spacing-md); }
+  .listContainer[data-level="4"] .list,
+  .listContainer[data-level="3"] .orderedList .orderedList,
+  .listContainer[data-level="4"] .orderedList              { padding-left: var(--spacing-md); }
 }
 
 @media (max-width: 480px) {
@@ -330,11 +384,18 @@
   .listContainer[data-indent="3"] { margin-left: calc(var(--spacing-md) * 2); }
   .listContainer[data-indent="4"] { margin-left: calc(var(--spacing-md) * 3); }
 
-  .listContainer[data-level="1"] .list              { padding-left: var(--spacing-md); }
+  .listContainer[data-level="1"] .list,
+  .listContainer[data-level="1"] .orderedList              { padding-left: var(--spacing-md); }
   .listContainer[data-level="1"] .list .list,
-  .listContainer[data-level="2"] .list              { padding-left: var(--spacing-md); }
+  .listContainer[data-level="2"] .list,
+  .listContainer[data-level="1"] .orderedList .orderedList,
+  .listContainer[data-level="2"] .orderedList              { padding-left: var(--spacing-md); }
   .listContainer[data-level="2"] .list .list,
-  .listContainer[data-level="3"] .list              { padding-left: var(--spacing-md); }
+  .listContainer[data-level="3"] .list,
+  .listContainer[data-level="2"] .orderedList .orderedList,
+  .listContainer[data-level="3"] .orderedList              { padding-left: var(--spacing-md); }
   .listContainer[data-level="3"] .list .list,
-  .listContainer[data-level="4"] .list              { padding-left: var(--spacing-md); }
+  .listContainer[data-level="4"] .list,
+  .listContainer[data-level="3"] .orderedList .orderedList,
+  .listContainer[data-level="4"] .orderedList              { padding-left: var(--spacing-md); }
 }

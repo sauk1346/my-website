@@ -52,10 +52,17 @@ const courseData = {
             evaluationNumber: 4,
             date: 'Mié 22, Jul 2026',
             weighting: '15%',
-            description: {
-                text: '',
-                href: '',
-            }
+            description: [
+                {
+                    text: 'Control 01',
+                    href: 'control01',
+                },
+                {
+                    text: 'Control 02',
+                    href: 'control02',
+                },
+            ]
+                
         },
     ],
     classData: [

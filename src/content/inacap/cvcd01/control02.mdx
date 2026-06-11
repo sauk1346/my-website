@@ -10,11 +10,46 @@ $$
 g(x) = \frac{x^2}{x^2-x-6}
 $$
 
-1. ¿Cuál de las siguientes gráficas representa a la función $g$?
-2. Las asíntotas verticales de $g(x)$ son:
-3. La ecuación de la asíntota horizontal es:
-4. Considere la función $h(x)=x\cdot g(x)$. La ecuación de la asíntota oblicua de $h(x)$ es:
+1. Las asíntotas verticales de $g(x)$ son:
+2. La ecuación de la asíntota horizontal es:
+3. Considere la función $h(x)=x\cdot g(x)$. La ecuación de la asíntota oblicua de $h(x)$ es:
 
+<Solution title="Solución Pregunta 01">
+
+<SmartFigure
+    id="fig143"
+    src="/inacap/cvcd01/images/fig143.png"
+	alt="Asíntotas de f(x)"
+	caption="Asíntotas de f(x)"
+	size="large"
+/>
+
+- Asíntotas verticales de $g(x)$:
+    - $x = -2$
+    - $x = 3$
+- Asíntotas horiontales de $g(x)$:
+    - $y = 1$
+
+<SmartFigure
+    id="fig144"
+    src="/inacap/cvcd01/images/fig144.png"
+	alt="Función h(x)"
+	caption="Función h(x)"
+	size="large"
+/>
+
+<SmartFigure
+    id="fig145"
+    src="/inacap/cvcd01/images/fig145.png"
+	alt="Asíntotas de h(x)"
+	caption="Asíntotas de h(x)"
+	size="large"
+/>
+
+- Asíntota oblicua de $h(x)$:
+    - $y=x+1$
+
+</Solution>
 ---
 
 ## Pregunta 02
@@ -25,8 +60,21 @@ $$
 f(x) = \frac{x-3}{x^2-x-20}
 $$
 
-Las asíntotas verticales son
+<Solution title="Solución Pregunta 02">
 
+<SmartFigure
+    id="fig146"
+    src="/inacap/cvcd01/images/fig146.png"
+	alt="Asíntotas de f(x)"
+	caption="Asíntotas de f(x)"
+	size="large"
+/>
+
+- Las asíntotas verticales de $f(x)$ son:
+    - $x=-4$
+    - $x=5$
+
+</Solution>
 ---
 
 ## Pregunta 03
@@ -37,8 +85,20 @@ $$
 f(x) = \frac{5-16x^2}{(4x+2)(x+1)}
 $$
 
-La asíntota horizontal es:
+<Solution title="Solución Pregunta 03">
 
+<SmartFigure
+    id="fig147"
+    src="/inacap/cvcd01/images/fig147.png"
+	alt="Asíntotas de f(x)"
+	caption="Asíntotas de f(x)"
+	size="large"
+/>
+
+- La asíntota horizontal de $f(x)$ es:
+    - $y=-4$
+
+</Solution>
 ---
 
 ## Pregunta 04
@@ -49,8 +109,19 @@ $$
 f(x) = \frac{6x^3+8}{(2x-2)(x+2)}
 $$
 
-La asíntota oblicua es:
+<Solution title="Solución Pregunta 04">
 
+<SmartFigure
+    id="fig148"
+    src="/inacap/cvcd01/images/fig148.png"
+	alt="Asíntotas de f(x)"
+	caption="Asíntotas de f(x)"
+	size="large"
+/>
+
+- La asíntota oblicua de $f(x)$ es: $$
+    - $y = 3x-3$
+</Solution>
 ---
 
 ## Pregunta 05
@@ -72,6 +143,85 @@ $$
 2. Además, calcule los siguientes límites:
     1. $\displaystyle\lim_{x \to a} f(x)$
     2. $\displaystyle\lim_{x \to b} f(x)$
+
+<Solution title="Solución Pregunta 05">
+
+1. **Encuentre el valor de $a$ y $b$ de tal manera que $f$ se continua en todo su dominio**
+
+<P indent={3}>
+Para encontrar el valor de $a$:
+</P>
+$$
+\begin{align*}
+\text{Tramo 1} &= \text{Tramo 2}\\[6pt]
+x+3 &= 5\\[6pt]
+\text{(Se evalúa en x=a)}\\[6pt]
+a+3 &= 5\\[6pt]
+\end{align*}
+$$
+
+<SmartFigure
+    id="fig149"
+    src="/inacap/cvcd01/images/fig149.png"
+	alt="Valor de a"
+	caption="Valor de a"
+	size="large"
+/>
+
+<P indent={3}>
+Para encontrar el valor de $b$:
+</P>
+$$
+\begin{align*}
+\text{Tramo 2} &= \text{Tramo 3}\\[6pt]
+5 &= 9-x\\[6pt]
+\text{(Se evalúa en x=b)}\\[6pt]
+5 &= 9-b\\[6pt]
+\end{align*}
+$$
+
+<SmartFigure
+    id="fig150"
+    src="/inacap/cvcd01/images/fig150.png"
+	alt="Valor de b"
+	caption="Valor de b"
+	size="large"
+/>
+<P indent={3}>
+$\therefore$ Los valores son: $\boxed{a=2}$ y $\boxed{b=4}$
+</P>
+---
+2. **Además, calcule los siguientes límites:**
+    1. $\displaystyle\lim_{x \to a} f(x)$
+    2. $\displaystyle\lim_{x \to b} f(x)$
+
+<P indent={3}>
+Con los valores $a$ y $b$ es posible 'armar' la función $f(x)$ en GeoGebra
+</P>
+
+<TerminalOutput withBg>
+{`# Función f(x) en GeoGebra
+f(x) = Si(x<=2, x+3, 2<x<4, 5, x>=4, 9-x)
+`}
+</TerminalOutput>
+
+<SmartFigure
+    id="fig151"
+    src="/inacap/cvcd01/images/fig151.png"
+	alt="Límite de f(x) cuando x tiende a a=2"
+	caption="Límite de f(x) cuando x tiende a a=2"
+	size="large"
+/>
+
+<SmartFigure
+    id="fig152"
+    src="/inacap/cvcd01/images/fig152.png"
+	alt="Límite de f(x) cuando x tiende a b=4"
+	caption="Límite de f(x) cuando x tiende a b=4"
+	size="large"
+/>
+
+</Solution>
 
 ---
 
@@ -137,6 +287,147 @@ Analizando la continuidad de $f$ en $x=3$, podemos decir que:
 4. Entonces, se deduce que $f$ es:
 5. Con límite:
 </List>
+
+<Solution title="Solución Pregunta 06">
+
+1. **Sea la función:**
+
+$$
+f(x) = 
+\begin{cases}
+3(x+1)^2 - 11e^{x+2} & \text{si } x\leq -2\\[6pt]
+\dfrac{4x^2+8x}{x+2} & \text{si } x > -2
+\end{cases}
+$$
+
+<P indent={2}>
+**Analizando la continuidad de $f$ en $x=-2$, podemos decir que:**
+</P>
+<List level={2}>
+
+1. **El valor de $f(-2)$ es:**
+
+<SmartFigure
+    id="fig153"
+    src="/inacap/cvcd01/images/fig153.png"
+	alt="Valor de f(-2)"
+	caption="Valor de f(-2)"
+	size="large"
+/>
+
+2. **$\displaystyle\lim_{x\to -2^-} f(x)$ es:**
+
+<SmartFigure
+    id="fig154"
+    src="/inacap/cvcd01/images/fig154.png"
+	alt="Límite de f(x) cuando x tiende a -2, por la izquiereda"
+	caption="Límite de f(x) cuando x tiende a -2, por la izquierda"
+	size="large"
+/>
+
+3. **$\displaystyle\lim_{x\to -2^+} f(x)$ es:**
+
+<SmartFigure
+    id="fig155"
+    src="/inacap/cvcd01/images/fig155.png"
+	alt="Límite de f(x) cuando x tiende a -2, por la derecha"
+	caption="Límite de f(x) cuando x tiende a -2, por la derecha"
+	size="large"
+/>
+
+4. **Entonces, se deduce que $f$ es:** $\boxed{\text{continua en } x=-2}$
+5. **Con límite:** $\boxed{-8}$
+</List>
+---
+
+2. **Sea la función:**
+
+$$
+f(x) =
+\begin{cases}
+    8x^2+4 & \text{si } x\leq 1\\[6pt]
+    \dfrac{4x^2+3x+5}{2x-1} & \text{si } 1 < x < 3\\[6pt]
+    18-x^2 & \text{si } x\geq 3 
+\end{cases}
+$$
+<P indent={2}>
+**Analizando la continuidad de $f$ en $x=1$, podemos decir que:**
+</P>
+<List level={2}>
+1. $f(1)$ es:
+
+<SmartFigure
+    id="fig156"
+    src="/inacap/cvcd01/images/fig156.png"
+	alt="Valor de f(1)"
+	caption="Valor de f(1)"
+	size="large"
+/>
+
+2. $\displaystyle\lim_{x\to 1^-} f(x)$ es:
+
+<SmartFigure
+    id="fig157"
+    src="/inacap/cvcd01/images/fig157.png"
+	alt="Límite de f(x) cuando x tiende a 1, por la izquierda"
+	caption="Límite de f(x) cuando x tiende a 1, por la izquierda"
+	size="large"
+/>
+
+3. $\displaystyle\lim_{x\to 1^+} f(x)$ es:
+
+<SmartFigure
+    id="fig158"
+    src="/inacap/cvcd01/images/fig158.png"
+	alt="Límite de f(x) cuando x tiende a 1, por la derecha"
+	caption="Límite de f(x) cuando x tiende a 1, por la derecha"
+	size="large"
+/>
+
+4. Entonces, se deduce que $f$ es: $\boxed{\text{continua en } x=1}$
+5. Con límite: $\boxed{12}$
+</List>
+
+<P indent={2}>
+**Analizando la continuidad de $f$ en $x=3$, podemos decir que:**
+</P>
+
+<List level={2}>
+1. $f(3)$ es:
+
+<SmartFigure
+    id="fig159"
+    src="/inacap/cvcd01/images/fig159.png"
+	alt="Valor de f(3)"
+	caption="Valor de f(3)"
+	size="large"
+/>
+
+2. $\displaystyle\lim_{x\to 3^-} f(x)$ es:
+
+<SmartFigure
+    id="fig160"
+    src="/inacap/cvcd01/images/fig160.png"
+	alt="Límite de f(x) cuando x tiende a 3, por la izquierda"
+	caption="Límite de f(x) cuando x tiende a 3, por la izquierda"
+	size="large"
+/>
+
+3. $\displaystyle\lim_{x\to 3^+} f(x)$ es:
+
+<SmartFigure
+    id="fig161"
+    src="/inacap/cvcd01/images/fig161.png"
+	alt="Límite de f(x) cuando x tiende a 3, por la derecha"
+	caption="Límite de f(x) cuando x tiende a 3, por la derecha"
+	size="large"
+/>
+
+4. Entonces, se deduce que $f$ es: $\boxed{\text{discontinua de salto finito en } x=3}$
+5. Con límite: $\boxed{\text{indeterminado}}$
+</List>
+</Solution>
+
 ---
 
 ## Pregunta 07
@@ -158,6 +449,85 @@ $$
     1. $\displaystyle\lim_{x\to 2} f(x)$ es:
     2. $\displaystyle\lim_{x\to 3} f(x)$ es:
 
+<Solution title="Solución Pregunta 07">
+
+1. **Encuentre el valor de $a$ y $b$ de tal manera que $f$ sea continua en todo su dominio**
+
+<P indent={3}>
+Para encontrar el valor de $a$:
+</P>
+$$
+\begin{align*}
+\text{Tramo 1} &= \text{Tramo 2}\\[6pt]
+5 &= x - a\\[6pt]
+\text{(Se evalúa en x=2)}\\[6pt]
+5 &= 2 - a\\[6pt]
+\end{align*}
+$$
+
+<SmartFigure
+    id="fig162"
+    src="/inacap/cvcd01/images/fig162.png"
+	alt="Valor de a"
+	caption="Valor de a"
+	size="large"
+/>
+<P indent={3}>
+Para encontrar el valor de $b$:
+</P>
+$$
+\begin{align*}
+\text{Tramo 2} &= \text{Tramo 3}\\[6pt]
+x-a &= -2x+b\\[6pt]
+x-(-3) &= -2x+b\\[6pt]
+x+3 &= -2x+b\\[6pt]
+\text{(Se evalúa en x=3)}\\[6pt]
+3+3 &= -2\cdot 3 + b
+\end{align*}
+$$
+
+<SmartFigure
+    id="fig163"
+    src="/inacap/cvcd01/images/fig163.png"
+	alt="Valor de b"
+	caption="Valor de b"
+	size="large"
+/>
+<P indent={3}>
+$\therefore$ Los valores son: $\boxed{a=-3}$ y $\boxed{b=12}$
+</P>
+---
+2. **Además, calcule los siguientes límites**
+    1. **$\displaystyle\lim_{x\to 2} f(x)$ es:**
+    2. **$\displaystyle\lim_{x\to 3} f(x)$ es:**
+
+<P indent={3}>
+Con los valores $a$ y $b$ es posible 'armar' la función $f(x)$ en GeoGebra
+</P>
+
+<TerminalOutput withBg>
+{`# Función f(x) en GeoGebra
+f(x) = Si(x<=2, 5, 2<x<3, x+3, x>=3, -2x+12)
+`}
+</TerminalOutput>
+
+<SmartFigure
+    id="fig164"
+    src="/inacap/cvcd01/images/fig164.png"
+	alt="Límite de f(x) cuando x tiende a 2"
+	caption="Límite de f(x) cuando x tiende a 2"
+	size="large"
+/>
+
+<SmartFigure
+    id="fig165"
+    src="/inacap/cvcd01/images/fig165.png"
+	alt="Límite de f(x) cuando x tiende a 3"
+	caption="Límite de f(x) cuando x tiende a 3"
+	size="large"
+/>
+
+</Solution>
 ---
 
 ## Pregunta 08
@@ -180,6 +550,54 @@ $$
 
 1. Encuentre el valor de K para que $f(x)$ sea continua en los reales
 2. Calcule el límite: $\displaystyle\lim_{x\to 3} f(x)$
+
+<Solution title="Solución Pregunta 08">
+
+1. **Encuentre el valor de K para que $f(x)$ sea continua en los reales**
+
+<P indent={3}>
+Para encontrar el valor de $K$:
+</P>
+
+$$
+\begin{align*}
+\text{Tramo 1} &= \text{Tramo 2}\\[6pt]
+-3x+4 &= 17.5-3Kx\\[6pt]
+\text{(Se evalúa en x=3)}\\[6pt]
+-3\cdot 3+4 &= 17.5-3K\cdot 3\\[6pt]
+\end{align*}
+$$
+
+<SmartFigure
+    id="fig166"
+    src="/inacap/cvcd01/images/fig166.png"
+	alt="Valor de K"
+	caption="Valor de K"
+	size="large"
+/>
+---
+
+2. **Calcule el límite: $\displaystyle\lim_{x\to 3} f(x)$**
+
+<P indent={3}>
+Con el valor de $K$ es posible 'armar' la función $f(x)$ en GeoGebra
+</P>
+
+<TerminalOutput withBg>
+{`# Función f(x) en GeoGebra
+f(x)=Si(x<=3, -3x+4, x>3, 17.5-3*2.5x)
+`}
+</TerminalOutput>
+
+<SmartFigure
+    id="fig167"
+    src="/inacap/cvcd01/images/fig167.png"
+	alt="Límite de f(x) cuando x tiende a 3"
+	caption="Límite de f(x) cuando x tiende a 3"
+	size="large"
+/>
+
+</Solution>
 ---
 
 ## Pregunta 09
@@ -190,7 +608,12 @@ La velocidad de un automóvil está representado por una función $V(t)$ descono
 
 La tabla adjunta muestra la velocidad del automóvil para algunos valores de $t$ en segundos.
 
-tabla
+<SmartFigure
+    src="/inacap/cvcd01/images/fig168.png"
+	alt="Tabla adjunta"
+	caption="Tabla adjunta"
+	size="large"
+/>
 
 1. ¿Cuál es la velocidad del automóvil en el tiempo $t=2$ segundos?
 2. ¿Cuál de las siguientes expresiones algebraicas representa a la función V(t) desconocida?

@@ -169,8 +169,16 @@ const courseData = {
             date: 'Jue 11, Jun 2026', 
             description: [
                 {
-                    text: '',
-                    href: ''
+                    text: 'AT01: Noción de derivada',
+                    href: 'docs/unit02-at01.pdf'
+                },
+                {
+                    text: 'ARPA 1: De rectas secantes a recta tangente',
+                    href: 'unit02-arpa01'
+                },
+                {
+                    text: 'SM01: Velocidad instantánea',
+                    href: 'unit02-sm01'
                 }, 
             ]
         },

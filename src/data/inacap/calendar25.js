@@ -636,19 +636,19 @@ export const calendar25 = [
   },
   {
     id: 106,
-    fecha: "2026-7-1",
+    fecha: "2026-7-5",
     titulo: "[FVIE01] Evaluación 02",
     description: "Innovación y Emprendimiento II"
   },
   {
     id: 107,
-    fecha: "2026-7-20",
+    fecha: "2026-7-26",
     titulo: "[FVIE01] Evaluación 03",
     description: "Innovación y Emprendimiento II"
   },
   {
     id: 108,
-    fecha: "2026-7-25",
+    fecha: "2026-7-26",
     titulo: "[FVIE01] Evaluación 04",
     description: "Innovación y Emprendimiento II"
   },
@@ -677,27 +677,81 @@ export const calendar25 = [
     titulo: "[TI3V52] Evaluación 04",
     description: "Redes de Datos"
   },
-// ----- [CVCD01] Cálculo Diferencial -----
   {
     id: 113,
+    fecha: "2026-5-23",
+    titulo: "[TI3V52] Control 01",
+    description: "Redes de Datos"
+  },
+  {
+    id: 114,
+    fecha: "2026-5-30",
+    titulo: "[TI3V52] Control 02",
+    description: "Redes de Datos"
+  },
+  {
+    id: 115,
+    fecha: "2026-6-6",
+    titulo: "[TI3V52] Control 03",
+    description: "Redes de Datos"
+  },
+  {
+    id: 116,
+    fecha: "2026-6-13",
+    titulo: "[TI3V52] Control 04",
+    description: "Redes de Datos"
+  },
+  {
+    id: 117,
+    fecha: "2026-6-20",
+    titulo: "[TI3V52] Control 05",
+    description: "Redes de Datos"
+  },
+  {
+    id: 118,
+    fecha: "2026-6-27",
+    titulo: "[TI3V52] Control 06",
+    description: "Redes de Datos"
+  },
+  {
+    id: 119,
+    fecha: "2026-7-4",
+    titulo: "[TI3V52] Control 07",
+    description: "Redes de Datos"
+  },
+  {
+    id: 120,
+    fecha: "2026-7-11",
+    titulo: "[TI3V52] Control 08",
+    description: "Redes de Datos"
+  },
+  {
+    id: 121,
+    fecha: "2026-7-18",
+    titulo: "[TI3V52] Control 09",
+    description: "Redes de Datos"
+  },
+// ----- [CVCD01] Cálculo Diferencial -----
+  {
+    id: 122,
     fecha: "2026-6-10",
     titulo: "[CVCD01] Evaluación 01",
     description: "Cálculo Diferencial"
   },
   {
-    id: 114,
+    id: 123,
     fecha: "2026-7-2",
     titulo: "[CVCD01] Evaluación 02",
     description: "Cálculo Diferencial"
   },
   {
-    id: 115,
+    id: 124,
     fecha: "2026-7-9",
     titulo: "[CVCD01] Evaluación 03",
     description: "Cálculo Diferencial"
   },
   {
-    id: 116,
+    id: 125,
     fecha: "2026-7-22",
     titulo: "[CVCD01] Evaluación 04",
     description: "Cálculo Diferencial"

@@ -182,6 +182,28 @@ const courseData = {
                 }, 
             ]
         },
+        { 
+            week: '05', 
+            class: '09', 
+            date: 'Mié 17, Jun 2026', 
+            description: [
+                {
+                    text: '',
+                    href: ''
+                }, 
+            ]
+        },
+        { 
+            week: '05', 
+            class: '10', 
+            date: 'Jue 18, Jun 2026', 
+            description: [
+                {
+                    text: '',
+                    href: ''
+                }, 
+            ]
+        },
     ],
 };
 

@@ -32,7 +32,7 @@ const courseData = {
         },
         {
             evaluationNumber: 2,
-            date: 'Mié 01, Jul 2026',
+            date: 'Dom 05, Jul 2026',
             weighting: '30%',
             description: {
                 text: '',
@@ -41,7 +41,7 @@ const courseData = {
         },
         {
             evaluationNumber: 3,
-            date: 'Lun 20, Jul 2026',
+            date: 'Dom 26, Jul 2026',
             weighting: '30%',
             description: {
                 text: '',
@@ -50,7 +50,7 @@ const courseData = {
         },
         {
             evaluationNumber: 4,
-            date: 'Lun 25, Jul 2026',
+            date: 'Dom 26, Jul 2026',
             weighting: '20%',
             description: {
                 text: '',
@@ -135,8 +135,8 @@ const courseData = {
             date: 'Lun 08, Jun 2026', 
             description: [
                 {
-                    text: '',
-                    href: ''
+                    text: 'no asistí',
+                    strikethrough: true
                 }
             ]
         },
@@ -146,8 +146,8 @@ const courseData = {
             date: 'Mié 10, Jun 2026', 
             description: [
                 {
-                    text: '',
-                    href: ''
+                    text: 'Observación no participante',
+                    href: 'lectura04'
                 }
             ]
         },

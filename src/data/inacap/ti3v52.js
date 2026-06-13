@@ -146,7 +146,7 @@ const courseData = {
             date: 'Lun 08, Jun 2026', 
             description: [
                 {
-                    text: '',
+                    text: 'Guía 01: Direcciones IPv4',
                     href: ''
                 }
             ]
@@ -155,6 +155,28 @@ const courseData = {
             week: '04', 
             class: '08', 
             date: 'Jue 11, Jun 2026', 
+            description: [
+                {
+                    text: 'Ejercicio 01 de VLSM',
+                    href: ''
+                }
+            ]
+        },
+        { 
+            week: '05', 
+            class: '09', 
+            date: 'Lun 15, Jun 2026', 
+            description: [
+                {
+                    text: '',
+                    href: ''
+                }
+            ]
+        },
+        { 
+            week: '05', 
+            class: '10', 
+            date: 'Mié 17, Jun 2026', 
             description: [
                 {
                     text: '',
@@ -215,6 +237,17 @@ const courseData = {
             description: [
                 {
                     text: 'Clases, tipos y taller VLSM',
+                    href: '',
+                }
+            ]
+        },
+        { 
+            week: '05', 
+            lecture: '06', 
+            date: 'Sáb 20, Jun 2026', 
+            description: [
+                {
+                    text: 'Aplicación, configuración y factibilidad',
                     href: '',
                 }
             ]

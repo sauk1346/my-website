@@ -70,10 +70,6 @@ const courseData = {
                     text: 'Descripción Asignatura',
                     href: 'docs/clase01.pdf'
                 },
-                {
-                    text: 'Direccionamiento IP',
-                    href: 'docs/direccionamiento-IP.pdf'
-                },
             ]
         },
         { 
@@ -98,7 +94,7 @@ const courseData = {
                 },
                 {
                     text: 'Red LAN y configuraciones básicas - Ejercicio 02',
-                    href: 'ejercicio02'
+                    href: 'unit01-ej02'
                 },
 
             ]
@@ -114,7 +110,7 @@ const courseData = {
                 },
                 {
                     text: 'Red LAN y configuraciones básicas - Ejercicio 03',
-                    href: 'ejercicio03'
+                    href: 'unit01-ej03'
                 },
             ]
         },
@@ -125,7 +121,7 @@ const courseData = {
             description: [
                 {
                     text: 'TCP/IP - Ejercicio 04',
-                    href: 'ejercicio04'
+                    href: 'unit01-ejercicio04'
                 }
             ]
         },
@@ -146,6 +142,10 @@ const courseData = {
             date: 'Lun 08, Jun 2026', 
             description: [
                 {
+                    text: 'Direccionamiento IP',
+                    href: 'docs/direccionamiento-IP.pdf'
+                },
+                {
                     text: 'Guía 01: Direcciones IPv4',
                     href: ''
                 }
@@ -158,7 +158,7 @@ const courseData = {
             description: [
                 {
                     text: 'Ejercicio 01 de VLSM',
-                    href: ''
+                    href: 'unit02-ej01'
                 }
             ]
         },
@@ -168,7 +168,7 @@ const courseData = {
             date: 'Lun 15, Jun 2026', 
             description: [
                 {
-                    text: '',
+                    text: 'Ejercicio 02 de VLSM',
                     href: ''
                 }
             ]
@@ -176,7 +176,7 @@ const courseData = {
         { 
             week: '05', 
             class: '10', 
-            date: 'Mié 17, Jun 2026', 
+            date: 'Jue 18, Jun 2026', 
             description: [
                 {
                     text: '',

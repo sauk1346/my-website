@@ -177,12 +177,15 @@ export default function SmartFigure({
 
   const figureStyle = {
     ...(center && {
-      textAlign: 'center',
       display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center'
+      justifyContent: 'center',
     })
+  }
+
+  const innerStyle = {
+    display: 'inline-flex',
+    flexDirection: 'column',
+    alignItems: 'flex-start',
   }
 
   // Obtener número de figura del contexto
@@ -213,41 +216,43 @@ export default function SmartFigure({
   return (
     <>
       <figure id={id} className={figureClasses} style={figureStyle} {...props}>
-        {optimized ? (
-          <Image
-            src={src}
-            alt={alt}
-            width={imageDimensions.width}
-            height={imageDimensions.height}
-            className={imageClasses}
-            style={imageStyle}
-            onClick={openLightbox}
-            quality={quality}
-            priority={priority}
-            placeholder={blurDataURL ? 'blur' : placeholder === 'blur' ? 'empty' : placeholder}
-            blurDataURL={blurDataURL}
-            sizes={
-              size === 'small' ? '300px' :
-              size === 'medium' ? '500px' :
-              size === 'large' ? '700px' :
-              '(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px'
-            }
-          />
-        ) : (
-          <img
-            src={src}
-            alt={alt}
-            className={imageClasses}
-            style={imageStyle}
-            onClick={openLightbox}
-            loading="lazy"
-          />
-        )}
-        {fullCaption && (
-          <figcaption className={styles.caption}>
-            {fullCaption}
-          </figcaption>
-        )}
+        <div style={innerStyle}>
+          {fullCaption && (
+            <figcaption className={styles.caption}>
+              {fullCaption}
+            </figcaption>
+          )}
+          {optimized ? (
+            <Image
+              src={src}
+              alt={alt}
+              width={imageDimensions.width}
+              height={imageDimensions.height}
+              className={imageClasses}
+              style={imageStyle}
+              onClick={openLightbox}
+              quality={quality}
+              priority={priority}
+              placeholder={blurDataURL ? 'blur' : placeholder === 'blur' ? 'empty' : placeholder}
+              blurDataURL={blurDataURL}
+              sizes={
+                size === 'small' ? '300px' :
+                size === 'medium' ? '500px' :
+                size === 'large' ? '700px' :
+                '(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px'
+              }
+            />
+          ) : (
+            <img
+              src={src}
+              alt={alt}
+              className={imageClasses}
+              style={imageStyle}
+              onClick={openLightbox}
+              loading="lazy"
+            />
+          )}
+        </div>
       </figure>
 
       {/* Lightbox con scroll vertical */}

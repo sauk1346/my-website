@@ -188,8 +188,8 @@ const courseData = {
             date: 'Mié 17, Jun 2026', 
             description: [
                 {
-                    text: '',
-                    href: ''
+                    text: 'Suspensión clases: Comunicado profesora',
+                    strikethrough: true
                 }, 
             ]
         },

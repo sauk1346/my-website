@@ -48,14 +48,15 @@
 }
 
 .withCaption {
-  margin-bottom: 0 !important;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
 }
 
 .caption {
-  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
   font-size: 0.875rem;
   color: #6b7280;
-  text-align: center;
+  text-align: left;
   font-style: italic;
   line-height: 1.4;
 }
@@ -63,6 +64,27 @@
 :global(html.dark-mode) .caption,
 :global(html.dark-mode-override) .caption {
   color: #9ca3af;
+}
+
+/* Referencias cruzadas */
+.terminalRef {
+  color: #3b82f6;
+  text-decoration: none;
+  font-style: italic;
+}
+
+.terminalRef:hover {
+  text-decoration: underline;
+}
+
+.terminalRefError {
+  color: #dc2626;
+  font-style: italic;
+}
+
+:global(html.dark-mode) .terminalRef,
+:global(html.dark-mode-override) .terminalRef {
+  color: #60a5fa;
 }
 
 /* Comentarios: líneas que empiezan con # */

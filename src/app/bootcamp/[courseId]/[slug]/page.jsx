@@ -1,7 +1,7 @@
 import React from 'react';
 import { notFound } from 'next/navigation';
 import { CustomMDXProvider } from '@/components/providers/CustomMDXProvider';
-import { FigureProvider, TableProvider } from '@/components/mdx';
+import { FigureProvider, TableProvider, TerminalProvider } from '@/components/mdx';
 import { getAllBootcampLessonPaths, getBootcampCourseData, getPlatformByCourseId } from '@/utils/bootcampUtils';
 
 /**
@@ -47,7 +47,9 @@ export default async function LessonPage({ params }) {
             <CustomMDXProvider>
                 <FigureProvider>
                     <TableProvider>
-                        <MDXContent />
+                        <TerminalProvider>
+                            <MDXContent />
+                        </TerminalProvider>
                     </TableProvider>
                 </FigureProvider>
             </CustomMDXProvider>

@@ -13,7 +13,7 @@ export { default as Callout } from './layout/Callout';
 export { Tabs, Tab } from './layout/Tabs';
 // Code components
 export { PreBlock, Code } from './code/CodeComponents';
-export { TerminalOutput } from './code/TerminalOutput';
+export { TerminalOutput, TerminalProvider, TerminalRef } from './code/TerminalOutput';
 // Media components
 export { SmartLink } from '../ui/SmartLink';
 export { CustomIframe } from './media/Iframe';

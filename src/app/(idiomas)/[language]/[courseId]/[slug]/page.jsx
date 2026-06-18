@@ -1,7 +1,7 @@
 import React from 'react';
 import { notFound } from 'next/navigation';
 import { getAllLanguageLessonPaths, getLanguageCourseData } from '@/utils/idiomasUtils';
-import { FigureProvider, TableProvider } from '@/components/mdx';
+import { FigureProvider, TableProvider, TerminalProvider } from '@/components/mdx';
 import { CustomMDXProvider } from '@/components/providers/CustomMDXProvider';
 
 /**
@@ -42,7 +42,9 @@ export default async function LessonPage({ params }) {
             <CustomMDXProvider>
                 <FigureProvider>
                     <TableProvider>
-                        <MDXContent />
+                        <TerminalProvider>
+                            <MDXContent />
+                        </TerminalProvider>
                     </TableProvider>
                 </FigureProvider>
             </CustomMDXProvider>

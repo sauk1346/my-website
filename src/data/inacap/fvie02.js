@@ -26,8 +26,8 @@ const courseData = {
             date: 'Dom 14, Jun 2026',
             weighting: '20%',
             description: {
-                text: '',
-                href: '',
+                text: 'Informe 01',
+                href: 'docs/informe01.pdf',
             }
         },
         {
@@ -148,6 +148,28 @@ const courseData = {
                 {
                     text: 'Observación no participante',
                     href: 'lectura04'
+                }
+            ]
+        },
+        { 
+            week: '05', 
+            class: '09', 
+            date: 'Lun 15, Jun 2026', 
+            description: [
+                {
+                    text: 'no asistí',
+                    strikethrough: true
+                }
+            ]
+        },
+        { 
+            week: '05', 
+            class: '10', 
+            date: 'Mié 17, Jun 2026', 
+            description: [
+                {
+                    text: 'no asistí',
+                    strikethrough: true
                 }
             ]
         },

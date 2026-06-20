@@ -169,7 +169,7 @@ const courseData = {
             description: [
                 {
                     text: 'Ejercicio 02 de VLSM',
-                    href: ''
+                    href: 'unit02-ej02'
                 }
             ]
         },

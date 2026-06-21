@@ -187,7 +187,7 @@ const courseData = {
         { 
             week: '06', 
             class: '11', 
-            date: 'Jue 25, Jun 2026', 
+            date: 'Lun 22, Jun 2026', 
             description: [
                 {
                     text: 'Ejercicio 03 de VLSM',
@@ -198,7 +198,7 @@ const courseData = {
         { 
             week: '06', 
             class: '12', 
-            date: 'Jue 18, Jun 2026', 
+            date: 'Jue 25, Jun 2026', 
             description: [
                 {
                     text: 'Evaluación 02: VLSM',

@@ -199,7 +199,15 @@ const courseData = {
             date: 'Jue 18, Jun 2026', 
             description: [
                 {
-                    text: '',
+                    text: 'AT02: Conociendo a la función',
+                    href: ''
+                },
+                {
+                    text: 'ARPA 2: Función desconocida',
+                    href: ''
+                },
+                {
+                    text: 'SM02: El surfista',
                     href: ''
                 }, 
             ]

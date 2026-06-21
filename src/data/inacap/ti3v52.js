@@ -179,7 +179,29 @@ const courseData = {
             date: 'Jue 18, Jun 2026', 
             description: [
                 {
-                    text: '',
+                    text: 'Revisión Ejercicio 02 de VLSM',
+                    href: ''
+                }
+            ]
+        },
+        { 
+            week: '06', 
+            class: '11', 
+            date: 'Jue 25, Jun 2026', 
+            description: [
+                {
+                    text: 'Ejercicio 03 de VLSM',
+                    href: 'unit02-ej03'
+                }
+            ]
+        },
+        { 
+            week: '06', 
+            class: '12', 
+            date: 'Jue 18, Jun 2026', 
+            description: [
+                {
+                    text: 'Evaluación 02: VLSM',
                     href: ''
                 }
             ]
@@ -248,6 +270,17 @@ const courseData = {
             description: [
                 {
                     text: 'Aplicación, configuración y factibilidad',
+                    href: '',
+                }
+            ]
+        },
+        { 
+            week: '06', 
+            lecture: '07', 
+            date: 'Sáb 27, Jun 2026', 
+            description: [
+                {
+                    text: 'Configuración y verificación de enrutamiento estático redes de datos',
                     href: '',
                 }
             ]

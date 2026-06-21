@@ -204,10 +204,32 @@ const courseData = {
                 },
                 {
                     text: 'ARPA 2: Función desconocida',
-                    href: ''
+                    href: 'unit02-arpa02'
                 },
                 {
                     text: 'SM02: El surfista',
+                    href: ''
+                }, 
+            ]
+        },
+        { 
+            week: '06', 
+            class: '11', 
+            date: 'Mié 24, Jun 2026', 
+            description: [
+                {
+                    text: '',
+                    href: ''
+                }, 
+            ]
+        },
+        { 
+            week: '06', 
+            class: '12', 
+            date: 'Jue 25, Jun 2026', 
+            description: [
+                {
+                    text: '',
                     href: ''
                 }, 
             ]

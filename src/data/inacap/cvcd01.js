@@ -208,7 +208,7 @@ const courseData = {
                 },
                 {
                     text: 'SM02: El surfista',
-                    href: ''
+                    href: 'unit02-sm02'
                 }, 
             ]
         },

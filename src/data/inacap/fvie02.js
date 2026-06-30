@@ -173,6 +173,50 @@ const courseData = {
                 }
             ]
         },
+        { 
+            week: '06', 
+            class: '11', 
+            date: 'Lun 22, Jun 2026', 
+            description: [
+                {
+                    text: 'Avance Informe 02 (1)',
+                    ref: ''
+                }
+            ]
+        },
+        { 
+            week: '06', 
+            class: '12', 
+            date: 'Mié 24, Jun 2026', 
+            description: [
+                {
+                    text: 'Avance Informe 02 (2)',
+                    ref: ''
+                }
+            ]
+        },
+        { 
+            week: '07', 
+            class: '13', 
+            date: 'Lun 29, Jun 2026', 
+            description: [
+                {
+                    text: 'Suspensión clases: Feriado',
+                    strikethrough: true
+                }
+            ]
+        },
+        { 
+            week: '07', 
+            class: '14', 
+            date: 'Mié 01, Jul 2026', 
+            description: [
+                {
+                    text: '',
+                    ref: ''
+                }
+            ]
+        },
         
     ],
     lectureData: [
@@ -180,12 +224,10 @@ const courseData = {
             week: '01', 
             lecture: '01', 
             date: 'Vie 22, May 2026', 
-            description: [
-                {
-                    text: 'Entrevista a Usuarios',
-                    href: 'lectura01',
-                }
-            ]
+            description: {
+                text: 'Toolkit Unidad 1',
+                href: 'docs/Toolkit-U1.pdf',
+            }
         },
         { 
             week: '01', 
@@ -193,92 +235,103 @@ const courseData = {
             date: 'Vie 22, May 2026', 
             description: [
                 {
-                    text: 'Elaboración de Cuestionarios',
+                    text: 'Entrevista a Usuarios',
                     href: 'lectura02',
                 }
             ]
         },
         { 
-            week: '01', 
+            week: '02', 
             lecture: '03', 
-            date: 'Vie 22, May 2026', 
+            date: 'Vie 29, May 2026', 
             description: [
                 {
-                    text: 'Entrevista a Expertos',
+                    text: 'Elaboración de Cuestionarios',
                     href: 'lectura03',
                 }
             ]
         },
         { 
-            week: '01', 
+            week: '02', 
             lecture: '04', 
-            date: 'Vie 22, May 2026', 
+            date: 'Vie 29, May 2026', 
             description: [
                 {
-                    text: 'Observación no participante',
+                    text: 'Entrevista a Expertos',
                     href: 'lectura04',
                 }
             ]
         },
         { 
-            week: '01', 
+            week: '03', 
             lecture: '05', 
-            date: 'Vie 22, May 2026', 
+            date: 'Vie 05, Jun 2026', 
             description: [
                 {
-                    text: 'Estudio Comparativo de Referentes',
+                    text: 'Observación no participante',
                     href: 'lectura05',
                 }
             ]
         },
         { 
-            week: '02', 
+            week: '03', 
             lecture: '06', 
-            date: 'Vie 29, May 2026', 
+            date: 'Vie 05, Jun 2026', 
             description: [
                 {
-                    text: 'Procesamiento de hallazgos',
+                    text: 'Estudio Comparativo de Referentes',
                     href: 'lectura06',
                 }
             ]
         },
         { 
-            week: '02', 
+            week: '04', 
             lecture: '07', 
-            date: 'Vie 29, May 2026', 
+            date: 'Vie 12, Jun 2026', 
             description: [
                 {
-                    text: 'Redefinición del desafío',
+                    text: 'Procesamiento de hallazgos',
                     href: 'lectura07',
                 }
             ]
         },
         { 
-            week: '03', 
+            week: '04', 
             lecture: '08', 
-            date: 'Vie 05, Jun 2026', 
+            date: 'Vie 12, Jun 2026', 
+            description: [
+                {
+                    text: 'Redefinición del desafío',
+                    href: 'lectura08',
+                }
+            ]
+        },
+        { 
+            week: '05', 
+            lecture: '09', 
+            date: 'Vie 19, Jun 2026', 
             description: [
                 {
                     text: 'Estudio Comparativo de Antecedentes',
-                    href: '',
+                    href: 'lectura09',
                 }
             ]
         },
         { 
-            week: '03', 
-            lecture: '09', 
-            date: 'Vie 05, Jun 2026', 
+            week: '05', 
+            lecture: '10', 
+            date: 'Vie 19, Jun 2026', 
             description: [
                 {
                     text: 'Formulario de Requerimientos',
-                    href: '',
+                    href: 'lectura10',
                 }
             ]
         },
         { 
-            week: '03', 
-            lecture: '10', 
-            date: 'Vie 05, Jun 2026', 
+            week: '06', 
+            lecture: '11', 
+            date: 'Vie 26, Jun 2026', 
             description: [
                 {
                     text: 'Generación Metáforas',
@@ -287,9 +340,9 @@ const courseData = {
             ]
         },
         { 
-            week: '03', 
-            lecture: '11', 
-            date: 'Vie 05, Jun 2026', 
+            week: '06', 
+            lecture: '12', 
+            date: 'Vie 26, Jun 2026', 
             description: [
                 {
                     text: 'Brainstorming',
@@ -298,20 +351,20 @@ const courseData = {
             ]
         },
         { 
-            week: '04', 
-            lecture: '', 
-            date: 'Vie 12, Jun 2026', 
+            week: '07', 
+            lecture: '13', 
+            date: 'Vie 03, Jul 2026', 
             description: [
                 {
-                    text: '',
-                    href: '',
+                    text: 'Toolkit Unidad 2',
+                    href: 'docs/Toolkit-U2.pdf',
                 }
             ]
         },
         { 
-            week: '05', 
-            lecture: '12', 
-            date: 'Vie 19, Jun 2026', 
+            week: '07', 
+            lecture: '13', 
+            date: 'Vie 03, Jul 2026', 
             description: [
                 {
                     text: 'Prototipo',

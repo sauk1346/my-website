@@ -26,16 +26,16 @@ const courseData = {
             date: 'Mié 10, Jun 2026',
             weighting: '20%',
             description: {
-                text: '',
-                href: '',
+                text: 'Límites y Continuidad',
+                href: 'eval01',
             }
         },
         {
             evaluationNumber: 2,
-            date: 'Jue 02, Jul 2026',
+            date: 'Mié 01, Jul 2026',
             weighting: '25%',
             description: {
-                text: '',
+                text: 'Derivadas',
                 href: '',
             }
         },
@@ -44,7 +44,7 @@ const courseData = {
             date: 'Jue 09, Jul 2026',
             weighting: '40%',
             description: {
-                text: '',
+                text: 'Proyecto',
                 href: '',
             }
         },
@@ -54,12 +54,8 @@ const courseData = {
             weighting: '15%',
             description: [
                 {
-                    text: 'Control 01',
-                    href: 'control01',
-                },
-                {
-                    text: 'Control 02',
-                    href: 'control02',
+                    text: 'Controles',
+                    href: 'controles',
                 },
             ]
                 
@@ -159,7 +155,7 @@ const courseData = {
             description: [
                 {
                     text: 'Evaluación 01',
-                    href: ''
+                    href: 'eval01'
                 }, 
             ]
         },
@@ -218,8 +214,8 @@ const courseData = {
             date: 'Mié 24, Jun 2026', 
             description: [
                 {
-                    text: '',
-                    href: ''
+                    text: 'no asistí',
+                    strikethrough: true
                 }, 
             ]
         },
@@ -227,6 +223,28 @@ const courseData = {
             week: '06', 
             class: '12', 
             date: 'Jue 25, Jun 2026', 
+            description: [
+                {
+                    text: 'Instrucciones proyecto',
+                    href: ''
+                }, 
+            ]
+        },
+        { 
+            week: '07', 
+            class: '13', 
+            date: 'Mié 01, Jul 2026', 
+            description: [
+                {
+                    text: 'Evaluación 02',
+                    href: ''
+                }, 
+            ]
+        },
+        { 
+            week: '07', 
+            class: '14', 
+            date: 'Jue 02, Jul 2026', 
             description: [
                 {
                     text: '',

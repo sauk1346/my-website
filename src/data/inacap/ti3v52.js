@@ -26,7 +26,7 @@ const courseData = {
             date: 'Jue 04, Jun 2026',
             weighting: '15%',
             description: {
-                text: 'Evaluación 01: Red LAN y configuraciones básicas',
+                text: 'Red LAN y configuraciones básicas',
                 href: 'eval01',
             }
         },
@@ -35,8 +35,8 @@ const courseData = {
             date: 'Jue 25, Jun 2026',
             weighting: '35%',
             description: {
-                text: '',
-                href: '',
+                text: 'VLSM',
+                href: 'eval02',
             }
         },
         {
@@ -53,9 +53,13 @@ const courseData = {
             date: 'Jue 23, Jul 2026',
             weighting: '25%',
             description: [
-                    {
+                {
                     text: 'Evaluación diagnóstica',
                     href: 'diagnostica',
+                },
+                {
+                    text: 'Controles',
+                    href: 'controles',
                 },
             ]
         },
@@ -121,7 +125,7 @@ const courseData = {
             description: [
                 {
                     text: 'TCP/IP - Ejercicio 04',
-                    href: 'unit01-ejercicio04'
+                    href: 'unit01-ej04'
                 }
             ]
         },
@@ -131,7 +135,7 @@ const courseData = {
             date: 'Jue 04, Jun 2026', 
             description: [
                 {
-                    text: 'Evaluación 01: Red LAN y configuraciones básicas',
+                    text: 'Evaluación 01',
                     href: 'eval01'
                 }
             ]
@@ -179,9 +183,9 @@ const courseData = {
             date: 'Jue 18, Jun 2026', 
             description: [
                 {
-                    text: 'Revisión Ejercicio 02 de VLSM',
-                    href: ''
-                }
+                    text: 'Ejercicio 03 de VLSM',
+                    href: 'unit02-ej03'
+                },
             ]
         },
         { 
@@ -190,9 +194,9 @@ const courseData = {
             date: 'Lun 22, Jun 2026', 
             description: [
                 {
-                    text: 'Ejercicio 03 de VLSM',
-                    href: 'unit02-ej03'
-                }
+                    text: 'Ejercicio 04 de VLSM',
+                    href: 'docs/unit02-ej04.pdf'
+                },
             ]
         },
         { 
@@ -201,7 +205,29 @@ const courseData = {
             date: 'Jue 25, Jun 2026', 
             description: [
                 {
-                    text: 'Evaluación 02: VLSM',
+                    text: 'Evaluación 02',
+                    href: 'eval02'
+                }
+            ]
+        },
+        { 
+            week: '07', 
+            class: '13', 
+            date: 'Lun 29, Jun 2026', 
+            description: [
+                {
+                    text: 'Suspensión clases: Feriado',
+                    strikethrough: true
+                }
+            ]
+        },
+        { 
+            week: '07', 
+            class: '13', 
+            date: 'Jue 02, Jul 2026', 
+            description: [
+                {
+                    text: '',
                     href: ''
                 }
             ]
@@ -212,78 +238,74 @@ const courseData = {
             week: '01', 
             lecture: '01', 
             date: 'Sáb 23, May 2026', 
-            description: [
-                {
-                    text: 'Lectura dirigida: Estándares IEEE 802.3 y IEEE 802.11',
-                    href: 'docs/lectura01.pdf',
-                }
-            ]
+            description: {
+                text: 'Lectura dirigida: Estándares IEEE 802.3 y IEEE 802.11',
+                href: 'docs/lectura01.pdf',
+            }
         },
         { 
             week: '01', 
             lecture: '02', 
             date: 'Sáb 23, May 2026', 
-            description: [
-                {
-                    text: 'Estándares IEEE 802.3 y IEEE 802.11',
-                    href: 'lectura02',
-                }
-            ]
+            description: {
+                text: 'Estándares IEEE 802.3 y IEEE 802.11',
+                href: 'lectura02',
+            }
         },
         { 
             week: '02', 
             lecture: '03', 
             date: 'Sáb 30, May 2026', 
-            description: [
-                {
-                    text: 'Comandos Básicos y Seguridad en Routers y Switches Cisco',
-                    href: 'lectura03',
-                }
-            ]
+            description: {
+                text: 'Comandos Básicos y Seguridad en Routers y Switches Cisco',
+                href: 'lectura03',
+            }
         },
         { 
             week: '03', 
             lecture: '04', 
             date: 'Sáb 06, Jun 2026', 
-            description: [
-                {
-                    text: 'Fundamentos y protocolos IP',
-                    href: '',
-                }
-            ]
+            description: {
+                text: 'Fundamentos y protocolos IP',
+                href: 'docs/lectura04.pdf',
+            }
         },
         { 
             week: '04', 
             lecture: '05', 
             date: 'Sáb 13, Jun 2026', 
-            description: [
-                {
-                    text: 'Clases, tipos y taller VLSM',
-                    href: '',
-                }
-            ]
+            description: {
+                text: 'Clases, tipos y taller VLSM',
+                href: 'lectura05',
+            }
+            
         },
         { 
             week: '05', 
             lecture: '06', 
             date: 'Sáb 20, Jun 2026', 
-            description: [
-                {
-                    text: 'Aplicación, configuración y factibilidad',
-                    href: '',
-                }
-            ]
+            description: {
+                text: 'Aplicación, configuración y factibilidad',
+                href: 'docs/lectura06.pdf',
+            }
         },
         { 
             week: '06', 
             lecture: '07', 
             date: 'Sáb 27, Jun 2026', 
-            description: [
-                {
-                    text: 'Configuración y verificación de enrutamiento estático redes de datos',
-                    href: '',
-                }
-            ]
+            description: {
+                text: 'Configuración y verificación de enrutamiento estático redes de datos',
+                href: '',
+            }
+        },
+        { 
+            week: '07', 
+            lecture: '08', 
+            date: 'Sáb 04, Jul 2026', 
+            description: {
+                text: 'Enrutamiento dinámico con OSPFV2',
+                href: '',
+            }
         },
     ]
 };

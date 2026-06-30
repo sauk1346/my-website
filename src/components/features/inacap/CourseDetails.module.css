@@ -130,6 +130,7 @@
 
 .tabButtons {
   display: flex;
+  justify-content: center;
   border-bottom: 1px solid #e2e8f0;
   margin-bottom: var(--spacing-lg);
   overflow-x: auto; /* Para pantallas pequeñas */

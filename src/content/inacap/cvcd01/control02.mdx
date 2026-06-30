@@ -1,6 +1,6 @@
-# Control 02
+## Control 02
 
-## Pregunta 01
+### Pregunta 01
 
 **ASÍNTOTAS**
 
@@ -16,6 +16,8 @@ $$
 
 <Solution title="Solución Pregunta 01">
 
+1. **Las asíntotas verticales de $g(x)$ son:**
+
 <SmartFigure
     id="fig143"
     src="/inacap/cvcd01/images/fig143.png"
@@ -23,12 +25,19 @@ $$
 	caption="Asíntotas de f(x)"
 	size="large"
 />
+<P indent={2}>
+Asíntotas verticales de $g(x)$: $\boxed{x = -2}$ y $\boxed{x = 3}$
+</P>
+---
 
-- Asíntotas verticales de $g(x)$:
-    - $x = -2$
-    - $x = 3$
-- Asíntotas horiontales de $g(x)$:
-    - $y = 1$
+2. **La ecuación de la asíntota horizontal es:**
+<P indent={2}>
+Asíntotas horiontales de $g(x)$: $\boxed{y = 1}$
+</P>
+
+---
+
+3. **Considere la función $h(x)=x\cdot g(x)$. La ecuación de la asíntota oblicua de $h(x)$ es:**
 
 <SmartFigure
     id="fig144"
@@ -45,14 +54,14 @@ $$
 	caption="Asíntotas de h(x)"
 	size="large"
 />
-
-- Asíntota oblicua de $h(x)$:
-    - $y=x+1$
+<P indent={2}>
+Asíntota oblicua de $h(x)$: $\boxed{y=x+1}$
+</P>
 
 </Solution>
 ---
 
-## Pregunta 02
+### Pregunta 02
 
 Encuentre las asíntotas verticales de la siguiente función racional:
 
@@ -69,15 +78,13 @@ $$
 	caption="Asíntotas de f(x)"
 	size="large"
 />
-
-- Las asíntotas verticales de $f(x)$ son:
-    - $x=-4$
-    - $x=5$
-
+<P indent={2}>
+Las asíntotas verticales de $f(x)$ son: $\boxed{x=-4}$ y $\boxed{x=5}$
+</P>
 </Solution>
 ---
 
-## Pregunta 03
+### Pregunta 03
 
 Encuentre la asíntota horizontal de la siguiente función racional:
 
@@ -94,14 +101,13 @@ $$
 	caption="Asíntotas de f(x)"
 	size="large"
 />
-
-- La asíntota horizontal de $f(x)$ es:
-    - $y=-4$
-
+<P indent={2}>
+La asíntota horizontal de $f(x)$ es: $\boxed{y=-4}$
+</P>
 </Solution>
 ---
 
-## Pregunta 04
+### Pregunta 04
 
 Encuentre la asíntota oblicua de la siguiente función racional:
 
@@ -118,13 +124,13 @@ $$
 	caption="Asíntotas de f(x)"
 	size="large"
 />
-
-- La asíntota oblicua de $f(x)$ es: $$
-    - $y = 3x-3$
+<P indent={2}>
+La asíntota oblicua de $f(x)$ es: $\boxed{y = 3x-3}$
+</P>
 </Solution>
 ---
 
-## Pregunta 05
+### Pregunta 05
 
 **PARÁMETROS PARA LA CONTINUIDAD DE UNA FUNCIÓN**
 
@@ -225,7 +231,7 @@ f(x) = Si(x<=2, x+3, 2<x<4, 5, x>=4, 9-x)
 
 ---
 
-## Pregunta 06
+### Pregunta 06
 
 **CONTINUIDAD DE FUNCIONES POR TRAMOS**
 
@@ -430,7 +436,7 @@ $$
 
 ---
 
-## Pregunta 07
+### Pregunta 07
 **PARÁMETROS PARA LA CONTINUIDAD DE UNA FUNCIÓN**
 
 Sea:
@@ -530,7 +536,7 @@ f(x) = Si(x<=2, 5, 2<x<3, x+3, x>=3, -2x+12)
 </Solution>
 ---
 
-## Pregunta 08
+### Pregunta 08
 
 **CONTINUIDAD DE FUNCIONES POR TRAMOS**
 
@@ -600,7 +606,7 @@ f(x)=Si(x<=3, -3x+4, x>3, 17.5-3*2.5x)
 </Solution>
 ---
 
-## Pregunta 09
+### Pregunta 09
 
 **Velocidad Desconocida**
 
@@ -623,9 +629,63 @@ La tabla adjunta muestra la velocidad del automóvil para algunos valores de $t$
     3. $(340t+5)/(50t+5)$
 3. ¿Cuál es la velocidad límite del automóvil?
 
+<Solution title="Solución Pregunta 09">
+
+1. **¿Cuál es la velocidad del automóvil en el tiempo $t=2$ segundos?**
+
+<P indent={2}>
+$t=4$ 
+- numerador aumenta de 1030 a 1370. $\Delta = 1370-1030 = 340$
+- denominador aumenta de 20 a 25. $\Delta = 25-20 =5$
+
+$t=5$
+- numerador aumenta de 1370 a 1710. $\Delta = 1710-1370 = 340$
+- denominador aumenta de 25 a 30. $\Delta = 30-25 =5$
+
+Entonces:
+- numerador aumenta en 340. Cuando $t=1$, $\text{numerador}= 350 = 340t+10$
+- denominador aumenta en 5. Cuando $t=1$, $\text{denominador} = 10 = 5t+5$
+
+Por lo tanto: $V(t)= \dfrac{340t+10}{5t+5}$
+</P>
+
+<SmartFigure
+    id="fig218"
+    src="/inacap/cvcd01/images/fig218.png"
+	alt="Valor V(2)"
+	caption="Valor V(2)"
+	size="large"
+/>
+
+---
+2. **¿Cuál de las siguientes expresiones algebraicas representa a la función V(t) desconocida?**
+    1. **$(340t+10)/(5t+5)$**
+    2. **$(640t+10)/(5t+5)$**
+    2. **$(340t+10)/(6t+5)$**
+    3. **$(340t+5)/(50t+5)$**
+
+
+<P indent={2}>
+Se calculó la expresión algebraica en la pregunta 1, para evaluar el modelo en $t=2$
+
+Entonces, la expresión algebraica es $V(t)= \dfrac{340t+10}{5t+5}$
+</P>
+---
+3. **¿Cuál es la velocidad límite del automóvil?**
+
+<SmartFigure
+    id="fig219"
+    src="/inacap/cvcd01/images/fig219.png"
+	alt="Velocidad límite del automóvil"
+	caption="Velocidad límite del automóvil"
+	size="large"
+/>
+
+</Solution>
+
 ---
 
-## Pregunta 10
+### Pregunta 10
 
 **ANÁLISIS DE LA CONTINUIDAD DE LA UNA FUNCIÓN**
 
@@ -665,3 +725,108 @@ Analizando la continuidad de $f$ en $x=-4$, podemos decir que:
 4. Entonces, se deduce que $f$ es:
 5. Con límite:
 </List>
+
+<Solution title="Solución Pregunta 10">
+
+1. Analizando la continuidad de $f$ dada por $f(x) = \dfrac{x+2}{x^2-2x-8}$ podemos decir que:
+<P indent={2}>
+$f$ tiene 2 valores de $x$ de discontinuidad, $x_1$ y $x_2$ donde $x_1 < x_2$
+</P>
+
+<SmartFigure
+    id="fig220"
+    src="/inacap/cvcd01/images/fig220.png"
+	alt="Valores de x0 y x1"
+	caption="Valores de x0 y x1"
+	size="large"
+/>
+
+<SmartFigure
+    id="fig221"
+    src="/inacap/cvcd01/images/fig221.png"
+	alt="f evaluada en x=x1"
+	caption="f evaluada en x=x1"
+	size="large"
+/>
+
+<SmartFigure
+    id="fig222"
+    src="/inacap/cvcd01/images/fig222.png"
+	alt="f evaluada en x=x2"
+	caption="f evaluada en x=x2"
+	size="large"
+/>
+
+<List level={2}>
+1. **El valor de $x_1$ es:** $\boxed{-2}$
+2. **El valor de $x_2$ es:** $\boxed{4}$
+3. **En $x=x_1$, $f$ es:** $\boxed{\text{Discontinua evitable con } f(x_1)=-1/6}$
+4. **En $x=x_2$, $f$ es:** $\boxed{\text{Discontinua asintótica}}$
+</List>
+---
+
+2. **Sea:**
+
+$$
+f(x) = 
+\begin{cases}
+x+2 & \text{si } x\leq -4\\[6pt]
+ln(x+5)-2 & \text{si } x > -4
+\end{cases}
+$$
+
+<P indent={2}>
+**Analizando la continuidad de $f$ en $x=-4$, podemos decir que:**
+</P>
+<List level={2}>
+1. **El valor de $f(-4)$ es:**
+2. **$\displaystyle\lim_{x\to -4^-} f(x)$ es:**
+3. **$\displaystyle\lim_{x\to -4^+} f(x)$ es:**
+4. **Entonces, se deduce que $f$ es:**
+5. **Con límite:**
+</List>
+
+
+
+
+<SmartFigure
+    id="fig223"
+    src="/inacap/cvcd01/images/fig223.png"
+	alt="Valor de f(-2)"
+	caption="Valor de f(-2)"
+	size="large"
+/>
+
+<SmartFigure
+    id="fig224"
+    src="/inacap/cvcd01/images/fig224.png"
+	alt="Límite por la izquierda de f cuando x tiende a -4"
+	caption="Límite por la izquierda de f cuando x tiende a -4"
+	size="large"
+/>
+
+<SmartFigure
+    id="fig225"
+    src="/inacap/cvcd01/images/fig225.png"
+	alt="Límite por la derecha de f cuando x tiende a -4"
+	caption="Límite por la derecha de f cuando x tiende a -4"
+	size="large"
+/>
+
+<SmartFigure
+    id="fig226"
+    src="/inacap/cvcd01/images/fig226.png"
+	alt="Límite de f cuando x tiende a -4"
+	caption="Límite de f cuando x tiende a -4"
+	size="large"
+/>
+
+<List level={2}>
+1. **El valor de $f(-4)$ es:** $\boxed{-2}$
+2. **$\displaystyle\lim_{x\to -4^-} f(x)$ es:** $\boxed{-2}$
+3. **$\displaystyle\lim_{x\to -4^+} f(x)$ es:** $\boxed{-2}$
+4. **Entonces, se deduce que $f$ es:** $\boxed{\text{continua en }x=-4}$
+5. **Con límite:** $\boxed{-2}$
+</List>
+
+</Solution>

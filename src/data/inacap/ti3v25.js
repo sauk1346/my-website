@@ -56,7 +56,7 @@ const courseData = {
             date: 'Mié 16, Oct 2024', 
             weighting: '10%', 
             description: {
-                text: 'Promedio Controles',
+                text: 'Controles',
                 href: 'controles'
             }
         }

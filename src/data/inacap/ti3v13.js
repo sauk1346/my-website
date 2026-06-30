@@ -47,10 +47,10 @@ const courseData = {
         },
         { 
             evaluationNumber: 4,
-            date: 'Mié 07, May 2025',
+            date: 'Mié 24, Jul 2024',
             weighting: '15%',
             description: {
-                text: 'Promedio Controles',
+                text: 'Controles',
                 href: 'controles'
             }
         }

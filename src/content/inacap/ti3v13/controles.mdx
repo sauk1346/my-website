@@ -1,153 +1,23 @@
-# Controles
+import Control01 from './control01.mdx';
+import Control02 from './control02.mdx';
+import Control03 from './control03.mdx';
 
-## Control 01
-<Quiz questions={[
-  {
-    question: "Un técnico está resolviendo problemas de una computadora que ha experimentado un fallo de hardware detectado por la BIOS ¿Cuál de las siguientes describe de manera clara uno de los métodos utilizados para este tipo de fallos?",
-    options: [
-      "El sistema operativo muestra un mensaje de error detallado.",
-      "La computadora emite una secuencia de sonidos que señalan una falla en algún dispositivo.",
-      "El monitor se apaga automáticamente para prevenir daños.",
-      "Se reinicia el sistema y se ejecuta un diagnóstico automático."
-    ],
-    correctIndex: 1
-  },
-  {
-    question: "¿Cuál de las siguientes opciones es el puerto que comúnmente se utiliza para conectar un mouse a una computadora?",
-    options: [
-      "Puerto serial",
-      "USB.",
-      "Puerto HDMI",
-      "Puerto Ethernet"
-    ],
-    correctIndex: 1
-  },
-  {
-    question: "Ante un caso de sobrecalentamiento del procesador, de acuerdo con la normativa de seguridad vigente. ¿Qué componente es el primero en alejar el calor del procesador?",
-    options: [
-      "Ventilador del procesador",
-      "Pasta térmica.",
-      "Disipador de calor",
-      "Sistema de refrigeración líquida"
-    ],
-    correctIndex: 1
-  },
-  {
-    question: "¿Cuál es la razón fundamental por la que una empresa debe garantizar el mantenimiento preventivo en sus computadores?",
-    options: [
-      "Aumenta la velocidad de procesamiento.",
-      "Contribuye a salvaguardar los equipos informáticos contra posibles problemas futuros.",
-      "Reduce el consumo de energía eléctrica.",
-      "Mejora la apariencia física de los equipos."
-    ],
-    correctIndex: 1
-  },
-  {
-    question: "En caso de pérdida o robo de un dispositivo móvil. ¿Cuál de los siguientes conforman los procedimientos que deben configurarse para resguardar su información privada almacenada?",
-    options: [
-      "Activar el GPS / Instalar aplicaciones antirrobo",
-      "Encriptar los medios de almacenamiento / Habilitar la contraseña de acceso del dispositivo.",
-      "Desactivar el WiFi / Eliminar las cuentas de correo",
-      "Formatear remotamente / Reportar el IMEI a la operadora"
-    ],
-    correctIndex: 1
-  }
-]} />
+# Controles Fundamentos de Hardware y Software
 
-## Control 02
-<Quiz questions={[
-  {
-    question: "¿Cuál de las siguientes opciones es una herramienta integrada en Windows 11 para realizar respaldos y restaurar archivos y configuraciones?",
-    options: [
-      "Time Machine",
-      "File History",
-      "Time Capsule",
-      "SuperDuper"
-    ],
-    correctIndex: 1
-  },
-  {
-    question: "¿Cuál de las siguientes opciones es el mejor modelo de servicio en la Nube que ofrece a los usuarios acceso a las aplicaciones basadas en la web, sin la necesidad de instalar o mantener software local?",
-    options: [
-      "Infraestructura como Servicio (IaaS)",
-      "Plataforma como Servicio (PaaS)",
-      "Software como Servicio (SaaS)",
-      "Almacenamiento en la nube"
-    ],
-    correctIndex: 2
-  },
-  {
-    question: "Para cumplir con los requerimientos de creación de cuentas de usuario y grupos locales. ¿Cuál de las siguientes opciones permite asignar permisos específicos a un grupo recién creado en un sistema Windows?",
-    options: [
-      "chmod",
-      "chown",
-      "net user",
-      "net localgroup"
-    ],
-    correctIndex: 3
-  },
-  {
-    question: "¿Cuál es el comando para formatear una partición de disco duro en el sistema operativo Windows?",
-    options: [
-      "diskpart",
-      "format",
-      "fdisk",
-      "mkfs"
-    ],
-    correctIndex: 1
-  },
-  {
-    question: "¿Cuál es el comando correcto en la línea de comandos para crear un directorio en un sistema Unix/Linux?",
-    options: [
-      "create dir /nombre_directorio",
-      "mkdir nombre_directorio",
-      "newfolder -name nombre_directorio",
-      "dir /make nombre_directorio"
-    ],
-    correctIndex: 1
-  }
-]} />
-
-## Control 03
-<Quiz questions={[
-  {
-    question: "¿Cuál de las siguientes opciones describe un tipo de red que engloba varias redes geográficamente dispersas, abarcando un área extensa?",
-    options: [
-      "LAN",
-      "SAN",
-      "WAN",
-      "PAN"
-    ],
-    correctIndex: 2
-  },
-  {
-    question: "Según el modelo TCP/IP. ¿Cuál es la capa equivalente a la Capa de Enlace de datos, en el modelo OSI?",
-    options: [
-      "Capa acceso a la red",
-      "Capa de transporte",
-      "Capa de red",
-      "Capa de enlace de datos"
-    ],
-    correctIndex: 0
-  },
-  {
-    question: "¿Cuál es una medida efectiva para configurar la seguridad de un router inalámbrico?",
-    options: [
-      "Configurar WPA3 o WPA2 con una clave fuerte.",
-      "Desactivar completamente la seguridad para facilitar el acceso.",
-      "Utilizar un cifrado WEP para proteger la red.",
-      "Permitir acceso sin contraseña para usuarios conocidos."
-    ],
-    correctIndex: 0
-  },
-  {
-    question: "¿Cómo podrías solucionar problemas en una red WLAN relacionados con la velocidad de conexión?",
-    options: [
-      "Cambiar la configuración del enrutador a una banda más lenta.",
-      "Aumentar la potencia de transmisión del enrutador.",
-      "Cambiar el canal de transmisión para evitar interferencias.",
-      "Desactivar completamente la red inalámbrica."
-    ],
-    correctIndex: 2
-  }
-]} />
+<Tabs>
+  <Tab label="Control 01">
+    <FigureProvider>
+      <Control01 components={{ wrapper: ({children}) => <>{children}</> }} />
+    </FigureProvider>
+  </Tab>
+  <Tab label="Control 02">
+    <FigureProvider>
+      <Control02 components={{ wrapper: ({children}) => <>{children}</> }} />
+    </FigureProvider>
+  </Tab>
+  <Tab label="Control 03">
+    <FigureProvider>
+      <Control03 components={{ wrapper: ({children}) => <>{children}</> }} />
+    </FigureProvider>
+  </Tab>
+</Tabs>

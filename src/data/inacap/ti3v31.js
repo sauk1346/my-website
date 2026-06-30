@@ -53,7 +53,7 @@ const courseData = {
             date: 'Lun 21, Jul 2025',
             weighting: '15%',
             description: {
-                text: 'Promedio Controles',
+                text: 'Controles',
                 href: 'controles'
             }
         }

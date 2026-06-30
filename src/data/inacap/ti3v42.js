@@ -53,7 +53,7 @@ const courseData = {
             date: 'Sáb 20, Dic 2025',
             weighting: '25%',
             description: {
-                text: '',
+                text: 'Promedio evaluaciones',
                 href: ''
             },
         },

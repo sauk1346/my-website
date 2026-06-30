@@ -740,7 +740,7 @@ export const calendar25 = [
   },
   {
     id: 123,
-    fecha: "2026-7-2",
+    fecha: "2026-7-1",
     titulo: "[CVCD01] Evaluación 02",
     description: "Cálculo Diferencial"
   },

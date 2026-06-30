@@ -35,6 +35,8 @@
     font-size: 0.9rem;
     color: var(--foreground, #111111);
     transition: color 0.3s ease;
+    text-align: justify;
+    hyphens: auto;
   }
 
   .questionText p {
@@ -69,6 +71,9 @@
   
   .optionButton {
     width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 8px;
     text-align: left;
     padding: 10px;
     border-radius: var(--radius-md, 6px);
@@ -77,24 +82,25 @@
     color: var(--foreground, #111111);
     cursor: pointer;
     transition: all 0.2s ease;
-    position: relative;
     font-size: 0.9rem;
   }
-  
-  /* Clases adicionales para las opciones */
+
   .optionContent {
     display: flex;
-    width: calc(100% - 24px); /* Espacio para el icono */
+    flex: 1;
+    min-width: 0;
   }
-  
+
   .optionLetter {
     margin-right: 6px;
     flex-shrink: 0;
   }
-  
+
   .optionText {
     flex: 1;
-    white-space: pre-wrap; /* Preserva espacios y saltos de línea */
+    white-space: pre-wrap;
+    text-align: justify;
+    hyphens: auto;
   }
   
   .optionButton:hover {
@@ -114,9 +120,9 @@
   }
   
   .iconContainer {
-    float: right;
     display: flex;
     align-items: center;
+    flex-shrink: 0;
   }
   
   .correctIcon {

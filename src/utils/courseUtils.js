@@ -3,6 +3,7 @@ import avan01 from '@/data/inacap/avan01';
 import fvie01 from '@/data/inacap/fvie01';
 import mvfm01 from '@/data/inacap/mvfm01';
 import ti3v11 from '@/data/inacap/ti3v11';
+import ti3v12 from '@/data/inacap/ti3v12';
 import ti3v13 from '@/data/inacap/ti3v13';
 import ti3v21 from '@/data/inacap/ti3v21';
 import ti3v22 from '@/data/inacap/ti3v22';
@@ -35,6 +36,7 @@ const courseDataMap = {
     fvie02,
     mvfm01,
     ti3v11,
+    ti3v12,
     ti3v13,
     ti3v21,
     ti3v22,

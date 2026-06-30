@@ -55,7 +55,7 @@ const courseData = {
             date: 'Cada Semana',
             weighting: '15%',
             description: {
-                text: 'Promedio Controles',
+                text: 'Controles',
                 href: 'controles'
             }
         }

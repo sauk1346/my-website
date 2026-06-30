@@ -126,7 +126,7 @@ const courseData = {
                 },
                 {
                     text: "Evaluation 01: Conversation",
-                    href: "fves01/eval01"
+                    href: "eval01"
                 },
             ]
         },

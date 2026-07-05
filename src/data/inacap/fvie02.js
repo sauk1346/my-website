@@ -212,6 +212,28 @@ const courseData = {
             date: 'Mié 01, Jul 2026', 
             description: [
                 {
+                    text: 'Suspensión clases: Evacuación sede (fuga de gas)',
+                    strikethrough: true
+                }
+            ]
+        },
+        {
+            week: '08', 
+            class: '15', 
+            date: 'Lun 06, Jul 2026', 
+            description: [
+                {
+                    text: '',
+                    ref: ''
+                }
+            ]
+        },
+        { 
+            week: '08', 
+            class: '16', 
+            date: 'Mié 08, Jul 2026', 
+            description: [
+                {
                     text: '',
                     ref: ''
                 }
@@ -335,7 +357,7 @@ const courseData = {
             description: [
                 {
                     text: 'Generación Metáforas',
-                    href: '',
+                    href: 'lectura11',
                 }
             ]
         },
@@ -346,7 +368,7 @@ const courseData = {
             description: [
                 {
                     text: 'Brainstorming',
-                    href: '',
+                    href: 'lectura12',
                 }
             ]
         },
@@ -363,11 +385,44 @@ const courseData = {
         },
         { 
             week: '07', 
-            lecture: '13', 
+            lecture: '14', 
             date: 'Vie 03, Jul 2026', 
             description: [
                 {
                     text: 'Prototipo',
+                    href: '',
+                }
+            ]
+        },
+        { 
+            week: '07', 
+            lecture: '15', 
+            date: 'Vie 03, Jul 2026', 
+            description: [
+                {
+                    text: 'Iteración',
+                    href: '',
+                }
+            ]
+        },
+        { 
+            week: '08', 
+            lecture: '16', 
+            date: 'Vie 10, Jul 2026', 
+            description: [
+                {
+                    text: 'Toolkit Unidad 3',
+                    href: 'docs/Toolkit-U3.pdf',
+                }
+            ]
+        },
+        { 
+            week: '08', 
+            lecture: '17', 
+            date: 'Vie 10, Jul 2026', 
+            description: [
+                {
+                    text: 'Propuesta de valor',
                     href: '',
                 }
             ]

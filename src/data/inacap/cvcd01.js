@@ -32,7 +32,7 @@ const courseData = {
         },
         {
             evaluationNumber: 2,
-            date: 'Mié 01, Jul 2026',
+            date: 'Jue 02, Jul 2026',
             weighting: '25%',
             description: {
                 text: 'Derivadas',
@@ -226,7 +226,7 @@ const courseData = {
             description: [
                 {
                     text: 'Instrucciones proyecto',
-                    href: ''
+                    href: 'clase12'
                 }, 
             ]
         },
@@ -236,8 +236,8 @@ const courseData = {
             date: 'Mié 01, Jul 2026', 
             description: [
                 {
-                    text: 'Evaluación 02',
-                    href: ''
+                    text: 'Suspensión clases: Evacuación sede (fuga de gas)',
+                    strikethrough: true
                 }, 
             ]
         },
@@ -245,6 +245,28 @@ const courseData = {
             week: '07', 
             class: '14', 
             date: 'Jue 02, Jul 2026', 
+            description: [
+                {
+                    text: 'Evaluación 02',
+                    href: ''
+                }, 
+            ]
+        },
+        { 
+            week: '08', 
+            class: '15', 
+            date: 'Mié 08, Jul 2026', 
+            description: [
+                {
+                    text: '',
+                    href: ''
+                }, 
+            ]
+        },
+        { 
+            week: '08', 
+            class: '16', 
+            date: 'Jue 09, Jul 2026', 
             description: [
                 {
                     text: '',

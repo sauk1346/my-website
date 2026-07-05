@@ -44,7 +44,7 @@ const courseData = {
             date: 'Lun 20, Jul 2026',
             weighting: '35%',
             description: {
-                text: '',
+                text: 'Enrutamiento',
                 href: '',
             }
         },
@@ -151,7 +151,7 @@ const courseData = {
                 },
                 {
                     text: 'Guía 01: Direcciones IPv4',
-                    href: ''
+                    href: 'unit02-guia01'
                 }
             ]
         },
@@ -223,8 +223,30 @@ const courseData = {
         },
         { 
             week: '07', 
-            class: '13', 
+            class: '14', 
             date: 'Jue 02, Jul 2026', 
+            description: [
+                {
+                    text: 'Fundamentos de Enrutamiento',
+                    href: ''
+                }
+            ]
+        },
+        { 
+            week: '08', 
+            class: '15', 
+            date: 'Lun 06, Jul 2026', 
+            description: [
+                {
+                    text: '',
+                    href: ''
+                }
+            ]
+        },
+        { 
+            week: '08', 
+            class: '16', 
+            date: 'Jue 09, Jul 2026', 
             description: [
                 {
                     text: '',
@@ -303,7 +325,16 @@ const courseData = {
             lecture: '08', 
             date: 'Sáb 04, Jul 2026', 
             description: {
-                text: 'Enrutamiento dinámico con OSPFV2',
+                text: 'Enrutamiento dinámico con OSPFv2',
+                href: '',
+            }
+        },
+        { 
+            week: '08', 
+            lecture: '09', 
+            date: 'Sáb 11, Jul 2026', 
+            description: {
+                text: 'Enrutamiento dinámico con OSPFv3',
                 href: '',
             }
         },

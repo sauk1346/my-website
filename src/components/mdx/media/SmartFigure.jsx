@@ -175,17 +175,10 @@ export default function SmartFigure({
     }),
   }
 
-  const figureStyle = {
-    ...(center && {
-      display: 'flex',
-      justifyContent: 'center',
-    })
-  }
+  const figureStyle = {}
 
   const innerStyle = {
-    display: 'inline-flex',
-    flexDirection: 'column',
-    alignItems: 'flex-start',
+    width: '100%',
   }
 
   // Obtener número de figura del contexto

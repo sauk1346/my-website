@@ -130,12 +130,16 @@ export default function FlashcardStudy({ cards, topicName, deckNumber, layout })
       >
         <div className={styles.cardInner} onAnimationEnd={handleAnimationEnd}>
           <div className={styles.cardFront}>
-            <div className={styles.cardSideLabel}>Pregunta</div>
-            <CardRenderer content={current.front} layout={layout} />
+            <div className={styles.cardContent}>
+              <div className={styles.cardSideLabel}>Pregunta</div>
+              <CardRenderer content={current.front} layout={layout} />
+            </div>
           </div>
           <div className={styles.cardBack}>
-            <div className={styles.cardSideLabel}>Respuesta</div>
-            <CardRenderer content={current.back} layout={layout} />
+            <div className={styles.cardContent}>
+              <div className={styles.cardSideLabel}>Respuesta</div>
+              <CardRenderer content={current.back} layout={layout} />
+            </div>
           </div>
         </div>
       </div>

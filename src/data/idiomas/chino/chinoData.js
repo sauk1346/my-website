@@ -9,42 +9,32 @@ export const chinoData = {
     topics: [
       {
         item: "01",
-        description: "IPA"
+        description: "Pinyin",
+        href: "chino/temas/pinyin",
+        hasContent: true
       },
       {
-        item: "02", 
-        description: "Gramática"
-      },
-      {
-        item: "03",
-        description: "Pinyin"
-      },
-      {
-        item: "04",
+        item: "02",
         description: "Hanzi"
       },
       {
-        item: "05",
+        item: "03",
+        description: "Gramática"
+      },
+      {
+        item: "04",
         description: "Partículas"
       },
       {
-        item: "06",
+        item: "05",
         description: "Verbos"
       },
       {
-        item: "07",
+        item: "06",
         description: "Adjetivos"
       },
       {
-        item: "08",
-        description: "Vocabulario"
-      },
-      {
-        item: "09",
-        description: "Frases"
-      },
-      {
-        item: "10",
+        item: "07",
         description: "Oraciones"
       }
     ]

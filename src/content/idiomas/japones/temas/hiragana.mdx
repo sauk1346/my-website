@@ -1,0 +1,79 @@
+# Hiragana (ひらがな)
+
+El hiragana es uno de los tres sistemas de escritura del japonés (junto a katakana y kanji). Es **silábico**: cada carácter representa una sílaba completa, no un sonido individual como en el alfabeto latino. Se usa para palabras nativas japonesas, partículas gramaticales y terminaciones de verbos/adjetivos.
+
+## Sílabas básicas (gojūon, 五十音)
+
+Se organizan tradicionalmente en una tabla de 5 columnas (vocales: a, i, u, e, o) por fila (consonante):
+
+<SmartTable
+    tableLayout="auto"
+    headers={['Fila', 'A', 'I', 'U', 'E', 'O']}
+    rows={[
+        ['Vocales', 'あ a', 'い i', 'う u', 'え e', 'お o'],
+        ['K', 'か ka', 'き ki', 'く ku', 'け ke', 'こ ko'],
+        ['S', 'さ sa', 'し shi', 'す su', 'せ se', 'そ so'],
+        ['T', 'た ta', 'ち chi', 'つ tsu', 'て te', 'と to'],
+        ['N', 'な na', 'に ni', 'ぬ nu', 'ね ne', 'の no'],
+        ['H', 'は ha', 'ひ hi', 'ふ fu', 'へ he', 'ほ ho'],
+        ['M', 'ま ma', 'み mi', 'む mu', 'め me', 'も mo'],
+        ['Y', 'や ya', '—', 'ゆ yu', '—', 'よ yo'],
+        ['R', 'ら ra', 'り ri', 'る ru', 'れ re', 'ろ ro'],
+        ['W', 'わ wa', '—', '—', '—', 'を o'],
+        ['Final', 'ん n', '—', '—', '—', '—'],
+    ]}
+/>
+
+## Sonidos derivados (dakuten y handakuten)
+
+Agregando marcas diacríticas (`゛` dakuten, `゜` handakuten) a algunas filas se obtienen sonidos "sonoros":
+
+<SmartTable
+    tableLayout="auto"
+    headers={['Fila derivada', 'A', 'I', 'U', 'E', 'O']}
+    rows={[
+        ['G (de K + ゛)', 'が ga', 'ぎ gi', 'ぐ gu', 'げ ge', 'ご go'],
+        ['Z (de S + ゛)', 'ざ za', 'じ ji', 'ず zu', 'ぜ ze', 'ぞ zo'],
+        ['D (de T + ゛)', 'だ da', 'ぢ ji', 'づ zu', 'で de', 'ど do'],
+        ['B (de H + ゛)', 'ば ba', 'び bi', 'ぶ bu', 'べ be', 'ぼ bo'],
+        ['P (de H + ゜)', 'ぱ pa', 'ぴ pi', 'ぷ pu', 'ぺ pe', 'ぽ po'],
+    ]}
+/>
+
+## Combinaciones (yōon, 拗音)
+
+Combinando una sílaba terminada en "i" (き, し, ち, に, ひ, み, り y sus versiones sonoras ぎ, じ, び, ぴ) con una versión pequeña de や/ゆ/よ se forma una sílaba compuesta:
+
+<SmartTable
+    tableLayout="auto"
+    headers={['Base', 'ゃ (ya)', 'ゅ (yu)', 'ょ (yo)']}
+    rows={[
+        ['き ki', 'きゃ kya', 'きゅ kyu', 'きょ kyo'],
+        ['し shi', 'しゃ sha', 'しゅ shu', 'しょ sho'],
+        ['ち chi', 'ちゃ cha', 'ちゅ chu', 'ちょ cho'],
+        ['に ni', 'にゃ nya', 'にゅ nyu', 'にょ nyo'],
+        ['ひ hi', 'ひゃ hya', 'ひゅ hyu', 'ひょ hyo'],
+        ['み mi', 'みゃ mya', 'みゅ myu', 'みょ myo'],
+        ['り ri', 'りゃ rya', 'りゅ ryu', 'りょ ryo'],
+        ['ぎ gi', 'ぎゃ gya', 'ぎゅ gyu', 'ぎょ gyo'],
+        ['じ ji', 'じゃ ja', 'じゅ ju', 'じょ jo'],
+        ['び bi', 'びゃ bya', 'びゅ byu', 'びょ byo'],
+        ['ぴ pi', 'ぴゃ pya', 'ぴゅ pyu', 'ぴょ pyo'],
+    ]}
+/>
+
+<Callout type="tip" title="Hiragana vs Katakana: mismo sonido, distinto uso">
+Hiragana y katakana representan exactamente los mismos sonidos — no son alfabetos distintos con distinta fonética, son dos "letras" (estilos) para las mismas sílabas. Hiragana se usa para palabras japonesas nativas y gramática; katakana para préstamos extranjeros, onomatopeyas y énfasis.
+</Callout>
+
+<Callout type="tip" title="El orden gojūon no es alfabético al azar">
+El orden fila por fila (vocales, k, s, t, n, h, m, y, r, w) es el estándar usado en diccionarios japoneses y teclados — conviene memorizarlo en ese orden, no letra por letra suelta.
+</Callout>
+
+<Callout type="info" title="ぢ y づ suenan igual que じ y ず">
+Por razones históricas, `ぢ` (di) y `づ` (du) se pronuncian igual que `じ` (ji) y `ず` (zu). Aparecen solo en casos específicos (ej. palabras compuestas), no como alternativa libre.
+</Callout>
+
+<Callout type="note" title="La ゃ/ゅ/ょ pequeña nunca se pronuncia sola">
+En las combinaciones yōon, や/ゆ/よ se escriben más pequeñas que el tamaño normal. Eso indica que se fusionan con la sílaba anterior en un solo sonido (きゃ = "kya", **no** "ki-ya" en dos sílabas separadas).
+</Callout>

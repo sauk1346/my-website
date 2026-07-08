@@ -6,7 +6,7 @@ import styles from './LanguagePage.module.css';
 
 const LanguagePage = ({ data }) => {
   const { title, courses, topics } = data;
-  const [activeTab, setActiveTab] = useState('cursos');
+  const [activeTab, setActiveTab] = useState('topicos');
 
   return (
     <div className={styles.pageContainer}>
@@ -16,20 +16,47 @@ const LanguagePage = ({ data }) => {
         <div className={styles.tabNavigation}>
           <div className={styles.tabButtons}>
             <button
-              className={`${styles.tabButton} ${activeTab === 'cursos' ? styles.activeTab : ''}`}
-              onClick={() => setActiveTab('cursos')}
-            >
-              <BookOpen size={18} />
-              <span>Cursos</span>
-            </button>
-            <button
               className={`${styles.tabButton} ${activeTab === 'topicos' ? styles.activeTab : ''}`}
               onClick={() => setActiveTab('topicos')}
             >
               <List size={18} />
               <span>Tópicos</span>
             </button>
+            <button
+              className={`${styles.tabButton} ${activeTab === 'cursos' ? styles.activeTab : ''}`}
+              onClick={() => setActiveTab('cursos')}
+            >
+              <BookOpen size={18} />
+              <span>Cursos</span>
+            </button>
           </div>
+
+          {activeTab === 'topicos' && (
+            <div className={styles.tabContent}>
+              <table className={styles.table}>
+                <thead>
+                  <tr>
+                    <th>Item</th>
+                    <th>Descripción</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {topics.map((topic, index) => (
+                    <tr key={topic.item || index}>
+                      <td className={styles.code}>{topic.item}</td>
+                      <td>
+                        {topic.hasContent ? (
+                          <Link href={topic.href} className={styles.courseLink}>{topic.description}</Link>
+                        ) : (
+                          topic.description
+                        )}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
 
           {activeTab === 'cursos' && (
             <div className={styles.tabContent}>
@@ -70,27 +97,6 @@ const LanguagePage = ({ data }) => {
                           course.certificate || ''
                         )}
                       </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          )}
-
-          {activeTab === 'topicos' && (
-            <div className={styles.tabContent}>
-              <table className={styles.table}>
-                <thead>
-                  <tr>
-                    <th>Item</th>
-                    <th>Descripción</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {topics.map((topic, index) => (
-                    <tr key={topic.item || index}>
-                      <td className={styles.code}>{topic.item}</td>
-                      <td>{topic.description}</td>
                     </tr>
                   ))}
                 </tbody>

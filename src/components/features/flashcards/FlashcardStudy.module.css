@@ -95,6 +95,7 @@
   min-height: 340px;
   transform-style: preserve-3d;
   transition: transform 0.45s ease;
+  will-change: transform;
 }
 
 .flipped .cardInner {
@@ -117,6 +118,10 @@
   inset: 0;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
+  /* fuerza la promoción a su propia capa GPU desde el inicio, para que el
+     navegador no tenga que promover/degradar la capa a mitad de la
+     transición (fuente típica de que la cara trasera se filtre un instante) */
+  transform: translateZ(0);
   background: var(--card-bg);
   color: var(--foreground);
   border: 1px solid var(--border-color);
@@ -124,14 +129,25 @@
   padding: 1.75rem;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
   box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-  overflow-y: auto;
 }
 
 .cardBack {
-  transform: rotateY(180deg);
+  transform: rotateY(180deg) translateZ(0);
   background: var(--surface);
+}
+
+/* El scroll vive en un contenedor interno, no en la capa que tiene
+   backface-visibility + transform 3D: overflow no-visible ahí rompe el
+   ocultamiento de la cara trasera en varios navegadores y hace que ambas
+   caras (con sus propios botones "Copiar") queden visibles superpuestas. */
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  min-height: 0;
+  flex: 1;
+  overflow-y: auto;
 }
 
 .cardSideLabel {

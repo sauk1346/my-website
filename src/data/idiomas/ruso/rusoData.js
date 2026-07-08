@@ -13,38 +13,28 @@ export const rusoData = {
     topics: [
       {
         item: "01",
-        description: "IPA"
+        description: "Alfabeto Cirílico",
+        href: "ruso/temas/alfabeto-cirilico",
+        hasContent: true
       },
       {
         item: "02",
-        description: "Alfabeto Cirílico"
-      },
-      {
-        item: "03",
         description: "Gramática"
       },
       {
-        item: "04",
+        item: "03",
         description: "Partículas"
       },
       {
-        item: "05",
+        item: "04",
         description: "Verbos"
       },
       {
-        item: "06",
+        item: "05",
         description: "Adjectivos"
       },
       {
-        item: "07",
-        description: "Vocabulario"
-      },
-      {
-        item: "08",
-        description: "Frases"
-      },
-      {
-        item: "09",
+        item: "06",
         description: "Oraciones"
       }
     ]

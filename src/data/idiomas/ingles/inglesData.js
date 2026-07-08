@@ -9,7 +9,9 @@ export const inglesData = {
     topics: [
       {
         item: "01",
-        description: "IPA"
+        description: "IPA",
+        href: "ingles/temas/ipa",
+        hasContent: true
       },
       {
         item: "02",
@@ -33,14 +35,6 @@ export const inglesData = {
       },
       {
         item: "07",
-        description: "Vocabulario"
-      },
-      {
-        item: "08",
-        description: "Frases"
-      },
-      {
-        item: "09",
         description: "Oraciones"
       }
     ]

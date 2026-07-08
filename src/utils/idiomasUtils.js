@@ -119,6 +119,54 @@ export function getAllLanguageCoursePaths() {
     return allParams;
 }
 
+// Tópicos de idioma con contenido propio (independiente de los cursos por
+// plataforma) — ej. el abecedario de un idioma. Para agregar uno nuevo:
+// 1) registrar aquí { language: { slug: { title } } }
+// 2) agregar `href: "{language}/temas/{slug}"` y `hasContent: true` al
+//    topic correspondiente en src/data/idiomas/{language}/{language}Data.js
+// 3) crear el MDX en src/content/idiomas/{language}/temas/{slug}.mdx
+const topicsWithContent = {
+    aleman: {
+        alfabeto: { title: "Alfabeto Alemán" },
+    },
+    coreano: {
+        hangul: { title: "Hangul" },
+    },
+    ruso: {
+        "alfabeto-cirilico": { title: "Alfabeto Cirílico" },
+    },
+    japones: {
+        hiragana: { title: "Hiragana" },
+        katakana: { title: "Katakana" },
+    },
+    chino: {
+        pinyin: { title: "Pinyin" },
+    },
+    ingles: {
+        ipa: { title: "IPA" },
+    },
+};
+
+/**
+ * Obtiene todos los pares language/slug de tópicos para generateStaticParams
+ */
+export function getAllLanguageTopicPaths() {
+    const paths = [];
+    for (const [language, topics] of Object.entries(topicsWithContent)) {
+        for (const slug of Object.keys(topics)) {
+            paths.push({ language, slug });
+        }
+    }
+    return paths;
+}
+
+/**
+ * Metadata (título) de un tópico específico, para generateMetadata
+ */
+export function getLanguageTopicMeta(language, slug) {
+    return topicsWithContent[language]?.[slug] || null;
+}
+
 /**
  * Genera la lista de cursos para un idioma automáticamente
  * desde los datos individuales de cada curso

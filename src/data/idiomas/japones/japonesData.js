@@ -13,46 +13,38 @@ export const japonesData = {
     topics: [
       {
         item: "01",
-        description: "IPA"
+        description: "Hiragana",
+        href: "japones/temas/hiragana",
+        hasContent: true
       },
       {
         item: "02",
-        description: "Hiragana"
+        description: "Katakana",
+        href: "japones/temas/katakana",
+        hasContent: true
       },
       {
         item: "03",
-        description: "Katakana"
-      },
-      {
-        item: "04",
         description: "Kanji"
       },
       {
-        item: "05",
+        item: "04",
         description: "Gramática"
       },
       {
-        item: "06",
+        item: "05",
         description: "Partículas"
       },
       {
-        item: "07",
+        item: "06",
         description: "Verbos"
       },
       {
-        item: "08",
+        item: "07",
         description: "Adjectivos"
       },
       {
-        item: "09",
-        description: "Vocabulario"
-      },
-      {
-        item: "10",
-        description: "Frases"
-      },
-      {
-        item: "11",
+        item: "08",
         description: "Oraciones"
       }
     ]

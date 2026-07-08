@@ -1,0 +1,111 @@
+# Hangul (한글)
+
+El Hangul es el sistema de escritura del coreano, creado en 1443 por el rey Sejong. A diferencia del alfabeto latino, sus letras (llamadas *jamo*) no se escriben en línea recta — se agrupan en **bloques silábicos**, donde cada bloque representa una sílaba completa.
+
+## Consonantes básicas (자음)
+
+<SmartTable
+    tableLayout="auto"
+    headers={['Jamo', 'Romanización', 'Pronunciación (IPA)', 'Nombre']}
+    rows={[
+        ['ㄱ', 'g / k', '/k/', 'giyeok'],
+        ['ㄴ', 'n', '/n/', 'nieun'],
+        ['ㄷ', 'd / t', '/t/', 'digeut'],
+        ['ㄹ', 'r / l', '/ɾ/', 'rieul'],
+        ['ㅁ', 'm', '/m/', 'mieum'],
+        ['ㅂ', 'b / p', '/p/', 'bieup'],
+        ['ㅅ', 's', '/s/', 'siot'],
+        ['ㅇ', '(muda) / ng', '/ŋ/', 'ieung'],
+        ['ㅈ', 'j', '/tɕ/', 'jieut'],
+        ['ㅊ', 'ch', '/tɕʰ/', 'chieut'],
+        ['ㅋ', 'k', '/kʰ/', 'kieuk'],
+        ['ㅌ', 't', '/tʰ/', 'tieut'],
+        ['ㅍ', 'p', '/pʰ/', 'pieup'],
+        ['ㅎ', 'h', '/h/', 'hieut'],
+    ]}
+/>
+
+## Vocales básicas (모음)
+
+<SmartTable
+    tableLayout="auto"
+    headers={['Jamo', 'Romanización', 'Pronunciación (IPA)']}
+    rows={[
+        ['ㅏ', 'a', '/a/'],
+        ['ㅑ', 'ya', '/ja/'],
+        ['ㅓ', 'eo', '/ʌ/'],
+        ['ㅕ', 'yeo', '/jʌ/'],
+        ['ㅗ', 'o', '/o/'],
+        ['ㅛ', 'yo', '/jo/'],
+        ['ㅜ', 'u', '/u/'],
+        ['ㅠ', 'yu', '/ju/'],
+        ['ㅡ', 'eu', '/ɯ/'],
+        ['ㅣ', 'i', '/i/'],
+    ]}
+/>
+
+## Consonantes dobles (쌍자음)
+
+<SmartTable
+    tableLayout="auto"
+    headers={['Jamo', 'Romanización', 'Pronunciación (IPA)']}
+    rows={[
+        ['ㄲ', 'kk', '/k͈/'],
+        ['ㄸ', 'tt', '/t͈/'],
+        ['ㅃ', 'pp', '/p͈/'],
+        ['ㅆ', 'ss', '/s͈/'],
+        ['ㅉ', 'jj', '/tɕ͈/'],
+    ]}
+/>
+
+## Vocales compuestas (복합모음)
+
+<SmartTable
+    tableLayout="auto"
+    headers={['Jamo', 'Romanización', 'Pronunciación (IPA)']}
+    rows={[
+        ['ㅐ', 'ae', '/ɛ/'],
+        ['ㅒ', 'yae', '/jɛ/'],
+        ['ㅔ', 'e', '/e/'],
+        ['ㅖ', 'ye', '/je/'],
+        ['ㅘ', 'wa', '/wa/'],
+        ['ㅙ', 'wae', '/wɛ/'],
+        ['ㅚ', 'oe', '/we/'],
+        ['ㅝ', 'wo', '/wʌ/'],
+        ['ㅞ', 'we', '/we/'],
+        ['ㅟ', 'wi', '/wi/'],
+        ['ㅢ', 'ui', '/ɰi/'],
+    ]}
+/>
+
+## Formación de bloques silábicos
+
+Cada sílaba se escribe como un bloque que combina, en orden:
+
+1. **Consonante inicial** (obligatoria — si la sílaba empieza en vocal, se usa `ㅇ` como marcador mudo)
+2. **Vocal medial** (obligatoria)
+3. **Consonante final** (*batchim*, opcional)
+
+<SmartTable
+    tableLayout="auto"
+    headers={['Componentes', 'Bloque', 'Romanización', 'Significado']}
+    rows={[
+        ['ㅎ + ㅏ + ㄴ', '한', 'han', '\\(parte de "coreano"\\)'],
+        ['ㄱ + ㅡ + ㄹ', '글', 'geul', '\\(escritura\\)'],
+        ['ㅇ + ㅏ', '아', 'a', '\\(interjección "ah"\\)'],
+    ]}
+/>
+
+`한` + `글` juntos forman **한글** (*Hangeul*), el nombre del propio sistema de escritura.
+
+<Callout type="tip" title="ㅇ tiene doble función">
+Al inicio de una sílaba, `ㅇ` no suena — es solo un marcador de que la sílaba empieza con vocal (`아` = "a", no "nga"). Al final de una sílaba (batchim), ese mismo símbolo sí suena, como una "ng" (`강` = "gang").
+</Callout>
+
+<Callout type="tip" title="Los bloques se leen como el latino, letra por letra no">
+Aunque cada sílaba forma un bloque cuadrado, los bloques en sí se leen de izquierda a derecha y de arriba hacia abajo, igual que el español — no hay que leer "por columnas".
+</Callout>
+
+<Callout type="note" title="Por qué se considera un sistema tan eficiente">
+Hangul es descrito frecuentemente como uno de los sistemas de escritura más lógicos del mundo: la forma de cada consonante básica representa la posición de la boca/lengua al pronunciarla. Fue diseñado explícitamente para ser fácil de aprender.
+</Callout>

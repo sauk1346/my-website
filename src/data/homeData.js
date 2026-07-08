@@ -10,11 +10,11 @@ export const homeData = {
         image: "/logos/inacap_logo.png",
         link: "/inacap"
       },
-      leetcode: {
-        name: "LeetCode",
+      ejercicios: {
+        name: "Ejercicios",
         description: "Ej. Programación",
         image: "/logos/codeTraining.png",
-        link: "/leetcode"
+        link: "/ejercicios"
       },
       codevault: {
         name: "CodeVault",

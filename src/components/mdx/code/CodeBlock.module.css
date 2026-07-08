@@ -3,6 +3,8 @@
   margin: 0;
   line-height: 1.4;
   position: relative;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .relative {
@@ -23,6 +25,8 @@
   z-index: 10;
   border: none;
   cursor: pointer;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .copyButton:hover {

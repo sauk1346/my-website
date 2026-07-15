@@ -746,13 +746,13 @@ export const calendar25 = [
   },
   {
     id: 124,
-    fecha: "2026-7-9",
+    fecha: "2026-7-14",
     titulo: "[CVCD01] Evaluación 03",
     description: "Cálculo Diferencial"
   },
   {
     id: 125,
-    fecha: "2026-7-22",
+    fecha: "2026-7-12",
     titulo: "[CVCD01] Evaluación 04",
     description: "Cálculo Diferencial"
   },

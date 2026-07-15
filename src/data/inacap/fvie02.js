@@ -35,8 +35,8 @@ const courseData = {
             date: 'Dom 05, Jul 2026',
             weighting: '30%',
             description: {
-                text: '',
-                href: '',
+                text: 'Informe 02',
+                href: 'docs/informe02.pdf',
             }
         },
         {
@@ -44,7 +44,7 @@ const courseData = {
             date: 'Dom 26, Jul 2026',
             weighting: '30%',
             description: {
-                text: '',
+                text: 'Informe 03',
                 href: '',
             }
         },
@@ -53,7 +53,7 @@ const courseData = {
             date: 'Dom 26, Jul 2026',
             weighting: '20%',
             description: {
-                text: '',
+                text: 'Pitch',
                 href: '',
             }
         },
@@ -180,7 +180,7 @@ const courseData = {
             description: [
                 {
                     text: 'Avance Informe 02 (1)',
-                    ref: ''
+                    href: ''
                 }
             ]
         },
@@ -191,7 +191,7 @@ const courseData = {
             description: [
                 {
                     text: 'Avance Informe 02 (2)',
-                    ref: ''
+                    href: ''
                 }
             ]
         },
@@ -201,7 +201,7 @@ const courseData = {
             date: 'Lun 29, Jun 2026', 
             description: [
                 {
-                    text: 'Suspensión clases: Feriado',
+                    text: 'Feriado: Día San Pedro y San Pablo',
                     strikethrough: true
                 }
             ]
@@ -223,9 +223,13 @@ const courseData = {
             date: 'Lun 06, Jul 2026', 
             description: [
                 {
-                    text: '',
-                    ref: ''
-                }
+                    text: 'Generación de metáforas',
+                    href: 'lectura11'
+                },
+                {
+                    text: 'Propuesta de valor',
+                    href: ''
+                },
             ]
         },
         { 
@@ -234,8 +238,52 @@ const courseData = {
             date: 'Mié 08, Jul 2026', 
             description: [
                 {
+                    text: 'Prototipo',
+                    href: 'lectura14'
+                }
+            ]
+        },
+        { 
+            week: '09', 
+            class: '17', 
+            date: 'Lun 13, Jul 2026', 
+            description: [
+                {
+                    text: 'Consultas Informe 03 (1)',
+                    href: ''
+                }
+            ]
+        },
+        { 
+            week: '09', 
+            class: '18', 
+            date: 'Mié 15, Jul 2026', 
+            description: [
+                {
+                    text: 'Consultas Informe 03 (2)',
+                    href: ''
+                }
+            ]
+        },
+        { 
+            week: '10', 
+            class: '19', 
+            date: 'Lun 20, Jul 2026', 
+            description: [
+                {
                     text: '',
-                    ref: ''
+                    href: ''
+                }
+            ]
+        },
+        { 
+            week: '10', 
+            class: '20', 
+            date: 'Mié 22, Jul 2026', 
+            description: [
+                {
+                    text: '',
+                    href: ''
                 }
             ]
         },
@@ -390,7 +438,7 @@ const courseData = {
             description: [
                 {
                     text: 'Prototipo',
-                    href: '',
+                    href: 'lectura14',
                 }
             ]
         },
@@ -423,6 +471,17 @@ const courseData = {
             description: [
                 {
                     text: 'Propuesta de valor',
+                    href: '',
+                }
+            ]
+        },
+        { 
+            week: '09', 
+            lecture: '18', 
+            date: 'Vie 17, Jul 2026', 
+            description: [
+                {
+                    text: 'Pitch',
                     href: '',
                 }
             ]

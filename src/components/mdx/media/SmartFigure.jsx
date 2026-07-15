@@ -177,8 +177,16 @@ export default function SmartFigure({
 
   const figureStyle = {}
 
+  // El contenedor se ajusta al ancho real de la imagen (fit-content) para
+  // que el caption, alineado a la izquierda, quede pegado al borde de la
+  // imagen y no al borde completo del figure
   const innerStyle = {
-    width: '100%',
+    width: 'fit-content',
+    maxWidth: '100%',
+    ...(center && {
+      marginLeft: 'auto',
+      marginRight: 'auto',
+    }),
   }
 
   // Obtener número de figura del contexto

@@ -36,21 +36,27 @@ const courseData = {
             weighting: '25%',
             description: {
                 text: 'Derivadas',
-                href: '',
+                href: 'eval02',
             }
         },
         {
             evaluationNumber: 3,
-            date: 'Jue 09, Jul 2026',
+            date: 'Mar 14, Jul 2026',
             weighting: '40%',
-            description: {
-                text: 'Proyecto',
-                href: '',
-            }
+            description:[ 
+                {
+                    text: 'Presentación Proyecto',
+                    href: 'docs/presentacion.pdf',
+                },
+                {
+                    text: 'Código base',
+                    href: 'https://github.com/sauk1346/simulador-inversion',
+                },
+            ]
         },
         {
             evaluationNumber: 4,
-            date: 'Mié 22, Jul 2026',
+            date: 'Mié 12, Jul 2026',
             weighting: '15%',
             description: [
                 {
@@ -248,7 +254,7 @@ const courseData = {
             description: [
                 {
                     text: 'Evaluación 02',
-                    href: ''
+                    href: 'eval02'
                 }, 
             ]
         },
@@ -258,7 +264,7 @@ const courseData = {
             date: 'Mié 08, Jul 2026', 
             description: [
                 {
-                    text: '',
+                    text: 'Consultas Proyecto',
                     href: ''
                 }, 
             ]
@@ -267,6 +273,54 @@ const courseData = {
             week: '08', 
             class: '16', 
             date: 'Jue 09, Jul 2026', 
+            description: [
+                {
+                    text: 'ARPA 1: Sitio de área máxima',
+                    href: 'unit03-arpa01'
+                },
+                {
+                    text: 'SM01: Recipiente de costo mínimo',
+                    href: 'unit03-sm01'
+                }, 
+            ]
+        },
+        { 
+            week: '09', 
+            class: '17', 
+            date: 'Mié 15, Jul 2026', 
+            description: [
+                {
+                    text: 'Suspensión clases: vísperas feriado',
+                    strikethrough: true
+                }, 
+            ]
+        },
+        { 
+            week: '09', 
+            class: '18', 
+            date: 'Jue 16, Jul 2026', 
+            description: [
+                {
+                    text: 'Feriado: Día de la Virgen del Carmen',
+                    strikethrough: true
+                }, 
+            ]
+        },
+        { 
+            week: '10', 
+            class: '19', 
+            date: 'Mié 22, Jul 2026', 
+            description: [
+                {
+                    text: '',
+                    href: ''
+                }, 
+            ]
+        },
+        { 
+            week: '10', 
+            class: '20', 
+            date: 'Jue 23, Jul 2026', 
             description: [
                 {
                     text: '',

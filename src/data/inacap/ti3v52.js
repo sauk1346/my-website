@@ -216,7 +216,7 @@ const courseData = {
             date: 'Lun 29, Jun 2026', 
             description: [
                 {
-                    text: 'Suspensión clases: Feriado',
+                    text: 'Feriado: Día San Pedro y San Pablo',
                     strikethrough: true
                 }
             ]
@@ -238,7 +238,7 @@ const courseData = {
             date: 'Lun 06, Jul 2026', 
             description: [
                 {
-                    text: '',
+                    text: 'Ejercicio 01: Configuración OSFP',
                     href: ''
                 }
             ]
@@ -249,7 +249,51 @@ const courseData = {
             date: 'Jue 09, Jul 2026', 
             description: [
                 {
-                    text: '',
+                    text: 'Ejercicio 4: OSPFv2',
+                    href: ''
+                }
+            ]
+        },
+        { 
+            week: '09', 
+            class: '17', 
+            date: 'Lun 13, Jul 2026', 
+            description: [
+                {
+                    text: 'Ejercicio 5: OSPFv3',
+                    href: ''
+                }
+            ]
+        },
+        { 
+            week: '09', 
+            class: '18', 
+            date: 'Jue 16, Jul 2026', 
+            description: [
+                {
+                    text: 'Feriado: Día de la Virgen del Carmen',
+                    strikethrough: true
+                }
+            ]
+        },
+        { 
+            week: '10', 
+            class: '19', 
+            date: 'Lun 20, Jul 2026', 
+            description: [
+                {
+                    text: 'Evaluación 03',
+                    href: ''
+                }
+            ]
+        },
+        { 
+            week: '10', 
+            class: '20', 
+            date: 'Jue 23, Jul 2026', 
+            description: [
+                {
+                    text: 'Cierre de Notas',
                     href: ''
                 }
             ]
@@ -335,6 +379,15 @@ const courseData = {
             date: 'Sáb 11, Jul 2026', 
             description: {
                 text: 'Enrutamiento dinámico con OSPFv3',
+                href: '',
+            }
+        },
+        { 
+            week: '09', 
+            lecture: '10', 
+            date: 'Sáb 18, Jul 2026', 
+            description: {
+                text: 'Integración y resolución de problemas de enrutamiento IPv4 e IPv6',
                 href: '',
             }
         },

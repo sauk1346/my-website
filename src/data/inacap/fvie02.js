@@ -449,7 +449,7 @@ const courseData = {
             description: [
                 {
                     text: 'Iteración',
-                    href: '',
+                    href: 'lectura15',
                 }
             ]
         },
@@ -471,7 +471,7 @@ const courseData = {
             description: [
                 {
                     text: 'Propuesta de valor',
-                    href: '',
+                    href: 'lectura16',
                 }
             ]
         },
@@ -482,7 +482,7 @@ const courseData = {
             description: [
                 {
                     text: 'Pitch',
-                    href: '',
+                    href: 'lectura17',
                 }
             ]
         },

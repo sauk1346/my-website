@@ -239,7 +239,11 @@ const courseData = {
             description: [
                 {
                     text: 'Ejercicio 01: Configuración OSFP',
-                    href: ''
+                    href: 'unit03-ej01'
+                },
+                {
+                    text:'Ejercicio 02: Determinar DR y BDR',
+                    href:'unit03-ej02'
                 }
             ]
         },
@@ -249,9 +253,13 @@ const courseData = {
             date: 'Jue 09, Jul 2026', 
             description: [
                 {
-                    text: 'Ejercicio 4: OSPFv2',
+                    text: 'Ejercicio 3: Modificar tiempos de hello y dead',
                     href: ''
-                }
+                },
+                {
+                    text: 'Ejercicio 4: OSPFv2',
+                    href: 'unit03-ej04'
+                },
             ]
         },
         { 

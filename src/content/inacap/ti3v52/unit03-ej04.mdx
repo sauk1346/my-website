@@ -145,39 +145,42 @@ Realice configuración de protocolo de enrutamiento OSPFv2 en router ELTENIENTE:
 {`enable
 configure terminal
 
-# Crear la interfaz Loopback1 con la IP indicada
+# Agregue una Interface Loopback 1 con IP=190.190.190.1, M=255.255.255.255
 interface loopback1
 ip address 190.190.190.1 255.255.255.255
+exit
 
-# Ruta estática por defecto que sale por la interfaz Loopback1
+# Agregar ruta estática por defecto que ocupe la interface loopback como salida
 ip route 0.0.0.0 0.0.0.0 loopback1
 
-# Entrar al proceso OSPF con ID de proceso 30
+# En OSPF ocupe ID de proceso 30
 router ospf 30
 
-# Fijar el ID del router en 30.30.30.30
+# ID del router 30.30.30.30
 router-id 30.30.30.30
 
-# No enviar información de enrutamiento por interfaces
-# que no sea necesario o inseguro:
-passive-interface default
-no passive-interface s0/0/1
-
-# Redistribuir la ruta por defecto dentro de OSPF
-default-information originate
-
-# Habilitar cada interfaz del router para OSPF en área backbone (área 0)
+# Habilite cada interfaz del router para ospf en área backbone
+exit
 interface g0/0
 ip ospf 30 area 0
+exit
 
 interface g0/1
 ip ospf 30 area 0
+exit
 
 interface s0/0/1
 ip ospf 30 area 0
+exit
 
-interface loopback1
-ip ospf 30 area 0`}
+router ospf 30
+
+# No envier información de enrutamiento por interfaces que no sea necesario o inseguro
+passive-interface default
+no passive-interface s0/0/1
+
+# Redistribuya la ruta por defecto dentro del ospf
+default-information originate`}
 </TerminalOutput>
 
 </Solution>

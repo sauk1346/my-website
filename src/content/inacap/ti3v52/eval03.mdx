@@ -1,0 +1,114 @@
+# Evaluación 03
+
+**Material:** [evaluacion03.pdf](docs/evaluacion03.pdf)
+
+<SmartFigure
+	src="/inacap/ti3v52/images/fig159.png"
+	alt="Topología de red"
+	caption="Topología de red"
+	lightbox={true}
+    size="large"
+/>
+
+1. Asigne nombre a cada dispositivo de acuerdo con sus datos personales, por ejemplo, si su nombre es Pedro, el primer router será PEDRO. Luego asigne IP a cada dispositivo de acuerto con la Tabla de direcciones IP siguiente:
+
+<SmartFigure
+	src="/inacap/ti3v52/images/fig160.png"
+	alt="Tabla de direcciones"
+	caption="Tabla de direcciones"
+    size="medium"
+/>
+
+<Solution title="Solución Pregunta 1">
+
+<SmartFigure
+    id="figura161"
+	src="/inacap/ti3v52/images/fig161.png"
+	alt="Cambio de hostname a router SUNOMBRE"
+	caption="Cambio de hostname a router SUNOMBRE"
+    size="large"
+/>
+
+<SmartFigure
+    id="figura162"
+	src="/inacap/ti3v52/images/fig162.png"
+	alt="Configuración g0/0, g0/1 y s0/0/0 en router SUNOMBRE"
+	caption="Configuración g0/0, g0/1 y s0/0/0 en router SUNOMBRE"
+    size="large"
+/>
+---
+<SmartFigure
+    id="figura163"
+	src="/inacap/ti3v52/images/fig163.png"
+	alt="Cambio de hostname a router PRIMERAPELLIDO"
+	caption="Cambio de hostname a router PRIMERAPELLIDO"
+    size="large"
+/>
+<SmartFigure
+    id="figura164"
+	src="/inacap/ti3v52/images/fig164.png"
+	alt="Configuración g0/0, s0/0/0 y s0/0/1 en router PRIMERAPELLIDO"
+	caption="Configuración g0/0, s0/0/0 y s0/0/1 en router PRIMERAPELLIDO"
+    size="large"
+/>
+---
+<SmartFigure
+    id="figura165"
+	src="/inacap/ti3v52/images/fig165.png"
+	alt="Cambio de hostname a router SEGUNDOAPELLIDO"
+	caption="Cambio de hostname a router SEGUNDOAPELLIDO"
+    size="large"
+/>
+<SmartFigure
+    id="figura166"
+	src="/inacap/ti3v52/images/fig166.png"
+	alt="Configuración g0/0, g0/1 y s0/0/1 en router SEGUNDOAPELLIDO"
+	caption="Configuración g0/0, g0/1 y s0/0/1 en router SEGUNDOAPELLIDO"
+    size="large"
+/>
+---
+<SmartFigure
+    id="figura167"
+	src="/inacap/ti3v52/images/fig167.png"
+	alt="Configuración PC0, PC1, PC2, PC3 y PC4"
+	caption="Configuración PC0, PC1, PC2, PC3 y PC4"
+    size="large"
+/>
+
+
+</Solution>
+
+2. Realice configuración de protocolo de enrutamiento OSPFv2 en router SUNOMBRE:
+    - ID de proceso 1000+X (ej: si X=15, ID=1015)
+    - El valor de X será entregado por su docente
+    - ID de router: 110.110.110.110
+    - Declare o publique las redes directamente conectadas con su correspondiente WildCardMask y en área 0 backbone
+    - No enviar información de enrutamiento por interfaces que no sea necesario o inseguro
+
+3. Realice configuración de protocolo de enrutamiento OSPFv2 en router PRIMERAPELLIDO:
+    - ID de proceso: 2000+X (ej: si X=15, ID=2015)
+    - El valor de X será entregado por su docente
+    - ID del router: 220.220.220.220
+    - Declare o publique las IP de las interfaces del router con su correspondiente WildCardMask en área 0 backbone
+    - No enviar información de enrutamiento por interfaces que no sea necesario o inseguro
+
+4. Realice configuración de protocolo de enrutamiento OSPFv2 en router SEGUNDOAPELLIDO:
+    - Agregue una Interface Loopback 190 con IP=190.190.190.1 M=255.255.255.255
+    - Agregar ruta estática por defecto que ocupe la interface loopback como salida
+    - ID de proceso: 3000+X (ej: si X=15, ID=1015)
+    - El valor de X será entregado por su docente
+    - ID del router: 30.30.30.30
+    - Habilite cada interfaz del router para ospf en área backbone
+    - No enviar información de enrutamiento por interfaces que no sea necesario o inseguro
+    - Redistribuya la ruta por defecto dentro de ospf
+
+5. Modificar el tiempo hello a 8 segundos en el enlace entre PRIMERAPELLIDO y SEGUNDOAPELLIDO
+
+6. Modificar el ancho de banda a 8MB en enlace entre SUNOMBRE y PRIMERAPELLIDO
+
+7. Muestre la tabla de enrutamiento, de vecinos y topología:
+    - Aplique comando para mostrar tabla de enrutamiento en router SEGUNDOAPELLIDO
+    - Aplique comando para mostrar tabla de vecinos en router PRIMERAPELLIDO
+    - Aplique comando para mostrar tabla de topología en router SUNOMBRE
+    - Explique resultado de dicho comando
+    - Realice resolución de problemas en caso de errores o fallas de configuración

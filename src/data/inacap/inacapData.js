@@ -228,7 +228,7 @@ export const subjects = [
       semester: 5,
       year: 2026,
       category:'systems',
-      status: 'current',
+      status: 'completed',
       href: '/inacap/ti3v52'
 
     },
@@ -247,7 +247,7 @@ export const subjects = [
       semester: 5,
       year: 2026,
       category: 'business',
-      status: 'current',
+      status: 'completed',
       href: '/inacap/fvie02'
     },
     {
@@ -265,7 +265,7 @@ export const subjects = [
       semester: 5,
       year: 2026,
       category: 'math',
-      status: 'current',
+      status: 'completed',
       href: '/inacap/cvcd01'
 
     },

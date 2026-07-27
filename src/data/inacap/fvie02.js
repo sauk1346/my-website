@@ -41,19 +41,19 @@ const courseData = {
         },
         {
             evaluationNumber: 3,
-            date: 'Dom 26, Jul 2026',
+            date: 'Jue 23, Jul 2026',
             weighting: '30%',
             description: {
                 text: 'Informe 03',
-                href: '',
+                href: 'docs/informe03.pdf',
             }
         },
         {
             evaluationNumber: 4,
-            date: 'Dom 26, Jul 2026',
+            date: 'Jue 23, Jul 2026',
             weighting: '20%',
             description: {
-                text: 'Pitch',
+                text: 'Promedio informes',
                 href: '',
             }
         },
@@ -228,7 +228,7 @@ const courseData = {
                 },
                 {
                     text: 'Propuesta de valor',
-                    href: ''
+                    href: 'lectura17'
                 },
             ]
         },
@@ -271,7 +271,7 @@ const courseData = {
             date: 'Lun 20, Jul 2026', 
             description: [
                 {
-                    text: '',
+                    text: 'Consultas Informe 03 (3)',
                     href: ''
                 }
             ]
@@ -282,7 +282,7 @@ const courseData = {
             date: 'Mié 22, Jul 2026', 
             description: [
                 {
-                    text: '',
+                    text: 'Cierre de notas',
                     href: ''
                 }
             ]
@@ -471,7 +471,7 @@ const courseData = {
             description: [
                 {
                     text: 'Propuesta de valor',
-                    href: 'lectura16',
+                    href: 'lectura17',
                 }
             ]
         },
@@ -482,7 +482,7 @@ const courseData = {
             description: [
                 {
                     text: 'Pitch',
-                    href: 'lectura17',
+                    href: 'lectura18',
                 }
             ]
         },

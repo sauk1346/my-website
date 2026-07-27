@@ -45,7 +45,7 @@ const courseData = {
             weighting: '35%',
             description: {
                 text: 'Enrutamiento',
-                href: '',
+                href: 'eval03',
             }
         },
         {
@@ -291,7 +291,7 @@ const courseData = {
             description: [
                 {
                     text: 'Evaluación 03',
-                    href: ''
+                    href: 'eval03'
                 }
             ]
         },
@@ -369,7 +369,7 @@ const courseData = {
             date: 'Sáb 27, Jun 2026', 
             description: {
                 text: 'Configuración y verificación de enrutamiento estático redes de datos',
-                href: '',
+                href: 'lectura07',
             }
         },
         { 
@@ -378,7 +378,7 @@ const courseData = {
             date: 'Sáb 04, Jul 2026', 
             description: {
                 text: 'Enrutamiento dinámico con OSPFv2',
-                href: '',
+                href: 'lectura08',
             }
         },
         { 
@@ -387,7 +387,7 @@ const courseData = {
             date: 'Sáb 11, Jul 2026', 
             description: {
                 text: 'Enrutamiento dinámico con OSPFv3',
-                href: '',
+                href: 'lectura09',
             }
         },
         { 
@@ -396,7 +396,7 @@ const courseData = {
             date: 'Sáb 18, Jul 2026', 
             description: {
                 text: 'Integración y resolución de problemas de enrutamiento IPv4 e IPv6',
-                href: '',
+                href: 'lectura10',
             }
         },
     ]

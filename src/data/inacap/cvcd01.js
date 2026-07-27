@@ -312,7 +312,7 @@ const courseData = {
             date: 'Mié 22, Jul 2026', 
             description: [
                 {
-                    text: '',
+                    text: 'Horario Consultas',
                     href: ''
                 }, 
             ]
@@ -323,7 +323,7 @@ const courseData = {
             date: 'Jue 23, Jul 2026', 
             description: [
                 {
-                    text: '',
+                    text: 'Examen (si nota < 5.0)',
                     href: ''
                 }, 
             ]

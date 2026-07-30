@@ -44,12 +44,12 @@
 
 /* Wrapper cuando hay caption */
 .figure {
-  margin: 0;
+  margin: 1.75rem 1.7rem;
 }
 
 .withCaption {
   margin-top: 0 !important;
-  padding-top: 0 !important;
+  margin-bottom: 0 !important;
 }
 
 .caption {
@@ -139,6 +139,10 @@
     margin: 0.75rem 0;
     touch-action: pan-x;
     -webkit-overflow-scrolling: touch;
+  }
+
+  .figure {
+    margin: 0.75rem 0;
   }
 }
 

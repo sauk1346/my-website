@@ -4,7 +4,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  min-height: 100vh;
   width: 100%;
   background-color: var(--background, #ffffff);
   color: var(--foreground, #1f2937);

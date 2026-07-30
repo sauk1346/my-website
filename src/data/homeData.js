@@ -85,26 +85,11 @@ export const homeData = {
         link: "/ruso"
       }
     }
-  },
-
-  sobreMi: {
-    id: "sobre-mi",
-    title: "Sobre mí",
-    description: "Información profesional y proyectos",
-    cardsData: {
-      portfolio: {
-        name: "Portfolio",
-        description: "Desarrollos",
-        image: "/logos/portfolio.png",
-        link: "https://www.antoniomorales.cl"
-      }
-    }
   }
 };
 
 // Array con todas las secciones en orden
 export const sectionsOrder = [
   homeData.programacion,
-  homeData.idiomas,
-  homeData.sobreMi
+  homeData.idiomas
 ];

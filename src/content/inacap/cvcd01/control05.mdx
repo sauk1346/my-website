@@ -67,6 +67,13 @@ $\therefore$ Se obtienen los siguientes valores:
 
 La pizzería "MANZA-PIZZA" vende su mejor creación en formato XXL, los ingresos y costos (en pesos) se ven reflejados en los registros de la tabla adjunta, donde $x$ representa el número de pizzas que produce y luego vende.
 
+<SmartFigure
+    src="/inacap/cvcd01/images/fig280.png"
+	alt="Número de pizzas producidas y vendidas"
+	caption="Número de Pizzas producidas y vendidas"
+	size="medium"
+/>
+
 **INDICACIÓN 1: Utilice los siguientes formatos para representar los modelos en las preguntas 1 y 2: 15000x o 250x^2 o 25x^2+30x+200**
 
 1. ¿Cuál es la expresión algebraica que modela el ingreso o Venta $I(x)$?
@@ -75,8 +82,65 @@ La pizzería "MANZA-PIZZA" vende su mejor creación en formato XXL, los ingresos
 SI UTILIDAD = INGRESO - COSTO
 
 3. ¿Cuál es la utilidad si se venden 20 pizzas?
-4. ¿Cuántas pizzas aproximadamente se deben vender para que la utilizada sea máxima?
+4. ¿Cuántas pizzas aproximadamente se deben vender para que la utilidad sea máxima?
 5. ¿Cuál es esa utilidad máxima?
+
+<Solution title="Solución Pregunta 02">
+
+1. **¿Cuál es la expresión algebraica que modela el ingreso o Venta $I(x)$?**
+
+<SmartFigure
+    id="fig281"
+    src="/inacap/cvcd01/images/fig281.png"
+	alt="Función de ingreso o venta I(x)"
+	caption="Función de ingreso o venta I(x)"
+	size="large"
+/>
+
+---
+2. **¿Cuál es la expresión algebraica que modela el costo $C(x)$?**
+
+<SmartFigure
+    id="fig282"
+    src="/inacap/cvcd01/images/fig282.png"
+	alt="Función de costo C(x)"
+	caption="Función de costo C(x)"
+	size="large"
+/>
+
+---
+3. **¿Cuál es la utilidad si se venden 20 pizzas?**
+
+<SmartFigure
+    id="fig283"
+    src="/inacap/cvcd01/images/fig283.png"
+	alt="Función de utilidad U(x)"
+	caption="Función de utilidad U(x)"
+	size="large"
+/>
+
+---
+4. **¿Cuántas pizzas aproximadamente se deben vender para que la utilidad sea máxima?**
+
+<SmartFigure
+    id="fig284"
+    src="/inacap/cvcd01/images/fig284.png"
+	alt="Utilidad máxima"
+	caption="Utilidad máxima"
+	size="large"
+/>
+
+<P indent={2}>
+Se deben vender $\boxed{15,26}$ pizzas
+</P>
+
+---
+5. **¿Cuál es esa utilidad máxima?**
+
+<P indent={2}>
+La utilidad máxima es \$$\boxed{41565,65}$
+</P>
+</Solution>
 
 ---
 
@@ -85,10 +149,91 @@ SI UTILIDAD = INGRESO - COSTO
 
 Una caja **sin tapa** se debe construir con 4873,5cm² de cartón corrugado. La figura muestra las dimensiones que debe tener la caja
 
+<SmartFigure
+    src="/inacap/cvcd01/images/fig285.png"
+	alt="Caja sin tapa"
+	caption="Caja sin tapa"
+	size="large"
+/>
+
 **INDICACIÓN: Si debe ingresar valores decimales, aproxímelos a 2 decimales, con punto o coma.**
 
 1. ¿Cuáles deben ser los valores de "x" y "h" para que la caja sea de **volumen máximo**?
 2. ¿Cuál es ese volúmen máximo?
+
+<Solution title="Solución Pregunta 03">
+
+1. **¿Cuáles deben ser los valores de "x" y "h" para que la caja sea de "volumen máximo"?**
+<List level={0} indent={2}>
+- La caja esta compuesta por 5 caras
+	- base
+	- 2 caras frontales (CF)
+	- 2 caras laterales (CL)
+</List>
+$$
+\begin{align*}
+\text{Área caja }&= base + 2CF + 2CL\\[6pt]
+4873,5 &= x^2 + 2(2xh) + 2(xh)\\[6pt]
+4873,5 &= x^2 + 2(2xh + xh)\\[6pt]
+\end{align*}
+$$
+
+<SmartFigure
+	id="fig286"
+    src="/inacap/cvcd01/images/fig286.png"
+	alt="Valor de h (GeoGebra en modo CAS)"
+	caption="Valor de h (GeoGebra en modo CAS)"
+	size="large"
+/>
+
+$$
+\begin{align*}
+V(x,h) &= \text{base} \cdot \text{altura}\\[6pt]
+V(x,h) &= 2x^2 \cdot h
+\end{align*}
+$$
+
+<SmartFigure
+	id="fig287"
+    src="/inacap/cvcd01/images/fig287.png"
+	alt="Función V(x)"
+	caption="Función V(x)"
+	size="large"
+/>
+
+<SmartFigure
+	id="fig288"
+    src="/inacap/cvcd01/images/fig288.png"
+	alt="Volumen máximo"
+	caption="Volumen máximo"
+	size="large"
+/>
+
+<List level={0} indent={2}>
+- Se obtiene tanto el volumen máximo y el valor de $x=28,5$
+- Reemplazando el valor de $x$, se encuentra $h$
+</List>
+
+<SmartFigure
+	id="fig289"
+    src="/inacap/cvcd01/images/fig289.png"
+	alt="Valor de h"
+	caption="Valor de h"
+	size="large"
+/>
+<P indent={2}>
+$\therefore$ Para que la caja sea de volumen máximo los valores deben ser $\boxed{x=28,5}cm^2$ y $\boxed{h=19}cm^2$
+</P>
+
+---
+
+2. **¿Cuál es ese volúmen máximo?**
+
+<P indent={2}>
+El volumen máximo es $\boxed{30865,5}cm^3$
+</P>
+
+</Solution>
 
 ---
 
@@ -97,11 +242,104 @@ Una caja **sin tapa** se debe construir con 4873,5cm² de cartón corrugado. La 
 
 Un cartel rectangular de dimensiones $x$ e $y$ cuya área es de 2646cm², debe contener un área impresa con los márgenes que se muestran en la siguiente figura:
 
+<SmartFigure
+    src="/inacap/cvcd01/images/fig290.png"
+	alt="Cartel rectangular"
+	caption="Cartel rectangular"
+	size="large"
+/>
+
 **INDICACIÓN: Si debe ingresar valores decimales, aproxímelos a 2 decimales, con punto o coma.**
 
 1. Encuentre los valores $x$ e $y$ para que el área impresa sea **máxima**
 2. ¿Cuál es esa área máxima?
 
+<Solution title="Solución Pregunta 04">
+
+1. **Encuentre los valores $x$ e $y$ para que el área impresa sea "máxima"**
+<P indent={2}>
+Área cartel:
+</P>
+$$
+\begin{align*}
+A(x,y) &= xy\\[6pt]
+2646 &= xy\\[6pt]
+y &= \dfrac{2646}{x}
+\end{align*}
+$$
+
+<P indent={2}>
+Altura área impresa:
+</P>
+
+$$
+\begin{align*}
+h(x)&= x-2-1\\[6pt]
+h(x)&= x-3
+\end{align*}
+$$
+
+<P indent={2}>
+Ancho área impresa:
+</P>
+$$
+\begin{align*}
+l(y)&=y-1-1\\[6pt]
+l(y)&=y-2\\[6pt]
+l(x)&= \dfrac{2646}{x}-2
+\end{align*}
+$$
+
+<P indent={2}>
+Área impresa:
+</P>
+$$
+\begin{align*}
+A2(x)= h(x)\cdot l(x)
+\end{align*}
+$$
+
+<SmartFigure
+    id="fig291"
+	src="/inacap/cvcd01/images/fig291.png"
+	alt="función área impresa A2(x)"
+	caption="función área impresa A2(x)"
+	size="large"
+/>
+
+<SmartFigure
+    id="fig292"
+	src="/inacap/cvcd01/images/fig292.png"
+	alt="Máxima área impresa"
+	caption="Máxima área impresa"
+	size="large"
+/>
+
+<List level={0} indent={2}>
+- De los 4 valores encontrados
+	- "A" no es valido, ya que $x=-63$cm es negativo
+	- De los valores restantes, "D" es el máximo, con $x=63$
+</List>
+<P indent={2}>
+Reemplazando $x$:
+</P>
+
+<SmartFigure
+    id="fig293"
+	src="/inacap/cvcd01/images/fig293.png"
+	alt="Valor de y"
+	caption="Valor de y"
+	size="large"
+/>
+<P indent={2}>
+$\therefore$ Los valores para que el área impresa sea máxima son $\boxed{x=63}cm$ y $\boxed{42}cm$
+</P>
+---
+2. **¿Cuál es esa área máxima?**
+<P indent={2}>
+El área máxima es $\boxed{2400}cm$ (figura 13)
+</P>
+</Solution>
 ---
 
 ### Pregunta 05

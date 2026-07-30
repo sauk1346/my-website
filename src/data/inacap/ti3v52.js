@@ -253,11 +253,11 @@ const courseData = {
             date: 'Jue 09, Jul 2026', 
             description: [
                 {
-                    text: 'Ejercicio 3: Modificar tiempos de hello y dead',
+                    text: 'Ejercicio 03: Modificar tiempos de hello y dead',
                     href: ''
                 },
                 {
-                    text: 'Ejercicio 4: OSPFv2',
+                    text: 'Ejercicio 04: OSPFv2',
                     href: 'unit03-ej04'
                 },
             ]
@@ -268,7 +268,7 @@ const courseData = {
             date: 'Lun 13, Jul 2026', 
             description: [
                 {
-                    text: 'Ejercicio 5: OSPFv3',
+                    text: 'Ejercicio 05: OSPFv3',
                     href: ''
                 }
             ]

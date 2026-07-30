@@ -31,14 +31,14 @@ const Footer = () => {
     <footer className={styles.footer}>
       <div className={styles.container}>
         <div className={styles.section}>
-          <h3 className={styles.title}>About this site</h3>
+          <h3 className={styles.title}>Sobre este sitio</h3>
           <p className={styles.description}>
-            Website dedicated to organizing and sharing class notes, programming code, and personal hobbies.
+            Sitio dedicado a organizar y compartir apuntes de clases, código de programación y proyectos personales.
           </p>
         </div>
-        
+
         <div className={styles.section}>
-          <h3 className={styles.title}>Quick Links</h3>
+          <h3 className={styles.title}>Enlaces rápidos</h3>
           <ul className={styles.linkList}>
             <li>
               <Link 
@@ -59,9 +59,10 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link 
-                href="/#sobre-mi" 
-                onClick={(e) => navigateToSection('sobre-mi', e)} 
+              <Link
+                href="https://www.antoniomorales.cl"
+                target="_blank"
+                rel="noopener noreferrer"
                 className={styles.link}
               >
                 Sobre mí
@@ -71,11 +72,11 @@ const Footer = () => {
         </div>
         
         <div className={styles.section}>
-          <h3 className={styles.title}>Contact</h3>
+          <h3 className={styles.title}>Contacto</h3>
           <ul className={styles.contactList}>
             <li className={styles.contactItem}>
               <a href="mailto:atmoralesc@gmail.com" className={styles.link}>
-                <span className={styles.icon}>✉️</span> Email
+                <span className={styles.icon}>✉️</span> Correo
               </a>
             </li>
             <li className={styles.contactItem}>
@@ -103,7 +104,7 @@ const Footer = () => {
       </div>
       
       <div className={styles.copyright}>
-        <p>© {new Date().getFullYear()} SaukCode. This content is free to share and reuse. If you find it useful, consider giving credit</p>
+        <p>© {new Date().getFullYear()} SaukCode. Este contenido es libre de compartir y reutilizar. Si te resulta útil, considera dar crédito</p>
       </div>
     </footer>
   );

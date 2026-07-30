@@ -223,8 +223,9 @@ const Navbar = () => {
           </li>
           <li>
             <Link
-              href="/#sobre-mi"
-              onClick={(e) => navigateToSection('sobre-mi', e)}
+              href="https://www.antoniomorales.cl"
+              target="_blank"
+              rel="noopener noreferrer"
               className={styles.link}
             >
               Sobre mí
@@ -294,8 +295,10 @@ const Navbar = () => {
                   </motion.div>
                   <motion.div variants={menuItemVariants}>
                     <Link
-                      href="/#sobre-mi"
-                      onClick={(e) => navigateToSection('sobre-mi', e)}
+                      href="https://www.antoniomorales.cl"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => setMobileMenuOpen(false)}
                       className={`${styles.link} ${styles.mobileMenuItem}`}
                     >
                       Sobre mí

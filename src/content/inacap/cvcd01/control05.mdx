@@ -349,6 +349,14 @@ El área máxima es $\boxed{2400}cm$ (figura 13)
 
 La empresa **DEP.BAS Ltda** fabrica depósitos de basura abasteciendo a las Municipalidades del Litoral Central. Estos depósitos tienen forma de prisma  de base cuadrada de 5m³ de volumen como el de la figura adjunta
 
+<SmartFigure
+	src="/inacap/cvcd01/images/fig294.png"
+	alt="Depósito de basura"
+	caption="Depósito de basura"
+	size="large"
+/>
+
+
 En su fabricación se utilizarán placas de acero rectangulares y cuadradas, en cuál serán soldadas con cordón de soldadura TIG en los bordes negros del depósito.
 
 En el trazo $AB$ se soldará una bisagra de $A$ a $B$ que permita que la tapa pueda subir y bajar.
@@ -362,12 +370,133 @@ Con la información dada:
 3. Encuentre el valor de $x$ e $y$ para que el cordón de soldadura sea de mínima longitud
 4. ¿Cuál es esa longitud mínima?
 
+<Solution title="Solución Pregunta 05 (Parte 1)">
+
+1. **Encuentre la expresión que permite calcular el volumen del depósito en función de las variables $x$ e $y$**
+
+$$
+\begin{align*}
+\text{Volumen } &= \text{base}\cdot\text{altura}\\[6pt]
+V(x,y) &= x^2\cdot y
+\end{align*}
+$$
+
+---
+2. **Encuentre la expresión que permite calcular la longitud del cordón de soldadura en función de las variables $x$ e $y$**
+
+$$
+\begin{align*}
+\text{cordón soldadura } &= 5\cdot\text{soldadura horizontal} + 4\cdot\text{soldadura vertical}\\[6pt]
+L(x,y) &= 5x+4y
+\end{align*}
+$$
+
+---
+3. **Encuentre el valor de $x$ e $y$ para que el cordón de soldadura sea de mínima longitud**
+
+$$
+\begin{align*}
+V(x,y) &= x^2y\\[6pt]
+5 &= x^2y\\[6pt]
+y &= \dfrac{5}{x^2}
+\end{align*}
+$$
+
+<SmartFigure
+	id="fig295"
+	src="/inacap/cvcd01/images/fig295.png"
+	alt="Mínima longitud de soldadura"
+	caption="Mínima longitud de soldadura"
+	size="large"
+/>
+<List level={0} indent={2}>
+- La mínima longitud de soldadura ocurre para $x=2$
+
+<SmartFigure
+	id="fig296"
+	src="/inacap/cvcd01/images/fig296.png"
+	alt="Valor de y"
+	caption="Valor de y"
+	size="large"
+/>
+
+<P indent={2}>
+$\therefore$ El cordón de soldadura es de mínima longitud para $\boxed{x=2}m$ y $\boxed{y=1,25}m$
+</P>
+
+</List>
+---
+4. **¿Cuál es esa longitud mínima?**
+
+<P indent={2}>
+La longitud mínima es de $\boxed{15}m$ (figura 15)
+</P>
+
+</Solution>
+
 **PARTE 2 (CORDÓN DE SOLDADURA CONSTANTE)**
 
 Supongamos que por problemas de presupuesto, en cada depósito se debe usar 12 metros de cordón de soldadura
 
 1. ¿Cuál debe ser las dimensiones de $x$ e $y$ del depósito para que el volumen del depósito sea máximo?
 2. ¿Cuál es ese volumen máximo?
+
+<Solution title="Solución Pregunta 05 (Parte 2)">
+
+1. **¿Cuál debe ser las dimensiones de $x$ e $y$ del depósito para que el volumen del depósito sea máximo?**
+
+$$
+\begin{align*}
+L(x,y) &= 5x+4y\\[6pt]
+12 &= 5x+4y\\[6pt]
+y &= \dfrac{12-5x}{4}
+\end{align*}
+$$
+
+<P indent={2}>
+Se reemplaza esta expresión en la ecuación de volumen $V(x,y)$
+</P>
+$$
+\begin{align*}
+V(x,y) &= x^2y\\[6pt]
+V(x) &= x^2\cdot \dfrac{12-5x}{4}
+\end{align*}
+$$
+
+<SmartFigure
+	id="fig297"
+	src="/inacap/cvcd01/images/fig297.png"
+	alt="Volúmen máximo"
+	caption="Volúmen máximo"
+	size="large"
+/>
+<List level={0} indent={2}>
+- El volumen máximo ocurre para $x=1.6$
+</List>
+
+$$
+\begin{align*}
+V(x,y) &= x^2y\\[6pt]
+2,56 &= x^2y
+\end{align*}
+$$
+
+<SmartFigure
+	id="fig298"
+	src="/inacap/cvcd01/images/fig298.png"
+	alt="Valor de y"
+	caption="Valor de y"
+	size="large"
+/>
+<P indent={2}>
+$\therefore$ El volumen máximo posible con 12 metros de soldadura, ocurre para las dimensiones $\boxed{x=1.6}m$ y $\boxed{y=1}m$
+</P>
+---
+2. **¿Cuál es ese volumen máximo?**
+<P indent={2}>
+El volumen máximo es de $\boxed{2.56}m^3$ (figura 17)
+</P>
+</Solution>
 
 ---
 
@@ -378,6 +507,13 @@ Se desea construir un recipiente **cilíndrico metálico** con tapa que tenga un
 
 La figura muestra las dimensiones que debe tener el recipiente y las fórmulas que permiten resolver el problema de maximización.
 
+<SmartFigure
+	src="/inacap/cvcd01/images/fig299.png"
+	alt="Dimensiones recipiente y fórmulas"
+	caption="Dimensiones recipiente y fórmulas"
+	size="large"
+/>
+
 **INDICACIONES:**
 
 **1. Si debe ingresar valores decimales, aproxímelos con 3 decimales, con punto o coma**
@@ -385,13 +521,153 @@ La figura muestra las dimensiones que debe tener el recipiente y las fórmulas q
 **2. Considere $\pi=3.14$**
 
 1. ¿Cuáles deben ser los valores de $r$ y $h$ para que el cilindro sea de **volumen máximo**?
-
 2. ¿Cuál es ese volumen máximo?
+
+<Solution title="Solución Pregunta 06">
+
+1. **¿Cuáles deben ser los valores de $r$ y $h$ para que el cilindro sea de "volumen máximo"?**
+
+$$
+\begin{align*}
+At(r,h)&= Al + 2A_B\\[6pt]
+590 &= 2\pi rh + 2\pi r^2\\[6pt]
+590 &= 2\cdot 3,14\cdot rh + 2\cdot 3,14\cdot r^2\\[6pt]
+\end{align*}
+$$
+
+<SmartFigure
+	id="fig300"
+	src="/inacap/cvcd01/images/fig300.png"
+	alt="Expresión para h"
+	caption="Expresión para h"
+	size="large"
+/>
+
+$$
+\begin{align*}
+\text{Volumen} &= \text{base}\cdot \text{altura}\\[6pt]
+V(r,h) &= \pi r^2 + h\\[6pt]
+V(r) &= \pi r^2 + \dfrac{-157r^2+14750}{157r}
+\end{align*}
+$$
+
+<SmartFigure
+	id="fig301"
+	src="/inacap/cvcd01/images/fig301.png"
+	alt="Volumen máximo"
+	caption="Volumen máximo"
+	size="large"
+/>
+<List level={0} indent={2}>
+- El volumen máximo ocurre para $r=5,596$
+</List>
+
+<SmartFigure
+	id="fig302"
+	src="/inacap/cvcd01/images/fig302.png"
+	alt="Valor de h"
+	caption="Valor de h"
+	size="large"
+/>
+<P indent={2}>
+$\therefore$ El cilindro es de volumen máximo para $\boxed{r=5,596}cm$ y $\boxed{h=11,193}cm$
+</P>
+---
+2. **¿Cuál es ese volumen máximo?**
+<P indent={2}>
+El volumen máximo es $\boxed{1100,567}cm^3$ (figura 20)
+</P>
+</Solution>
 
 ---
 
 ### Pregunta 07
 **CAJA DE BASE CUADRADA**
+
+A un trozo cuadrado de cartón de lado $a=42$ cm se le cortan de cada esquina un cuadrado de lado $x$ obteniendo una caja como la que se muestra a la derecha de la siguiente figura:
+
+<SmartFigure
+	src="/inacap/cvcd01/images/fig303.png"
+	alt="Cartón usado para armar caja"
+	caption="Cartón usado para armar caja"
+	size="large"
+/>
+
+**INDICACIÓN: Si debe ingresar valores decimales, aproxímelos con 2 decimales, con punto o coma.**
+
+1. Encuentre la expresión algebraica que permite calcular el volumen $V(x)$ de la caja para cada corte de $x$ cm
+2. ¿Cuáles son los valores críticos (de menor a mayor) de $V(x)$?
+3. ¿Para cuál valor de $x$ el volumen es mínimo?
+4. ¿Cuál es ese volumen mínimo?
+5. ¿Para cuál valor de $x$ el volumen es máximo?
+6. ¿Cuál es ese volumen máximo?
+
+<Solution title="Solución Pregunta 07">
+
+1. **Encuentre la expresión algebraica que permite calcular el volumen $V(x)$ de la caja para cada corte de $x$ cm**
+
+$$
+\begin{align*}
+\text{Volumen} &= \text{base}\cdot \text{altura}\\[6pt]
+V(a,x) &= (a-2x)^2\cdot x\\[6pt]
+V(x) &= (42-2x)^2\cdot x\\[6pt]
+V(x) &= (42-x)(42-x)x
+\end{align*}
+$$
+
+<SmartFigure
+	id="fig304"
+	src="/inacap/cvcd01/images/fig304.png"
+	alt="Expresión para V(x)"
+	caption="Expresión para V(x)"
+	size="large"
+/>
+
+---
+2. **¿Cuáles son los valores críticos (de menor a mayor) de $V(x)$?**
+
+<SmartFigure
+	id="fig305"
+	src="/inacap/cvcd01/images/fig305.png"
+	alt="Valores críticos para V(x)"
+	caption="Valores críticos para V(x)"
+	size="large"
+/>
+
+<P indent={2}>
+Los valores críticos de $V(x)$ son $\boxed{x=7}cm$ y $\boxed{x=21}cm$
+</P>
+
+---
+3. **¿Para cuál valor de $x$ el volumen es mínimo?**
+
+<P indent={2}>
+El volumen es mínimo para $\boxed{x=21}cm$ (figura 23)
+</P>
+
+---
+
+4. **¿Cuál es ese volumen mínimo?**
+
+<P indent={2}>
+El volumen mínimo es $\boxed{0}cm^3$ (figura 23)
+</P>
+
+---
+5. **¿Para cuál valor de $x$ el volumen es máximo?**
+
+<P indent={2}>
+El volumen es máximo para $\boxed{x=7}cm$ (figura 23)
+</P>
+
+---
+6. **¿Cuál es ese volumen máximo?**
+
+<P indent={2}>
+El volumen máximo es $\boxed{5488}cm^3$ (figura 23)
+</P>
+
+</Solution>
 
 ---
 

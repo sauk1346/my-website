@@ -674,12 +674,156 @@ El volumen máximo es $\boxed{5488}cm^3$ (figura 23)
 ### Pregunta 08
 **LA HERENCIA**
 
+Cinco hermanos heredan de su Padre una parcela rectangular de 76800 m² que deben dividirse en partes iguales como muestra la figura:
+
+<SmartFigure
+	src="/inacap/cvcd01/images/fig306.png"
+	alt="Parcela rectangular"
+	caption="Parcela rectangular"
+	size="large"
+/>
+
+**INDICACIÓN: Si ingresa valores decimales, aproxímelos con 2 decimales, con punto o coma.**
+
+Si al cercar las 5 parcelas se debe gastar lo menos posible. Calcule el valor de $x$ e $y$, y además el **perímetro mínimo**.
+
+<Solution title="Solución Pregunta 08">
+
+**Área de la Parcela**
+$$
+\begin{align*}
+\text{Área} &= \text{largo} \cdot \text{ancho}\\[6pt]
+A(x,y) &= 5x \cdot y\\[6pt]
+76800 &= 5xy\\[6pt]
+y &= \dfrac{76800}{5x}
+\end{align*}
+$$
+
+**Longitud de la cerca**
+
+$$
+\begin{align*}
+P(x,y) &= 10x + 6y\\[6pt]
+P(x) &= 10x + 6\cdot\dfrac{76800}{5x}
+\end{align*}
+$$
+
+<SmartFigure
+	id="fig307"
+	src="/inacap/cvcd01/images/fig307.png"
+	alt="Mínima longitud de cerca"
+	caption="Mínima longitud de cerca"
+	size="large"
+/>
+
+<List level={0} indent={2}>
+- El valor de la cerca es mínima para $x=96$
+</List>
+
+<SmartFigure
+	id="fig308"
+	src="/inacap/cvcd01/images/fig308.png"
+	alt="Valor de y"
+	caption="Valor de y"
+	size="large"
+/>
+
+<P indent={2}>
+$\therefore$ La longitud de la cerca es mínima para $\boxed{x=96}m$ y $\boxed{y=160}m$. Su longitud mínima es de $\boxed{1920} metros.$
+</P>
+
+</Solution>
+
 ---
 
 ### Pregunta 09
 **CASA Y PATIO**
 
+Se desea hacer un cierre perimetral de una casa y su patio abierto (como muestra la figura) considerando solo 76 metros de pandereta.
+
+<SmartFigure
+	src="/inacap/cvcd01/images/fig309.png"
+	alt="Cierre perimetral de casa y patio abierto"
+	caption="Cierre perimetral de casa y patio abierto"
+	size="large"
+/>
+
+**INDICACIÓN: Si debe ingresar valores decimales, aproxímelos con 2 decimales, con punto o coma.**
+
+1. ¿Cuáles deben ser los valores de $x$ e $y$ para que la suma de las áreas de la casa y del patio sea lo máximo posible?
+2. ¿Cuál es esa área máxima?
+
+<Solution title="Solución Pregunta 09">
+
+1. **¿Cuáles deben ser los valores de $x$ e $y$ para que la suma de  las áreas de la casa y del patio sea lo máximo posible?**
+
+<P indent={2}>
+**Perímetro de la cerca**
+</P>
+
+$$
+\begin{align*}
+P(x,y) &= 5y + x\\[6pt]
+76 &= 5y + x\\[6pt]
+y &= \dfrac{76-x}{5}
+\end{align*}
+$$
+<P indent={2}>
+**Área de casa y patio**
+</P>
+$$
+\begin{align*}
+A(x,y) &= \text{Área patio} + \text{Área casa}\\[6pt]
+A(x,y) &= xy + y^2\\[6pt]
+A(x,y) &= x\cdot\dfrac{76-x}{5}  + \left(\dfrac{76-x}{5}\right)^2\\[6pt]
+\end{align*}
+$$
+
+<SmartFigure
+	id="fig310"
+	src="/inacap/cvcd01/images/fig310.png"
+	alt="Área máxima"
+	caption="Área máxima"
+	size="large"
+/>
+
+<List level={0} indent={2}>
+- El área máxima ocurre para $x=28.5$
+</List>
+
+<SmartFigure
+	id="fig311"
+	src="/inacap/cvcd01/images/fig311.png"
+	alt="Valor de y"
+	caption="Valor de y"
+	size="large"
+/>
+
+<P indent={2}>
+$\therefore$ La suma de las áreas del patio y casa es máxima para $\boxed{x=28.5}m$ y $\boxed{y=9.5}m$
+</P>
+---
+2. **¿Cuál es esa área máxima?**
+
+<P indent={2}>
+El área máxima es $\boxed{361}m^2$ (figura 26)
+</P>
+
+</Solution>
 ---
 
 ### Pregunta 10
 **UTILIDAD MÁXIMA**
+
+Rodrigo es un importador de artículos de cocina, los ingresos y costos (en pesos) del artículo que más vende, se ven reflejados en los registros de la tabla adjunta, donde $x$ representa el número que importa y luego vende.
+
+<SmartFigure
+	src="/inacap/cvcd01/images/fig312.png"
+	alt="Registro de ingresos/costos de artículos de cocina"
+	caption="Registro de ingresos/costos de artículos cocina"
+	size="large"
+/>
+
+1. ¿Cuál es el ingreso si se vende 11 artículos?
+2. ¿Cuaĺ es el costo al vender 21 artículos?
+3. Si UTILIDAD = INGRESO - COSTO. ¿Cuál es la utilidad al vender 12 artículos?

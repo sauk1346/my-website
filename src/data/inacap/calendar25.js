@@ -738,5 +738,12 @@ export const calendar25 = [
     titulo: "[CVCD01] Evaluación 03",
     description: "Cálculo Diferencial"
   },
+// ----- [FVES02] Inglés Habilitante -----
+  {
+    id: 123,
+    fecha: "2026-8-31",
+    titulo: "[FVES02] Evaluación 01",
+    description: "Inglés Habilitante"
+  },
 ];
 export default calendar25;

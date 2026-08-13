@@ -271,12 +271,57 @@ export const subjects = [
     },
   
     // Semestre 6 - 2026
-    { code: 'TI3V61', name: 'Minería de Datos', semester: 6, year: 2026, category: 'database', status: 'pending' },
-    { code: 'TI3V62', name: 'Gestión de Seguridad de la Información', semester: 6, year: 2026, category: 'security', status: 'pending' },
-    { code: 'TI3V63', name: 'Gestión de Servicios y Gobernabilidad TI', semester: 6, year: 2026, category: 'business', status: 'pending' },
-    { code: 'FVES02', name: 'Inglés Habilitante', semester: 6, year: 2026, category: 'general', status: 'pending' },
-    { code: 'AVFI01', name: 'Finanzas', semester: 6, year: 2026, category: 'business', status: 'pending' },
-    { code: 'CVET01', name: 'Estadística', semester: 6, year: 2026, category: 'math', status: 'pending' },
+    { 
+      code: 'TI3V61',
+      name: 'Minería de Datos',
+      semester: 6,
+      year: 2026,
+      category: 'database',
+      status: 'pending' 
+    },
+    { 
+      code: 'TI3V62',
+      name: 'Gestión de Seguridad de la Información',
+      semester: 6,
+      year: 2026,
+      category: 'security',
+      status: 'pending'
+    },
+    { 
+      code: 'TI3V63',
+      name: 'Gestión de Servicios y Gobernabilidad TI',
+      semester: 6,
+      year: 2026,
+      category: 'business',
+      status: 'current',
+      href: '/inacap/ti3v63'
+    },
+    { 
+      code: 'FVES02',
+      name: 'Inglés Habilitante',
+      semester: 6,
+      year: 2026,
+      category: 'general',
+      status: 'current',
+      href: '/inacap/fves02'
+    },
+    { 
+      code: 'AVFI01',
+      name: 'Finanzas',
+      semester: 6,
+      year: 2026,
+      category: 'business',
+      status: 'current',
+      href: '/inacap/avfi01'
+    },
+    { 
+      code: 'CVET01',
+      name: 'Estadística',
+      semester: 6,
+      year: 2026,
+      category: 'math',
+      status: 'pending'
+    },
   
     // Semestre 7 - 2027
     { code: 'TI3V71', name: 'Inteligencia de Negocios', semester: 7, year: 2027, category: 'database', status: 'pending' },
@@ -317,8 +362,8 @@ export const subjects = [
     { number: 2, year: 2024, status: 'completed' },
     { number: 3, year: 2025, status: 'completed' },
     { number: 4, year: 2025, status: 'completed' },
-    { number: 5, year: 2026, status: 'current' },
-    { number: 6, year: 2026, status: 'pending' },
+    { number: 5, year: 2026, status: 'completed' },
+    { number: 6, year: 2026, status: 'current' },
     { number: 7, year: 2027, status: 'pending' },
     { number: 8, year: 2027, status: 'pending' }
   ];

@@ -58,6 +58,28 @@
   opacity: 1;
 }
 
+/* ✨ NUEVO: Icono para enlaces de YouTube */
+.youtubeIcon {
+  width: 18px;
+  height: 18px;
+  opacity: 0.9;
+  transition: opacity 0.2s ease;
+  flex-shrink: 0;
+  margin-left: 3px;
+}
+
+.youtubeBody {
+  fill: #ff0000; /* Caja roja YouTube */
+}
+
+.youtubePlay {
+  fill: #ffffff; /* Triángulo play blanco */
+}
+
+.link:hover .youtubeIcon {
+  opacity: 1;
+}
+
 /* Icono para archivos PDF */
 .pdfIcon {
   width: 20px;
@@ -129,6 +151,12 @@
 :global(html.dark-mode) .pdfIcon,
 :global(html.dark-mode-override) .pdfIcon {
   color: #f87171;
+}
+
+/* ✨ NUEVO: Icono de YouTube en modo oscuro (rojo un poco más luminoso; triángulo se mantiene blanco) */
+:global(html.dark-mode) .youtubeBody,
+:global(html.dark-mode-override) .youtubeBody {
+  fill: #ff3d3d;
 }
 
 /* ✨ NUEVO: Icono de música en modo oscuro */
@@ -215,7 +243,8 @@
   .link,
   .externalIcon,
   .pdfIcon,
-  .musicIcon {
+  .musicIcon,
+  .youtubeIcon {
     transition: none;
   }
   
@@ -236,7 +265,8 @@
 @media (max-width: 768px) {
   .externalIcon,
   .pdfIcon,
-  .musicIcon {
+  .musicIcon,
+  .youtubeIcon {
     width: 12px;
     height: 12px;
   }

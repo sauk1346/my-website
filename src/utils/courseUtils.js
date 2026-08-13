@@ -14,20 +14,24 @@ import ti3v32 from '@/data/inacap/ti3v32';
 import ti3v34 from '@/data/inacap/ti3v34';
 import ti3v35 from '@/data/inacap/ti3v35';
 import tilv21 from '@/data/inacap/tilv21';
-// semetre 4
+// semestre 04
 import ti3v41 from '@/data/inacap/ti3v41';
 import ti3v42 from '@/data/inacap/ti3v42';
 import ti3v43 from '@/data/inacap/ti3v43';
 import tihv43 from '@/data/inacap/tihv43';
 import tilv22 from '@/data/inacap/tilv22';
 import fves01 from '@/data/inacap/fves01';
-// semetre 5
+// semestre 05
 import ti3v51 from '@/data/inacap/ti3v51';
 import ti3v52 from '@/data/inacap/ti3v52';
 import ti3v53 from '@/data/inacap/ti3v53';
 import fvie02 from '@/data/inacap/fvie02';
 import avgp01 from '@/data/inacap/avgp01';
 import cvcd01 from '@/data/inacap/cvcd01';
+// semestre 06
+import fves02 from '@/data/inacap/fves02';
+import avfi01 from '@/data/inacap/avfi01';
+import ti3v63 from '@/data/inacap/ti3v63';
 
 const courseDataMap = {
     avan01,
@@ -52,13 +56,17 @@ const courseDataMap = {
     tihv43,
     tilv21,
     tilv22,
-    // semestre 4
+    // semestre 05
     ti3v51,
     ti3v52,
     ti3v53,
     fvie02,
     avgp01,
-    cvcd01
+    cvcd01,
+    // semestre 06
+    fves02,
+    avfi01,
+    ti3v63,
 };
 
 export function getCourseData(courseId) {

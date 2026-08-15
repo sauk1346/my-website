@@ -66,8 +66,16 @@ const courseData = {
             date: 'Mar 11, Ago 2026', 
             description: [
                 {
+                    text: 'Conceptos de finanzas',
+                    href:'clase01a'
+                },
+                {
                     text: 'Interés Nominal e Interés Real',
-                    href:''
+                    href:'clase01b'
+                },
+                {
+                    text: 'Interés de Captación e Interés de Colocación',
+                    href:'clase01c'
                 },
             ]
         },
@@ -75,6 +83,32 @@ const courseData = {
             week: '01', 
             class: '02', 
             date: 'Jue 13, Ago 2026', 
+            description: [
+                {
+                    text: 'Balance General',
+                    href:'clase02a'
+                },
+                {
+                    text: 'Estado de Resultado',
+                    href:'clase02b'
+                },
+            ]
+        },
+        { 
+            week: '02', 
+            class: '03', 
+            date: 'Mar 18, Ago 2026', 
+            description: [
+                {
+                    text: '',
+                    href:''
+                },
+            ]
+        },
+        { 
+            week: '02', 
+            class: '04', 
+            date: 'Jue 20, Ago 2026', 
             description: [
                 {
                     text: '',
@@ -88,13 +122,20 @@ const courseData = {
         { 
             week: '01', 
             lecture: '01', 
-            date: '', 
-            description: [
-                {
-                    text: '',
-                    href: ''
-                }
-            ]
+            date: 'Dom 16, Ago 2026', 
+            description: {
+                text: 'Contabilidad básica y fundamentos de costeo',
+                href: 'docs/lectura01.pdf'
+            }
+        },
+        { 
+            week: '01', 
+            lecture: '02', 
+            date: 'Dom 16, Ago 2026', 
+            description: {
+                text: 'Descubre el lenguaje de las empresas',
+                href: ''
+            }
         },
     ]
 };

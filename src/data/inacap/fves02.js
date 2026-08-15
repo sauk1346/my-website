@@ -106,6 +106,28 @@ const courseData = {
                 },
             ]
         },
+        { 
+            week: '02', 
+            class: '03', 
+            date: 'Lun 17, Ago 2026', 
+            description: [
+                {
+                    text: '',
+                    href:''
+                },
+            ]
+        },
+        { 
+            week: '02', 
+            class: '04', 
+            date: 'Mar 18, Ago 2026', 
+            description: [
+                {
+                    text: '',
+                    href:''
+                },
+            ]
+        },
 
     ],
 };

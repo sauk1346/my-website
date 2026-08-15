@@ -52,10 +52,16 @@ const courseData = {
             evaluationNumber: 4,
             date: '',
             weighting: '15%', 
-            description: {
-                text: 'Controles',
-                href: ''
-            }
+            description: [
+                {
+                    text: 'Diagnóstico',
+                    href: 'diagnostico'
+                },
+                {
+                    text: 'Controles',
+                    href: 'controles'
+                },
+            ]
         },
         
     ],
@@ -66,7 +72,7 @@ const courseData = {
             date: 'Lun 10, Ago 2026', 
             description: [
                 {
-                    text: 'Gobierno de TI',
+                    text: 'Introducción Asignatura',
                     href:'docs/clase01.pdf'
                 },
             ]
@@ -77,8 +83,8 @@ const courseData = {
             date: 'Jue 13, Ago 2026', 
             description: [
                 {
-                    text: '',
-                    href:''
+                    text: 'Gobierno de TI',
+                    href:'docs/clase02.pdf'
                 },
             ]
         },

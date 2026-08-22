@@ -88,6 +88,50 @@ const courseData = {
                 },
             ]
         },
+        { 
+            week: '02', 
+            class: '03', 
+            date: 'Lun 17, Ago 2026', 
+            description: [
+                {
+                    text: 'COBIT y Estándares TI',
+                    href:'docs/clase03.pdf'
+                },
+            ]
+        },
+        { 
+            week: '02', 
+            class: '04', 
+            date: 'Jue 20, Ago 2026', 
+            description: [
+                {
+                    text: 'Gestión de Servicios y Gobernabilidad',
+                    href:'docs/clase04.pdf'
+                },
+            ]
+        },
+        { 
+            week: '03', 
+            class: '05', 
+            date: 'Lun 24, Ago 2026', 
+            description: [
+                {
+                    text: '',
+                    href:''
+                },
+            ]
+        },
+        { 
+            week: '03', 
+            class: '06', 
+            date: 'Lun 27, Ago 2026', 
+            description: [
+                {
+                    text: '',
+                    href:''
+                },
+            ]
+        },
 
     ],
     lectureData: [
@@ -95,12 +139,19 @@ const courseData = {
             week: '01', 
             lecture: '01', 
             date: 'Sáb 15, Ago 2026', 
-            description: [
-                {
-                    text: 'Gobierno TI: decisiones estratégicas para organizaciones digitales',
-                    href: ''
-                }
-            ]
+            description: {
+                text: 'Gobierno TI: decisiones estratégicas para organizaciones digitales',
+                href: ''
+            }
+        },
+        { 
+            week: '02', 
+            lecture: '02', 
+            date: 'Sáb 22, Ago 2026', 
+            description: {
+                text: 'COBIT y estándares TI: control, estrategia y mejora organizacional',
+                href: ''
+            }
         },
     ]
 };

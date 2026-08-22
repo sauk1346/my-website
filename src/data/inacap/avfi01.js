@@ -23,8 +23,8 @@ const courseData = {
     evaluationsData: [
         { 
             evaluationNumber: 1,
-            date: '',
-            weighting: '', 
+            date: 'Jue 27, Ago 2026',
+            weighting: '15%', 
             description: {
                 text: '',
                 href: ''
@@ -32,8 +32,8 @@ const courseData = {
         },
         { 
             evaluationNumber: 2,
-            date: '',
-            weighting: '', 
+            date: 'Jue 03, Sep 2026',
+            weighting: '15%', 
             description: {
                 text: '',
                 href: ''
@@ -41,8 +41,8 @@ const courseData = {
         },
         { 
             evaluationNumber: 3,
-            date: '',
-            weighting: '', 
+            date: 'Mar 22, Sep 2026',
+            weighting: '40%', 
             description: {
                 text: '',
                 href: ''
@@ -50,8 +50,8 @@ const courseData = {
         },
         { 
             evaluationNumber: 4,
-            date: '',
-            weighting: '', 
+            date: 'Mar 06, Oct 2026',
+            weighting: '30%', 
             description: {
                 text: '',
                 href: ''
@@ -100,8 +100,8 @@ const courseData = {
             date: 'Mar 18, Ago 2026', 
             description: [
                 {
-                    text: '',
-                    href:''
+                    text: 'no asistí',
+                    strikethrough: true
                 },
             ]
         },
@@ -111,7 +111,41 @@ const courseData = {
             date: 'Jue 20, Ago 2026', 
             description: [
                 {
-                    text: '',
+                    text: 'Costo variable o costo de venta',
+                    href:'clase04a'
+                },
+                {
+                    text: 'Precio unitario y Costo de Venta unitario',
+                    href:'clase04b'
+                },
+                {
+                    text: 'Punto de Equilibrio',
+                    href:'clase04c'
+                },
+                {
+                    text: 'Técnicas de Contabilidad',
+                    href:'docs/tecnicas-contabilidad.pdf'
+                },
+            ]
+        },
+        { 
+            week: '03', 
+            class: '05', 
+            date: 'Lun 24, Ago 2026', 
+            description: [
+                {
+                    text: 'Ejercicios',
+                    href:''
+                },
+            ]
+        },
+        { 
+            week: '03', 
+            class: '06', 
+            date: 'Jue 27, Ago 2026', 
+            description: [
+                {
+                    text: 'Evaluación 01',
                     href:''
                 },
             ]
@@ -134,6 +168,60 @@ const courseData = {
             date: 'Dom 16, Ago 2026', 
             description: {
                 text: 'Descubre el lenguaje de las empresas',
+                href: 'lectura02'
+            }
+        },
+        { 
+            week: '01', 
+            lecture: '03', 
+            date: 'Dom 16, Ago 2026', 
+            description: {
+                text: 'La contabilidad y la importancia de la información financiera',
+                href: 'lectura03'
+            }
+        },
+        { 
+            week: '01', 
+            lecture: '04', 
+            date: 'Dom 16, Ago 2026', 
+            description: {
+                text: 'Interpretando estados financieros',
+                href: 'lectura04'
+            }
+        },
+        { 
+            week: '02', 
+            lecture: '05', 
+            date: 'Dom 23, Ago 2026', 
+            description: {
+                text: 'Fundamentos de los costos: elementos, clasificación y diferencias con gasto y pérdidas',
+                href: ''
+            }
+        },
+        { 
+            week: '02', 
+            lecture: '06', 
+            date: 'Dom 23, Ago 2026', 
+            description: {
+                text: 'Método de costeo y el uso de IA para simular escenarios de costo',
+                href: ''
+            }
+        },
+        { 
+            week: '02', 
+            lecture: '07', 
+            date: 'Dom 23, Ago 2026', 
+            description: {
+                text: 'Punto de equilibrio',
+                href: ''
+            }
+        },
+        { 
+            week: '02', 
+            lecture: '08', 
+            date: 'Dom 23, Ago 2026', 
+            description: {
+                text: 'La contabilidad y la importancia de la información financiera',
                 href: ''
             }
         },

@@ -112,8 +112,8 @@ const courseData = {
             date: 'Lun 17, Ago 2026', 
             description: [
                 {
-                    text: '',
-                    href:''
+                    text: 'Exercises',
+                    href:'clase03'
                 },
             ]
         },
@@ -121,6 +121,28 @@ const courseData = {
             week: '02', 
             class: '04', 
             date: 'Mar 18, Ago 2026', 
+            description: [
+                {
+                    text: 'didn\'t attend',
+                    strikethrough: true
+                },
+            ]
+        },
+        { 
+            week: '03', 
+            class: '05', 
+            date: 'Lun 24, Ago 2026', 
+            description: [
+                {
+                    text: '',
+                    href:''
+                },
+            ]
+        },
+        { 
+            week: '03', 
+            class: '06', 
+            date: 'Mar 25, Ago 2026', 
             description: [
                 {
                     text: '',

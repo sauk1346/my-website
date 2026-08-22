@@ -745,5 +745,30 @@ export const calendar25 = [
     titulo: "[FVES02] Evaluación 01",
     description: "Inglés Habilitante"
   },
+// ----- [AVFI01] Finanzas -----
+  {
+    id: 124,
+    fecha: "2026-8-27",
+    titulo: "[AVFI01] Evaluación 01",
+    description: "Finanzas"
+  },
+  {
+    id: 125,
+    fecha: "2026-9-3",
+    titulo: "[AVFI01] Evaluación 01",
+    description: "Finanzas"
+  },
+  {
+    id: 126,
+    fecha: "2026-9-22",
+    titulo: "[AVFI01] Evaluación 01",
+    description: "Finanzas"
+  },
+  {
+    id: 127,
+    fecha: "2026-10-6",
+    titulo: "[AVFI01] Evaluación 01",
+    description: "Finanzas"
+  },
 ];
 export default calendar25;

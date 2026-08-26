@@ -150,6 +150,28 @@ const courseData = {
                 },
             ]
         },
+        { 
+            week: '04', 
+            class: '07', 
+            date: 'Mar 01, Sep 2026', 
+            description: [
+                {
+                    text: '',
+                    href:''
+                },
+            ]
+        },
+        { 
+            week: '04', 
+            class: '08', 
+            date: 'Jue 03, Sep 2026', 
+            description: [
+                {
+                    text: '',
+                    href:''
+                },
+            ]
+        },
 
     ],
     lectureData: [
@@ -172,56 +194,38 @@ const courseData = {
             }
         },
         { 
-            week: '01', 
+            week: '02', 
             lecture: '03', 
-            date: 'Dom 16, Ago 2026', 
+            date: 'Dom 23, Ago 2026', 
             description: {
                 text: 'La contabilidad y la importancia de la información financiera',
                 href: 'lectura03'
             }
         },
         { 
-            week: '01', 
+            week: '02', 
             lecture: '04', 
-            date: 'Dom 16, Ago 2026', 
+            date: 'Dom 23, Ago 2026', 
             description: {
                 text: 'Interpretando estados financieros',
                 href: 'lectura04'
             }
         },
         { 
-            week: '02', 
+            week: '03', 
             lecture: '05', 
-            date: 'Dom 23, Ago 2026', 
+            date: 'Dom 30, Ago 2026', 
             description: {
                 text: 'Fundamentos de los costos: elementos, clasificación y diferencias con gasto y pérdidas',
                 href: ''
             }
         },
         { 
-            week: '02', 
+            week: '03', 
             lecture: '06', 
-            date: 'Dom 23, Ago 2026', 
+            date: 'Dom 30, Ago 2026', 
             description: {
                 text: 'Método de costeo y el uso de IA para simular escenarios de costo',
-                href: ''
-            }
-        },
-        { 
-            week: '02', 
-            lecture: '07', 
-            date: 'Dom 23, Ago 2026', 
-            description: {
-                text: 'Punto de equilibrio',
-                href: ''
-            }
-        },
-        { 
-            week: '02', 
-            lecture: '08', 
-            date: 'Dom 23, Ago 2026', 
-            description: {
-                text: 'La contabilidad y la importancia de la información financiera',
                 href: ''
             }
         },

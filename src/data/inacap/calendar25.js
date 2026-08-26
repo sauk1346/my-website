@@ -766,9 +766,65 @@ export const calendar25 = [
   },
   {
     id: 127,
-    fecha: "2026-10-6",
+    fecha: "2026-9-6",
     titulo: "[AVFI01] Evaluación 01",
     description: "Finanzas"
   },
+// ----- [TI3V63] GS & GobTI -----
+  {
+    id: 128,
+    fecha: "2026-8-15",
+    titulo: "[TI3V63] Control 01",
+    description: "GS & GobTI"
+  },
+  {
+    id: 129,
+    fecha: "2026-8-22",
+    titulo: "[TI3V63] Control 02",
+    description: "GS & GobTI"
+  },
+  {
+    id: 130,
+    fecha: "2026-8-29",
+    titulo: "[TI3V63] Control 03",
+    description: "GS & GobTI"
+  },
+  {
+    id: 130,
+    fecha: "2026-9-5",
+    titulo: "[TI3V63] Control 04",
+    description: "GS & GobTI"
+  },
+  {
+    id: 130,
+    fecha: "2026-9-12",
+    titulo: "[TI3V63] Control 05",
+    description: "GS & GobTI"
+  },
+  {
+    id: 130,
+    fecha: "2026-9-19",
+    titulo: "[TI3V63] Control 06",
+    description: "GS & GobTI"
+  },
+  {
+    id: 130,
+    fecha: "2026-9-26",
+    titulo: "[TI3V63] Control 07",
+    description: "GS & GobTI"
+  },
+  {
+    id: 130,
+    fecha: "2026-10-3",
+    titulo: "[TI3V63] Control 08",
+    description: "GS & GobTI"
+  },
+  {
+    id: 130,
+    fecha: "2026-10-10",
+    titulo: "[TI3V63] Control 09",
+    description: "GS & GobTI"
+  },
+
 ];
 export default calendar25;

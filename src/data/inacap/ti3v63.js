@@ -116,7 +116,7 @@ const courseData = {
             date: 'Lun 24, Ago 2026', 
             description: [
                 {
-                    text: '',
+                    text: 'Fases del Ciclo de Vida ITIL',
                     href:''
                 },
             ]
@@ -124,7 +124,29 @@ const courseData = {
         { 
             week: '03', 
             class: '06', 
-            date: 'Lun 27, Ago 2026', 
+            date: 'Jue 27, Ago 2026', 
+            description: [
+                {
+                    text: '',
+                    href:''
+                },
+            ]
+        },
+        { 
+            week: '04', 
+            class: '07', 
+            date: 'Lun 31, Ago 2026', 
+            description: [
+                {
+                    text: '',
+                    href:''
+                },
+            ]
+        },
+        { 
+            week: '04', 
+            class: '08', 
+            date: 'Jue 03, Sep 2026', 
             description: [
                 {
                     text: '',

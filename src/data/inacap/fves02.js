@@ -112,7 +112,7 @@ const courseData = {
             date: 'Lun 17, Ago 2026', 
             description: [
                 {
-                    text: 'Exercises',
+                    text: 'Past Simple & Past Continuous Exercises (1)',
                     href:'clase03'
                 },
             ]
@@ -134,7 +134,7 @@ const courseData = {
             date: 'Lun 24, Ago 2026', 
             description: [
                 {
-                    text: '',
+                    text: 'Past Simple & Past Continuous Exercises (2)',
                     href:''
                 },
             ]
@@ -145,7 +145,29 @@ const courseData = {
             date: 'Mar 25, Ago 2026', 
             description: [
                 {
-                    text: '',
+                    text: 'Past Simple & Past Continuous Exercises (3)',
+                    href:''
+                },
+            ]
+        },
+        { 
+            week: '04', 
+            class: '07', 
+            date: 'Lun 31, Ago 2026', 
+            description: [
+                {
+                    text: 'Evaluation 01 (1)',
+                    href:''
+                },
+            ]
+        },
+        { 
+            week: '04', 
+            class: '08', 
+            date: 'Mar 01, Sep 2026', 
+            description: [
+                {
+                    text: 'Evaluation 01 (2)',
                     href:''
                 },
             ]

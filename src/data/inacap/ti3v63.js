@@ -117,7 +117,7 @@ const courseData = {
             description: [
                 {
                     text: 'Fases del Ciclo de Vida ITIL',
-                    href:''
+                    href:'docs/clase05.pdf'
                 },
             ]
         },
@@ -127,8 +127,8 @@ const courseData = {
             date: 'Jue 27, Ago 2026', 
             description: [
                 {
-                    text: '',
-                    href:''
+                    text: 'Incidentes y Problemas TI',
+                    href:'docs/clase06.pdf'
                 },
             ]
         },
@@ -138,8 +138,8 @@ const courseData = {
             date: 'Lun 31, Ago 2026', 
             description: [
                 {
-                    text: '',
-                    href:''
+                    text: 'Servicios TI bajo Control',
+                    href:'docs/clase07.pdf'
                 },
             ]
         },
@@ -172,6 +172,24 @@ const courseData = {
             date: 'Sáb 22, Ago 2026', 
             description: {
                 text: 'COBIT y estándares TI: control, estrategia y mejora organizacional',
+                href: ''
+            }
+        },
+        { 
+            week: '03', 
+            lecture: '03', 
+            date: 'Sáb 29, Ago 2026', 
+            description: {
+                text: 'ITIL y el ciclo de vida que transforma los servicios TI',
+                href: ''
+            }
+        },
+        { 
+            week: '04', 
+            lecture: '04', 
+            date: 'Sáb 05, Sep 2026', 
+            description: {
+                text: 'Incidentes y problemas TI: respuestas clave para servicios de calidad',
                 href: ''
             }
         },

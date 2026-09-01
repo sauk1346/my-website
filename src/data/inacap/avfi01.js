@@ -229,6 +229,24 @@ const courseData = {
                 href: ''
             }
         },
+        { 
+            week: '04', 
+            lecture: '07', 
+            date: 'Dom 06, Sep 2026', 
+            description: {
+                text: 'Punto de equilibrio',
+                href: ''
+            }
+        },
+        { 
+            week: '04', 
+            lecture: '08', 
+            date: 'Dom 06, Sep 2026', 
+            description: {
+                text: 'La contabilidad y la importancia de la información financiera',
+                href: ''
+            }
+        },
     ]
 };
 

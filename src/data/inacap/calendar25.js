@@ -745,82 +745,112 @@ export const calendar25 = [
     titulo: "[FVES02] Evaluación 01",
     description: "Inglés Habilitante"
   },
-// ----- [AVFI01] Finanzas -----
   {
     id: 124,
+    fecha: "2026-9-14",
+    titulo: "[FVES02] Evaluación 02",
+    description: "Inglés Habilitante"
+  },
+  {
+    id: 125,
+    fecha: "2026-9-29",
+    titulo: "[FVES02] Evaluación 03",
+    description: "Inglés Habilitante"
+  },
+// ----- [AVFI01] Finanzas -----
+  {
+    id: 126,
     fecha: "2026-8-27",
     titulo: "[AVFI01] Evaluación 01",
     description: "Finanzas"
   },
   {
-    id: 125,
-    fecha: "2026-9-3",
-    titulo: "[AVFI01] Evaluación 01",
-    description: "Finanzas"
-  },
-  {
-    id: 126,
-    fecha: "2026-9-22",
-    titulo: "[AVFI01] Evaluación 01",
-    description: "Finanzas"
-  },
-  {
     id: 127,
-    fecha: "2026-9-6",
-    titulo: "[AVFI01] Evaluación 01",
+    fecha: "2026-9-10",
+    titulo: "[AVFI01] Evaluación 02",
+    description: "Finanzas"
+  },
+  {
+    id: 128,
+    fecha: "2026-9-22",
+    titulo: "[AVFI01] Evaluación 03",
+    description: "Finanzas"
+  },
+  {
+    id: 129,
+    fecha: "2026-10-6",
+    titulo: "[AVFI01] Evaluación 04",
     description: "Finanzas"
   },
 // ----- [TI3V63] GS & GobTI -----
   {
-    id: 128,
+    id: 130,
+    fecha: "2026-9-10",
+    titulo: "[TI3V63] Evaluación 01",
+    description: "GS & GobTI"
+  },
+  {
+    id: 131,
+    fecha: "2026-9-24",
+    titulo: "[TI3V63] Evaluación 02",
+    description: "GS & GobTI"
+  },
+  {
+    id: 132,
+    fecha: "2026-10-8",
+    titulo: "[TI3V63] Evaluación 03",
+    description: "GS & GobTI"
+  },
+  {
+    id: 133,
     fecha: "2026-8-15",
     titulo: "[TI3V63] Control 01",
     description: "GS & GobTI"
   },
   {
-    id: 129,
+    id: 134,
     fecha: "2026-8-22",
     titulo: "[TI3V63] Control 02",
     description: "GS & GobTI"
   },
   {
-    id: 130,
+    id: 135,
     fecha: "2026-8-29",
     titulo: "[TI3V63] Control 03",
     description: "GS & GobTI"
   },
   {
-    id: 130,
+    id: 136,
     fecha: "2026-9-5",
     titulo: "[TI3V63] Control 04",
     description: "GS & GobTI"
   },
   {
-    id: 130,
+    id: 137,
     fecha: "2026-9-12",
     titulo: "[TI3V63] Control 05",
     description: "GS & GobTI"
   },
   {
-    id: 130,
+    id: 138,
     fecha: "2026-9-19",
     titulo: "[TI3V63] Control 06",
     description: "GS & GobTI"
   },
   {
-    id: 130,
+    id: 139,
     fecha: "2026-9-26",
     titulo: "[TI3V63] Control 07",
     description: "GS & GobTI"
   },
   {
-    id: 130,
+    id: 140,
     fecha: "2026-10-3",
     titulo: "[TI3V63] Control 08",
     description: "GS & GobTI"
   },
   {
-    id: 130,
+    id: 141,
     fecha: "2026-10-10",
     titulo: "[TI3V63] Control 09",
     description: "GS & GobTI"

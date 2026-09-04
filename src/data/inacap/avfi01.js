@@ -26,16 +26,16 @@ const courseData = {
             date: 'Jue 27, Ago 2026',
             weighting: '15%', 
             description: {
-                text: '',
-                href: ''
+                text: 'Balance General',
+                href: 'eval01'
             }
         },
         { 
             evaluationNumber: 2,
-            date: 'Jue 03, Sep 2026',
+            date: 'Jue 10, Sep 2026',
             weighting: '15%', 
             description: {
-                text: '',
+                text: 'Estado Resultado / Pto Equilibrio',
                 href: ''
             }
         },
@@ -134,7 +134,7 @@ const courseData = {
             date: 'Lun 24, Ago 2026', 
             description: [
                 {
-                    text: 'Ejercicios',
+                    text: 'Ejercicio (Balance General)',
                     href:''
                 },
             ]
@@ -146,7 +146,7 @@ const courseData = {
             description: [
                 {
                     text: 'Evaluación 01',
-                    href:''
+                    href:'eval01'
                 },
             ]
         },
@@ -156,8 +156,8 @@ const courseData = {
             date: 'Mar 01, Sep 2026', 
             description: [
                 {
-                    text: '',
-                    href:''
+                    text: 'no asistí',
+                    strikethrough: true
                 },
             ]
         },
@@ -167,7 +167,33 @@ const courseData = {
             date: 'Jue 03, Sep 2026', 
             description: [
                 {
-                    text: '',
+                    text: 'Ejercicio 03 (Estado Resultado / Pto Equilibrio)',
+                    href:''
+                },
+                {
+                    text: 'Ejercicio 04 (Estado Resultado / Pto Equilibrio)',
+                    href:''
+                },
+            ]
+        },
+        { 
+            week: '05', 
+            class: '09', 
+            date: 'Lun 07, Sep 2026', 
+            description: [
+                {
+                    text: 'Técnicas de Costos',
+                    href:'docs/tecnicas-costos.pdf'
+                },
+            ]
+        },
+        { 
+            week: '05', 
+            class: '10', 
+            date: 'Jue 10, Sep 2026', 
+            description: [
+                {
+                    text: 'Evaluación 02',
                     href:''
                 },
             ]

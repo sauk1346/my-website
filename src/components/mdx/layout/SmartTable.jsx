@@ -149,7 +149,7 @@ const SmartTable = ({
       const boldText = fullBoldMatch[1];
       return (
         <strong className={styles.boldText}>
-          {boldText}
+          {processContent(boldText)}
         </strong>
       );
     }
@@ -162,7 +162,7 @@ const SmartTable = ({
       const italicText = fullItalicMatch[1];
       return (
         <em className={styles.italicText}>
-          {italicText}
+          {processContent(italicText)}
         </em>
       );
     }
@@ -335,7 +335,7 @@ const SmartTable = ({
           const boldText = match[6];
           parts.push(
             <strong key={`bold-${match.index}`} className={styles.boldText}>
-              {boldText}
+              {processContent(boldText)}
             </strong>
           );
         } else if (match[7]) {
@@ -343,7 +343,7 @@ const SmartTable = ({
           const italicText = match[8];
           parts.push(
             <em key={`italic-${match.index}`} className={styles.italicText}>
-              {italicText}
+              {processContent(italicText)}
             </em>
           );
         } else if (match[9]) {

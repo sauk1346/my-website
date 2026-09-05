@@ -16,30 +16,6 @@ export const homeData = {
         image: "/logos/codeTraining.png",
         link: "/ejercicios"
       },
-      codevault: {
-        name: "CodeVault",
-        description: "Colección Algoritmos",
-        image: "/logos/algorithms.jpg",
-        link: "/codevault"
-      },
-      elearning: {
-        name: "E-Learning",
-        description: "Plataformas",
-        image: "/logos/learnlogo.png",
-        link: "/elearning"
-      },
-      bootcamp: {
-        name: "Bootcamp",
-        description: "Academias",
-        image: "/logos/bootcamp.png",
-        link: "/bootcamp"
-      },
-      flashcards: {
-        name: "Flashcards",
-        description: "Estudio por tarjetas",
-        image: "/logos/flashcards.svg",
-        link: "/flashcards"
-      }
     }
   },
 

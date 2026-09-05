@@ -6,29 +6,6 @@
  */
 
 /**
- * Construye un link a una lección/clase de un curso
- *
- * @param {string} section - Sección del sitio (elearning, bootcamp, etc.)
- * @param {string} courseId - ID del curso
- * @param {string} slug - Slug de la lección
- * @returns {string} Ruta completa
- *
- * @example
- * buildLessonLink('elearning', 'cft002', 'clase01')
- * // Returns: '/elearning/cft002/clase01'
- *
- * buildLessonLink('bootcamp', 'udd001', 'proj01')
- * // Returns: '/bootcamp/udd001/proj01'
- */
-export const buildLessonLink = (section, courseId, slug) => {
-  if (!section || !courseId || !slug) {
-    console.warn('buildLessonLink: Missing required parameters', { section, courseId, slug });
-    return '#';
-  }
-  return `/${section}/${courseId}/${slug}`;
-};
-
-/**
  * Construye un link a una lección de idiomas
  *
  * @param {string} language - Idioma (chino, japones, ruso, etc.)
@@ -47,25 +24,6 @@ export const buildLanguageLessonLink = (language, href) => {
   // Remover slash inicial si existe para evitar duplicación
   const cleanHref = href.startsWith('/') ? href.slice(1) : href;
   return `/${language}/${cleanHref}`;
-};
-
-/**
- * Construye un link a un curso
- *
- * @param {string} section - Sección del sitio (elearning, bootcamp, inacap, etc.)
- * @param {string} courseId - ID del curso
- * @returns {string} Ruta completa
- *
- * @example
- * buildCourseLink('elearning', 'cft002')
- * // Returns: '/elearning/cft002'
- */
-export const buildCourseLink = (section, courseId) => {
-  if (!section || !courseId) {
-    console.warn('buildCourseLink: Missing required parameters', { section, courseId });
-    return '#';
-  }
-  return `/${section}/${courseId}`;
 };
 
 /**

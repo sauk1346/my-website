@@ -168,7 +168,7 @@ const courseData = {
             description: [
                 {
                     text: 'Ejercicio 03 (Estado Resultado / Pto Equilibrio)',
-                    href:''
+                    href:'clase08a'
                 },
                 {
                     text: 'Ejercicio 04 (Estado Resultado / Pto Equilibrio)',

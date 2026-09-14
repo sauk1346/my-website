@@ -41,7 +41,7 @@ const courseData = {
         },
         { 
             evaluationNumber: 3,
-            date: 'Mar 22, Sep 2026',
+            date: 'Jue 24, Sep 2026',
             weighting: '40%', 
             description: {
                 text: '',
@@ -131,7 +131,7 @@ const courseData = {
         { 
             week: '03', 
             class: '05', 
-            date: 'Lun 24, Ago 2026', 
+            date: 'Mar 25, Ago 2026', 
             description: [
                 {
                     text: 'Ejercicio (Balance General)',
@@ -170,20 +170,20 @@ const courseData = {
                     text: 'Ejercicio 03 (Estado Resultado / Pto Equilibrio)',
                     href:'clase08a'
                 },
-                {
-                    text: 'Ejercicio 04 (Estado Resultado / Pto Equilibrio)',
-                    href:''
-                },
             ]
         },
         { 
             week: '05', 
             class: '09', 
-            date: 'Lun 07, Sep 2026', 
+            date: 'Mar 08, Sep 2026', 
             description: [
                 {
                     text: 'Técnicas de Costos',
                     href:'docs/tecnicas-costos.pdf'
+                },
+                {
+                    text: 'Ejercicio 04 (Estado Resultado / Pto Equilibrio)',
+                    href:''
                 },
             ]
         },
@@ -195,6 +195,28 @@ const courseData = {
                 {
                     text: 'Evaluación 02',
                     href:''
+                },
+            ]
+        },
+        { 
+            week: '06', 
+            class: '11', 
+            date: 'Mar 15, Sep 2026', 
+            description: [
+                {
+                    text: '',
+                    href:''
+                },
+            ]
+        },
+        { 
+            week: '06', 
+            class: '12', 
+            date: 'Jue 17, Sep 2026', 
+            description: [
+                {
+                    text: 'Suspensión clases: Vísperas 18 Sep',
+                    strikethrough: true
                 },
             ]
         },
@@ -270,6 +292,42 @@ const courseData = {
             date: 'Dom 06, Sep 2026', 
             description: {
                 text: 'La contabilidad y la importancia de la información financiera',
+                href: ''
+            }
+        },
+        { 
+            week: '05', 
+            lecture: '09', 
+            date: 'Dom 13, Sep 2026', 
+            description: {
+                text: 'El presupuesto como brújula financiera',
+                href: ''
+            }
+        },
+        { 
+            week: '05', 
+            lecture: '10', 
+            date: 'Dom 13, Sep 2026', 
+            description: {
+                text: 'Estructura del presupuesto y herramientas digitales',
+                href: ''
+            }
+        },
+        { 
+            week: '06', 
+            lecture: '10', 
+            date: 'Dom 20, Sep 2026', 
+            description: {
+                text: 'Cómo construir tu presupuesto operativo',
+                href: ''
+            }
+        },
+        { 
+            week: '06', 
+            lecture: '10', 
+            date: 'Dom 20, Sep 2026', 
+            description: {
+                text: 'Análisis de variaciones y control presupuestario',
                 href: ''
             }
         },

@@ -32,7 +32,7 @@ const courseData = {
         },
         { 
             evaluationNumber: 2,
-            date: 'Lun 14, Sep 2026',
+            date: 'Mar 15, Sep 2026',
             weighting: '30%', 
             description: {
                 text: 'Written test',
@@ -178,7 +178,11 @@ const courseData = {
             date: 'Lun 07, Sep 2026', 
             description: [
                 {
-                    text: '',
+                    text: 'There was / There were',
+                    href:''
+                },
+                {
+                    text: 'Quantifiers',
                     href:''
                 },
             ]
@@ -189,7 +193,33 @@ const courseData = {
             date: 'Mar 08, Sep 2026', 
             description: [
                 {
+                    text: 'Extra points Evaluation 01',
+                    href:''
+                },
+                {
+                    text: 'Audio Exercises',
+                    href:''
+                },
+            ]
+        },
+        { 
+            week: '06', 
+            class: '11', 
+            date: 'Lun 14, Sep 2026', 
+            description: [
+                {
                     text: '',
+                    href:''
+                },
+            ]
+        },
+        { 
+            week: '06', 
+            class: '12', 
+            date: 'Mar 15, Sep 2026', 
+            description: [
+                {
+                    text: 'Evaluation 02',
                     href:''
                 },
             ]

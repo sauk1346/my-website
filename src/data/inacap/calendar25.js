@@ -747,7 +747,7 @@ export const calendar25 = [
   },
   {
     id: 124,
-    fecha: "2026-9-14",
+    fecha: "2026-9-15",
     titulo: "[FVES02] Evaluación 02",
     description: "Inglés Habilitante"
   },
@@ -772,7 +772,7 @@ export const calendar25 = [
   },
   {
     id: 128,
-    fecha: "2026-9-22",
+    fecha: "2026-9-24",
     titulo: "[AVFI01] Evaluación 03",
     description: "Finanzas"
   },

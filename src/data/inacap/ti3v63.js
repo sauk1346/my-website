@@ -160,7 +160,7 @@ const courseData = {
             date: 'Lun 07, Sep 2026', 
             description: [
                 {
-                    text: '',
+                    text: 'Horario consulta Informe 01',
                     href:''
                 },
             ]
@@ -173,6 +173,28 @@ const courseData = {
                 {
                     text: '',
                     href:''
+                },
+            ]
+        },
+        { 
+            week: '06', 
+            class: '11', 
+            date: 'Lun 14, Sep 2026', 
+            description: [
+                {
+                    text: '',
+                    href:''
+                },
+            ]
+        },
+        { 
+            week: '06', 
+            class: '11', 
+            date: 'Jue 17, Sep 2026', 
+            description: [
+                {
+                    text: 'Suspensión clases: Vísperas 18 Sep',
+                    strikethrough: true
                 },
             ]
         },
@@ -212,6 +234,24 @@ const courseData = {
             date: 'Sáb 05, Sep 2026', 
             description: {
                 text: 'Incidentes y problemas TI: respuestas clave para servicios de calidad',
+                href: ''
+            }
+        },
+        { 
+            week: '05', 
+            lecture: '05', 
+            date: 'Sáb 12, Sep 2026', 
+            description: {
+                text: 'Servicios TI bajo control: evaluación, análisis y mejora continua',
+                href: ''
+            }
+        },
+        { 
+            week: '06', 
+            lecture: '06', 
+            date: 'Sáb 19, Sep 2026', 
+            description: {
+                text: 'Roadmap TI: planificación y merjora para servicios de calidad',
                 href: ''
             }
         },

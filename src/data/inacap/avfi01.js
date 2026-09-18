@@ -204,7 +204,7 @@ const courseData = {
             date: 'Mar 15, Sep 2026', 
             description: [
                 {
-                    text: '',
+                    text: 'Entrega Notas Evaluación 02',
                     href:''
                 },
             ]
@@ -217,6 +217,28 @@ const courseData = {
                 {
                     text: 'Suspensión clases: Vísperas 18 Sep',
                     strikethrough: true
+                },
+            ]
+        },
+        { 
+            week: '07', 
+            class: '13', 
+            date: 'Lun 21, Sep 2026', 
+            description: [
+                {
+                    text: 'Ejercicio 01 (Presupuesto de Caja)',
+                    href: 'clase13'
+                },
+            ]
+        },
+        { 
+            week: '07', 
+            class: '14', 
+            date: 'Jue 24, Sep 2026', 
+            description: [
+                {
+                    text: '',
+                    href: ''
                 },
             ]
         },

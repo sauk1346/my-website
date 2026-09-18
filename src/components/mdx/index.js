@@ -2,11 +2,13 @@
 export { H1, H2, H3 } from './text/Headings';
 export { Paragraph, P } from './text/Paragraph';
 export { UnorderedList, OrderedList, ListItem, List } from './text/Lists';
+export { Reveal } from './text/Reveal';
 // Layout components
 export { Container } from './layout/Container';
 export { default as SmartTable, TableProvider, TableRef } from './layout/SmartTable';
 export { Blockquote } from './layout/Blockquote';
 export { default as Solution } from './layout/Solution';
+export { default as Box } from './layout/Box';
 export { Quiz, QuizQuestion } from './layout/QuizComponent';
 export { default as MultiColumn } from './layout/MultiColumn';
 export { default as Callout } from './layout/Callout';
@@ -18,5 +20,6 @@ export { TerminalOutput, TerminalProvider, TerminalRef } from './code/TerminalOu
 export { SmartLink } from '../ui/SmartLink';
 export { CustomIframe } from './media/Iframe';
 export { default as SmartFigure, FigureProvider, FigureRef } from './media/SmartFigure';
+export { default as AudioPlayer } from './media/AudioPlayer';
 // Utils
 export { getSlug } from './utils/slugify';

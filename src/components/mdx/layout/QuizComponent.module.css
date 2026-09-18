@@ -6,14 +6,13 @@
   }
   
   .questionContainer {
-    background-color: var(--card-bg, white);
+    background-color: rgba(127, 127, 127, 0.12);
     border-radius: var(--radius-md, 8px);
-    box-shadow: var(--shadow-md, 0 2px 8px rgba(0, 0, 0, 0.1));
     padding: var(--spacing-md);
     margin-bottom: var(--spacing-lg);
     position: relative;
     border: 1px solid var(--border-color, #e5e7eb);
-    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
   }
 
   /* Nuevas clases para mejorar la sangría */
@@ -78,7 +77,7 @@
     padding: 10px;
     border-radius: var(--radius-md, 6px);
     border: 1px solid var(--input-border, #e2e8f0);
-    background-color: var(--input-bg, #f8f9fa);
+    background-color: rgba(127, 127, 127, 0.08);
     color: var(--foreground, #111111);
     cursor: pointer;
     transition: all 0.2s ease;
@@ -104,7 +103,7 @@
   }
   
   .optionButton:hover {
-    background-color: var(--border-color, #f1f3f5);
+    background-color: rgba(127, 127, 127, 0.18);
   }
   
   .correctOption {
@@ -166,13 +165,6 @@
   }
   
   /* Soporte para modo oscuro - siguiendo el patrón de CardSystem.module.css */
-  :global(html.dark-mode) .questionContainer,
-  :global(html.dark-mode-override) .questionContainer {
-    background-color: var(--card-bg, #1e1e1e);
-    border-color: var(--border-color, #374151);
-    box-shadow: var(--shadow-md, 0 4px 6px rgba(0, 0, 0, 0.3));
-  }
-  
   :global(html.dark-mode) .questionTitle,
   :global(html.dark-mode) .questionNumber,
   :global(html.dark-mode) .questionText,
@@ -180,18 +172,6 @@
   :global(html.dark-mode-override) .questionNumber,
   :global(html.dark-mode-override) .questionText {
     color: var(--foreground, #f3f4f6);
-  }
-  
-  :global(html.dark-mode) .optionButton,
-  :global(html.dark-mode-override) .optionButton {
-    background-color: var(--input-bg, #2d2d2d);
-    border-color: var(--input-border, #4b5563);
-    color: var(--foreground, #f3f4f6);
-  }
-  
-  :global(html.dark-mode) .optionButton:hover,
-  :global(html.dark-mode-override) .optionButton:hover {
-    background-color: var(--border-color, #374151);
   }
   
   /* Ajustar los colores de los estados para modo oscuro */

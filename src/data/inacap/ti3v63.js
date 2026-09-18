@@ -27,7 +27,7 @@ const courseData = {
             weighting: '15%', 
             description: {
                 text: 'Informe 01',
-                href: ''
+                href: 'docs/informe01.pdf'
             }
         },
         { 
@@ -171,8 +171,8 @@ const courseData = {
             date: 'Jue 10, Sep 2026', 
             description: [
                 {
-                    text: '',
-                    href:''
+                    text: 'Instrucciones Informe 02',
+                    href:'docs/instrucciones-informe02.pdf'
                 },
             ]
         },
@@ -182,19 +182,41 @@ const courseData = {
             date: 'Lun 14, Sep 2026', 
             description: [
                 {
-                    text: '',
-                    href:''
+                    text: 'Transición del Servicio',
+                    href:'docs/clase11.pdf'
                 },
             ]
         },
         { 
             week: '06', 
-            class: '11', 
+            class: '12', 
             date: 'Jue 17, Sep 2026', 
             description: [
                 {
                     text: 'Suspensión clases: Vísperas 18 Sep',
                     strikethrough: true
+                },
+            ]
+        },
+        { 
+            week: '07', 
+            class: '13', 
+            date: 'Lun 21, Sep 2026', 
+            description: [
+                {
+                    text: '',
+                    href: ''
+                },
+            ]
+        },
+        { 
+            week: '07', 
+            class: '14', 
+            date: 'Jue 24, Sep 2026', 
+            description: [
+                {
+                    text: '',
+                    href: ''
                 },
             ]
         },
@@ -255,6 +277,7 @@ const courseData = {
                 href: ''
             }
         },
+        
     ]
 };
 

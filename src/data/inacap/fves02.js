@@ -32,7 +32,7 @@ const courseData = {
         },
         { 
             evaluationNumber: 2,
-            date: 'Mar 15, Sep 2026',
+            date: 'Lun 28, Sep 2026',
             weighting: '30%', 
             description: {
                 text: 'Written test',
@@ -41,7 +41,7 @@ const courseData = {
         },
         { 
             evaluationNumber: 3,
-            date: 'Mar 29, Sep 2026',
+            date: 'Lun 05, Oct 2026',
             weighting: '35%', 
             description: {
                 text: 'Role play',
@@ -50,7 +50,7 @@ const courseData = {
         },
         { 
             evaluationNumber: 4,
-            date: 'Sáb 03, Oct 2026',
+            date: 'Lun 05, Oct 2026',
             weighting: '15%', 
             description: {
                 text: 'Online quizzes',
@@ -101,7 +101,7 @@ const courseData = {
                     href:'docs/orq-past-simple.pdf'
                 },
                 {
-                    text: 'Onion rind question: Past Continuous',
+                    text: 'Onion ring question: Past Continuous',
                     href:'docs/orq-past-continuous.pdf'
                 },
             ]
@@ -112,7 +112,7 @@ const courseData = {
             date: 'Lun 17, Ago 2026', 
             description: [
                 {
-                    text: 'Past Simple & Past Continuous Exercises (1)',
+                    text: 'Past Simple (Affirmative/Negative/Question)',
                     href:'clase03'
                 },
             ]
@@ -134,8 +134,8 @@ const courseData = {
             date: 'Lun 24, Ago 2026', 
             description: [
                 {
-                    text: 'Past Simple & Past Continuous Exercises (2)',
-                    href:''
+                    text: 'Past Simple & Past Continuous Exercises',
+                    href:'clase05'
                 },
             ]
         },
@@ -145,8 +145,8 @@ const courseData = {
             date: 'Mar 25, Ago 2026', 
             description: [
                 {
-                    text: 'Past Simple & Past Continuous Exercises (3)',
-                    href:''
+                    text: 'Was/Were Questions',
+                    href:'clase06'
                 },
             ]
         },
@@ -178,12 +178,12 @@ const courseData = {
             date: 'Lun 07, Sep 2026', 
             description: [
                 {
-                    text: 'There was / There were',
-                    href:''
+                    text: 'There was/were',
+                    href:'clase09a'
                 },
                 {
-                    text: 'Quantifiers',
-                    href:''
+                    text: 'How many/much',
+                    href:'clase09b'
                 },
             ]
         },
@@ -198,7 +198,7 @@ const courseData = {
                 },
                 {
                     text: 'Audio Exercises',
-                    href:''
+                    href:'clase10'
                 },
             ]
         },
@@ -208,8 +208,12 @@ const courseData = {
             date: 'Lun 14, Sep 2026', 
             description: [
                 {
-                    text: '',
-                    href:''
+                    text: 'Have to / can / should',
+                    href:'clase11a'
+                },
+                {
+                    text: 'Exercises',
+                    href:'clase11b'
                 },
             ]
         },
@@ -219,8 +223,30 @@ const courseData = {
             date: 'Mar 15, Sep 2026', 
             description: [
                 {
-                    text: 'Evaluation 02',
-                    href:''
+                    text: 'didn\'t attend',
+                    strikethrough: true
+                },
+            ]
+        },
+        { 
+            week: '07', 
+            class: '13', 
+            date: 'Lun 21, Sep 2026', 
+            description: [
+                {
+                    text: '',
+                    href: ''
+                },
+            ]
+        },
+        { 
+            week: '07', 
+            class: '14', 
+            date: 'Mar 22, Sep 2026', 
+            description: [
+                {
+                    text: '',
+                    href: ''
                 },
             ]
         },

@@ -772,7 +772,7 @@ export const calendar25 = [
   },
   {
     id: 128,
-    fecha: "2026-10-1",
+    fecha: "2026-9-29",
     titulo: "[AVFI01] Evaluación 03",
     description: "Finanzas"
   },

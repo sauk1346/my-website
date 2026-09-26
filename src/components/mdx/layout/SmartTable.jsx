@@ -40,6 +40,9 @@ export function TableRef({ id }) {
   )
 }
 
+// Colores disponibles para destacar filas (ver SmartTable.module.css)
+const HIGHLIGHT_COLORS = ['yellow', 'green', 'blue', 'red', 'gray'];
+
 const SmartTable = ({
   tableLayout = 'fixed', // 'fixed', 'auto', 'mixed'
   columnWidths = [], // Solo para tableLayout='mixed'
@@ -416,6 +419,35 @@ const SmartTable = ({
     return {};
   };
 
+  // Una fila puede ser un array plano (formato clásico) o un objeto
+  // { cells: [...], highlight: true | 'yellow' | 'green' | 'blue' | 'red' | 'gray' }
+  // para destacarla (por ejemplo, filas de totales).
+  const normalizeRow = (row) => {
+    if (Array.isArray(row)) {
+      return { cells: row, highlight: false };
+    }
+    return { cells: row?.cells || [], highlight: row?.highlight || false };
+  };
+
+  const getRowHighlightClass = (highlight) => {
+    if (!highlight) return '';
+    const color = highlight === true ? 'yellow' : highlight;
+    if (!HIGHLIGHT_COLORS.includes(color)) return styles.rowHighlightYellow;
+    const className = `rowHighlight${color.charAt(0).toUpperCase()}${color.slice(1)}`;
+    return styles[className];
+  };
+
+  // Fila de sección: { section: "INGRESOS" } — separador de grupo (mayúsculas
+  // subrayadas, como en el desarrollo en pizarra), ocupa todas las columnas.
+  const isSectionRow = (row) => !Array.isArray(row) && row && typeof row === 'object' && 'section' in row;
+
+  const columnCount = headers.length > 0
+    ? headers.length
+    : rows.reduce((max, row) => {
+        const cells = Array.isArray(row) ? row : (row?.cells || []);
+        return Math.max(max, cells.length);
+      }, 1);
+
   return (
     <div id={id} className={styles.tableWrapper}>
       <table
@@ -445,25 +477,38 @@ const SmartTable = ({
         {/* ROWS */}
         {rows.length > 0 && (
           <tbody>
-            {rows.map((row, rowIndex) => (
-              <tr key={rowIndex}>
-                {row.map((cell, cellIndex) => {
-                  const label = headers[cellIndex] || `Column ${cellIndex + 1}`;
-                  if (rowHeaders && cellIndex === 0) {
-                    return (
-                      <th key={cellIndex} scope="row" data-label={label}>
-                        {processContent(cell)}
-                      </th>
-                    );
-                  }
-                  return (
-                    <td key={cellIndex} data-label={label}>
-                      {processContent(cell)}
+            {rows.map((row, rowIndex) => {
+              if (isSectionRow(row)) {
+                return (
+                  <tr key={rowIndex} className={styles.sectionRow}>
+                    <td colSpan={columnCount} className={styles.sectionCell}>
+                      {processContent(row.section)}
                     </td>
-                  );
-                })}
-              </tr>
-            ))}
+                  </tr>
+                );
+              }
+              const { cells, highlight } = normalizeRow(row);
+              const highlightClass = getRowHighlightClass(highlight);
+              return (
+                <tr key={rowIndex} className={highlightClass || undefined}>
+                  {cells.map((cell, cellIndex) => {
+                    const label = headers[cellIndex] || `Column ${cellIndex + 1}`;
+                    if (rowHeaders && cellIndex === 0) {
+                      return (
+                        <th key={cellIndex} scope="row" data-label={label}>
+                          {processContent(cell)}
+                        </th>
+                      );
+                    }
+                    return (
+                      <td key={cellIndex} data-label={label}>
+                        {processContent(cell)}
+                      </td>
+                    );
+                  })}
+                </tr>
+              );
+            })}
           </tbody>
         )}
       </table>

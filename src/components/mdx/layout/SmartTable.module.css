@@ -92,6 +92,105 @@
   }
 
   /* ================================
+     FILAS DESTACADAS (highlight)
+     ================================ */
+  .rowHighlightYellow td,
+  .rowHighlightYellow th[scope="row"] {
+    font-weight: 600;
+  }
+  .rowHighlightYellow {
+    background-color: rgba(250, 204, 21, 0.35);
+  }
+
+  .rowHighlightGreen td,
+  .rowHighlightGreen th[scope="row"] {
+    font-weight: 600;
+  }
+  .rowHighlightGreen {
+    background-color: rgba(34, 197, 94, 0.18);
+  }
+
+  .rowHighlightBlue td,
+  .rowHighlightBlue th[scope="row"] {
+    font-weight: 600;
+  }
+  .rowHighlightBlue {
+    background-color: rgba(59, 130, 246, 0.16);
+  }
+
+  .rowHighlightRed td,
+  .rowHighlightRed th[scope="row"] {
+    font-weight: 600;
+  }
+  .rowHighlightRed {
+    background-color: rgba(239, 68, 68, 0.16);
+  }
+
+  .rowHighlightGray td,
+  .rowHighlightGray th[scope="row"] {
+    font-weight: 600;
+  }
+  .rowHighlightGray {
+    background-color: rgba(107, 114, 128, 0.16);
+  }
+
+  .table tbody tr.rowHighlightYellow:hover,
+  .table tbody tr.rowHighlightGreen:hover,
+  .table tbody tr.rowHighlightBlue:hover,
+  .table tbody tr.rowHighlightRed:hover,
+  .table tbody tr.rowHighlightGray:hover {
+    filter: brightness(0.96);
+  }
+
+  :global(html.dark-mode) .rowHighlightYellow,
+  :global(html.dark-mode-override) .rowHighlightYellow {
+    background-color: rgba(250, 204, 21, 0.22);
+  }
+
+  :global(html.dark-mode) .rowHighlightGreen,
+  :global(html.dark-mode-override) .rowHighlightGreen {
+    background-color: rgba(34, 197, 94, 0.22);
+  }
+
+  :global(html.dark-mode) .rowHighlightBlue,
+  :global(html.dark-mode-override) .rowHighlightBlue {
+    background-color: rgba(59, 130, 246, 0.22);
+  }
+
+  :global(html.dark-mode) .rowHighlightRed,
+  :global(html.dark-mode-override) .rowHighlightRed {
+    background-color: rgba(239, 68, 68, 0.22);
+  }
+
+  :global(html.dark-mode) .rowHighlightGray,
+  :global(html.dark-mode-override) .rowHighlightGray {
+    background-color: rgba(107, 114, 128, 0.22);
+  }
+
+  /* ================================
+     FILA DE SECCIÓN (ej: INGRESOS / EGRESOS)
+     Se distingue a propósito del thead (fondo azul, bloque sólido) para
+     que se lea como un separador dentro de la tabla y no como un segundo
+     encabezado o dos tablas distintas fusionadas.
+     ================================ */
+  .sectionCell {
+    background-color: transparent;
+    color: #6b7280;
+    font-weight: 700;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    padding: 0.35rem 0.75rem;
+  }
+
+  :global(html.dark-mode) .sectionCell,
+  :global(html.dark-mode-override) .sectionCell {
+    color: #9ca3af;
+  }
+
+  /* ================================
      CAPTION DE TABLA
      ================================ */
   .caption {

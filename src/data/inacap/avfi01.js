@@ -41,7 +41,7 @@ const courseData = {
         },
         { 
             evaluationNumber: 3,
-            date: 'Jue 24, Sep 2026',
+            date: 'Mar 29, Sep 2026',
             weighting: '40%', 
             description: {
                 text: '',
@@ -235,6 +235,28 @@ const courseData = {
             week: '07', 
             class: '14', 
             date: 'Jue 24, Sep 2026', 
+            description: [
+                {
+                    text: 'Ejercicio 02 (Presupuesto de Caja)',
+                    href: ''
+                },
+            ]
+        },
+        { 
+            week: '08', 
+            class: '15', 
+            date: 'Mar 29, Sep 2026', 
+            description: [
+                {
+                    text: 'Evaluación 03',
+                    href: ''
+                },
+            ]
+        },
+        { 
+            week: '08', 
+            class: '16', 
+            date: 'Jue 01, Oct 2026', 
             description: [
                 {
                     text: '',

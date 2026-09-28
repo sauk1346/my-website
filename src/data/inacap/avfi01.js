@@ -238,7 +238,7 @@ const courseData = {
             description: [
                 {
                     text: 'Ejercicio 02 (Presupuesto de Caja)',
-                    href: ''
+                    href: 'clase14'
                 },
             ]
         },

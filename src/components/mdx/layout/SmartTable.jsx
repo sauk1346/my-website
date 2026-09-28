@@ -267,16 +267,16 @@ const SmartTable = ({
     }
     
     // ========================================
-    // CONTENIDO MIXTO: Detectar código inline `code`, fórmulas KaTeX $formula$, texto bold **texto**, cursiva *texto*, corchetes escapados \[texto\] y paréntesis escapados \(texto\) dentro de texto largo
+    // CONTENIDO MIXTO: Detectar código inline `code`, fórmulas KaTeX $formula$, texto bold **texto**, cursiva *texto*, corchetes escapados \[texto\], paréntesis escapados \(texto\) y texto coloreado {{color:texto}} dentro de texto largo
     // ========================================
-    if (text.includes('`') || text.includes('$') || text.includes('*') || text.includes('\\[') || text.includes('\\(')) {
+    if (text.includes('`') || text.includes('$') || text.includes('*') || text.includes('\\[') || text.includes('\\(') || text.includes('{{')) {
       const parts = [];
       let lastIndex = 0;
-      
-      // Regex combinado para detectar código, fórmulas KaTeX, texto bold, cursiva, corchetes escapados y paréntesis escapados
+
+      // Regex combinado para detectar código, fórmulas KaTeX, texto bold, cursiva, corchetes escapados, paréntesis escapados y texto coloreado
       // IMPORTANTE: Bold (**) debe ir antes que italic (*) para evitar conflictos
       // IMPORTANTE: Corchetes y paréntesis escapados deben procesarse para contenido mixto también
-      const mixedRegex = /(`([^`]+)`)|(\$([^$]+)\$)|(\*\*([^*]+)\*\*)|(\*([^*]+)\*)|(\\\[([^\]]*)\\\])|(\\\(([^)]*)\\\))/g;
+      const mixedRegex = /(`([^`]+)`)|(\$([^$]+)\$)|(\*\*([^*]+)\*\*)|(\*([^*]+)\*)|(\\\[([^\]]*)\\\])|(\\\(([^)]*)\\\))|(\{\{(red|blue|green|gray|yellow)\:([^}]+)\}\})/g;
       let match;
       
       while ((match = mixedRegex.exec(text)) !== null) {
@@ -363,6 +363,16 @@ const SmartTable = ({
           parts.push(
             <span key={`parentheses-${match.index}`}>
               ({parenthesesContent})
+            </span>
+          );
+        } else if (match[13]) {
+          // Es texto coloreado: {{color:texto}}
+          const color = match[14];
+          const coloredText = match[15];
+          const colorClassName = `color${color.charAt(0).toUpperCase()}${color.slice(1)}`;
+          parts.push(
+            <span key={`color-${match.index}`} className={styles[colorClassName]}>
+              {processContent(coloredText)}
             </span>
           );
         }

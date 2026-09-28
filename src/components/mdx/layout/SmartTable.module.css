@@ -255,6 +255,60 @@
     font-style: italic;
     color: inherit;
   }
+
+  /* ================================
+     TEXTO COLOREADO: {{color:texto}}
+     Útil para replicar anotaciones en color (ej. tinta roja de pizarra)
+     ================================ */
+  .colorRed {
+    color: #dc2626;
+    font-weight: 600;
+  }
+
+  .colorBlue {
+    color: #2563eb;
+    font-weight: 600;
+  }
+
+  .colorGreen {
+    color: #16a34a;
+    font-weight: 600;
+  }
+
+  .colorGray {
+    color: #6b7280;
+    font-weight: 600;
+  }
+
+  .colorYellow {
+    color: #ca8a04;
+    font-weight: 600;
+  }
+
+  :global(html.dark-mode) .colorRed,
+  :global(html.dark-mode-override) .colorRed {
+    color: #f87171;
+  }
+
+  :global(html.dark-mode) .colorBlue,
+  :global(html.dark-mode-override) .colorBlue {
+    color: #60a5fa;
+  }
+
+  :global(html.dark-mode) .colorGreen,
+  :global(html.dark-mode-override) .colorGreen {
+    color: #4ade80;
+  }
+
+  :global(html.dark-mode) .colorGray,
+  :global(html.dark-mode-override) .colorGray {
+    color: #9ca3af;
+  }
+
+  :global(html.dark-mode) .colorYellow,
+  :global(html.dark-mode-override) .colorYellow {
+    color: #facc15;
+  }
   
   /* ================================
      FÓRMULAS KATEX - COMPATIBLES CON MDX

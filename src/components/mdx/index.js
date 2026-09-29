@@ -10,6 +10,7 @@ export { Blockquote } from './layout/Blockquote';
 export { default as Solution } from './layout/Solution';
 export { default as Box } from './layout/Box';
 export { Quiz, QuizQuestion } from './layout/QuizComponent';
+export { GridQuiz } from './layout/GridQuiz';
 export { default as MultiColumn } from './layout/MultiColumn';
 export { default as Callout } from './layout/Callout';
 export { Tabs, Tab } from './layout/Tabs';

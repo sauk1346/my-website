@@ -36,7 +36,7 @@ const courseData = {
             weighting: '15%', 
             description: {
                 text: 'Estado Resultado / Pto Equilibrio',
-                href: ''
+                href: 'eval02'
             }
         },
         { 
@@ -44,7 +44,7 @@ const courseData = {
             date: 'Mar 29, Sep 2026',
             weighting: '40%', 
             description: {
-                text: '',
+                text: 'Presupuesto de Caja',
                 href: ''
             }
         },
@@ -194,7 +194,7 @@ const courseData = {
             description: [
                 {
                     text: 'Evaluación 02',
-                    href:''
+                    href:'eval02'
                 },
             ]
         },

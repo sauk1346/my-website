@@ -36,7 +36,7 @@ const courseData = {
             weighting: '35%', 
             description: {
                 text: 'Informe 02',
-                href: ''
+                href: 'docs/informe02.pdf'
             }
         },
         { 
@@ -138,8 +138,8 @@ const courseData = {
             date: 'Lun 31, Ago 2026', 
             description: [
                 {
-                    text: 'Servicios TI bajo Control',
-                    href:'docs/clase07.pdf'
+                    text: 'Incidentes y Problemas TI',
+                    href:'docs/clase06.pdf'
                 },
             ]
         },
@@ -204,8 +204,8 @@ const courseData = {
             date: 'Lun 21, Sep 2026', 
             description: [
                 {
-                    text: '',
-                    href: ''
+                    text: 'Integración de Procesos en el Ciclo de Vida',
+                    href: 'docs/clase13.pdf'
                 },
             ]
         },
@@ -213,6 +213,28 @@ const courseData = {
             week: '07', 
             class: '14', 
             date: 'Jue 24, Sep 2026', 
+            description: [
+                {
+                    text: 'Operación del Servicio',
+                    href: 'docs/clase14.pdf'
+                },
+            ]
+        },
+        { 
+            week: '08', 
+            class: '15', 
+            date: 'Lun 28, Sep 2026', 
+            description: [
+                {
+                    text: 'Servicios TI bajo Control',
+                    href: 'docs/clase15.pdf'
+                },
+            ]
+        },
+        { 
+            week: '08', 
+            class: '16', 
+            date: 'Jue 01, Oct 2026', 
             description: [
                 {
                     text: '',

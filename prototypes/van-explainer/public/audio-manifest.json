@@ -1,0 +1,19 @@
+{
+  "intro": "audio/intro.mp3",
+  "datos": "audio/datos.mp3",
+  "formula": "audio/formula.mp3",
+  "anio1": "audio/anio1.mp3",
+  "anio2": "audio/anio2.mp3",
+  "anio3": "audio/anio3.mp3",
+  "anio4": "audio/anio4.mp3",
+  "suma": "audio/suma.mp3",
+  "van": "audio/van.mp3",
+  "conclusion": "audio/conclusion.mp3",
+  "nominal_formula": "audio/nominal_formula.mp3",
+  "nominal_bancoA": "audio/nominal_bancoA.mp3",
+  "nominal_bancoB": "audio/nominal_bancoB.mp3",
+  "vf_formula": "audio/vf_formula.mp3",
+  "vf_ejemplo": "audio/vf_ejemplo.mp3",
+  "vf_ganancia": "audio/vf_ganancia.mp3",
+  "nominal_conclusion": "audio/nominal_conclusion.mp3"
+}

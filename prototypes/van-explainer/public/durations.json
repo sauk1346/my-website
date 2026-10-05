@@ -1,0 +1,19 @@
+{
+  "intro": 5.01551,
+  "datos": 9.380862,
+  "formula": 5.15483,
+  "anio1": 7.848345,
+  "anio2": 7.012426,
+  "anio3": 7.616145,
+  "anio4": 7.151746,
+  "suma": 6.315828,
+  "van": 6.965986,
+  "conclusion": 6.130068,
+  "nominal_formula": 5.990748,
+  "nominal_bancoA": 6.873107,
+  "nominal_bancoB": 5.944308,
+  "vf_formula": 5.619229,
+  "vf_ejemplo": 8.637823,
+  "vf_ganancia": 4.272472,
+  "nominal_conclusion": 9.845261
+}

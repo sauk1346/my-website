@@ -1,0 +1,87 @@
+[
+  {
+    "id": "nominal_formula",
+    "scene": "nominal",
+    "text": "Antes de resolver el ejercicio, repasemos dos conceptos clave. El primero: el interés nominal es igual al interés real más la inflación."
+  },
+  {
+    "id": "nominal_bancoA",
+    "scene": "nominal",
+    "text": "Por ejemplo, con una inflación del tres por ciento, el Banco A ofrece un interés nominal del cinco por ciento, lo que equivale a un interés real del dos por ciento."
+  },
+  {
+    "id": "nominal_bancoB",
+    "scene": "nominal",
+    "text": "El Banco B, en cambio, exige un interés real del tres por ciento, lo que equivale a un interés nominal del seis por ciento."
+  },
+  {
+    "id": "nominal_conclusion",
+    "scene": "nominal",
+    "text": "Lo que realmente importa es el interés real, porque mide la ganancia después de descontar la inflación. Por eso el Banco B es la mejor opción: entrega un tres por ciento real, frente al dos por ciento del Banco A."
+  },
+  {
+    "id": "vf_formula",
+    "scene": "valorfuturo",
+    "text": "El segundo concepto es el Valor Futuro: el valor actual multiplicado por uno más la tasa de interés, elevado al tiempo."
+  },
+  {
+    "id": "vf_ejemplo",
+    "scene": "valorfuturo",
+    "text": "Por ejemplo, un valor actual de sesenta millones de pesos, a una tasa del cuatro por ciento durante cuatro años, se convierte en setenta millones ciento noventa y un mil quinientos catorce pesos."
+  },
+  {
+    "id": "vf_ganancia",
+    "scene": "valorfuturo",
+    "text": "Es decir, una ganancia de diez millones ciento noventa y un mil quinientos catorce pesos."
+  },
+  {
+    "id": "intro",
+    "scene": "intro",
+    "text": "Unidad tres, indicadores de rentabilidad. Vamos a resolver el ejercicio uno de Valor Actual Neto, o VAN."
+  },
+  {
+    "id": "datos",
+    "scene": "datos",
+    "text": "Los datos son: inversión inicial de sesenta millones de pesos, con flujos de caja esperados de dieciocho, veinte, veintidós y veinticinco millones en los años uno a cuatro, y una tasa de descuento del diez por ciento."
+  },
+  {
+    "id": "formula",
+    "scene": "formula",
+    "text": "La fórmula del VAN es la sumatoria de cada flujo de caja descontado a valor presente, menos la inversión inicial."
+  },
+  {
+    "id": "anio1",
+    "scene": "tabla",
+    "text": "En el año uno, dieciocho millones divididos por uno coma diez, da un valor presente de dieciséis millones trescientos sesenta y tres mil seiscientos treinta y seis pesos."
+  },
+  {
+    "id": "anio2",
+    "scene": "tabla",
+    "text": "En el año dos, veinte millones divididos por uno coma diez al cuadrado, da dieciséis millones quinientos veintiocho mil novecientos veintiséis pesos."
+  },
+  {
+    "id": "anio3",
+    "scene": "tabla",
+    "text": "En el año tres, veintidós millones divididos por uno coma diez al cubo, da también dieciséis millones quinientos veintiocho mil novecientos veintiséis pesos."
+  },
+  {
+    "id": "anio4",
+    "scene": "tabla",
+    "text": "Y en el año cuatro, veinticinco millones divididos por uno coma diez a la cuatro, da diecisiete millones setenta y cinco mil trescientos treinta y seis pesos."
+  },
+  {
+    "id": "suma",
+    "scene": "resultado",
+    "text": "Sumando los cuatro valores presentes, obtenemos sesenta y seis millones cuatrocientos noventa y seis mil ochocientos veinticuatro pesos."
+  },
+  {
+    "id": "van",
+    "scene": "resultado",
+    "text": "A eso le restamos la inversión inicial de sesenta millones, y el VAN resulta en seis millones cuatrocientos noventa y seis mil ochocientos veinticuatro pesos."
+  },
+  {
+    "id": "conclusion",
+    "scene": "conclusion",
+    "text": "Como el VAN es positivo, el proyecto se acepta: genera más valor que el exigido por la tasa de rentabilidad del diez por ciento."
+  }
+]

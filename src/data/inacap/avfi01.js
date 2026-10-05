@@ -259,8 +259,12 @@ const courseData = {
             date: 'Jue 01, Oct 2026', 
             description: [
                 {
-                    text: '',
-                    href: ''
+                    text: 'Ejercicio 1 (VAN)',
+                    href: 'clase16'
+                },
+                {
+                    text: 'Ejercicio 1 (VAN) - VideoClase',
+                    href: 'https://youtu.be/NA15uq62WSk'
                 },
             ]
         },

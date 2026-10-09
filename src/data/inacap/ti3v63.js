@@ -160,7 +160,7 @@ const courseData = {
             date: 'Lun 07, Sep 2026', 
             description: [
                 {
-                    text: 'Horario consulta Informe 01',
+                    text: 'Horario Consultas: Informe 01',
                     href:''
                 },
             ]
@@ -237,7 +237,29 @@ const courseData = {
             date: 'Jue 01, Oct 2026', 
             description: [
                 {
-                    text: '',
+                    text: 'Roadmap TI',
+                    href: ''
+                },
+            ]
+        },
+        { 
+            week: '09', 
+            class: '17', 
+            date: 'Lun 05, Oct 2026', 
+            description: [
+                {
+                    text: 'Mejora Continua del Servicio',
+                    href: ''
+                },
+            ]
+        },
+        { 
+            week: '09', 
+            class: '18', 
+            date: 'Jue 08, Oct 2026', 
+            description: [
+                {
+                    text: 'Horario Consultas: Informe 03',
                     href: ''
                 },
             ]

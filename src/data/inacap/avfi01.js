@@ -42,7 +42,7 @@ const courseData = {
         { 
             evaluationNumber: 3,
             date: 'Mar 29, Sep 2026',
-            weighting: '40%', 
+            weighting: '30%', 
             description: {
                 text: 'Presupuesto de Caja',
                 href: ''
@@ -50,10 +50,10 @@ const courseData = {
         },
         { 
             evaluationNumber: 4,
-            date: 'Mar 06, Oct 2026',
-            weighting: '30%', 
+            date: 'Mar 13, Oct 2026',
+            weighting: '40%', 
             description: {
-                text: '',
+                text: 'Indicadores de Rentabilidad',
                 href: ''
             }
         },
@@ -259,12 +259,56 @@ const courseData = {
             date: 'Jue 01, Oct 2026', 
             description: [
                 {
-                    text: 'Ejercicio 1 (VAN)',
+                    text: 'Ejercicio 01: Valor Actual Neto (VAN)',
                     href: 'clase16'
                 },
                 {
-                    text: 'Ejercicio 1 (VAN) - VideoClase',
+                    text: 'Ejercicio 01 (VAN) - VideoClase',
                     href: 'https://youtu.be/NA15uq62WSk'
+                },
+            ]
+        },
+        { 
+            week: '09', 
+            class: '17', 
+            date: 'Mar 06, Oct 2026', 
+            description: [
+                {
+                    text: 'Ejercicio 02: Indicadores de Rentabilidad',
+                    href: ''
+                },
+            ]
+        },
+        { 
+            week: '09', 
+            class: '18', 
+            date: 'Jue 08, Oct 2026', 
+            description: [
+                {
+                    text: 'Ejercicio 03: Indicadores de Rentabilidad',
+                    href: ''
+                },
+            ]
+        },
+        { 
+            week: '10', 
+            class: '19', 
+            date: 'Mar 13, Oct 2026', 
+            description: [
+                {
+                    text: 'Evaluación 04',
+                    href: ''
+                },
+            ]
+        },
+        { 
+            week: '10', 
+            class: '20', 
+            date: 'Jue 15, Oct 2026', 
+            description: [
+                {
+                    text: 'Examen',
+                    href: ''
                 },
             ]
         },

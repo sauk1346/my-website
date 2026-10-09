@@ -265,7 +265,29 @@ const courseData = {
       date:'Mar 29, Sep 2026', 
       description: [
         {
-          text:'',
+          text:'Exercises',
+          href:''
+        },
+      ]
+    },
+    { 
+      week:'09', 
+      class:'17', 
+      date:'Lun 05, Oct 2026', 
+      description: [
+        {
+          text:'Evaluation 03 (1)',
+          href:''
+        },
+      ]
+    },
+    { 
+      week:'09', 
+      class:'18', 
+      date:'Mar 06, Oct 2026', 
+      description: [
+        {
+          text:'Evaluation 03 (2)',
           href:''
         },
       ]

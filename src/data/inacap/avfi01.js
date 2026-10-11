@@ -275,7 +275,7 @@ const courseData = {
             description: [
                 {
                     text: 'Ejercicio 02: Indicadores de Rentabilidad',
-                    href: ''
+                    href: 'clase17'
                 },
             ]
         },

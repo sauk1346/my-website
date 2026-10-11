@@ -1,0 +1,212 @@
+[
+  {
+    "id": "intro",
+    "scene": "intro",
+    "text": "Unidad tres, indicadores de rentabilidad. En este video vamos a resolver el ejercicio dos, calculando paso a paso cuatro indicadores. El Valor Actual Neto, la Tasa Interna de Retorno, el Período de Recuperación de la Inversión, y el Retorno sobre la Inversión."
+  },
+  {
+    "id": "datos_flujos",
+    "scene": "datos",
+    "text": "Partamos por los datos del proyecto. Se esperan flujos de caja de tres millones de pesos el primer año, tres millones trescientos mil el segundo, tres millones setecientos mil el tercero, y cuatro millones cien mil el cuarto año."
+  },
+  {
+    "id": "datos_inversion",
+    "scene": "datos",
+    "text": "La inversión inicial es de seis millones de pesos. Es el desembolso que hacemos hoy, en el año cero, para echar a andar el proyecto."
+  },
+  {
+    "id": "datos_tasa",
+    "scene": "datos",
+    "text": "Y la tasa de descuento es del veinte por ciento. Representa la rentabilidad mínima que le exigimos al proyecto, y es la tasa que usaremos para traer los flujos futuros a valor presente."
+  },
+  {
+    "id": "van_formula",
+    "scene": "vanformula",
+    "text": "El primer indicador es el Valor Actual Neto, o VAN. Su fórmula dice que el VAN es la suma de cada flujo de caja futuro, dividido por uno más la tasa de descuento elevado al año correspondiente, menos la inversión inicial."
+  },
+  {
+    "id": "van_porque",
+    "scene": "vanformula",
+    "text": "¿Por qué dividimos? Porque un peso recibido en el futuro vale menos que un peso de hoy. Al dividir cada flujo por uno más la tasa, lo convertimos en su equivalente en pesos de hoy."
+  },
+  {
+    "id": "tasa_decimal",
+    "scene": "tasa",
+    "text": "Antes de calcular, preparemos el divisor de la fórmula. La tasa de descuento es veinte por ciento. Para usarla en la fórmula debemos expresarla en decimal. Veinte dividido en cien es cero coma dos."
+  },
+  {
+    "id": "tasa_suma",
+    "scene": "tasa",
+    "text": "Ahora resolvemos el paréntesis. Uno más cero coma dos es igual a uno coma dos. El uno representa el capital, y el cero coma dos es la tasa de descuento en decimal. Este uno coma dos es el factor que usaremos en todos los cálculos que vienen."
+  },
+  {
+    "id": "anio1_plantea",
+    "scene": "vantabla",
+    "text": "Vamos con el año uno. Tomamos el flujo de caja del año uno desde la tabla de datos, que es de tres millones de pesos. Lo dividimos por uno coma dos elevado a uno, porque ese flujo lo recibiremos dentro de un año."
+  },
+  {
+    "id": "anio1_resultado",
+    "scene": "vantabla",
+    "text": "Uno coma dos elevado a uno es simplemente uno coma dos. Entonces, tres millones divididos en uno coma dos nos da dos millones quinientos mil pesos. Ese es el valor presente del primer flujo."
+  },
+  {
+    "id": "anio2_plantea",
+    "scene": "vantabla",
+    "text": "Año dos. De la tabla de datos tomamos el flujo del año dos, que es de tres millones trescientos mil pesos. Como lo recibiremos dentro de dos años, lo dividimos por uno coma dos elevado a dos."
+  },
+  {
+    "id": "anio2_resultado",
+    "scene": "vantabla",
+    "text": "Uno coma dos al cuadrado significa uno coma dos multiplicado por uno coma dos, y eso da uno coma cuarenta y cuatro. Entonces, tres millones trescientos mil divididos en uno coma cuarenta y cuatro nos da dos millones doscientos noventa y un mil seiscientos sesenta y siete pesos."
+  },
+  {
+    "id": "anio3_plantea",
+    "scene": "vantabla",
+    "text": "Año tres. El flujo de caja del año tres es de tres millones setecientos mil pesos, y como está a tres años de distancia, lo dividimos por uno coma dos elevado a tres."
+  },
+  {
+    "id": "anio3_resultado",
+    "scene": "vantabla",
+    "text": "Uno coma dos al cubo es uno coma setecientos veintiocho. Entonces, tres millones setecientos mil divididos en uno coma setecientos veintiocho nos da dos millones ciento cuarenta y un mil doscientos cuatro pesos."
+  },
+  {
+    "id": "anio4_plantea",
+    "scene": "vantabla",
+    "text": "Y el año cuatro. El flujo de caja del año cuatro es de cuatro millones cien mil pesos, dividido por uno coma dos elevado a cuatro, porque lo recibiremos dentro de cuatro años."
+  },
+  {
+    "id": "anio4_resultado",
+    "scene": "vantabla",
+    "text": "Uno coma dos elevado a cuatro es dos coma cero siete tres seis. Entonces, cuatro millones cien mil divididos en dos coma cero siete tres seis nos da un millón novecientos setenta y siete mil doscientos treinta y ocho pesos."
+  },
+  {
+    "id": "suma_plantea",
+    "scene": "vanresultado",
+    "text": "Ya tenemos los cuatro flujos en valor presente. Ahora los sumamos. Dos millones quinientos mil, más dos millones doscientos noventa y un mil seiscientos sesenta y siete, más dos millones ciento cuarenta y un mil doscientos cuatro, más un millón novecientos setenta y siete mil doscientos treinta y ocho."
+  },
+  {
+    "id": "suma_resultado",
+    "scene": "vanresultado",
+    "text": "La suma de los flujos descontados es ocho millones novecientos diez mil ciento nueve pesos."
+  },
+  {
+    "id": "van_resta",
+    "scene": "vanresultado",
+    "text": "Para obtener el VAN, a esa suma le restamos la inversión inicial de seis millones, que viene de los datos del ejercicio. Ocho millones novecientos diez mil ciento nueve, menos seis millones, nos da un VAN de dos millones novecientos diez mil ciento nueve pesos."
+  },
+  {
+    "id": "van_decision",
+    "scene": "vanresultado",
+    "text": "Como el VAN es mayor que cero, el proyecto se acepta. Los flujos futuros, traídos a pesos de hoy, superan la inversión inicial."
+  },
+  {
+    "id": "tir_concepto",
+    "scene": "tirconcepto",
+    "text": "El segundo indicador es la Tasa Interna de Retorno, o TIR. Es la tasa de descuento que hace que el VAN sea exactamente cero. En otras palabras, es la rentabilidad máxima que se le puede exigir al proyecto."
+  },
+  {
+    "id": "tir_criterio",
+    "scene": "tirconcepto",
+    "text": "El criterio de decisión es simple. Si la TIR es mayor que la tasa exigida, el proyecto se acepta. Si la TIR es menor, se rechaza."
+  },
+  {
+    "id": "tir_metodo",
+    "scene": "tirconcepto",
+    "text": "La TIR no se puede despejar algebraicamente. Se encuentra probando tasas, con iteración o con calculadora financiera. Nosotros haremos una prueba. ¿Qué pasa si descontamos los flujos al treinta por ciento, una tasa diez puntos mayor que la exigida?"
+  },
+  {
+    "id": "tir_factor",
+    "scene": "tirtabla",
+    "text": "Igual que antes, preparamos el divisor. Treinta por ciento en decimal es treinta dividido en cien, es decir, cero coma tres. Y uno más cero coma tres nos da un factor de uno coma tres."
+  },
+  {
+    "id": "tir_anio1",
+    "scene": "tirtabla",
+    "text": "En el año uno, el flujo de tres millones, dividido por uno coma tres elevado a uno, nos da dos millones trescientos siete mil seiscientos noventa y dos pesos."
+  },
+  {
+    "id": "tir_anio2",
+    "scene": "tirtabla",
+    "text": "En el año dos, tres millones trescientos mil, divididos por uno coma tres al cuadrado, que es uno coma sesenta y nueve, nos dan un millón novecientos cincuenta y dos mil seiscientos sesenta y tres pesos."
+  },
+  {
+    "id": "tir_anio3",
+    "scene": "tirtabla",
+    "text": "En el año tres, tres millones setecientos mil, divididos por uno coma tres al cubo, que es dos coma ciento noventa y siete, nos dan un millón seiscientos ochenta y cuatro mil ciento quince pesos."
+  },
+  {
+    "id": "tir_anio4",
+    "scene": "tirtabla",
+    "text": "Y en el año cuatro, cuatro millones cien mil, divididos por uno coma tres elevado a cuatro, que es dos coma ocho cinco seis uno, nos dan un millón cuatrocientos treinta y cinco mil quinientos veinticuatro pesos."
+  },
+  {
+    "id": "tir_suma",
+    "scene": "tirtabla",
+    "text": "Sumando los cuatro valores obtenemos siete millones trescientos setenta y nueve mil novecientos noventa y cuatro pesos. Y restando la inversión inicial de seis millones, el resultado es un millón trescientos setenta y nueve mil novecientos noventa y cuatro pesos."
+  },
+  {
+    "id": "tir_interpretacion",
+    "scene": "tirtabla",
+    "text": "Al treinta por ciento el VAN sigue siendo positivo. Todavía no llega a cero. Eso significa que la TIR real es mayor que treinta por ciento y, por lo tanto, muy superior al veinte por ciento exigido. El proyecto también se acepta bajo este criterio."
+  },
+  {
+    "id": "pri_concepto",
+    "scene": "pri",
+    "text": "El tercer indicador es el Período de Recuperación de la Inversión, también llamado payback. Nos dice cuántos años tarda el proyecto en recuperar la inversión inicial, usando los flujos ya descontados que calculamos en el paso uno."
+  },
+  {
+    "id": "pri_acum1",
+    "scene": "pri",
+    "text": "Construyamos el flujo acumulado. Al final del año uno llevamos acumulados dos millones quinientos mil pesos, el valor presente del primer flujo. Todavía no cubre los seis millones invertidos."
+  },
+  {
+    "id": "pri_acum2",
+    "scene": "pri",
+    "text": "Al final del año dos sumamos el flujo descontado del año dos. Dos millones quinientos mil, más dos millones doscientos noventa y un mil seiscientos sesenta y siete, nos da cuatro millones setecientos noventa y un mil seiscientos sesenta y siete acumulados. Aún no cubre la inversión."
+  },
+  {
+    "id": "pri_acum3",
+    "scene": "pri",
+    "text": "Al final del año tres sumamos dos millones ciento cuarenta y un mil doscientos cuatro, y el acumulado llega a seis millones novecientos treinta y dos mil ochocientos setenta y uno. Aquí sí superamos los seis millones. La inversión se recupera durante el año tres."
+  },
+  {
+    "id": "pri_formula",
+    "scene": "pri",
+    "text": "Para saber en qué punto exacto del año tres se recupera, usamos la fórmula del payback. Al año anterior a la recuperación le sumamos una fracción. La inversión inicial menos el acumulado hasta ese año, dividido por el flujo del año en que se recupera la inversión."
+  },
+  {
+    "id": "pri_valores",
+    "scene": "pri",
+    "text": "Identifiquemos cada valor en la tabla. A es igual a dos, el último año en que la inversión aún no estaba cubierta. B es el acumulado al año dos, cuatro millones setecientos noventa y un mil seiscientos sesenta y siete. Y el flujo del año de recuperación es el flujo descontado del año tres, dos millones ciento cuarenta y un mil doscientos cuatro."
+  },
+  {
+    "id": "pri_calculo",
+    "scene": "pri",
+    "text": "Calculemos el numerador. Seis millones, menos cuatro millones setecientos noventa y un mil seiscientos sesenta y siete, nos da un millón doscientos ocho mil trescientos treinta y tres pesos. Eso es lo que faltaba por recuperar al comenzar el año tres."
+  },
+  {
+    "id": "pri_resultado",
+    "scene": "pri",
+    "text": "Ahora dividimos. Un millón doscientos ocho mil trescientos treinta y tres, entre dos millones ciento cuarenta y un mil doscientos cuatro, nos da cero coma cincuenta y seis. Sumamos dos más cero coma cincuenta y seis. El payback es dos coma cincuenta y seis años, es decir, dos años y aproximadamente siete meses."
+  },
+  {
+    "id": "roi_concepto",
+    "scene": "roi",
+    "text": "El cuarto y último indicador es el Retorno sobre la Inversión, o ROI. Mide, en porcentaje, el beneficio neto que genera el proyecto respecto de la inversión total realizada."
+  },
+  {
+    "id": "roi_valores",
+    "scene": "roi",
+    "text": "El beneficio neto es el VAN que calculamos en el paso uno, que fue de dos millones novecientos diez mil ciento nueve pesos. Y la inversión total son los seis millones iniciales de los datos."
+  },
+  {
+    "id": "roi_calculo",
+    "scene": "roi",
+    "text": "Dividimos. Dos millones novecientos diez mil ciento nueve, entre seis millones, nos da cero coma cuatro ocho cinco. Lo multiplicamos por cien para expresarlo en porcentaje, y el ROI es cuarenta y ocho coma cinco por ciento. Por cada peso invertido, el proyecto genera un cuarenta y ocho coma cinco por ciento de retorno neto."
+  },
+  {
+    "id": "conclusion",
+    "scene": "conclusion",
+    "text": "Resumamos los cuatro indicadores. El VAN es positivo, dos millones novecientos diez mil ciento nueve pesos. La TIR es mayor que treinta por ciento, muy por encima del veinte exigido. El payback es de dos coma cincuenta y seis años. Y el ROI es de cuarenta y ocho coma cinco por ciento. Los cuatro indicadores apuntan en la misma dirección. El proyecto se acepta."
+  }
+]

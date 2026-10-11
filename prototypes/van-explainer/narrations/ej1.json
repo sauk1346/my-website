@@ -1,0 +1,147 @@
+[
+  {
+    "id": "intro",
+    "scene": "intro",
+    "text": "Unidad tres, indicadores de rentabilidad. En este video vamos a resolver el ejercicio uno, calculando el Valor Actual Neto, o VAN. Antes de resolverlo, repasaremos dos conceptos clave. El interés nominal y el valor futuro."
+  },
+  {
+    "id": "nominal_concepto",
+    "scene": "nominal",
+    "text": "Primer concepto. El interés nominal es igual al interés real más la inflación. El interés nominal es el que publican los bancos, pero el que realmente mide nuestra ganancia es el interés real, porque descuenta el efecto de la inflación."
+  },
+  {
+    "id": "nominal_bancoA",
+    "scene": "nominal",
+    "text": "Veamos un ejemplo con una inflación del tres por ciento. El Banco A ofrece un interés nominal del cinco por ciento. Si al cinco le restamos el tres de inflación, nos queda un interés real del dos por ciento."
+  },
+  {
+    "id": "nominal_bancoB",
+    "scene": "nominal",
+    "text": "El Banco B, en cambio, exige un interés real del tres por ciento. Sumando la inflación, eso equivale a un interés nominal del seis por ciento."
+  },
+  {
+    "id": "nominal_conclusion",
+    "scene": "nominal",
+    "text": "Comparando lo que importa, el interés real, el Banco B es la mejor opción. Entrega un tres por ciento real, frente al dos por ciento real del Banco A."
+  },
+  {
+    "id": "vf_formula",
+    "scene": "valorfuturo",
+    "text": "Segundo concepto. El valor futuro. Es el valor actual multiplicado por uno más la tasa de interés, elevado al tiempo. Nos dice cuánto valdrá mañana un monto que invertimos hoy."
+  },
+  {
+    "id": "vf_factor",
+    "scene": "valorfuturo",
+    "text": "Veamos un ejemplo con una tasa del cuatro por ciento. Primero preparamos el factor. Cuatro por ciento en decimal es cero coma cero cuatro, y uno más cero coma cero cuatro nos da uno coma cero cuatro."
+  },
+  {
+    "id": "vf_ejemplo",
+    "scene": "valorfuturo",
+    "text": "Si invertimos sesenta millones de pesos durante cuatro años, multiplicamos sesenta millones por uno coma cero cuatro elevado a cuatro, que es uno coma dieciséis nueve ocho. El valor futuro es setenta millones ciento noventa y un mil quinientos catorce pesos."
+  },
+  {
+    "id": "vf_ganancia",
+    "scene": "valorfuturo",
+    "text": "Es decir, restando el valor actual, obtenemos una ganancia de diez millones ciento noventa y un mil quinientos catorce pesos."
+  },
+  {
+    "id": "datos_flujos",
+    "scene": "datos",
+    "text": "Ahora sí, vamos al ejercicio. Partamos por los datos del proyecto. Se esperan flujos de caja de dieciocho millones el primer año, veinte millones el segundo, veintidós millones el tercero, y veinticinco millones el cuarto año."
+  },
+  {
+    "id": "datos_inversion",
+    "scene": "datos",
+    "text": "La inversión inicial es de sesenta millones de pesos. Es el desembolso que hacemos hoy, en el año cero, para echar a andar el proyecto."
+  },
+  {
+    "id": "datos_tasa",
+    "scene": "datos",
+    "text": "Y la tasa de descuento es del diez por ciento. Representa la rentabilidad mínima que le exigimos al proyecto, y es la tasa que usaremos para traer los flujos futuros a valor presente."
+  },
+  {
+    "id": "van_formula",
+    "scene": "vanformula",
+    "text": "La fórmula del VAN dice que el VAN es la suma de cada flujo de caja futuro, dividido por uno más la tasa de descuento elevado al año correspondiente, menos la inversión inicial."
+  },
+  {
+    "id": "van_porque",
+    "scene": "vanformula",
+    "text": "¿Por qué dividimos? Es el concepto de valor futuro aplicado al revés. Si multiplicar lleva un monto de hoy hacia el futuro, dividir trae un flujo futuro a pesos de hoy."
+  },
+  {
+    "id": "tasa_decimal",
+    "scene": "tasa",
+    "text": "Antes de calcular, preparemos el divisor de la fórmula. La tasa de descuento es diez por ciento. Para usarla en la fórmula debemos expresarla en decimal. Diez dividido en cien es cero coma uno."
+  },
+  {
+    "id": "tasa_suma",
+    "scene": "tasa",
+    "text": "Ahora resolvemos el paréntesis. Uno más cero coma uno es igual a uno coma uno. El uno representa el capital, y el cero coma uno es la tasa de descuento en decimal. Este uno coma uno es el factor que usaremos en todos los cálculos que vienen."
+  },
+  {
+    "id": "anio1_plantea",
+    "scene": "vantabla",
+    "text": "Vamos con el año uno. Tomamos el flujo de caja del año uno desde la tabla de datos, que es de dieciocho millones de pesos. Lo dividimos por uno coma uno elevado a uno, porque ese flujo lo recibiremos dentro de un año."
+  },
+  {
+    "id": "anio1_resultado",
+    "scene": "vantabla",
+    "text": "Uno coma uno elevado a uno es simplemente uno coma uno. Entonces, dieciocho millones divididos en uno coma uno nos dan dieciséis millones trescientos sesenta y tres mil seiscientos treinta y seis pesos. Ese es el valor presente del primer flujo."
+  },
+  {
+    "id": "anio2_plantea",
+    "scene": "vantabla",
+    "text": "Año dos. De la tabla de datos tomamos el flujo del año dos, que es de veinte millones de pesos. Como lo recibiremos dentro de dos años, lo dividimos por uno coma uno elevado a dos."
+  },
+  {
+    "id": "anio2_resultado",
+    "scene": "vantabla",
+    "text": "Uno coma uno al cuadrado significa uno coma uno multiplicado por uno coma uno, y eso da uno coma veintiuno. Entonces, veinte millones divididos en uno coma veintiuno nos dan dieciséis millones quinientos veintiocho mil novecientos veintiséis pesos."
+  },
+  {
+    "id": "anio3_plantea",
+    "scene": "vantabla",
+    "text": "Año tres. El flujo de caja del año tres es de veintidós millones de pesos, y como está a tres años de distancia, lo dividimos por uno coma uno elevado a tres."
+  },
+  {
+    "id": "anio3_resultado",
+    "scene": "vantabla",
+    "text": "Uno coma uno al cubo es uno coma trescientos treinta y uno. Entonces, veintidós millones divididos en uno coma trescientos treinta y uno nos dan también dieciséis millones quinientos veintiocho mil novecientos veintiséis pesos. Curiosamente, el mismo valor presente del año dos."
+  },
+  {
+    "id": "anio4_plantea",
+    "scene": "vantabla",
+    "text": "Y el año cuatro. El flujo de caja del año cuatro es de veinticinco millones de pesos, dividido por uno coma uno elevado a cuatro, porque lo recibiremos dentro de cuatro años."
+  },
+  {
+    "id": "anio4_resultado",
+    "scene": "vantabla",
+    "text": "Uno coma uno elevado a cuatro es uno coma cuatro seis cuatro uno. Entonces, veinticinco millones divididos en ese factor nos dan diecisiete millones setenta y cinco mil trescientos treinta y seis pesos."
+  },
+  {
+    "id": "suma_plantea",
+    "scene": "vanresultado",
+    "text": "Ya tenemos los cuatro flujos en valor presente. Ahora los sumamos. Dieciséis millones trescientos sesenta y tres mil seiscientos treinta y seis, más dieciséis millones quinientos veintiocho mil novecientos veintiséis, más otros dieciséis millones quinientos veintiocho mil novecientos veintiséis, más diecisiete millones setenta y cinco mil trescientos treinta y seis."
+  },
+  {
+    "id": "suma_resultado",
+    "scene": "vanresultado",
+    "text": "La suma de los flujos descontados es sesenta y seis millones cuatrocientos noventa y seis mil ochocientos veinticuatro pesos."
+  },
+  {
+    "id": "van_resta",
+    "scene": "vanresultado",
+    "text": "Para obtener el VAN, a esa suma le restamos la inversión inicial de sesenta millones, que viene de los datos del ejercicio. Sesenta y seis millones cuatrocientos noventa y seis mil ochocientos veinticuatro, menos sesenta millones, nos da un VAN de seis millones cuatrocientos noventa y seis mil ochocientos veinticuatro pesos."
+  },
+  {
+    "id": "van_decision",
+    "scene": "vanresultado",
+    "text": "Como el VAN es mayor que cero, el proyecto se acepta. Los flujos futuros, traídos a pesos de hoy, generan más valor que lo exigido por la tasa de descuento del diez por ciento."
+  },
+  {
+    "id": "conclusion",
+    "scene": "conclusion",
+    "text": "En resumen. Descontamos cada flujo con el factor uno coma uno, sumamos los valores presentes, y restamos la inversión inicial. El VAN resultó positivo, seis millones cuatrocientos noventa y seis mil ochocientos veinticuatro pesos, por lo tanto el proyecto se acepta."
+  }
+]

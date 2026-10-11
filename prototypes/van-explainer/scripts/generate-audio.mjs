@@ -1,21 +1,56 @@
 // Generates one MP3 per narration beat via ElevenLabs TTS, then probes each
-// file's duration with ffprobe and writes public/durations.json so the
-// Remotion composition can size each Sequence to match the real audio length.
+// file's duration with ffprobe and writes the durations JSON so the Remotion
+// composition can size each Sequence to match the real audio length.
+//
+// Usage:
+//   node scripts/generate-audio.mjs          -> ej1 (legacy layout)
+//   node scripts/generate-audio.mjs ej2      -> narrations/ej2.json
+//   FORCE=1 node scripts/generate-audio.mjs ej2   (regenerate existing files)
 import { readFile, writeFile, mkdir, access } from 'node:fs/promises';
+import { existsSync, readFileSync } from 'node:fs';
 import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
 
 const execFileAsync = promisify(execFile);
 
+// Load .env (if present) without external deps.
+const envUrl = new URL('../.env', import.meta.url);
+if (existsSync(envUrl)) {
+  for (const line of readFileSync(envUrl, 'utf8').split('\n')) {
+    const m = line.match(/^\s*([A-Z0-9_]+)\s*=\s*(.*)\s*$/);
+    if (m && !(m[1] in process.env)) process.env[m[1]] = m[2];
+  }
+}
+
+// 'legacy' = el ej1 original (narration.json / public/audio/). La
+// regrabación del ej1 usa el esquema genérico (narrations/ej1.json).
+const EXERCISE = process.argv[2] || 'legacy';
 const API_KEY = process.env.ELEVENLABS_API_KEY;
-const VOICE_ID = process.env.ELEVENLABS_VOICE_ID || '21m00Tcm4TlvDq8ikWAM'; // "Rachel", default public voice
+const VOICE_ID = process.env.ELEVENLABS_VOICE_ID || '21m00Tcm4TlvDq8ikWAM';
 const FORCE = process.env.FORCE === '1';
 
 if (!API_KEY) {
-  console.error('Falta ELEVENLABS_API_KEY en el entorno. Ejemplo:');
-  console.error('  ELEVENLABS_API_KEY=tu_api_key npm run generate-audio');
+  console.error('Falta ELEVENLABS_API_KEY (en .env o en el entorno).');
   process.exit(1);
 }
+
+// Per-exercise file layout. ej1 keeps the original paths.
+const paths =
+  EXERCISE === 'legacy'
+    ? {
+        narration: new URL('../narration.json', import.meta.url),
+        outDir: new URL('../public/audio/', import.meta.url),
+        durations: new URL('../public/durations.json', import.meta.url),
+        manifest: new URL('../public/audio-manifest.json', import.meta.url),
+        audioPrefix: 'audio/',
+      }
+    : {
+        narration: new URL(`../narrations/${EXERCISE}.json`, import.meta.url),
+        outDir: new URL(`../public/audio/${EXERCISE}/`, import.meta.url),
+        durations: new URL(`../public/durations-${EXERCISE}.json`, import.meta.url),
+        manifest: new URL(`../public/audio-manifest-${EXERCISE}.json`, import.meta.url),
+        audioPrefix: `audio/${EXERCISE}/`,
+      };
 
 async function fileExists(filePath) {
   try {
@@ -26,9 +61,19 @@ async function fileExists(filePath) {
   }
 }
 
-const narration = JSON.parse(await readFile(new URL('../narration.json', import.meta.url), 'utf8'));
-const outDir = new URL('../public/audio/', import.meta.url);
-await mkdir(outDir, { recursive: true });
+/**
+ * Inserts <break> tags so the narration breathes. Only after sentence
+ * boundaries and with moderate duration: too many/long breaks make
+ * eleven_multilingual_v2 unstable (artifacts, mumbled words).
+ */
+function withPauses(text) {
+  return text
+    .replace(/\. /g, '. <break time="0.5s" /> ')
+    .replace(/\? /g, '? <break time="0.5s" /> ');
+}
+
+const narration = JSON.parse(await readFile(paths.narration, 'utf8'));
+await mkdir(paths.outDir, { recursive: true });
 
 async function synthesize(beat) {
   const res = await fetch(`https://api.elevenlabs.io/v1/text-to-speech/${VOICE_ID}`, {
@@ -39,9 +84,13 @@ async function synthesize(beat) {
       Accept: 'audio/mpeg',
     },
     body: JSON.stringify({
-      text: beat.text,
+      text: withPauses(beat.text),
       model_id: 'eleven_multilingual_v2',
-      voice_settings: { stability: 0.5, similarity_boost: 0.75 },
+      voice_settings: {
+        stability: 0.65,
+        similarity_boost: 0.75,
+        speed: 0.9,
+      },
     }),
   });
 
@@ -51,7 +100,7 @@ async function synthesize(beat) {
   }
 
   const buffer = Buffer.from(await res.arrayBuffer());
-  const filePath = new URL(`${beat.id}.mp3`, outDir);
+  const filePath = new URL(`${beat.id}.mp3`, paths.outDir);
   await writeFile(filePath, buffer);
   return filePath;
 }
@@ -74,36 +123,30 @@ async function loadJsonIfExists(url) {
   }
 }
 
-const durationsUrl = new URL('../public/durations.json', import.meta.url);
-const manifestUrl = new URL('../public/audio-manifest.json', import.meta.url);
-const durations = await loadJsonIfExists(durationsUrl);
-const manifest = await loadJsonIfExists(manifestUrl);
+const durations = await loadJsonIfExists(paths.durations);
+const manifest = await loadJsonIfExists(paths.manifest);
 
 for (const beat of narration) {
-  const filePath = new URL(`${beat.id}.mp3`, outDir);
+  const filePath = new URL(`${beat.id}.mp3`, paths.outDir);
   if (!FORCE && (await fileExists(filePath))) {
     console.log(`Omitiendo ${beat.id} (ya existe; usa FORCE=1 para regenerar)`);
     if (!durations[beat.id]) {
       durations[beat.id] = await probeDurationSeconds(filePath);
     }
-    manifest[beat.id] = `audio/${beat.id}.mp3`;
+    manifest[beat.id] = `${paths.audioPrefix}${beat.id}.mp3`;
     continue;
   }
   console.log(`Generando audio: ${beat.id}...`);
   const generatedPath = await synthesize(beat);
   const seconds = await probeDurationSeconds(generatedPath);
   durations[beat.id] = seconds;
-  manifest[beat.id] = `audio/${beat.id}.mp3`;
+  manifest[beat.id] = `${paths.audioPrefix}${beat.id}.mp3`;
   console.log(`  -> ${seconds.toFixed(2)}s`);
 }
 
-await writeFile(
-  new URL('../public/durations.json', import.meta.url),
-  JSON.stringify(durations, null, 2)
-);
-await writeFile(
-  new URL('../public/audio-manifest.json', import.meta.url),
-  JSON.stringify(manifest, null, 2)
-);
+await writeFile(paths.durations, JSON.stringify(durations, null, 2));
+await writeFile(paths.manifest, JSON.stringify(manifest, null, 2));
 
-console.log('\nListo. Audios en public/audio/, duraciones en public/durations.json, manifest en public/audio-manifest.json');
+console.log(
+  `\nListo (${EXERCISE}). Audios en ${paths.outDir.pathname}, duraciones y manifest actualizados.`
+);

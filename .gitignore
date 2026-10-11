@@ -58,3 +58,6 @@ next-env.d.ts
 flashcards.db
 flashcards.db-shm
 flashcards.db-wal
+
+# prototipos locales (videos Remotion, etc.) — no se versionan
+prototypes/

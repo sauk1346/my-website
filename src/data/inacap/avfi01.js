@@ -28,7 +28,13 @@ const courseData = {
             description: {
                 text: 'Balance General',
                 href: 'eval01'
-            }
+            },
+            quickGuide: [
+                {
+                    text: 'Quiz: Técnicas de Contabilidad',
+                    href: 'quiz-tecnicas-contabilidad'
+                }
+            ]
         },
         { 
             evaluationNumber: 2,
@@ -37,7 +43,13 @@ const courseData = {
             description: {
                 text: 'Estado Resultado / Pto Equilibrio',
                 href: 'eval02'
-            }
+            },
+            quickGuide: [
+                {
+                    text: 'Quiz: Técnicas de Costos',
+                    href: 'quiz-tenicas-costos'
+                }
+            ]
         },
         { 
             evaluationNumber: 3,
@@ -46,7 +58,7 @@ const courseData = {
             description: {
                 text: 'Presupuesto de Caja',
                 href: ''
-            }
+            },
         },
         { 
             evaluationNumber: 4,
@@ -55,7 +67,44 @@ const courseData = {
             description: {
                 text: 'Indicadores de Rentabilidad',
                 href: ''
-            }
+            },
+            quickGuide: [
+                {
+                    text: 'Quiz: Evaluación Financiera',
+                    href: 'quiz-evaluacion-financiera'
+                },
+                {
+                    text: 'Quiz: Indicadores de Rentabilidad',
+                    href: 'quiz-indicadores-rentabilidad'
+                },
+            ]
+        },
+        { 
+            evaluationNumber: 5,
+            date: 'Jue 15, Oct 2026',
+            weighting: '25%', 
+            description: {
+                text: 'Examen',
+                href: ''
+            },
+            quickGuide: [
+                {
+                    text: 'Quiz: Técnicas de Contabilidad',
+                    href: 'quiz-tecnicas-contabilidad'
+                },
+                {
+                    text: 'Quiz: Técnicas de Costos',
+                    href: 'quiz-tenicas-costos'
+                },
+                {
+                    text: 'Quiz: Evaluación Financiera',
+                    href: 'quiz-evaluacion-financiera'
+                },
+                {
+                    text: 'Quiz: Indicadores de Rentabilidad',
+                    href: 'quiz-indicadores-rentabilidad'
+                },
+            ]
         },
         
     ],
@@ -264,7 +313,11 @@ const courseData = {
                 },
                 {
                     text: 'Ejercicio 01 (VAN) - VideoClase',
-                    href: 'https://youtu.be/NA15uq62WSk'
+                    href: 'https://youtu.be/GSJqJSH9-TM'
+                },
+                {
+                    text: 'Evaluación Financiera',
+                    href: 'docs/evaluacion-financiera.pdf'
                 },
             ]
         },
@@ -277,6 +330,14 @@ const courseData = {
                     text: 'Ejercicio 02: Indicadores de Rentabilidad',
                     href: 'clase17'
                 },
+                {
+                    text: 'Ejercicio 02: Indicadores de Rentabilidad - VideoClase',
+                    href: 'https://youtu.be/f15-3pnuYoM'
+                },
+                {
+                    text: 'Indicadores Rentabilidad',
+                    href: 'docs/indicadores-rentabilidad.pdf'
+                },
             ]
         },
         { 
@@ -287,6 +348,10 @@ const courseData = {
                 {
                     text: 'Ejercicio 03: Indicadores de Rentabilidad',
                     href: 'clase18'
+                },
+                {
+                    text: 'Ejercicio 03: Indicadores de Rentabilidad - VideoClase',
+                    href: 'https://youtu.be/hpOpwQxPyiA'
                 },
             ]
         },

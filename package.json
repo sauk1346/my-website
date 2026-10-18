@@ -4,6 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "db:setup": "node src/lib/db/setup.js",
+    "db:seed": "node src/lib/db/seed.js",
+    "prebuild": "npm run db:setup && npm run db:seed",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"

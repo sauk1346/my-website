@@ -1,34 +1,41 @@
 # SaukCode - Learning Resources Platform
 
-A comprehensive web platform built with React/Next.js for sharing programming notes, algorithms, language learning resources, and educational content.
+A web platform built with Next.js for sharing programming notes, coding exercises, and educational content.
 
 🌐 **Live Site:** [saukcode.cl](https://saukcode.cl/)
 
 ## 📚 About
 
-SaukCode is an educational platform that compiles and organizes learning resources across multiple disciplines:
+SaukCode is an educational platform that compiles and organizes learning resources:
 
-- **Programming & Computer Science**: Semester notes, coding exercises, algorithm collections
-- **Language Learning**: Resources for 6 languages (German, Korean, Mandarin Chinese, English, Japanese, Russian)
+- **Programming & Computer Science**: Semester notes (INACAP), coding exercises, algorithm collections
+- **Flashcards**: Study decks generated from YAML sources
 - **Professional Development**: Projects and developments showcase
 
 ## 🛠️ Built With
 
-- React / Next.js
+- Next.js (App Router) / React
+- MDX for lesson content, with KaTeX (math) and Prism (code highlighting)
+- SQLite (better-sqlite3 + Drizzle) for the flashcards database, generated at build time
 
 ## 📁 Project Structure
 ```
-├── public/          # Static assets (not included in repository)
-├── src/             # Source code
-│   ├── components/  # React components
-│   ├── pages/       # Next.js pages
-│   └── ...
+├── public/            # Static assets (not included in repository)
+├── src/
+│   ├── app/           # Next.js App Router pages
+│   ├── components/    # React components (mdx, features, layout, ui, common)
+│   ├── content/       # Lesson content in MDX, organized by section/course
+│   ├── data/          # Course metadata and flashcards YAML sources
+│   ├── lib/           # Flashcards DB access, setup and seed scripts
+│   ├── hooks/         # Shared React hooks
+│   ├── shared/        # Shared CSS modules
+│   └── utils/         # Route/content helpers
 └── ...
 ```
 
 ## ⚠️ Important Note
 
-The `public/` folder containing multimedia resources (PDFs, videos, audio files, archives) is **not included** in this repository due to file size constraints. 
+The `public/` folder containing multimedia resources (PDFs, videos, audio files, archives) is **not included** in this repository due to file size constraints.
 
 To view the complete site with all resources: [saukcode.cl](https://saukcode.cl/)
 
@@ -37,7 +44,7 @@ To view the complete site with all resources: [saukcode.cl](https://saukcode.cl/
 ### Prerequisites
 
 - Node.js (version 20.18.1 or higher)
-- npm or yarn
+- npm
 
 ### Installation
 
@@ -50,23 +57,33 @@ cd my-website
 2. Install dependencies
 ```bash
 npm install
-# or
-yarn install
 ```
 
-3. Run the development server
+3. Generate the flashcards database (SQLite, built from the YAML files in `src/data/flashcards/`)
+```bash
+npm run db:setup
+npm run db:seed
+```
+
+4. Run the development server
 ```bash
 npm run dev
-# or
-yarn dev
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser
+5. Open [http://localhost:3000](http://localhost:3000) in your browser
+
+### Flashcards database
+
+`flashcards.db` is a **derived artifact**: it is generated from the YAML sources in
+`src/data/flashcards/` and is not committed to the repository. The `prebuild` script
+regenerates it automatically before every `npm run build`, so a fresh clone builds
+without manual steps. To add or edit flashcards, edit the YAML files and re-run
+`npm run db:seed` (never write to the SQLite file directly).
 
 ## 📝 Features
 
 - **Organized Content**: Structured by semesters, topics, and categories
-- **Multi-language Support**: Resources available in 6 different languages
+- **Interactive Study Tools**: Quizzes and flashcard decks
 - **Algorithm Collection**: Curated collection of programming algorithms
 - **Responsive Design**: Optimized for desktop and mobile devices
 

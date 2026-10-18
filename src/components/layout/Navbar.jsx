@@ -173,7 +173,6 @@ const Navbar = () => {
           {/* Menú placeholder */}
           <ul className={styles.menu}>
             <li><span className={styles.link}>Programación</span></li>
-            <li><span className={styles.link}>Idiomas</span></li>
             <li><span className={styles.link}>Sobre mí</span></li>
             <li><div className={styles.themeToggle}></div></li>
           </ul>
@@ -210,15 +209,6 @@ const Navbar = () => {
               className={styles.link}
             >
               Programación
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/#idiomas"
-              onClick={(e) => navigateToSection('idiomas', e)}
-              className={styles.link}
-            >
-              Idiomas
             </Link>
           </li>
           <li>
@@ -282,15 +272,6 @@ const Navbar = () => {
                       className={`${styles.link} ${styles.mobileMenuItem}`}
                     >
                       Programación
-                    </Link>
-                  </motion.div>
-                  <motion.div variants={menuItemVariants}>
-                    <Link
-                      href="/#idiomas"
-                      onClick={(e) => navigateToSection('idiomas', e)}
-                      className={`${styles.link} ${styles.mobileMenuItem}`}
-                    >
-                      Idiomas
                     </Link>
                   </motion.div>
                   <motion.div variants={menuItemVariants}>

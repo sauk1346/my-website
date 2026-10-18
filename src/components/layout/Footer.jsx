@@ -50,15 +50,6 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link 
-                href="/#idiomas" 
-                onClick={(e) => navigateToSection('idiomas', e)} 
-                className={styles.link}
-              >
-                Idiomas
-              </Link>
-            </li>
-            <li>
               <Link
                 href="https://www.antoniomorales.cl"
                 target="_blank"

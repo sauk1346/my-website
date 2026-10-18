@@ -176,7 +176,7 @@ const SmartTable = ({
     const audioMatch = text.match(/\[([^\]]+)\]\(([^)]+\.(mp3|wav|ogg|m4a))\)/i);
     if (audioMatch) {
       const [, label, url] = audioMatch;
-      const fullPath = url.includes('/') ? url : `/idiomas/chino/audio/${url}`;
+      const fullPath = url;
       return (
         <audio controls className={styles.audioPlayer}>
           <source src={fullPath} type="audio/mpeg" />

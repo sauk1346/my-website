@@ -17,55 +17,10 @@ export const homeData = {
         link: "/ejercicios"
       },
     }
-  },
-
-  idiomas: {
-    id: "idiomas",
-    title: "Idiomas",
-    description: "Apuntes Idiomas de interés",
-    cardsData: {
-      aleman: {
-        name: "Alemán",
-        description: "Lerne Deutsch",
-        image: "https://kapowaz.github.io/square-flags/flags/de.svg",
-        link: "/aleman"
-      },
-      coreano: {
-        name: "Coreano",
-        description: "한국어를 배우세요",
-        image: "https://kapowaz.github.io/square-flags/flags/kr.svg",
-        link: "/coreano"
-      },
-      chino: {
-        name: "Chino Mandarín",
-        description: "学习普通话",
-        image: "https://kapowaz.github.io/square-flags/flags/cn.svg",
-        link: "/chino"
-      },
-      ingles: {
-        name: "Inglés",
-        description: "Learn English",
-        image: "https://kapowaz.github.io/square-flags/flags/us.svg",
-        link: "/ingles"
-      },
-      japones: {
-        name: "Japonés",
-        description: "日本語を勉強して",
-        image: "https://kapowaz.github.io/square-flags/flags/jp.svg",
-        link: "/japones"
-      },
-      ruso: {
-        name: "Ruso",
-        description: "Учи русский",
-        image: "https://kapowaz.github.io/square-flags/flags/ru.svg",
-        link: "/ruso"
-      }
-    }
   }
 };
 
 // Array con todas las secciones en orden
 export const sectionsOrder = [
-  homeData.programacion,
-  homeData.idiomas
+  homeData.programacion
 ];

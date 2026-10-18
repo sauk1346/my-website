@@ -6,27 +6,6 @@
  */
 
 /**
- * Construye un link a una lección de idiomas
- *
- * @param {string} language - Idioma (chino, japones, ruso, etc.)
- * @param {string} href - Ruta relativa (courseId/slug)
- * @returns {string} Ruta completa
- *
- * @example
- * buildLanguageLessonLink('chino', 'ch001/lesson11')
- * // Returns: '/chino/ch001/lesson11'
- */
-export const buildLanguageLessonLink = (language, href) => {
-  if (!language || !href) {
-    console.warn('buildLanguageLessonLink: Missing required parameters', { language, href });
-    return '#';
-  }
-  // Remover slash inicial si existe para evitar duplicación
-  const cleanHref = href.startsWith('/') ? href.slice(1) : href;
-  return `/${language}/${cleanHref}`;
-};
-
-/**
  * Construye un link a un recurso estático dentro de un curso (PDFs, documentos, etc.)
  *
  * @param {string} section - Sección del sitio

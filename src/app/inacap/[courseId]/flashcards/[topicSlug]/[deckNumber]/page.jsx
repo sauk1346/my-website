@@ -6,7 +6,7 @@ import FlashcardStudy from '@/components/features/flashcards/FlashcardStudy';
 
 export async function generateStaticParams() {
   const params = [];
-  const courseIds = getAllCourseIds();
+  const courseIds = await getAllCourseIds();
   for (const courseId of courseIds) {
     const topics = getTopicsByCourseId(courseId);
     for (const topic of topics) {

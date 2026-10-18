@@ -5,7 +5,7 @@ import { getCourseData, getAllCourseIds } from '@/utils/courseUtils';
 import { getTopicsByCourseId } from '@/lib/flashcards';
 
 export async function generateStaticParams() {
-    const courseIds = getAllCourseIds();
+    const courseIds = await getAllCourseIds();
     return courseIds.map((courseId) => ({
         courseId: courseId,
     }));
@@ -13,7 +13,7 @@ export async function generateStaticParams() {
 
 export default async function CoursePage({ params }) {
     const { courseId } = await params;
-    const courseData = getCourseData(courseId);
+    const courseData = await getCourseData(courseId);
 
     if (!courseData) {
         notFound();

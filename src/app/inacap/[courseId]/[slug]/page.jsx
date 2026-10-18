@@ -22,7 +22,7 @@ export const dynamicParams = false;
  */
 export async function generateMetadata({ params }) {
     const { courseId, slug } = await params;
-    const courseData = getCourseData(courseId);
+    const courseData = await getCourseData(courseId);
 
     return {
         title: `${slug} | ${courseData?.courseCode || 'INACAP'}`,
